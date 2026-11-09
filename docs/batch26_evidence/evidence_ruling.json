@@ -1,0 +1,15 @@
+{
+  "received_at_pt": "2026-10-14T22:02:50.946850-07:00",
+  "source": "Human user message in this chat, Claude/John ruling",
+  "verbatim": "第二十六批证据范围裁定（Claude/John）：过夜持仓恢复自动止盈须同时满足：(a) 已持久化账本的入场成交；(b) 当日新鲜 reqPositions 的券商持仓 = 账本 qty_open；(c) 当日新鲜 reqAllOpenOrders 中保护单强身份 WORKING、数量 = qty_open，且该标的无任何其他工作中卖单；(d) 当日可见成交中该标的无无法归属的成交。任一不满足：只保留止损、冻结止盈、发 P1 写明不满足项，不自动修复。不以“查不到”推断“未发生”。接受并在报告中写明两项剩余风险：停机期间等量手动卖出又买回（净数量不变，只影响盈亏）；状态库被整体回滚为与券商一致的旧版本。不修改 TWS 的 Master API client ID。按此实现第2节，补齐第4节测试，交易时段外跑全量3次，提交并打 tag v6lite-batch26 后冻结。合并时机等 10/15 接管测试结束后再定。",
+  "ruling_file_sha256": "1b8a03ca6bd93272a10ddd4545ff8fd6b3764b3015a6f1b26edf9fcae90f15f5",
+  "prior_phase_checkpoint_sha256": "8129dc79fffd0f5b0346dc84d87d753d51e3d2bff195fb4b24f563de6a068865",
+  "prior_partial_code_sha": "24a687da4ef8bc13",
+  "may_proceed_with_scoped_overnight_implementation_after_natural_red": true,
+  "accepted_residual_risks": [
+    "停机期间等量手动卖出又买回（净数量不变，只影响盈亏）",
+    "状态库被整体回滚为与券商一致的旧版本"
+  ],
+  "master_settings_must_not_change": true,
+  "main_merge_not_authorized_for_batch26": true
+}

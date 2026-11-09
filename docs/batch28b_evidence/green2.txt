@@ -1,0 +1,8 @@
+........                                                                 [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+  v6lite\tests\test_batch28b_overnight_refresh.py:204: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+8 passed, 1 warning in 17.62s

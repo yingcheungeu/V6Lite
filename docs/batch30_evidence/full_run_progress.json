@@ -1,0 +1,39 @@
+{
+  "verified_at_pt": "2026-10-26T17:46:58.389239-07:00",
+  "code_sha": "72393b62e7f08db6",
+  "verified_labels": [
+    "final_full_1",
+    "final_full_2",
+    "final_full_3"
+  ],
+  "runs": [
+    {
+      "label": "final_full_1",
+      "tests": 2222,
+      "skipped": 1,
+      "seconds": 2150.984,
+      "start_pt": "2026-10-26T15:58:02.600965-07:00",
+      "end_pt": "2026-10-26T16:33:53.591194-07:00"
+    },
+    {
+      "label": "final_full_2",
+      "tests": 2222,
+      "skipped": 1,
+      "seconds": 2145.015,
+      "start_pt": "2026-10-26T16:34:38.122116-07:00",
+      "end_pt": "2026-10-26T17:10:23.155090-07:00"
+    },
+    {
+      "label": "final_full_3",
+      "tests": 2222,
+      "skipped": 1,
+      "seconds": 2144.766,
+      "start_pt": "2026-10-26T17:10:58.774036-07:00",
+      "end_pt": "2026-10-26T17:46:43.547675-07:00"
+    }
+  ],
+  "case_identity_sha256": "2947156fd9bf60d4b5069f6ceb4021762e155483d751a65a3cd3082019d77606",
+  "source_tools_sdk_unchanged": true,
+  "all_receipt_hashes_verified": true,
+  "next": "closeout"
+}

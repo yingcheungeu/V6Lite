@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="3" time="0.792" timestamp="2026-10-12T14:43:01.865316-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch24_evidence_deadline" name="test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff" time="0.125"><failure message="assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = _pages(&lt;v6lite.tests.helpers.Rig object at 0x000001FA23BF6E50&gt;)">v6lite\tests\test_batch24_evidence_deadline.py:91: in test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff
+    assert len(_pages(rig)) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = _pages(&lt;v6lite.tests.helpers.Rig object at 0x000001FA23BF6E50&gt;)</failure></testcase><testcase classname="v6lite.tests.test_batch24_evidence_deadline" name="test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0" time="0.116" /><testcase classname="v6lite.tests.test_batch16_f6_steady_timeout" name="test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled" time="0.110"><failure message="AssertionError: []&#10;assert 0 == 1&#10; +  where 0 = len([])">v6lite\tests\test_batch16_f6_steady_timeout.py:50: in test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled
+    assert len(pages) == 1, pages
+E   AssertionError: []
+E   assert 0 == 1
+E    +  where 0 = len([])</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,63 @@
+FF...F.F                                                                 [100%]
+================================== FAILURES ===================================
+_ test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen _
+v6lite\tests\test_batch28b_overnight_refresh.py:233: in test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+    _complete_tp1(rig, pid)
+v6lite\tests\test_batch28b_overnight_refresh.py:168: in _complete_tp1
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 13, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function _complete_tp1.<locals>.<lambda> at 0x0000021D45483B00>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28b_expired_cache_at_price_requests_real_new_sources_without_manual_progress _
+v6lite\tests\test_batch28b_overnight_refresh.py:257: in test_B28b_expired_cache_at_price_requests_real_new_sources_without_manual_progress
+    _complete_tp1(rig, pid)
+v6lite\tests\test_batch28b_overnight_refresh.py:168: in _complete_tp1
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 10, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function _complete_tp1.<locals>.<lambda> at 0x0000021D455123E0>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28b_timeout_waits_and_retries_without_false_overnight_failure_card[temporary] _
+v6lite\tests\test_batch28b_overnight_refresh.py:390: in test_B28b_timeout_waits_and_retries_without_false_overnight_failure_card
+    _complete_tp1(rig, pid)
+v6lite\tests\test_batch28b_overnight_refresh.py:168: in _complete_tp1
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 17, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function _complete_tp1.<locals>.<lambda> at 0x0000021D45497F60>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-a30332e38f8646af84c3 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B28b_previous_day_dedupe_controls_survive_reopen_without_blocking_next_day_TP _
+v6lite\tests\test_batch28b_overnight_refresh.py:417: in test_B28b_previous_day_dedupe_controls_survive_reopen_without_blocking_next_day_TP
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 15, 5, 10, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28b_previous_day_dedupe_controls_survive_reopen_without_blocking_next_day_TP.<locals>.<lambda> at 0x0000021D454AB1A0>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-21T15:03:09+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+  v6lite\tests\test_batch28b_overnight_refresh.py:204: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+FAILED v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_expired_cache_at_price_requests_real_new_sources_without_manual_progress
+FAILED v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_timeout_waits_and_retries_without_false_overnight_failure_card[temporary]
+FAILED v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_previous_day_dedupe_controls_survive_reopen_without_blocking_next_day_TP
+4 failed, 4 passed, 1 warning in 19.53s

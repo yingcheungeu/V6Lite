@@ -1,0 +1,9 @@
+{
+  "synthetic_only": true,
+  "local_market_data_line": "- market data: real-time (1) | 100% RTH availability · subscribed 3 · 6/6 symbol-samples · 2 samples (this process today; 采样起始 2026-10-20 12:09:57 PT；当天有过重启; LIVE)",
+  "phone_market_data_line": "行情可用率：100% 常规交易时段可用率 · 已订阅 3 · 6/6 标的样本 · 2 次采样 (本进程今日；采样起始 2026-10-20 12:09:57 PT；当天有过重启；实时行情)",
+  "daily_health_phone_body": "✅ 正常 · 演练（不下单） · V6-Lite 每日健康报告 2026-10-20\n扫描：计划：10:00 ET 未运行\n信号：无\n结果：无 WOULD_BUY；gate=不适用\n下单/撤单：0 次下单 · 0 次撤单\n持仓与漂移：无 · 漂移：无\n券商端保护：无持仓；空窗统计 A=0.000s B=0.000s\nIBKR 心跳：本进程今日截至报告时: 应答 3 · 最长已验证延迟 0 秒 · 未应答 0\n告警送达：本进程今日截至报告时: 发出 2 · 失败 0\n行情可用率：100% 常规交易时段可用率 · 已订阅 3 · 6/6 标的样本 · 2 次采样 (本进程今日；采样起始 2026-10-20 12:09:57 PT；当天有过重启；实时行情)\ncode_sha：c8ac27d8026b39c7",
+  "sample_scope": "current process RTH since first counted sample, not all-day coverage",
+  "unchanged_funds_log_sample": "DEBUG [ACCOUNT_STREAM] silent since <last actual AvailableFunds callback>; funds snapshot requested",
+  "stale_or_unverified_log_sample": "WARNING [ACCOUNT_STREAM] silent since <last actual callback>; funds snapshot requested; funds/readiness evidence requires verification"
+}

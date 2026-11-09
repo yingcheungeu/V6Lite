@@ -1,0 +1,77 @@
+{
+  "batch": 23,
+  "reviewer": "/root/batch20_time_logs",
+  "verdict": "PASS",
+  "scope": "Final sealed-bundle independent read-only audit; inherited final source/static approval verified unchanged. Reviewer did not run tests, seal/audit, write files or stage.",
+  "code_sha": "a17d647ba28c51e4",
+  "report_sha256": "6a379a9eac824ac9ee5dace44bd1cb4d0171e82337a53af6e3336b64df4a8e15",
+  "manifest_sha256": "621ea7912efdbbd7373bc8242aa8062c5956e1568976ceb566c98d6f544adac0",
+  "commit_plan_sha256": "09c1a75fb3030d4ee1a3f5b6d0a040a89ffc0cacdb6bcb697c91c5694d0bca75",
+  "recorded_utc": "2026-10-09T23:20:01.028748+00:00",
+  "manifest_entries_verified": 257,
+  "plan_files_verified": 172,
+  "final_stage_paths": 174,
+  "source_files": 29,
+  "package_files": 108,
+  "runtime_processes_before_stage": 0,
+  "uninspectable_python_processes_before_stage": 0,
+  "head_and_22a_commit": "d9f57dca5ed73f001f9c68052f5fe27b8abc933e",
+  "all_32_run_records_raw_SHA_totals_and_cases_match": true,
+  "adopted_red_and_guard_records": 11,
+  "full_labels": [
+    "full_1_run2",
+    "full_2",
+    "full_3"
+  ],
+  "passed_each": 1454,
+  "skipped_each": 1,
+  "full_failures_and_errors_each": 0,
+  "full_same_source_specs_and_cases": true,
+  "full_serial_after_1330_PT": true,
+  "green_passed": 110,
+  "focused_passed": 553,
+  "legacy_capacity_passed": 1,
+  "prior_failed_full_not_counted": true,
+  "card_scenarios": 5,
+  "actual_local_ACK_cards": 8,
+  "scene_P": [
+    3,
+    6,
+    8,
+    4,
+    5
+  ],
+  "card_bodies_exactly_derived_from_actual_ACK_embeds": true,
+  "long_reason_characters": 2487,
+  "long_reason_UTF16_segment_sizes": [
+    900,
+    900,
+    757
+  ],
+  "long_reason_reconstructed_exactly": true,
+  "new_channel_restart_no_duplicate_TP_cards": true,
+  "capacity_oracle_all_scenarios": true,
+  "production_static_approval_unchanged": true,
+  "PMA_disabled_all_three_SDK_constructors": true,
+  "dry_read_only_write_guards_unchanged": true,
+  "release_strong_flow_equivalent_after_diagnostic_leaf_normalization": true,
+  "instruction_and_rulings_exact": true,
+  "scope_exclusions_preserved": true,
+  "secret_pattern_findings": 0,
+  "largest_planned_file_bytes": 311174,
+  "schema_corrections_approved": [
+    "Capacity explanation metadata excluded from actual run selection.",
+    "Only three fixed-SHA historical reds have explicit prior-schema compatibility; missing unknown/spec flags remain unavailable, never become zero/True and never satisfy final gates.",
+    "Recovery candidate fails at actual daily-report tail; 22a fails earlier at anomaly-control full-cause assertion. Both real failure sites documented."
+  ],
+  "final_tool_sha256": {
+    "evidence_validation.py": "4c3395ea8dd8b3484736a10bd73a6f2a5bfa516d34e636beb3e96e138947838d",
+    "seal_report.py": "c7988fe9a46d14a5c5375fdf1e29f8ba4baa1994087d046ad8fa8e577ab636c4"
+  },
+  "limitations": [
+    "Three early immutable red receipts lack unknown-process counts/spec-before flags; reviewer verified only recorded fields, frozen raw hashes, unchanged source and final spec equality.",
+    "Actual card ACKs are local channel doubles, not Discord delivery proof.",
+    "Real Paper price range/execution speed/slippage and Live maximum gap <=5seconds require later authorized measurements."
+  ],
+  "reviewer_final_conclusion_verbatim": "PASS — 最终封存证据包独立只读审签通过，无阻断。未运行测试、seal/audit、写文件或stage；未访问运行仓库/User状态、真实broker或网络。"
+}

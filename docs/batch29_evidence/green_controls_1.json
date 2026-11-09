@@ -1,0 +1,25 @@
+{
+  "label": "green_controls_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T21:52:37.998692-07:00",
+  "end_pt": "2026-10-23T21:52:44.335595-07:00",
+  "seconds": 6.344,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch29_controls.py"
+  ],
+  "code_sha": "deb0a750e440fe7e",
+  "source_unchanged": true,
+  "inventory_sha256": "9b552af5d521cbce0513214fdce5b738b952d5b7d388d46a5a7ea179417c869b",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "cfdd836a474700eeee3a3a3e42d5549adce344d70659bf0e69e6f44cbf96547a",
+  "XML_sha256_before_masking": "57768efceb72dd971dd2f32ede0b30ab43efc55998aa7b44f5c1c47f732b1158",
+  "delivered_log_sha256": "e920f51cc3586832ef742e785f521eda45f3258656896862a2a4713188a77916",
+  "delivered_XML_sha256": "57768efceb72dd971dd2f32ede0b30ab43efc55998aa7b44f5c1c47f732b1158",
+  "tests": 18,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

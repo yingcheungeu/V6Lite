@@ -1,0 +1,35 @@
+{
+  "scope": "serial single normal-cancel control; unchanged frozen tag snapshots in TEMP",
+  "results": [
+    {
+      "baseline": "B20",
+      "test_sha256": "37e52ee1d4bea346b216ec43bbbb524d60afadc915432e6e604dd89b6b6b2352",
+      "exit_code": 0,
+      "counts": {
+        "cases": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "started_utc": "2026-10-09T14:56:41.046942+00:00",
+      "finished_utc": "2026-10-09T14:56:42.255554+00:00",
+      "log": "docs\\batch22_item9_evidence\\agent_planned_control_B20_20261009T145440Z_6652b822_attempt2.log",
+      "xml": "docs\\batch22_item9_evidence\\agent_planned_control_B20_20261009T145440Z_6652b822_attempt2.xml"
+    },
+    {
+      "baseline": "B22",
+      "test_sha256": "37e52ee1d4bea346b216ec43bbbb524d60afadc915432e6e604dd89b6b6b2352",
+      "exit_code": 0,
+      "counts": {
+        "cases": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "started_utc": "2026-10-09T14:56:42.256554+00:00",
+      "finished_utc": "2026-10-09T14:56:43.463887+00:00",
+      "log": "docs\\batch22_item9_evidence\\agent_planned_control_B22_20261009T145440Z_6652b822_attempt2.log",
+      "xml": "docs\\batch22_item9_evidence\\agent_planned_control_B22_20261009T145440Z_6652b822_attempt2.xml"
+    }
+  ]
+}

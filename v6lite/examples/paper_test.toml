@@ -1,0 +1,50 @@
+# G3 Paper test mode example. Copy outside version control and replace the
+# synthetic account with your DU Paper account before operator-supervised use.
+# This is a separate state directory; never point it at formal Paper or G2-D.
+mode = "paper"
+
+[ibkr]
+host = "127.0.0.1"
+port = 4002
+client_id = 132
+account = "DU0000000"
+market_data_type = 1
+
+[universe]
+tradable = ["AAPL"]
+scan = ["AAPL"]
+etf = []
+protected = ["MSTR"]
+
+[protection]
+# constraint relies on John's accepted operating constraints A and B.
+# Every TP/BE still requires fresh ledger/position/GTC/visible-fill checks.
+overnight_tp = "freeze"
+enabled = true
+order_type = "STP"
+gap_a_p1_seconds = 5
+gap_a_p0_seconds = 15
+gap_b_cancel_seconds = 10
+gap_b_p0_seconds = 30
+trigger_unfilled_p0_seconds = 60
+steady_check_seconds = 15
+evidence_fail_p0_seconds = 60
+
+[paths]
+state_dir = "~/.v6lite/paper-test"
+foreign_lock_paths = ["C:/Dev/TradingV6/state/trading_bot_v6.lock", "C:/Dev/TradingV6/trading_bot.lock"]
+
+[test]
+enabled = true
+qty = 3
+stop_mult = 0.3
+tp1_mult = 0.3
+tp2_mult = 0.5
+tp3_mult = 0.8
+
+[alerts]
+discord_webhook_env = "V6LITE_DISCORD_WEBHOOK"
+
+[execution]
+exit_limit_band_pct = 0.002
+tp_max_quote_age_seconds = 3

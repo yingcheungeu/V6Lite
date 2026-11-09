@@ -1,0 +1,115 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_b27b_equivalence",
+  "baseline": "b27b",
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T08:19:46.989456-07:00",
+  "end_pt": "2026-10-18T08:19:50.455613-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "d6dd37c12701ce95",
+  "source_unchanged": true,
+  "worktree_code_sha": "b48c659be8159ae7",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "b48c659be8159ae71384249aff0e9392d91fa0b88bb75a79ba945c9ec40c4002",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observer_equivalence.py",
+      "sha256": "6fa99a2bf52441c80ac8711917952a69ce0ddec2af02939c8c851af8aee5405d"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 7,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "outcome": "failure",
+      "message": "AssertionError: ('scale target rows', 'PROTECT_STATE', 6, 4)\nassert 6 <= 5"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change",
+      "outcome": "failure",
+      "message": "assert (2 == 1)"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change"
+    ]
+  },
+  "stdout_sha256": "72a9abfa32bd89004c7d0deae08a7ce34ef539edfe50c746b8039434536cdd3e",
+  "junit_sha256": "8f56cb8c8093cc1147289e1d0561ce3884b5400bb3c40c9da0bf9e0cf49b1833",
+  "inventory_sha256": "b24fd39efbc754cce1ad7d37deece938648bea48b6b9b6db9137dbc06f69fecb",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "red_b27b_equivalence.json": "a5c042a7b3d59842175946a651631ec057776a1b5bcf5fc0c7e6c97636a7a99e",
+      "red_b27b_equivalence.xml": "8315072b0a933991f84e7a9c7feaac62a6e4828f5d5c1b6eeffba447f7e8dd88",
+      "red_b27b_equivalence_inventory.json": "3a936104320f0ed4c215b07825a0c6030f33c3f8abfa4d0f6d6a7a48a4f616c4",
+      "red_b27b_equivalence.txt": "72a9abfa32bd89004c7d0deae08a7ce34ef539edfe50c746b8039434536cdd3e"
+    }
+  }
+}

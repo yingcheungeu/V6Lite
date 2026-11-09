@@ -1,0 +1,313 @@
+{
+  "label": "red_overnight_b25",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-14T22:07:41.463092-07:00",
+  "end_pt": "2026-10-14T22:07:47.842126-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "ea71abe782e4cf68",
+  "source_unchanged": true,
+  "worktree_code_sha": "b7ba51ffe649912c",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "b7ba51ffe649912c3b03f872b8f6417f263376c764e30a9632b744dbc753c5e4",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_overnight_evidence.py",
+      "sha256": "c0b66a415cae00bb0eaed24990300ee7b09b78baacb6631fe41d96bf12e9449c"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 33,
+    "failures": 31,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B26_overnight_opt_in_default_is_declared_and_disabled",
+      "outcome": "failure",
+      "message": "AssertionError: assert None is False\n +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60), 'overnight_tp_enabled', None)\n +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60) = ProtectionConfig()"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[manual_sell_one]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[cancelled_gtc]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[missing_entry_exec]",
+      "outcome": "failure",
+      "message": "AssertionError: assert ([OrderRequest...3bb40c4a20d')] == []\n  \n  Left contains one more item: OrderRequest(intent_id='v6l-cc2c687eae69410d9246', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=119.07, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-68d3e1ac93bb40c4a20d')\n  Use -v to get more diff)"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[unknown_today_exec]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[position_mismatch]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[account]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[client_id]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[con_id]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[broker_order_id]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[perm_id]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[aux_price]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[order_type]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[tif]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[outside_rth]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_perm]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[orphan_intent]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[net_quantity]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_price]",
+      "outcome": "failure",
+      "message": "AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[open_orders]",
+      "outcome": "failure",
+      "message": "AssertionError: fresh query failure must revoke the earlier overnight TP authority\nassert []\n +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000208B8DA84D0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[positions_fresh]",
+      "outcome": "failure",
+      "message": "AssertionError: fresh query failure must revoke the earlier overnight TP authority\nassert []\n +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000208B8B58810>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[executions_today]",
+      "outcome": "failure",
+      "message": "AssertionError: fresh query failure must revoke the earlier overnight TP authority\nassert []\n +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000208B8B59450>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[missing_entry_exec]",
+      "outcome": "failure",
+      "message": "AssertionError: assert ([OrderRequest...ec448349f52')] == []\n  \n  Left contains one more item: OrderRequest(intent_id='v6l-2bd01beb8c5b4774a91c', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=119.07, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-846b6139bec448349f52')\n  Use -v to get more diff)"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[external_working_sell]",
+      "outcome": "failure",
+      "message": "AssertionError: ('S+T+X<=P', 'AAPL', 4, 3.0, {'external-b26-seller': ('AAPL', 1), 'v6l-protect-da03584c53134b578162': ('AAPL', 3)})\nassert 4 <= 3.0\n +  where 3.0 = <built-in method get of dict object at 0x00000208B8BE2E00>('AAPL', 0)\n +    where <built-in method get of dict object at 0x00000208B8BE2E00> = {'AAPL': 3.0}.get"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[undercovered]",
+      "outcome": "failure",
+      "message": "assert []\n +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000208B8BE0510>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[missing_gtc]",
+      "outcome": "failure",
+      "message": "assert []\n +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000208B8E15010>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_historical_entry_proof_does_not_replace_protected_release_execution_evidence",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B26_default_off_retains_b25_overnight_stop_and_blocks_new_TP",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price",
+      "outcome": "failure",
+      "message": "assert (1, 1, 1, 0) == (1, 1, 0, 0)\n  \n  At index 2 diff: 1 != 0\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen",
+      "outcome": "failure",
+      "message": "assert 0 == 1\n +  where 0 = len([])\n +    where [] = _restore_infos(<v6lite.tests.helpers.Rig object at 0x00000208B8C9F690>)"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "::test_B26_overnight_opt_in_default_is_declared_and_disabled",
+      "::test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC",
+      "::test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[manual_sell_one]",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[cancelled_gtc]",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[missing_entry_exec]",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[unknown_today_exec]",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[position_mismatch]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[account]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[client_id]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[con_id]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[broker_order_id]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[perm_id]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[aux_price]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[order_type]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[tif]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[outside_rth]",
+      "::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_perm]",
+      "::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[orphan_intent]",
+      "::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[net_quantity]",
+      "::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_price]",
+      "::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[open_orders]",
+      "::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[positions_fresh]",
+      "::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[executions_today]",
+      "::test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[missing_entry_exec]",
+      "::test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[external_working_sell]",
+      "::test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[undercovered]",
+      "::test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[missing_gtc]",
+      "::test_B26_historical_entry_proof_does_not_replace_protected_release_execution_evidence",
+      "::test_B26_default_off_retains_b25_overnight_stop_and_blocks_new_TP",
+      "::test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore",
+      "::test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price",
+      "::test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen"
+    ],
+    "executed": [
+      "::test_B26_overnight_opt_in_default_is_declared_and_disabled",
+      "::test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC",
+      "::test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[manual_sell_one]",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[cancelled_gtc]",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[missing_entry_exec]",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[unknown_today_exec]",
+      "::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[position_mismatch]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[account]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[client_id]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[con_id]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[broker_order_id]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[perm_id]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[aux_price]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[order_type]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[tif]",
+      "::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[outside_rth]",
+      "::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_perm]",
+      "::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[orphan_intent]",
+      "::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[net_quantity]",
+      "::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_price]",
+      "::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[open_orders]",
+      "::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[positions_fresh]",
+      "::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[executions_today]",
+      "::test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[missing_entry_exec]",
+      "::test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[external_working_sell]",
+      "::test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[undercovered]",
+      "::test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[missing_gtc]",
+      "::test_B26_historical_entry_proof_does_not_replace_protected_release_execution_evidence",
+      "::test_B26_default_off_retains_b25_overnight_stop_and_blocks_new_TP",
+      "::test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore",
+      "::test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price",
+      "::test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen"
+    ]
+  },
+  "stdout_sha256": "f3360a97ef605fae234056a28f28c607e7651cc3f8521433bdc96f1402a824bf",
+  "junit_sha256": "7f1e46a29505bc866d0010387df88f518f9c16eb4b426d7c9ea8cee1720c39ad",
+  "inventory_sha256": "e3f002bf2e30003c75dafb0e8304de8546fc37e241d99c3742e17d3b47043603"
+}

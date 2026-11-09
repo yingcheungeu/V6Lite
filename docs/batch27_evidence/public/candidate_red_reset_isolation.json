@@ -1,0 +1,73 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "candidate_red_reset_isolation",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T08:33:02.314527-07:00",
+  "end_pt": "2026-10-18T08:33:04.711908-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "478391afe4e32052",
+  "source_unchanged": true,
+  "worktree_code_sha": "478391afe4e32052",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "478391afe4e32052d57aeb47ffe3f5e09e7bcb28ee850d57e89a4d234df35ad8",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_reset_isolation.py",
+      "sha256": "3fecebfbc60317a627d4fd4dfdc994bf13a70f4bf910e343e9cb1516c8424c14"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 1,
+    "failures": 1,
+    "errors": 1,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_reset_isolation",
+      "name": "test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails.<locals>.<genexpr> at 0x00000217791B0860>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_reset_isolation",
+      "name": "test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+      "outcome": "error",
+      "message": "failed on teardown with \"ExceptionGroup: errors while tearing down <Function test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails> (2 sub-exceptions)\""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails"
+    ]
+  },
+  "stdout_sha256": "bf606a4ed01f13755b82c925540f39dfd7b5593d9c9b7276c187132eda73335b",
+  "junit_sha256": "721a17d91d4063420e7d7b14838b7589e513547897e95a3e83e7ef9729422a50",
+  "inventory_sha256": "a01e4cf7c4562cd596526283a2adb0c5c432d0162473c1eb8d5f5ff946a0beff",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "candidate_red_reset_isolation.json": "89794ff3ffa4328bc5a30214ebe1b4400a2e7d7c162ead58f8d73b767ad45de2",
+      "candidate_red_reset_isolation.xml": "55e32751ab9cf7e924dcc6a22735ab71901932ed2a0ed20d77d995e4d0bfd866",
+      "candidate_red_reset_isolation_inventory.json": "576e49ed3d992860cd2c38095ccd07707f1b8a3e10c369da49e3265ab451f3c5",
+      "candidate_red_reset_isolation.txt": "bf606a4ed01f13755b82c925540f39dfd7b5593d9c9b7276c187132eda73335b"
+    }
+  }
+}

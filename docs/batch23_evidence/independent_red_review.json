@@ -1,0 +1,35 @@
+{
+  "reviewed_by": "batch20_time_logs",
+  "scope": "read-only valid-red evidence and frozen independent test structure; no dynamic production review",
+  "verdict": "PASS",
+  "baseline_tag": "v6lite-batch22a",
+  "baseline_commit": "d9f57dca5ed73f001f9c68052f5fe27b8abc933e",
+  "baseline_code_sha": "f27e144de9eb406b",
+  "red_label": "red_22a_run3",
+  "totals": {
+    "tests": 73,
+    "failures": 66,
+    "passed": 7,
+    "errors": 0,
+    "skipped": 0
+  },
+  "unique_case_records_match_xml": true,
+  "all_failures_behavioral_assertions": true,
+  "independent_root_causes_note": "Multiple cases share prerequisite behaviors; 66 failures are not 66 independent defects.",
+  "specs": {
+    "test_batch23_tp_evidence.py": "1fcf3580ab9e9d03e83ccf5bdc23c6c2cfa2c1a8d714f4e7650e91d99598a96a",
+    "test_batch23_contracts.py": "586d8ee1a08f56aaf3af851d5b7ee2d3a1c138aa0ec97909d452f8875e788aca"
+  },
+  "evidence": {
+    "red_22a_run3.json": "fe2d5899c67e2965a18f81bce60a1a4973378885b5ab12bb6cb0ebb48ab51a1d",
+    "red_22a_run3.txt": "ab424d4c37a99be1521650f1e25c6ff64af15bc9805aa033950709d424337916",
+    "red_22a_run3.xml": "3ca043cd63c208aa19cc526a7235383959cb2f31b22adbeffdf44d38a32e9de0"
+  },
+  "safety_oracle": "Deduplicated per-ref maxima include Fake current/pending, Store confirmed/pending, UNKNOWN/CANCEL_SEEN/maybe_sent reservations. Release absent capacity only after fresh complete post-callback three-source evidence. Actual broker write spies check before and after.",
+  "prior_reds": "Not accepted as final gate; original bytes and fixture findings preserved.",
+  "limitations": [
+    "Direct Alerter independent P1/INFO probe proves no global notification mute, not an engine-triggered separate incident end-to-end.",
+    "Externally injected SELL negative starts with pre-existing excess claims; requires no engine writes and pause retained."
+  ],
+  "reviewer_io": "No writes, tests, connections, runtime/User-state reads."
+}

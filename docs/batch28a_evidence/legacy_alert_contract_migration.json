@@ -1,0 +1,22 @@
+[
+  {
+    "path": "v6lite/tests/test_engine.py",
+    "old_name": "test_overnight_gateway_restart_is_logged_not_paged",
+    "before_sha256": "bb8967a536a8d187fc9f1d742be17c0b4b90e193ab52731ac06d6bff8a08f461",
+    "after_sha256": "bafe01efcf53f0a567af3bc128dee4cafd5822b94c4b0389bb3d2568a19fc0c4",
+    "outside_function_unchanged": true,
+    "old_function": "def test_overnight_gateway_restart_is_logged_not_paged(tmp_path):\n    rig = Rig(tmp_path, start=et(20, 0))\n    rig.engine.startup()\n    rig.tick()\n    before = len(rig.channel.messages)\n    rig.broker.drop_connection()\n    rig.advance(seconds=1)\n    rig.tick()\n    assert len(rig.channel.messages) == before\n",
+    "new_function": "def test_overnight_unexpected_gateway_disconnect_is_paged_once(tmp_path):\n    rig = Rig(tmp_path, start=et(20, 0))\n    rig.engine.startup()\n    rig.tick()\n    before = len(rig.channel.messages)\n    rig.broker.drop_connection()\n    rig.advance(seconds=1)\n    rig.tick()\n    assert len(rig.channel.messages) == before + 1\n    title, _ = rig.channel.messages[-1]\n    assert \"P1\" in title and \"IBKR 连接断开\" in title\n",
+    "authority": "batch28 section1: all unexpected disconnects emit P1; prior pre-RTH/night log-only policy superseded"
+  },
+  {
+    "path": "v6lite/tests/test_g2_day1_selfreview.py",
+    "old_name": "test_R7_2_engine_pre_rth_disconnect_mutes_rth_disconnect_page",
+    "before_sha256": "fe84ef645d99f421c64f670aa7f883d16b5a24c8c15b4dd30a4aa8f035b5ea06",
+    "after_sha256": "536e336daa7fa09d1ca82ce5d7a7427c714f2ad072f2db28b3b67208be6a5449",
+    "outside_function_unchanged": true,
+    "old_function": "def test_R7_2_engine_pre_rth_disconnect_mutes_rth_disconnect_page(tmp_path):\n    rig = Rig(tmp_path, start=et(9, 15))\n    rig.start()\n    rig.broker.drop_connection()                     # 09:15 ET: log-only (not RTH, nothing working)\n    rig.tick()\n    assert \"IBKR 连接断开\" not in rig.messages()\n    rig.advance(seconds=31)\n    rig.tick()                                       # reconnects\n    assert rig.engine.flags.broker_connected\n    rig.at(et(9, 35))                                # RTH now -> must page\n    rig.broker.drop_connection()\n    rig.tick()\n    assert \"IBKR 连接断开\" in rig.messages(), \"RTH disconnect not paged (muted by the 09:15 log-only)\"\n",
+    "new_function": "def test_R7_2_engine_pre_rth_and_recurring_rth_disconnect_are_both_paged(tmp_path):\n    rig = Rig(tmp_path, start=et(9, 15))\n    rig.start()\n    rig.broker.drop_connection()                     # B28: unexpected pre-RTH loss also pages\n    rig.tick()\n    count = lambda: sum(\"P1\" in title and \"IBKR 连接断开\" in title\n                        for title, _ in rig.channel.messages)\n    assert count() == 1\n    rig.advance(seconds=31)\n    rig.tick()                                       # reconnects\n    assert rig.engine.flags.broker_connected\n    rig.at(et(9, 35))                                # new RTH loss must page again\n    rig.broker.drop_connection()\n    rig.tick()\n    assert count() == 2, \"new RTH disconnect must not be muted by the pre-RTH page\"\n",
+    "authority": "batch28 section1: all unexpected disconnects emit P1; prior pre-RTH/night log-only policy superseded"
+  }
+]

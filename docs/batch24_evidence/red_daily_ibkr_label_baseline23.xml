@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.846" timestamp="2026-10-12T08:40:54.266323-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch12_v2" name="test_G3_chinese_daily_health_embed_and_plaintext_mail" time="0.310"><failure message="AssertionError: assert ['扫描', '下单/撤单..., '告警送达', ...] == ['扫描', '下单/撤单..., '告警送达', ...]&#10;  &#10;  At index 4 diff: 'Gateway 心跳' != 'IBKR 心跳'&#10;  Use -v to get more diff">tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_daily_ibkr_label_baseline23/test_G3_chinese_daily_health_e0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000297F7D9F310&gt;
+
+    def test_G3_chinese_daily_health_embed_and_plaintext_mail(tmp_path, monkeypatch):
+        rig, payloads, mails = _card_rig(tmp_path, monkeypatch, start=et(9, 50))
+        try:
+            rig.start()
+            rig.at(et(10, 0, 30))
+            rig.tick()
+            rig.at(et(16, 6))
+            rig.tick()
+            embed = _find_embed(payloads, "健康")
+            assert embed["title"].startswith(("✅ 正常", "⚠️ 需关注"))
+            names = [field["name"] for field in embed["fields"]]
+&gt;           assert names == ["扫描", "下单/撤单", "持仓与漂移", "券商端保护", "IBKR 心跳",
+                             "告警送达", "行情可用率", "code_sha"]
+E                            AssertionError: assert ['扫描', '下单/撤单..., '告警送达', ...] == ['扫描', '下单/撤单..., '告警送达', ...]
+E                              
+E                              At index 4 diff: 'Gateway 心跳' != 'IBKR 心跳'
+E                              Use -v to get more diff
+
+v6lite\tests\test_batch12_v2.py:150: AssertionError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,24 @@
+{
+  "failed_full_label": "full_1",
+  "old_path": "v6lite/tests/test_review_round2.py",
+  "case": "test_race_final_sell_boundary_counts_other_working_sells",
+  "before_sha256": "7ab32142a9a0ee2fdb54853297cf6eae619ce28de4cac4dc646a8a8035660822",
+  "after_sha256": "a8fa9a8f5daca49aed8b0de1a87097f257b02048a8807e769d951f06472d6b35",
+  "change": "Actual fresh-quote exit evaluation, queue and event drain create the legitimate six-share DAY LMT TP; no injected pricing control or guard bypass.",
+  "strong_assertions": [
+    "P=20 and TP=6; available sell capacity=14",
+    "STOP20 exactly refused:sell_exceeds_broker_qty",
+    "No STOP intent or additional broker writes",
+    "Sole SELL remains the original TP6; ledger P20 and no TP fills",
+    "MKT calls=0"
+  ],
+  "root_targeted_label": "legacy_capacity",
+  "root_targeted_totals": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "seven_new_specs_unchanged": true,
+  "five_prior_legacy_updates_unchanged": true
+}

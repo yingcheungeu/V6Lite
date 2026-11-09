@@ -1,0 +1,147 @@
+..FFFFFFFFFFFFFFFFFFF                                                    [100%]
+================================== FAILURES ===================================
+_ test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[funds] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:234: in test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error
+    assert not [event for event in events if getattr(event, 'intent_id', None) == ref], events
+E   AssertionError: [StatusEvent(intent_id='v6l-protect-9b7da439bdb143be9af3', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...side_rth=False, account='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None)]
+E   assert not [StatusEvent(intent_id='v6l-protect-9b7da439bdb143be9af3', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...side_rth=False, account='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None)]
+------------------------------ Captured log call ------------------------------
+ERROR    ib_insync.wrapper:wrapper.py:1113 Error 201, reqId 1002: Synthetic nonorder funds request rejected; not an order. END-QUERY-PROVENANCE
+_ test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[history] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:234: in test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error
+    assert not [event for event in events if getattr(event, 'intent_id', None) == ref], events
+E   AssertionError: [StatusEvent(intent_id='v6l-protect-31a9cd20facc4354af16', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...side_rth=False, account='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None)]
+E   assert not [StatusEvent(intent_id='v6l-protect-31a9cd20facc4354af16', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...side_rth=False, account='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None)]
+------------------------------ Captured log call ------------------------------
+ERROR    ib_insync.wrapper:wrapper.py:1113 Error 201, reqId 1002: Synthetic nonorder history request rejected; not an order. END-QUERY-PROVENANCE, contract: namespace(symbol='AAPL', conId=10000, secType='STK', currency='USD', exchange='SMART')
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_array] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:301: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert len(audits) == 1, 'booked TP executions need one audit even when its optional send input is corrupt'
+E   AssertionError: booked TP executions need one audit even when its optional send input is corrupt
+E   assert 0 == 1
+E    +  where 0 = len([])
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_null] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:301: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert len(audits) == 1, 'booked TP executions need one audit even when its optional send input is corrupt'
+E   AssertionError: booked TP executions need one audit even when its optional send input is corrupt
+E   assert 0 == 1
+E    +  where 0 = len([])
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_string] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:301: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert len(audits) == 1, 'booked TP executions need one audit even when its optional send input is corrupt'
+E   AssertionError: booked TP executions need one audit even when its optional send input is corrupt
+E   assert 0 == 1
+E    +  where 0 = len([])
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_bid] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:301: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert len(audits) == 1, 'booked TP executions need one audit even when its optional send input is corrupt'
+E   AssertionError: booked TP executions need one audit even when its optional send input is corrupt
+E   assert 0 == 1
+E    +  where 0 = len([])
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[nan_bid] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:301: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert len(audits) == 1, 'booked TP executions need one audit even when its optional send input is corrupt'
+E   AssertionError: booked TP executions need one audit even when its optional send input is corrupt
+E   assert 0 == 1
+E    +  where 0 = len([])
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_gap] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:301: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert len(audits) == 1, 'booked TP executions need one audit even when its optional send input is corrupt'
+E   AssertionError: booked TP executions need one audit even when its optional send input is corrupt
+E   assert 0 == 1
+E    +  where 0 = len([])
+_ test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:317: in test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause
+    assert rig.store.protection(pid)['state'] == 'TP_NEEDS_RESTORE'
+E   AssertionError: assert 'TP_ACTIVE' == 'TP_NEEDS_RESTORE'
+E     
+E     - TP_NEEDS_RESTORE
+E     + TP_ACTIVE
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price] __
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:357: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert any(event.get(field) == reason for event in events), 'the actual broker diagnostic must be durable before checking its report'
+E   AssertionError: the actual broker diagnostic must be durable before checking its report
+E   assert False
+E    +  where False = any(<generator object test_B23_full_broker_reason_tail_survives_actual_daily_report.<locals>.<genexpr> at 0x000002CA2FA52B60>)
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:359: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert reason in report and 'END-DAILY-' + source in report, 'the full local daily report must keep broker reason, not the 160-character event preview'
+E   AssertionError: the full local daily report must keep broker reason, not the 160-character event preview
+E   assert ('Synthetic protect_terminal diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文...原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-protect_terminal' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU0000000   state role: formal\n- code_sha: f27e144de9eb406b\..."signals": [["AAPL", 78]], "vix": 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-16e13938fc9d45c0b239 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Inactive code=201；取消诊断与执行权限独立核验；券商原因原文=Synthetic protect_terminal diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-protect_terminal
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:357: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert any(event.get(field) == reason for event in events), 'the actual broker diagnostic must be durable before checking its report'
+E   AssertionError: the actual broker diagnostic must be durable before checking its report
+E   assert False
+E    +  where False = any(<generator object test_B23_full_broker_reason_tail_survives_actual_daily_report.<locals>.<genexpr> at 0x000002CA2FA51D50>)
+_ test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[empty] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:364: in test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request
+    rig, pid, req, pause = _paused(tmp_path)
+                           ^^^^^^^^^^^^^^^^^
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:153: in _paused
+    assert raw, 'a real price rejection must persist its pause episode'
+E   AssertionError: a real price rejection must persist its pause episode
+E   assert None
+_ test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[missing] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:364: in test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request
+    rig, pid, req, pause = _paused(tmp_path)
+                           ^^^^^^^^^^^^^^^^^
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:153: in _paused
+    assert raw, 'a real price rejection must persist its pause episode'
+E   AssertionError: a real price rejection must persist its pause episode
+E   assert None
+_ test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:387: in test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches
+    rig, pid, req, pause = _paused(tmp_path)
+                           ^^^^^^^^^^^^^^^^^
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:153: in _paused
+    assert raw, 'a real price rejection must persist its pause episode'
+E   AssertionError: a real price rejection must persist its pause episode
+E   assert None
+_ test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:427: in test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot
+    assert req.limit_price == expected
+E   AssertionError: assert 118.45 == 119.41
+E    +  where 118.45 = OrderRequest(intent_id='v6l-9588f74aba0c4ddc80fd', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=118.45, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-254c868ba0f84ddfbd6b').limit_price
+_ test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[capacity_proof] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:470: in test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence
+    assert [request for request in rig.broker.sent if request.purpose in TP_PURPOSES] == before_tp
+E   AssertionError: assert [OrderRequest...83b49d395e4')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-51cb57e4b8554f3b9b3a', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=118.45, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-0bf7bf7e683b49d395e4')
+E     Use -v to get more diff
+_ test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[durable_intent] _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:470: in test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence
+    assert [request for request in rig.broker.sent if request.purpose in TP_PURPOSES] == before_tp
+E   AssertionError: assert [OrderRequest...9224a15a70d')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-96d86af7a55c467b8864', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=118.45, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-0fe9ab8d59224a15a70d')
+E     Use -v to get more diff
+_ test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof _
+..\review_specs\fcf063c69658\test_batch23_error_provenance.py:511: in test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof
+    assert any('P1' in title and '价格' in title for title, _ in rig.channel.messages)
+E   assert False
+E    +  where False = any(<generator object test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof.<locals>.<genexpr> at 0x000002CA2FA21C40>)
+=========================== short test summary info ===========================
+FAILED ::test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[funds]
+FAILED ::test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[history]
+FAILED ::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_array]
+FAILED ::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_null]
+FAILED ::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_string]
+FAILED ::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_bid]
+FAILED ::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[nan_bid]
+FAILED ::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_gap]
+FAILED ::test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause
+FAILED ::test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price]
+FAILED ::test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal]
+FAILED ::test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query]
+FAILED ::test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[empty]
+FAILED ::test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[missing]
+FAILED ::test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches
+FAILED ::test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot
+FAILED ::test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[capacity_proof]
+FAILED ::test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[durable_intent]
+FAILED ::test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof
+19 failed, 2 passed in 2.85s

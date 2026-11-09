@@ -1,0 +1,20 @@
+{
+  "scope": "docs-only sealing compatibility; no product/tests/raw evidence modified",
+  "errors_observed": [
+    "KeyError source_code_sha: legacy_capacity_update.json was explanation metadata, not a test receipt",
+    "KeyError uninspectable_python_processes: three early red receipts used the prior collector schema",
+    "Recovery red assertion paths differ: candidate full state exists but daily loses tail; batch22a catch truncates state control earlier at 200 characters. Exact raw assertion sites are separately validated."
+  ],
+  "fix": "Filter only actual capacity run receipts. Explicit exact-SHA compatibility only for three historical reds; missing unknown_count not treated as zero, not accepted by final gates.",
+  "historical_raw_receipts": {
+    "red_22a_run5": "25c0710fbea655e46eae52116748b62659b8693663a840c8b6377ec331014bad",
+    "review_red_candidate": "5659728c6bef3094df91b066bd3998e79d5ca1f991d031ccf54013aa151f6e63",
+    "review_red_22a": "56a6375a5d36aaa24068c8ca67e292ae104f3aacfb0d3875a1929b1b8b738838"
+  },
+  "final_gates": "unchanged strict process/source/spec/raw per-case verification; a17d647ba28c51e4 full3 completed before tool change",
+  "tool_sha256": {
+    "seal_report.py": "c7988fe9a46d14a5c5375fdf1e29f8ba4baa1994087d046ad8fa8e577ab636c4",
+    "evidence_validation.py": "4c3395ea8dd8b3484736a10bd73a6f2a5bfa516d34e636beb3e96e138947838d"
+  },
+  "independent_bundle_review": "pending"
+}

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="51" skipped="0" tests="52" time="6.234" timestamp="2026-10-08T22:22:18.174039-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_first_partial_fill_submits_STP_in_urgent_callback_with_no_limit" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-06819dbbc4ba404eaa1d', position_id='pos-512fa32350704693b1e7', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:139: in test_B22_first_partial_fill_submits_STP_in_urgent_callback_with_no_limit
+    entry, pos, row = _first_fill(rig)
+                      ^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:102: in _first_fill
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-06819dbbc4ba404eaa1d', position_id='pos-512fa32350704693b1e7', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_partial_entry_growth_updates_same_STP_quantity_and_aux_price" time="0.068"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-04476065739d4926a7e4', position_id='pos-32e2d8bab2504a2caafe', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:155: in test_B22_partial_entry_growth_updates_same_STP_quantity_and_aux_price
+    entry, pos, before = _first_fill(rig)
+                         ^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:102: in _first_fill
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-04476065739d4926a7e4', position_id='pos-32e2d8bab2504a2caafe', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_native_STP_without_limit_is_complete_identity_and_price_proof" time="0.073"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-8e1248fee79746139698', position_id='pos-bc874755e71d42a19f13', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:170: in test_B22_native_STP_without_limit_is_complete_identity_and_price_proof
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-8e1248fee79746139698', position_id='pos-bc874755e71d42a19f13', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[account]" time="0.075"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-13910a2512be491a8955', position_id='pos-f9e15d9c68214e86a632', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-13910a2512be491a8955', position_id='pos-f9e15d9c68214e86a632', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[client_id]" time="0.079"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-6509359b4bb84f7e9855', position_id='pos-bb10f415fe7f4cb69982', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-6509359b4bb84f7e9855', position_id='pos-bb10f415fe7f4cb69982', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[con_id]" time="0.071"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-52f483fc25764b61aeb4', position_id='pos-da930e46fa5b45548f86', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-52f483fc25764b61aeb4', position_id='pos-da930e46fa5b45548f86', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[broker_order_id]" time="0.075"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-c038cc6bcdcf43daa1c5', position_id='pos-f8ceb60aaa6c4e69a5a1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-c038cc6bcdcf43daa1c5', position_id='pos-f8ceb60aaa6c4e69a5a1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[perm_id]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-8072607312f043fb98f4', position_id='pos-29cf472e454e462da25a', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-8072607312f043fb98f4', position_id='pos-29cf472e454e462da25a', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[intent_id]" time="0.073"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-b0e296815c8242289b00', position_id='pos-4ba127b3525248699909', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-b0e296815c8242289b00', position_id='pos-4ba127b3525248699909', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[aux_price]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-4348fff8ed0a4b97bb59', position_id='pos-0355da103e58415db97d', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-4348fff8ed0a4b97bb59', position_id='pos-0355da103e58415db97d', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[tif]" time="0.072"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-e51fe3244ca940ab8a58', position_id='pos-446d0559615b450cbfe1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-e51fe3244ca940ab8a58', position_id='pos-446d0559615b450cbfe1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[outside_rth]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-5a684b92f05e4d87b60d', position_id='pos-b69deac96947403284e9', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-5a684b92f05e4d87b60d', position_id='pos-b69deac96947403284e9', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[order_type]" time="0.072"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-8f6b4e2df62e44c79523', position_id='pos-3b2df37b39304048b7f2', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:181: in test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-8f6b4e2df62e44c79523', position_id='pos-3b2df37b39304048b7f2', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_TP_waits_for_STP_decrease_confirmation_then_preserves_gross_capacity" time="0.073"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-1229016ccd7442939cda', position_id='pos-2e379e55fc134b7491ed', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:193: in test_B22_TP_waits_for_STP_decrease_confirmation_then_preserves_gross_capacity
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-1229016ccd7442939cda', position_id='pos-2e379e55fc134b7491ed', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_TP_timeout_keeps_cancel_pending_reserve_then_restores_same_STP" time="0.076"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-1f5f3cd8ffe544479a79', position_id='pos-b326597e011044938f8e', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:216: in test_B22_TP_timeout_keeps_cancel_pending_reserve_then_restores_same_STP
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-1f5f3cd8ffe544479a79', position_id='pos-b326597e011044938f8e', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_TP1_fill_changes_aux_to_breakeven_without_changing_STP_identity" time="0.078"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-16b9e17bb73647428da4', position_id='pos-1b6aa955317640e1b663', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:235: in test_B22_TP1_fill_changes_aux_to_breakeven_without_changing_STP_identity
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-16b9e17bb73647428da4', position_id='pos-1b6aa955317640e1b663', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_last_share_TP_waits_for_exact_STP_cancel_then_LMT_fill_closes" time="0.080"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-5c59898a379b4821a34d', position_id='pos-12ff43c8cd6d4fec8cf5', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:255: in test_B22_last_share_TP_waits_for_exact_STP_cancel_then_LMT_fill_closes
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-5c59898a379b4821a34d', position_id='pos-12ff43c8cd6d4fec8cf5', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_last_share_TP_cancel_retires_old_STP_and_restores_new_STP" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-d26103b9af5a49689cb2', position_id='pos-5c555fcc658a486a9f22', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:274: in test_B22_last_share_TP_cancel_retires_old_STP_and_restores_new_STP
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-d26103b9af5a49689cb2', position_id='pos-5c555fcc658a486a9f22', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[working]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-cf1f63e707e24e8b9cd9', position_id='pos-9eb7bcc9923a42828cb1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:303: in test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-cf1f63e707e24e8b9cd9', position_id='pos-9eb7bcc9923a42828cb1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[decrease_pending]" time="0.075"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-2b7cc74265b54b428877', position_id='pos-f7fe37bc54a1497e8b50', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:303: in test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-2b7cc74265b54b428877', position_id='pos-f7fe37bc54a1497e8b50', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_working]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-def3a9f32e504bd2ba39', position_id='pos-eddcf270e2e94ef69a35', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:303: in test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-def3a9f32e504bd2ba39', position_id='pos-eddcf270e2e94ef69a35', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_partial]" time="0.071"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-b04ec1c0a8e74e1286f1', position_id='pos-94369041f52340798cd1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:303: in test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-b04ec1c0a8e74e1286f1', position_id='pos-94369041f52340798cd1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_cancel_pending]" time="0.071"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-99630d55ae6345039784', position_id='pos-22ce5c63bd3b4da4982f', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:303: in test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-99630d55ae6345039784', position_id='pos-22ce5c63bd3b4da4982f', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[protection_partial]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-559f5a2ac4f242099658', position_id='pos-6ac1550a2f19409d85c1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:303: in test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-559f5a2ac4f242099658', position_id='pos-6ac1550a2f19409d85c1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[submit_pending]" time="0.065"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-a0bb5503c21b4fce9111', position_id='pos-abbaa01b40cf4489a9df', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:301: in test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell
+    _, pos, row = _first_fill(rig)
+                  ^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:102: in _first_fill
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-a0bb5503c21b4fce9111', position_id='pos-abbaa01b40cf4489a9df', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_shutdown_preserves_strong_STP_GTC_and_restarts_without_rehang" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-1fcf47916c8e458e85b8', position_id='pos-70e0af7e5c4b43fc9d10', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:330: in test_B22_shutdown_preserves_strong_STP_GTC_and_restarts_without_rehang
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-1fcf47916c8e458e85b8', position_id='pos-70e0af7e5c4b43fc9d10', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_retired_STP_identity_trigger_and_type_survive_restart_and_late_fill" time="0.072"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-313473b7c69f47f9a903', position_id='pos-4357dfd02585420fb799', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:361: in test_B22_retired_STP_identity_trigger_and_type_survive_restart_and_late_fill
+    rig, pos, old, new = _retired_pair(tmp_path)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:342: in _retired_pair
+    _, pos, old = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-313473b7c69f47f9a903', position_id='pos-4357dfd02585420fb799', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[broker_order_id]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-d4020b528fe946658472', position_id='pos-cd65757b9ec64704b786', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:394: in test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes
+    rig, pos, old, new = _retired_pair(tmp_path)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:342: in _retired_pair
+    _, pos, old = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-d4020b528fe946658472', position_id='pos-cd65757b9ec64704b786', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[perm_id]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-eeae0340d0ea4290b2f8', position_id='pos-100148c05b2f42a19373', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:394: in test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes
+    rig, pos, old, new = _retired_pair(tmp_path)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:342: in _retired_pair
+    _, pos, old = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-eeae0340d0ea4290b2f8', position_id='pos-100148c05b2f42a19373', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[con_id]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-6430060c1d6047d48e57', position_id='pos-24e59ba165254aa2bf5f', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:394: in test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes
+    rig, pos, old, new = _retired_pair(tmp_path)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:342: in _retired_pair
+    _, pos, old = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-6430060c1d6047d48e57', position_id='pos-24e59ba165254aa2bf5f', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_release_accepts_STP_only_after_exact_cancel_and_two_stable_flat_snapshots" time="0.073"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-28b6c8d920da45088731', position_id='pos-c240c20815964e9eade8', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:431: in test_B22_release_accepts_STP_only_after_exact_cancel_and_two_stable_flat_snapshots
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-28b6c8d920da45088731', position_id='pos-c240c20815964e9eade8', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[perm_id]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-8be37ea6d30d488ab82e', position_id='pos-06669cad97c1493fb344', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:453: in test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-8be37ea6d30d488ab82e', position_id='pos-06669cad97c1493fb344', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[account]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-e60730fddbe34beaba66', position_id='pos-add10711f103404781ac', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:453: in test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-e60730fddbe34beaba66', position_id='pos-add10711f103404781ac', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[client_id]" time="0.073"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-e5f74903469d4476a32f', position_id='pos-f5d925c29c6f4a8eb1cd', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:453: in test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-e5f74903469d4476a32f', position_id='pos-f5d925c29c6f4a8eb1cd', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[con_id]" time="0.071"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-93aa5188484a48a7a9a3', position_id='pos-a1154cd76a5d45f0b2bf', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:453: in test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-93aa5188484a48a7a9a3', position_id='pos-a1154cd76a5d45f0b2bf', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_existing_STP_LMT_record_is_P0_and_original_contract_is_never_migrated" time="0.102"><failure message="assert False&#10; +  where False = any(&lt;generator object _assert_legacy_rejected.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000222126A2960&gt;)">v6lite\tests\test_batch22_protection_lifecycle.py:501: in test_B22_existing_STP_LMT_record_is_P0_and_original_contract_is_never_migrated
+    _assert_legacy_rejected(rig, pos, legacy, before)
+v6lite\tests\test_batch22_protection_lifecycle.py:489: in _assert_legacy_rejected
+    assert any("P0" in title and "旧类型保护单" in title and "人工" in body for title, body in rig.channel.messages)
+E   assert False
+E    +  where False = any(&lt;generator object _assert_legacy_rejected.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000222126A2960&gt;)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_schema4_old_row_gets_STP_LMT_annotation_only_then_P0" time="0.091"><failure message="AssertionError: old rows need honest legacy annotation&#10;assert None == 'STP LMT'&#10; +  where None = &lt;built-in method get of dict object at 0x000002221272D000&gt;('order_type')&#10; +    where &lt;built-in method get of dict object at 0x000002221272D000&gt; = {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}.get">v6lite\tests\test_batch22_protection_lifecycle.py:532: in test_B22_schema4_old_row_gets_STP_LMT_annotation_only_then_P0
+    assert after.get("order_type") == "STP LMT", "old rows need honest legacy annotation"
+E   AssertionError: old rows need honest legacy annotation
+E   assert None == 'STP LMT'
+E    +  where None = &lt;built-in method get of dict object at 0x000002221272D000&gt;('order_type')
+E    +    where &lt;built-in method get of dict object at 0x000002221272D000&gt; = {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}.get</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_RTH_stop_crossing_is_P1_then_remaining_timeout_P0_without_old_limit_shortcut" time="0.071"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-e021c47559724a17bd61', position_id='pos-00e6baa3028d4e4da1c1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:541: in test_B22_RTH_stop_crossing_is_P1_then_remaining_timeout_P0_without_old_limit_shortcut
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-e021c47559724a17bd61', position_id='pos-00e6baa3028d4e4da1c1', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_partial_stop_fill_does_not_restart_continuing_RTH_remaining_timeout" time="0.078"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-0259dbd0629141a69e25', position_id='pos-a5bdb84764154e83a90f', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:563: in test_B22_partial_stop_fill_does_not_restart_continuing_RTH_remaining_timeout
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-0259dbd0629141a69e25', position_id='pos-a5bdb84764154e83a90f', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_stop_timer_ignores_off_RTH_and_new_session_does_not_inherit_overnight_seconds" time="0.073"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-095f342327cb4c24a26f', position_id='pos-ea94815c9f8a4e408aa4', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:583: in test_B22_stop_timer_ignores_off_RTH_and_new_session_does_not_inherit_overnight_seconds
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-095f342327cb4c24a26f', position_id='pos-ea94815c9f8a4e408aa4', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_RTH_trigger_timer_survives_restart_without_duplicate_P1_or_reset" time="0.072"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-a5d1e36097894b5cbd5f', position_id='pos-5245a6434b8f42dfb2ac', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:606: in test_B22_RTH_trigger_timer_survives_restart_without_duplicate_P1_or_reset
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-a5d1e36097894b5cbd5f', position_id='pos-5245a6434b8f42dfb2ac', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A warning]" time="0.075"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-9aacb50a136547eb8094', position_id='pos-ecd055c717d94e9da36c', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:625: in test_B22_cards_display_market_stop_price_with_no_protection_limit_field
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-9aacb50a136547eb8094', position_id='pos-ecd055c717d94e9da36c', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A overdue]" time="0.077"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-7b10626b96c74845af55', position_id='pos-63d5aec71e4e44ecb0c6', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:625: in test_B22_cards_display_market_stop_price_with_no_protection_limit_field
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-7b10626b96c74845af55', position_id='pos-63d5aec71e4e44ecb0c6', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_cards_display_market_stop_price_with_no_protection_limit_field[unknown]" time="0.075"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-3a711a15fae64f9fb603', position_id='pos-0f10cec680a94f80b8ad', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:625: in test_B22_cards_display_market_stop_price_with_no_protection_limit_field
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-3a711a15fae64f9fb603', position_id='pos-0f10cec680a94f80b8ad', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_cards_display_market_stop_price_with_no_protection_limit_field[shutdown incomplete]" time="0.073"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-fac579b066bd4eaeb1e5', position_id='pos-f0ff7436975c485b98ac', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:625: in test_B22_cards_display_market_stop_price_with_no_protection_limit_field
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-fac579b066bd4eaeb1e5', position_id='pos-f0ff7436975c485b98ac', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger crossing]" time="0.074"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-1aa2e4c08f074bf182be', position_id='pos-df202d3b41c44b41ab71', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:625: in test_B22_cards_display_market_stop_price_with_no_protection_limit_field
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-1aa2e4c08f074bf182be', position_id='pos-df202d3b41c44b41ab71', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger unfilled]" time="0.073"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-505a7b181dc946f987ee', position_id='pos-4015740a7b294884ad46', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:625: in test_B22_cards_display_market_stop_price_with_no_protection_limit_field
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-505a7b181dc946f987ee', position_id='pos-4015740a7b294884ad46', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_cards_display_market_stop_price_with_no_protection_limit_field[rejected]" time="0.075"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-0bc0a730e80c4f2d9a75', position_id='pos-dc8de338ee1d47e3a7b7', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:625: in test_B22_cards_display_market_stop_price_with_no_protection_limit_field
+    _, _, row = _open(rig)
+                ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-0bc0a730e80c4f2d9a75', position_id='pos-dc8de338ee1d47e3a7b7', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_PROTECT_FILL_audits_each_execution_signed_slippage_and_report_exactly_once" time="0.076"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-4524768b10934cd6826e', position_id='pos-0e1ecae943b34beeabe6', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:646: in test_B22_PROTECT_FILL_audits_each_execution_signed_slippage_and_report_exactly_once
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-4524768b10934cd6826e', position_id='pos-0e1ecae943b34beeabe6', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_protection_final_fill_keeps_audit_stop_and_actual_price_after_close" time="0.072"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-58f36f4883f3461f9bb8', position_id='pos-00eca3d6211c4309baba', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:682: in test_B22_protection_final_fill_keeps_audit_stop_and_actual_price_after_close
+    _, pos, row = _open(rig)
+                  ^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:91: in _open
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-58f36f4883f3461f9bb8', position_id='pos-00eca3d6211c4309baba', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs" time="0.066"><failure message="AssertionError: assert None == 'STP'&#10; +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-35454672dacd4d2abca3', position_id='pos-9d80f407929e408d9d8c', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)">v6lite\tests\test_batch22_protection_lifecycle.py:700: in test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs
+    _, pos, row = _first_fill(rig)
+                  ^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_protection_lifecycle.py:102: in _first_fill
+    _safety(rig)
+v6lite\tests\test_batch22_protection_lifecycle.py:51: in _safety
+    assert getattr(req, "order_type", None) == "STP"
+E   AssertionError: assert None == 'STP'
+E    +  where None = getattr(ProtectionRequest(intent_id='v6l-protect-35454672dacd4d2abca3', position_id='pos-9d80f407929e408d9d8c', symbol='AAPL',...47, limit_price=105.21, broker_order_id=None, perm_id=None, con_id=None, client_id=None, account='', allow_lookup=True), 'order_type', None)</failure></testcase><testcase classname="v6lite.tests.test_batch22_protection_lifecycle" name="test_B22_dry_run_all_protection_lifecycle_entry_points_have_zero_broker_writes" time="0.059" /></testsuite></testsuites>

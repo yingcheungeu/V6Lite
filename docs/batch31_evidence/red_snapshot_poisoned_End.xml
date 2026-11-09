@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.318" timestamp="2026-10-27T09:25:09.449337-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch31_snapshot_guards" name="test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request[unexpected-End]" time="0.275"><failure message="AssertionError: an older own round cannot confirm after a new request&#10;assert 'WORKING' == 'PRICE_PENDING'&#10;  &#10;  - PRICE_PENDING&#10;  + WORKING">v6lite\tests\test_batch31_snapshot_guards.py:40: in test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request
+    assert rig.store.protection(pid)['state']=='PRICE_PENDING','an older own round cannot confirm after a new request'
+E   AssertionError: an older own round cannot confirm after a new request
+E   assert 'WORKING' == 'PRICE_PENDING'
+E     
+E     - PRICE_PENDING
+E     + WORKING</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,17 @@
+{
+  "baseline_commit": "abbdb4f2f7a558262a0859d5a6bf7ee859e46d2f",
+  "baseline_package_code_sha": "6293dd4e2377603c",
+  "production_source": "fresh git archive; only five final new tests copied",
+  "candidate_code_sha": "cfe16edd7a7e4d7f",
+  "temp_source": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite_B20_delivery_iqk2vw5l\\source",
+  "start_pt": "2026-10-08T15:57:40.292258-07:00",
+  "end_pt": "2026-10-08T15:57:52.653331-07:00",
+  "exit_code": 1,
+  "test_files": {
+    "test_batch20_card_provenance.py": "59a6803e2e773af4a43de541dd3851f25dcf9d260c934f3f18d705b25d5db64d",
+    "test_batch20_execution_time.py": "a50be1979410bc14864a7eead9575a7fcdd99530f36deabb772dc3bce221b64f",
+    "test_batch20_protection_equivalents.py": "6433d0872bdd05ad1871914732c07c76925cbf430b908a2de63e3ac3b0f22504",
+    "test_batch20_protection_incident.py": "0575945a04620e673c7e309c8e91d71d4a956293fe7541b9d469db697d034f5c",
+    "test_batch20_template.py": "8c6ed584a5f435fe81542df99ce8c7a1d040f342583b733fe65356af352b5230"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "log_sha256": "c33033ec9ffc09cc7920b08ba6107df48f72fe4c5d9717a98dcc1bf5d79e80cd",
+  "exit": 1,
+  "junit_sha256": "7b969e757072a227379ddf6fc89f9dc636a5e9a74f5218f20d1004a6c0e66339",
+  "baseline_commit": "8811390da5cd6cd7041afdba9a6f901fc0104da3",
+  "baseline_code_sha": "9725a81b8e5e3e11",
+  "archive_sha256": "1d904485c95dfcb68625f363626ca9575ef07130ee841f94c6246966dde679ee",
+  "temporary_baseline": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite-b19-baseline-57c3fcdd7aa6455eb1aba1c378e7dbd4",
+  "new_test_sha256": {
+    "test_batch19.py": "f4ca35e62e9b4ab17b7904b783d966ac8a9782466702297f5ab98c1dc9adb4e4",
+    "test_batch19_funds.py": "f9c1ae564a76752edcb60b3293eec5a4b2ac15657b4e34258ba814cf4a78dde4",
+    "test_batch19_review_edges.py": "262a24defa92162552f14d80dfc1eb45d673e7a538a7c0ead745b7649515f7d6",
+    "test_batch19_protection_equivalents.py": "12def834c0ef3a32bf71331473a47daae9e7d2b4309347e177784421cdeec303"
+  }
+}

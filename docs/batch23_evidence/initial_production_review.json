@@ -1,0 +1,108 @@
+{
+  "reviewer": "/root/batch20_time_logs",
+  "verdict": "NEEDS_FIX",
+  "execution": "read-only static; no tests or runtime access",
+  "files": [
+    {
+      "path": "v6lite/broker/ibkr.py",
+      "sha256": "9c2d66f7441fa9e8cb5b9635a9ad3c856a6ad50e4bc61c0ca07e95fc80473b2d"
+    },
+    {
+      "path": "v6lite/store.py",
+      "sha256": "a0c4f7190867b1e5c91ce65058be52000cdf7a669f016406be84bb5fe59dea90"
+    },
+    {
+      "path": "v6lite/engine.py",
+      "sha256": "f0c5844c7f267566bee3fb4eef51f42ce304a0e70cffbf4ff5bfcb027020ab7e"
+    },
+    {
+      "path": "v6lite/protection_engine.py",
+      "sha256": "11c7af1598ce25b17d9334aaadb0f44caf99fd2911a067382a4cd31b708da864"
+    },
+    {
+      "path": "v6lite/protection_incidents.py",
+      "sha256": "0b1d3616a3433b7a4a0049f5ffec2978a9bbb0a895965cdfb1062ea0abcf5ac0"
+    },
+    {
+      "path": "v6lite/tp_evidence.py",
+      "sha256": "91c8f61103cfd8ee4894ff0bf06f61e78b7ebcbb583ca3567aa7803bd6d26e2b"
+    },
+    {
+      "path": "v6lite/report.py",
+      "sha256": "7f88d61241ca49bfbc5f9387cd3ac390d2a7b7e6053cc76d8d9a1478bca5ec9b"
+    },
+    {
+      "path": "v6lite/__main__.py",
+      "sha256": "e76527869e2682c5134c9beb620ee73b121ffdae5158a7964648f943160bf54b"
+    }
+  ],
+  "findings": [
+    {
+      "id": "R1",
+      "title": "terminal error-only display provenance",
+      "reference": "broker/ibkr.py:1273",
+      "finding": "strict active identity gate drops perm0/cleared terminal diagnostic fullreason; no permission widening allowed"
+    },
+    {
+      "id": "R2",
+      "title": "query request/order ID namespaces",
+      "reference": "broker/ibkr.py:1273",
+      "finding": "known funds/history requesterror must not become order status/price diagnostics"
+    },
+    {
+      "id": "R3",
+      "title": "auxiliary audit economic rollback",
+      "reference": "store.py:884",
+      "finding": "valid JSON wrongshape/badbid/badgap can raise in economicfill transaction"
+    },
+    {
+      "id": "R4",
+      "title": "physical send freshness",
+      "reference": "engine.py:2560",
+      "finding": "capacity/local durability can age originalpricingbook beyond3s after caller gate"
+    },
+    {
+      "id": "R5",
+      "title": "unprotected TP reissue block",
+      "reference": "engine.py:1863",
+      "finding": "symbolpriceblock consulted only when protection.enabled"
+    },
+    {
+      "id": "R6",
+      "title": "corrupt resume episode",
+      "reference": "__main__.py:327;tp_evidence.py:305",
+      "finding": "blank/missing identifiers can compare equal; row/pos bindings need validation"
+    },
+    {
+      "id": "R7",
+      "title": "full reason daily evidence",
+      "reference": "report.py:260",
+      "finding": "non-TP brokerdiagnostic payloads still truncated160"
+    },
+    {
+      "id": "R8",
+      "title": "coherent send book",
+      "reference": "engine.py:2578",
+      "finding": "new quote timestamp/raw fields mixed with old pricingbid/ask/age"
+    },
+    {
+      "id": "R9",
+      "title": "price rejection classification",
+      "reference": "tp_evidence.py:19",
+      "finding": "generic price+reject also matches unrelated-to-price terminal"
+    },
+    {
+      "id": "R10",
+      "title": "system diagnostic wording",
+      "reference": "protection_engine.py;engine.py",
+      "finding": "8 self-authored English carddiagnostic clauses remain; nativebroker original must stay unchanged"
+    }
+  ],
+  "confirmed": [
+    "LMT/STP submit/modify explicit PMA=False",
+    "physical SDK read_only guards retained",
+    "release and key identity/cancel permission AST unchanged",
+    "originalB T0 and10/30s retained"
+  ],
+  "temporary_change_note": "Reviewer observed an unverified nondue-counter edit, which solewriter withdrew byte-for-byte before final tests. Re-review final candidate required."
+}

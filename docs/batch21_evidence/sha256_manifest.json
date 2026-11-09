@@ -1,0 +1,124 @@
+{
+  "algorithm": "SHA-256",
+  "count": 22,
+  "code_sha": "cfe16edd7a7e4d7f",
+  "scope": "batch21 dev-only operational and decision material; no v6lite modifications",
+  "exclusions": [
+    "sha256_manifest.json itself",
+    "unrelated docs/V6_LITE_OPERATOR_MANUAL.md",
+    "generated caches/venv",
+    "runtime/user state"
+  ],
+  "files": [
+    {
+      "path": "docs/V6_LITE_BATCH21_POWERSHELL_ENTRY_2026-10-08.md",
+      "bytes": 9285,
+      "sha256": "d1a775ead637e9623f80798e6f388ac6d9443615f5d8f2b3a7aa7b5b99b5c30f"
+    },
+    {
+      "path": "docs/V6_LITE_BATCH21_RESEARCH_AND_OPTIONS_2026-10-08.md",
+      "bytes": 14674,
+      "sha256": "c9008b8d04940a88add4077fec3a1fa442c04084afa797caa9f9277ce01e4b33"
+    },
+    {
+      "path": "docs/batch21_evidence/argv_candidate_red.log",
+      "bytes": 1383,
+      "sha256": "ba9da70c00608ca024d32c752c271218d0f8751650d86afbf182c4470c1636a6"
+    },
+    {
+      "path": "docs/batch21_evidence/console_shutdown_results.json",
+      "bytes": 7268,
+      "sha256": "00584f169ef483c65f615f25b77dfb7bbc919cf5390e19877c0eeee3516de2e7"
+    },
+    {
+      "path": "docs/batch21_evidence/entry_focused_green.log",
+      "bytes": 101,
+      "sha256": "1327f658fb19a0e168bbf02b36e910b46cd1ccde871ca6ae1879b32943dbf392"
+    },
+    {
+      "path": "docs/batch21_evidence/entry_missing_red.log",
+      "bytes": 4230,
+      "sha256": "7100a08d8051d28e6da35d365760b5c5ac71cbe4f63493101abaf015c1c16977"
+    },
+    {
+      "path": "docs/batch21_evidence/fake_cancel_fixture_console.log",
+      "bytes": 662,
+      "sha256": "50e463104b37b53c9a3ebb015a808647f33da47da65ac779ea409a8fbfdca324"
+    },
+    {
+      "path": "docs/batch21_evidence/fake_cancel_fixture_events.json",
+      "bytes": 977,
+      "sha256": "b9d7d20305d5afd8a0ba4aa2ae15995ab1bee07587c39ad23124ff22a557bb7b"
+    },
+    {
+      "path": "docs/batch21_evidence/independent_review.json",
+      "bytes": 1712,
+      "sha256": "db335193027f82a771bb38b87d66ec640fe6da2ebc51643cd06df989e1bd3203"
+    },
+    {
+      "path": "docs/batch21_evidence/official_sources.json",
+      "bytes": 3790,
+      "sha256": "b0f88c563d035eefbaf985e8293258d539e9128866a74a63df1f6191628b4d4c"
+    },
+    {
+      "path": "docs/batch21_evidence/old_out_host_red_console.log",
+      "bytes": 14,
+      "sha256": "b066e576246da79053dfc142c35410774e995ee180713be164b9db45e61d712c"
+    },
+    {
+      "path": "docs/batch21_evidence/old_out_host_red_events.json",
+      "bytes": 165,
+      "sha256": "0052d7fd170e880b0b40b1d18f8885555ab49518db09a72b8c2fe15dc8200e98"
+    },
+    {
+      "path": "docs/batch21_evidence/old_out_host_red_prompt_events.jsonl",
+      "bytes": 44,
+      "sha256": "749f9fd838ebe5695319e512c65f903a74b8fed57eb88b88a27db21df504b5e1"
+    },
+    {
+      "path": "docs/batch21_evidence/old_out_host_red_signal.json",
+      "bytes": 183,
+      "sha256": "d5f9a6e208153e2f65825ae980964b13acd5fbb0516a46a29ed41eda89f465a3"
+    },
+    {
+      "path": "docs/batch21_evidence/scripts_final.log",
+      "bytes": 195,
+      "sha256": "96b725e98c0e73aae3a1f6c988d332a49df611fc56a2266d573a68b127ee1b53"
+    },
+    {
+      "path": "docs/batch21_evidence/scripts_final.xml",
+      "bytes": 18874,
+      "sha256": "861790be4928f289177cdc2f2bfca43ecf32cca3e6d31dd8ec0957c577cf7a24"
+    },
+    {
+      "path": "docs/batch21_evidence/validation_metadata.json",
+      "bytes": 1513,
+      "sha256": "939579ef87097bf796693edd6d7578eec015a4640074db368fec6b3ed78084d5"
+    },
+    {
+      "path": "scripts/tests/console_shutdown_child.py",
+      "bytes": 3719,
+      "sha256": "3732ac606a911fc34f4c64a631f7672d55b5e8b96eaf50c8346e9daa6518be6a"
+    },
+    {
+      "path": "scripts/tests/console_shutdown_probe.py",
+      "bytes": 8641,
+      "sha256": "77bbeba33b1f4d94027cf30dddac46e845edd9e7a9d3672f20af63e918e99114"
+    },
+    {
+      "path": "scripts/tests/test_batch21_entry.py",
+      "bytes": 3716,
+      "sha256": "b367e6cab0ad80d8901e103ba1459b08a0ea4555d8506959a7630963ac18e470"
+    },
+    {
+      "path": "scripts/v6-user.ps1",
+      "bytes": 39,
+      "sha256": "55978f6fdb9f50c2dc66cf5731436d675fa7b95021d8e7ac3911d2fe2825f9e8"
+    },
+    {
+      "path": "scripts/v6.ps1",
+      "bytes": 16619,
+      "sha256": "7a8a0794cee4efd5b4d151d07ff51a8ba3a0c7a7c4e814ba0073c316d8b3fb15"
+    }
+  ]
+}

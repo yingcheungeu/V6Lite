@@ -1,0 +1,23 @@
+{
+  "classification": "fixture calibration only; production still batch28c",
+  "retained_first_red": "red_batch28c_initial: 17 tests,14 failed,3 passed; native8 failed BE setup, other-SELL auxiliary ID comparison wrong, cancel-identity fixture asserted ignored terminal status prematurely",
+  "corrections": [
+    "Native setup spontaneous BE openOrder echo follows the already-running own openOrders End; actual accepted order remains in query. TP3 target and safety assertions unchanged.",
+    "Foreign SELL assertion follows native normalization and matches broker_order_id/perm_id/remaining.",
+    "Post-cancel contradictory original STP native PreSubmitted is observed during final TP in flight; P0/no-new-order/non-supersession assertions remain."
+  ],
+  "files": {
+    "v6lite/tests/test_batch28d_native_final_tp.py": {
+      "initial_sha256": "633d18630465e0b836f96ef3482b99a24a90cc4e7c8aa3dd025cd2e9b7b28826",
+      "calibrated_sha256": "f60912e0ae14aec65696eb48c821036d4ad4ee0fe8ffdc8953f8aee1ac295dcc"
+    },
+    "v6lite/tests/test_batch28d_closed_tp_race.py": {
+      "initial_sha256": "0cd83357b832db7ff6b3ef052314ee53515016a0b1cdfa6086c5e1154bd158fa",
+      "calibrated_sha256": "f635fbd367c1120e638c22a3b50e95857345cbaae7a7838b1a54e59130721a5d"
+    },
+    "v6lite/tests/test_batch28d_tp_cards.py": {
+      "initial_sha256": "dc455b164c898a202b8319304bc66dc6e6b260a89ef26ff8ea32bd96ba5242dd",
+      "calibrated_sha256": "dc455b164c898a202b8319304bc66dc6e6b260a89ef26ff8ea32bd96ba5242dd"
+    }
+  }
+}

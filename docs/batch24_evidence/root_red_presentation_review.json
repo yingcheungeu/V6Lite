@@ -1,0 +1,13 @@
+{
+  "red_artifact": "red_presentation_attempt2",
+  "baseline_code_sha": "a17d647ba28c51e4",
+  "totals": {
+    "tests": 8,
+    "failures": 7,
+    "errors": 0,
+    "skipped": 0
+  },
+  "raw_hashes_match": true,
+  "reviewer": "root",
+  "check": "PASS"
+}

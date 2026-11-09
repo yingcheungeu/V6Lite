@@ -1,0 +1,28 @@
+......................F..........................FFF................     [100%]
+================================== FAILURES ===================================
+_ test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback] _
+v6lite\tests\test_batch27a_execution_time.py:263: in test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once
+    assert calls, 'callback must actively schedule a complete execution query, including after CLOSED'
+E   AssertionError: callback must actively schedule a complete execution query, including after CLOSED
+E   assert []
+_ test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed] _
+v6lite\tests\test_batch27a_execution_time.py:424: in test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing
+    assert calls, 'closed positions also need a limited active retry while callback timestamps are pending'
+E   AssertionError: closed positions also need a limited active retry while callback timestamps are pending
+E   assert []
+_ test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty] _
+v6lite\tests\test_batch27a_execution_time.py:424: in test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing
+    assert calls, 'closed positions also need a limited active retry while callback timestamps are pending'
+E   AssertionError: closed positions also need a limited active retry while callback timestamps are pending
+E   assert []
+_ test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain] _
+v6lite\tests\test_batch27a_execution_time.py:424: in test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing
+    assert calls, 'closed positions also need a limited active retry while callback timestamps are pending'
+E   AssertionError: closed positions also need a limited active retry while callback timestamps are pending
+E   assert []
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed]
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty]
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain]
+4 failed, 64 passed in 13.83s

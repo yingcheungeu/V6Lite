@@ -1,0 +1,102 @@
+........................................................................ [ 24%]
+.................F...................................................... [ 49%]
+.F...................................................................... [ 74%]
+......F.......................FFF...........................F..F........ [ 98%]
+F.F                                                                      [100%]
+================================== FAILURES ===================================
+_______ test_B22_explicit_STP_refusal_freezes_entries_and_never_rehangs _______
+v6lite\tests\test_batch22_config_broker.py:506: in test_B22_explicit_STP_refusal_freezes_entries_and_never_rehangs
+    assert any("P0" in title and "拒绝" in title for title, _ in rig.channel.messages)
+E   assert False
+E    +  where False = any(<generator object test_B22_explicit_STP_refusal_freezes_entries_and_never_rehangs.<locals>.<genexpr> at 0x000002651A1F35A0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-7ae0aa0bc5d24059ba13 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order cancelled - reason: We cannot accept your stop order.
+_______ test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs _______
+v6lite\tests\test_batch22_protection_lifecycle.py:723: in test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs
+    assert any("P0" in title and "券商拒绝了保护单" in title for title, _ in rig.channel.messages)
+E   assert False
+E    +  where False = any(<generator object test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs.<locals>.<genexpr> at 0x000002651BF710E0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=1 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=1 股 可能超卖=0 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-d48d9fbd5fa844ad8079 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=201；取消诊断与执行权限独立核验；券商原因原文=Order rejected - reason: We cannot accept your stop order.
+____ test_B22_trigger_failed_P0_retries_actual_delivery_then_30_minute_P1 _____
+v6lite\tests\test_batch22_trigger_incidents.py:152: in test_B22_trigger_failed_P0_retries_actual_delivery_then_30_minute_P1
+    assert len(_pages(rig, "P0")) == 1 and _pages(rig, "P1") == []
+E   AssertionError: assert (1 == 1 and [('🟠 P1 · 仍未解...并完成订单和持仓对账。')] == []
+E    +  where 1 = len([('🔴 P0 · 止损已触发但未成交', '🔴 P0 · 止损已触发但未成交\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超...\n你要做什么：1）在同一 TWS 核对本卡 orderId 的成交、剩余量及是否停牌或交易暂停；2）不要另发卖单或自动重挂，先核实原 STP 状态；3）由 John 联系券商处理异常，由 John 暂停新入场并完成订单和持仓对账。')])
+E    +    where [('🔴 P0 · 止损已触发但未成交', '🔴 P0 · 止损已触发但未成交\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超...\n你要做什么：1）在同一 TWS 核对本卡 orderId 的成交、剩余量及是否停牌或交易暂停；2）不要另发卖单或自动重挂，先核实原 STP 状态；3）由 John 联系券商处理异常，由 John 暂停新入场并完成订单和持仓对账。')] = _pages(<v6lite.tests.helpers.Rig object at 0x000002651C20C110>, 'P0')
+E     
+E     Left contains one more item: ('🟠 P1 · 仍未解决 · 止损已触发但未成交', '🟠 P1 · 仍未解决 · 止损已触发但未成交\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=待核实 外部卖单在途=待核实 ...。\n你要做什么：1）在同一 TWS 核对本卡 orderId 的成交、剩余量及是否停牌或交易暂停；2）不要另发卖单或自动重挂，先核实原 STP 状态；3）由 John 联系券商处理异常，由 John 暂停新入场并完成订单和持仓对账。')
+E     Use -v to get more diff)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection trigger crossing AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=0 股 可能超卖=0 股；当前快照已核实；orderRef=v6l-protect-fbb2f0504ef144469b19 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；已到止损价=108.47；STP 剩余=20 股，券商成交尚待核实
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection trigger unfilled AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-fbb2f0504ef144469b19 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=过期或缺失；首次到止损价后持续 60.0 秒，保护单剩余仍为 20 股；可能停牌、交易暂停或券商异常；报价=108.46
+ERROR    v6lite.alerts:alerts.py:899 alert channel memory failed (RuntimeError)
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection trigger unfilled AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-fbb2f0504ef144469b19 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=过期或缺失；首次到止损价后持续 61.0 秒，保护单剩余仍为 20 股；可能停牌、交易暂停或券商异常；报价=108.46
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection still unresolved AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-fbb2f0504ef144469b19 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=过期或缺失；首次到止损价后持续 1860.0 秒，保护单剩余仍为 20 股；可能停牌、交易暂停或券商异常；报价=108.46
+_ test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung[zh-rejection] _
+v6lite\tests\test_batch20_protection_incident.py:219: in test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung
+    assert any("券商拒绝了保护单，该持仓目前没有券商端保护" in title for title, _ in pages)
+E   assert False
+E    +  where False = any(<generator object test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung.<locals>.<genexpr> at 0x000002651A1F2B20>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-e3ca083a44cd46a0b48f orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=0；取消诊断与执行权限独立核验；券商原因原文=券商未提供原因
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-e3ca083a44cd46a0b48f orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=委托单被取消 - 原因：我们无法接纳您的止损市价单，请在 TWS 人工核对并处理。
+_ test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung[en-rejection] _
+v6lite\tests\test_batch20_protection_incident.py:219: in test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung
+    assert any("券商拒绝了保护单，该持仓目前没有券商端保护" in title for title, _ in pages)
+E   assert False
+E    +  where False = any(<generator object test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung.<locals>.<genexpr> at 0x000002651A20D000>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-a1c8ed116e7f46598a97 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=0；取消诊断与执行权限独立核验；券商原因原文=券商未提供原因
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-a1c8ed116e7f46598a97 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled - reason: We cannot accept your stop order.
+_ test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung[escaped-zh-rejection] _
+v6lite\tests\test_batch20_protection_incident.py:219: in test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung
+    assert any("券商拒绝了保护单，该持仓目前没有券商端保护" in title for title, _ in pages)
+E   assert False
+E    +  where False = any(<generator object test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung.<locals>.<genexpr> at 0x000002651A20DEE0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-6e3f0ba2254c4f33be5b orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=0；取消诊断与执行权限独立核验；券商原因原文=券商未提供原因
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-6e3f0ba2254c4f33be5b orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=\u59d4\u6258\u5355\u88ab\u53d6\u6d88 - \u539f\u56e0\uff1a\u6211\u4eec\u65e0\u6cd5\u63a5\u7eb3\u60a8\u7684\u6b62\u635f\u5e02\u4ef7\u5355\uff0c\u8bf7\u5728 TWS \u4eba\u5de5\u6838\u5bf9\u5e76\u5904\u7406\u3002
+_ test_B20_review_REJECTED_absence_and_all_deadlines_preserve_one_incident_and_gap_history _
+v6lite\tests\test_batch20_protection_incident.py:562: in test_B20_review_REJECTED_absence_and_all_deadlines_preserve_one_incident_and_gap_history
+    assert len(_pages(rig, "P0")) == 1
+E   AssertionError: assert 2 == 1
+E    +  where 2 = len([('🔴 P0 · 券商已取消保护单', '🔴 P0 · 券商已取消保护单\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核...单。不要重新提交保护单、自动改价重挂或使用 IBALGO。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')])
+E    +    where [('🔴 P0 · 券商已取消保护单', '🔴 P0 · 券商已取消保护单\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核...单。不要重新提交保护单、自动改价重挂或使用 IBALGO。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')] = _pages(<v6lite.tests.helpers.Rig object at 0x000002651A208AD0>, 'P0')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-1b9fddf946a7481cafbb orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=委托单被取消 - 原因：我们无法接纳您的止损市价单，请在 TWS 人工核对并处理。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=20 股 可能超卖=0 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-1b9fddf946a7481cafbb orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:50+00:00；GTC absent from complete working snapshot; no duplicate submission；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=委托单被取消 - 原因：我们无法接纳您的止损市价单，请在 TWS 人工核对并处理。
+__ test_B20_review_UNKNOWN_already_paged_P0_cannot_emit_early_gap_warning_P1 __
+v6lite\tests\test_batch20_protection_incident.py:626: in test_B20_review_UNKNOWN_already_paged_P0_cannot_emit_early_gap_warning_P1
+    assert len(_pages(rig, "P0")) == 1
+E   AssertionError: assert 2 == 1
+E    +  where 2 = len([('🔴 P0 · 保护单状态无法核实', '🔴 P0 · 保护单状态无法核实\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0...\n影响：保护订单身份或状态未知，未保护 待核实 股仍须券商核实。\n你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')])
+E    +    where [('🔴 P0 · 保护单状态无法核实', '🔴 P0 · 保护单状态无法核实\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0...\n影响：保护订单身份或状态未知，未保护 待核实 股仍须券商核实。\n你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')] = _pages(<v6lite.tests.helpers.Rig object at 0x000002651C37AA50>, 'P0')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-9eeeb939aff24a0cb546 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=0；取消诊断与执行权限独立核验；券商原因原文=券商未提供原因
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection still unresolved AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=20 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-9eeeb939aff24a0cb546 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=过期或缺失；identity evidence incomplete；券商状态=Cancelled code=0；取消诊断与执行权限独立核验；券商原因原文=券商未提供原因
+_ test_B20_review_explicit_202_before_terminal_status_survives_blank_Cancelled_log_entry _
+v6lite\tests\test_batch20_protection_incident.py:732: in test_B20_review_explicit_202_before_terminal_status_survives_blank_Cancelled_log_entry
+    assert any("券商拒绝了保护单，该持仓目前没有券商端保护" in title
+E   assert False
+E    +  where False = any(<generator object test_B20_review_explicit_202_before_terminal_status_survives_blank_Cancelled_log_entry.<locals>.<genexpr> at 0x000002651A0D17E0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-0a2171a3b0ff4a3b9b05 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=委托单被取消 - 原因：我们无法接纳您的止损市价单，请在 TWS 人工核对并处理。
+____ test_definite_rejection_body_states_known_refusal_not_unknown_status _____
+v6lite\tests\test_batch20_card_provenance.py:26: in test_definite_rejection_body_states_known_refusal_not_unknown_status
+    assert '在同一 TWS 用限价单平仓' in text and 'release AAPL' in text
+E   AssertionError: assert ('在同一 TWS 用限价单平仓' in '🔴 P0 · 券商已取消保护单\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orde...工作单。不要重新提交保护单、自动改价重挂或使用 IBALGO。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=20 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-a6a087e6432a44e6b1bc orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=委托单被取消 - 原因：我们无法接纳您的止损市价单，请在 TWS 人工核对并处理。
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch22_config_broker.py::test_B22_explicit_STP_refusal_freezes_entries_and_never_rehangs
+FAILED v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs
+FAILED v6lite/tests/test_batch22_trigger_incidents.py::test_B22_trigger_failed_P0_retries_actual_delivery_then_30_minute_P1
+FAILED v6lite/tests/test_batch20_protection_incident.py::test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung[zh-rejection]
+FAILED v6lite/tests/test_batch20_protection_incident.py::test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung[en-rejection]
+FAILED v6lite/tests/test_batch20_protection_incident.py::test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung[escaped-zh-rejection]
+FAILED v6lite/tests/test_batch20_protection_incident.py::test_B20_review_REJECTED_absence_and_all_deadlines_preserve_one_incident_and_gap_history
+FAILED v6lite/tests/test_batch20_protection_incident.py::test_B20_review_UNKNOWN_already_paged_P0_cannot_emit_early_gap_warning_P1
+FAILED v6lite/tests/test_batch20_protection_incident.py::test_B20_review_explicit_202_before_terminal_status_survives_blank_Cancelled_log_entry
+FAILED v6lite/tests/test_batch20_card_provenance.py::test_definite_rejection_body_states_known_refusal_not_unknown_status
+10 failed, 281 passed in 17.33s

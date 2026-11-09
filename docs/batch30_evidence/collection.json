@@ -1,0 +1,9 @@
+{
+  "tests": 2222,
+  "new_tests": 55,
+  "baseline_tests": 2167,
+  "nodeids_sha256": "d328193e907cfacb51d691c04c46f26ea701048b2908f5be8a6807e98110e01e",
+  "delivered_log_sha256": "b7d896349e73ac0c373216c2df3e2c82f0b578997203f65d4d08872d54ff1138",
+  "returncode": 0,
+  "source_unchanged": true
+}

@@ -1,0 +1,153 @@
+........................................................................ [  7%]
+........................................................................ [ 14%]
+........................................................................ [ 21%]
+........................................................................ [ 29%]
+........................................................................ [ 36%]
+........F............................................................... [ 43%]
+........................................................................ [ 50%]
+.................FFFFFF................................................. [ 58%]
+.....F.................................................................. [ 65%]
+........................................................................ [ 72%]
+........................................................................ [ 80%]
+....................................................F................... [ 87%]
+........................................................................ [ 94%]
+......................................................                   [100%]
+================================== FAILURES ===================================
+_ test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write] _
+v6lite\tests\test_batch26_shutdown_report.py:404: in test_B26_report_failure_does_not_interrupt_safe_order_shutdown
+    assert len(attempts) == 1, 'shutdown must attempt the real after-close report despite the injected failure'
+E   AssertionError: shutdown must attempt the real after-close report despite the injected failure
+E   assert 0 == 1
+E    +  where 0 = len([])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.engine:engine.py:3090 [SHUTDOWN_REPORT] daily report supplement failed (FileExistsError)
+_ test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop] _
+v6lite\tests\test_batch23_broker_diagnostics.py:199: in test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority
+    events = _assert_full_diagnostic_and_report(rig, kind='PROTECT_BROKER_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:141: in _assert_full_diagnostic_and_report
+    assert reason in report and 'END-BROKER-EXCEPTION-' + source in report
+E   assert ('Synthetic broker submit_stop exception: 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完... details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; END-BROKER-EXCEPTION-submit_stop' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 71424b794d1412d..."signals": [["AAPL", 78]], "vix": 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection rejected AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=3 股 可能超卖=待核实（可能上界0） 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-5e34847fc6334968bb6e orderId=- permId=- TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；BrokerError
+_ test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection] _
+v6lite\tests\test_batch23_broker_diagnostics.py:199: in test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority
+    events = _assert_full_diagnostic_and_report(rig, kind='PROTECT_BROKER_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:141: in _assert_full_diagnostic_and_report
+    assert reason in report and 'END-BROKER-EXCEPTION-' + source in report
+E   assert ('Synthetic broker modify_protection exception: 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 deta...ls; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; END-BROKER-EXCEPTION-modify_protection' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 71424b794d1412d...0f42ab84ed", "raw_status": "Submitted"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection rejected AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-63dfbceca00f42ab84ed orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；BrokerError
+_ test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection] _
+v6lite\tests\test_batch23_broker_diagnostics.py:199: in test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority
+    events = _assert_full_diagnostic_and_report(rig, kind='PROTECT_BROKER_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:141: in _assert_full_diagnostic_and_report
+    assert reason in report and 'END-BROKER-EXCEPTION-' + source in report
+E   assert ('Synthetic broker cancel_protection exception: 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 deta...ls; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; END-BROKER-EXCEPTION-cancel_protection' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 71424b794d1412d...65430bbd3c", "raw_status": "Submitted"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=1 股 保护单已确认=1 股 保护单可能=1 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–1） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-38840fc43565430bbd3c orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=113.53；上次确认=2026-10-06T14:01:35+00:00 工作单证据时间=2026-10-06T14:02:06+00:00；GTC 撤单失败：BrokerError
+_ test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL _
+v6lite\tests\test_batch23_broker_diagnostics.py:217: in test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL
+    _assert_full_diagnostic_and_report(rig, kind='BROKER_QUERY_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:141: in _assert_full_diagnostic_and_report
+    assert reason in report and 'END-BROKER-EXCEPTION-' + source in report
+E   assert ('Synthetic broker executions_today exception: 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 detai...ils; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; END-BROKER-EXCEPTION-executions_today' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 71424b794d1412d...664f14975e", "raw_status": "Submitted"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-f9a8d39a30664f14975e orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；ProtectionEvidenceQueryError
+_ test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1] _
+v6lite\tests\test_batch23_broker_diagnostics.py:258: in test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission
+    _assert_full_diagnostic_and_report(rig, kind='BROKER_QUERY_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:141: in _assert_full_diagnostic_and_report
+    assert reason in report and 'END-BROKER-EXCEPTION-' + source in report
+E   assert ('Synthetic broker release_account_executions_today exception: 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details;...etails; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; END-BROKER-EXCEPTION-release_account_executions_today' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 71424b794d1412d...ed4572ad03", "raw_status": "Cancelled"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-fbbebe02e4ed4572ad03 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；券商回报状态=Cancelled；禁止未经核实重挂；券商状态=Cancelled code=0；终态诊断与执行权限独立核验；券商原因原文=券商未提供原因
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-a1db6cdfa913459f853e | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-fbbebe02e4ed4572ad03 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；持仓、工作单、执行三项证据查询失败：BrokerError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:0000fa4e.00000002.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: release refused AAPL | account execution evidence unavailable: BrokerError
+_ test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2] _
+v6lite\tests\test_batch23_broker_diagnostics.py:258: in test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission
+    _assert_full_diagnostic_and_report(rig, kind='BROKER_QUERY_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:141: in _assert_full_diagnostic_and_report
+    assert reason in report and 'END-BROKER-EXCEPTION-' + source in report
+E   assert ('Synthetic broker release_account_executions_today exception: 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details;...etails; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; 完整保留原始异常🍎 details; END-BROKER-EXCEPTION-release_account_executions_today' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 71424b794d1412d...554c6b99ec", "raw_status": "Cancelled"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-3298a7e390554c6b99ec orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；券商回报状态=Cancelled；禁止未经核实重挂；券商状态=Cancelled code=0；终态诊断与执行权限独立核验；券商原因原文=券商未提供原因
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-7c87f291326c43ca822e | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-3298a7e390554c6b99ec orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；持仓、工作单、执行三项证据查询失败：BrokerError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:0000fa4e.00000002.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: release refused AAPL | account execution evidence unavailable: BrokerError
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price] __
+v6lite\tests\test_batch23_error_provenance.py:359: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert reason in report and 'END-DAILY-' + source in report, 'the full local daily report must keep broker reason, not the 160-character event preview'
+E   AssertionError: the full local daily report must keep broker reason, not the 160-character event preview
+E   assert ('Synthetic order_price diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保... 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-order_price' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 71424b794d1412d...304625b77f", "raw_status": "Submitted"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+__ test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day __
+v6lite\tests\test_batch22_schema_audit.py:541: in test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day
+    assert fill.exec_id not in current, current
+E   AssertionError: # V6-Lite daily report 2026-10-07 (paper)
+E     
+E     - account: DU******001   state role: formal
+E     - code_sha: 71424b794d1412d5
+E     - 本次仅渲染主报，未导出附件；完整关键事实保留在状态库 audit/fills（可用 report 命令导出）。
+E     - market data: real-time (1) | n/a RTH availability (no runtime RTH samples supplied)
+E     - last health market data (instantaneous, not RTH availability): real-time (1)
+E     
+E     - realized P&L: 0.00   fees: 0.00   net: 0.00
+E     - entries submitted: 0 / 4
+E     - daily stop latched: False
+E     - open positions: none
+E     - 券商端保护: 无持仓；空窗统计 A=0.000s B=0.000s
+E     - kill switch: off
+E     - open anomalies: none
+E     - frozen symbols (operator must flatten, then `release`): none
+E     - released positions (P&L of the operator's TWS trades is NOT in the figures above): none
+E     
+E     ## Fills
+E     - none
+E     
+E     ## Execution time verification / 成交时间核实
+E     - 当日无未核实成交时间
+E     
+E     ## Events
+E     
+E     | Kind | Count | First UTC | Last UTC |
+E     |---|---:|---|---|
+E     | FILL | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |
+E     | INTENT_STATUS | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |
+E     | LOSS_STATE | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |
+E     | PROTECT_FILL | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |
+E     | TRADE_CLOSED | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |
+E     
+E     ### Important events
+E     - 14:00:00Z FILL {"exec_id": "0000fa4e.00000002.01.01", "intent_id": "v6l-protect-4985a621d43c4757ae5c", "price": 107.97, "qty": 20, "side": "SELL", "symbol": "AAPL"}
+E     - 14:00:00Z PROTECT_FILL {"avg_fill_price": 107.97, "bps": 46.095694662118554, "confirmed_remaining": 0, "exec_id": "0000fa4e.00000002.01.01", "fill_price": 107.97, "held_after": 0, "in
+E     - 14:00:00Z INTENT_STATUS {"intent_id": "v6l-protect-4985a621d43c4757ae5c", "note": null, "status": "FILLED"}
+E     - 14:00:00Z TRADE_CLOSED {"fees": 2.0, "gross": -110.0, "missing_fees": 0, "position_id": "pos-68008d5b5d194fbfb11d", "symbol": "AAPL"}
+E     - 14:00:00Z LOSS_STATE {"cooldown_until": null, "streak": 1}
+E     
+E     ## Operator notes
+E     
+E     - (market context, manual actions, things to review)
+E     
+E   assert '0000fa4e.00000002.01.01' not in '# V6-Lite d...to review)\n'
+E     
+E     '0000fa4e.00000002.01.01' is contained here:
+E       xec_id": "0000fa4e.00000002.01.01", "intent_id": "v6l-protect-4985a621d43c4757ae5c", "price": 107.97, "qty": 20, "side": "SELL", "symbol": "AAPL"}
+E     ?           +++++++++++++++++++++++
+E       - 14:00:00Z PROTECT_FILL {"avg_fill_price": 107.97, "bps": 46.095694662118554, "confirmed_remaining": 0, "exec_id": "0000fa4e.00000002.01.01", "fill_price": 107.97, "held_after": 0, "in
+E       - 14:00:00Z INTENT_STATUS {"intent_id": "v6l-protect-4985a621d43c4757ae5c", "note": null, "status": "FILLED"}
+E       - 14:00:00Z TRADE_CLOSED {"fees": 2.0, "gross": -110...
+E     
+E     ...Full output truncated (6 lines hidden), use '-vv' to show
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch26_shutdown_report.py::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]
+FAILED v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop]
+FAILED v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection]
+FAILED v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection]
+FAILED v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL
+FAILED v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1]
+FAILED v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price]
+FAILED v6lite/tests/test_batch22_schema_audit.py::test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day
+9 failed, 981 passed in 307.71s (0:05:07)

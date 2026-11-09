@@ -1,0 +1,426 @@
+{"baseline_tag": "v6lite-batch23", "baseline_head": "bd6b8fb9ecf8a08cf9685c8eaf6a46f00be794f0", "source_file": "C:\\Dev\\V6Lite-dev\\.pytest_cache\\batch24_baseline23\\v6lite\\__init__.py", "code_sha": "a17d647ba28c51e4", "test_files": ["v6lite/tests/test_batch24_stp_echo.py"]}
+FFFFFFFFF........................FFFFF                                   [100%]
+================================== FAILURES ===================================
+_ test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_original_G3T_native_c0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F246509690>
+
+    def test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages(tmp_path, monkeypatch):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        _bind_snapshot(rig, adapter, monkeypatch)
+        start = datetime.fromisoformat(rig.store.protection(pid)['gap_a_started_at'])
+        for timestamp, status, perm, echo, held in CALLBACKS:
+            rig.at(datetime.fromisoformat(timestamp))
+            trade = _native(rig, raw=status, perm=perm, echo=echo)
+            assert trade.orderStatus.whyHeld == held
+            _deliver(rig, adapter, trade)
+        # A normal outer-loop pass follows the native callbacks. Neither callback
+        # is allowed to issue a nested synchronous broker query.
+        rig.engine.process_protection_priority()
+        row = rig.store.protection(pid)
+>       assert row['state'] == 'WORKING', dict(row)
+E       AssertionError: {'account': 'DU0000000', 'broker_order_id': 64, 'client_id': 132, 'con_id': 265598, ...}
+E       assert 'UNKNOWN' == 'WORKING'
+E         
+E         - WORKING
+E         + UNKNOWN
+
+v6lite\tests\test_batch24_stp_echo.py:189: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-3255088aaf6c4956b4bc orderId=64 permId=- TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.22；上次确认=未获券商确认 工作单证据时间=过期或缺失；原生账户、客户端、合约、类型、价格或数量身份无效；不授予释放权限
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: held order is working AAPL | v6l-protect-3255088aaf6c4956b4bc (PROTECT) was held as unverifiable but the broker reports it working with 3 left; those shares are reserved
+_____ test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None] ______
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_STP_echo_is_diagnosti0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F24652B3D0>
+echo = None
+
+    @pytest.mark.parametrize('echo', [None, sys.float_info.max, ECHO, 0.0, -1.0, float('nan'), float('inf'), float('-inf')])
+    def test_B24_STP_echo_is_diagnostic_for_all_native_status_values(tmp_path, monkeypatch, echo):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig, echo=echo)
+        _deliver(rig, adapter, trade)
+        row = rig.store.protection(pid)
+        assert row['perm_id'] == PERM_ID and not rig.store.intent(REF)['hold_reason']
+        assert row['state'] != 'UNKNOWN' and rig.store.control('frozen:AAPL') is None
+        [event] = [e for e in adapter.ib.snapshot if e.order.orderRef == REF]
+        identity = adapter._status_identity(event)
+        assert identity is not None and identity.limit_price is None
+>       assert hasattr(identity, 'broker_echo_lmt'), 'native echo must survive as a separate raw field'
+E       AssertionError: native echo must survive as a separate raw field
+E       assert False
+E        +  where False = hasattr(OpenOrder(intent_id='v6l-protect-3255088aaf6c4956b4bc', broker_order_id=64, symbol='AAPL', status='PreSubmitted', fill...er_type='STP', tif='GTC', aux_price=340.22, limit_price=None, outside_rth=False, account='DU0000000', total_quantity=3), 'broker_echo_lmt')
+
+v6lite\tests\test_batch24_stp_echo.py:214: AssertionError
+_ test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_STP_echo_is_diagnosti1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267AC6B90>
+echo = 1.7976931348623157e+308
+
+    @pytest.mark.parametrize('echo', [None, sys.float_info.max, ECHO, 0.0, -1.0, float('nan'), float('inf'), float('-inf')])
+    def test_B24_STP_echo_is_diagnostic_for_all_native_status_values(tmp_path, monkeypatch, echo):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig, echo=echo)
+        _deliver(rig, adapter, trade)
+        row = rig.store.protection(pid)
+        assert row['perm_id'] == PERM_ID and not rig.store.intent(REF)['hold_reason']
+        assert row['state'] != 'UNKNOWN' and rig.store.control('frozen:AAPL') is None
+        [event] = [e for e in adapter.ib.snapshot if e.order.orderRef == REF]
+        identity = adapter._status_identity(event)
+        assert identity is not None and identity.limit_price is None
+>       assert hasattr(identity, 'broker_echo_lmt'), 'native echo must survive as a separate raw field'
+E       AssertionError: native echo must survive as a separate raw field
+E       assert False
+E        +  where False = hasattr(OpenOrder(intent_id='v6l-protect-3255088aaf6c4956b4bc', broker_order_id=64, symbol='AAPL', status='PreSubmitted', fill...er_type='STP', tif='GTC', aux_price=340.22, limit_price=None, outside_rth=False, account='DU0000000', total_quantity=3), 'broker_echo_lmt')
+
+v6lite\tests\test_batch24_stp_echo.py:214: AssertionError
+_ test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_STP_echo_is_diagnosti2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267ADB110>
+echo = 340.19000000000005
+
+    @pytest.mark.parametrize('echo', [None, sys.float_info.max, ECHO, 0.0, -1.0, float('nan'), float('inf'), float('-inf')])
+    def test_B24_STP_echo_is_diagnostic_for_all_native_status_values(tmp_path, monkeypatch, echo):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig, echo=echo)
+        _deliver(rig, adapter, trade)
+        row = rig.store.protection(pid)
+>       assert row['perm_id'] == PERM_ID and not rig.store.intent(REF)['hold_reason']
+E       assert (None == 2052906961)
+
+v6lite\tests\test_batch24_stp_echo.py:209: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-3255088aaf6c4956b4bc orderId=64 permId=- TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.22；上次确认=未获券商确认 工作单证据时间=过期或缺失；原生账户、客户端、合约、类型、价格或数量身份无效；不授予释放权限
+______ test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0] ______
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_STP_echo_is_diagnosti3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267BA0750>
+echo = 0.0
+
+    @pytest.mark.parametrize('echo', [None, sys.float_info.max, ECHO, 0.0, -1.0, float('nan'), float('inf'), float('-inf')])
+    def test_B24_STP_echo_is_diagnostic_for_all_native_status_values(tmp_path, monkeypatch, echo):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig, echo=echo)
+        _deliver(rig, adapter, trade)
+        row = rig.store.protection(pid)
+        assert row['perm_id'] == PERM_ID and not rig.store.intent(REF)['hold_reason']
+        assert row['state'] != 'UNKNOWN' and rig.store.control('frozen:AAPL') is None
+        [event] = [e for e in adapter.ib.snapshot if e.order.orderRef == REF]
+        identity = adapter._status_identity(event)
+        assert identity is not None and identity.limit_price is None
+>       assert hasattr(identity, 'broker_echo_lmt'), 'native echo must survive as a separate raw field'
+E       AssertionError: native echo must survive as a separate raw field
+E       assert False
+E        +  where False = hasattr(OpenOrder(intent_id='v6l-protect-3255088aaf6c4956b4bc', broker_order_id=64, symbol='AAPL', status='PreSubmitted', fill...er_type='STP', tif='GTC', aux_price=340.22, limit_price=None, outside_rth=False, account='DU0000000', total_quantity=3), 'broker_echo_lmt')
+
+v6lite\tests\test_batch24_stp_echo.py:214: AssertionError
+_____ test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0] ______
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_STP_echo_is_diagnosti4')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267BB49D0>
+echo = -1.0
+
+    @pytest.mark.parametrize('echo', [None, sys.float_info.max, ECHO, 0.0, -1.0, float('nan'), float('inf'), float('-inf')])
+    def test_B24_STP_echo_is_diagnostic_for_all_native_status_values(tmp_path, monkeypatch, echo):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig, echo=echo)
+        _deliver(rig, adapter, trade)
+        row = rig.store.protection(pid)
+        assert row['perm_id'] == PERM_ID and not rig.store.intent(REF)['hold_reason']
+        assert row['state'] != 'UNKNOWN' and rig.store.control('frozen:AAPL') is None
+        [event] = [e for e in adapter.ib.snapshot if e.order.orderRef == REF]
+        identity = adapter._status_identity(event)
+        assert identity is not None and identity.limit_price is None
+>       assert hasattr(identity, 'broker_echo_lmt'), 'native echo must survive as a separate raw field'
+E       AssertionError: native echo must survive as a separate raw field
+E       assert False
+E        +  where False = hasattr(OpenOrder(intent_id='v6l-protect-3255088aaf6c4956b4bc', broker_order_id=64, symbol='AAPL', status='PreSubmitted', fill...er_type='STP', tif='GTC', aux_price=340.22, limit_price=None, outside_rth=False, account='DU0000000', total_quantity=3), 'broker_echo_lmt')
+
+v6lite\tests\test_batch24_stp_echo.py:214: AssertionError
+______ test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan] ______
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_STP_echo_is_diagnosti5')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267C40AD0>
+echo = nan
+
+    @pytest.mark.parametrize('echo', [None, sys.float_info.max, ECHO, 0.0, -1.0, float('nan'), float('inf'), float('-inf')])
+    def test_B24_STP_echo_is_diagnostic_for_all_native_status_values(tmp_path, monkeypatch, echo):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig, echo=echo)
+        _deliver(rig, adapter, trade)
+        row = rig.store.protection(pid)
+        assert row['perm_id'] == PERM_ID and not rig.store.intent(REF)['hold_reason']
+        assert row['state'] != 'UNKNOWN' and rig.store.control('frozen:AAPL') is None
+        [event] = [e for e in adapter.ib.snapshot if e.order.orderRef == REF]
+        identity = adapter._status_identity(event)
+        assert identity is not None and identity.limit_price is None
+>       assert hasattr(identity, 'broker_echo_lmt'), 'native echo must survive as a separate raw field'
+E       AssertionError: native echo must survive as a separate raw field
+E       assert False
+E        +  where False = hasattr(OpenOrder(intent_id='v6l-protect-3255088aaf6c4956b4bc', broker_order_id=64, symbol='AAPL', status='PreSubmitted', fill...er_type='STP', tif='GTC', aux_price=340.22, limit_price=None, outside_rth=False, account='DU0000000', total_quantity=3), 'broker_echo_lmt')
+
+v6lite\tests\test_batch24_stp_echo.py:214: AssertionError
+______ test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf] ______
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_STP_echo_is_diagnosti6')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267AF79D0>
+echo = inf
+
+    @pytest.mark.parametrize('echo', [None, sys.float_info.max, ECHO, 0.0, -1.0, float('nan'), float('inf'), float('-inf')])
+    def test_B24_STP_echo_is_diagnostic_for_all_native_status_values(tmp_path, monkeypatch, echo):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig, echo=echo)
+        _deliver(rig, adapter, trade)
+        row = rig.store.protection(pid)
+        assert row['perm_id'] == PERM_ID and not rig.store.intent(REF)['hold_reason']
+        assert row['state'] != 'UNKNOWN' and rig.store.control('frozen:AAPL') is None
+        [event] = [e for e in adapter.ib.snapshot if e.order.orderRef == REF]
+        identity = adapter._status_identity(event)
+        assert identity is not None and identity.limit_price is None
+>       assert hasattr(identity, 'broker_echo_lmt'), 'native echo must survive as a separate raw field'
+E       AssertionError: native echo must survive as a separate raw field
+E       assert False
+E        +  where False = hasattr(OpenOrder(intent_id='v6l-protect-3255088aaf6c4956b4bc', broker_order_id=64, symbol='AAPL', status='PreSubmitted', fill...er_type='STP', tif='GTC', aux_price=340.22, limit_price=None, outside_rth=False, account='DU0000000', total_quantity=3), 'broker_echo_lmt')
+
+v6lite\tests\test_batch24_stp_echo.py:214: AssertionError
+_____ test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf] ______
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_STP_echo_is_diagnosti7')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267C67F90>
+echo = -inf
+
+    @pytest.mark.parametrize('echo', [None, sys.float_info.max, ECHO, 0.0, -1.0, float('nan'), float('inf'), float('-inf')])
+    def test_B24_STP_echo_is_diagnostic_for_all_native_status_values(tmp_path, monkeypatch, echo):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig, echo=echo)
+        _deliver(rig, adapter, trade)
+        row = rig.store.protection(pid)
+        assert row['perm_id'] == PERM_ID and not rig.store.intent(REF)['hold_reason']
+        assert row['state'] != 'UNKNOWN' and rig.store.control('frozen:AAPL') is None
+        [event] = [e for e in adapter.ib.snapshot if e.order.orderRef == REF]
+        identity = adapter._status_identity(event)
+        assert identity is not None and identity.limit_price is None
+>       assert hasattr(identity, 'broker_echo_lmt'), 'native echo must survive as a separate raw field'
+E       AssertionError: native echo must survive as a separate raw field
+E       assert False
+E        +  where False = hasattr(OpenOrder(intent_id='v6l-protect-3255088aaf6c4956b4bc', broker_order_id=64, symbol='AAPL', status='PreSubmitted', fill...er_type='STP', tif='GTC', aux_price=340.22, limit_price=None, outside_rth=False, account='DU0000000', total_quantity=3), 'broker_echo_lmt')
+
+v6lite\tests\test_batch24_stp_echo.py:214: AssertionError
+__ test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger __
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_auxPrice_compares_cen0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267AF5FD0>
+
+    def test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger(tmp_path, monkeypatch):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        _deliver(rig, adapter, _native(rig, order__auxPrice=340.22000000000003))
+>       assert rig.store.protection(pid)['perm_id'] == PERM_ID
+E       assert None == 2052906961
+
+v6lite\tests\test_batch24_stp_echo.py:250: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-3255088aaf6c4956b4bc orderId=64 permId=- TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.22；上次确认=未获券商确认 工作单证据时间=过期或缺失；原生账户、客户端、合约、类型、价格或数量身份无效；不授予释放权限
+_ test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_native_finite_echo_ac0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267BB7310>
+operation = 'modify'
+
+    @pytest.mark.parametrize('operation', ['modify', 'cancel', 'snapshot'])
+    def test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot(tmp_path, monkeypatch, operation):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig)
+        adapter._trades[REF] = trade; adapter.ib.snapshot = [trade]
+        if operation == 'modify':
+            req = ProtectionRequest(REF, pid, 'AAPL', 2, STOP, None,
+                broker_order_id=64, perm_id=PERM_ID, con_id=CON_ID, client_id=CLIENT_ID,
+                account=rig.cfg.account, allow_lookup=False)
+>           adapter.modify_protection(req)
+
+v6lite\tests\test_batch24_stp_echo.py:264: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <v6lite.broker.ibkr.IbkrBroker object at 0x000001F267C15390>
+req = ProtectionRequest(intent_id='v6l-protect-3255088aaf6c4956b4bc', position_id='pos-07574020118645bda8de', symbol='AAPL',...der_id=64, perm_id=2052906961, con_id=265598, client_id=132, account='DU0000000', allow_lookup=False, order_type='STP')
+
+    def modify_protection(self, req: ProtectionRequest) -> BrokerAck:
+        """Modify only the same client's existing order ID; unknown identity blocks."""
+        from ib_insync import StopOrder
+    
+        if self.read_only:
+            raise BrokerError("read-only session cannot modify protection orders")
+        if not req.intent_id.startswith(ORDER_REF_PREFIX) or type(req.quantity) is not int or req.quantity <= 0:
+            raise BrokerError("invalid protection identity or quantity")
+        if (req.order_type != "STP" or req.limit_price is not None or
+                not _clean_price(req.trigger_price) or req.trigger_price < 1):
+            raise BrokerError("protection requires STP, valid stop, and no limit price")
+        if not (req.broker_order_id and req.perm_id and req.con_id and
+                req.client_id == self.client_id and req.account == self.cfg.account):
+            raise BrokerError("protection modification lacks persisted broker identity")
+        trade = self._trades.get(req.intent_id)
+        if trade is None and not req.allow_lookup:
+            raise BrokerError("protection not cached for urgent modification")
+        if trade is None:
+            trade = next((t for t in list(self.ib.openTrades()) + list(self.ib.trades())
+                          if getattr(t.order, "orderRef", "") == req.intent_id), None)
+        if trade is None:
+            trade = next((t for t in self._clean_request("openOrders", self.ib.reqAllOpenOrders)
+                          if getattr(t.order, "orderRef", "") == req.intent_id), None)
+        if trade is None:
+            raise BrokerError("protection order not found; refusing duplicate")
+        old = trade.order
+        if (getattr(old, "orderRef", "") != req.intent_id or
+                getattr(old, "action", "") != "SELL" or getattr(old, "outsideRth", None) is not False or
+                getattr(trade.contract, "secType", None) != "STK" or
+                getattr(trade.contract, "currency", None) != "USD" or
+                _stop_limit_price(getattr(old, "lmtPrice", None)) is not None or
+                getattr(old, "clientId", None) != self.client_id or
+                getattr(old, "orderType", "") != "STP" or
+                getattr(old, "tif", "") != "GTC" or
+                getattr(old, "account", "") != self.cfg.account or
+                getattr(trade.contract, "symbol", "").upper() != req.symbol or
+                getattr(trade.contract, "conId", None) != req.con_id or
+                getattr(old, "orderId", None) != req.broker_order_id or
+                getattr(old, "permId", None) != req.perm_id):
+>           raise BrokerError("protection identity/client mismatch; refusing modify")
+E           v6lite.broker.base.BrokerError: protection identity/client mismatch; refusing modify
+
+.pytest_cache\batch24_baseline23\v6lite\broker\ibkr.py:864: BrokerError
+_ test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_native_finite_echo_ac1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267CB2610>
+operation = 'cancel'
+
+    @pytest.mark.parametrize('operation', ['modify', 'cancel', 'snapshot'])
+    def test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot(tmp_path, monkeypatch, operation):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig)
+        adapter._trades[REF] = trade; adapter.ib.snapshot = [trade]
+        if operation == 'modify':
+            req = ProtectionRequest(REF, pid, 'AAPL', 2, STOP, None,
+                broker_order_id=64, perm_id=PERM_ID, con_id=CON_ID, client_id=CLIENT_ID,
+                account=rig.cfg.account, allow_lookup=False)
+            adapter.modify_protection(req)
+            [(_, wire)] = adapter.ib.placed
+            assert wire.orderType == 'STP' and wire.auxPrice == STOP and wire.totalQuantity == 2
+            assert wire.lmtPrice == sys.float_info.max, 'echo must never be sent as an actual stop limit'
+            assert adapter.ib.cancelled == []
+        elif operation == 'cancel':
+>           adapter.cancel(REF, expected_order_id=64, expected_perm_id=PERM_ID, expected_con_id=CON_ID, allow_lookup=False)
+
+v6lite\tests\test_batch24_stp_echo.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <v6lite.broker.ibkr.IbkrBroker object at 0x000001F267DC8E10>
+intent_id = 'v6l-protect-3255088aaf6c4956b4bc'
+
+    def cancel(self, intent_id: str, *, expected_order_id: int | None = None,
+               expected_perm_id: int | None = None, expected_con_id: int | None = None,
+               allow_lookup: bool = True) -> None:
+        """Second (and last) broker write path; same read-only boundary."""
+        if self.read_only:
+            raise BrokerError("read-only session cannot cancel orders")
+        if not intent_id.startswith(ORDER_REF_PREFIX):
+            raise BrokerError("refusing to cancel an order V6-Lite did not create")
+        trade = self._trades.get(intent_id)
+        if trade is None and not allow_lookup:
+            raise BrokerError("order not cached for urgent cancellation")
+        if trade is None:
+            # local caches first (no network wait); the server query is the
+            # last resort and is budgeted by the engine as a 'query'
+            trade = next((t for t in list(self.ib.openTrades()) + list(self.ib.trades())
+                          if getattr(t.order, "orderRef", "") == intent_id), None)
+        if trade is None:
+            trade = next((t for t in self._clean_request("openOrders", self.ib.reqAllOpenOrders)
+                          if t.order.orderRef == intent_id), None)
+        if trade is None:
+            raise BrokerError(f"no working order for {intent_id}")
+        if getattr(trade.order, "orderRef", "") != intent_id:
+            raise BrokerError("cancel orderRef mismatch")
+        if getattr(trade.order, "clientId", None) != self.client_id:
+            raise BrokerError("cannot cancel an order from another client id")
+        is_gtc = (intent_id.startswith("v6l-protect-") or
+                  getattr(trade.order, "tif", "") == "GTC" or
+                  getattr(trade.order, "orderType", "") in {"STP", "STP LMT"})
+        if is_gtc and (getattr(trade.order, "orderType", "") != "STP" or
+                       getattr(trade.order, "action", "") != "SELL" or
+                       getattr(trade.order, "tif", "") != "GTC" or
+                       getattr(trade.order, "outsideRth", None) is not False or
+                       getattr(trade.contract, "secType", None) != "STK" or
+                       getattr(trade.contract, "currency", None) != "USD" or
+                       _stop_limit_price(getattr(trade.order, "lmtPrice", None)) is not None):
+>           raise BrokerError("protection cancel wire contract mismatch; legacy type not modified")
+E           v6lite.broker.base.BrokerError: protection cancel wire contract mismatch; legacy type not modified
+
+.pytest_cache\batch24_baseline23\v6lite\broker\ibkr.py:906: BrokerError
+_ test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_native_finite_echo_ac2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267B6F0D0>
+operation = 'snapshot'
+
+    @pytest.mark.parametrize('operation', ['modify', 'cancel', 'snapshot'])
+    def test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot(tmp_path, monkeypatch, operation):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        trade = _native(rig)
+        adapter._trades[REF] = trade; adapter.ib.snapshot = [trade]
+        if operation == 'modify':
+            req = ProtectionRequest(REF, pid, 'AAPL', 2, STOP, None,
+                broker_order_id=64, perm_id=PERM_ID, con_id=CON_ID, client_id=CLIENT_ID,
+                account=rig.cfg.account, allow_lookup=False)
+            adapter.modify_protection(req)
+            [(_, wire)] = adapter.ib.placed
+            assert wire.orderType == 'STP' and wire.auxPrice == STOP and wire.totalQuantity == 2
+            assert wire.lmtPrice == sys.float_info.max, 'echo must never be sent as an actual stop limit'
+            assert adapter.ib.cancelled == []
+        elif operation == 'cancel':
+            adapter.cancel(REF, expected_order_id=64, expected_perm_id=PERM_ID, expected_con_id=CON_ID, allow_lookup=False)
+            assert len(adapter.ib.cancelled) == 1 and adapter.ib.placed == []
+        else:
+            [snapshot] = adapter.open_orders()
+>           assert snapshot.limit_price is None
+E           AssertionError: assert 340.19000000000005 is None
+E            +  where 340.19000000000005 = OpenOrder(intent_id='v6l-protect-3255088aaf6c4956b4bc', broker_order_id=64, symbol='AAPL', status='PreSubmitted', fill...f='GTC', aux_price=340.22, limit_price=340.19000000000005, outside_rth=False, account='DU0000000', total_quantity=None).limit_price
+
+v6lite\tests\test_batch24_stp_echo.py:274: AssertionError
+____ test_B24_terminal_STP_with_finite_echo_retains_refusal_classification ____
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp_echo_baseline23_run3/test_B24_terminal_STP_with_fin0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F267B6CA90>
+
+    def test_B24_terminal_STP_with_finite_echo_retains_refusal_classification(tmp_path, monkeypatch):
+        rig, pid, adapter = _pending_rig(tmp_path, monkeypatch)
+        _deliver(rig, adapter, _native(rig, echo=None))
+        trade = _native(rig, raw='Inactive')
+        trade.log[-1].errorCode = 201
+        trade.log[-1].message = 'We cannot accept your stop order.'
+        _deliver(rig, adapter, trade)
+>       assert rig.store.protection(pid)['state'] == 'REJECTED'
+E       AssertionError: assert 'UNKNOWN' == 'REJECTED'
+E         
+E         - REJECTED
+E         + UNKNOWN
+
+v6lite\tests\test_batch24_stp_echo.py:286: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-3255088aaf6c4956b4bc orderId=64 permId=2052906961 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.22；上次确认=未获券商确认 工作单证据时间=过期或缺失；原生账户、客户端、合约、类型、价格或数量身份无效；不授予释放权限；券商状态=Inactive code=201；终态诊断与执行权限独立核验；券商原因原文=We cannot accept your stop order.
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot]
+FAILED v6lite/tests/test_batch24_stp_echo.py::test_B24_terminal_STP_with_finite_echo_retains_refusal_classification
+14 failed, 24 passed in 4.35s

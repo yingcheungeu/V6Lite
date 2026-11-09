@@ -1,0 +1,66 @@
+........................................................................ [ 21%]
+........................................................................ [ 42%]
+........................................................................ [ 64%]
+........................................................................ [ 85%]
+.......................................F.......                          [100%]
+================================== FAILURES ===================================
+_ test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once _
+v6lite\tests\test_batch29_native_timeout.py:311: in test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+    assert server.cancel_wire < server.late_fill_at < server.cancel_at
+E   assert 585197.89 < 585197.89
+E    +  where 585197.89 = <v6lite.tests.test_batch29_native_timeout.NativeTimeoutServer object at 0x00000183B028DE10>.late_fill_at
+E    +  and   585197.89 = <v6lite.tests.test_batch29_native_timeout.NativeTimeoutServer object at 0x00000183B028DE10>.cancel_at
+---------------------------- Captured stdout call -----------------------------
+TEST TP timeout requested: AAPL; expires in 5 minutes; final stage excluded
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch30_commission.py::test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net
+  v6lite\tests\test_batch30_commission.py:62: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net(tmp_path,record_property):
+
+v6lite/tests/test_batch30_commission.py::test_B30_own_query_repairs_fee_once_without_reopening_cooldown[1.0--0.17-False]
+v6lite/tests/test_batch30_commission.py::test_B30_own_query_repairs_fee_once_without_reopening_cooldown[0.01-0.82-True]
+  v6lite\tests\test_batch30_commission.py:83: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('actual,final_net,flips',[(1.,-.17,False),(.01,.82,True)])
+
+v6lite/tests/test_batch30_report_audit.py::test_B30_real_native_timeout_audit_only_changes_and_at_most_eight_rows
+  v6lite\tests\test_batch30_report_audit.py:25: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B30_real_native_timeout_audit_only_changes_and_at_most_eight_rows(native_timeout, monkeypatch, record_property):
+
+v6lite/tests/test_batch30_report_audit.py::test_B30_report_splits_actual_normal_and_injected_windows_and_normal_compliance
+  v6lite\tests\test_batch30_report_audit.py:44: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B30_report_splits_actual_normal_and_injected_windows_and_normal_compliance(tmp_path, monkeypatch, record_property):
+
+v6lite/tests/test_batch29_faults.py::test_B29_timeout_phone_card_names_test_and_identifies_actual_order
+  v6lite\tests\test_batch29_faults.py:292: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_timeout_phone_card_names_test_and_identifies_actual_order(tmp_path, monkeypatch, record_property):
+
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1
+  v6lite\tests\test_batch29_native_timeout.py:263: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1(
+
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+  v6lite\tests\test_batch29_native_timeout.py:299: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history
+  v6lite\tests\test_batch27_daily_report_volume.py:81: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear
+  v6lite\tests\test_batch27_daily_report_volume.py:126: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear(
+
+v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice
+  v6lite\tests\test_batch27_masked_report_budget.py:17: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice(
+
+v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice
+  v6lite\tests\test_batch27_short_account_budget.py:22: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+1 failed, 334 passed, 12 warnings in 260.80s (0:04:20)

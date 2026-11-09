@@ -1,0 +1,32 @@
+{
+  "label": "red_b30_evidence_query_End_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T09:07:37.301823-07:00",
+  "end_pt": "2026-10-27T09:07:39.054352-07:00",
+  "seconds": 1.75,
+  "returncode": 1,
+  "args": [
+    "evidence_replay_spec.py"
+  ],
+  "code_sha": "5929cf5064e2f526",
+  "source_unchanged": true,
+  "inventory_sha256": "aa77a698672c3c1fce20a716381862a54a693f958a64662202bff9ce45595d27",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "43efa6bba065df2465c7f4b3c42fde7965bc14555dfda28f9393efbcdc8a784f",
+  "XML_sha256_before_masking": "58e8d639e7de117b1b25ce082507321990d13c0d0a47d1664e10f56b8c117776",
+  "delivered_log_sha256": "813f30d5a6b81336dd6abb8f79cc62bc085e5f55b7d44b39e129831fa5f4a246",
+  "delivered_XML_sha256": "58e8d639e7de117b1b25ce082507321990d13c0d0a47d1664e10f56b8c117776",
+  "tests": 1,
+  "failures": 0,
+  "errors": 1,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "evidence_replay_spec",
+      "name": "test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End",
+      "kind": "error",
+      "message": "failed on setup with \"v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132\""
+    }
+  ]
+}

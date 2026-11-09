@@ -1,0 +1,18 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_B29_two_distinct_timeout_requests_are_not_muted_by_shared_INFO_dedupe __
+C:\tmp\v6lite_b29_notice_scope_case.py:35: in test_B29_two_distinct_timeout_requests_are_not_muted_by_shared_INFO_dedupe
+    assert len(cards)==2, rig.channel.messages
+E   AssertionError: [('TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护', 'TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护
+E     发生了什么：AAPL TP1 orderId=1003；ask=114.30；测试限价=115.45；...股 @114.02', 'TEST · ✅ TP1 已成交 · AAPL · 1 股 @114.02
+E     成交：本档累计成交 1 股，成交均价 114.02，剩余持仓 2 股。
+E     订单：v6l-57a49070952e434bbf0d')]
+E   assert 1 == 2
+E    +  where 1 = len([('TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护', 'TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护\n发生了什么：AAPL TP1 orderId=1003；ask=114.30；测试限价=115.45；...derId=1002，当前S=2。\n影响：受限Paper测试的止盈单已到B撤单门槛；正在核验撤单及同一GTC恢复实际剩余持仓。\n你要做什么：核对TWS撤单、迟到成交和保护数量；本次测试无需重复命令，超过30秒未恢复仍按P0处置。')])
+---------------------------- Captured stdout call -----------------------------
+TEST entry requested: AAPL; engine will evaluate it on its next tick
+TEST TP timeout requested: AAPL; expires in 5 minutes; final stage excluded
+TEST TP timeout requested: AAPL; expires in 5 minutes; final stage excluded
+=========================== short test summary info ===========================
+FAILED ..\..\tmp\v6lite_b29_notice_scope_case.py::test_B29_two_distinct_timeout_requests_are_not_muted_by_shared_INFO_dedupe
+1 failed in 1.93s

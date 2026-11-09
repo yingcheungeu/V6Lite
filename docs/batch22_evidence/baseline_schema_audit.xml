@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="17" skipped="0" tests="26" time="2.304" timestamp="2026-10-08T22:28:05.965438-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_old_schema4_empty_protection_database_remains_compatible" time="0.104"><failure message="AssertionError: {'account': &lt;sqlite3.Row object at 0x000002D1AA9DA4A0&gt;, 'broker_order_id': &lt;sqlite3.Row object at 0x000002D1AA9DBE50&gt;, 'client_id': &lt;sqlite3.Row object at 0x000002D1AA9DA4D0&gt;, 'con_id': &lt;sqlite3.Row object at 0x000002D1AA9DA500&gt;, ...}&#10;assert 'order_type' in {'account': &lt;sqlite3.Row object at 0x000002D1AA9DA4A0&gt;, 'broker_order_id': &lt;sqlite3.Row object at 0x000002D1AA9DBE50&gt;, 'client_id': &lt;sqlite3.Row object at 0x000002D1AA9DA4D0&gt;, 'con_id': &lt;sqlite3.Row object at 0x000002D1AA9DA500&gt;, ...}">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_old_schema4_empty_pro0')
+
+    def test_B22_old_schema4_empty_protection_database_remains_compatible(tmp_path):
+        path = tmp_path / 'old-empty' / 'state.sqlite3'
+        before = _legacy_database(path)
+        store = Store(path, partial(compute_levels, _rig(tmp_path / 'cfg').cfg))
+        try:
+            assert store.meta('schema_version') == store_module.SCHEMA_VERSION == '4'
+            columns = {row['name']: row for row in store.conn.execute('PRAGMA table_info(protections)')}
+&gt;           assert 'order_type' in columns, columns
+E           AssertionError: {'account': &lt;sqlite3.Row object at 0x000002D1AA9DA4A0&gt;, 'broker_order_id': &lt;sqlite3.Row object at 0x000002D1AA9DBE50&gt;, 'client_id': &lt;sqlite3.Row object at 0x000002D1AA9DA4D0&gt;, 'con_id': &lt;sqlite3.Row object at 0x000002D1AA9DA500&gt;, ...}
+E           assert 'order_type' in {'account': &lt;sqlite3.Row object at 0x000002D1AA9DA4A0&gt;, 'broker_order_id': &lt;sqlite3.Row object at 0x000002D1AA9DBE50&gt;, 'client_id': &lt;sqlite3.Row object at 0x000002D1AA9DA4D0&gt;, 'con_id': &lt;sqlite3.Row object at 0x000002D1AA9DA500&gt;, ...}
+
+v6lite\tests\test_batch22_schema_audit.py:246: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_old_schema4_rows_gain_only_legacy_type_metadata_and_keep_indexes" time="0.091"><failure message="AssertionError: {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}&#10;assert None == 'STP LMT'&#10; +  where None = &lt;built-in method get of dict object at 0x000002D1AA7E7480&gt;('order_type')&#10; +    where &lt;built-in method get of dict object at 0x000002D1AA7E7480&gt; = {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}.get">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_old_schema4_rows_gain0')
+
+    def test_B22_old_schema4_rows_gain_only_legacy_type_metadata_and_keep_indexes(tmp_path):
+        path = tmp_path / 'old-populated' / 'state.sqlite3'
+        before = _legacy_database(path, protected=True)
+        cfg = _rig(tmp_path / 'cfg').cfg
+        store = Store(path, partial(compute_levels, cfg))
+        try:
+            row = dict(store.protection('pos-b22legacy'))
+&gt;           assert row.get('order_type') == 'STP LMT', row
+E           AssertionError: {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}
+E           assert None == 'STP LMT'
+E            +  where None = &lt;built-in method get of dict object at 0x000002D1AA7E7480&gt;('order_type')
+E            +    where &lt;built-in method get of dict object at 0x000002D1AA7E7480&gt; = {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}.get
+
+v6lite\tests\test_batch22_schema_audit.py:263: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_schema_upgrade_rolls_back_both_tables_when_protection_ddl_fails" time="0.087"><failure message="Failed: DID NOT RAISE any of (&lt;class 'sqlite3.DatabaseError'&gt;, &lt;class 'v6lite.store.StoreError'&gt;)">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_schema_upgrade_rolls_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002D1AA7D97D0&gt;
+
+    def test_B22_schema_upgrade_rolls_back_both_tables_when_protection_ddl_fails(tmp_path, monkeypatch):
+        path = tmp_path / 'atomic-failure' / 'state.sqlite3'
+        before = _legacy_database(path, protected=True)
+        cfg = _rig(tmp_path / 'cfg').cfg
+        real_connect = sqlite3.connect
+        denied = []
+    
+        def failing_connect(*args, **kwargs):
+            conn = real_connect(*args, **kwargs)
+            def authorize(action, arg1, arg2, database, origin):
+                if (action in {sqlite3.SQLITE_DROP_TABLE, sqlite3.SQLITE_ALTER_TABLE}
+                        and 'protections' in (arg1, arg2)):
+                    denied.append((action, arg1, arg2))
+                    return sqlite3.SQLITE_DENY
+                return sqlite3.SQLITE_OK
+            conn.set_authorizer(authorize)
+            return conn
+    
+        monkeypatch.setattr(store_module.sqlite3, 'connect', failing_connect)
+&gt;       with pytest.raises((sqlite3.DatabaseError, StoreError)):
+E       Failed: DID NOT RAISE any of (&lt;class 'sqlite3.DatabaseError'&gt;, &lt;class 'v6lite.store.StoreError'&gt;)
+
+v6lite\tests\test_batch22_schema_audit.py:306: Failed</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_legacy_protection_startup_pages_p0_and_makes_zero_broker_writes" time="0.123"><failure message="AssertionError: #x1F534 P0 · 保护单三项证据不完整 #x1F534 P0 · 保护单三项证据不完整&#10;  发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-b22legacyprotect orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；触发价=108.47 限价=105.21；上次确认=2026-10-06T13:40:00+00:00 工作单证据时间=2026-10-06T13:50:00+00:00；three-source evidence failed: BrokerError&#10;  影响：持仓、工作单和成交三项证据不完整，不能安全增加保护数量。&#10;  你要做什么：1）在 TWS 分别核对持仓、所有工作单、成交；2）不要另下卖单或增加保护数量；3）证据齐全且一致后再解除冻结。&#10;  #x1F7E0 P1 · 持仓账本与券商不符 #x1F7E0 P1 · 持仓账本与券商不符&#10;  发生了什么：对账差异：AAPL 账本 20 股 / 券商 0 股。&#10;  影响：受影响标的新入场暂停；差异持续会冻结持仓。&#10;  你要做什么：1）本机运行 status，对照 TWS 实际持仓；2）账外持仓核实后用 ignore；3）托管持仓差异持续时先平仓，再按条件 release。&#10;  #x1F7E2 告警通道自检 #x1F7E2 告警通道自检&#10;  发生了什么：V6-Lite 正在验证远程告警送达。&#10;  下一步：无需操作。&#10;  #x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情） #x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）&#10;  启动时间：2026-10-06 06:50 PT / 09:50 ET&#10;  模式：Paper · 真实下单（Paper） · 实时行情 · DU0000001 · 版本 5deeaea5&#10;  状态：⚠️ 需关注&#10;  Gateway 已连接 · 对账异常 · 告警通道正常 · 旧 V6：未运行&#10;  reconcile:AAPL: expected 20 broker 0&#10;  持仓对账不一致&#10;  入场窗口 10:00 ET 开启&#10;  报价可用 3/3 · V6-Lite 持仓：AAPL 20&#10;  监控：IB Gateway 心跳：每 60 秒，连续 2 次无应答即告警&#10;  持仓漂移：每 300 秒对账，不一致即告警&#10;  每日健康报告：13:05 PT（收盘后 5 分钟）&#10;  扫描时间：10:00 ET / 07:00 PT&#10;  手动指令（本机命令行）：这些指令只能在本机命令行执行，不能在 Discord 输入。&#10;  status 查看状态 · report 查看日报&#10;  kill --reason 停止入场 · resume 恢复&#10;  ignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码&#10;  &#10;assert ('旧类型保护单' in '#x1F534 P0 · 保护单三项证据不完整 #x1F534 P0 · 保护单三项证据不完整\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2...us 查看状态 · report 查看日报\nkill --reason 停止入场 · resume 恢复\nignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码\n')">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_legacy_protection_sta0')
+
+    def test_B22_legacy_protection_startup_pages_p0_and_makes_zero_broker_writes(tmp_path):
+        rig, before = _legacy_rig(tmp_path)
+        failure = ''
+        try:
+            rig.engine.startup()
+        except (StartupError, StoreError) as exc:
+            failure = str(exc)
+        messages = rig.messages() + '\n' + failure
+        assert any('P0' in subject for subject, body in rig.channel.messages), messages
+&gt;       assert '旧类型保护单' in messages and '人工' in messages, messages
+E       AssertionError: #x1F534 P0 · 保护单三项证据不完整 #x1F534 P0 · 保护单三项证据不完整
+E         发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-b22legacyprotect orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；触发价=108.47 限价=105.21；上次确认=2026-10-06T13:40:00+00:00 工作单证据时间=2026-10-06T13:50:00+00:00；three-source evidence failed: BrokerError
+E         影响：持仓、工作单和成交三项证据不完整，不能安全增加保护数量。
+E         你要做什么：1）在 TWS 分别核对持仓、所有工作单、成交；2）不要另下卖单或增加保护数量；3）证据齐全且一致后再解除冻结。
+E         #x1F7E0 P1 · 持仓账本与券商不符 #x1F7E0 P1 · 持仓账本与券商不符
+E         发生了什么：对账差异：AAPL 账本 20 股 / 券商 0 股。
+E         影响：受影响标的新入场暂停；差异持续会冻结持仓。
+E         你要做什么：1）本机运行 status，对照 TWS 实际持仓；2）账外持仓核实后用 ignore；3）托管持仓差异持续时先平仓，再按条件 release。
+E         #x1F7E2 告警通道自检 #x1F7E2 告警通道自检
+E         发生了什么：V6-Lite 正在验证远程告警送达。
+E         下一步：无需操作。
+E         #x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情） #x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）
+E         启动时间：2026-10-06 06:50 PT / 09:50 ET
+E         模式：Paper · 真实下单（Paper） · 实时行情 · DU0000001 · 版本 5deeaea5
+E         状态：⚠️ 需关注
+E         Gateway 已连接 · 对账异常 · 告警通道正常 · 旧 V6：未运行
+E         reconcile:AAPL: expected 20 broker 0
+E         持仓对账不一致
+E         入场窗口 10:00 ET 开启
+E         报价可用 3/3 · V6-Lite 持仓：AAPL 20
+E         监控：IB Gateway 心跳：每 60 秒，连续 2 次无应答即告警
+E         持仓漂移：每 300 秒对账，不一致即告警
+E         每日健康报告：13:05 PT（收盘后 5 分钟）
+E         扫描时间：10:00 ET / 07:00 PT
+E         手动指令（本机命令行）：这些指令只能在本机命令行执行，不能在 Discord 输入。
+E         status 查看状态 · report 查看日报
+E         kill --reason 停止入场 · resume 恢复
+E         ignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码
+E         
+E       assert ('旧类型保护单' in '#x1F534 P0 · 保护单三项证据不完整 #x1F534 P0 · 保护单三项证据不完整\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2...us 查看状态 · report 查看日报\nkill --reason 停止入场 · resume 恢复\nignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码\n')
+
+v6lite\tests\test_batch22_schema_audit.py:327: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_legacy_type_release_is_refused_even_with_complete_flat_proof" time="0.095"><failure message="AssertionError: {'atr': 2.0, 'breakeven_stop': None, 'closed_at': '2026-10-06T13:51:01+00:00', 'entry_price': 113.47, ...}&#10;assert ('RELEASED' == 'OPEN'&#10;  &#10;  - OPEN&#10;  + RELEASED)">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_legacy_type_release_i0')
+
+    def test_B22_legacy_type_release_is_refused_even_with_complete_flat_proof(tmp_path):
+        rig, _ = _legacy_rig(tmp_path)
+        now = rig.clock.now()
+        rig.store.update_intent(now, 'v6l-b22legacyprotect', status=IntentStatus.CANCEL_SEEN,
+            last_raw_status='Cancelled', cancel_seen_at=(now - timedelta(seconds=61)).isoformat())
+        rig.store.set_control(now, 'frozen:AAPL', 'synthetic legacy review')
+        rig.broker.connect()
+        rig.broker.external_positions['AAPL'] = (20, 113.47)
+        request = OrderRequest('tws-b22-legacy-flat', 'AAPL', Side.SELL, 20, 107.0, Purpose.STOP)
+        rig.broker._register(request)
+        rig.broker.fill(request.intent_id, price=107.0, emit=False)
+        rig.advance(seconds=61)
+        assert rig.broker.open_orders() == []
+        assert rig.broker.positions_fresh() == []
+        assert rig.broker.positions() == []
+        assert any(fill.side == Side.SELL for fill in rig.broker.account_executions_today())
+        writes = _writes(rig)
+        rig.store.set_control(rig.clock.now(), 'release:AAPL', json.dumps({
+            'operator': 'synthetic-operator', 'reason': 'complete flat proof must not convert old order type'}))
+        rig.engine._apply_releases(rig.clock.now())
+        position = rig.store.position('pos-b22legacy')
+&gt;       assert position['status'] == 'OPEN' and position['qty_open'] == 20, dict(position)
+E       AssertionError: {'atr': 2.0, 'breakeven_stop': None, 'closed_at': '2026-10-06T13:51:01+00:00', 'entry_price': 113.47, ...}
+E       assert ('RELEASED' == 'OPEN'
+E         
+E         - OPEN
+E         + RELEASED)
+
+v6lite\tests\test_batch22_schema_audit.py:358: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-ENTRY]" time="0.019" /><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-TP1]" time="0.018" /><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-STOP]" time="0.018" /><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-ENTRY]" time="0.024" /><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-TP1]" time="0.018" /><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-STOP]" time="0.018" /><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-ENTRY]" time="0.019" /><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-TP1]" time="0.018" /><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-STOP]" time="0.036" /><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[0.0]" time="0.018"><failure message="sqlite3.IntegrityError: CHECK constraint failed: limit_price &gt; 0">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_create_intent_explici0')
+bad_limit = 0.0
+
+    @pytest.mark.parametrize('bad_limit', [0.0, -1.0])
+    def test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit(tmp_path, bad_limit):
+        rig = _rig(tmp_path)
+        request = OrderRequest('v6l-b22-store-refusal', 'AAPL', Side.SELL, 1, bad_limit, Purpose.TP1)
+        with pytest.raises(StoreError):
+&gt;           rig.store.create_intent(rig.clock.now(), request, atr=None, count_entry_day=None)
+
+v6lite\tests\test_batch22_schema_audit.py:385: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;v6lite.store.Store object at 0x000002D1AA6A8D50&gt;
+now = datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc)
+req = OrderRequest(intent_id='v6l-b22-store-refusal', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=0.0, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id=None)
+
+    def create_intent(self, now: datetime, req: OrderRequest, *, atr: float | None,
+                      count_entry_day: str | None,
+                      protection_plan: tuple[str, float, float] | None = None) -&gt; None:
+        """Persist the intent BEFORE any broker call. Entry submissions are
+        counted in the same transaction (rejected/cancelled still count)."""
+        with self.tx():
+            if count_entry_day:
+                cur = self.conn.execute(
+                    "UPDATE risk_days SET entries_submitted = entries_submitted + 1 WHERE trading_day=?",
+                    (count_entry_day,))
+                if cur.rowcount != 1:
+                    raise StoreError("risk day missing; cannot count entry")
+&gt;           self.conn.execute(
+                "INSERT INTO intents(intent_id, symbol, side, quantity, limit_price, purpose, position_id, "
+                "atr, status, created_at, updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+                (req.intent_id, req.symbol, str(req.side), int(req.quantity), float(req.limit_price),
+                 str(req.purpose), req.position_id, atr, str(IntentStatus.NEW), _iso(now), _iso(now)))
+E           sqlite3.IntegrityError: CHECK constraint failed: limit_price &gt; 0
+
+v6lite\store.py:447: IntegrityError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[-1.0]" time="0.017"><failure message="sqlite3.IntegrityError: CHECK constraint failed: limit_price &gt; 0">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_create_intent_explici1')
+bad_limit = -1.0
+
+    @pytest.mark.parametrize('bad_limit', [0.0, -1.0])
+    def test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit(tmp_path, bad_limit):
+        rig = _rig(tmp_path)
+        request = OrderRequest('v6l-b22-store-refusal', 'AAPL', Side.SELL, 1, bad_limit, Purpose.TP1)
+        with pytest.raises(StoreError):
+&gt;           rig.store.create_intent(rig.clock.now(), request, atr=None, count_entry_day=None)
+
+v6lite\tests\test_batch22_schema_audit.py:385: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;v6lite.store.Store object at 0x000002D1AA9AC410&gt;
+now = datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc)
+req = OrderRequest(intent_id='v6l-b22-store-refusal', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=-1.0, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id=None)
+
+    def create_intent(self, now: datetime, req: OrderRequest, *, atr: float | None,
+                      count_entry_day: str | None,
+                      protection_plan: tuple[str, float, float] | None = None) -&gt; None:
+        """Persist the intent BEFORE any broker call. Entry submissions are
+        counted in the same transaction (rejected/cancelled still count)."""
+        with self.tx():
+            if count_entry_day:
+                cur = self.conn.execute(
+                    "UPDATE risk_days SET entries_submitted = entries_submitted + 1 WHERE trading_day=?",
+                    (count_entry_day,))
+                if cur.rowcount != 1:
+                    raise StoreError("risk day missing; cannot count entry")
+&gt;           self.conn.execute(
+                "INSERT INTO intents(intent_id, symbol, side, quantity, limit_price, purpose, position_id, "
+                "atr, status, created_at, updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+                (req.intent_id, req.symbol, str(req.side), int(req.quantity), float(req.limit_price),
+                 str(req.purpose), req.position_id, atr, str(IntentStatus.NEW), _iso(now), _iso(now)))
+E           sqlite3.IntegrityError: CHECK constraint failed: limit_price &gt; 0
+
+v6lite\store.py:447: IntegrityError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_new_protection_plan_uses_stp_metadata_and_null_limit_before_entry_fill" time="0.062"><failure message="AssertionError: {'account': 'DU0000001', 'broker_order_id': None, 'client_id': 131, 'con_id': 10000, ...}&#10;assert None == 'STP'&#10; +  where None = &lt;built-in method get of dict object at 0x000002D1AA73CD00&gt;('order_type')&#10; +    where &lt;built-in method get of dict object at 0x000002D1AA73CD00&gt; = {'account': 'DU0000001', 'broker_order_id': None, 'client_id': 131, 'con_id': 10000, ...}.get">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_new_protection_plan_u0')
+
+    def test_B22_new_protection_plan_uses_stp_metadata_and_null_limit_before_entry_fill(tmp_path):
+        rig = _rig(tmp_path)
+        rig.start()
+        rig.at(et(10, 0, 30))
+        rig.tick()
+        [entry] = [request for request in rig.broker.sent if request.purpose == Purpose.ENTRY]
+        row = dict(rig.store.protection(entry.position_id))
+        assert row['state'] == 'PLANNED'
+&gt;       assert row.get('order_type') == 'STP', row
+E       AssertionError: {'account': 'DU0000001', 'broker_order_id': None, 'client_id': 131, 'con_id': 10000, ...}
+E       assert None == 'STP'
+E        +  where None = &lt;built-in method get of dict object at 0x000002D1AA73CD00&gt;('order_type')
+E        +    where &lt;built-in method get of dict object at 0x000002D1AA73CD00&gt; = {'account': 'DU0000001', 'broker_order_id': None, 'client_id': 131, 'con_id': 10000, ...}.get
+
+v6lite\tests\test_batch22_schema_audit.py:398: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_new_stp_intent_has_null_limit_and_native_order_has_no_limit" time="0.072"><failure message="AssertionError: {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}&#10;assert None == 'STP'&#10; +  where None = &lt;built-in method get of dict object at 0x000002D1AA710040&gt;('order_type')&#10; +    where &lt;built-in method get of dict object at 0x000002D1AA710040&gt; = {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}.get">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_new_stp_intent_has_nu0')
+
+    def test_B22_new_stp_intent_has_null_limit_and_native_order_has_no_limit(tmp_path):
+        rig = _rig(tmp_path)
+        _, row = _open(rig)
+        intent = rig.store.intent(row['intent_id'])
+&gt;       assert row.get('order_type') == 'STP', row
+E       AssertionError: {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}
+E       assert None == 'STP'
+E        +  where None = &lt;built-in method get of dict object at 0x000002D1AA710040&gt;('order_type')
+E        +    where &lt;built-in method get of dict object at 0x000002D1AA710040&gt; = {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}.get
+
+v6lite\tests\test_batch22_schema_audit.py:408: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[partial-adverse]" time="0.074"><failure message="AssertionError: {'confirmed_remaining': 15, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 15, 'pending_max_remaining': 15, ...}&#10;assert {'avg_fill_price', 'bps', 'fill_price', 'quantity', 'slippage_usd', 'stop_price'} &lt;= dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty'])&#10; +  where dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty']) = &lt;built-in method keys of dict object at 0x000002D1AA866D80&gt;()&#10; +    where &lt;built-in method keys of dict object at 0x000002D1AA866D80&gt; = {'confirmed_remaining': 15, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 15, 'pending_max_remaining': 15, ...}.keys">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_each_native_protect_e0')
+quantity = 5, offset = -0.5
+
+    @pytest.mark.parametrize('quantity,offset', [(5, -0.50), (20, 0.25)], ids=['partial-adverse', 'full-favorable'])
+    def test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent(tmp_path, quantity, offset):
+        rig = _rig(tmp_path)
+        _, row = _open(rig)
+        stop = row['trigger_price']
+        fill = rig.broker.fill(row['intent_id'], qty=quantity, price=stop + offset, emit=False)
+        rig.engine._ingest_fill(rig.clock.now(), fill)
+&gt;       payload = _slippage_audit(rig, fill, stop)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+v6lite\tests\test_batch22_schema_audit.py:428: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+rig = &lt;v6lite.tests.helpers.Rig object at 0x000002D1AA7670D0&gt;
+fill = FillEvent(exec_id='0000fa4e.00000002.01.01', intent_id='v6l-protect-be2aff6f27344a1ca161', symbol='AAPL', side=&lt;Side.S...timezone.utc), broker_order_id=1002, perm_id=51002, commission=1.0, time_source='', time_uncertain=False, con_id=10000)
+stop = 108.47
+
+    def _slippage_audit(rig, fill, stop, *, avg=None, retired=False):
+        rows = _audit(rig.store, 'PROTECT_FILL', fill.exec_id)
+        assert len(rows) == 1, (fill.exec_id, rows)
+        row = rows[0]
+        required = {'stop_price', 'fill_price', 'avg_fill_price', 'quantity', 'slippage_usd', 'bps'}
+&gt;       assert required &lt;= row.keys(), row
+E       AssertionError: {'confirmed_remaining': 15, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 15, 'pending_max_remaining': 15, ...}
+E       assert {'avg_fill_price', 'bps', 'fill_price', 'quantity', 'slippage_usd', 'stop_price'} &lt;= dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty'])
+E        +  where dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty']) = &lt;built-in method keys of dict object at 0x000002D1AA866D80&gt;()
+E        +    where &lt;built-in method keys of dict object at 0x000002D1AA866D80&gt; = {'confirmed_remaining': 15, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 15, 'pending_max_remaining': 15, ...}.keys
+
+v6lite\tests\test_batch22_schema_audit.py:214: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[full-favorable]" time="0.074"><failure message="AssertionError: {'confirmed_remaining': 0, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 0, 'pending_max_remaining': 0, ...}&#10;assert {'avg_fill_price', 'bps', 'fill_price', 'quantity', 'slippage_usd', 'stop_price'} &lt;= dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty'])&#10; +  where dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty']) = &lt;built-in method keys of dict object at 0x000002D1AA68DF40&gt;()&#10; +    where &lt;built-in method keys of dict object at 0x000002D1AA68DF40&gt; = {'confirmed_remaining': 0, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 0, 'pending_max_remaining': 0, ...}.keys">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_each_native_protect_e1')
+quantity = 20, offset = 0.25
+
+    @pytest.mark.parametrize('quantity,offset', [(5, -0.50), (20, 0.25)], ids=['partial-adverse', 'full-favorable'])
+    def test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent(tmp_path, quantity, offset):
+        rig = _rig(tmp_path)
+        _, row = _open(rig)
+        stop = row['trigger_price']
+        fill = rig.broker.fill(row['intent_id'], qty=quantity, price=stop + offset, emit=False)
+        rig.engine._ingest_fill(rig.clock.now(), fill)
+&gt;       payload = _slippage_audit(rig, fill, stop)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+v6lite\tests\test_batch22_schema_audit.py:428: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+rig = &lt;v6lite.tests.helpers.Rig object at 0x000002D1AA7A3F50&gt;
+fill = FillEvent(exec_id='0000fa4e.00000002.01.01', intent_id='v6l-protect-991f1b0469e44ddaa7af', symbol='AAPL', side=&lt;Side.S...timezone.utc), broker_order_id=1002, perm_id=51002, commission=1.0, time_source='', time_uncertain=False, con_id=10000)
+stop = 108.47
+
+    def _slippage_audit(rig, fill, stop, *, avg=None, retired=False):
+        rows = _audit(rig.store, 'PROTECT_FILL', fill.exec_id)
+        assert len(rows) == 1, (fill.exec_id, rows)
+        row = rows[0]
+        required = {'stop_price', 'fill_price', 'avg_fill_price', 'quantity', 'slippage_usd', 'bps'}
+&gt;       assert required &lt;= row.keys(), row
+E       AssertionError: {'confirmed_remaining': 0, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 0, 'pending_max_remaining': 0, ...}
+E       assert {'avg_fill_price', 'bps', 'fill_price', 'quantity', 'slippage_usd', 'stop_price'} &lt;= dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty'])
+E        +  where dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty']) = &lt;built-in method keys of dict object at 0x000002D1AA68DF40&gt;()
+E        +    where &lt;built-in method keys of dict object at 0x000002D1AA68DF40&gt; = {'confirmed_remaining': 0, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 0, 'pending_max_remaining': 0, ...}.keys
+
+v6lite\tests\test_batch22_schema_audit.py:214: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_protect_average_is_per_intent_weighted_actual_execution_price" time="0.073"><failure message="AssertionError: {'confirmed_remaining': 17, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 17, 'pending_max_remaining': 17, ...}&#10;assert {'avg_fill_price', 'bps', 'fill_price', 'quantity', 'slippage_usd', 'stop_price'} &lt;= dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty'])&#10; +  where dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty']) = &lt;built-in method keys of dict object at 0x000002D1AA646580&gt;()&#10; +    where &lt;built-in method keys of dict object at 0x000002D1AA646580&gt; = {'confirmed_remaining': 17, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 17, 'pending_max_remaining': 17, ...}.keys">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_protect_average_is_pe0')
+
+    def test_B22_protect_average_is_per_intent_weighted_actual_execution_price(tmp_path):
+        rig = _rig(tmp_path)
+        _, row = _open(rig)
+        stop = row['trigger_price']
+        first = rig.broker.fill(row['intent_id'], qty=3, price=stop - 0.50, emit=False)
+        rig.engine._ingest_fill(rig.clock.now(), first)
+&gt;       _slippage_audit(rig, first, stop)
+
+v6lite\tests\test_batch22_schema_audit.py:446: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+rig = &lt;v6lite.tests.helpers.Rig object at 0x000002D1AA7CB250&gt;
+fill = FillEvent(exec_id='0000fa4e.00000002.01.01', intent_id='v6l-protect-5f51e408668941c5b790', symbol='AAPL', side=&lt;Side.S...timezone.utc), broker_order_id=1002, perm_id=51002, commission=1.0, time_source='', time_uncertain=False, con_id=10000)
+stop = 108.47
+
+    def _slippage_audit(rig, fill, stop, *, avg=None, retired=False):
+        rows = _audit(rig.store, 'PROTECT_FILL', fill.exec_id)
+        assert len(rows) == 1, (fill.exec_id, rows)
+        row = rows[0]
+        required = {'stop_price', 'fill_price', 'avg_fill_price', 'quantity', 'slippage_usd', 'bps'}
+&gt;       assert required &lt;= row.keys(), row
+E       AssertionError: {'confirmed_remaining': 17, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 17, 'pending_max_remaining': 17, ...}
+E       assert {'avg_fill_price', 'bps', 'fill_price', 'quantity', 'slippage_usd', 'stop_price'} &lt;= dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty'])
+E        +  where dict_keys(['confirmed_remaining', 'exec_id', 'held_after', 'pending_max_remaining', 'position_id', 'qty']) = &lt;built-in method keys of dict object at 0x000002D1AA646580&gt;()
+E        +    where &lt;built-in method keys of dict object at 0x000002D1AA646580&gt; = {'confirmed_remaining': 17, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 17, 'pending_max_remaining': 17, ...}.keys
+
+v6lite\tests\test_batch22_schema_audit.py:214: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_retired_identity_persists_order_type_and_original_stop_across_reopen" time="0.086"><failure message="AssertionError: {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}&#10;assert None == 'STP'&#10; +  where None = &lt;built-in method get of dict object at 0x000002D1A9C62280&gt;('order_type')&#10; +    where &lt;built-in method get of dict object at 0x000002D1A9C62280&gt; = {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}.get">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_retired_identity_pers0')
+
+    def test_B22_retired_identity_persists_order_type_and_original_stop_across_reopen(tmp_path):
+        rig, _, old, new = _retired_pair(tmp_path)
+        key = 'retired_protection:' + old['intent_id']
+        raw = rig.store.control(key)
+        assert raw is not None
+        identity = json.loads(raw)
+&gt;       assert identity.get('order_type') == 'STP', identity
+E       AssertionError: {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}
+E       assert None == 'STP'
+E        +  where None = &lt;built-in method get of dict object at 0x000002D1A9C62280&gt;('order_type')
+E        +    where &lt;built-in method get of dict object at 0x000002D1A9C62280&gt; = {'account': 'DU0000001', 'broker_order_id': 1002, 'client_id': 131, 'con_id': 10000, ...}.get
+
+v6lite\tests\test_batch22_schema_audit.py:460: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_retired_fill_uses_immutable_old_stop_not_replacement_price" time="0.090"><failure message="AssertionError: ('0000fa4e.00000002.01.01', [])&#10;assert 0 == 1&#10; +  where 0 = len([])">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_retired_fill_uses_imm0')
+
+    def test_B22_retired_fill_uses_immutable_old_stop_not_replacement_price(tmp_path):
+        rig, pos, old, new = _retired_pair(tmp_path)
+        replacement_stop = old['trigger_price'] + 2.0
+        _change_stop(rig, new, replacement_stop)
+        _settle(rig)
+        current = rig.store.protection(pos['position_id'])
+        assert current['state'] == 'WORKING' and current['pending_trigger'] is None
+        assert current['trigger_price'] == pytest.approx(replacement_stop)
+        fill = rig.broker.fill(old['intent_id'], qty=5, price=old['trigger_price'] - 0.50, emit=False)
+        rig.engine._ingest_fill(rig.clock.now(), fill)
+&gt;       _slippage_audit(rig, fill, old['trigger_price'], retired=True)
+
+v6lite\tests\test_batch22_schema_audit.py:483: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+rig = &lt;v6lite.tests.helpers.Rig object at 0x000002D1AA5E8F50&gt;
+fill = FillEvent(exec_id='0000fa4e.00000002.01.01', intent_id='v6l-protect-c2c04b4d88d445cb9f04', symbol='AAPL', side=&lt;Side.S...timezone.utc), broker_order_id=1002, perm_id=51002, commission=1.0, time_source='', time_uncertain=False, con_id=10000)
+stop = 108.47
+
+    def _slippage_audit(rig, fill, stop, *, avg=None, retired=False):
+        rows = _audit(rig.store, 'PROTECT_FILL', fill.exec_id)
+&gt;       assert len(rows) == 1, (fill.exec_id, rows)
+E       AssertionError: ('0000fa4e.00000002.01.01', [])
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+v6lite\tests\test_batch22_schema_audit.py:211: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_price_pending_execution_audit_keeps_stop_and_slippage_unknown" time="0.076"><failure message="AssertionError: {'confirmed_remaining': 15, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 15, 'pending_max_remaining': 15, ...}&#10;assert ('stop_price' in {'confirmed_remaining': 15, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 15, 'pending_max_remaining': 15, ...})">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_price_pending_executi0')
+
+    def test_B22_price_pending_execution_audit_keeps_stop_and_slippage_unknown(tmp_path):
+        rig = _rig(tmp_path)
+        _, old = _open(rig)
+        pending = _change_stop(rig, old, old['trigger_price'] + 1.0, auto_status=False)
+        assert pending['trigger_price'] != pending['pending_trigger']
+        assert rig.broker.orders[old['intent_id']].req.trigger_price == old['trigger_price']
+        fill = rig.broker.fill(old['intent_id'], qty=5, price=old['trigger_price'] - 0.50, emit=False)
+        rig.engine._ingest_fill(rig.clock.now(), fill)
+        rows = _audit(rig.store, 'PROTECT_FILL', fill.exec_id)
+        assert len(rows) == 1
+        payload = rows[0]
+        for field in ('stop_price', 'slippage_usd', 'bps'):
+&gt;           assert field in payload and payload[field] is None, payload
+E           AssertionError: {'confirmed_remaining': 15, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 15, 'pending_max_remaining': 15, ...}
+E           assert ('stop_price' in {'confirmed_remaining': 15, 'exec_id': '0000fa4e.00000002.01.01', 'held_after': 15, 'pending_max_remaining': 15, ...})
+
+v6lite\tests\test_batch22_schema_audit.py:509: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day" time="0.075"><failure message="AssertionError: # V6-Lite daily report 2026-10-06 (paper)&#10;  &#10;  - account: DU0000001   state role: formal&#10;  - code_sha: 5deeaea5703f5954&#10;  - market data: real-time (1) | n/a RTH availability (no runtime RTH samples supplied)&#10;  - last health market data (instantaneous, not RTH availability): real-time (1)&#10;  &#10;  - realized P&amp;L: -110.00   fees: 2.00   net: -112.00&#10;  - entries submitted: 1 / 4&#10;  - daily stop latched: False&#10;  - open positions: none&#10;  - 券商端保护: 无持仓；空窗统计 A=0.000s B=0.000s&#10;  - kill switch: off&#10;  - open anomalies: none&#10;  - frozen symbols (operator must flatten, then `release`): none&#10;  - released positions (P&amp;L of the operator's TWS trades is NOT in the figures above): none&#10;  &#10;  ## Fills&#10;  - 14:00:30Z AAPL BUY 20 @ 113.47 realized 0.00&#10;  - 16:00:00Z AAPL SELL 20 @ 107.97 realized -110.00&#10;  &#10;  ## Events&#10;  - 13:50:00Z LOSS_STATE {&quot;cooldown_until&quot;: null, &quot;streak&quot;: 0}&#10;  - 14:00:30Z SCAN {&quot;errors&quot;: {}, &quot;min_score&quot;: 60, &quot;signals&quot;: [[&quot;AAPL&quot;, 78]], &quot;vix&quot;: 18.0}&#10;  &#10;  ## Operator notes&#10;  &#10;  - (market context, manual actions, things to review)&#10;  &#10;assert '0000fa4e.00000002.01.01' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU0000001   state role: formal\n- code_sha: 5deeaea5703f5954\...&quot;signals&quot;: [[&quot;AAPL&quot;, 78]], &quot;vix&quot;: 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n'&#10; +  where '0000fa4e.00000002.01.01' = FillEvent(exec_id='0000fa4e.00000002.01.01', intent_id='v6l-protect-9eae15c3243343ed9b4d', symbol='AAPL', side=&lt;Side.S..., broker_order_id=1002, perm_id=51002, commission=1.0, time_source='reqExecutions', time_uncertain=False, con_id=10000).exec_id">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_delayed_reqexecutions0')
+
+    def test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day(tmp_path):
+        rig = _rig(tmp_path)
+        pos, row = _open(rig)
+        rig.at(et(12))
+        fill = rig.broker.fill(row['intent_id'], qty=20, price=row['trigger_price'] - 0.50, emit=False)
+        fill = replace(fill, time_source='reqExecutions', time_uncertain=False)
+        rig.broker.orders[row['intent_id']].fills[-1] = fill
+        rig.at(et(10, day=(2026, 10, 7)))
+        rig.engine._ingest_fill(rig.clock.now(), fill)
+        recorded = rig.store.conn.execute('SELECT * FROM fills WHERE exec_id=?', (fill.exec_id,)).fetchone()
+        assert recorded['trading_day'] == '2026-10-06'
+        assert rig.store.position(pos['position_id'])['status'] == 'CLOSED'
+        events = rig.store.conn.execute("SELECT ts,payload FROM audit WHERE kind='PROTECT_FILL'").fetchall()
+        assert len(events) == 1 and events[0]['ts'].startswith('2026-10-07')
+        previous = daily_report(rig.store, rig.cfg, date(2026, 10, 6))
+        current = daily_report(rig.store, rig.cfg, date(2026, 10, 7))
+&gt;       assert fill.exec_id in previous, previous
+E       AssertionError: # V6-Lite daily report 2026-10-06 (paper)
+E         
+E         - account: DU0000001   state role: formal
+E         - code_sha: 5deeaea5703f5954
+E         - market data: real-time (1) | n/a RTH availability (no runtime RTH samples supplied)
+E         - last health market data (instantaneous, not RTH availability): real-time (1)
+E         
+E         - realized P&amp;L: -110.00   fees: 2.00   net: -112.00
+E         - entries submitted: 1 / 4
+E         - daily stop latched: False
+E         - open positions: none
+E         - 券商端保护: 无持仓；空窗统计 A=0.000s B=0.000s
+E         - kill switch: off
+E         - open anomalies: none
+E         - frozen symbols (operator must flatten, then `release`): none
+E         - released positions (P&amp;L of the operator's TWS trades is NOT in the figures above): none
+E         
+E         ## Fills
+E         - 14:00:30Z AAPL BUY 20 @ 113.47 realized 0.00
+E         - 16:00:00Z AAPL SELL 20 @ 107.97 realized -110.00
+E         
+E         ## Events
+E         - 13:50:00Z LOSS_STATE {"cooldown_until": null, "streak": 0}
+E         - 14:00:30Z SCAN {"errors": {}, "min_score": 60, "signals": [["AAPL", 78]], "vix": 18.0}
+E         
+E         ## Operator notes
+E         
+E         - (market context, manual actions, things to review)
+E         
+E       assert '0000fa4e.00000002.01.01' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU0000001   state role: formal\n- code_sha: 5deeaea5703f5954\..."signals": [["AAPL", 78]], "vix": 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n'
+E        +  where '0000fa4e.00000002.01.01' = FillEvent(exec_id='0000fa4e.00000002.01.01', intent_id='v6l-protect-9eae15c3243343ed9b4d', symbol='AAPL', side=&lt;Side.S..., broker_order_id=1002, perm_id=51002, commission=1.0, time_source='reqExecutions', time_uncertain=False, con_id=10000).exec_id
+
+v6lite\tests\test_batch22_schema_audit.py:537: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch22_schema_audit" name="test_B22_after_closed_real_retired_exec_is_audited_without_second_pnl_or_close" time="0.098"><failure message="AssertionError: ('0000fa4e.00000004.01.01', [])&#10;assert 0 == 1&#10; +  where 0 = len([])">tmp_path = WindowsPath('C:/Users/yu-ch/AppData/Local/Temp/pytest-of-yu-ch/pytest-944/test_B22_after_closed_real_ret0')
+
+    def test_B22_after_closed_real_retired_exec_is_audited_without_second_pnl_or_close(tmp_path):
+        rig, pos, old, new = _retired_pair(tmp_path)
+        first = rig.broker.fill(old['intent_id'], qty=5, price=old['trigger_price'] - 0.50, emit=False)
+        rig.engine._ingest_fill(rig.clock.now(), first)
+        _settle(rig)
+        row = rig.store.protection(pos['position_id'])
+        assert row['state'] == 'WORKING'
+        assert row['confirmed_remaining'] == row['pending_max_remaining'] == 15
+        final = rig.broker.fill(new['intent_id'], qty=15, price=new['trigger_price'] - 0.25, emit=False)
+        rig.engine._ingest_fill(rig.clock.now(), final)
+        closed = dict(rig.store.position(pos['position_id']))
+        assert closed['status'] == 'CLOSED' and closed['qty_open'] == 0
+        assert rig.broker.positions_fresh() == []
+        closes = _audit(rig.store, 'TRADE_CLOSED')
+        assert len([row for row in closes if row.get('position_id') == pos['position_id']]) == 1
+        # The retired order still has native 15-share capacity. This second 5-share
+        # execution is genuine broker truth, producing a short, not a fabricated
+        # callback. It must retain audit evidence without applying another trade.
+        second = rig.broker.fill(old['intent_id'], qty=5, price=old['trigger_price'] - 1.50, emit=False)
+        assert next(position.quantity for position in rig.broker.positions_fresh() if position.symbol == 'AAPL') == -5
+        writes = _writes(rig)
+        rig.engine._ingest_fill(rig.clock.now(), second)
+&gt;       payload = _slippage_audit(rig, second, old['trigger_price'],
+            avg=(first.price * 5 + second.price * 5) / 10, retired=True)
+
+v6lite\tests\test_batch22_schema_audit.py:566: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+rig = &lt;v6lite.tests.helpers.Rig object at 0x000002D1AA646350&gt;
+fill = FillEvent(exec_id='0000fa4e.00000004.01.01', intent_id='v6l-protect-919ea3e1a295415a87b9', symbol='AAPL', side=&lt;Side.S...timezone.utc), broker_order_id=1002, perm_id=51002, commission=1.0, time_source='', time_uncertain=False, con_id=10000)
+stop = 108.47
+
+    def _slippage_audit(rig, fill, stop, *, avg=None, retired=False):
+        rows = _audit(rig.store, 'PROTECT_FILL', fill.exec_id)
+&gt;       assert len(rows) == 1, (fill.exec_id, rows)
+E       AssertionError: ('0000fa4e.00000004.01.01', [])
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+v6lite\tests\test_batch22_schema_audit.py:211: AssertionError</failure></testcase></testsuite></testsuites>

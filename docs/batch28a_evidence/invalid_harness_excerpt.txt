@@ -1,0 +1,43 @@
+EEEEEEEEEEEEEEEEEEEEEEE.....EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [  8%]
+EEEEEEEEEEEEEEEEEEE.EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 16%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 24%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 33%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.....EEEEEEEEEEEE [ 41%]
+EEEEEEEEEEEEEEEEEEEEE..EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 49%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 57%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.EEEEEEEEEEEEEE.EEEEEEEEEEEEEEEEEEEEEEE [ 66%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 74%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 82%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 91%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 99%]
+EEEEE                                                                    [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[finite-limit-SELL] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28-tests\\previous_batches'
+_ ERROR at setup of test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[finite-limit-BUY] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28-tests\\previous_batches'
+_ ERROR at setup of test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[empty-limit-SELL] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28-tests\\previous_batches'
+_ ERROR at setup of test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[empty-limit-BUY] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    re
+... repeated setup errors omitted from this excerpt ...
+fuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[list-only]
+ERROR v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time
+ERROR v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_legacy_broker_without_scoped_capability_keeps_historical_stop_TP_compatibility
+15 passed, 854 errors in 34.07s

@@ -1,0 +1,143 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "green_review_boundaries",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T09:00:18.660549-07:00",
+  "end_pt": "2026-10-18T09:00:22.300537-07:00",
+  "returncode": 0,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "71424b794d1412d5",
+  "source_unchanged": true,
+  "worktree_code_sha": "71424b794d1412d5",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "71424b794d1412d52eee17021759d01ae2755b05b186129175a20054444f288d",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_execution_time_binding.py",
+      "sha256": "a6ff1a47719efdc1882a426ee39d6884b8d6cddb574dc7b5f7bcce4229986907"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_short_account_budget.py",
+      "sha256": "ed7adccf9a71ef795d989f7f8c95982b2e6d3ac82b5faf901d752d786625ad92"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_masked_report_budget.py",
+      "sha256": "80abd2a6b0cddf294afb74c67e42bc4e511edcac85af9dab70782f9e109165e3"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observer_atomicity.py",
+      "sha256": "c48400b8ff14c415b2a94d4163eb783d63dce0660a97363da4ae3624a1923482"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_reset_isolation.py",
+      "sha256": "fa6d8899625b369541439a466a7ec6649ff0ce291cb3553bcecdc240994dc9b3"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_critical_attachments.py",
+      "sha256": "dfa9e321008d5f78bc69ccf28e54e4396cf988459aa3579a1eda4e046fd1179c"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_execution_time_binding",
+      "name": "test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_short_account_budget",
+      "name": "test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_masked_report_budget",
+      "name": "test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_atomicity",
+      "name": "test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_reset_isolation",
+      "name": "test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_critical_attachments",
+      "name": "test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_critical_attachments",
+      "name": "test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_critical_attachments",
+      "name": "test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+      "v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice",
+      "v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice",
+      "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts",
+      "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+      "v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice",
+      "v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice",
+      "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts",
+      "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main"
+    ]
+  },
+  "stdout_sha256": "8dc8ca1c71b7238def6f6ccce543041e1934ec9c675b9de10ec2b90ba6151f88",
+  "junit_sha256": "82c791e4139575b97efc4d5fa09a0f025fc9f96cd128aa58befac71b56589f5d",
+  "inventory_sha256": "2149d2756a5d8527f107159ea826070adec02dbed9256bc329e7b19ab1688741",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "green_review_boundaries.json": "7d62d1f431e6a3ae917b81169ea173e33dd791dba5741d025e707ed2d4045289",
+      "green_review_boundaries.xml": "82c791e4139575b97efc4d5fa09a0f025fc9f96cd128aa58befac71b56589f5d",
+      "green_review_boundaries_inventory.json": "3a12ebbd757da62dba6b4814e635b80bdab5c1121170e46eb197099cee4e381c",
+      "green_review_boundaries.txt": "8dc8ca1c71b7238def6f6ccce543041e1934ec9c675b9de10ec2b90ba6151f88"
+    }
+  }
+}

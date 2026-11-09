@@ -1,0 +1,147 @@
+........................................................................ [  3%]
+........................................................................ [  6%]
+........................................................................ [ 10%]
+........................................................................ [ 13%]
+........................................................................ [ 17%]
+........................................................................ [ 20%]
+........................................................................ [ 23%]
+........................................................................ [ 27%]
+........................................................................ [ 30%]
+........................................................................ [ 34%]
+........................................................................ [ 37%]
+........................................................................ [ 40%]
+........................................................................ [ 44%]
+........................................................................ [ 47%]
+........................................................................ [ 51%]
+........................................................................ [ 54%]
+........................................................................ [ 57%]
+........................................................................ [ 61%]
+........................................................................ [ 64%]
+........................................................................ [ 68%]
+........................................................................ [ 71%]
+........................................................................ [ 75%]
+........................................................................ [ 78%]
+........................................................................ [ 81%]
+........................................................................ [ 85%]
+........................................................................ [ 88%]
+........................................................................ [ 92%]
+.................s...................................................... [ 95%]
+........................................................................ [ 98%]
+........................                                                 [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]
+v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]
+  v6lite\tests\test_batch27_critical_attachments.py:75: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("shutdown", [False, True], ids=["normal-report", "shutdown-supplement"])
+
+v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main
+  v6lite\tests\test_batch27_critical_attachments.py:114: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history
+  v6lite\tests\test_batch27_daily_report_volume.py:81: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear
+  v6lite\tests\test_batch27_daily_report_volume.py:126: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear(
+
+v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only
+  v6lite\tests\test_batch27_diagnostic_attachment.py:26: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only(
+
+v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day
+  v6lite\tests\test_batch27_diagnostic_attachment.py:80: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day(
+
+v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]
+v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]
+v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]
+v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]
+  v6lite\tests\test_batch27_execution_log_aggregation.py:85: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("holdings", [1, 10], ids=["one", "ten"])
+
+v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info
+  v6lite\tests\test_batch27_execution_time_binding.py:17: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info(
+
+v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]
+v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]
+v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]
+v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]
+  v6lite\tests\test_batch27_logging_volume.py:115: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("holdings", [1, 10], ids=["one", "ten"])
+
+v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice
+  v6lite\tests\test_batch27_masked_report_budget.py:17: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice(
+
+v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]
+v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]
+v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]
+v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]
+  v6lite\tests\test_batch27_observation_audit.py:194: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("holdings", [1, 10], ids=["one", "ten"])
+
+v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts
+  v6lite\tests\test_batch27_observer_atomicity.py:19: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts(
+
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls
+  v6lite\tests\test_batch27_observer_equivalence.py:107: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls(
+
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]
+  v6lite\tests\test_batch27_observer_equivalence.py:180: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("failure", ["allow", "a", "b", "c", "d"])
+
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change
+  v6lite\tests\test_batch27_observer_equivalence.py:229: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change(
+
+v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails
+  v6lite\tests\test_batch27_reset_isolation.py:13: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails(
+
+v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice
+  v6lite\tests\test_batch27_short_account_budget.py:22: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice(
+
+v6lite/tests/test_batch28_section2.py::test_B28_candidate_due_flush_is_atomic_across_positions_and_retry_exactly_once
+  v6lite\tests\test_batch28_section2.py:386: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28_candidate_due_flush_is_atomic_across_positions_and_retry_exactly_once(
+
+v6lite/tests/test_batch28_section2.py::test_B28_candidate_due_flush_respects_outer_rollback_and_unfinished_window
+  v6lite\tests\test_batch28_section2.py:415: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28_candidate_due_flush_respects_outer_rollback_and_unfinished_window(
+
+v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+  v6lite\tests\test_batch28b_overnight_refresh.py:204: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen(
+
+v6lite/tests/test_batch28c_ack_ordering.py::test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second
+  v6lite\tests\test_batch28c_ack_ordering.py:31: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second(
+
+v6lite/tests/test_batch28c_native_latency.py::test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+  v6lite\tests\test_batch28c_native_latency.py:306: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second(
+
+v6lite/tests/test_batch28c_pair_window.py::test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick
+  v6lite\tests\test_batch28c_pair_window.py:43: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick(
+
+v6lite/tests/test_batch28d_last_stage.py::test_B28d_TP1_can_be_the_final_share_after_real_original_STP_partial_fill
+  v6lite\tests\test_batch28d_last_stage.py:75: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28d_TP1_can_be_the_final_share_after_real_original_STP_partial_fill(
+
+v6lite/tests/test_batch28d_native_final_tp.py::test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second
+  v6lite\tests\test_batch28d_native_final_tp.py:350: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2111 passed, 1 skipped, 39 warnings in 1914.02s (0:31:54)

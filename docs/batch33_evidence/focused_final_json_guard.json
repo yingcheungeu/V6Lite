@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+    "version": "0.9.86",
+    "sources": {
+      "wrapper.py": "4ed7299106979c0b2518658d4d3ef371fe5a39b254586254650edc35217cb0c1",
+      "decoder.py": "b06cbe24eca37e3386d0ab213deb43e493171e8cbb7c26060ea4936f97f79b4c",
+      "client.py": "1d86989d6815881ea88576e8e3bdcf34fe40d1da778dfee68619ee80e53a2822",
+      "ib.py": "b5f60220c941a335c47cbb0257a342e3122b1f07cc9f809a36a0e7c9b4ba84fc",
+      "order.py": "f014b063b899fd9ec1cd4bd4cf9cc834de0efb89c089bdeb673c09b392131ca7",
+      "util.py": "86c7250f24545721a4fd230e747b0d01e66cb1f8a4ad12e152c7a70d4b37d964"
+    }
+  },
+  "dependencies_unchanged": true,
+  "label": "focused_final_json_guard",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-31T16:31:19.659506-07:00",
+  "end_pt": "2026-10-31T16:31:33.540886-07:00",
+  "seconds": 13.875,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch33_open_delay.py",
+    "v6lite/tests/test_batch33_controls.py",
+    "v6lite/tests/test_batch23_contracts.py"
+  ],
+  "code_sha": "a864ccd2f7680fba",
+  "source_unchanged": true,
+  "inventory_sha256": "e03679a2b4b812735fabcc02508a03314dc125b70318ee12982681533c4ec67e",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "47d13867407b31789638733111a4fe376044b416f1ec6469e003cdf69b8ba838",
+  "XML_sha256_before_masking": "bad3991052a64dc21c9bedbff752a8c544cea556cbb7863ef7700df26539c99c",
+  "delivered_log_sha256": "dcfa888e2e1d452104e1fcca14ab0644dcfc1b57b7bc734b878b754e8c90aeef",
+  "delivered_XML_sha256": "bad3991052a64dc21c9bedbff752a8c544cea556cbb7863ef7700df26539c99c",
+  "tests": 95,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

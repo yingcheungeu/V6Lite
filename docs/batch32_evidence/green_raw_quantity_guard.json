@@ -1,0 +1,27 @@
+{
+  "label": "green_raw_quantity_guard",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T08:21:05.162399-07:00",
+  "end_pt": "2026-10-29T08:21:07.467876-07:00",
+  "seconds": 2.313,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch32_normalization_guards.py",
+    "v6lite/tests/test_batch32_open_orders.py"
+  ],
+  "code_sha": "185b5e4e07896afb",
+  "source_unchanged": true,
+  "inventory_sha256": "4aed0561579dfa631b4522109fd8c488470c236adac00ae4956570f735cdaa92",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "e0cabb4ea9c3b452cd2bcfb2822067d6724d5c1b33cc63967fb1303b8a850421",
+  "XML_sha256_before_masking": "ba342d6a27991926d007665c601d8c0752920ed56eec6b2c57db9af3ffa752c0",
+  "delivered_log_sha256": "525b573fe7862940b9032d07e0f8695c00d66d2aeae666b65c25cef9aabb1d87",
+  "delivered_XML_sha256": "ba342d6a27991926d007665c601d8c0752920ed56eec6b2c57db9af3ffa752c0",
+  "tests": 2,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

@@ -1,0 +1,206 @@
+{
+  "label": "red_22a",
+  "start_pt": "2026-10-09T14:07:27.906822-07:00",
+  "end_pt": "2026-10-09T14:07:37.811290-07:00",
+  "returncode": 1,
+  "source_code_sha": "f27e144de9eb406b",
+  "source_unchanged": true,
+  "worktree_code_sha": "a6cbc276ba9861ff",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\red_specs\\test_batch23_tp_evidence.py",
+      "sha256": "d722587c2a07a89a3e320608d5c647d2d35efb4b375a16cd7f6a7ab5440b6509"
+    }
+  ],
+  "totals": {
+    "tests": 30,
+    "failures": 20,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds",
+      "outcome": "failure",
+      "message": "AssertionError: assert 0.01 == 0.002\n +  where 0.01 = LiteConfig(mode='paper', account='DU0000000', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)).exit_limit_band_pct\n +    where LiteConfig(mode='paper', account='DU0000000', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)) = <v6lite.tests.helpers.Rig object at 0x000001D555CDE350>.cfg"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper.toml]",
+      "outcome": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Dev\\\\V6Lite-dev\\\\docs\\\\batch23_evidence\\\\examples\\\\paper.toml'"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_delayed.toml]",
+      "outcome": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Dev\\\\V6Lite-dev\\\\docs\\\\batch23_evidence\\\\examples\\\\paper_delayed.toml'"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_test.toml]",
+      "outcome": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Dev\\\\V6Lite-dev\\\\docs\\\\batch23_evidence\\\\examples\\\\paper_test.toml'"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_g3n.toml]",
+      "outcome": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Dev\\\\V6Lite-dev\\\\docs\\\\batch23_evidence\\\\examples\\\\paper_g3n.toml'"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[live.toml]",
+      "outcome": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Dev\\\\V6Lite-dev\\\\docs\\\\batch23_evidence\\\\examples\\\\live.toml'"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'PROTECT_CANCEL_PENDING'\n  \n  - PROTECT_CANCEL_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.0-True]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.01-False]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[0.0-130.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[-1.0-130.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[130.0-129.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send",
+      "outcome": "failure",
+      "message": "KeyError: 'v6l-protect-95009ae3857f4cf1a057'"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark",
+      "outcome": "failure",
+      "message": "KeyError: 'v6l-protect-3dd5e14837d24b4ea2e2'"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[False]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[True]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap.<locals>.<genexpr> at 0x000001D575E642E0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity.<locals>.<genexpr> at 0x000001D575E67060>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write",
+      "outcome": "failure",
+      "message": "assert (None is not None)"
+    }
+  ],
+  "stdout_sha256": "aa482d2d8ff3e8ecbdb7f6de299b9310f853221244dfd4f4934a8983f3496b21",
+  "junit_sha256": "11af4a13e1cd2f4c805597aff45dc16a80902a2fa0ac0ca8cdadb5086a63acbf"
+}

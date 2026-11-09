@@ -1,0 +1,65 @@
+{
+  "label": "red_b30_real_query_gap",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T06:58:36.440817-07:00",
+  "end_pt": "2026-10-27T06:58:41.082181-07:00",
+  "seconds": 4.641,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py::test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof",
+    "v6lite/tests/test_batch31_overnight.py::test_B31_old_confirmed_price_waits_without_freeze_or_P0",
+    "v6lite/tests/test_batch31_overnight.py::test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d",
+    "v6lite/tests/test_batch31_close_card.py"
+  ],
+  "code_sha": "e3d45574c20de193",
+  "source_unchanged": true,
+  "inventory_sha256": "a7b218d9bd3b43f162d869863db1e8ba086958640d3e6a9352a9451fcd8cf7f8",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "516483454dd7a1cef745e5a4f1447f4d804639b7e1dfbc183540cf0b86497ae8",
+  "XML_sha256_before_masking": "bdd80b07c979a4e01bcf5465e065381e2057477d76222d9793d66486b60a03ef",
+  "delivered_log_sha256": "64a6f49f604f9dcbb5dcc31056ccf1766fc611fc7ee09384b4d4add50851fb1a",
+  "delivered_XML_sha256": "cc74358c1a5d5b014e48c410195e45e79c80bb4a3b42a51d945fe209d734228a",
+  "tests": 8,
+  "failures": 6,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof",
+      "kind": "failure",
+      "message": "AssertionError: assert ['PRICE_PENDING'] == ['WORKING']\n  \n  At index 0 diff: 'PRICE_PENDING' != 'WORKING'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_old_confirmed_price_waits_without_freeze_or_P0[40]",
+      "kind": "failure",
+      "message": "assert False == (40 == 40)\n +  where False = bool([])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d[\\u4fdd\\u672c\\u4fee\\u6539\\u5f85\\u786e\\u8ba4]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 27, 13, 35, 28, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 2801, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d.<locals>.<lambda> at 0x000002367EECA5C0>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_close_card",
+      "name": "test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]",
+      "kind": "failure",
+      "message": "AssertionError: assert ['#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684...\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'] == []\n  \n  Left contains one more item: '#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684\u4e0e\u6301\u4ed3\uff1aAAPL\uff1bpositionId=pos-ea0feb35fdf94bb397a9\uff1b\u5269\u4f59\u6301\u4ed3 0 \u80a1\\n\u76c8\u4e8f\uff1aAAPL \u6bdb\u76c8\u4e8f 3.84 USD\uff1b\u4f63\u91d1\u5df2\u56de\u62a5 3.01 + \u4f30\u7b97 1.00 USD\uff1b\u5df2\u56de\u62a5\u51c0\u503c 0.83 USD\uff1b\u4f30\u7b97\u51c0\u503c -0.17 USD\uff081 \u7b14\u4f63\u91d1\u672a\u56de\u62a5\uff09\\n\u8bf4\u660e\uff1a\u7f3a\u4f63\u91d1\u6309\u8fd1\u671f\u540c\u6807\u7684\u540c\u65b9\u5411\u540c\u6570\u91cf\u5b9e\u9645\u4f63\u91d1\u4f30\u7b97\uff0c\u914d\u7f6e\u6700\u4f4e\u503c\u515c\u5e95\uff1b\u5b9e\u9645\u56de\u62a5\u540e\u590d\u7b97\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_close_card",
+      "name": "test_B31_close_waits_for_final_fee_or_three_second_estimate[None]",
+      "kind": "failure",
+      "message": "AssertionError: assert ['#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684...\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'] == []\n  \n  Left contains one more item: '#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684\u4e0e\u6301\u4ed3\uff1aAAPL\uff1bpositionId=pos-fb1ac6eb17c84fb98a1f\uff1b\u5269\u4f59\u6301\u4ed3 0 \u80a1\\n\u76c8\u4e8f\uff1aAAPL \u6bdb\u76c8\u4e8f 3.84 USD\uff1b\u4f63\u91d1\u5df2\u56de\u62a5 3.01 + \u4f30\u7b97 1.00 USD\uff1b\u5df2\u56de\u62a5\u51c0\u503c 0.83 USD\uff1b\u4f30\u7b97\u51c0\u503c -0.17 USD\uff081 \u7b14\u4f63\u91d1\u672a\u56de\u62a5\uff09\\n\u8bf4\u660e\uff1a\u7f3a\u4f63\u91d1\u6309\u8fd1\u671f\u540c\u6807\u7684\u540c\u65b9\u5411\u540c\u6570\u91cf\u5b9e\u9645\u4f63\u91d1\u4f30\u7b97\uff0c\u914d\u7f6e\u6700\u4f4e\u503c\u515c\u5e95\uff1b\u5b9e\u9645\u56de\u62a5\u540e\u590d\u7b97\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_close_card",
+      "name": "test_B31_unrelated_commission_does_not_release_wait",
+      "kind": "failure",
+      "message": "AssertionError: assert not ['#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684\u4e0e\u6301\u4ed3\uff1aAAPL\uff1bpositionId=pos-075a51cfdfb24b919f24\uff1b\u5269\u4f59\u6301\u4ed3 0 \u80a1\\n\u76c8\u4e8f\uff1aAAPL \u6bdb\u76c8\u4e8f 3.84 USD\uff1b\u4f63\u91d1\u5df2\u56de\u62a5 3.01 + \u4f30\u7b97 1.00 USD\uff1b\u5df2\u56de\u62a5\u51c0\u503c 0.83 USD\uff1b\u4f30\u7b97\u51c0\u503c -0.17 USD\uff081 \u7b14\u4f63\u91d1\u672a\u56de\u62a5\uff09\\n\u8bf4\u660e\uff1a\u7f3a\u4f63\u91d1\u6309\u8fd1\u671f\u540c\u6807\u7684\u540c\u65b9\u5411\u540c\u6570\u91cf\u5b9e\u9645\u4f63\u91d1\u4f30\u7b97\uff0c\u914d\u7f6e\u6700\u4f4e\u503c\u515c\u5e95\uff1b\u5b9e\u9645\u56de\u62a5\u540e\u590d\u7b97\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002']\n +  where ['#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684\u4e0e\u6301\u4ed3\uff1aAAPL\uff1bpositionId=pos-075a51cfdfb24b919f24\uff1b\u5269\u4f59\u6301\u4ed3 0 \u80a1\\n\u76c8\u4e8f\uff1aAAPL \u6bdb\u76c8\u4e8f 3.84 USD\uff1b\u4f63\u91d1\u5df2\u56de\u62a5 3.01 + \u4f30\u7b97 1.00 USD\uff1b\u5df2\u56de\u62a5\u51c0\u503c 0.83 USD\uff1b\u4f30\u7b97\u51c0\u503c -0.17 USD\uff081 \u7b14\u4f63\u91d1\u672a\u56de\u62a5\uff09\\n\u8bf4\u660e\uff1a\u7f3a\u4f63\u91d1\u6309\u8fd1\u671f\u540c\u6807\u7684\u540c\u65b9\u5411\u540c\u6570\u91cf\u5b9e\u9645\u4f63\u91d1\u4f30\u7b97\uff0c\u914d\u7f6e\u6700\u4f4e\u503c\u515c\u5e95\uff1b\u5b9e\u9645\u56de\u62a5\u540e\u590d\u7b97\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'] = cards(<v6lite.tests.helpers.Rig object at 0x000002367EAB65D0>)"
+    }
+  ]
+}

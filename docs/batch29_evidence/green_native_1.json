@@ -1,0 +1,38 @@
+{
+  "label": "green_native_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T21:51:28.106010-07:00",
+  "end_pt": "2026-10-23T21:51:45.602037-07:00",
+  "seconds": 17.5,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch29_native_timeout.py"
+  ],
+  "code_sha": "deb0a750e440fe7e",
+  "source_unchanged": true,
+  "inventory_sha256": "9b552af5d521cbce0513214fdce5b738b952d5b7d388d46a5a7ea179417c869b",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "d18cf3077ee7a8a0a0819c06369c9e5849f4e3f440806c7d2a57823b4fe0e1ba",
+  "XML_sha256_before_masking": "d685ed9df478000293748c5474d6e08a3a66d1b7ffaaf92318341a21e9e4fb2c",
+  "delivered_log_sha256": "b66e21f88fe55c4d17a2126bf5f7dee4f7eb56921330d7bc4b2ca17f4a1e7fb3",
+  "delivered_XML_sha256": "063360bc4f4a3df166ff0c1090fa080987f7ee4ee93fbe86584d7458fcc6fa09",
+  "tests": 2,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch29_native_timeout",
+      "name": "test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1",
+      "kind": "failure",
+      "message": "AssertionError: assert 1 == 2\n +  where 1 = _Order(req=ProtectionRequest(intent_id='v6l-protect-edbe513fe0aa43b19453', position_id='pos-f954fdc4d5d049d38034', sym...ount='DU******001', allow_lookup=True, order_type='STP'), broker_order_id=706, status='PreSubmitted', filled=0, fills=[]).remaining"
+    },
+    {
+      "classname": "v6lite.tests.test_batch29_native_timeout",
+      "name": "test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once",
+      "kind": "failure",
+      "message": "AssertionError: assert 1 == 2\n +  where 1 = _Order(req=ProtectionRequest(intent_id='v6l-protect-80ffe381952c48a08253', position_id='pos-27ebcac3e2ba45d9a677', sym...ount='DU******001', allow_lookup=True, order_type='STP'), broker_order_id=706, status='PreSubmitted', filled=0, fills=[]).remaining"
+    }
+  ]
+}

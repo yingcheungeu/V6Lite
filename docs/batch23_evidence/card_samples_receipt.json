@@ -1,0 +1,41 @@
+{
+  "code_sha": "a17d647ba28c51e4",
+  "source_unchanged": true,
+  "render_sha256": "e1e01821af2faa055496c3bab2d60aaac3d28aeebf7225aa68a4ddc8b30fc7cd",
+  "specs": [
+    {
+      "path": "v6lite/tests/test_batch23_broker_diagnostics.py",
+      "sha256": "f5bcb0a7ab3d199123dbbbfcdc2d562c137d0626f85f5196375a1e047ff9d37e"
+    },
+    {
+      "path": "v6lite/tests/test_batch23_contracts.py",
+      "sha256": "1ba0957cbcb974c23c178d24ce8a94df47a8a62e1570c6efb8f2147a3544172c"
+    },
+    {
+      "path": "v6lite/tests/test_batch23_error_provenance.py",
+      "sha256": "fcf063c69658242b034f401e0a0a65382c53e542edbda716679962086f54345b"
+    },
+    {
+      "path": "v6lite/tests/test_batch23_recovery_diagnostic.py",
+      "sha256": "ad3ea825f387334a0add08f8d6085f6fd9d36eb64f2e48ebafd51f4e2c30b5be"
+    },
+    {
+      "path": "v6lite/tests/test_batch23_terminal_fact.py",
+      "sha256": "9629999e9099ec51860f412340411bb3aba2848c218c3dbea0240c7a73bd8b0a"
+    },
+    {
+      "path": "v6lite/tests/test_batch23_tp_evidence.py",
+      "sha256": "3b4977815ab586db706f5ed708d79e7c5e0f2304ee3059f7f2f55b22b992d9c3"
+    },
+    {
+      "path": "v6lite/tests/test_batch23_unprotected.py",
+      "sha256": "35040f97659ed5adb5ffc30875b67ee63b847c9f7065a07e33f0c37292bbddb6"
+    }
+  ],
+  "card_json_sha256": "fecc8f93466768eccb288dc79781b7e9f6b933a56c60a366a681eeb3596e7364",
+  "card_markdown_sha256": "577da35d3526d8df14d7fa52b0405dd20281e638cbfb58af67ed1bd0728fd8e5",
+  "scenarios": 5,
+  "actual_acknowledged_cards": 8,
+  "ack_kind": "local synchronous channel double; no actual Discord/network",
+  "broker_connections": 0
+}

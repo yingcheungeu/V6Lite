@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="15" time="2.316" timestamp="2026-10-14T12:31:25.763613-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]" time="0.300"><failure message="AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority&#10;assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}&#10;  &#10;  Omitting 19 identical items, use -vv to show&#10;  Differing items:&#10;  {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}&#10;  Use -v to get more diff">v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]" time="0.094"><failure message="AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority&#10;assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}&#10;  &#10;  Omitting 19 identical items, use -vv to show&#10;  Differing items:&#10;  {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}&#10;  Use -v to get more diff">v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]" time="0.093"><failure message="AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority&#10;assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}&#10;  &#10;  Omitting 19 identical items, use -vv to show&#10;  Differing items:&#10;  {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}&#10;  Use -v to get more diff">v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]" time="0.093"><failure message="AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority&#10;assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}&#10;  &#10;  Omitting 19 identical items, use -vv to show&#10;  Differing items:&#10;  {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}&#10;  Use -v to get more diff">v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]" time="0.093"><failure message="AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority&#10;assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}&#10;  &#10;  Omitting 19 identical items, use -vv to show&#10;  Differing items:&#10;  {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}&#10;  Use -v to get more diff">v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]" time="0.090"><failure message="AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority&#10;assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}&#10;  &#10;  Omitting 19 identical items, use -vv to show&#10;  Differing items:&#10;  {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}&#10;  Use -v to get more diff">v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit" time="0.066"><failure message="AssertionError: incidental metadata is not a new cause&#10;assert (3 == 2)&#10; +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 30, tzinfo=datetime.timezone.utc)])">v6lite\tests\test_batch25_review_regressions.py:113: in test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit
+    assert len(attempts) == 2 and len(_p0_stop(rig)) == 1, 'incidental metadata is not a new cause'
+E   AssertionError: incidental metadata is not a new cause
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 30, tzinfo=datetime.timezone.utc)])</failure></testcase><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_normalization_preserves_truly_different_query_failure_causes" time="0.072" /><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget" time="0.066"><failure message="AssertionError: retry recovery on the existing healthy socket&#10;assert (1 == 1 and 1 == 2)&#10; +  where 1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])&#10; +  and   1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])">v6lite\tests\test_batch25_review_regressions.py:170: in test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget
+    assert len(physical) == 1 and len(execution_queries) == 2, 'retry recovery on the existing healthy socket'
+E   AssertionError: retry recovery on the existing healthy socket
+E   assert (1 == 1 and 1 == 2)
+E    +  where 1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])
+E    +  and   1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])</failure></testcase><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry" time="0.071" /><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]" time="0.095" /><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]" time="0.088" /><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]" time="0.099" /><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]" time="0.090" /><testcase classname="v6lite.tests.test_batch25_review_regressions" name="test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]" time="0.096" /></testsuite></testsuites>

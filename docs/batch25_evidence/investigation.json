@@ -1,0 +1,92 @@
+{
+  "recorded_by": "/root",
+  "independent_investigator": "/root/batch25_investigate",
+  "recorded_at_pt": "2026-10-14T06:36:53.505330-07:00",
+  "input_hashes_verified": true,
+  "evidence_log_lines": 36,
+  "direct_log_facts": [
+    {
+      "lines": "1",
+      "fact": "B24 code_sha2db/client132"
+    },
+    {
+      "lines": "5-6",
+      "fact": "order501 perm45208044 SELL STP lmt0.0 aux340.52 GTC; PreSubmitted remaining3 whyHeldtrigger"
+    },
+    {
+      "lines": "7-8",
+      "fact": "unsolicited openOrders End before API ready"
+    },
+    {
+      "lines": "23-24",
+      "fact": "Synchronization complete, then channel poisoned renewal"
+    },
+    {
+      "lines": "28,30,33,36",
+      "fact": "rate-limit P1, disconnected, recoveryfailed, entries_allowed false"
+    }
+  ],
+  "instruction_only_facts": [
+    "10/13正常SHUTDOWN unresolved=[]",
+    "7次循环约每30秒",
+    "60.8秒证据P0"
+  ],
+  "unknowns": [
+    "Actual TWS Download open orders checkbox was not read",
+    "Unnumbered End has no request ID; exact host-origin attribution across all versions is not provable; Paper replay must verify",
+    "The supplied36line slice cannot independently count all seven loops or the60.8second alert"
+  ],
+  "official_sources": [
+    {
+      "title": "TWS API settings",
+      "url": "https://www.ibkrguides.com/traderworkstation/api.htm",
+      "supports": "Download open orders on connection setting"
+    },
+    {
+      "title": "IBKR EClientSocket eConnect",
+      "url": "https://interactivebrokers.github.io/tws-api/classIBApi_1_1EClientSocket.html",
+      "supports": "Host may supply open orders on connection; official legacy page marked deprecated"
+    },
+    {
+      "title": "IBKR Open orders",
+      "url": "https://interactivebrokers.github.io/tws-api/open_orders.html",
+      "supports": "Same-client reqOpenOrders, cross-client reqAllOpenOrders, End"
+    },
+    {
+      "title": "ib_insync upstream ib.py",
+      "url": "https://ib-insync.readthedocs.io/_modules/ib_insync/ib.html",
+      "supports": "connectAsync uses reqPositions, non-readonly reqOpenOrders, execution synchronization; no default reqAllOpenOrders"
+    }
+  ],
+  "local_sdk_source_lines": {
+    "version.py": "3 (0.9.86)",
+    "ib.py": "1748,1760,1762,1763-64,1782,1789-90;1898-1905",
+    "wrapper.py": "392-393",
+    "client.py": "344-357"
+  },
+  "baseline_root_causes": {
+    "v6lite/broker/ibkr.py": "465-466 hook/reset before connection;355-366 unphased ended>sent poison;418-421 renew on next owned query",
+    "v6lite/engine.py": "1012-17 fixed reconnect cadence without rolling cause budget",
+    "v6lite/protection_engine.py": "569,579,588 active three queries;594 generation match;656-669 strict identity;692-704 UNKNOWN/hold may rate_notice before real failure;732-755 failure notifies",
+    "v6lite/broker/fake.py": "87-90 connect only changes boolean; no bootstrap sequence"
+  },
+  "decisions": {
+    "reconnect_timing": "Keep original first disconnected-tick attempt immediate. After failures wait30/60/120s; reason changes do not reset consecutive backoff. Samecause actual attempts at0/30; third candidate at90 is stopped before connect. Existing strong test_engine assertion is preserved.",
+    "rolling_budget": "300seconds, at most2 actual automatic attempts per stable cause; successful recovery does not clear history; latched stop never self-clears at300s",
+    "bootstrap": "Current generation and true synchronization phase only, no adapter-owned query registered; owed End remains counted, not erased at synccompletion; cached callbacks only hint/audit, never fresh strong three-source evidence",
+    "held": "PreSubmitted whyHeldtrigger is normal STP waiting; do not remove real ledger manualhold diagnostics",
+    "P1": "Require real verificationfailure+backoff and synchronized; suppress initial A<=gap_a_p1 without clearing timer/unknown/hold/deadline"
+  },
+  "tools": {
+    "serial_runner_sha256": "26014b757be44e054b3eedf1e35fda15ae6a1299b7fec88f943e5087a8dac861",
+    "acceptance_process_sha256": "f96c9e873541f6d61575f9f09b25491ede1335fd24785627d06d6b3cdbdbc08d",
+    "guard_direct_check": "PASS",
+    "isolated_child_home_and_temp": true,
+    "full_time_guard": "weekday06:00–13:30 forbidden; Windows JobObject timeout cutoff before next06:00 block"
+  },
+  "stage_empty": true,
+  "process_counts": {
+    "unknown": 0,
+    "runtime": 0
+  }
+}

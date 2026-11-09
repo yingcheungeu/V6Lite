@@ -1,0 +1,15 @@
+{
+  "red_artifact": "red_stp_echo_baseline23_run3",
+  "baseline_code_sha": "a17d647ba28c51e4",
+  "baseline_production_unchanged": true,
+  "totals": {
+    "tests": 38,
+    "failures": 14,
+    "errors": 0,
+    "skipped": 0
+  },
+  "stdout_sha256": "58e792acce8f26cf5737e68124acc9477666bc07ea6c438c3ae619de40798eb7",
+  "junit_sha256": "90aa880d9eead548c6c445f77965408d1506e9143c023a4440bb50b978e41b72",
+  "reviewer": "root",
+  "check": "PASS"
+}

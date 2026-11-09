@@ -1,0 +1,12 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+    "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+    "v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+    "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+    "v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled"
+  ]
+}

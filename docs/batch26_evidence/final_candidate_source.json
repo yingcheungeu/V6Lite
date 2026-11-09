@@ -1,0 +1,61 @@
+{
+  "code_sha": "579d13832e3f4237",
+  "package_sha256": "579d13832e3f4237cd150d4ff531d2eec227af94b22010e52f5e9518a21e756d",
+  "production_sha256": {
+    "v6lite/alerts.py": "682d46286bf45b041c41624544ebd97807530f5f5f1868c2b6359b5db58f6940",
+    "v6lite/approval.py": "70a3c24325b95216bb307dd261b60ccff88f0f13da3e2f94d6344e92f07b41e1",
+    "v6lite/clock.py": "0051d302e8e88871411677fbab6d6969a07b45fed279aa4b7e135cab332f57e1",
+    "v6lite/config.py": "bb413074ee7d5fecc8e8af2f211b14367a05774235da089b307841fdfb485ce7",
+    "v6lite/engine.py": "5c3d896700afb4a1e88ca0595e57b6ce66e7dc81d645c0215d6af3a52ba822f7",
+    "v6lite/execution_time.py": "6767aee2d823eccc2387106f803b38521bce94e71ec082fe6dd021918ee9f300",
+    "v6lite/exits.py": "1de7eb5637ee3c6abd1784570846d0edf8f91739ee97e2bb6e0b6651e34de093",
+    "v6lite/market_calendar.py": "1499dabc11bf828dc6f94b82f5bcba21de2c4e6977829c26bad25737b3b425c2",
+    "v6lite/models.py": "be454da959efd1aad8e2cc81ebdcb2d94ae2b0df79a22b8722ff93bb60fab473",
+    "v6lite/overnight_evidence.py": "f46c89d3203d7bbb37690fdb67fb2be9df2fbe070d082580d42431439902bb1a",
+    "v6lite/protection.py": "fa4be7ec8e88bb2ee2c5cc77be2a6249725ff1bcd80e2865d056bba345d3f40d",
+    "v6lite/protection_cancellations.py": "201be298237fb25a3af0f374d047964eeeb6f07024763c03af99ee4c6b43da8e",
+    "v6lite/protection_engine.py": "10c2eb145a2aff186a603e2d9c99612aeeb55a354d2d4bfc6ae48e52a8192cf4",
+    "v6lite/protection_incidents.py": "d2bfad41ee00515fa4e9e961e30ae9d965d6b849b4541183e87451fb134cfdc4",
+    "v6lite/reconcile.py": "4c1d4fd02dda0e1fe9a1c6087471dd6cb75df314dba6004a8d977de958fc26e1",
+    "v6lite/report.py": "96b07cede3ba71749d9ee366b98b726ddbbaa8dd842ff0de0b2653c9af132f48",
+    "v6lite/risk.py": "abc521f671e878a0ab5690e1fa178dc872d29b5396b86eaeb5f016be1594c687",
+    "v6lite/sizing.py": "c9b9cc4a116a7f61d9e660dd885d280ec2a9262671f2c3c8ab5c1515724e171e",
+    "v6lite/store.py": "56cc4454b612aa96a798aa0e95a3ead3646bf0a9b5fe921733b1de3989d4c411",
+    "v6lite/strategy.py": "9817647ff31f7d3e2f1f11f6657086b552fe4ca09346da3338421894ce1c979e",
+    "v6lite/tp_evidence.py": "17572b9e72e11d894429ef9d32e4caa34c35e29f21a46de471e13eb7cb57f479",
+    "v6lite/version.py": "9aa52b23a3c8c08801f9d86c46ae1090a28c78dbde5d5b4b2923347bc74ece45",
+    "v6lite/__init__.py": "26b92254539398e1389a76fc1ab6dc45b4ce00f2ce0226de3299c957211dad39",
+    "v6lite/__main__.py": "1284cf8153eda67e74c6acf250796304c6a2390e7a91dabc6fce3f6f40c93a00"
+  },
+  "test_specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_be_token_regression.py",
+      "sha256": "ef58bda287bf49d751c697628044c6d9ff66e9e00a180fc9ad11e1a87fe03530"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_card_evidence.py",
+      "sha256": "7e3afbb0d02a200e6467fa1610f194efc876c483111e7185dc90ae449a1ee440"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_constraint_policy.py",
+      "sha256": "d6123be09a81eb27287dd8fae4187121ccd129da8ce38113469f0d7b489c1a8b"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_external_sell_regression.py",
+      "sha256": "077aba16690943197f8d627f7903f5f0a084b281999557f493b9a479cc9aa9a0"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_overnight_evidence.py",
+      "sha256": "ed2ea61ef50e75b265e9a30c8d6793745d2bb1a5b4311548e34ff9995004339f"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_review_edges.py",
+      "sha256": "091cf7140d666327f513a4d76359059fcfb72b08ccecd37fbe5fc0c538fd04fe"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_shutdown_report.py",
+      "sha256": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93"
+    }
+  ],
+  "scripts_sha256": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+}

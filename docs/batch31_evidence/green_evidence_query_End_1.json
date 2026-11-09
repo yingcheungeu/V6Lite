@@ -1,0 +1,53 @@
+{
+  "label": "green_evidence_query_End_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T09:09:44.516683-07:00",
+  "end_pt": "2026-10-27T09:09:59.189973-07:00",
+  "seconds": 14.671,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_evidence_replay.py",
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch28c_price_confirmation.py",
+    "v6lite/tests/test_batch28c_price_edges.py"
+  ],
+  "code_sha": "dfec14ca23d90fa5",
+  "source_unchanged": true,
+  "inventory_sha256": "ddea5898eeefac005d01e84fa67190e90f3d6ff3d2b387cc22a765576216cd6c",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "588b82227f5cc172a69a4f7837791296d5b97695e6cf3fc93b7a79f8fa43ee55",
+  "XML_sha256_before_masking": "a3214c346bfab9fd8ae144a9d55e4449b9cca2a1157873a43081daf14525866b",
+  "delivered_log_sha256": "95c1671f69e1e93e7c5f4592e37780be2f27fbb6f497bc231aec9f83da6fefc2",
+  "delivered_XML_sha256": "a3214c346bfab9fd8ae144a9d55e4449b9cca2a1157873a43081daf14525866b",
+  "tests": 37,
+  "failures": 4,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_evidence_replay",
+      "name": "test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End",
+      "kind": "failure",
+      "message": "AssertionError: an owned complete openOrders snapshot must acknowledge the already-issued BE without TP permission\nassert ['PRICE_PENDING'] == ['WORKING']\n  \n  At index 0 diff: 'PRICE_PENDING' != 'WORKING'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_restart_pending_uses_owned_complete_round_then_TP2",
+      "kind": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B31_restart_pending_uses_owned_complete_round_then_TP2.<locals>.<genexpr> at 0x000002A1ED7EC1E0>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[same-day]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_exe...itions_fresh'} <= {'open_orders'}\n  \n  Extra items in the left set:\n  'positions_fresh'\n  'executions_today'\n  'account_executions_today_scoped'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[next-trading-day]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_exe...itions_fresh'} <= {'open_orders'}\n  \n  Extra items in the left set:\n  'positions_fresh'\n  'executions_today'\n  'account_executions_today_scoped'"
+    }
+  ]
+}

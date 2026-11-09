@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="1.024" timestamp="2026-10-27T09:07:37.863612-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="evidence_replay_spec" name="test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End" time="0.003"><error message="failed on setup with &quot;v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132&quot;">evidence_replay_spec.py:21: in evidence_run
+    rig,pid,harness=overnight_run(entry_day=(2026,10,26),tp_day=(2026,10,27),
+v6lite\tests\test_batch28b_overnight_refresh.py:56: in make
+    rig = Rig(tmp_path / ('b28b-' + str(len(made))),
+v6lite\tests\helpers.py:64: in __init__
+    self.cfg = make_cfg(tmp_path, **cfg_overrides)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:316: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132</error></testcase></testsuite></testsuites>

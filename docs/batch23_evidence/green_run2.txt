@@ -1,0 +1,27 @@
+.........................................FF............................. [ 98%]
+.                                                                        [100%]
+================================== FAILURES ===================================
+_ test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_query_failed] _
+v6lite\tests\test_batch23_contracts.py:819: in test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T
+    assert row['state']=='RESTORE_PENDING' and row['pending_qty']==5
+E   AssertionError: assert ('TP_NEEDS_RESTORE' == 'RESTORE_PENDING'
+E     
+E     - RESTORE_PENDING
+E     + TP_NEEDS_RESTORE)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: late exit fill AAPL | TP1 v6l-4e9404eea02e4dcbb087 filled 1 after it was settled. Retries pulled: none. Check TWS for a short position.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=5 股 保护单已确认=4 股 保护单可能=4 股 止盈在途=1 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–4） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-c40fa673b9414fffab97 orderId=1002 permId=51002 TP=v6l-4e9404eea02e4dcbb087 TP orderId=1003 TP剩余=1 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:01:02+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；three-source evidence failed: ProtectionEvidenceQueryError
+_ test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_reply_partial] _
+v6lite\tests\test_batch23_contracts.py:819: in test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T
+    assert row['state']=='RESTORE_PENDING' and row['pending_qty']==5
+E   AssertionError: assert ('TP_NEEDS_RESTORE' == 'RESTORE_PENDING'
+E     
+E     - RESTORE_PENDING
+E     + TP_NEEDS_RESTORE)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: late exit fill AAPL | TP1 v6l-860aa22e73314da28ff8 filled 1 after it was settled. Retries pulled: none. Check TWS for a short position.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=5 股 保护单已确认=4 股 保护单可能=4 股 止盈在途=1 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–4） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-0760654f83ba41598121 orderId=1002 permId=51002 TP=v6l-860aa22e73314da28ff8 TP orderId=1003 TP剩余=1 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:01:02+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；恢复保护需要完整三项证据且无其他工作卖单
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch23_contracts.py::test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_query_failed]
+FAILED v6lite/tests/test_batch23_contracts.py::test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_reply_partial]
+2 failed, 71 passed in 7.31s

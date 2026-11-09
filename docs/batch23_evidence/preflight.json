@@ -1,0 +1,12 @@
+{
+  "started_utc": "2026-10-09T21:02:28.541084+00:00",
+  "baseline_commit": "d9f57dca5ed73f001f9c68052f5fe27b8abc933e",
+  "baseline_tag": "v6lite-batch22a",
+  "baseline_code_sha": "f27e144de9eb406b",
+  "instruction_sha256": "04708b69d6b3c410b487fb440f97a98790ce47bc0ad8dd3b23d471dc0592860c",
+  "baseline_archive_sha256": "09549258dc487064f6ad9af052d74a0c35dda072aa9c02542e2f4c88543b0e5a",
+  "staged_empty": true,
+  "preserved_manual_sha256": "5d7eb6f043f4d933019f36b6cbfd28b28f8474c0b7097261f9bb77ae627133bf",
+  "broker_io": "none",
+  "scope": "dev only; baseline archive excluded from commit"
+}

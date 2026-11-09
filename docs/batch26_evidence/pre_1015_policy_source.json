@@ -1,0 +1,42 @@
+{
+  "phase": "pre-1015 enum/policy implementation",
+  "code_sha": "d9dabcd4a7ab96da",
+  "process_counts": {
+    "unknown": 0,
+    "runtime": 0
+  },
+  "production_sha256": {
+    "v6lite/alerts.py": "682d46286bf45b041c41624544ebd97807530f5f5f1868c2b6359b5db58f6940",
+    "v6lite/approval.py": "70a3c24325b95216bb307dd261b60ccff88f0f13da3e2f94d6344e92f07b41e1",
+    "v6lite/clock.py": "0051d302e8e88871411677fbab6d6969a07b45fed279aa4b7e135cab332f57e1",
+    "v6lite/config.py": "06dd18b7d12ad959a9ff433f15c482f113f4994a12bc80c658a1337c1f1dfaf5",
+    "v6lite/engine.py": "5c3d896700afb4a1e88ca0595e57b6ce66e7dc81d645c0215d6af3a52ba822f7",
+    "v6lite/execution_time.py": "6767aee2d823eccc2387106f803b38521bce94e71ec082fe6dd021918ee9f300",
+    "v6lite/exits.py": "1de7eb5637ee3c6abd1784570846d0edf8f91739ee97e2bb6e0b6651e34de093",
+    "v6lite/market_calendar.py": "1499dabc11bf828dc6f94b82f5bcba21de2c4e6977829c26bad25737b3b425c2",
+    "v6lite/models.py": "be454da959efd1aad8e2cc81ebdcb2d94ae2b0df79a22b8722ff93bb60fab473",
+    "v6lite/overnight_evidence.py": "effd9e8f56643e348674ca30ca2dc6af6aa9047f15dd27f61b4f46616e2c3a2f",
+    "v6lite/protection.py": "fa4be7ec8e88bb2ee2c5cc77be2a6249725ff1bcd80e2865d056bba345d3f40d",
+    "v6lite/protection_cancellations.py": "201be298237fb25a3af0f374d047964eeeb6f07024763c03af99ee4c6b43da8e",
+    "v6lite/protection_engine.py": "4c39fb716dc13e8573e1805a5b805db5d5a2e631b4550819c35519fda53d289f",
+    "v6lite/protection_incidents.py": "d2bfad41ee00515fa4e9e961e30ae9d965d6b849b4541183e87451fb134cfdc4",
+    "v6lite/reconcile.py": "4c1d4fd02dda0e1fe9a1c6087471dd6cb75df314dba6004a8d977de958fc26e1",
+    "v6lite/report.py": "96b07cede3ba71749d9ee366b98b726ddbbaa8dd842ff0de0b2653c9af132f48",
+    "v6lite/risk.py": "abc521f671e878a0ab5690e1fa178dc872d29b5396b86eaeb5f016be1594c687",
+    "v6lite/sizing.py": "c9b9cc4a116a7f61d9e660dd885d280ec2a9262671f2c3c8ab5c1515724e171e",
+    "v6lite/store.py": "56cc4454b612aa96a798aa0e95a3ead3646bf0a9b5fe921733b1de3989d4c411",
+    "v6lite/strategy.py": "9817647ff31f7d3e2f1f11f6657086b552fe4ca09346da3338421894ce1c979e",
+    "v6lite/tp_evidence.py": "17572b9e72e11d894429ef9d32e4caa34c35e29f21a46de471e13eb7cb57f479",
+    "v6lite/version.py": "9aa52b23a3c8c08801f9d86c46ae1090a28c78dbde5d5b4b2923347bc74ece45",
+    "v6lite/__init__.py": "26b92254539398e1389a76fc1ab6dc45b4ce00f2ce0226de3299c957211dad39",
+    "v6lite/__main__.py": "1284cf8153eda67e74c6acf250796304c6a2390e7a91dabc6fce3f6f40c93a00"
+  },
+  "spec_sha256": {
+    "v6lite/tests/test_batch26_be_token_regression.py": "ef58bda287bf49d751c697628044c6d9ff66e9e00a180fc9ad11e1a87fe03530",
+    "v6lite/tests/test_batch26_constraint_policy.py": "b7b6d740e9d3907a10a52bf902528a530ded9f044e880e2fda60223b5ae4da60",
+    "v6lite/tests/test_batch26_external_sell_regression.py": "077aba16690943197f8d627f7903f5f0a084b281999557f493b9a479cc9aa9a0",
+    "v6lite/tests/test_batch26_overnight_evidence.py": "d9ae28dc225beff43cef43cb3bb2cb766395027aaef1967fb51b49f42bdc05e8",
+    "v6lite/tests/test_batch26_review_edges.py": "091cf7140d666327f513a4d76359059fcfb72b08ccecd37fbe5fc0c538fd04fe",
+    "v6lite/tests/test_batch26_shutdown_report.py": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "label": "red_batch20",
+  "start_pt": "2026-10-09T07:37:01.327968-07:00",
+  "end_pt": "2026-10-09T07:37:14.851414-07:00",
+  "returncode": 1,
+  "source_code_sha": "cfe16edd7a7e4d7f",
+  "source_unchanged": true,
+  "spec_sha256": "ef2e99daa8908811762167e63745b62a99356179937c411e662bac550627278a",
+  "totals": {
+    "tests": 29,
+    "failures": 29,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Inactive]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Inactive]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Inactive]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Inactive]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[metadata_cleared]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[prices_reset]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[201]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[202]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[account]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[orderId]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[permId]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[conId]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[clientId]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[symbol]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[account]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[orderId]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[permId]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[conId]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[clientId]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[auxPrice]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_planned_final_share_cancel_202_normal_reason_keeps_real_L7_TP_flow",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[positions]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[executions]",
+      "outcome": "failure",
+      "message": "AssertionError: item9 fixtures must never open a network connection"
+    }
+  ],
+  "stdout_sha256": "8b81bfea2b086f5f239a3586fc6ba52d313074c5b86d0ef4258d9f52b6bae022",
+  "junit_sha256": "9e896471ac8a504203f37d4b08efa8e7fdd4794e43b83e8a7c3ac2e1163fd496"
+}

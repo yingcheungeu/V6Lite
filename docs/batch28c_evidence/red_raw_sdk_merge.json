@@ -1,0 +1,130 @@
+{
+  "label": "red_raw_sdk_merge",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:13:00.747404-07:00",
+  "end_pt": "2026-10-21T20:13:07.190798-07:00",
+  "seconds": 6.453,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28c_raw_open_order.py"
+  ],
+  "code_sha": "b78b17e5f449c51e",
+  "source_unchanged": true,
+  "inventory_sha256": "1612ca528f0b8081ec266edaaaab58b1e9bc3a931b03ae294a28239ee9114096",
+  "incomplete": false,
+  "tests": 20,
+  "failures": 18,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[Inactive-live]",
+      "kind": "failure",
+      "message": "AssertionError: SDK cached identity/status cannot authorize ACK\nassert 'WORKING' != 'WORKING'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[Inactive-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert ('WORKING' != 'WORKING')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[PendingCancel-live]",
+      "kind": "failure",
+      "message": "AssertionError: SDK cached identity/status cannot authorize ACK\nassert 'WORKING' != 'WORKING'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[PendingCancel-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert ('WORKING' != 'WORKING')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[account-live]",
+      "kind": "failure",
+      "message": "AssertionError: SDK cached identity/status cannot authorize ACK\nassert 'WORKING' != 'WORKING'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[account-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert ('WORKING' != 'WORKING')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[conId-live]",
+      "kind": "failure",
+      "message": "AssertionError: SDK cached identity/status cannot authorize ACK\nassert 'WORKING' != 'WORKING'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[conId-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert ('WORKING' != 'WORKING')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[side-live]",
+      "kind": "failure",
+      "message": "AssertionError: SDK cached identity/status cannot authorize ACK\nassert 'WORKING' != 'WORKING'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[side-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert ('WORKING' != 'WORKING')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[tif-live]",
+      "kind": "failure",
+      "message": "AssertionError: SDK cached identity/status cannot authorize ACK\nassert 'WORKING' != 'WORKING'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[tif-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert ('WORKING' != 'WORKING')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[outsideRth-live]",
+      "kind": "failure",
+      "message": "AssertionError: SDK cached identity/status cannot authorize ACK\nassert 'WORKING' != 'WORKING'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[outsideRth-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert ('WORKING' != 'WORKING')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-live]",
+      "kind": "failure",
+      "message": "AssertionError: SDK cached identity/status cannot authorize ACK\nassert 'WORKING' != 'WORKING'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert ('WORKING' != 'WORKING')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-live]",
+      "kind": "failure",
+      "message": "AssertionError: SDK cached identity/status cannot authorize ACK\nassert 'WORKING' != 'WORKING'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert ('WORKING' != 'WORKING')"
+    }
+  ]
+}

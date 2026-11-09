@@ -1,0 +1,32 @@
+{
+  "label": "red_phone_card_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T22:35:35.789533-07:00",
+  "end_pt": "2026-10-23T22:35:38.317188-07:00",
+  "seconds": 2.531,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch29_faults.py::test_B29_timeout_phone_card_names_test_and_identifies_actual_order"
+  ],
+  "code_sha": "9fc86a5799417664",
+  "source_unchanged": true,
+  "inventory_sha256": "ed18b5acf91f3fc8c7a61b01781bc3769988348fabd223fcdd1eeb85f084bd2c",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "ebebf933f65c61dd5ba754bde689a7995dc1b1b382672d271842be57b625caeb",
+  "XML_sha256_before_masking": "a5dc9eae449fc098cf7a4860c289f07ec8b8d53951ce2f3ca335cf862688b386",
+  "delivered_log_sha256": "6626379c923ab1b7a5f00a7027ca0b54eab1b83d669587255b6a19e169df7dde",
+  "delivered_XML_sha256": "a5dc9eae449fc098cf7a4860c289f07ec8b8d53951ce2f3ca335cf862688b386",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch29_faults",
+      "name": "test_B29_timeout_phone_card_names_test_and_identifies_actual_order",
+      "kind": "failure",
+      "message": "AssertionError: [('TEST \u00b7 #x1F7E2 V6-Lite \u8fd0\u884c\u901a\u77e5', 'TEST \u00b7 #x1F7E2 V6-Lite \u8fd0\u884c\u901a\u77e5\n  \u53d1\u751f\u4e86\u4ec0\u4e48\uff1a\u8fd0\u884c\u72b6\u6001\u6709\u65b0\u53d8\u5316\uff1b\u8be6\u60c5\u89c1\u672c\u673a\u65e5\u5fd7\u3002\n  \u4e0b\u4e00\u6b65\uff1a\u5728\u672c\u673a\u8fd0\u884c status\uff0c\u6309\u9700\u67e5\u770b\u5b8c\u6574\u65e5\u5fd7\u3002')]\nassert 0 == 1\n +  where 0 = len([])"
+    }
+  ]
+}

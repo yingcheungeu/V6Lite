@@ -1,0 +1,196 @@
+FE.FF..F.FFFFFFFFF...F                                                   [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_B28c_native_true_partial_TP1_mid_query_invalidates_old_round_even_when_GTC_binding_unchanged _
+v6lite\tests\test_batch28c_fill_race.py:66: in larger_overnight_run
+    monkeypatch.setattr(rig.broker, 'account_executions_today_scoped', lambda: query(harness.scoped_query))
+E   AttributeError: <v6lite.broker.fake.FakeBroker object at 0x00000251716FF190> has no attribute 'account_executions_today_scoped'
+================================== FAILURES ===================================
+_ test_B28c_native_TP1_full_intent_mid_query_reduces_overnight_position_3_to_2_without_false_P0 _
+v6lite\tests\test_batch28c_fill_race.py:278: in test_B28c_native_TP1_full_intent_mid_query_reduces_overnight_position_3_to_2_without_false_P0
+    _exercise_positive_race(rig, pid, harness, monkeypatch, true_partial=False)
+v6lite\tests\test_batch28c_fill_race.py:258: in _exercise_positive_race
+    _assert_no_false_race_alert(rig, pid)
+v6lite\tests\test_batch28c_fill_race.py:232: in _assert_no_false_race_alert
+    assert not [(level, text) for level, text in rig._b26_alerts if level == 'P0']
+E   AssertionError: assert not [('P0', 'protection evidence incomplete AAPL\nAAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2）...项证据查询失败：BrokerError\n影响：持仓、工作单和成交三项证据不完整，不能安全增加保护数量。\n你要做什么：1）在 TWS 分别核对持仓、所有工作单、成交；2）不要另下卖单或增加保护数量；3）证据齐全且一致后再解除冻结。')]
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-d769af4699634f1fbce6 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-773bca4084994ddfa31b orderId=706 permId=50706 TP=v6l-0a39ef9334c042c7a08b TP orderId=707 TP剩余=0 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:15:25+00:00 工作单证据时间=2026-10-21T15:15:25+00:00；持仓、工作单、执行三项证据查询失败：BrokerError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-d769af4699634f1fbce6 | AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=3.0 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=当日可见，未宣称全账户；核验时间=2026-10-21T15:15:27+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B28c_own_TP_fill_cannot_excuse_real_quantity_difference_or_another_SELL[other-SELL] _
+v6lite\tests\test_batch28c_fill_race.py:305: in test_B28c_own_TP_fill_cannot_excuse_real_quantity_difference_or_another_SELL
+    assert len(rig.broker.sent) == before[0]
+E   AssertionError: assert 3 == 2
+E    +  where 3 = len([OrderRequest(intent_id='v6l-2e7b9799a9bf4eda8f3e', symbol='AAPL', side=<Side.BUY: 'BUY'>, quantity=3, limit_price=343...mbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=344.04, purpose=<Purpose.TP2: 'TP2'>, position_id=None)])
+E    +    where [OrderRequest(intent_id='v6l-2e7b9799a9bf4eda8f3e', symbol='AAPL', side=<Side.BUY: 'BUY'>, quantity=3, limit_price=343...mbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=344.04, purpose=<Purpose.TP2: 'TP2'>, position_id=None)] = <v6lite.broker.fake.FakeBroker object at 0x000002517FBF7E50>.sent
+E    +      where <v6lite.broker.fake.FakeBroker object at 0x000002517FBF7E50> = <v6lite.tests.helpers.Rig object at 0x000002517F9E8CD0>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: non-V6-Lite order on managed AAPL | foreign-b28c-sell SELL remaining 1 is working; its shares are reserved and V6-Lite will not sell them
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-c992b6b1e1224ac6a065 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=1 股 未保护=待核实（可能范围 0–1） 股 可能超卖=待核实（可能上界1） 股；当前保护状态待核实；orderRef=v6l-protect-f4a7e37c906240afabe4 orderId=706 permId=50706 TP=v6l-bb8314ad6e1944f992a2 TP orderId=707 TP剩余=0 股；外部订单=foreign-b28c-sell orderId=708 1 股；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:15:25+00:00 工作单证据时间=2026-10-21T15:15:25+00:00；持仓、工作单、执行三项证据查询失败：BrokerError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-c992b6b1e1224ac6a065 | AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=3.0 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=当日可见，未宣称全账户；核验时间=2026-10-21T15:15:27+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+__ test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second __
+v6lite\tests\test_batch28c_native_latency.py:315: in test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+    assert elapsed <= 1., ('ACK -> actual conn.sendMsg DAY LMT', elapsed, server.requests, server.ends)
+E   AssertionError: ('ACK -> actual conn.sendMsg DAY LMT', 4.157000000006519, [(152130.546, '16', ('16', '1', '')), (152130.593, '61', ('6...xecutions', 707), (152131.75, 'account', 708), (152131.859, 'openOrders', None), (152131.921, 'positions', None), ...])
+E   assert 4.157000000006519 <= 1.0
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_changed_authority_or_book_after_preproof_never_dispatches_DAY_TP[other-SELL] _
+v6lite\tests\test_batch28c_native_latency.py:341: in test_B28c_changed_authority_or_book_after_preproof_never_dispatches_DAY_TP
+    assert server.tp_wire is None and _tp_requests(rig) == [], (invalidation, server.wire)
+E   AssertionError: ('other-SELL', [(152152.625, '16\x001\x00'), (152152.671, '61\x001\x00'), (152152.734, '7\x003\x00707\x00131\x00DU0000...x00DU0000001\x0020261021-04:00:00\x00\x00\x00\x00\x00'), (152153.89, '16\x001\x00'), (152153.937, '61\x001\x00'), ...])
+E   assert (None is None and [OrderRequest...tion_id=None)] == []
+E    +  where None = <v6lite.tests.test_batch28c_native_latency.NativeLatencyServer object at 0x000002517FBA2490>.tp_wire
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-b28c-other-seller', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=344.0, purpose=<Purpose.TP1: 'TP1'>, position_id=None)
+E     Use -v to get more diff)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-c6ab9846101e4d33a65b | AAPL：本次止盈期间存在其他工作中卖单；券商 P=3 股，账本=3 股，当前工作 STP S=2 股；本地上次确认 STP S=3 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-21T15:03:14.531000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection external sell AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=1 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界1） 股；当前保护状态待核实；orderRef=v6l-protect-2f54e7d8637645ebbabd orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:14.531000+00:00 工作单证据时间=2026-10-21T15:03:12.531000+00:00；可能卖出总量=4 股，实际持仓=3 股；只减保护数量，禁止新增卖单
+_ test_B28c_native_openOrder_only_BE_confirms_then_TP2_TP3_complete_without_oversell _
+v6lite\tests\test_batch28c_price_confirmation.py:296: in test_B28c_native_openOrder_only_BE_confirms_then_TP2_TP3_complete_without_oversell
+    _confirmed(rig, pid, pending)
+v6lite\tests\test_batch28c_price_confirmation.py:244: in _confirmed
+    assert row['state'] == 'WORKING', 'a matching native openOrder/own fresh round must confirm BE without orderStatus'
+E   AssertionError: a matching native openOrder/own fresh round must confirm BE without orderStatus
+E   assert 'PRICE_PENDING' == 'WORKING'
+E     
+E     - WORKING
+E     + PRICE_PENDING
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[same-day] _
+v6lite\tests\test_batch28c_price_confirmation.py:323: in test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'WORKING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 25, 1000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming.<locals>.<lambda> at 0x000002517FCC8D60>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-21T15:03:20.001000+00:00
+_ test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[next-trading-day] _
+v6lite\tests\test_batch28c_price_confirmation.py:323: in test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'WORKING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 33, 2, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming.<locals>.<lambda> at 0x000002517332EFC0>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-21T15:03:20.001000+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-945cbf7d03e94cb09cfc | AAPL：GTC STP 工作状态/保护数量与持仓不一致，或存在其他工作中卖单；券商 P=2 股，账本=2 股，当前工作 STP S=2 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-22T13:31:02+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-945cbf7d03e94cb09cfc | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-live-openOrder] _
+v6lite\tests\test_batch28c_price_confirmation.py:362: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    _tick_until(rig, lambda: bool(_overnight_p1(rig)))
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 20, 1000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP.<locals>.<lambda> at 0x000002517FB96AC0>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-3cb6962e92314b1282f7 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:19.001000+00:00 工作单证据时间=2026-10-21T15:03:20.001000+00:00；工作中的保护合同价格与已确认或本代待确认价格不一致；不跟随券商价格改写账本
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-c916d26d41bb487cb565 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-owned-snapshot] _
+v6lite\tests\test_batch28c_price_confirmation.py:362: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    _tick_until(rig, lambda: bool(_overnight_p1(rig)))
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 20, 1000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP.<locals>.<lambda> at 0x000002517FB956C0>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-50e00155f10643f1ad09 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:19.001000+00:00 工作单证据时间=2026-10-21T15:03:20.001000+00:00；工作中的保护合同价格与已确认或本代待确认价格不一致；不跟随券商价格改写账本
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-737d304f895644b79ab1 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[quantity-live-openOrder] _
+v6lite\tests\test_batch28c_price_confirmation.py:368: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    assert rig.store.control('frozen:AAPL') is not None or _audits(rig, 'OVERNIGHT_TP_FROZEN')
+E   AssertionError: assert (None is not None or [])
+E    +  where None = control('frozen:AAPL')
+E    +    where control = <v6lite.store.Store object at 0x000002517FD77450>.control
+E    +      where <v6lite.store.Store object at 0x000002517FD77450> = <v6lite.tests.helpers.Rig object at 0x000002517FBD62D0>.store
+E    +  and   [] = _audits(<v6lite.tests.helpers.Rig object at 0x000002517FBD62D0>, 'OVERNIGHT_TP_FROZEN')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-386dbfec2c8e4e5d8804 | AAPL：GTC STP 保护工作单强身份核验失败；券商 P=2 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=1 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-21T15:03:22.001000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-7a5a17858fc343eb8146 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:19.001000+00:00 工作单证据时间=2026-10-21T15:03:21.001000+00:00；GTC STP 保护工作单强身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-386dbfec2c8e4e5d8804 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[quantity-owned-snapshot] _
+v6lite\tests\test_batch28c_price_confirmation.py:368: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    assert rig.store.control('frozen:AAPL') is not None or _audits(rig, 'OVERNIGHT_TP_FROZEN')
+E   AssertionError: assert (None is not None or [])
+E    +  where None = control('frozen:AAPL')
+E    +    where control = <v6lite.store.Store object at 0x00000251734F1090>.control
+E    +      where <v6lite.store.Store object at 0x00000251734F1090> = <v6lite.tests.helpers.Rig object at 0x000002517FBCAD90>.store
+E    +  and   [] = _audits(<v6lite.tests.helpers.Rig object at 0x000002517FBCAD90>, 'OVERNIGHT_TP_FROZEN')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-0caf55b088364ceabfc3 | AAPL：GTC STP 保护工作单强身份核验失败；券商 P=2 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=1 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-21T15:03:22.001000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-c77bac18157c4ec5b843 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:19.001000+00:00 工作单证据时间=2026-10-21T15:03:21.001000+00:00；GTC STP 保护工作单强身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-0caf55b088364ceabfc3 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[permId-live-openOrder] _
+v6lite\tests\test_batch28c_price_confirmation.py:368: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    assert rig.store.control('frozen:AAPL') is not None or _audits(rig, 'OVERNIGHT_TP_FROZEN')
+E   AssertionError: assert (None is not None or [])
+E    +  where None = control('frozen:AAPL')
+E    +    where control = <v6lite.store.Store object at 0x000002517FC8CD10>.control
+E    +      where <v6lite.store.Store object at 0x000002517FC8CD10> = <v6lite.tests.helpers.Rig object at 0x00000251734F1210>.store
+E    +  and   [] = _audits(<v6lite.tests.helpers.Rig object at 0x00000251734F1210>, 'OVERNIGHT_TP_FROZEN')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-f63cdf16e54b470bb365 | AAPL：GTC STP 保护工作单强身份核验失败；券商 P=2 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=1 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-21T15:03:22.001000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-85480598fa394e3ba11b orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:19.001000+00:00 工作单证据时间=2026-10-21T15:03:21.001000+00:00；GTC STP 保护工作单强身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-f63cdf16e54b470bb365 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[permId-owned-snapshot] _
+v6lite\tests\test_batch28c_price_confirmation.py:368: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    assert rig.store.control('frozen:AAPL') is not None or _audits(rig, 'OVERNIGHT_TP_FROZEN')
+E   AssertionError: assert (None is not None or [])
+E    +  where None = control('frozen:AAPL')
+E    +    where control = <v6lite.store.Store object at 0x000002516EFEBE50>.control
+E    +      where <v6lite.store.Store object at 0x000002516EFEBE50> = <v6lite.tests.helpers.Rig object at 0x000002517FBC8690>.store
+E    +  and   [] = _audits(<v6lite.tests.helpers.Rig object at 0x000002517FBC8690>, 'OVERNIGHT_TP_FROZEN')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-6d6585963db44db6962d | AAPL：GTC STP 保护工作单强身份核验失败；券商 P=2 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=1 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-21T15:03:22.001000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-0069cff5120c43c4b937 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:19.001000+00:00 工作单证据时间=2026-10-21T15:03:21.001000+00:00；GTC STP 保护工作单强身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-6d6585963db44db6962d | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+____ test_B28c_unconfirmed_BE_records_one_daily_wait_and_never_starts_TP2 _____
+v6lite\tests\test_batch28c_price_confirmation.py:447: in test_B28c_unconfirmed_BE_records_one_daily_wait_and_never_starts_TP2
+    assert len(waiting) == 2, 'one durable waiting explanation per position/trading day'
+E   AssertionError: one durable waiting explanation per position/trading day
+E   assert 0 == 2
+E    +  where 0 = len([])
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch28c_native_latency.py::test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+  v6lite\tests\test_batch28c_native_latency.py:306: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28c_fill_race.py::test_B28c_native_TP1_full_intent_mid_query_reduces_overnight_position_3_to_2_without_false_P0
+FAILED v6lite/tests/test_batch28c_fill_race.py::test_B28c_own_TP_fill_cannot_excuse_real_quantity_difference_or_another_SELL[other-SELL]
+FAILED v6lite/tests/test_batch28c_native_latency.py::test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+FAILED v6lite/tests/test_batch28c_native_latency.py::test_B28c_changed_authority_or_book_after_preproof_never_dispatches_DAY_TP[other-SELL]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_native_openOrder_only_BE_confirms_then_TP2_TP3_complete_without_oversell
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[same-day]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[next-trading-day]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-live-openOrder]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-owned-snapshot]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[quantity-live-openOrder]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[quantity-owned-snapshot]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[permId-live-openOrder]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[permId-owned-snapshot]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_unconfirmed_BE_records_one_daily_wait_and_never_starts_TP2
+ERROR v6lite/tests/test_batch28c_fill_race.py::test_B28c_native_true_partial_TP1_mid_query_invalidates_old_round_even_when_GTC_binding_unchanged
+14 failed, 7 passed, 1 warning, 1 error in 45.20s

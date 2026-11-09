@@ -1,0 +1,23 @@
+{
+  "recorded_by": "/root",
+  "independent_reviewer": "/root/batch25_investigate",
+  "recorded_at_pt": "2026-10-14T07:11:29.657820-07:00",
+  "result": "PASS",
+  "read_only_review": true,
+  "tools_sha256": {
+    "run_batch25_checks.py": "26014b757be44e054b3eedf1e35fda15ae6a1299b7fec88f943e5087a8dac861",
+    "acceptance_process.py": "f96c9e873541f6d61575f9f09b25491ede1335fd24785627d06d6b3cdbdbc08d"
+  },
+  "checked": [
+    "dev HEAD/tag/empty stage/three preservedhash/immutable B24/process counts",
+    "weekday06:00–13:30 full forbidden and next06:00 deadline",
+    "Windows JobObject new-child assignment before stdinG; subtree termination on timeout",
+    "known transaction/credential environment stripped, user profile/temp isolated",
+    "actual BASE imports and new-test namespace append",
+    "raw JUnit/nodeid inventory and source/spec hashes unchanged",
+    "full source/inventory/per-case equality over three serial runs"
+  ],
+  "scope_note": "Environment stripping uses known sensitive naming rules; not a mathematical guarantee for arbitrary unknown variable names",
+  "root_guard_executed_result": "PASS",
+  "reviewer_tests_executed": false
+}

@@ -1,0 +1,88 @@
+{
+  "label": "green_core_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-22T08:10:51.709046-07:00",
+  "end_pt": "2026-10-22T08:11:50.784711-07:00",
+  "seconds": 59.078,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28d_closed_tp_race.py",
+    "v6lite/tests/test_batch28d_tp_cards.py",
+    "v6lite/tests/test_batch28d_native_final_tp.py::test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second"
+  ],
+  "code_sha": "78b424c7642f29cf",
+  "source_unchanged": true,
+  "inventory_sha256": "84cb63e45466016773d2899ea0dc4f1dacec276d6b88238b9aac051483b39435",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "93bc954f655b324d5d16532fa67d4e9fbf00cbce874116772c655634c9211acb",
+  "XML_sha256_before_masking": "7d46ff5a8abb846c83e4b852fa3a20063553720b65a834da624d478fdbd0332a",
+  "delivered_log_sha256": "83913952f8851de291e8330fb74a9fb7a9ffc82fce1eab286aac5667ed4461c4",
+  "delivered_XML_sha256": "57e96e7b1f13fa515cc68ceeef7688203bcab34a8b5e548fdafec38daeea7310",
+  "tests": 10,
+  "failures": 10,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP3_native_fill_invalidates_old_P1_without_P0_and_enters_terminal[complete-native-round]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _final_tp_inflight.<locals>.<lambda> at 0x000001EF7E735EE0>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP3_native_fill_invalidates_old_P1_without_P0_and_enters_terminal[failed-query-after-close]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _final_tp_inflight.<locals>.<lambda> at 0x000001EF7E54B060>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP3_normal_callback_also_finishes_cancelled_protection",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _final_tp_inflight.<locals>.<lambda> at 0x000001EF7E5A89A0>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[unknown-native-SELL]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _final_tp_inflight.<locals>.<lambda> at 0x000001EF7E5AAF20>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[unknown-query-SELL]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _final_tp_inflight.<locals>.<lambda> at 0x000001EF7E703A60>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[other-SELL]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _final_tp_inflight.<locals>.<lambda> at 0x000001EF7E7EB9C0>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[ledger-nonzero]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _final_tp_inflight.<locals>.<lambda> at 0x000001EF7E5AB240>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[cancel-identity-unconfirmed]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _final_tp_inflight.<locals>.<lambda> at 0x000001EF6CB61080>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_tp_cards",
+      "name": "test_B28d_actual_TP1_TP2_TP3_cards_name_stage_and_booked_fill",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 39, 3000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _finish_tp2_and_tp3.<locals>.<lambda> at 0x000001EF7E54A160>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_native_final_tp",
+      "name": "test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second",
+      "kind": "failure",
+      "message": "AssertionError: ('native replay deadline', 1, {'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}...1', '')), (212493.546, '61', ('61', '1', '')), (212493.609, '7', ('7', '3', '729', '131', 'DU******001', '', ...)), ...])\nassert False\n +  where False = <function NativeFinalTPServer.final.<locals>.<lambda> at 0x000001EF6E2D0540>()"
+    }
+  ]
+}

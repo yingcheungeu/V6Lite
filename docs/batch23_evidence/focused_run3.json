@@ -1,0 +1,3451 @@
+{
+  "label": "focused_run3",
+  "select_expression": null,
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "start_pt": "2026-10-09T15:53:38.548699-07:00",
+  "end_pt": "2026-10-09T15:54:21.930062-07:00",
+  "returncode": 0,
+  "source_code_sha": "a17d647ba28c51e4",
+  "source_unchanged": true,
+  "worktree_code_sha": "a17d647ba28c51e4",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_broker_diagnostics.py",
+      "sha256": "f5bcb0a7ab3d199123dbbbfcdc2d562c137d0626f85f5196375a1e047ff9d37e"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_contracts.py",
+      "sha256": "1ba0957cbcb974c23c178d24ce8a94df47a8a62e1570c6efb8f2147a3544172c"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_error_provenance.py",
+      "sha256": "fcf063c69658242b034f401e0a0a65382c53e542edbda716679962086f54345b"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_recovery_diagnostic.py",
+      "sha256": "ad3ea825f387334a0add08f8d6085f6fd9d36eb64f2e48ebafd51f4e2c30b5be"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_terminal_fact.py",
+      "sha256": "9629999e9099ec51860f412340411bb3aba2848c218c3dbea0240c7a73bd8b0a"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_tp_evidence.py",
+      "sha256": "3b4977815ab586db706f5ed708d79e7c5e0f2304ee3059f7f2f55b22b992d9c3"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_unprotected.py",
+      "sha256": "35040f97659ed5adb5ffc30875b67ee63b847c9f7065a07e33f0c37292bbddb6"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_cancel_namespace.py",
+      "sha256": "b513c130a9045147fa3f77c3afb10d1140b17207995143866523fc9de83c532f"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_config_broker.py",
+      "sha256": "7f29f6e653f648c6d90d3cecfa954d372cf3e4eaff257ff7e8737902cd752ab8"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_item9_broker_cancel.py",
+      "sha256": "97ebdeffe53f1e324dfff7d0565711f33b25db3e0006e3c0c403a5d1ddfd07fc"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_pending_stop_audit.py",
+      "sha256": "f0bf9fe05cee399ca62892222ef09cd069bf8dc27a7179978e7434b7235e0696"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_protection_lifecycle.py",
+      "sha256": "53a91c443c8c190461d34f315ebb0e68f931e4d4ac8f179f20bc1a07cd0df12d"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_schema_audit.py",
+      "sha256": "374ae51b92eee5ea1e48ff4ca145422f1d106b0d33cf8f94b57d6261b24c7927"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_snapshot_cancel.py",
+      "sha256": "6531f1b9c3398e1cdbd0c7148e610b360846ff78a11dd3e6406e2cb92aa3286b"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_trigger_incidents.py",
+      "sha256": "a3c1ad8c925c53ce95577de7ee707093b98ff74468ed13cda66da7e30cc8db17"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_trigger_replacement.py",
+      "sha256": "80c284c3bd1b41ec47c841f344ca03726c8da9569433d0dfafec805bf861a90c"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch17_alerts.py",
+      "sha256": "dfc6a85711add46c7a6e8b966c3f75f38f2bbbc7bee1b3f827882d3d9ddba5ff"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch17_equivalence.py",
+      "sha256": "ecb49e23e9cbcd6ea2803aacb4b649d8b8794b1c79e65f266141c655efdfca8a"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch17_g8.py",
+      "sha256": "4e21318f45dc6293fc4fbdc0f1c5be7c9d845782bf405fff8c6a51504bae5875"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch17_heartbeat_account.py",
+      "sha256": "5ab7bafaddb4ab15e16c275b45061079c46c3d642b866a91ac55f85a75c3f6de"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch17_l3_recovery.py",
+      "sha256": "736891fd02d99b2337fffca283fbddf53de7d8fce8294d6a089175cbd317cd3c"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch16.py",
+      "sha256": "dcd5e3932511c625596dee9dad5708d19a4c6566d860e11006458e3384b766f1"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch16_f8_backoff.py",
+      "sha256": "af5c1b6c62872c84536b222255c9a3b4229e2d7bf4ce1c4b55b1d4a780aa3539"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch20_card_provenance.py",
+      "sha256": "7187685c885a24587a40ce7745d3abd0601255c97414554493482cc3592cf03e"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch20_protection_equivalents.py",
+      "sha256": "0cbd0e83af3982c6ae80e7b0871462c6649e0e25921cb4c2e5217d0502ff39a4"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_review_fixes.py",
+      "sha256": "eb91ef957bfd13864c2c92a5da2cf3a29ffdc10c9f5c74fe751daa8f4caecdd3"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 553,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[10]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_rejects_out_of_range_and_bool[0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_rejects_out_of_range_and_bool[11]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_rejects_out_of_range_and_bool[True]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[missing_bid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[infinite_bid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[infinite_ask]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[nan_bid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[future_ts]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[naive_ts]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_first_stale_rounds_persist_counter_but_log_once_per_minute_without_trade_mutation",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_dry_stale_TP_gate_has_no_counter_audit_pause_or_broker_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_existing_queued_timeout_control_cannot_override_fresh_bid_pricing",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_old_timeout_command_explicitly_refuses_to_manufacture_nonmarketable_TP",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_openOrder_only_working_price_change_is_hooked_once_and_reaches_real_P1",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[1.7976931348623157e+308]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_STP_positive_cap_is_independent_evidence_not_a_trigger_price_comparison",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_ENTRY_working_price_difference_real_P1_blocks_later_scan_without_ledger_reprice",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_other_broker_code_nonterminal_keeps_full_reason_but_grants_no_restore_or_pause",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_exact_episode_manual_request_clears_pause_only_after_full_coverage_without_same_tick_resend",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[open_orders]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[positions_fresh]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[executions_today]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_external_SELL_or_dry_cannot_clear_existing_pause",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_resume_TP_CLI_only_queues_exact_durable_request_and_has_zero_broker_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_price_rejection_ACK_deduplicates_after_31_minutes_and_successful_restart_without_global_mute",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_price_rejection_unACKed_reason_replay_retries_only_remaining_remote_parts",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[native_hold]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[operator_freeze]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[corrupt_pause]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_query_failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_reply_partial]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-cleared-metadata]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-zero-perm]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[funds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[history]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_array]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_null]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_string]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_bid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[nan_bid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[empty]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[capacity_proof]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[durable_intent]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_recovery_diagnostic",
+      "name": "test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_terminal_fact",
+      "name": "test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_delayed.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_test.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_g3n.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[live.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.0-True]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.01-False]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[0.0-130.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[-1.0-130.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[130.0-129.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[False]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[True]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_unprotected_direct_price_rejection_persists_full_P0_pause_without_enabling_STP",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_unprotected_async_native_price_refusal_persists_full_P0_pause_without_enabling_STP",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_corrupt_persisted_pricing_book_cannot_authorize_original_TP_price_or_extra_attempt",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\\u4ef7\\u683c\\u4e0d\\u5728\\u76d1\\u7ba1\\u53c2\\u8003\\u4ef7\\u7684\\u5141\\u8bb8\\u8303\\u56f4\\u5185]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\\u9650\\u4ef7\\u504f\\u79bb\\u5f53\\u524d\\u53c2\\u8003\\u4ef7\\u592a\\u591a]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Cancelled-202-\\u5df2\\u53d6\\u6d88]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Inactive-201-\\u5df2\\u62d2\\u7edd]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_cancel_namespace",
+      "name": "test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[finite-limit-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_cancel_namespace",
+      "name": "test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[finite-limit-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_cancel_namespace",
+      "name": "test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[empty-limit-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_cancel_namespace",
+      "name": "test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[empty-limit-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_cancel_namespace",
+      "name": "test_B22_ordinary_DAY_ref_with_same_wire_payload_and_ids_remains_cancellable[finite-limit-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_cancel_namespace",
+      "name": "test_B22_ordinary_DAY_ref_with_same_wire_payload_and_ids_remains_cancellable[finite-limit-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_cancel_namespace",
+      "name": "test_B22_ordinary_DAY_ref_with_same_wire_payload_and_ids_remains_cancellable[empty-limit-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_cancel_namespace",
+      "name": "test_B22_ordinary_DAY_ref_with_same_wire_payload_and_ids_remains_cancellable[empty-limit-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_protection_defaults_to_STP_without_legacy_offset",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_explicit_STP_and_omitted_default_have_same_fingerprint",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"STP LMT\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"LMT\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"MKT\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"stp\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[true]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_removed_offset_is_diagnosed_even_when_protection_disabled[0.03]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_removed_offset_is_diagnosed_even_when_protection_disabled[0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_removed_offset_is_diagnosed_even_when_protection_disabled[nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_removed_offset_is_diagnosed_even_when_protection_disabled[true]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_protection_order_type_is_bound_into_fingerprint",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_trigger_unfilled_timer_remains_configurable_and_fingerprinted",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[paper.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[paper_delayed.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[paper_test.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[paper_g3n.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[live.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_adapter_submits_sell_STP_GTC_RTH_with_no_limit_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_adapter_has_no_old_stop_limit_submission_entrypoint",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_adapter_refuses_any_non_None_protection_limit_without_writing[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_adapter_refuses_any_non_None_protection_limit_without_writing[325.69]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_adapter_refuses_any_non_None_protection_limit_without_writing[nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_adapter_refuses_old_request_type_without_writing",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_invalid_stop_price_remains_fail_closed[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_invalid_stop_price_remains_fail_closed[nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_invalid_stop_price_remains_fail_closed[inf]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[ENTRY-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[TP1-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[TP2-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[TP3-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[STOP-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[SHUTDOWN-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_quantity_modification_keeps_STP_and_exact_persisted_identity[2-3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_quantity_modification_keeps_STP_and_exact_persisted_identity[5-5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_stop_modification_changes_auxPrice_without_adding_a_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes4]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes6]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes7]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes8]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes9]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes10]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes11]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes12]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes13]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_native_status_preserves_full_STP_identity_without_a_limit[None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_native_status_preserves_full_STP_identity_without_a_limit[1.7976931348623157e+308]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_fresh_STP_open_order_snapshot_does_not_need_a_limit_price[None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_fresh_STP_open_order_snapshot_does_not_need_a_limit_price[1.7976931348623157e+308]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_STP_snapshot_without_account_is_incomplete_not_assumed_ours",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_generic_cancel_still_refuses_STP_without_exact_identity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_exact_STP_cancel_uses_existing_order_without_replacement",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_read_only_boundary_blocks_submit_modify_and_cancel_with_zero_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_full_native_STP_can_adopt_perm_without_limit_but_not_claim_fresh_confirmation[None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_full_native_STP_can_adopt_perm_without_limit_but_not_claim_fresh_confirmation[1.7976931348623157e+308]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes4]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes6]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes7]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes8]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes9]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes10]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes11]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes12]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes13]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes14]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes15]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes16]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes17]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes18]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_explicit_STP_refusal_freezes_entries_and_never_rehangs",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_dry_run_scans_and_exercises_protection_boundary_with_zero_broker_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_config_broker",
+      "name": "test_B22_protection_request_default_contract_has_STP_and_no_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[metadata_cleared]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[prices_reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[201]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[202]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[auxPrice]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_planned_final_share_cancel_202_normal_reason_keeps_real_L7_TP_flow",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[executions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_reason_above_nine_hundred_UTF16_units_is_exact_in_remote_embed_segments",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[first-card-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[primary-ACK-reason-part-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-202-Order canceled by system: synthetic rule]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Inactive-0-Broker has cancelled the protective order]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-10147-Synthetic broker terminal reason outside 201 and 202]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-cleared-fields]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-zero-permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_failed_reason_part_then_real_external_SELL_has_independent_remote_provenance",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_real_complete_working_recovery_retires_terminal_suppression_before_new_crossing",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_item9_broker_cancel",
+      "name": "test_B22_item9_capture_crash_after_stop_commit_already_persists_identity_hold_and_blocks_release",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_pending_stop_audit",
+      "name": "test_B22_maybe_sent_price_modify_unknown_fill_keeps_both_stop_candidates_without_rehang",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_pending_stop_audit",
+      "name": "test_B22_native_status_identity_unknown_keeps_pending_stop_candidates_for_real_same_id_fill",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_pending_stop_audit",
+      "name": "test_B22_unconfirmed_price_cancel_replacement_retired_fill_keeps_durable_candidates",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_first_partial_fill_submits_STP_in_urgent_callback_with_no_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_partial_entry_growth_updates_same_STP_quantity_and_aux_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_native_STP_without_limit_is_complete_identity_and_price_proof",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[client_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[broker_order_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[perm_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[intent_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[aux_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[tif]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[outside_rth]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[order_type]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_TP_waits_for_STP_decrease_confirmation_then_preserves_gross_capacity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_TP_timeout_keeps_cancel_pending_reserve_then_restores_same_STP",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_TP1_fill_changes_aux_to_breakeven_without_changing_STP_identity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_last_share_TP_waits_for_exact_STP_cancel_then_LMT_fill_closes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_last_share_TP_cancel_retires_old_STP_and_restores_new_STP",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[working]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[decrease_pending]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_working]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_partial]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_cancel_pending]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[protection_partial]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[submit_pending]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_shutdown_preserves_strong_STP_GTC_and_restarts_without_rehang",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_retired_STP_identity_trigger_and_type_survive_restart_and_late_fill",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[broker_order_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[perm_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_release_accepts_STP_only_after_exact_cancel_and_two_stable_flat_snapshots",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[perm_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[client_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_existing_STP_LMT_record_is_P0_and_original_contract_is_never_migrated",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_schema4_old_row_gets_STP_LMT_annotation_only_then_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_RTH_stop_crossing_is_P1_then_remaining_timeout_P0_without_old_limit_shortcut",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_partial_stop_fill_does_not_restart_continuing_RTH_remaining_timeout",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_stop_timer_ignores_off_RTH_and_new_session_does_not_inherit_overnight_seconds",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_RTH_trigger_timer_survives_restart_without_duplicate_P1_or_reset",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A warning]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A overdue]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[unknown]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[shutdown incomplete]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger crossing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger unfilled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[rejected]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_PROTECT_FILL_audits_each_execution_signed_slippage_and_report_exactly_once",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_protection_final_fill_keeps_audit_stop_and_actual_price_after_close",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_dry_run_all_protection_lifecycle_entry_points_have_zero_broker_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_old_schema4_empty_protection_database_remains_compatible",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_old_schema4_rows_gain_only_legacy_type_metadata_and_keep_indexes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_schema_upgrade_rolls_back_both_tables_when_protection_ddl_fails",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_legacy_protection_startup_pages_p0_and_makes_zero_broker_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_legacy_type_release_is_refused_even_with_complete_flat_proof",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-STOP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-STOP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-STOP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[-1.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_new_protection_plan_uses_stp_metadata_and_null_limit_before_entry_fill",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_new_stp_intent_has_null_limit_and_native_order_has_no_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[partial-adverse]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[full-favorable]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_protect_average_is_per_intent_weighted_actual_execution_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_retired_identity_persists_order_type_and_original_stop_across_reopen",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_retired_fill_uses_immutable_old_stop_not_replacement_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_price_pending_execution_audit_keeps_stop_and_slippage_unknown",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_after_closed_real_retired_exec_is_audited_without_second_pnl_or_close",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[unknown-None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[integer-zero-is-not-False]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_fresh_snapshot_preserves_explicit_False_as_strong_RTH_evidence",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wire-ref-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[legacy-type]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-side]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-tif]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[outside-RTH]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-RTH]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[numeric-zero-RTH]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-RTH]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-stock]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-secType]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-secType]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-USD]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-currency]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-currency]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unexpected-limit]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_correct_typed_STP_tuple_can_cancel_same_ids_without_replacement",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.779]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.775]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-100.129]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-1.009]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.77]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.779]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.775]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-100.129]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-1.009]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.77]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_trigger_rebound_does_not_erase_first_crossing_or_timeout",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_trigger_failed_P0_retries_actual_delivery_then_30_minute_P1",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_fresh_full_coverage_cannot_resolve_triggered_unfilled_remainder",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_actual_full_stop_execution_resolves_episode_once_without_rebooking",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[stale]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_replacement",
+      "name": "test_B22_confirmed_old_cancel_and_strong_new_working_proof_end_only_old_trigger",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_alerts",
+      "name": "test_definitely_unsent_TP_automatic_restore_initially_P1[no_quote]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_alerts",
+      "name": "test_definitely_unsent_TP_automatic_restore_initially_P1[definite_rejection]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_alerts",
+      "name": "test_unsent_TP_restore_not_confirmed_escalates_at_30_seconds",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_alerts",
+      "name": "test_maybe_sent_TP_stays_UNKNOWN_and_must_not_claim_definitely_unsent",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_alerts",
+      "name": "test_late_TP_reduction_confirmed_P1_pending_stays_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_alerts",
+      "name": "test_missing_or_invalid_ATR_BUY_refused_is_P1[missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_alerts",
+      "name": "test_missing_or_invalid_ATR_BUY_refused_is_P1[zero]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_alerts",
+      "name": "test_missing_or_invalid_ATR_BUY_refused_is_P1[nonfinite]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_alerts",
+      "name": "test_BUY_already_filled_invalid_protection_price_stays_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_equivalence",
+      "name": "test_R8_stop_fill_during_scan_latches_before_the_next_entry_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_equivalence",
+      "name": "test_release_counts_as_a_loss_for_the_streak_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_equivalence",
+      "name": "test_R7_late_commission_after_close_still_counts_the_loss_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_equivalence",
+      "name": "test_L3_late_entry_fill_after_close_opens_a_managed_position_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_equivalence",
+      "name": "test_kill_blocks_entries_but_exits_still_run_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_Secure_System_missing_psutil_name_needs_two_stable_nonpython_snapshots",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_protected_nonpython_info_access_denied_can_be_proven_by_two_snapshots",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_normal_nonpython_needs_no_privileged_fallback",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_protected_process_does_not_hide_later_real_old_V6",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_fallback_python_with_readable_old_entrypoint_is_detected",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_fallback_python_without_command_remains_fail_closed[python.exe]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_fallback_python_without_command_remains_fail_closed[pythonw.exe]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_fallback_python_without_command_remains_fail_closed[py.exe]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_unproven_fallback_identity_must_refuse[missing_pid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_unproven_fallback_identity_must_refuse[empty_name]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_unproven_fallback_identity_must_refuse[unreadable_name]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_unproven_fallback_identity_must_refuse[exit_between_snapshots]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_unproven_fallback_identity_must_refuse[pid_reused_for_python]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_unproven_fallback_identity_must_refuse[pid_identity_changed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_unproven_fallback_identity_must_refuse[malformed_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_snapshot_failure_does_not_become_no_old_V6[error0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_snapshot_failure_does_not_become_no_old_V6[error1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_global_iterator_failure_cannot_be_cleared_by_known_nonpython_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_g8",
+      "name": "test_G8_exited_process_keeps_existing_NoSuchProcess_behavior",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_every_reply_logs_signed_actual_server_host_seconds[-120]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_every_reply_logs_signed_actual_server_host_seconds[120]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_reply_without_outstanding_request_still_logs_actual_clock_difference",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_one_old_time_after_reconnect_is_log_only_then_normal_reply_is_healthy",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_three_consecutive_bad_samples_page_once_for_long_lived_same_episode[-120]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_three_consecutive_bad_samples_page_once_for_long_lived_same_episode[120]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_three_consecutive_normal_samples_resolve_clock_episode_and_notify_once",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_normal_sample_breaks_bad_streak_and_bad_sample_breaks_recovery_streak",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_clock_skew_replies_do_not_create_127_permanent_no_reply_misses",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_genuinely_missing_callbacks_keep_original_no_response_alert",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_confirmed_flat_silent_account_stream_is_debug_without_faking_freshness",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_held_account_silent_stream_keeps_warning_and_original_refresh[managed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_held_account_silent_stream_keeps_warning_and_original_refresh[broker_only]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_unverified_flat_account_stream_keeps_warning",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[stale_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[clock_backwards]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[reconcile_not_ok]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[new_fill_after_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[same_timestamp_fill]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[active_intent]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[query_failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_real_ibkr_wrapper_samples_exact_local_callback_time_without_connection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_clock_confirmation_N_defaults_three_and_is_adjustable_without_config_change",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_excluded_external_stock_fill_invalidates_cached_flat_telemetry_without_booking_or_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_l3_recovery",
+      "name": "test_late_five_gets_independent_GTC_and_each_transition_preserves_gross_capacity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_l3_recovery",
+      "name": "test_recovery_GTC_PreSubmitted_is_a_working_confirmed_protection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_l3_recovery",
+      "name": "test_late_entry_merged_into_existing_OPEN_uses_three_evidence_same_GTC_increase",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_l3_recovery",
+      "name": "test_invalid_booked_recovery_protection_evidence_pages_P0_without_GTC_and_blocks_entries[zero_stop]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_l3_recovery",
+      "name": "test_invalid_booked_recovery_protection_evidence_pages_P0_without_GTC_and_blocks_entries[sub_dollar_stop]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_l3_recovery",
+      "name": "test_restart_books_late_fill_and_replays_it_without_duplicate_GTC",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_l3_recovery",
+      "name": "test_recovery_gap_A_deadlines_remain_five_and_fifteen_seconds_and_block_other_entries",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_l3_recovery",
+      "name": "test_invalid_original_ENTRY_ATR_rolls_back_late_booking_and_urgent_callback_pages_P0[zero]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_l3_recovery",
+      "name": "test_invalid_original_ENTRY_ATR_rolls_back_late_booking_and_urgent_callback_pages_P0[missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_own_protection_fill_never_cancels_or_modifies_itself[partial_5-fresh_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_own_protection_fill_never_cancels_or_modifies_itself[partial_5-stale_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_own_protection_fill_never_cancels_or_modifies_itself[full_20-fresh_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_own_protection_fill_never_cancels_or_modifies_itself[full_20-stale_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_normal_full_TP1_fill_keeps_remaining_GTC[fresh_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_normal_full_TP1_fill_keeps_remaining_GTC[stale_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_GTC_fills_completely_while_TP_remains_working[fresh_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_GTC_fills_completely_while_TP_remains_working[stale_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_GTC_and_TP_both_fill_without_replacement",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F1_normal_TP_fill_ignores_stale_fresh_open_order_remaining",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F2_definitely_unsent_nonfinal_TP_restores_same_GTC[no_quote]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F2_definitely_unsent_nonfinal_TP_restores_same_GTC[stale_quote]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F2_definitely_unsent_nonfinal_TP_restores_same_GTC[non_marketable_limit]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F2_definitely_unsent_nonfinal_TP_restores_same_GTC[definite_rejection]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F2_maybe_sent_TP_must_not_increase_protection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F3_real_Submitted_status_pages_P1_once_per_crossing",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F3_Submitted_below_stop_waits_for_unfilled_timeout_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F3_unfilled_P0_timeout_is_configurable",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F4_steady_evidence_uses_periodic_queries_and_single_failure_is_not_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F4_new_evidence_and_trigger_thresholds_change_config_fingerprint",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F4_continuous_steady_evidence_loss_escalates_only_after_threshold",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F4_active_reduction_still_checks_three_sources_every_tick",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F5_protection_cards_have_distinct_titles_actions_and_chinese_quantities",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F5_stop_unfilled_card_guides_STP_status_and_halt_check",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F5_external_sell_card_names_real_order_and_freeze_limitation",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F5_B_gap_card_orders_TP_cancel_before_protection_increase",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_F6_fixture_switch_enables_protection_for_paper",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_preflight_overdue_B_card_and_immediate_post_takeover_cancel",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_G3_one_shot_TP_timeout_CLI_refuses_unsafe_requests[formal]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_G3_one_shot_TP_timeout_CLI_refuses_unsafe_requests[bad_symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_G3_one_shot_TP_timeout_CLI_refuses_unsafe_requests[blank_operator]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_G3_one_shot_TP_timeout_consumes_once_and_never_places_MKT",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16",
+      "name": "test_B16_G3_one_shot_nonmarketable_TP_runs_safe_B_timeout_and_restore",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16_f8_backoff",
+      "name": "test_protected_TP_evidence_timeout_honors_30_second_retry_backoff",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_card_provenance",
+      "name": "test_retired_gtc_execution_is_never_presented_as_a_take_profit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_card_provenance",
+      "name": "test_definite_rejection_body_states_known_refusal_not_unknown_status",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_breakeven_stop_after_tp1_sells_remaining_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_exit_retries_then_escalates_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_L4_trade_result_uses_net_pnl_and_estimates_missing_commissions_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_C2_prior_day_held_sell_never_blocks_the_stop_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_C5_exit_orders_are_stamped_with_the_real_send_time_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_R8_commission_arriving_during_scan_can_latch_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_race_late_fill_of_cancelled_stop_cancels_the_retry_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_Q7_queued_exit_work_is_inside_the_protection_budget_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_SR3_blocked_exit_cannot_livelock_the_tick_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_SR3_stop_starts_in_the_same_pass_that_abandons_a_take_profit_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_a_stop_blocked_by_missing_evidence_pages_p0_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_R5_difference_found_at_the_exit_boundary_blocks_entries_at_once_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_F1_failed_fresh_order_query_refuses_the_sell_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_F7_exit_is_re_decided_with_the_latest_quote_before_sending_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_F8_back_off_is_honoured_when_the_queued_item_runs_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_missed_buy_freezes_then_flatten_and_release_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_price_only_correction_blocks_entries_while_exits_continue_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_prior_day_partial_entry_is_frozen_then_released_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_late_buy_after_release_of_a_recovery_position_is_evidence_only_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_R4F1_release_needs_the_position_stream_to_agree_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_R5F2_old_order_without_a_position_row_never_books_after_flat_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_R5F3_batch4_state_release_record_alone_is_a_flat_point_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_SR6_A2_stale_position_stream_never_silences_a_stop_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_P2a_earlier_versions_evidence_rows_of_released_positions_refuse_the_state_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_retired_gtc_full_late_fill_cancels_replacement_and_is_flat",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_retired_gtc_partial_late_fill_keeps_possible_capacity_until_ack_then_only_reduces",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_retired_gtc_duplicate_execution_replay_never_rebooks_or_rewrites_broker",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_retired_gtc_lineage_survives_store_and_engine_restart",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[broker_order_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[perm_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_protection_equivalents",
+      "name": "test_retired_gtc_pending_reduction_waits_for_original_generation_without_rewrites",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L1_dry_run_engine_refuses_formal_state",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L1_dry_run_never_writes_to_broker_even_with_pending_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L1_ibkr_cancel_is_blocked_in_read_only_session",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L2_account_lock_is_exclusive_across_state_dirs",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L2_account_lock_is_exclusive_across_processes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L2_foreign_json_v6_lock_is_understood",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L2_control_commands_refuse_mismatched_account",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L2_status_without_state_creates_nothing",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L2_revoked_live_approval_blocks_entries_but_not_exits",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L3_open_orders_come_from_a_fresh_broker_query",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L3_settle_reads_open_orders_before_executions",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L3_open_orders_failure_never_finalizes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L3_prior_day_intent_without_evidence_stays_unknown",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L3_client_id_change_with_active_orders_aborts",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L3_shutdown_cancels_unknown_orders_that_are_working",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L3_late_entry_fill_after_close_opens_a_managed_position",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L3_exit_waits_for_broker_truth_after_hidden_late_sell",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_remaining_capital_uses_actual_equity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_entry_blocked_when_available_funds_short",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_duplicate_execution_backfills_commission",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_non_integer_shares_raise_anomaly_instead_of_rounding",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_config_numbers_and_sections_are_strict[risk-max_positions-2.5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_config_numbers_and_sections_are_strict[risk-max_positions-true]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_config_numbers_and_sections_are_strict[execution-entry_fill_timeout_seconds--5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_config_numbers_and_sections_are_strict[execution-max_quote_age_seconds-0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_config_numbers_and_sections_are_strict[risk-atr_stop_mult-2.5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_config_numbers_and_sections_are_strict[risk-daily_loss_limit_usd-nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_prior_close_baseline_catches_overnight_loss",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L4_trade_result_uses_net_pnl_and_estimates_missing_commissions",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L5_alert_health_reflects_the_latest_attempt",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L5_live_config_cannot_disable_required_alerts",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L5_slow_alert_channel_does_not_block_the_loop",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L5_daily_report_is_marked_sent_only_after_delivery",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L5_scan_keeps_servicing_exits_between_symbol_fetches",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_L5_quote_age_is_checked_with_fresh_time_after_slow_data",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_fixes",
+      "name": "test_foreign_fill_on_protected_symbol_is_not_an_anomaly",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "stdout_sha256": "4b421b3334d7220c3eaf79b0a98051ff484a11b3993e9dfec876e5de5b65976a",
+  "junit_sha256": "4a66b467dbcb5846c10644acf32278311cbcd9e9d38f0e0d8828c0ffce3af986"
+}

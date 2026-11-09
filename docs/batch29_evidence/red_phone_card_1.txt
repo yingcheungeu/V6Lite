@@ -1,0 +1,16 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_____ test_B29_timeout_phone_card_names_test_and_identifies_actual_order ______
+v6lite\tests\test_batch29_faults.py:299: in test_B29_timeout_phone_card_names_test_and_identifies_actual_order
+    assert len(cards) == 1, rig.channel.messages
+E   AssertionError: [('TEST · 🟢 V6-Lite 运行通知', 'TEST · 🟢 V6-Lite 运行通知
+E     发生了什么：运行状态有新变化；详情见本机日志。
+E     下一步：在本机运行 status，按需查看完整日志。')]
+E   assert 0 == 1
+E    +  where 0 = len([])
+---------------------------- Captured stdout call -----------------------------
+TEST entry requested: AAPL; engine will evaluate it on its next tick
+TEST TP timeout requested: AAPL; expires in 5 minutes; final stage excluded
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch29_faults.py::test_B29_timeout_phone_card_names_test_and_identifies_actual_order
+1 failed in 1.77s

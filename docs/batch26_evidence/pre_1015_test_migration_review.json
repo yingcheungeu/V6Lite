@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-15",
+  "reason": "User explicitly replaced boolean opt-in with overnight_tp freeze|constraint. Archive all five prior specs before compatibility-only migration. All production authority and legacy test files remain untouched.",
+  "archive_sha256": {
+    "test_batch26_be_token_regression.py": "ef58bda287bf49d751c697628044c6d9ff66e9e00a180fc9ad11e1a87fe03530",
+    "test_batch26_external_sell_regression.py": "9e759902a8b9f9844b894a5d3f08eff26738b4682f9b518508244481348332e1",
+    "test_batch26_overnight_evidence.py": "c0b66a415cae00bb0eaed24990300ee7b09b78baacb6631fe41d96bf12e9449c",
+    "test_batch26_review_edges.py": "1299a21aff567d5919c0cca6ab6e548810956abd61fa6538353c3da1c62e203b",
+    "test_batch26_shutdown_report.py": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93"
+  },
+  "allowed_changes": [
+    "core test-only config helper chooses enum when declared; legacy candidate bool compatibility only when enum absent; default/disable assertions now enum",
+    "edge real TOML config and strict invalid enum validation; preserve original invalid values and add booleans True/False",
+    "external SELL spec reuses same config helper; all safety assertions unchanged",
+    "shutdown and BE token specs unchanged"
+  ],
+  "after_sha256": {
+    "test_batch26_be_token_regression.py": "ef58bda287bf49d751c697628044c6d9ff66e9e00a180fc9ad11e1a87fe03530",
+    "test_batch26_external_sell_regression.py": "077aba16690943197f8d627f7903f5f0a084b281999557f493b9a479cc9aa9a0",
+    "test_batch26_overnight_evidence.py": "d9ae28dc225beff43cef43cb3bb2cb766395027aaef1967fb51b49f42bdc05e8",
+    "test_batch26_review_edges.py": "091cf7140d666327f513a4d76359059fcfb72b08ccecd37fbe5fc0c538fd04fe",
+    "test_batch26_shutdown_report.py": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93"
+  }
+}

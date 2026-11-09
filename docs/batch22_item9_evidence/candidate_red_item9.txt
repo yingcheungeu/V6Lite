@@ -1,0 +1,84 @@
+.............................FF...FFFFF                                  [100%]
+================================== FAILURES ===================================
+_ test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance _
+v6lite\tests\test_batch22_item9_broker_cancel.py:562: in test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance
+    _assert_cancel_remote(rig, pid, REASON)
+v6lite\tests\test_batch22_item9_broker_cancel.py:204: in _assert_cancel_remote
+    assert rig.store.conn.execute(
+E   assert 2 == 0
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=待核实（上次确认 0） 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已回报取消；终态原生合同不完整，人工核验 hold 保持，不授予释放权限；orderRef=v6l-protect-db5026d7b14f4ad2871b orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；同一硬身份的券商终态字段不完整；仅确认取消诊断，不授予释放或撤改单权限；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled - reason: We cannot accept your stop order. Synthetic regulatory price check.
+_ test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps _
+v6lite\tests\test_batch22_item9_broker_cancel.py:572: in test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps
+    assert any('不要点击 TWS 的重新提交/IBALGO 建议' in body for _, body in pages)
+E   assert False
+E    +  where False = any(<generator object test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps.<locals>.<genexpr> at 0x000002A5465BD540>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-92750b0678114b2fb2c4 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled - reason: We cannot accept your stop order. Synthetic regulatory price check.
+_ test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-202-Order canceled by system: synthetic rule] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:626: in test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart
+    _assert_cancel_remote(rig, pid, reason)
+v6lite\tests\test_batch22_item9_broker_cancel.py:202: in _assert_cancel_remote
+    assert rig.store.control('frozen:AAPL')
+E   AssertionError: assert None
+E    +  where None = control('frozen:AAPL')
+E    +    where control = <v6lite.store.Store object at 0x000002A5687CE0D0>.control
+E    +      where <v6lite.store.Store object at 0x000002A5687CE0D0> = <v6lite.tests.helpers.Rig object at 0x000002A5687CF390>.store
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=待核实（上次确认 0） 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-c88dc6befe6a4fa18a57 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled by system: synthetic rule
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=3 股 可能超卖=0 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-c88dc6befe6a4fa18a57 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；GTC absent from complete working snapshot; no duplicate submission；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled by system: synthetic rule
+_ test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Inactive-0-Broker has cancelled the protective order] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:626: in test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart
+    _assert_cancel_remote(rig, pid, reason)
+v6lite\tests\test_batch22_item9_broker_cancel.py:202: in _assert_cancel_remote
+    assert rig.store.control('frozen:AAPL')
+E   AssertionError: assert None
+E    +  where None = control('frozen:AAPL')
+E    +    where control = <v6lite.store.Store object at 0x000002A568808590>.control
+E    +      where <v6lite.store.Store object at 0x000002A568808590> = <v6lite.tests.helpers.Rig object at 0x000002A568808210>.store
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=待核实（上次确认 0） 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-04b2c5344ab44dc6a7d2 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker status=Inactive; no unverified replacement；券商状态=Inactive code=0；取消诊断与执行权限独立核验；券商原因原文=Broker has cancelled the protective order
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=3 股 可能超卖=0 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-04b2c5344ab44dc6a7d2 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；GTC absent from complete working snapshot; no duplicate submission；券商状态=Inactive code=0；取消诊断与执行权限独立核验；券商原因原文=Broker has cancelled the protective order
+_ test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-10147-Synthetic broker terminal reason outside 201 and 202] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:626: in test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart
+    _assert_cancel_remote(rig, pid, reason)
+v6lite\tests\test_batch22_item9_broker_cancel.py:202: in _assert_cancel_remote
+    assert rig.store.control('frozen:AAPL')
+E   AssertionError: assert None
+E    +  where None = control('frozen:AAPL')
+E    +    where control = <v6lite.store.Store object at 0x000002A5688AEB10>.control
+E    +      where <v6lite.store.Store object at 0x000002A5688AEB10> = <v6lite.tests.helpers.Rig object at 0x000002A5688AD8D0>.store
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=待核实（上次确认 0） 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-e37ac882e028472394d6 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=10147；取消诊断与执行权限独立核验；券商原因原文=Synthetic broker terminal reason outside 201 and 202
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=3 股 可能超卖=0 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-e37ac882e028472394d6 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；GTC absent from complete working snapshot; no duplicate submission；券商状态=Cancelled code=10147；取消诊断与执行权限独立核验；券商原因原文=Synthetic broker terminal reason outside 201 and 202
+_ test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-cleared-fields] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:656: in test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority
+    _assert_cancel_remote(rig, pid, REASON)
+v6lite\tests\test_batch22_item9_broker_cancel.py:199: in _assert_cancel_remote
+    assert pages, _pages(rig)
+E   AssertionError: [('🔴 P0 · 保护单状态无法核实', '🔴 P0 · 保护单状态无法核实
+E     发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。
+E     你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-95694c8f11764971871c orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；native account/client/conId/type/price/quantity identity invalid; no release authority；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled - reason: We cannot accept your stop order. Synthetic regulatory price check.
+_ test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-zero-permId] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:656: in test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority
+    _assert_cancel_remote(rig, pid, REASON)
+v6lite\tests\test_batch22_item9_broker_cancel.py:199: in _assert_cancel_remote
+    assert pages, _pages(rig)
+E   AssertionError: [('🔴 P0 · 保护单状态无法核实', '🔴 P0 · 保护单状态无法核实
+E     发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。
+E     你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-65d2ec4f5d594b458f2d orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；native account/client/conId/type/price/quantity identity invalid; no release authority；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled - reason: We cannot accept your stop order. Synthetic regulatory price check.
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-202-Order canceled by system: synthetic rule]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Inactive-0-Broker has cancelled the protective order]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-10147-Synthetic broker terminal reason outside 201 and 202]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-cleared-fields]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-zero-permId]
+7 failed, 32 passed in 4.53s

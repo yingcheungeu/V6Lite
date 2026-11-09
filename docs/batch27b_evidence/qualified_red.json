@@ -1,0 +1,34 @@
+{
+  "label": "red_batch27a_locked_initial",
+  "baseline_code_sha": "b736734f8e73edfb",
+  "totals": {
+    "tests": 35,
+    "failures": 11,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_positive_after_tp1_failed": true,
+  "required_positive_test": "test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger[default-midnight]",
+  "failure_point": "after actual TP1 callback booked; pending BE modification is None",
+  "raw_time_three_categories_failed": true,
+  "raw_time_tests": [
+    "test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[naive-20261020 10:01:00]",
+    "test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[unparseable-not-a-valid-execution-time]",
+    "test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[zoned-20261020 14:01:00 UTC]"
+  ],
+  "isolated_d_failure_test": "test_B27b_failed_d_card_shows_actual_complete_query_count",
+  "isolated_d_reason": "known a succeeded; native three unknown executions trigger d before actual-count text assertion",
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27b_current_day_evidence.py",
+      "sha256": "4244c1603412272ad84639e61584e5a34add7438597c8db437d6dc8691f8cf20"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27b_raw_execution_time.py",
+      "sha256": "158d94bbc0729fb77afb3427ae9dc3fe865b64b45f4ed556cbb07d388e984d95"
+    }
+  ],
+  "receipt_sha256": "740b1ec693298fa6f4e59932afc72c53e6e4ee5810477947095c78be0ad4936c",
+  "junit_sha256": "adaaeed6c14591f0d5cd1f37335c2493bc10400145e4063403f9d843a04897c5",
+  "production_unchanged_before_implementation": true
+}

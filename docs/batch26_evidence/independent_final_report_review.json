@@ -1,0 +1,41 @@
+{
+  "reviewer": "/root/b26_review",
+  "reviewed_at_pt": "2026-10-15T18:29:31.119677-07:00",
+  "mode": "final serial independent read-only; no test execution or writes",
+  "decision": "PASS",
+  "code_sha": "579d13832e3f4237",
+  "unresolved_substantive_findings": [],
+  "reviewed_report_sha256": "4870eb3ede73fc8edd1f2bc71d7e7b0897323bec5b75b56670d0c94dbaa90318",
+  "reviewed_manifest_sha256": "6a50a73b50365022f19457277eecda1bb52c873d023fe96fd911ddb548112ba9",
+  "reviewed_manifest_entries": 333,
+  "report_body_prefix_sha256": "37856cf66adb03c8cbe585fdebbc19d833333d58fb1dd8c90f6ab6b015600755",
+  "old_manifest_map_canonical_sha256": "d90807f756e89ae8494990fd48fef106d961106aa07050dbca4648842b51b8a3",
+  "canonical_algorithm": "json.dumps(mapping,sort_keys=True,separators=(comma,colon),ensure_ascii=False).encode(utf-8), no final LF",
+  "checks": {
+    "manifest_entries": 333,
+    "locked_files": 317,
+    "source_references": 17,
+    "full_runs": 3,
+    "each_run": {
+      "passed": 1716,
+      "skipped": 1,
+      "failed": 0,
+      "errors": 0
+    },
+    "complete_unique_nodeids": 1717,
+    "legacy_nodeids": 1609,
+    "new_nodeids": 108,
+    "old_skip": "test_scoring_matches_legacy_scanner_on_identical_bars: legacy market_scanner.py not present",
+    "full_runs_serial_outside_trading": true,
+    "checkpoint_sha256": "30385d324c3d88966ac2b1de246e45dd8363270a11d4c1ddec303279177060fe",
+    "render_cases": 7,
+    "existing_planned_files_scanned": 216,
+    "planned_files_after_this_record": 217,
+    "secret_format_findings": 0,
+    "large_files": 0,
+    "max_file_bytes": 790876,
+    "index_empty_at_review": true
+  },
+  "closure_rule": "This record is the only new manifest entry. Rebuild report/manifest; all previous333 mapping bytes and report prefix remain unchanged. Original report/manifest hashes above identify pre-record review, not final regenerated files. Reviewer then replies with closure without changing this record.",
+  "stage_commit_gate": "ROOT must recheck actual staged set, all staged bytes, secret formats and file sizes; this review does not replace that gate."
+}

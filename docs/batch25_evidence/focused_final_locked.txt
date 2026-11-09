@@ -1,0 +1,12 @@
+........................................................................ [ 30%]
+........................................................................ [ 60%]
+........................................................................ [ 90%]
+......................F.                                                 [100%]
+================================== FAILURES ===================================
+_________________ test_a_request_that_never_left_owes_no_end __________________
+v6lite\tests\test_review_round5_selfreview.py:274: in test_a_request_that_never_left_owes_no_end
+    assert broker._req_sent["positions"] == broker._req_ended["positions"] == 0
+E   assert 1 == 0
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_review_round5_selfreview.py::test_a_request_that_never_left_owes_no_end
+1 failed, 239 passed in 42.45s

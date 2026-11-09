@@ -1,0 +1,43 @@
+{
+  "root_checked_at_pt": "2026-10-12T20:07:32.867149-07:00",
+  "read_only_source_review": true,
+  "code_sha": "2db6af8f04f145f6",
+  "full_labels": [
+    "full_1_attempt2",
+    "full_2",
+    "full_3"
+  ],
+  "actual_raw_totals": [
+    {
+      "tests": 1560,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    {
+      "tests": 1560,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    {
+      "tests": 1560,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    }
+  ],
+  "actual_case_inventory_count": 1560,
+  "raw_xml_stdout_inventory_verified": true,
+  "same_cases_nodes_sources_specs": true,
+  "serial_and_outside_trading_window": true,
+  "full_start_locked_files_checked": 276,
+  "document_only_delta": {
+    "path": "docs/batch24_evidence/build_batch24_report.py",
+    "old_sha256": "58039463fb96cead0cb7e470e8d4af56368eaf71413327109c9fc2b721203e3c",
+    "new_sha256": "a27e9da454a9d209bd1877ef73e53d66f952b122df7b43413a0fdc2803ed3532",
+    "change": "Only append the 2110 evidence mapping sentence to report template; validation logic unchanged"
+  },
+  "source_unchanged_after_document_edit": true,
+  "independent_final_review": "PASS, actual readonly /root/batch24_investigate findings recorded in full_acceptance_review.json"
+}

@@ -1,0 +1,207 @@
+...........FF.FF.FFFF..F..................................               [100%]
+================================== FAILURES ===================================
+_ test_held_account_silent_stream_keeps_warning_and_original_refresh[managed] _
+v6lite\tests\test_batch17_heartbeat_account.py:261: in test_held_account_silent_stream_keeps_warning_and_original_refresh
+    assert records and records[-1].levelno == logging.WARNING
+E   assert ([<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">] and 10 == 30)
+E    +  where 10 = <LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">.levelno
+E    +  and   30 = logging.WARNING
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:349 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · 真实下单（Paper） · LIVE data · ACCOUNT_MASKED · code e6166199 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.engine:engine.py:2678 [SCAN] AAPL   BUY     score= 78 adx=33.1 rsi=63.9 vol=1.0 
+INFO     v6lite.engine:engine.py:2678 [SCAN] SPY    NEUTRAL score= 30 adx=65.4 rsi=14.2 vol=1.0 
+INFO     v6lite.engine:engine.py:2678 [SCAN] TSLA   NEUTRAL score= 25 adx=65.4 rsi=14.2 vol=1.0 
+INFO     v6lite.engine:engine.py:2951 [ORDER_SENT] ENTRY AAPL BUY 20 LMT 113.47 intent=v6l-a6866c05f2004f12ac2e
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: BUY AAPL | 20 LMT 113.47
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:2688 [ENTRY_DECISION] AAPL score=78 -> sent
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T14:00:30+00:00 host_time=2026-10-06T14:00:30+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [["AAPL", "ENTRY", "SENT"]], "entries_allowed": true, "entry_blocks": [], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.engine:engine.py:816 [FILL] AAPL BUY 20@113.47 intent=v6l-a6866c05f2004f12ac2e exec=0000fa4e.00000001.01.01
+INFO     v6lite.engine:engine.py:1642 [INTENT_FINAL] v6l-a6866c05f2004f12ac2e AAPL FILLED filled=20/20
+INFO     v6lite.protection:protection_engine.py:430 [PROTECT_SENT] AAPL qty=20 type=STP stop=108.47 ref=v6l-protect-56e46f72189b4570bf1a
+INFO     v6lite.protection:protection_engine.py:1246 [PROTECT_GAP] kind=A secs=0.000 symbol=AAPL ref=v6l-protect-56e46f72189b4570bf1a exec_id=0000fa4e.00000001.01.01
+DEBUG    v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:57:00+00:00; funds snapshot requested
+_ test_held_account_silent_stream_keeps_warning_and_original_refresh[broker_only] _
+v6lite\tests\test_batch17_heartbeat_account.py:261: in test_held_account_silent_stream_keeps_warning_and_original_refresh
+    assert records and records[-1].levelno == logging.WARNING
+E   assert ([<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">] and 10 == 30)
+E    +  where 10 = <LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">.levelno
+E    +  and   30 = logging.WARNING
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:349 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · 真实下单（Paper） · LIVE data · ACCOUNT_MASKED · code e6166199 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+DEBUG    v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:56:29+00:00; funds snapshot requested
+_ test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[stale_snapshot] _
+v6lite\tests\test_batch17_heartbeat_account.py:344: in test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy
+    assert len(records) == 1 and records[0].levelno == logging.WARNING, (boundary, records)
+E   AssertionError: ('stale_snapshot', [<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E   assert (1 == 1 and 10 == 30)
+E    +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E    +  and   10 = <LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">.levelno
+E    +  and   30 = logging.WARNING
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:349 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · 真实下单（Paper） · LIVE data · ACCOUNT_MASKED · code e6166199 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+DEBUG    v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 14:01:30+00:00; funds snapshot requested
+_ test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[clock_backwards] _
+v6lite\tests\test_batch17_heartbeat_account.py:344: in test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy
+    assert len(records) == 1 and records[0].levelno == logging.WARNING, (boundary, records)
+E   AssertionError: ('clock_backwards', [<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E   assert (1 == 1 and 10 == 30)
+E    +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E    +  and   10 = <LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">.levelno
+E    +  and   30 = logging.WARNING
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:349 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · 真实下单（Paper） · LIVE data · ACCOUNT_MASKED · code e6166199 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+DEBUG    v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:56:28+00:00; funds snapshot requested
+_ test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[new_fill_after_snapshot] _
+v6lite\tests\test_batch17_heartbeat_account.py:344: in test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy
+    assert len(records) == 1 and records[0].levelno == logging.WARNING, (boundary, records)
+E   AssertionError: ('new_fill_after_snapshot', [<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E   assert (1 == 1 and 10 == 30)
+E    +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E    +  and   10 = <LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">.levelno
+E    +  and   30 = logging.WARNING
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:349 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · 真实下单（Paper） · LIVE data · ACCOUNT_MASKED · code e6166199 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.engine:engine.py:2951 [ORDER_SENT] ENTRY AAPL BUY 1 LMT 113.47 intent=v6l-post-flat-buy
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: BUY AAPL | 1 LMT 113.47
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:816 [FILL] AAPL BUY 1@113.47 intent=v6l-post-flat-buy exec=0000fa4e.00000001.01.01
+INFO     v6lite.engine:engine.py:1642 [INTENT_FINAL] v6l-post-flat-buy AAPL FILLED filled=1/1
+INFO     v6lite.protection:protection_engine.py:430 [PROTECT_SENT] AAPL qty=1 type=STP stop=108.47 ref=v6l-protect-d2f41078842a4141863a
+INFO     v6lite.protection:protection_engine.py:1246 [PROTECT_GAP] kind=A secs=0.000 symbol=AAPL ref=v6l-protect-d2f41078842a4141863a exec_id=0000fa4e.00000001.01.01
+INFO     v6lite.engine:engine.py:816 [FILL] AAPL SELL 1@113.5 intent=v6l-protect-d2f41078842a4141863a exec=0000fa4e.00000002.01.01
+INFO     v6lite.engine:engine.py:1642 [INTENT_FINAL] v6l-protect-d2f41078842a4141863a AAPL FILLED filled=1/1
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: 止损已成交 AAPL | AAPL 本次止损成交 1 股，累计成交均价 113.50，剩余持仓 0 股；保护单 v6l-protect-d2f41078842a4141863a。
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: AAPL position closed | AAPL 毛盈亏 0.03 USD，已回报佣金 2.00 USD，net P&L -1.97 USD；佣金已全部回报
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+DEBUG    v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:56:31+00:00; funds snapshot requested
+_ test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[same_timestamp_fill] _
+v6lite\tests\test_batch17_heartbeat_account.py:344: in test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy
+    assert len(records) == 1 and records[0].levelno == logging.WARNING, (boundary, records)
+E   AssertionError: ('same_timestamp_fill', [<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E   assert (1 == 1 and 10 == 30)
+E    +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E    +  and   10 = <LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">.levelno
+E    +  and   30 = logging.WARNING
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:349 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · 真实下单（Paper） · LIVE data · ACCOUNT_MASKED · code e6166199 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.engine:engine.py:2951 [ORDER_SENT] ENTRY AAPL BUY 1 LMT 113.47 intent=v6l-post-flat-buy
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: BUY AAPL | 1 LMT 113.47
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:816 [FILL] AAPL BUY 1@113.47 intent=v6l-post-flat-buy exec=0000fa4e.00000001.01.01
+INFO     v6lite.engine:engine.py:1642 [INTENT_FINAL] v6l-post-flat-buy AAPL FILLED filled=1/1
+INFO     v6lite.protection:protection_engine.py:430 [PROTECT_SENT] AAPL qty=1 type=STP stop=108.47 ref=v6l-protect-3e737e00402e4559849e
+INFO     v6lite.protection:protection_engine.py:1246 [PROTECT_GAP] kind=A secs=0.000 symbol=AAPL ref=v6l-protect-3e737e00402e4559849e exec_id=0000fa4e.00000001.01.01
+INFO     v6lite.engine:engine.py:816 [FILL] AAPL SELL 1@113.5 intent=v6l-protect-3e737e00402e4559849e exec=0000fa4e.00000002.01.01
+INFO     v6lite.engine:engine.py:1642 [INTENT_FINAL] v6l-protect-3e737e00402e4559849e AAPL FILLED filled=1/1
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: 止损已成交 AAPL | AAPL 本次止损成交 1 股，累计成交均价 113.50，剩余持仓 0 股；保护单 v6l-protect-3e737e00402e4559849e。
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: AAPL position closed | AAPL 毛盈亏 0.03 USD，已回报佣金 2.00 USD，net P&L -1.97 USD；佣金已全部回报
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+DEBUG    v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:56:29+00:00; funds snapshot requested
+_ test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[active_intent] _
+v6lite\tests\test_batch17_heartbeat_account.py:344: in test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy
+    assert len(records) == 1 and records[0].levelno == logging.WARNING, (boundary, records)
+E   AssertionError: ('active_intent', [<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E   assert (1 == 1 and 10 == 30)
+E    +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E    +  and   10 = <LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">.levelno
+E    +  and   30 = logging.WARNING
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:349 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · 真实下单（Paper） · LIVE data · ACCOUNT_MASKED · code e6166199 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+DEBUG    v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:56:29+00:00; funds snapshot requested
+_ test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[query_failed] _
+v6lite\tests\test_batch17_heartbeat_account.py:344: in test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy
+    assert len(records) == 1 and records[0].levelno == logging.WARNING, (boundary, records)
+E   AssertionError: ('query_failed', [<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E   assert (1 == 1 and 10 == 30)
+E    +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E    +  and   10 = <LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">.levelno
+E    +  and   30 = logging.WARNING
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:349 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · 真实下单（Paper） · LIVE data · ACCOUNT_MASKED · code e6166199 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+DEBUG    v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:56:29+00:00; funds snapshot requested
+_ test_excluded_external_stock_fill_invalidates_cached_flat_telemetry_without_booking_or_orders _
+v6lite\tests\test_batch17_heartbeat_account.py:432: in test_excluded_external_stock_fill_invalidates_cached_flat_telemetry_without_booking_or_orders
+    assert len(records) == 1 and records[0].levelno == logging.WARNING, records
+E   AssertionError: [<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">]
+E   assert (1 == 1 and 10 == 30)
+E    +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">])
+E    +  and   10 = <LogRecord: v6lite.engine, 10, C:\Dev\V6Lite-dev\v6lite\engine.py, 1295, "[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s">.levelno
+E    +  and   30 = logging.WARNING
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:349 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · 真实下单（Paper） · LIVE data · ACCOUNT_MASKED · code e6166199 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3338 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:3196 [HEARTBEAT] {"mode": "paper", "dry_run": false, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "ACCOUNT_MASKED", "config_fingerprint": "84c54b41be735467", "code_sha": "e6166199a13d6c2c", "broker_connected": true, "automatic_reconnect_stopped": false, "recovery_pending": false, "reconnect_reason": "", "reconnect_next_at": null, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+DEBUG    v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:56:29+00:00; funds snapshot requested
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts
+  v6lite\tests\test_batch27_observer_atomicity.py:19: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch17_heartbeat_account.py::test_held_account_silent_stream_keeps_warning_and_original_refresh[managed]
+FAILED v6lite/tests/test_batch17_heartbeat_account.py::test_held_account_silent_stream_keeps_warning_and_original_refresh[broker_only]
+FAILED v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[stale_snapshot]
+FAILED v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[clock_backwards]
+FAILED v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[new_fill_after_snapshot]
+FAILED v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[same_timestamp_fill]
+FAILED v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[active_intent]
+FAILED v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[query_failed]
+FAILED v6lite/tests/test_batch17_heartbeat_account.py::test_excluded_external_stock_fill_invalidates_cached_flat_telemetry_without_booking_or_orders
+9 failed, 49 passed, 1 warning in 6.32s

@@ -1,0 +1,67 @@
+{
+  "status": "qualified dual-baseline red after two fixture-only calibrations",
+  "runs": [
+    {
+      "label": "red_b26_calibrated",
+      "baseline": "b26",
+      "source_code_sha": "579d13832e3f4237",
+      "totals": {
+        "tests": 69,
+        "failures": 53,
+        "errors": 0,
+        "skipped": 0
+      },
+      "receipt_sha256": "d455c59614f826db2eb513f0c1d9540f2dbb4e1c6cc67e509967d5551f6e56c5",
+      "junit_sha256": "d55df3f9b9a5927f18742557be206e24702d9476faefa553404335fab5fd79eb",
+      "specs": [
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observation_audit.py",
+          "sha256": "a844a1c42a98dc5f017d99cfbe8877aaa59a713d74c20be5010e5509a805e53f"
+        },
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_daily_report_volume.py",
+          "sha256": "d063e2e5f289da20e61ea54d9cee8472caf9467789b8bce85b33501ca01d2c62"
+        },
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py",
+          "sha256": "93ebcc48d1b60f815cf621d55a7815831fe6f0a137d56e3faf24e00558381b0c"
+        }
+      ],
+      "mandatory_behavior_failures_verified": true
+    },
+    {
+      "label": "red_b27b_calibrated",
+      "baseline": "b27b",
+      "source_code_sha": "d6dd37c12701ce95",
+      "totals": {
+        "tests": 69,
+        "failures": 53,
+        "errors": 0,
+        "skipped": 0
+      },
+      "receipt_sha256": "756c614621fdb2a42f7026bff1c2d33b2a6385056899c22c1e2f9f8a5e6216b1",
+      "junit_sha256": "9a488897a2ec0ef353f3beb1262bcc69e7f2e48bf1f85aa0c4410b0f854d3b7c",
+      "specs": [
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observation_audit.py",
+          "sha256": "a844a1c42a98dc5f017d99cfbe8877aaa59a713d74c20be5010e5509a805e53f"
+        },
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_daily_report_volume.py",
+          "sha256": "d063e2e5f289da20e61ea54d9cee8472caf9467789b8bce85b33501ca01d2c62"
+        },
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py",
+          "sha256": "93ebcc48d1b60f815cf621d55a7815831fe6f0a137d56e3faf24e00558381b0c"
+        }
+      ],
+      "mandatory_behavior_failures_verified": true
+    }
+  ],
+  "initial_red_record": {
+    "path": "docs/batch27_evidence/qualified_red_initial.json",
+    "sha256": "ed84c789ec5ae2b75155c4d956c088b298280542ff232d45d64c7c2bf9775725",
+    "note": "Contains pre-production virtual-tree proof and original frozen spec hashes; exact initial spec bytes retained in initial_specs."
+  },
+  "calibration": "Shutdown must preserve last actual confirmation despite later clock; installed SDK requires advancedOrderRejectJson fourth argument. Original safety/quantity/budget assertions unchanged. Candidate reset cleanup calibration tracked separately."
+}

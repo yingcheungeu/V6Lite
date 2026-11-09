@@ -1,0 +1,23 @@
+.................                                                        [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:62: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+  v6lite\tests\test_batch31_close_card.py:9: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('arrival',[.009,None])
+
+v6lite/tests/test_batch30_commission.py::test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net
+  v6lite\tests\test_batch30_commission.py:64: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net(tmp_path,record_property):
+
+v6lite/tests/test_batch30_commission.py::test_B30_own_query_repairs_fee_once_without_reopening_cooldown[1.0--0.17-False]
+v6lite/tests/test_batch30_commission.py::test_B30_own_query_repairs_fee_once_without_reopening_cooldown[0.01-0.82-True]
+  v6lite\tests\test_batch30_commission.py:85: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('actual,final_net,flips',[(1.,-.17,False),(.01,.82,True)])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+17 passed, 7 warnings in 6.53s

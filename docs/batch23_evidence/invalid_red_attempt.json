@@ -1,0 +1,13 @@
+{
+  "label": "red_22a",
+  "gate_accepted": false,
+  "spec_snapshot": "docs/batch23_evidence/invalid_red_spec_attempt1.py",
+  "spec_sha256": "d722587c2a07a89a3e320608d5c647d2d35efb4b375a16cd7f6a7ab5440b6509",
+  "reasons": [
+    "Fixture _begin_tp drains broker callbacks but never runs the queued exit work, so preconditions fail before targeted product behavior.",
+    "Copied spec uses its own __file__ to resolve shipped examples; this points outside the archived baseline examples.",
+    "Dry fixture incorrectly requires new PENDING stage creation after switching dry_run on.",
+    "Synthetic fixed fresh bid crosses TP2 while the test expects a still-eligible TP1."
+  ],
+  "action": "Correct only test preconditions, preserve business assertions, rerun on untouched 22a. Production remains unchanged."
+}

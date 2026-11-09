@@ -1,0 +1,26 @@
+{
+  "reviewers": [
+    "pending_investigation",
+    "commission_investigation"
+  ],
+  "single_production_implementer": "root",
+  "reviews_read_only": true,
+  "source_hashes": {
+    "v6lite/engine.py": "8fa51647515008eb42670c69ea70846070067bcd005a7f72cdda3a11cba36982",
+    "v6lite/commissions.py": "31211544d8ae37727b745ee109c5ee70233f3c4dda4eea17c51a98bdafaeb522",
+    "v6lite/broker/ibkr.py": "f8594a3521a24ae39e9a6e81753a4fac66999714a70cc990da7b7174ef580d6b",
+    "v6lite/protection_confirmations.py": "9e50a3b8a304a1317425a194977871474e2193b123eec2e8cb49ae6557653de9",
+    "v6lite/protection_engine.py": "f9b7ffbae64a174b71d5cd1da34954cac885339f3e8bbb2c7e0320a81e5dfa04",
+    "v6lite/overnight_evidence.py": "76e258b699fb99e6180b1c29b454655091b914a38806a79da6b0674068594cc7",
+    "v6lite/tp_evidence.py": "381d190bc9d6ef653b24b12a0e0603f86bcd151a54d3ca79e9e2c509a9efb03e"
+  },
+  "resolved_findings": [
+    "audit table uses ts, not time",
+    "urgent CommissionEvent preserves economically unchanged reduction/final-cancel tokens",
+    "ACK rejection checks are explicitly audited",
+    "closed-card send/queue and crash duplicate boundary documented",
+    "ACK deferred diagnostic uses normal audit with durable content dedupe; all 43 affected negative/positive cases pass"
+  ],
+  "remaining_acceptance_gap": "Instruction 3.4 exact b30 historical-freeze upgrade test cannot establish unique cause from old generic records; no commit/tag until evidence or explicit scope resolution",
+  "safety_review": "No demonstrated weakening of a-d, strong identity, pending TP guards, fingerprints or S+T+X capacity; only CommissionEvent bypasses order invalidators"
+}

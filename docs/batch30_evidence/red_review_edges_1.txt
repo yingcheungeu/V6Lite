@@ -1,0 +1,28 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+___ test_B30_foreign_unbound_missing_commission_does_not_break_daily_report ___
+v6lite\tests\test_batch30_edges.py:20: in test_B30_foreign_unbound_missing_commission_does_not_break_daily_report
+    text=daily_report(rig.store,rig.cfg,date(2026,10,6))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\report.py:453: in daily_report
+    missing_fees,estimated_fees = _commission_day_summary(store,cfg,key)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\report.py:438: in _commission_day_summary
+    result = fee_breakdown(trade,store,cfg)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\commissions.py:46: in fee_breakdown
+    basis = _json(store, BASIS+trade["position_id"]) if store is not None else {}
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: can only concatenate str (not "NoneType") to str
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b30-unbound-real-ledger | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+______ test_B30_closed_estimate_stays_frozen_after_config_floor_changes _______
+v6lite\tests\test_batch30_edges.py:32: in test_B30_closed_estimate_stays_frozen_after_config_floor_changes
+    assert after['estimated_fees']==before['estimated_fees']
+E   assert 5.0 == 1.0
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-9b1a7ce87ff84d30a964；净值 -0.17 USD；含估算佣金 1.00 USD
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch30_edges.py::test_B30_foreign_unbound_missing_commission_does_not_break_daily_report
+FAILED v6lite/tests/test_batch30_edges.py::test_B30_closed_estimate_stays_frozen_after_config_floor_changes
+2 failed in 1.21s

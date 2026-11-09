@@ -1,0 +1,41 @@
+{
+  "label": "green_normalization_provenance",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T08:34:24.459769-07:00",
+  "end_pt": "2026-10-29T08:34:43.873909-07:00",
+  "seconds": 19.422,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch32_open_orders.py",
+    "v6lite/tests/test_batch32_normalization_guards.py",
+    "v6lite/tests/test_batch32_release.py"
+  ],
+  "code_sha": "6c83c5f5d676b94d",
+  "source_unchanged": true,
+  "inventory_sha256": "9bfb78473071f2754105bd9e6924ed0a129505069dc9f13c3fa9a3146d319604",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "2997996648f4ef0cef747ceb49693c3f4fd5df1ca7768d35193c4171760f5ce4",
+  "XML_sha256_before_masking": "45a2b09f48302be7e68af90fd87f0b083aca2fdae03edcfe85a036188306a899",
+  "delivered_log_sha256": "33f3d5daa3a4f4efb31ce9d6674ce0e93dd6716cfa2e491448306fa27f9dda91",
+  "delivered_XML_sha256": "45a2b09f48302be7e68af90fd87f0b083aca2fdae03edcfe85a036188306a899",
+  "tests": 30,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch32_normalization_guards",
+      "name": "test_B32_missing_raw_capture_cannot_normalize_mutable_SDK_aliases",
+      "kind": "failure",
+      "message": "assert ([])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch32_normalization_guards",
+      "name": "test_B32_conflict_freezes_all_bound_symbols_and_locates_by_permId",
+      "kind": "failure",
+      "message": "NameError: name 'Purpose' is not defined"
+    }
+  ]
+}

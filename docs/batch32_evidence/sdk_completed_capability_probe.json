@@ -1,0 +1,26 @@
+{
+  "label": "sdk_completed_capability_probe",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T09:34:39.849690-07:00",
+  "end_pt": "2026-10-29T09:34:40.768107-07:00",
+  "seconds": 0.922,
+  "returncode": 0,
+  "args": [
+    "docs/batch32_evidence/completed_decoder_probe.py"
+  ],
+  "code_sha": "5bcb047fb58259d0",
+  "source_unchanged": true,
+  "inventory_sha256": "19c19a1f96dc9ba46fba1d78a5711ab192cb4047b905c89b48bb1963f4e2ae3a",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "c9bcb144c21494e85f380ae0032b056c0b060b27bbfcfada9bc048d41195af09",
+  "XML_sha256_before_masking": "82dcbb0cbba8e87e7abfd69e783f3cf9d8dc008e5166890b55cd8ce3359fcbbb",
+  "delivered_log_sha256": "188c7d2c78e3347bd0649f49b266c0cd289fd68f9cfe0221f5ea1989c86953ff",
+  "delivered_XML_sha256": "82dcbb0cbba8e87e7abfd69e783f3cf9d8dc008e5166890b55cd8ce3359fcbbb",
+  "tests": 1,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

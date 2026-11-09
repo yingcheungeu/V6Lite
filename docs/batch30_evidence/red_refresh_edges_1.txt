@@ -1,0 +1,27 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+___ test_B30_success_then_new_fee_within_60_seconds_is_flushed_at_shutdown ____
+C:\tmp\test_batch30_refresh_edges_red.py:22: in test_B30_success_then_new_fee_within_60_seconds_is_flushed_at_shutdown
+    assert last!=first and 'fees: 4.31' in last and '最终净值 -0.47' in last
+E   assert ('# V6-Lite daily report 2026-10-26 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 4b7b841f0f492c0...f4fae69eb1b4a8f84a2", "symbol": "AAPL"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n' != '# V6-Lite daily report 2026-10-26 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 4b7b841f0f492c0...f4fae69eb1b4a8f84a2", "symbol": "AAPL"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-ff4fae69eb1b4a8f84a2；净值 -0.17 USD；含估算佣金 1.00 USD
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T20:05:21+00:00
+_ test_B30_known_current_day_open_or_unbound_fee_refreshes_topline_without_new_card[OPEN] _
+C:\tmp\test_batch30_refresh_edges_red.py:46: in test_B30_known_current_day_open_or_unbound_fee_refreshes_topline_without_new_card
+    assert after!=before, 'a known fee affects daily totals even without a closed position'
+E   AssertionError: a known fee affects daily totals even without a closed position
+E   assert '# V6-Lite daily report 2026-10-26 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 4b7b841f0f492c0...4d0", "note": null, "status": "FILLED"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n' != '# V6-Lite daily report 2026-10-26 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 4b7b841f0f492c0...4d0", "note": null, "status": "FILLED"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n'
+_ test_B30_known_current_day_open_or_unbound_fee_refreshes_topline_without_new_card[unbound] _
+C:\tmp\test_batch30_refresh_edges_red.py:46: in test_B30_known_current_day_open_or_unbound_fee_refreshes_topline_without_new_card
+    assert after!=before, 'a known fee affects daily totals even without a closed position'
+E   AssertionError: a known fee affects daily totals even without a closed position
+E   assert '# V6-Lite daily report 2026-10-26 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 4b7b841f0f492c0...APL BUY 1@100.0 has no V6-Lite intent"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n' != '# V6-Lite daily report 2026-10-26 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 4b7b841f0f492c0...APL BUY 1@100.0 has no V6-Lite intent"}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-1cb679c2202743f99007；净值 -0.17 USD；含估算佣金 1.00 USD
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b30-unbound-fee-after-report | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+=========================== short test summary info ===========================
+FAILED ..\..\tmp\test_batch30_refresh_edges_red.py::test_B30_success_then_new_fee_within_60_seconds_is_flushed_at_shutdown
+FAILED ..\..\tmp\test_batch30_refresh_edges_red.py::test_B30_known_current_day_open_or_unbound_fee_refreshes_topline_without_new_card[OPEN]
+FAILED ..\..\tmp\test_batch30_refresh_edges_red.py::test_B30_known_current_day_open_or_unbound_fee_refreshes_topline_without_new_card[unbound]
+3 failed in 1.52s

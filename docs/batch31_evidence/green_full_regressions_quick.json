@@ -1,0 +1,28 @@
+{
+  "label": "green_full_regressions_quick",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T14:12:25.326403-07:00",
+  "end_pt": "2026-10-27T14:12:27.518771-07:00",
+  "seconds": 2.188,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch22_schema_audit.py::test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day",
+    "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost",
+    "v6lite/tests/test_batch31_snapshot_guards.py::test_B31_observed_timestamp_does_not_turn_identical_native_price_into_audit_spam"
+  ],
+  "code_sha": "8ff7091296e313f9",
+  "source_unchanged": true,
+  "inventory_sha256": "79f7485833af5a0060826acbe2bc58fd50a81125447e85ff32f150447c8dfa0c",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "67a62dd67d0864265fa543a93459a4de34254f7b6da4c5293ac81580efa379f0",
+  "XML_sha256_before_masking": "b224e584c3318bdeffc8747953a96152267ada3d2251353041b82b907af77a1d",
+  "delivered_log_sha256": "3fa1ed837f224b1ebcf696e8d4ffb5c9642758fe95d610af726b73d030b187c8",
+  "delivered_XML_sha256": "b224e584c3318bdeffc8747953a96152267ada3d2251353041b82b907af77a1d",
+  "tests": 13,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

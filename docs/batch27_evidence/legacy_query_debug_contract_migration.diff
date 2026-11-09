@@ -1,0 +1,20 @@
+--- before/v6lite/tests/test_batch10.py
++++ after/v6lite/tests/test_batch10.py
+@@ -335,7 +335,7 @@
+ @pytest.mark.parametrize("channel,api_name", [("positions", "reqPositions"), ("openOrders", "reqAllOpenOrders")])
+ def test_F5_query_elapsed_includes_old_end_drain(tmp_path, monkeypatch, caplog, channel, api_name):
+     from v6lite.broker import ibkr
+-    caplog.set_level(logging.INFO)
++    caplog.set_level(logging.DEBUG)
+     broker = ibkr.IbkrBroker(make_cfg(tmp_path))
+     elapsed = [100.0]
+     monkeypatch.setattr(ibkr.time, "monotonic", lambda: elapsed[0])
+@@ -356,7 +356,7 @@
+     broker.ib = SimpleNamespace(sleep=sleep, **{api_name: request})
+     (broker.positions_fresh if channel == "positions" else broker.open_orders)()
+     rows = [r for r in caplog.records if "[QUERY]" in r.getMessage()]
+-    assert len(rows) == 1 and rows[0].levelno == logging.INFO
++    assert len(rows) == 1 and rows[0].levelno == logging.DEBUG
+     text = rows[0].getMessage()
+     assert channel in text or api_name in text
+     assert "drained=" in text and "\n" not in text

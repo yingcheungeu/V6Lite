@@ -1,0 +1,38 @@
+{
+  "label": "red_restore_contradiction_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-22T08:35:48.374306-07:00",
+  "end_pt": "2026-10-22T08:37:34.158151-07:00",
+  "seconds": 105.781,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28d_restore_contradiction.py"
+  ],
+  "code_sha": "74f498c0179797f5",
+  "source_unchanged": true,
+  "inventory_sha256": "c6613019886a83c954be31c290d2f8a3c5eaae13968e3532ef1748877e375f59",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "6105da072c6d081554c360dc0d1c5fa326960056af7cc5006e1f3ef41d3486d5",
+  "XML_sha256_before_masking": "22cbd6f1ace9027385331a3a0b07139254ad5f539364490d859ced770f017d8d",
+  "delivered_log_sha256": "e5544e3c34035f66cd55551279289c0f74fb1413f190dfc2fc420cfd465fa788",
+  "delivered_XML_sha256": "22cbd6f1ace9027385331a3a0b07139254ad5f539364490d859ced770f017d8d",
+  "tests": 2,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28d_restore_contradiction",
+      "name": "test_B28d_spontaneous_working_after_cancelled_but_unsent_TP_is_immediately_held",
+      "kind": "failure",
+      "message": "AssertionError: fresh spontaneous working contradiction must page before any further query\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_restore_contradiction",
+      "name": "test_B28d_complete_own_query_cannot_restore_by_modifying_revived_cancelled_ID",
+      "kind": "failure",
+      "message": "AssertionError: [('P1', 'protection tp not sent AAPL\n  AAPL \u6301\u4ed3\u6570\u91cf=1 \u80a1 \u4fdd\u62a4\u5355\u5df2\u786e\u8ba4=0 \u80a1 \u4fdd\u62a4\u5355\u53ef\u80fd=0 \u80a1 \u6b62\u76c8\u5728\u9014=0 \u80a1 \u5916\u90e8\u5356\u5355\u5728\u9014=0 \u80a1 \u672a\u4fdd\u62a4=\u5f85\u6838\u5b9e\uff08\u53ef\u80fd\u8303\u56f4 1\u20131\uff09 \u80a1 \u53ef\u80fd\u8d85\u5356=...\u4ed3\u65b0\u7684\u81ea\u52a8\u6b62\u76c8/\u4fdd\u672c\uff1b\u4e0d\u81ea\u52a8\u64a4\u6539\u6216\u8865\u5efa\u4fdd\u62a4\u5355\uff0c\u5f53\u524d\u4fdd\u62a4\u6309\u65b0\u9c9c\u8bc1\u636e\u53ca\u72ec\u7acb P0 \u5904\u7406\u3002\n  \u4f60\u8981\u505a\u4ec0\u4e48\uff1a1\uff09\u5728 TWS \u6838\u5bf9\u6301\u4ed3\u53ca GTC STP\uff1b2\uff09\u6838\u5bf9\u672c\u673a\u8d26\u672c\u4e0e\u5f53\u65e5\u53ef\u89c1\u6210\u4ea4\uff1b3\uff09\u4fdd\u7559\u51bb\u7ed3\uff0c\u7531 John \u5904\u7406\u5dee\u5f02\uff0c\u4e0d\u8981\u76f2\u76ee\u65b0\u589e\u5356\u5355\u3002')]\nassert []\n +  where [] = _p0(<v6lite.tests.test_batch28d_restore_contradiction.RevivedCancelledStopServer object at 0x000001794362B690>)"
+    }
+  ]
+}

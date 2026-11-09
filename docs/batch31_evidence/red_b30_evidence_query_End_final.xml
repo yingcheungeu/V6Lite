@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.244" timestamp="2026-10-27T09:16:08.941012-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="evidence_replay_spec" name="test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End" time="0.253"><failure message="AssertionError: an owned complete openOrders snapshot must acknowledge the already-issued BE without TP permission&#10;assert ['PRICE_PENDING'] == ['WORKING']&#10;  &#10;  At index 0 diff: 'PRICE_PENDING' != 'WORKING'&#10;  Use -v to get more diff">evidence_replay_spec.py:119: in test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End
+    assert states==['WORKING'],'an owned complete openOrders snapshot must acknowledge the already-issued BE without TP permission'
+E   AssertionError: an owned complete openOrders snapshot must acknowledge the already-issued BE without TP permission
+E   assert ['PRICE_PENDING'] == ['WORKING']
+E     
+E     At index 0 diff: 'PRICE_PENDING' != 'WORKING'
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

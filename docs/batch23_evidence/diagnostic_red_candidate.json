@@ -1,0 +1,68 @@
+{
+  "label": "diagnostic_red_candidate",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "start_pt": "2026-10-09T15:30:01.908167-07:00",
+  "end_pt": "2026-10-09T15:30:03.868285-07:00",
+  "returncode": 1,
+  "source_code_sha": "dd850ff96739e3e4",
+  "source_unchanged": true,
+  "worktree_code_sha": "dd850ff96739e3e4",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_broker_diagnostics.py",
+      "sha256": "f5bcb0a7ab3d199123dbbbfcdc2d562c137d0626f85f5196375a1e047ff9d37e"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 6,
+    "failures": 6,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop]",
+      "outcome": "failure",
+      "message": "AssertionError: the actual catch must persist the full original broker exception: submit_stop\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection]",
+      "outcome": "failure",
+      "message": "AssertionError: the actual catch must persist the full original broker exception: modify_protection\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection]",
+      "outcome": "failure",
+      "message": "AssertionError: the actual catch must persist the full original broker exception: cancel_protection\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL",
+      "outcome": "failure",
+      "message": "AssertionError: the actual catch must persist the full original broker exception: executions_today\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1]",
+      "outcome": "failure",
+      "message": "AssertionError: the actual catch must persist the full original broker exception: release_account_executions_today\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2]",
+      "outcome": "failure",
+      "message": "AssertionError: the actual catch must persist the full original broker exception: release_account_executions_today\nassert []"
+    }
+  ],
+  "stdout_sha256": "28bf075bc1620aadb685fed6006d451c679b1ebc5ac4bab8812ee46fddf43509",
+  "junit_sha256": "ba1f76b8bd7ce945faaef7d41e06cc5fe9eeb0bb959bf801457a7d5345143ec5"
+}

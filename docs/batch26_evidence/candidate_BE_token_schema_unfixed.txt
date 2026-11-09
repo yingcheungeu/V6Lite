@@ -1,0 +1,16 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_ test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[empty_binding] _
+v6lite\tests\test_batch26_be_token_regression.py:56: in test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding
+    assert after['state'] != 'WORKING', (
+E   AssertionError: all({}.items()) or a missing generation cannot authorize BE confirmation
+E   assert 'WORKING' != 'WORKING'
+_ test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[missing_modify_generation] _
+v6lite\tests\test_batch26_be_token_regression.py:56: in test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding
+    assert after['state'] != 'WORKING', (
+E   AssertionError: all({}.items()) or a missing generation cannot authorize BE confirmation
+E   assert 'WORKING' != 'WORKING'
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch26_be_token_regression.py::test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[empty_binding]
+FAILED v6lite/tests/test_batch26_be_token_regression.py::test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[missing_modify_generation]
+2 failed in 1.09s

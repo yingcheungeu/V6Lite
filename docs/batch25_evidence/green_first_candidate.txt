@@ -1,0 +1,36 @@
+........F.................FFFF...                                        [100%]
+================================== FAILURES ===================================
+_ test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC] _
+v6lite\tests\test_batch25_restart.py:303: in test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once
+    assert _pages(rig) == []
+E   AssertionError: assert [('TEST · 🟠 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · 🟠 P1 · 券商查询已限速 · AAPL', 'TEST · 🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-8c38c3984e5145f4b114 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+______ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0] ______
+v6lite\tests\test_batch25_reconnect_alerts.py:124: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert not rig.engine.status_snapshot(rig.clock.now())['entries_allowed']
+E   assert not True
+______ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1] ______
+v6lite\tests\test_batch25_reconnect_alerts.py:124: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert not rig.engine.status_snapshot(rig.clock.now())['entries_allowed']
+E   assert not True
+____ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999] ____
+v6lite\tests\test_batch25_reconnect_alerts.py:124: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert not rig.engine.status_snapshot(rig.clock.now())['entries_allowed']
+E   assert not True
+_____ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0] _____
+v6lite\tests\test_batch25_reconnect_alerts.py:124: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert not rig.engine.status_snapshot(rig.clock.now())['entries_allowed']
+E   assert not True
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: protection gap A warning AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-3255088aaf6c4956b4bc orderId=64 permId=- TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.22；上次确认=未获券商确认 工作单证据时间=过期或缺失；A 空窗 5.0s
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]
+FAILED v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]
+FAILED v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]
+FAILED v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]
+FAILED v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]
+5 failed, 28 passed in 2.89s

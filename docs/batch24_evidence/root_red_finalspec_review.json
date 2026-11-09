@@ -1,0 +1,15 @@
+{
+  "red_artifact": "red_stp_pacing_finalspec",
+  "baseline_code_sha": "a17d647ba28c51e4",
+  "totals": {
+    "tests": 68,
+    "failures": 44,
+    "errors": 0,
+    "skipped": 0
+  },
+  "immutable_baseline_production": true,
+  "stdout_sha256": "41326bd527ff9a74abbc6eb7fbef5531ff57d9ca31a7bd6a7c0b568ecf760c0c",
+  "junit_sha256": "1e1d4a079ee454786dc0531fb462e559cc8ebc625063664cea64cca9cda17544",
+  "reviewer": "root",
+  "check": "PASS"
+}

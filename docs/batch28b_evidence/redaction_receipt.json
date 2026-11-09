@@ -1,0 +1,46 @@
+{
+  "green1.txt": {
+    "raw_sha256": "30d7904b2aa906ce924e004fa14c0f1dfc4cc29acd1929876fd6925916c5d0ac",
+    "synthetic_fixture_only": true,
+    "steps": [
+      {
+        "input_sha256": "30d7904b2aa906ce924e004fa14c0f1dfc4cc29acd1929876fd6925916c5d0ac",
+        "output_sha256": "74979304b3fce7023b65b2c4db89321c892860ba0391aaa3f032d27cd0712272",
+        "rule": "production redact_accounts DFA/DU/DF/U/F/I"
+      }
+    ]
+  },
+  "green1.xml": {
+    "raw_sha256": "39770ec161a8b19eb0441dea11b4ab5a5fc459da845248edbcd5295dd92a8f26",
+    "synthetic_fixture_only": true,
+    "steps": [
+      {
+        "input_sha256": "39770ec161a8b19eb0441dea11b4ab5a5fc459da845248edbcd5295dd92a8f26",
+        "output_sha256": "93d87733db04b6879733f0329af2c17ab4a876bf918bf0a8a23251133686de0d",
+        "rule": "production redact_accounts DFA/DU/DF/U/F/I"
+      }
+    ]
+  },
+  "red_batch28.txt": {
+    "raw_sha256": "f02abc54b9c63a6081f34efcc1932412fa6eea05f04baad6eb73cebad583d0a1",
+    "synthetic_fixture_only": true,
+    "steps": [
+      {
+        "input_sha256": "f02abc54b9c63a6081f34efcc1932412fa6eea05f04baad6eb73cebad583d0a1",
+        "output_sha256": "063baa98cba4a85479318d5f8b80599627e29ec00d7eab7e8863eca50404bbb0",
+        "rule": "production redact_accounts DFA/DU/DF/U/F/I"
+      }
+    ]
+  },
+  "red_batch28.xml": {
+    "raw_sha256": "4baae39dc01e3e414af7ca3e6cb0d1a4075da5cda8e9af5bd38d3548d9ddc868",
+    "synthetic_fixture_only": true,
+    "steps": [
+      {
+        "input_sha256": "4baae39dc01e3e414af7ca3e6cb0d1a4075da5cda8e9af5bd38d3548d9ddc868",
+        "output_sha256": "8432310cdfba1dc29dd93e34c4cfff3d9776723821839173d795ee0e6aa5ada6",
+        "rule": "production redact_accounts DFA/DU/DF/U/F/I"
+      }
+    ]
+  }
+}

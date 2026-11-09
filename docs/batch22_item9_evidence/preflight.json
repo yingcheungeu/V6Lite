@@ -1,0 +1,19 @@
+{
+  "checked_pt": "2026-10-09T07:42:22.685046-07:00",
+  "branch": "dev",
+  "head": "42c77da139ce308ca133eb7e2e40beaf33ecac9d",
+  "batch20_commit": "c5a39952635943dde5f1ae7f2a52da84c8327375",
+  "batch22_commit": "42c77da139ce308ca133eb7e2e40beaf33ecac9d",
+  "production_diff_empty": true,
+  "index_empty": true,
+  "v6lite_process_count_at_open": 0,
+  "archive_read_or_write": false,
+  "external_unowned_docs": [
+    "docs/V6_LITE_OPERATOR_MANUAL.md",
+    "docs/V6_LITE_BATCH23_INSTRUCTIONS.md"
+  ],
+  "preserved_external_sha256": {
+    "docs/V6_LITE_OPERATOR_MANUAL.md": "5d7eb6f043f4d933019f36b6cbfd28b28f8474c0b7097261f9bb77ae627133bf",
+    "docs/V6_LITE_BATCH23_INSTRUCTIONS.md": "61a44e5d4e389f633b5ffb0319e06e485f01dd3ac410458f4123c868167f9f71"
+  }
+}

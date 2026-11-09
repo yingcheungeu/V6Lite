@@ -1,0 +1,23 @@
+{
+  "label": "focused_callbacks1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T09:19:40.798980-07:00",
+  "end_pt": "2026-10-21T09:20:01.387130-07:00",
+  "seconds": 20.594,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch28b_callback_edges.py",
+    "v6lite/tests/test_batch28b_refresh_edges.py",
+    "v6lite/tests/test_batch28b_overnight_refresh.py"
+  ],
+  "code_sha": "c25c5878d97356ae",
+  "source_unchanged": true,
+  "inventory_sha256": "87aae2064834c589e7448196eeb654a51edb9115bd3abe017fb9ce6c9d30ea0b",
+  "incomplete": false,
+  "tests": 15,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

@@ -1,0 +1,85 @@
+..F.......................................FFFFFFF....................... [ 83%]
+..............                                                           [100%]
+================================== FAILURES ===================================
+_ test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence _
+v6lite\tests\test_batch26_overnight_evidence.py:397: in test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence
+    assert row['trigger_price'] == pytest.approx(pos['breakeven_stop'])
+E   assert 108.13 == 113.19 ± 1.1e-04
+E     
+E     comparison failed
+E     Obtained: 108.13
+E     Expected: 113.19 ± 1.1e-04
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-3206c83066014bd09241 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[quantity] _
+v6lite\tests\test_batch26_review_edges.py:86: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    assert row['state'] == 'WORKING' and row['pending_qty'] is None
+E   AssertionError: assert ('PRICE_PENDING' == 'WORKING'
+E     
+E     - WORKING
+E     + PRICE_PENDING)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-20fa5a7a05c44567be89 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[price] _
+v6lite\tests\test_batch26_review_edges.py:86: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    assert row['state'] == 'WORKING' and row['pending_qty'] is None
+E   AssertionError: assert ('PRICE_PENDING' == 'WORKING'
+E     
+E     - WORKING
+E     + PRICE_PENDING)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-6d76a9dfe07d4a29892b | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[side] _
+v6lite\tests\test_batch26_review_edges.py:86: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    assert row['state'] == 'WORKING' and row['pending_qty'] is None
+E   AssertionError: assert ('PRICE_PENDING' == 'WORKING'
+E     
+E     - WORKING
+E     + PRICE_PENDING)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-c8c44bc1311a4f68a0ad | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[broker_order_id] _
+v6lite\tests\test_batch26_review_edges.py:86: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    assert row['state'] == 'WORKING' and row['pending_qty'] is None
+E   AssertionError: assert ('PRICE_PENDING' == 'WORKING'
+E     
+E     - WORKING
+E     + PRICE_PENDING)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-bf059d5520f34f2585f1 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[perm_id] _
+v6lite\tests\test_batch26_review_edges.py:86: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    assert row['state'] == 'WORKING' and row['pending_qty'] is None
+E   AssertionError: assert ('PRICE_PENDING' == 'WORKING'
+E     
+E     - WORKING
+E     + PRICE_PENDING)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-15c9be676d7743189242 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[duplicate_download] _
+v6lite\tests\test_batch26_review_edges.py:86: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    assert row['state'] == 'WORKING' and row['pending_qty'] is None
+E   AssertionError: assert ('PRICE_PENDING' == 'WORKING'
+E     
+E     - WORKING
+E     + PRICE_PENDING)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-213e3626c548449c9b92 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share _
+v6lite\tests\test_batch26_review_edges.py:146: in test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share
+    [tp2] = [request for request in _tp_requests(rig) if request.purpose is Purpose.TP2]
+    ^^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-37b2a88943664b11b5ce | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-37b2a88943664b11b5ce | AAPL：既有证据核验重试仍有效，不能由历史账本解除；券商 P=2 股，账本=2 股，STP S=2 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=1 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:02:02+00:00
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch26_overnight_evidence.py::test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[quantity]
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[price]
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[side]
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[broker_order_id]
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[perm_id]
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[duplicate_download]
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share
+8 failed, 78 passed in 10.25s

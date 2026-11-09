@@ -1,0 +1,35 @@
+{
+  "label": "green_expanded_native_guards",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T08:24:45.046140-07:00",
+  "end_pt": "2026-10-29T08:24:54.504557-07:00",
+  "seconds": 9.453,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch32_open_orders.py",
+    "v6lite/tests/test_batch32_normalization_guards.py",
+    "v6lite/tests/test_batch32_release.py"
+  ],
+  "code_sha": "48821a2cb1e83a9f",
+  "source_unchanged": true,
+  "inventory_sha256": "9698a6e1099322db5e47649e12689d2fd464e50095299c801ef75a1a317f82b8",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "fbd4ee261c934936e29a215c3cbecfc54da7946c83d3eb297e1fa38bc61f4187",
+  "XML_sha256_before_masking": "a445fd91dd994446e24bb32f9f730270d2f0a069dd2d042a1802e37b57097050",
+  "delivered_log_sha256": "32b13f73c78185382cc3df66c75f15ae0516800cbdc4e3dd62ed8b7fb5ee9f44",
+  "delivered_XML_sha256": "a445fd91dd994446e24bb32f9f730270d2f0a069dd2d042a1802e37b57097050",
+  "tests": 22,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch32_normalization_guards",
+      "name": "test_B32_duplicate_diagnostic_is_idempotent_audit_only_and_bounded",
+      "kind": "failure",
+      "message": "assert None is not None"
+    }
+  ]
+}

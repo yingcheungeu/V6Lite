@@ -1,0 +1,8 @@
+{
+  "reason": "intentional stop after read-only discovery of nonfinite quote values in new defer audit; not a random test flake",
+  "old_code_sha": "d082e6a97b7872c6",
+  "partial_full_receipt": "pre_json_fix_final_full_1.json",
+  "partial_full_is_not_a_pass": true,
+  "candidate_archive_sha256": "21a265f0eb2f5754ed34f027628c27a6f49ba9bd26405db4619fe5baa1b758ac",
+  "new_final_sequence_required": true
+}

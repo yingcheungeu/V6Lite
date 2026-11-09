@@ -1,0 +1,57 @@
+{
+  "reviewer": "/root",
+  "at_pt": "2026-10-14T07:30:31.371897-07:00",
+  "classification": "code fix / offline broker-boundary tests; no broker actions",
+  "candidate_code_sha": "471846ec66402fd7",
+  "candidate_production_sha256": {
+    "v6lite/broker/base.py": "21b95859f214f9d969f0aa1ac3cc2eb6dad865efd2b2ad76638136e5023ce593",
+    "v6lite/models.py": "be454da959efd1aad8e2cc81ebdcb2d94ae2b0df79a22b8722ff93bb60fab473",
+    "v6lite/broker/ibkr.py": "d25bdbe5dfcd17eeeea949bcd27a9f9b9752deaa8d3fc9d58d47ae94061fb645",
+    "v6lite/broker/fake.py": "297d4aa54eec186f2b6843dadbaf3358876c65e3d186bcae5294f4d7d5db9def",
+    "v6lite/engine.py": "136d110cc380e516a8ef131d4303b00b07369de4932dde9213193eecf5874cc1",
+    "v6lite/protection_engine.py": "34d9b221ee229b6bd5ce40e02a00e360b46294933bc09b5cc12ad9ed28fff92f"
+  },
+  "core_specs_sha256": {
+    "v6lite/tests/test_batch25_reconnect_alerts.py": "60ab5265d112a27e7cf6ada6fcac1fe9b39be272a1146b454df170dfab61bc45",
+    "v6lite/tests/test_batch25_restart.py": "700733a5c19b48e905f5dc3577a77d65e59225492b4125afd765ba4c8f89c5e9"
+  },
+  "before_production_valid_red": "red_finalspec_b24_attempt3.json",
+  "seed_calibration_after_first_patch": {
+    "receipt": "red_calibrated_seed_b24.json",
+    "totals": {
+      "tests": 33,
+      "failures": 24,
+      "errors": 0,
+      "skipped": 0
+    },
+    "change": "Only new test fixture: finish original Fake identity normal SHUTDOWN first, then calibrate persisted synthetic native permId. Normal shutdown P0/P1=0, unresolved=[], working DAY=[], retained GTC. Exact pre-production test bytes preserved as *_red_before_seed.py. No production change during seed correction.",
+    "synthetic_entry_cost": 342.53,
+    "not_claimed_as_John_cost": true
+  },
+  "initial_candidate_green": {
+    "receipt": "green_first_candidate.json",
+    "totals": {
+      "tests": 33,
+      "failures": 5,
+      "errors": 0,
+      "skipped": 0
+    },
+    "source_unchanged": true,
+    "failure_findings": [
+      {
+        "cases": 1,
+        "finding": "Restart WORKING case still emits query-limit P1; root/agents investigating stale bootstrap status authority interaction."
+      },
+      {
+        "cases": 4,
+        "finding": "A waiting status_snapshot.entries_allowed omits the existing actual _entry_gate protection_unconfirmed veto. Preserve assertions; align status with same predicate, no claimed actual BUY bypass."
+      }
+    ]
+  },
+  "independent_substantive_findings": [
+    "Snapshot StatusEvent.connection_snapshot writes last_raw_status, later used as authority by protection/release; must remain audit-only.",
+    "Labeled dynamic connection generation/PID/reqId/elapsed/attempt fields can split one reconnect cause and bypass rolling count.",
+    "False _recover plus successful positions reconciliation can take healthy early return and skip scheduled retry."
+  ],
+  "gate": "Third independent tests must naturally fail against frozen first production candidate before sole implementer edits; core 5 failure receipts preserved; original tests not weakened."
+}

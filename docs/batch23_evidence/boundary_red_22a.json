@@ -1,0 +1,79 @@
+{
+  "label": "boundary_red_22a",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "start_pt": "2026-10-09T15:19:32.387079-07:00",
+  "end_pt": "2026-10-09T15:19:34.363022-07:00",
+  "returncode": 1,
+  "source_code_sha": "f27e144de9eb406b",
+  "source_unchanged": true,
+  "worktree_code_sha": "a8ecb1b7d6b0d13a",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\boundary_specs\\35040f97659e\\test_batch23_unprotected.py",
+      "sha256": "35040f97659ed5adb5ffc30875b67ee63b847c9f7065a07e33f0c37292bbddb6"
+    }
+  ],
+  "totals": {
+    "tests": 8,
+    "failures": 7,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B23_unprotected_direct_price_rejection_persists_full_P0_pause_without_enabling_STP",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'Order reject...rice constrai' == 'Order reject...IGINAL-REASON'\n  \n  Skipping 189 identical leading characters in diff, use -v to show\n  - ce constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price constraint details; 原始原因完整保留#x1F34E price co...\n  \n  ...Full output truncated (2 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_unprotected_async_native_price_refusal_persists_full_P0_pause_without_enabling_STP",
+      "outcome": "failure",
+      "message": "AssertionError: unprotected TP refusal also needs the complete original reason in real P0 remote cards\nassert ([])"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_corrupt_persisted_pricing_book_cannot_authorize_original_TP_price_or_extra_attempt",
+      "outcome": "failure",
+      "message": "AssertionError: equal req/sent/calculated prices do not validate a contradicting bid/raw-book snapshot\nassert not [OrderRequest(intent_id='v6l-d676a3f185114d77ae86', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=118.45, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-20b231ad7b664f618806')]"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\\u4ef7\\u683c\\u4e0d\\u5728\\u76d1\\u7ba1\\u53c2\\u8003\\u4ef7\\u7684\\u5141\\u8bb8\\u8303\\u56f4\\u5185]",
+      "outcome": "failure",
+      "message": "AssertionError: unprotected TP refusal also needs the complete original reason in real P0 remote cards\nassert ([])"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\\u9650\\u4ef7\\u504f\\u79bb\\u5f53\\u524d\\u53c2\\u8003\\u4ef7\\u592a\\u591a]",
+      "outcome": "failure",
+      "message": "AssertionError: unprotected TP refusal also needs the complete original reason in real P0 remote cards\nassert ([])"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes",
+      "outcome": "failure",
+      "message": "AssertionError: durable release refusal must retain the full broker cause, not an 80-character preview\nassert ([{'reason': 'broker evidence unavailable (Synthetic openOrders proof failed: 保留完整查询失败原因#x1F34E 保留完整查询失败原因#x1F34E 保留完整查询失败原因#x1F34E 保留完整查...retry later', 'request': '{\"operator\": \"John\", \"reason\": \"synthetic local release evidence check\"}', 'symbol': 'AAPL'}] and False)\n +  where False = any(<generator object test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes.<locals>.<genexpr> at 0x00000243D2AF73D0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Cancelled-202-\\u5df2\\u53d6\\u6d88]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Inactive-201-\\u5df2\\u62d2\\u7edd]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 券商已取消保护单', '#x1F534 P0 · 券商已取消保护单\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实... 的重新提交/IBALGO 建议；不要自动改价重挂保护单。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')]\nassert ([('#x1F534 P0 · 券商已取消保护单', '#x1F534 P0 · 券商已取消保护单\\n发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实... 的重新提交/IBALGO 建议；不要自动改价重挂保护单。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')] and False)\n +  where False = any(<generator object test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact.<locals>.<genexpr> at 0x00000243F40CEEA0>)"
+    }
+  ],
+  "stdout_sha256": "ee78cb53d504c685e70ea5bae1a95c798daff065c89dd374696cd08627c38dbf",
+  "junit_sha256": "a8f53cc4d71eccb7ca528e21d0ec64c807691ec2c4a82665d23eac296590899d"
+}

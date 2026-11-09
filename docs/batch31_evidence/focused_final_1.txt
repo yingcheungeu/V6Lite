@@ -1,0 +1,835 @@
+.....FF................................................................. [ 42%]
+................................................F.F..F...FFFFFFF.F.F.F.. [ 84%]
+.........F................                                               [100%]
+================================== FAILURES ===================================
+________ test_B31_real_contradiction_retains_STP_and_freezes[quantity] ________
+v6lite\tests\test_batch31_overnight.py:137: in test_B31_real_contradiction_retains_STP_and_freezes
+    assert rig.store.control('frozen:AAPL') is not None or _audits(rig,'OVERNIGHT_TP_FROZEN')
+E   AssertionError: assert (None is not None or [])
+E    +  where None = control('frozen:AAPL')
+E    +    where control = <v6lite.store.Store object at 0x0000020FB9A23950>.control
+E    +      where <v6lite.store.Store object at 0x0000020FB9A23950> = <v6lite.tests.helpers.Rig object at 0x0000020FDB5C7710>.store
+E    +  and   [] = _audits(<v6lite.tests.helpers.Rig object at 0x0000020FDB5C7710>, 'OVERNIGHT_TP_FROZEN')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 275, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_________ test_B31_real_contradiction_retains_STP_and_freezes[permId] _________
+v6lite\tests\test_batch31_overnight.py:137: in test_B31_real_contradiction_retains_STP_and_freezes
+    assert rig.store.control('frozen:AAPL') is not None or _audits(rig,'OVERNIGHT_TP_FROZEN')
+E   AssertionError: assert (None is not None or [])
+E    +  where None = control('frozen:AAPL')
+E    +    where control = <v6lite.store.Store object at 0x0000020FDB62CC90>.control
+E    +      where <v6lite.store.Store object at 0x0000020FDB62CC90> = <v6lite.tests.helpers.Rig object at 0x0000020FDB471510>.store
+E    +  and   [] = _audits(<v6lite.tests.helpers.Rig object at 0x0000020FDB471510>, 'OVERNIGHT_TP_FROZEN')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 275, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[quantity-live-openOrder] _
+v6lite\tests\test_batch28c_price_confirmation.py:357: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    wire.open_order(bad); rig.engine._drain(rig.clock.now())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:275: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 275, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[permId-live-openOrder] _
+v6lite\tests\test_batch28c_price_confirmation.py:357: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    wire.open_order(bad); rig.engine._drain(rig.clock.now())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:275: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 275, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+__ test_B28c_queued_pre_request_openOrder_cannot_ack_the_later_BE_generation __
+v6lite\tests\test_batch28c_price_confirmation.py:403: in test_B28c_queued_pre_request_openOrder_cannot_ack_the_later_BE_generation
+    rig.engine._handle_event(rig.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:275: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_native_pre_send_openOrder_at_exact_request_time_cannot_confirm_BE _
+v6lite\tests\test_batch28c_price_edges.py:95: in test_B28c_native_pre_send_openOrder_at_exact_request_time_cannot_confirm_BE
+    pending = _be_pending(rig, pid, wire, tp=tp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28c_price_confirmation.py:231: in _be_pending
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'PRICE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:44: in _tick_until
+    rig.tick()
+v6lite\tests\helpers.py:99: in tick
+    self.engine.tick()
+v6lite\engine.py:555: in tick
+    self._tick(now)
+v6lite\engine.py:606: in _tick
+    self._tick_step("protection", lambda: self._protection_progress(
+v6lite\engine.py:589: in _tick_step
+    return action()
+           ^^^^^^^^
+v6lite\engine.py:606: in <lambda>
+    self._tick_step("protection", lambda: self._protection_progress(
+v6lite\protection_engine.py:1079: in _protection_progress
+    self._protection_progress_one(self.clock.now(), row, pos)
+v6lite\protection_engine.py:1565: in _protection_progress_one
+    self._protection_modify(now, row, order, current, increase=False, state="PRICE_PENDING",
+v6lite\protection_engine.py:1623: in _protection_modify
+    self.broker.modify_protection(req)
+v6lite\tests\test_batch28c_price_edges.py:88: in callback_before_send
+    rig.engine._handle_event(at, event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:275: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[missing-token] _
+v6lite\tests\test_batch28c_price_edges.py:130: in test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query
+    wire.ack(only_open_order=True)
+v6lite\tests\test_batch28c_price_confirmation.py:185: in ack
+    self.rig.engine._drain(self.rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:280: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 280, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[malformed-json] _
+v6lite\tests\test_batch28c_price_edges.py:130: in test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query
+    wire.ack(only_open_order=True)
+v6lite\tests\test_batch28c_price_confirmation.py:185: in ack
+    self.rig.engine._drain(self.rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:280: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 280, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[empty-binding] _
+v6lite\tests\test_batch28c_price_edges.py:130: in test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query
+    wire.ack(only_open_order=True)
+v6lite\tests\test_batch28c_price_confirmation.py:185: in ack
+    self.rig.engine._drain(self.rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:280: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 280, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[missing-modify-generation] _
+v6lite\tests\test_batch28c_price_edges.py:130: in test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query
+    wire.ack(only_open_order=True)
+v6lite\tests\test_batch28c_price_confirmation.py:185: in ack
+    self.rig.engine._drain(self.rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:280: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 280, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[wrong-history-digest] _
+v6lite\tests\test_batch28c_price_edges.py:130: in test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query
+    wire.ack(only_open_order=True)
+v6lite\tests\test_batch28c_price_confirmation.py:185: in ack
+    self.rig.engine._drain(self.rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:280: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 280, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, ['durable_request_binding_or_history_prefix'])
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[Inactive-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:36: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    rig.engine._drain(rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:275: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 275, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[PendingCancel-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:36: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    rig.engine._drain(rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:275: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 275, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[account-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:36: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    rig.engine._drain(rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:275: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 275, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[conId-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:36: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    rig.engine._drain(rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:275: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 275, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[clientId-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:36: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    rig.engine._drain(rig.clock.now())
+v6lite\engine.py:668: in _drain
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:812: in _handle_event
+    self._protection_on_open_price(now, event)
+v6lite\protection_confirmations.py:275: in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+v6lite\protection_confirmations.py:239: in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+v6lite\store.py:411: in observation_audit
+    self._observation_operation(lambda state: state.observe(
+v6lite\store.py:397: in _observation_operation
+    self._observation_operation(operation)
+v6lite\store.py:404: in _observation_operation
+    operation(candidate)
+v6lite\store.py:411: in <lambda>
+    self._observation_operation(lambda state: state.observe(
+v6lite\observations.py:84: in observe
+    raise ValueError("not an observation-compressible audit kind")
+E   ValueError: not an observation-compressible audit kind
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=待核实；成交回调本地处理失败 ValueError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.ibkr:ibkr.py:294 urgent broker callback failed; event queued for idempotent replay
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 292, in _dispatch_urgent
+    self._urgent_handler(event)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch28c_price_confirmation.py", line 47, in <lambda>
+    self.deliver = lambda event: rig.engine._on_urgent_broker_event(event)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 677, in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 812, in _handle_event
+    self._protection_on_open_price(now, event)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 275, in _protection_on_open_price
+    self._protection_price_ack_deferred(now, row, event, failed)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_confirmations.py", line 239, in _protection_price_ack_deferred
+    self.store.observation_audit(now, 'PROTECT_PRICE_ACK_DEFERRED',
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in observation_audit
+    self._observation_operation(lambda state: state.observe(
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 397, in _observation_operation
+    self._observation_operation(operation)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 404, in _observation_operation
+    operation(candidate)
+  File "C:\Dev\V6Lite-dev\v6lite\store.py", line 411, in <lambda>
+    self._observation_operation(lambda state: state.observe(
+                                              ^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 84, in observe
+    raise ValueError("not an observation-compressible audit kind")
+ValueError: not an observation-compressible audit kind
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:73: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60
+  v6lite\tests\test_batch31_overnight.py:213: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60(oct27,record_property):
+
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+  v6lite\tests\test_batch31_close_card.py:9: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('arrival',[.009,None])
+
+v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+  v6lite\tests\test_batch28b_overnight_refresh.py:205: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen(
+
+v6lite/tests/test_batch28c_ack_ordering.py::test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second
+  v6lite\tests\test_batch28c_ack_ordering.py:31: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second(
+
+v6lite/tests/test_batch30_commission.py::test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net
+  v6lite\tests\test_batch30_commission.py:64: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net(tmp_path,record_property):
+
+v6lite/tests/test_batch30_commission.py::test_B30_own_query_repairs_fee_once_without_reopening_cooldown[1.0--0.17-False]
+v6lite/tests/test_batch30_commission.py::test_B30_own_query_repairs_fee_once_without_reopening_cooldown[0.01-0.82-True]
+  v6lite\tests\test_batch30_commission.py:85: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('actual,final_net,flips',[(1.,-.17,False),(.01,.82,True)])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_real_contradiction_retains_STP_and_freezes[quantity]
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_real_contradiction_retains_STP_and_freezes[permId]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[quantity-live-openOrder]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[permId-live-openOrder]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_queued_pre_request_openOrder_cannot_ack_the_later_BE_generation
+FAILED v6lite/tests/test_batch28c_price_edges.py::test_B28c_native_pre_send_openOrder_at_exact_request_time_cannot_confirm_BE
+FAILED v6lite/tests/test_batch28c_price_edges.py::test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[missing-token]
+FAILED v6lite/tests/test_batch28c_price_edges.py::test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[malformed-json]
+FAILED v6lite/tests/test_batch28c_price_edges.py::test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[empty-binding]
+FAILED v6lite/tests/test_batch28c_price_edges.py::test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[missing-modify-generation]
+FAILED v6lite/tests/test_batch28c_price_edges.py::test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[wrong-history-digest]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[Inactive-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[PendingCancel-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[account-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[conId-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[clientId-live]
+16 failed, 154 passed, 10 warnings in 131.61s (0:02:11)

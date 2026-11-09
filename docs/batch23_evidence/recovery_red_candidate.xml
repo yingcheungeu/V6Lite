@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.664" timestamp="2026-10-09T15:38:17.872732-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch23_recovery_diagnostic" name="test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold" time="0.259"><failure message="assert ([] == []&#10;  &#10;  Use -v to get more diff and [&lt;sqlite3.Row...0193EF8C4250&gt;] == []&#10;  &#10;  Left contains one more item: &lt;sqlite3.Row object at 0x00000193EF8C4250&gt;&#10;  Use -v to get more diff)">v6lite\tests\test_batch23_recovery_diagnostic.py:91: in test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold
+    assert rig.store.open_positions() == [] and rig.store.protections() == []
+E   assert ([] == []
+E     
+E     Use -v to get more diff and [&lt;sqlite3.Row...0193EF8C4250&gt;] == []
+E     
+E     Left contains one more item: &lt;sqlite3.Row object at 0x00000193EF8C4250&gt;
+E     Use -v to get more diff)</failure></testcase></testsuite></testsuites>

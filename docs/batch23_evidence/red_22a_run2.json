@@ -1,0 +1,206 @@
+{
+  "label": "red_22a_run2",
+  "start_pt": "2026-10-09T14:10:38.348035-07:00",
+  "end_pt": "2026-10-09T14:10:48.357847-07:00",
+  "returncode": 1,
+  "source_code_sha": "f27e144de9eb406b",
+  "source_unchanged": true,
+  "worktree_code_sha": "8599976ecbc28f8c",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\red_specs\\test_batch23_tp_evidence.py",
+      "sha256": "90f93dfaa635f62c295c0de9fa5e9c75f32b79c475cacd3b32a202ccf102e6fe"
+    }
+  ],
+  "totals": {
+    "tests": 30,
+    "failures": 28,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds",
+      "outcome": "failure",
+      "message": "AssertionError: assert 0.01 == 0.002\n +  where 0.01 = LiteConfig(mode='paper', account='DU0000000', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)).exit_limit_band_pct\n +    where LiteConfig(mode='paper', account='DU0000000', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)) = <v6lite.tests.helpers.Rig object at 0x0000022AFACA9550>.cfg"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper.toml]",
+      "outcome": "failure",
+      "message": "assert 0.01 == 0.002"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_delayed.toml]",
+      "outcome": "failure",
+      "message": "assert 0.01 == 0.002"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_test.toml]",
+      "outcome": "failure",
+      "message": "KeyError: 'execution'"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_g3n.toml]",
+      "outcome": "failure",
+      "message": "KeyError: 'execution'"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_all_shipped_examples_use_0_2_percent_exit_band[live.toml]",
+      "outcome": "failure",
+      "message": "assert 0.01 == 0.002"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline",
+      "outcome": "failure",
+      "message": "AssertionError: three-source latency is part of B, not permission to rewrite T0\nassert '2026-10-06T1....600000+00:00' == '2026-10-06T14:01:02+00:00'\n  \n  - 2026-10-06T14:01:02+00:00\n  ?                   ^\n  + 2026-10-06T14:01:05.600000+00:00\n  ?                   ^^^^^^^^"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'TP_ACTIVE' == 'TP_NEEDS_RESTORE'\n  \n  - TP_NEEDS_RESTORE\n  + TP_ACTIVE"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'TP_ACTIVE' == 'TP_NEEDS_RESTORE'\n  \n  - TP_NEEDS_RESTORE\n  + TP_ACTIVE"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot",
+      "outcome": "failure",
+      "message": "AssertionError: price rejection must have its own actual remote P0\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart",
+      "outcome": "failure",
+      "message": "AssertionError: a broker price rejection must durably pause this position TP stage\nassert None"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.0-True]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.01-False]",
+      "outcome": "failure",
+      "message": "assert (1, 1, 1, 0) == (1, 1, 0, 0)\n  \n  At index 2 diff: 1 != 0\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[0.0-130.0]",
+      "outcome": "failure",
+      "message": "assert (1, 1, 1, 0) == (1, 1, 0, 0)\n  \n  At index 2 diff: 1 != 0\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[-1.0-130.0]",
+      "outcome": "failure",
+      "message": "assert (1, 1, 1, 0) == (1, 1, 0, 0)\n  \n  At index 2 diff: 1 != 0\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[130.0-129.0]",
+      "outcome": "failure",
+      "message": "assert (1, 1, 1, 0) == (1, 1, 0, 0)\n  \n  At index 2 diff: 1 != 0\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send",
+      "outcome": "failure",
+      "message": "AssertionError: assert not [OrderRequest(intent_id='v6l-6bcf29d521c1445f998c', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=118.45, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-5c1451f79da74f2f841e')]"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark",
+      "outcome": "failure",
+      "message": "AssertionError: assert 119.17 == 120.13\n +  where 119.17 = OrderRequest(intent_id='v6l-76c00752f46f402a82bb', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=119.17, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-6bfc744c6afe4d02a12a').limit_price"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[ENTRY]",
+      "outcome": "failure",
+      "message": "AssertionError: False must be explicit at the real SDK constructor boundary\nassert ([{'account': 'DU0000000', 'orderRef': 'v6l-b23-pma-ENTRY', 'outsideRth': False, 'tif': 'DAY'}] and False)\n +  where False = all(<generator object test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo.<locals>.<genexpr> at 0x0000022AF9496960>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP1]",
+      "outcome": "failure",
+      "message": "AssertionError: False must be explicit at the real SDK constructor boundary\nassert ([{'account': 'DU0000000', 'orderRef': 'v6l-b23-pma-TP1', 'outsideRth': False, 'tif': 'DAY'}] and False)\n +  where False = all(<generator object test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo.<locals>.<genexpr> at 0x0000022AF9496260>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP2]",
+      "outcome": "failure",
+      "message": "AssertionError: False must be explicit at the real SDK constructor boundary\nassert ([{'account': 'DU0000000', 'orderRef': 'v6l-b23-pma-TP2', 'outsideRth': False, 'tif': 'DAY'}] and False)\n +  where False = all(<generator object test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo.<locals>.<genexpr> at 0x0000022AFED358C0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP3]",
+      "outcome": "failure",
+      "message": "AssertionError: False must be explicit at the real SDK constructor boundary\nassert ([{'account': 'DU0000000', 'orderRef': 'v6l-b23-pma-TP3', 'outsideRth': False, 'tif': 'DAY'}] and False)\n +  where False = all(<generator object test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo.<locals>.<genexpr> at 0x0000022AFED36500>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[False]",
+      "outcome": "failure",
+      "message": "AssertionError: False must be explicit at submit and same-ID modification constructors\nassert ([{'account': 'DU0000000', 'orderRef': 'v6l-protect-b23-pma', 'outsideRth': False, 'tif': 'GTC'}] and False)\n +  where False = all(<generator object test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA.<locals>.<genexpr> at 0x0000022AFED34BA0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[True]",
+      "outcome": "failure",
+      "message": "AssertionError: False must be explicit at submit and same-ID modification constructors\nassert ([{'account': 'DU0000000', 'orderRef': 'v6l-protect-b23-pma', 'outsideRth': False, 'tif': 'GTC'}, {'account': 'DU0000000', 'clientId': 131, 'orderId': 77, 'orderRef': 'v6l-protect-b23-pma', ...}] and False)\n +  where False = all(<generator object test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA.<locals>.<genexpr> at 0x0000022AFED351C0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger.<locals>.<genexpr> at 0x0000022AF9497A00>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger.<locals>.<genexpr> at 0x0000022AF9496C00>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap.<locals>.<genexpr> at 0x0000022AF9494E40>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity.<locals>.<genexpr> at 0x0000022AFACDBCA0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference",
+      "outcome": "failure",
+      "message": "AssertionError: assert False\n +  where False = <built-in method issubset of set object at 0x0000022AFED36180>(set())\n +    where <built-in method issubset of set object at 0x0000022AFED36180> = {'fill', 'reduce_confirm', 'reduce_request', 'send', 'status'}.issubset"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "stdout_sha256": "ca1e6e04f2b787628ccdc816a9c35621b2a94bb1f76f5bc3f6bf9320ae8859b0",
+  "junit_sha256": "d46b180ad1d8c5a81dd54dcf1bbf7afef8b47e51530a350935a37b8ef04f5cd3"
+}

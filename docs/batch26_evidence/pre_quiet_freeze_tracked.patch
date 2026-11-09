@@ -1,0 +1,541 @@
+diff --git a/v6lite/config.py b/v6lite/config.py
+index 389e770..46fe1f2 100644
+--- a/v6lite/config.py
++++ b/v6lite/config.py
+@@ -95,6 +95,7 @@ class ProtectionConfig:
+     trigger_unfilled_p0_seconds: int = 60
+     steady_check_seconds: int = 15
+     evidence_fail_p0_seconds: int = 60
++    overnight_tp: str = "freeze"
+ 
+ 
+ @dataclass(frozen=True)
+@@ -258,6 +259,8 @@ def validate(cfg: LiteConfig) -> LiteConfig:
+     protection = cfg.protection
+     if type(protection.enabled) is not bool:
+         raise ConfigError("protection.enabled must be true or false")
++    if type(protection.overnight_tp) is not str or protection.overnight_tp not in {"freeze", "constraint"}:
++        raise ConfigError('protection.overnight_tp must be "freeze" or "constraint"')
+     if protection.order_type != "STP":
+         raise ConfigError('protection.order_type must be "STP"')
+     for name in ("gap_a_p1_seconds", "gap_a_p0_seconds", "gap_b_cancel_seconds", "gap_b_p0_seconds",
+diff --git a/v6lite/engine.py b/v6lite/engine.py
+index 1abe24c..eb0e20a 100644
+--- a/v6lite/engine.py
++++ b/v6lite/engine.py
+@@ -2933,6 +2933,7 @@ class Engine(ProtectionMixin):
+         if self.dry_run:
+             self.store.audit(now, "SHUTDOWN", dry_run=True)
+             self.broker.disconnect()
++            self._shutdown_report_after_close()
+             return
+         try:
+             orders = self.broker.open_orders()
+@@ -2994,15 +2995,34 @@ class Engine(ProtectionMixin):
+                               f"{', '.join(still_working) or '-'}")
+         self.store.audit(self.clock.now(), "SHUTDOWN", unresolved=leftover, broker_working=still_working)
+         self.broker.disconnect()
++        self._shutdown_report_after_close()
+ 
+-    def _end_of_day(self, now: datetime) -> None:
++    def _shutdown_report_after_close(self) -> None:
++        """Supplement a missing report only after the safe broker shutdown.
++
++        Reporting is best effort: neither rendering nor local/remote delivery
++        failures may interrupt DAY cancellation, GTC retention or disconnect.
++        """
++        try:
++            self._end_of_day(self.clock.now(), at_shutdown=True)
++        except Exception as exc:
++            log.error("[SHUTDOWN_REPORT] daily report supplement failed (%s)", type(exc).__name__)
++
++    def _end_of_day(self, now: datetime, *, at_shutdown: bool = False) -> None:
+         session = session_for(trading_day(now))
+-        if session is None or now < session.close_utc + DAILY_REPORT_AFTER_CLOSE:
++        if session is None:
++            return
++        report_at = session.close_utc if at_shutdown else session.close_utc + DAILY_REPORT_AFTER_CLOSE
++        if now < report_at:
+             return
+         key = f"report:{session.day.isoformat()}"
+         state = self.store.control(key) or ""
+         if state.startswith("sent") or state.startswith("written_local"):
+             return
++        # A pending delivery already generated this day's report. Shutdown
++        # supplements missing reports; only the normal scheduler may retry.
++        if at_shutdown and state.startswith("pending:"):
++            return
+         if state.startswith("pending:"):
+             _, delivery_id, queued_at = state.split(":", 2)
+             if self.alerter.knows(delivery_id):
+diff --git a/v6lite/examples/live.toml b/v6lite/examples/live.toml
+index 53cdb98..6baa5f6 100644
+--- a/v6lite/examples/live.toml
++++ b/v6lite/examples/live.toml
+@@ -73,6 +73,9 @@ reconcile_interval_seconds = 300
+ exit_check_interval_seconds = 30
+ 
+ [protection]
++# constraint relies on John's accepted operating constraints A and B.
++# Every TP/BE still requires fresh ledger/position/GTC/visible-fill checks.
++overnight_tp = "freeze"
+ enabled = true
+ order_type = "STP"
+ gap_a_p1_seconds = 5
+diff --git a/v6lite/examples/paper.toml b/v6lite/examples/paper.toml
+index c7b27b3..dd80c31 100644
+--- a/v6lite/examples/paper.toml
++++ b/v6lite/examples/paper.toml
+@@ -74,6 +74,9 @@ reconcile_interval_seconds = 300
+ exit_check_interval_seconds = 30
+ 
+ [protection]
++# constraint relies on John's accepted operating constraints A and B.
++# Every TP/BE still requires fresh ledger/position/GTC/visible-fill checks.
++overnight_tp = "freeze"
+ enabled = true
+ order_type = "STP"
+ gap_a_p1_seconds = 5
+diff --git a/v6lite/examples/paper_delayed.toml b/v6lite/examples/paper_delayed.toml
+index 722e249..77379e2 100644
+--- a/v6lite/examples/paper_delayed.toml
++++ b/v6lite/examples/paper_delayed.toml
+@@ -74,6 +74,9 @@ reconcile_interval_seconds = 300
+ exit_check_interval_seconds = 30
+ 
+ [protection]
++# constraint relies on John's accepted operating constraints A and B.
++# Every TP/BE still requires fresh ledger/position/GTC/visible-fill checks.
++overnight_tp = "freeze"
+ enabled = true
+ order_type = "STP"
+ gap_a_p1_seconds = 5
+diff --git a/v6lite/examples/paper_g3n.toml b/v6lite/examples/paper_g3n.toml
+index 7e1c490..dea5136 100644
+--- a/v6lite/examples/paper_g3n.toml
++++ b/v6lite/examples/paper_g3n.toml
+@@ -32,6 +32,9 @@ SPY = "index"
+ scan_times_et = ["10:00", "13:30"]
+ 
+ [protection]
++# constraint relies on John's accepted operating constraints A and B.
++# Every TP/BE still requires fresh ledger/position/GTC/visible-fill checks.
++overnight_tp = "freeze"
+ enabled = true
+ order_type = "STP"
+ gap_a_p1_seconds = 5
+diff --git a/v6lite/examples/paper_test.toml b/v6lite/examples/paper_test.toml
+index 97445b4..4fff3b9 100644
+--- a/v6lite/examples/paper_test.toml
++++ b/v6lite/examples/paper_test.toml
+@@ -17,6 +17,9 @@ etf = []
+ protected = ["MSTR"]
+ 
+ [protection]
++# constraint relies on John's accepted operating constraints A and B.
++# Every TP/BE still requires fresh ledger/position/GTC/visible-fill checks.
++overnight_tp = "freeze"
+ enabled = true
+ order_type = "STP"
+ gap_a_p1_seconds = 5
+diff --git a/v6lite/protection_engine.py b/v6lite/protection_engine.py
+index 244c972..a9e4f90 100644
+--- a/v6lite/protection_engine.py
++++ b/v6lite/protection_engine.py
+@@ -22,6 +22,7 @@ from v6lite.market_calendar import is_rth, trading_day
+ from v6lite.models import IntentStatus, OrderRequest, ProtectionRequest, Purpose, Side
+ from v6lite.protection import protection_prices, same_cent_price
+ from v6lite.protection_incidents import ProtectionIncidentMixin
++from v6lite.overnight_evidence import OvernightEvidenceMixin
+ from v6lite.protection_cancellations import ProtectionCancellationMixin
+ from v6lite.tp_evidence import TpEvidenceMixin, price_rejection
+ from v6lite.store import new_id
+@@ -36,7 +37,7 @@ class ProtectionEvidenceQueryError(BrokerError):
+     """A broker request failed, distinct from contradictory broker evidence."""
+ 
+ 
+-class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEvidenceMixin):
++class ProtectionMixin(OvernightEvidenceMixin, ProtectionIncidentMixin, ProtectionCancellationMixin, TpEvidenceMixin):
+     def _preflight_protection_deadlines(self, now: datetime) -> None:
+         """Startup/reconnect timer: alert only, no broker mutations.
+ 
+@@ -452,6 +453,9 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+         quantities = {int(intent["quantity"])}
+         if row["pending_qty"] is not None:
+             quantities.add(int(row["pending_qty"]))
++        previous = self._overnight_restore_previous_total(row, intent)
++        if previous is not None:
++            quantities.add(previous)  # scoped own-TP pre-ACK snapshot only
+         return (identity.total_quantity in quantities and
+                 math.isfinite(identity.filled) and math.isfinite(identity.remaining) and
+                 float(identity.filled).is_integer() and float(identity.remaining).is_integer() and
+@@ -591,6 +595,7 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                 intent_id=row["intent_id"], position_id=row["position_id"], symbol=row["symbol"],
+                 full_error=str(exc), error_type=type(exc).__name__, maybe_sent=getattr(exc, "maybe_sent", None))
+             raise ProtectionEvidenceQueryError("executions_today query unavailable") from exc
++        visible = self._overnight_visible_query(row)
+         if socket_generation != getattr(self.broker, "query_generation", None):
+             raise ProtectionEvidenceQueryError("three-source query socket generation changed")
+         self._fresh_seq += 1
+@@ -627,7 +632,7 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             "SELECT exec_id FROM fills WHERE position_id=? AND trading_day>=?",
+             (row["position_id"], trading_day(at).isoformat()))}
+         today_exec_complete = fills is not None and today_required.issubset({f.exec_id for f in fills})
+-        if ledger_execs or fills is None:
++        if ledger_execs or fills is None or self._overnight_position(row, at):
+             full_exec = False
+         else:
+             required = {r["exec_id"] for r in self.store.conn.execute(
+@@ -646,6 +651,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             "prior_day_execution_history": bool(ledger_execs),
+             "current_day_executions_complete": today_exec_complete,
+             "row_context": row_context, "socket_generation": socket_generation,
++            "authority_binding": self._protection_verification_binding(row),
++            "client_fills": tuple(fills or ()), **visible,
+             "contract_identity": tuple(row[name] for name in
+                 ("broker_order_id", "perm_id", "con_id", "account", "client_id"))}
+         return int(held), own, other_sells, full_exec
+@@ -973,6 +980,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             now = self.clock.now()  # confirmation is after the slowest reply
+         except Exception as exc:
+             self._protection_query_failure(self.clock.now(), row, exc, steady=steady)
++            if self._overnight_position(row) and self.cfg.protection.overnight_tp == "constraint":
++                self._overnight_failure(self.clock.now(), row, "当日新鲜持仓/工作单/成交核验失败：" + str(exc))
+             return
+         current_row = self.store.protection(row["position_id"])
+         if current_row is None or (current_row["state"], current_row["modify_generation"],
+@@ -986,6 +995,37 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             else:
+                 self._protection_priority_due = True
+             return
++        overnight = self._overnight_position(row, now)
++        external = [o for o in others if not o.ours]
++        if external:
++            if self.store.control(f"frozen:{row['symbol']}") is None:
++                self.store.set_control(now, f"frozen:{row['symbol']}", "external_sell")
++            self._protection_page(now, "P0", "external sell", row,
++                                  f"外部卖单最多={sum(math.ceil(o.remaining) for o in external)} 股；"
++                                  f"外部订单号={','.join(o.intent_id for o in external)}")
++        overnight_flow = bool(row["tp_stage"] is not None and self._overnight_flow(row))
++        workflow_complete = full_exec
++        overnight_price_confirmation = False
++        overnight_denied = False
++        if overnight_flow:
++            workflow_complete = self._overnight_flow_authority(now, row, held, own, others)
++            overnight_denied = not workflow_complete
++        elif overnight:
++            overnight_denied = not self._overnight_authority(now, row, held, own, others, announce=True)
++            if overnight_denied:
++                # A TP restriction is not a failed stop check. Record only
++                # the fresh, unchanged healthy stop observation for 15s pacing;
++                # never clear genuine retry/F4/hold facts or claim full_exec.
++                if self._overnight_stop_stable(now, row, held, own, others):
++                    self.store.update_protection(now, row["position_id"], confirmed_at=now)
++                    return
++                if len(own) > 1 or (own and not self._protection_order_valid(row, own[0])):
++                    self._protection_page(now, "P0", "unknown", row, "GTC STP 保护工作单强身份不一致")
++                elif not own:
++                    self._protection_page(now, "P0", "unknown", row, "新鲜工作单未发现原 GTC；不自动重建")
++            else:
++                overnight_price_confirmation = bool(self._protection_notice_evidence.get(
++                    row["position_id"], {}).get("overnight_tp_scope", {}).get("price_confirmation"))
+         if len(own) > 1:
+             self._protection_verification_failure(now, row)
+             self._protection_page(now, "P0", "unknown", row, "出现重复保护身份")
+@@ -1020,7 +1060,7 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                 self._protection_steady(row) and order is not None and
+                 order.status in _WORKING and intent is not None and not intent["hold_reason"] and
+                 not others and held == math.ceil(order.remaining) == int(row["confirmed_remaining"]))
+-            if not stable_carry:
++            if not stable_carry and not overnight_flow and not overnight_price_confirmation:
+                 self._protection_verification_failure(now, row)
+             # Exact, unchanged overnight coverage is healthy holding evidence.
+             # full_exec remains False; existing real retry/F4 facts are NOT
+@@ -1049,16 +1089,18 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             self.store.update_protection(now, row["position_id"], confirmed_at=now)
+             row = self.store.protection(row["position_id"])
+         other_max = sum(self._protection_other_remaining(o) for o in others)
+-        external = [o for o in others if not o.ours]
+-        if external:
+-            if self.store.control(f"frozen:{row['symbol']}") is None:
+-                self.store.set_control(now, f"frozen:{row['symbol']}", "external_sell")
+-            self._protection_page(now, "P0", "external sell", row,
+-                                  f"外部卖单最多={sum(math.ceil(o.remaining) for o in external)} 股；"
+-                                  f"外部订单号={','.join(o.intent_id for o in external)}")
+         current = math.ceil(order.remaining) if order is not None else 0
+         pending_confirmed = None
+-        if order is not None and row["pending_qty"] is not None:
++        safe_decrease_confirmation = bool(
++            row["state"] == "MODIFY_PENDING" and row["pending_qty"] is not None and
++            int(row["pending_qty"]) < int(row["requested_qty"]) and
++            same_cent_price(row["pending_trigger"], row["trigger_price"]) and
++            row["pending_limit"] is None and row["limit_price"] is None)
++        # A denied overnight TP cannot block native acknowledgement of an
++        # already-requested same-price emergency decrease. This only lowers
++        # the conservative S reserve; it never authorizes TP, BE or an increase.
++        if order is not None and row["pending_qty"] is not None and (
++                not overnight_denied or safe_decrease_confirmation):
+             pending = int(row["pending_qty"])
+             expected_remaining = max(0, pending - self.store.intent_filled_qty(row["intent_id"]))
+             price_ok = same_cent_price(order.aux_price, row["pending_trigger"])
+@@ -1073,6 +1115,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                                              state="WORKING")
+                 self.store.update_protection_intent_quantity(now, row["intent_id"], pending)
+                 row = self.store.protection(row["position_id"])
++                if overnight_price_confirmation:
++                    self.store.delete_control(f"overnight_be_flow:{row['position_id']}")
+         worst_current = max(current, int(row["pending_max_remaining"]))
+         if worst_current + other_max > held:
+             # This check precedes every phase-specific return.  A cancelled
+@@ -1097,6 +1141,14 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                                   f"可能卖出总量={worst_current + other_max} 股，"
+                                   f"实际持仓={held} 股；只减保护数量，禁止新增卖单")
+             return
++        if overnight_denied:
++            # Gross-capacity containment above still owns every unsafe SELL
++            # state. A missing or short stop retains its original P0; only a
++            # stop-stable TP-only restriction is handled as one P1 explanation.
++            if order is not None and current < held and row["pending_qty"] is None:
++                self._protection_page(now, "P0", "evidence incomplete", row,
++                                      f"未保护={held-current} 股；跨日或订单证据缺失")
++            return
+         if pending_confirmed is not None:
+             kind, old_a, old_b = pending_confirmed
+             if kind == "MODIFY_PENDING":
+@@ -1142,7 +1194,7 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             tp = self.store.intent(tp_id) if tp_id else None
+             tp_working = any(o.intent_id == tp_id for o in others)
+             if tp is not None and tp["status"] in {IntentStatus.CANCEL_SEEN, IntentStatus.CANCELLED} \
+-                    and not tp_working and full_exec:
++                    and not tp_working and workflow_complete:
+                 binding = self._protection_verification_binding(row)
+                 try:
+                     held2, own2, others2, complete2 = self._protection_evidence(row)
+@@ -1151,6 +1203,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                     now = self.clock.now()
+                     complete2 = False
+                     held2, own2, others2 = None, [], []
++                complete2 = complete2 or (overnight_flow and self._overnight_flow_authority(
++                    now, self.store.protection(row["position_id"]), held2, own2, others2))
+                 stable = complete2 and held2 == held and not others2 and \
+                     ((order is None and not own2) or
+                      (order is not None and len(own2) == 1 and own2[0].remaining == order.remaining))
+@@ -1169,13 +1223,14 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                 self._tp_record(now, row, "restore_request", target_remaining=held)
+                 self.store.update_intent(now, tp_id, status=IntentStatus.CANCELLED, note=tp["note"])
+                 if order is not None:
+-                    self._protection_verification_success(latest)
++                    if full_exec:
++                        self._protection_verification_success(latest)
+                     self._protection_modify(now, latest, own2[0], held, increase=True, state="RESTORE_PENDING")
+                 elif not others:
+                     self._protection_replace_after_cancel(now, row, held)
+             return
+         if row["state"] == "PROTECT_CANCEL_PENDING":
+-            if order is None and full_exec and self.store.intent(row["intent_id"])["last_raw_status"] in _TERMINAL:
++            if order is None and workflow_complete and self.store.intent(row["intent_id"])["last_raw_status"] in _TERMINAL:
+                 binding = self._protection_verification_binding(row)
+                 try:
+                     held2, own2, others2, complete2 = self._protection_evidence(row)
+@@ -1185,6 +1240,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                     complete2 = False
+                     held2, own2, others2 = None, [], []
+                 latest = self.store.protection(row["position_id"])
++                complete2 = complete2 or (overnight_flow and self._overnight_flow_authority(
++                    now, latest, held2, own2, others2))
+                 current_intent = self.store.intent(latest["intent_id"]) if latest is not None else None
+                 if (not complete2 or held2 != held or own2 or others2 or
+                         self._protection_verification_binding(latest) != binding or
+@@ -1194,7 +1251,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                     self._protection_page(now, "P0", "evidence incomplete", latest or row,
+                                           "末股 GTC 撤单需要两轮稳定完整三项证据")
+                     return
+-                self._protection_verification_success(latest)
++                if full_exec:
++                    self._protection_verification_success(latest)
+                 self.store.update_intent(now, row["intent_id"], status=IntentStatus.CANCELLED,
+                                          note="confirmed GTC cancellation before final TP")
+                 self.store.update_protection(now, row["position_id"], requested_qty=0,
+@@ -1216,7 +1274,7 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                 self._protection_page(now, "P0", "unknown", row,
+                                       "止盈结果尚未核实；禁止新增第二张卖单")
+                 return
+-            if not full_exec or others:
++            if not workflow_complete or others:
+                 if full_exec:
+                     self._protection_verification_failure(now, row)
+                 self._protection_page(now, "P0", "evidence incomplete", row,
+@@ -1234,6 +1292,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                     self._protection_page(now, "P0", "evidence incomplete", latest or row, str(exc))
+                     return
+                 latest = self.store.protection(row["position_id"])
++                complete2 = complete2 or (overnight_flow and self._overnight_flow_authority(
++                    now, latest, held2, own2, others2))
+                 tp = self.store.intent(tp["intent_id"])
+                 if (not complete2 or held2 != held or others2 or
+                     self._protection_verification_binding(latest) != binding or tp is None or
+@@ -1249,7 +1309,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             if order is not None:
+                 # Non-final TP: keep the original GTC identity and increase
+                 # only after a fresh position/order/execution proof.
+-                self._protection_verification_success(self.store.protection(row["position_id"]))
++                if full_exec:
++                    self._protection_verification_success(self.store.protection(row["position_id"]))
+                 self._protection_modify(now, row, order, held, increase=True, state="RESTORE_PENDING")
+             else:
+                 # Final-share TP: old GTC was cancelled before the TP attempt.
+@@ -1288,6 +1349,13 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+         self._protection_resolve_if_covered(now, row, order, held, others, full_exec)
+         if pos["tp1_done"] and pos["breakeven_stop"] and current > 0 and not others and \
+                 float(row["trigger_price"]) != float(pos["breakeven_stop"]):
++            if overnight:
++                if not self._overnight_authority(now, row, held, own, others, announce=True):
++                    return
++            elif not full_exec:
++                self._protection_page(now, "P0", "evidence incomplete", row,
++                                      "保本价修改需要新鲜、完整的当日持仓、工作单和成交证据")
++                return
+             try:
+                 trigger, limit = protection_prices(pos["breakeven_stop"])
+             except Exception as exc:
+@@ -1341,6 +1409,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                                      pending_trigger=req.trigger_price, pending_limit=req.limit_price,
+                                      modify_generation=int(row["modify_generation"]) + 1,
+                                      status_seen_generation=-1, state=state)
++        if state == "PRICE_PENDING" and self._overnight_position(row, now):
++            self._overnight_begin_price(now, self.store.protection(row["position_id"]))
+         try:
+             self.broker.modify_protection(req)
+         except BrokerError as exc:
+@@ -1367,6 +1437,10 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             self._protection_page(now, "P0", "unknown", row, "无法核实 GTC 撤单身份")
+             return
+         self.store.update_protection(now, row["position_id"], state="CANCEL_PENDING")
++        token = self._overnight_flow(row)
++        if token is not None and reason == "final_TP":
++            token["original_cancel_requested"] = True
++            self.store.set_control(now, f"overnight_tp_flow:{row['position_id']}", json.dumps(token, sort_keys=True))
+         try:
+             self.broker.cancel(row["intent_id"], expected_order_id=row["broker_order_id"],
+                                expected_perm_id=row["perm_id"], expected_con_id=row["con_id"],
+@@ -1417,6 +1491,8 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             now = self.clock.now()
+             self._exit_backoff[backoff] = now + timedelta(seconds=30)
+             self._protection_page(now, "P0", "evidence incomplete", row, type(exc).__name__)
++            if self._overnight_position(row):
++                self._overnight_failure(now, row, "当日新鲜止盈证据查询失败：" + str(exc))
+             return
+         now = self.clock.now()
+         latest_row = self.store.protection(position_id)
+@@ -1427,7 +1503,22 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             if check_quote(self.cfg, latest_quote, now, require_bid_ask=False,
+                            max_age_seconds=self.cfg.max_quote_age_seconds * EXIT_QUOTE_AGE_MULTIPLIER).allowed:
+                 self._protection_on_mark(now, latest_row, latest_quote.mark())
+-        if not full_exec or len(own) != 1 or not self._protection_order_valid(row, own[0]) or others:
++        overnight = self._overnight_position(row, now)
++        tp_complete = full_exec
++        if overnight:
++            tp_complete = self._overnight_authority(now, row, held, own, others, announce=True)
++        if overnight and not tp_complete:
++            self._exit_backoff[backoff] = now + timedelta(seconds=30)
++            # Restrict TP without turning a healthy original stop into a P0.
++            # Real absence, identity failure and insufficient coverage remain
++            # protection incidents, independently of the one-time TP card.
++            if len(own) != 1 or not self._protection_order_valid(row, own[0]):
++                self._protection_page(now, "P0", "unknown", row, "原 GTC 保护工作单缺失或强身份不符")
++            elif own[0].remaining < held:
++                self._protection_page(now, "P0", "evidence incomplete", row,
++                                      f"未保护={held-math.ceil(own[0].remaining)} 股；保护数量不足")
++            return
++        if not tp_complete or len(own) != 1 or not self._protection_order_valid(row, own[0]) or others:
+             self._exit_backoff[backoff] = now + timedelta(seconds=30)
+             self._protection_page(now, "P0", "evidence incomplete", row, "止盈需要无冲突的完整三项证据")
+             return
+@@ -1490,7 +1581,9 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+         if qty <= 0 or qty > held:
+             return
+         target = held - qty
+-        self._tp_start_workflow(now, row, stage)
++        workflow = self._tp_start_workflow(now, row, stage)
++        if overnight:
++            self._overnight_begin_flow(now, row, stage, workflow)
+         self._tp_record(now, row, "reduce_request", quote=quote, quantity=qty, target_remaining=target)
+         if target <= 0:
+             # Last TP: broker-confirm GTC cancellation before submitting the
+@@ -1520,6 +1613,15 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             return
+         if not row["tp_stage"] or row["tp_intent_id"] or row["state"] != "WORKING":
+             return
++        if self._overnight_flow(row):
++            try:
++                held, own, others, _ = self._protection_evidence(row)
++                now = self.clock.now()
++            except Exception as exc:
++                self._overnight_failure(self.clock.now(), row, "止盈发出前新鲜证据失败：" + str(exc))
++                return
++            if not self._overnight_flow_authority(now, row, held, own, others):
++                return
+         from v6lite.exits import sell_limit
+         quote = self.broker.quote(row["symbol"])
+         if quote is None:
+@@ -1541,6 +1643,7 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+         self.store.set_control(now, f"tp_workflow:{row['position_id']}", json.dumps(workflow))
+         self.store.set_control(now, f"tp_send:{req.intent_id}", json.dumps(workflow))
+         # Persist the phase before sending so a crash cannot duplicate TP.
++        self._overnight_bind_tp(now, row, req.intent_id)
+         self.store.update_protection(now, row["position_id"], tp_intent_id=req.intent_id, state="TP_ACTIVE")
+         result = self._send(now, req, atr=None, count_entry_day=None)
+         received = self._protection_b_status_mono.pop(row["position_id"], None)
+@@ -1881,15 +1984,19 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             self._protection_page(now, "P0", "evidence incomplete", latest or row, type(exc).__name__)
+             return
+         latest = self.store.protection(row["position_id"])
++        overnight_restore = bool(for_tp_restore and self._overnight_flow(latest))
++        complete_for_restore = complete or (overnight_restore and self._overnight_flow_authority(
++            now, latest, held2, old, others))
+         current_intent = self.store.intent(latest["intent_id"]) if latest is not None else None
+-        if (held2 != held or old or others or not complete or
++        if (held2 != held or old or others or not complete_for_restore or
+                 self._protection_verification_binding(latest) != binding or
+                 current_intent is None or current_intent["hold_reason"]):
+             self._protection_verification_failure(now, latest or row)
+             self._protection_page(now, "P0", "evidence incomplete", latest or row,
+                                   "末股止盈恢复需要两轮稳定完整三项证据")
+             return
+-        self._protection_verification_success(latest)
++        if complete:
++            self._protection_verification_success(latest)
+         old_id = row["intent_id"]
+         try:
+             self.store.archive_protection_identity(now, row)
+@@ -1897,6 +2004,10 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+             self._protection_page(now, "P0", "unknown", row, f"无法持久保留退休身份：{type(exc).__name__}")
+             return
+         new_ref = new_id("v6l-protect")
++        if overnight_restore:
++            token = self._overnight_flow(latest)
++            token["replacement_intent_id"] = new_ref
++            self.store.set_control(now, f"overnight_tp_flow:{row['position_id']}", json.dumps(token, sort_keys=True))
+         old_intent = self.store.intent(old_id)
+         if old_intent is not None and old_intent["status"] != IntentStatus.FILLED:
+             self.store.update_intent(now, old_id, status=IntentStatus.CANCELLED,
+@@ -1916,6 +2027,7 @@ class ProtectionMixin(ProtectionIncidentMixin, ProtectionCancellationMixin, TpEv
+                                          gap_a_started_at=None)
+ 
+     def _protection_close_b(self, now: datetime, row, outcome: str) -> None:
++        self.store.delete_control(f"overnight_tp_flow:{row['position_id']}")
+         self.alerter.resolve("P1", f"protection tp not sent {row['symbol']}")
+         if row["gap_b_started_at"]:
+             secs = (now - datetime.fromisoformat(row["gap_b_started_at"])).total_seconds()
+diff --git a/v6lite/tp_evidence.py b/v6lite/tp_evidence.py
+index 92d569f..71c6bd8 100644
+--- a/v6lite/tp_evidence.py
++++ b/v6lite/tp_evidence.py
+@@ -148,6 +148,7 @@ class TpEvidenceMixin:
+             "S": (max(row["confirmed_remaining"], row["pending_max_remaining"])
+                   if row["confirmed_remaining"] is not None and row["pending_max_remaining"] is not None else None), "T": t, "X": x,
+             "three_source_complete": bool(evidence and evidence["full_exec"]),
++            "overnight_tp_scope": evidence.get("overnight_tp_scope") if evidence else None,
+             "proof_started_at": evidence["started_at"].isoformat() if evidence else None,
+             "proof_at": evidence["at"].isoformat() if evidence else None}
+         if pricing_snapshot is not None:

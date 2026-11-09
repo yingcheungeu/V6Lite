@@ -1,0 +1,10 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+    "v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+    "v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice"
+  ]
+}

@@ -1,0 +1,1741 @@
+{
+  "label": "focused_order_safety1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T09:18:45.801277-07:00",
+  "end_pt": "2026-10-21T09:18:59.310534-07:00",
+  "seconds": 13.5,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch22_protection_lifecycle.py",
+    "v6lite/tests/test_batch22_trigger_incidents.py",
+    "v6lite/tests/test_batch22_trigger_replacement.py",
+    "v6lite/tests/test_batch22_snapshot_cancel.py",
+    "v6lite/tests/test_batch23_contracts.py",
+    "v6lite/tests/test_batch23_tp_evidence.py",
+    "v6lite/tests/test_batch23_terminal_fact.py",
+    "v6lite/tests/test_batch23_unprotected.py",
+    "v6lite/tests/test_batch24_evidence_deadline.py",
+    "v6lite/tests/test_batch24_pacing.py",
+    "v6lite/tests/test_batch24_pacing_lifecycle.py",
+    "v6lite/tests/test_batch24_retry_second_round.py",
+    "v6lite/tests/test_batch24_wire_latency.py",
+    "v6lite/tests/test_batch25_restart.py",
+    "v6lite/tests/test_batch25_reconnect_alerts.py",
+    "v6lite/tests/test_batch25_review_regressions.py"
+  ],
+  "code_sha": "c25c5878d97356ae",
+  "source_unchanged": true,
+  "inventory_sha256": "87aae2064834c589e7448196eeb654a51edb9115bd3abe017fb9ce6c9d30ea0b",
+  "incomplete": false,
+  "tests": 289,
+  "failures": 0,
+  "errors": 284,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_first_partial_fill_submits_STP_in_urgent_callback_with_no_limit",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_partial_entry_growth_updates_same_STP_quantity_and_aux_price",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_native_STP_without_limit_is_complete_identity_and_price_proof",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[account]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[client_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[con_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[broker_order_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[perm_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[intent_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[aux_price]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[tif]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[outside_rth]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[order_type]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_TP_waits_for_STP_decrease_confirmation_then_preserves_gross_capacity",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_TP_timeout_keeps_cancel_pending_reserve_then_restores_same_STP",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_TP1_fill_changes_aux_to_breakeven_without_changing_STP_identity",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_last_share_TP_waits_for_exact_STP_cancel_then_LMT_fill_closes",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_last_share_TP_cancel_retires_old_STP_and_restores_new_STP",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[working]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[decrease_pending]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_working]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_partial]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_cancel_pending]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[protection_partial]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[submit_pending]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_shutdown_preserves_strong_STP_GTC_and_restarts_without_rehang",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_retired_STP_identity_trigger_and_type_survive_restart_and_late_fill",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[broker_order_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[perm_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[con_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_release_accepts_STP_only_after_exact_cancel_and_two_stable_flat_snapshots",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[perm_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[account]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[client_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[con_id]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_existing_STP_LMT_record_is_P0_and_original_contract_is_never_migrated",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_schema4_old_row_gets_STP_LMT_annotation_only_then_P0",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_RTH_stop_crossing_is_P1_then_remaining_timeout_P0_without_old_limit_shortcut",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_partial_stop_fill_does_not_restart_continuing_RTH_remaining_timeout",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_stop_timer_ignores_off_RTH_and_new_session_does_not_inherit_overnight_seconds",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_RTH_trigger_timer_survives_restart_without_duplicate_P1_or_reset",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A warning]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A overdue]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[unknown]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[shutdown incomplete]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger crossing]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger unfilled]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[rejected]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_PROTECT_FILL_audits_each_execution_signed_slippage_and_report_exactly_once",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_protection_final_fill_keeps_audit_stop_and_actual_price_after_close",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_dry_run_all_protection_lifecycle_entry_points_have_zero_broker_writes",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_trigger_rebound_does_not_erase_first_crossing_or_timeout",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_trigger_failed_P0_retries_actual_delivery_then_30_minute_P1",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_fresh_full_coverage_cannot_resolve_triggered_unfilled_remainder",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_actual_full_stop_execution_resolves_episode_once_without_rebooking",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[missing]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_incidents",
+      "name": "test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[stale]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_trigger_replacement",
+      "name": "test_B22_confirmed_old_cancel_and_strong_new_working_proof_end_only_old_trigger",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[unknown-None]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[integer-zero-is-not-False]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[missing]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_fresh_snapshot_preserves_explicit_False_as_strong_RTH_evidence",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP LMT]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP LMT]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP LMT]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP LMT]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP LMT]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP LMT]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP LMT]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP LMT]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wire-ref-conflict]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[legacy-type]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-side]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-tif]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[outside-RTH]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-RTH]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[numeric-zero-RTH]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-RTH]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-stock]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-secType]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-secType]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-USD]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-currency]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-currency]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_correct_typed_STP_tuple_can_cancel_same_ids_without_replacement[1.7976931348623157e+308]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_correct_typed_STP_tuple_can_cancel_same_ids_without_replacement[340.19000000000005]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[BUY]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[SELL]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.779]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.775]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-100.129]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-1.009]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.77]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.779]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.775]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-100.129]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-1.009]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_snapshot_cancel",
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.77]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[1]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[3]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[10]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_rejects_out_of_range_and_bool[0]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_rejects_out_of_range_and_bool[11]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_quote_age_config_rejects_out_of_range_and_bool[True]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[missing_bid]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[infinite_bid]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[infinite_ask]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[nan_bid]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[future_ts]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[naive_ts]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_first_stale_rounds_persist_counter_but_log_once_per_minute_without_trade_mutation",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_dry_stale_TP_gate_has_no_counter_audit_pause_or_broker_writes",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_existing_queued_timeout_control_cannot_override_fresh_bid_pricing",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_old_timeout_command_explicitly_refuses_to_manufacture_nonmarketable_TP",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_openOrder_only_working_price_change_is_hooked_once_and_reaches_real_P1",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[0.0]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[nan]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[1.7976931348623157e+308]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_STP_positive_cap_is_independent_evidence_not_a_trigger_price_comparison",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_ENTRY_working_price_difference_real_P1_blocks_later_scan_without_ledger_reprice",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[account]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[orderId]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[permId]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[conId]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_other_broker_code_nonterminal_keeps_full_reason_but_grants_no_restore_or_pause",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_exact_episode_manual_request_clears_pause_only_after_full_coverage_without_same_tick_resend",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change0]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change1]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change2]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[open_orders]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[positions_fresh]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[executions_today]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_external_SELL_or_dry_cannot_clear_existing_pause",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_resume_TP_CLI_only_queues_exact_durable_request_and_has_zero_broker_writes",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_price_rejection_ACK_deduplicates_after_31_minutes_and_successful_restart_without_global_mute",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_price_rejection_unACKed_reason_replay_retries_only_remaining_remote_parts",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[native_hold]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[operator_freeze]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[corrupt_pause]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_query_failed]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_contracts",
+      "name": "test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_reply_partial]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.0-True]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.01-False]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[0.0-130.0]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[-1.0-130.0]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[130.0-129.0]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[ENTRY]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP1]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP2]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP3]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[False]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[True]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_tp_evidence",
+      "name": "test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_terminal_fact",
+      "name": "test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_unprotected_direct_price_rejection_persists_full_P0_pause_without_enabling_STP",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_unprotected_async_native_price_refusal_persists_full_P0_pause_without_enabling_STP",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_corrupt_persisted_pricing_book_cannot_authorize_original_TP_price_or_extra_attempt",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\\u4ef7\\u683c\\u4e0d\\u5728\\u76d1\\u7ba1\\u53c2\\u8003\\u4ef7\\u7684\\u5141\\u8bb8\\u8303\\u56f4\\u5185]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\\u9650\\u4ef7\\u504f\\u79bb\\u5f53\\u524d\\u53c2\\u8003\\u4ef7\\u592a\\u591a]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Cancelled-202-\\u5df2\\u53d6\\u6d88]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_unprotected",
+      "name": "test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Inactive-201-\\u5df2\\u62d2\\u7edd]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_evidence_deadline",
+      "name": "test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_evidence_deadline",
+      "name": "test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_all_native_outgoing_messages_are_limited_at_connection_wire",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_all_three_query_channels_use_actual_one_second_minimum",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_startup_native_queries_cannot_bypass_following_fresh_channel_limits",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_congested_read_queries_do_not_delay_stop_beyond_A5_or_reorder_orders",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_default_to_one_second_and_change_fingerprint",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-open_orders_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-positions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-executions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-open_orders_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-positions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-executions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-open_orders_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-positions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-executions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-open_orders_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-positions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-executions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-open_orders_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-positions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-executions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-open_orders_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-positions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-executions_min_interval_seconds]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_load_from_ibkr_without_reading_operator_config",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_repeated_bad_native_callbacks_do_not_reset_position_retry_or_forge_confirmation",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_CANCEL_PENDING]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-PROTECT_CANCEL_PENDING]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_NEEDS_RESTORE]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-replace_after_cancel]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_CANCEL_PENDING]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-PROTECT_CANCEL_PENDING]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_NEEDS_RESTORE]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-replace_after_cancel]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_CANCEL_PENDING]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-PROTECT_CANCEL_PENDING]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_NEEDS_RESTORE]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-replace_after_cancel]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_failed]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_partial]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_wire_latency",
+      "name": "test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[query_notice]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_wire_latency",
+      "name": "test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[connection_write]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-connection-after-wire]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [WinError 3] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u8def\u5f84\u3002: 'C:\\\\tmp\\\\v6lite-b28b-tests\\\\focused_order_safety1'\""
+    }
+  ]
+}

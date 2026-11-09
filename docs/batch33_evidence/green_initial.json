@@ -1,0 +1,69 @@
+{
+  "dependencies": {
+    "version": "0.9.86",
+    "sources": {
+      "wrapper.py": "4ed7299106979c0b2518658d4d3ef371fe5a39b254586254650edc35217cb0c1",
+      "decoder.py": "b06cbe24eca37e3386d0ab213deb43e493171e8cbb7c26060ea4936f97f79b4c",
+      "client.py": "1d86989d6815881ea88576e8e3bdcf34fe40d1da778dfee68619ee80e53a2822",
+      "ib.py": "b5f60220c941a335c47cbb0257a342e3122b1f07cc9f809a36a0e7c9b4ba84fc",
+      "order.py": "f014b063b899fd9ec1cd4bd4cf9cc834de0efb89c089bdeb673c09b392131ca7",
+      "util.py": "86c7250f24545721a4fd230e747b0d01e66cb1f8a4ad12e152c7a70d4b37d964"
+    }
+  },
+  "dependencies_unchanged": true,
+  "label": "green_initial",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-31T15:29:45.389597-07:00",
+  "end_pt": "2026-10-31T15:29:50.158244-07:00",
+  "seconds": 4.766,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch33_open_delay.py"
+  ],
+  "code_sha": "c0026767090c92d6",
+  "source_unchanged": true,
+  "inventory_sha256": "94e1af9f879fcfea6774369806a85d0e60e85486069722c37bf251ac0a946225",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "d9cac08629891b2f4b0f84e9caebf626738cf316f1690f7c7a266766f2935e70",
+  "XML_sha256_before_masking": "ae040c00acc02b470ab5c2391c239e20c3a03c85b6cc5e1756d3ca0896af7d14",
+  "delivered_log_sha256": "96389ce3b6f9aab515ac4f5ac8b3da824a57ff3962736045b3d2e199c9b6c1f0",
+  "delivered_XML_sha256": "ae040c00acc02b470ab5c2391c239e20c3a03c85b6cc5e1756d3ca0896af7d14",
+  "tests": 30,
+  "failures": 5,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_configured_boundary[0-0.8-False]",
+      "kind": "failure",
+      "message": "AssertionError: assert False is not False\n +  where False = bool([])\n +    where [] = _audits(<v6lite.tests.helpers.Rig object at 0x000001A18807C2D0>, 'STAGE_BEGIN')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_configured_boundary[60-60.0-False]",
+      "kind": "failure",
+      "message": "AssertionError: assert False is not False\n +  where False = bool([])\n +    where [] = _audits(<v6lite.tests.helpers.Rig object at 0x000001A1A88F3750>, 'STAGE_BEGIN')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_vanished_trigger_is_not_replayed",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == 1\n +  where 0 = len([])\n +    where [] = _audits(<v6lite.tests.helpers.Rig object at 0x000001A1A88A4D90>, 'TP_START_DEFERRED_OPEN')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_existing_workflow_restoration_continues",
+      "kind": "failure",
+      "message": "AssertionError: assert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_report_joins_actual_start_and_never_invents_one",
+      "kind": "failure",
+      "message": "assert ('\u5f00\u76d8\u6b62\u76c8\u5ef6\u540e\uff1a1 \u6b21' in '# V6-Lite daily report 2026-10-29 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: c0026767090c92d...pped\": false, \"broker_connected\": true,\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n')"
+    }
+  ]
+}

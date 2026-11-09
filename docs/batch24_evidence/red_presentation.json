@@ -1,0 +1,82 @@
+{
+  "label": "red_presentation",
+  "baseline": true,
+  "full": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-12T07:36:29.044140-07:00",
+  "end_pt": "2026-10-12T07:36:31.199553-07:00",
+  "returncode": 1,
+  "source_code_sha": "a17d647ba28c51e4",
+  "source_unchanged": true,
+  "worktree_code_sha": "aedbd02bd5e08913",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_presentation.py",
+      "sha256": "662b12d3fb50c30f66a958480db21cf19a757ed283c1fcea21caa909f5bfa25a"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 8,
+    "failures": 8,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_cap_is_two_decimals_in_real_price_drift_card_and_raw_in_audit",
+      "outcome": "failure",
+      "message": "AssertionError: {\"title\": \"#x1F7E0 P1 · 券商工作价格不一致 · AAPL\", \"color\": 15965202, \"fields\": [{\"name\": \"发生了什么\", \"value\": \"orderRef=v6l-ce48016dadf2425e8c5c 发送价=119.41 工作价=119.41 cap=119.50999999999999\", \"inline\": false}, {\"name\": \"影响\", \"value\": \"该标的自动重发已阻止；原账本价格保留，STP 恢复继续独立核验。\", \"inline\": false}, {\"name\": \"你要做什么\", \"value\": \"1）核对 TWS 原订单价格；2）由 John 处置，禁止自动跟随 cap 改价。\", \"inline\": false}]}\nassert 'cap=119.51' in '{\"title\": \"#x1F7E0 P1 · 券商工作价格不一致 · AAPL\", \"color\": 15965202, \"fields\": [{\"name\": \"发生了什么\", \"value\": \"orderRef=v6l-ce48016da...继续独立核验。\", \"inline\": false}, {\"name\": \"你要做什么\", \"value\": \"1）核对 TWS 原订单价格；2）由 John 处置，禁止自动跟随 cap 改价。\", \"inline\": false}]}'"
+    },
+    {
+      "classname": "",
+      "name": "test_tp_rejection_p0_has_definite_p_s_unprotected_from_full_evidence",
+      "outcome": "failure",
+      "message": "AssertionError: {\"title\": \"#x1F534 P0 · 止盈价格被券商拒绝 · AAPL\", \"color\": 15158332, \"fields\": [{\"name\": \"发生了什么\", \"value\": \"AAPL TP数量=2 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-775f62aac07a4778ae7f orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-9ef15d83becc4b58a66f stage=TP1 pause_id=tp-pause-5c5a96bb12b440d8a8bf；保护恢复仍需完整三项证据。\", \"inline\": false}, {\"name\": \"券商原因原文 1/1\", \"value\": \"Order price is outside the allowed price range; B24 synthetic reason\", \"inline\": false}, {\"name\": \"影响\", \"value\": \"本持仓自动止盈已暂停；券商保护与可用卖出数量仍须核验。\", \"inline\": false}, {\"name\": \"你要做什么\", \"value\": \"1）核对 TWS 持仓和工作卖单；2）确认 STP 已恢复到全部持仓；3）仅在原强核验门槛满足后由 John 执行 resume-tp AAPL --position-id pos-9ef15d83becc4b58a66f --pause-id tp-pause-5c5a96bb12b440d8a8bf --operator John --reason 明确核验原因。没有合法 STP 完整证据时保持暂停。不要自动改价重发或点击 IBALGO。\", \"inline\": false}]}\nassert None\n +  where None = <function search at 0x000002A1722819E0>('(?:持仓(?:数量|\\\\s*P)?|\\\\bP)\\\\s*[=:：]\\\\s*6\\\\s*股', '{\"title\": \"#x1F534 P0 · 止盈价格被券商拒绝 · AAPL\", \"color\": 15158332, \"fields\": [{\"name\": \"发生了什么\", \"value\": \"AAPL TP数量=2 股；发送限价=119...pause-5c5a96bb12b440d8a8bf --operator John --reason 明确核验原因。没有合法 STP 完整证据时保持暂停。不要自动改价重发或点击 IBALGO。\", \"inline\": false}]}')\n +    where <function search at 0x000002A1722819E0> = re.search"
+    },
+    {
+      "classname": "",
+      "name": "test_tws_7497_startup_and_heartbeat_cards_use_tws_or_ibkr",
+      "outcome": "failure",
+      "message": "AssertionError: {\"title\": \"#x1F7E2 告警通道自检\", \"color\": 3066993, \"fields\": [{\"name\": \"发生了什么\", \"value\": \"V6-Lite 正在验证远程告警送达。\", \"inline\": false}, {\"name\": \"下一步\", \"value\": \"无需操作。\", \"inline\": false}]}\nassert ('TWS' in '{\"title\": \"#x1F7E2 告警通道自检\", \"color\": 3066993, \"fields\": [{\"name\": \"发生了什么\", \"value\": \"V6-Lite 正在验证远程告警送达。\", \"inline\": false}, {\"name\": \"下一步\", \"value\": \"无需操作。\", \"inline\": false}]}' or 'IBKR' in '{\"title\": \"#x1F7E2 告警通道自检\", \"color\": 3066993, \"fields\": [{\"name\": \"发生了什么\", \"value\": \"V6-Lite 正在验证远程告警送达。\", \"inline\": false}, {\"name\": \"下一步\", \"value\": \"无需操作。\", \"inline\": false}]}')"
+    },
+    {
+      "classname": "",
+      "name": "test_native_wrapper_2108_one_readable_log_and_original_audit[\\\\u5e02\\\\u573a\\\\u6570\\\\u636e\\\\u8fde\\\\u63a5\\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "outcome": "failure",
+      "message": "assert '市场数据连接暂时不活跃' in 'Warning 2108, reqId -1: \\\\u5e02\\\\u573a\\\\u6570\\\\u636e\\\\u8fde\\\\u63a5\\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3'\n +  where 'Warning 2108, reqId -1: \\\\u5e02\\\\u573a\\\\u6570\\\\u636e\\\\u8fde\\\\u63a5\\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3' = getMessage()\n +    where getMessage = <LogRecord: ib_insync.wrapper, 20, C:\\Dev\\V6Lite-dev\\.venv\\Lib\\site-packages\\ib_insync\\wrapper.py, 1111, \"Warning 2108, reqId -1: \\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3\">.getMessage"
+    },
+    {
+      "classname": "",
+      "name": "test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "outcome": "failure",
+      "message": "AssertionError: the exact raw warning must remain available in audit\nassert False\n +  where False = any(<generator object test_native_wrapper_2108_one_readable_log_and_original_audit.<locals>.<genexpr> at 0x000002A176E809A0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e farm: \\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e farm: \\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "outcome": "failure",
+      "message": "assert '市场数据 farm: 暂时不活跃' in 'Warning 2108, reqId -1: 市场数据 farm: \\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3'\n +  where 'Warning 2108, reqId -1: 市场数据 farm: \\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3' = getMessage()\n +    where getMessage = <LogRecord: ib_insync.wrapper, 20, C:\\Dev\\V6Lite-dev\\.venv\\Lib\\site-packages\\ib_insync\\wrapper.py, 1111, \"Warning 2108, reqId -1: 市场数据 farm: \\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3\">.getMessage"
+    },
+    {
+      "classname": "",
+      "name": "test_protection_unknown_p0_suppresses_same_order_held_p1",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F7E0 P1 · 保留订单仍在途', '#x1F7E0 P1 · 保留订单仍在途\n  发生了什么：AAPL PROTECT 保留订单 v6l-protect-ca8b17356ecd4f28a0b6 仍在途，剩余 3 股。\n  影响：这些股数已预留；重复卖出可能超卖。\n  你要做什么：1）在 TWS 核对订单 v6l-protect-ca8b17356ecd4f28a0b6 及成交；2）先确认/撤销在途单，再人工处理持仓；3）本机运行 status。')]\nassert not [('#x1F7E0 P1 · 保留订单仍在途', '#x1F7E0 P1 · 保留订单仍在途\\n发生了什么：AAPL PROTECT 保留订单 v6l-protect-ca8b17356ecd4f28a0b6 仍在途，剩余 3 股。\\n影响：这些股数已预留；重复卖出可能超卖。\\n你要做什么：1）在 TWS 核对订单 v6l-protect-ca8b17356ecd4f28a0b6 及成交；2）先确认/撤销在途单，再人工处理持仓；3）本机运行 status。')]"
+    },
+    {
+      "classname": "",
+      "name": "test_ordinary_day_held_working_still_pages_p1_once",
+      "outcome": "failure",
+      "message": "AttributeError: 'OrderRequest' object has no attribute 'tif'"
+    }
+  ],
+  "stdout_sha256": "5af27a0dbeb51c30e99fbcae7b683a04dd7d54b6b0e457ce311a650befd42983",
+  "junit_sha256": "86aac3c3b891fc07bb994e44fb34573ac2cd4e545c0d57bd7688c37727136238"
+}

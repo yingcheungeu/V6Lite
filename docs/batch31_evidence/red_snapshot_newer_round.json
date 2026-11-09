@@ -1,0 +1,38 @@
+{
+  "label": "red_snapshot_newer_round",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T09:21:04.651177-07:00",
+  "end_pt": "2026-10-27T09:21:06.241982-07:00",
+  "seconds": 1.578,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_snapshot_guards.py"
+  ],
+  "code_sha": "e6ceb142487ac950",
+  "source_unchanged": true,
+  "inventory_sha256": "1d3b3eedd6b4e82148f01debf11c69eecf89bf13be6172f5c7db0012aef610a9",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "c5945814396448beac1b9d86e664c33c3e05765112122427df72191a6c8269d0",
+  "XML_sha256_before_masking": "39ad304d17a9c014b4746055ac83a1827715daed74fdf6f0a0e40d8f22707f5c",
+  "delivered_log_sha256": "312bdab38ceb9a90d6c982135bdee2fedebad7a814a907bae02bdb346bbdd3b2",
+  "delivered_XML_sha256": "39ad304d17a9c014b4746055ac83a1827715daed74fdf6f0a0e40d8f22707f5c",
+  "tests": 2,
+  "failures": 0,
+  "errors": 2,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_snapshot_guards",
+      "name": "test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request[in-flight]",
+      "kind": "error",
+      "message": "failed on setup with \"file C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch31_snapshot_guards.py, line 23\n  @pytest.mark.parametrize('newer',['in-flight','complete'])\n  def test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request(evidence_run,newer):\nfile C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch31_evidence_replay.py, line 21\n  @pytest.fixture\n  def evidence_run(overnight_run,monkeypatch):\nE       fixture 'overnight_run' not found\n>       available fixtures: _class_scoped_runner, _function_scoped_runner, _module_scoped_runner, _package_scoped_runner, _session_scoped_runner, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, event_loop_policy, evidence_run, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch31_evidence_replay.py:21\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_snapshot_guards",
+      "name": "test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request[complete]",
+      "kind": "error",
+      "message": "failed on setup with \"file C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch31_snapshot_guards.py, line 23\n  @pytest.mark.parametrize('newer',['in-flight','complete'])\n  def test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request(evidence_run,newer):\nfile C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch31_evidence_replay.py, line 21\n  @pytest.fixture\n  def evidence_run(overnight_run,monkeypatch):\nE       fixture 'overnight_run' not found\n>       available fixtures: _class_scoped_runner, _function_scoped_runner, _module_scoped_runner, _package_scoped_runner, _session_scoped_runner, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, event_loop_policy, evidence_run, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch31_evidence_replay.py:21\""
+    }
+  ]
+}

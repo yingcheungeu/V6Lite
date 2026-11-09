@@ -1,0 +1,27 @@
+{
+  "label": "green_shared_book_capacity",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T08:38:10.678341-07:00",
+  "end_pt": "2026-10-29T08:38:13.189151-07:00",
+  "seconds": 2.516,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch32_normalization_guards.py::test_B32_shared_normalized_book_reserves_one_STP_and_one_TP",
+    "v6lite/tests/test_batch32_normalization_guards.py::test_B32_identical_invalid_native_filled_cannot_be_promoted_to_ACK"
+  ],
+  "code_sha": "5bcb047fb58259d0",
+  "source_unchanged": true,
+  "inventory_sha256": "19c19a1f96dc9ba46fba1d78a5711ab192cb4047b905c89b48bb1963f4e2ae3a",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "abdee21917f60c71e0d80951a86f93ba181f262efed4595ff92f2a973fda8e4c",
+  "XML_sha256_before_masking": "978b36505daac3dc96dbc0c31ccc6b7518c24a4662c700fe92e9cdea1605d8ee",
+  "delivered_log_sha256": "ee2ba53f5f723b88db1ab2bcbe391a1f44b8d761183b9ac9b27650917667d537",
+  "delivered_XML_sha256": "978b36505daac3dc96dbc0c31ccc6b7518c24a4662c700fe92e9cdea1605d8ee",
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

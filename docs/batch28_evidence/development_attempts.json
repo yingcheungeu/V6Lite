@@ -1,0 +1,47 @@
+{
+  "focused_legacy_initial": {
+    "classification": "harness invocation error",
+    "result": "0 tests; nonexistent test_batch27.py; corrected file list; not a product failure"
+  },
+  "focused_legacy_initial_actual": {
+    "classification": "superseded contracts",
+    "result": "9 failed, 49 passed",
+    "reason": "B17 required held/invalid-flat silence to WARNING and resubscribe; user now asks to treat unchanged field silence as normal. Position/fill/order/freshness assertions retained."
+  },
+  "focused_legacy_migrated": {
+    "classification": "superseded contracts",
+    "result": "7 failed, 106 passed",
+    "reason": "B19 explicitly required classic resubscription for 7 non-flat/unknown cases. Migrated only request selection/count, preserving stale timestamps."
+  },
+  "baseline_28a": {
+    "classification": "intentional frozen-spec natural red",
+    "result": "15 failed, 2 passed, 2 candidate controls excluded",
+    "spec_sha256": "9c79d611507e78d6a3d7dfb51987be97312cc2ae95c0961f7bc734ddb5ea6779"
+  },
+  "new_spec_candidate": {
+    "classification": "passed candidate",
+    "result": "19 passed"
+  },
+  "focused_final": {
+    "classification": "passed before two review edge fixes",
+    "result": "132 passed"
+  },
+  "focused_review_edges": {
+    "classification": "final frozen focused candidate",
+    "result": "97 passed"
+  },
+  "release_full_1": {
+    "classification": "complete superseded candidate; not part of three consecutive passes",
+    "reason": "B10, G2 day1, G2 selfreview and review-round2 tests still required classic resubscription. Migrated request/count/log assertions and request stub only; no-write, rate-limit, genuine-reply timestamp and stale timestamp assertions retained.",
+    "result": "1998 passed, 4 failed, 1 skipped"
+  },
+  "flaky_gate": {
+    "occurrences": 0,
+    "waivers": 0,
+    "reason": "All development failures explained by deliberate baseline reds, invalid path or superseded contracts; no intermittent test failure observed."
+  },
+  "final_focused": {
+    "classification": "final frozen focused candidate",
+    "result": "201 passed"
+  }
+}

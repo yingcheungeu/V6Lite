@@ -1,0 +1,16 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold _
+v6lite\tests\test_batch23_recovery_diagnostic.py:91: in test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold
+    assert rig.store.open_positions() == [] and rig.store.protections() == []
+E   assert ([] == []
+E     
+E     Use -v to get more diff and [<sqlite3.Row...0193EF8C4250>] == []
+E     
+E     Left contains one more item: <sqlite3.Row object at 0x00000193EF8C4250>
+E     Use -v to get more diff)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: recovery failed | Synthetic recovery open_orders BrokerError: original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; END-RECOVERY-ORIGINAL-CAUSE-DO-NOT-TRUNCATE
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch23_recovery_diagnostic.py::test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold
+1 failed in 0.69s

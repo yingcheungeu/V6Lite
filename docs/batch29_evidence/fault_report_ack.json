@@ -1,0 +1,6 @@
+{
+  "failed_receipt": "green_report_observer_1",
+  "reason": "existing _activate_tp intentionally disables automatic modification status; report fixture now explicitly delivers actual FakeBroker restore ACK and full settle before asserting confirmed S, preserving all original gates/assertions",
+  "before_sha256": "ea9cbdc9a02609c1e198bcf9706a000b71099b2b4e5c122233500a904b84e391",
+  "after_sha256": "e68f59e93d6184fb76b34d51befe1752ee343f33e9a8c3b77be9ee6ca8f8f69f"
+}

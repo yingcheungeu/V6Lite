@@ -1,0 +1,28 @@
+{
+  "label": "final_full_2",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T20:11:32.634590-07:00",
+  "end_pt": "2026-10-20T20:25:47.529973-07:00",
+  "seconds": 854.891,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests",
+    "scripts/tests"
+  ],
+  "tests": 2003,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "source_unchanged": true,
+  "inventory_sha256": "b4b264401b697e377b341c5149c55e4fd174f440a17c32900960b36b43d54c09",
+  "incomplete": false,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_strategy_parity",
+      "name": "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "kind": "skipped",
+      "message": "legacy market_scanner.py not present"
+    }
+  ]
+}

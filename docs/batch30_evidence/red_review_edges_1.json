@@ -1,0 +1,38 @@
+{
+  "label": "red_review_edges_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-26T15:23:30.230625-07:00",
+  "end_pt": "2026-10-26T15:23:32.184396-07:00",
+  "seconds": 1.953,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch30_edges.py"
+  ],
+  "code_sha": "8a6c770e347ce3ec",
+  "source_unchanged": true,
+  "inventory_sha256": "560a3aea92bc95eeecd0dae6a451bb73f73f2c88f8ae12a912b7b03dc5b8d4b0",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "3a72c5b1c60d8ee23c4f412ea9227ee4e18ef800b30c70110620fd2ae539d5d3",
+  "XML_sha256_before_masking": "30d266d5da2798ef14355aed8e9b4f557e4c7ab01ef1018d16ccf0833c1ae855",
+  "delivered_log_sha256": "6e2545d3d50632b453d5591df708ea40976d069381b7d1c1ba137042d31d4b38",
+  "delivered_XML_sha256": "30d266d5da2798ef14355aed8e9b4f557e4c7ab01ef1018d16ccf0833c1ae855",
+  "tests": 2,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch30_edges",
+      "name": "test_B30_foreign_unbound_missing_commission_does_not_break_daily_report",
+      "kind": "failure",
+      "message": "TypeError: can only concatenate str (not \"NoneType\") to str"
+    },
+    {
+      "classname": "v6lite.tests.test_batch30_edges",
+      "name": "test_B30_closed_estimate_stays_frozen_after_config_floor_changes",
+      "kind": "failure",
+      "message": "assert 5.0 == 1.0"
+    }
+  ]
+}

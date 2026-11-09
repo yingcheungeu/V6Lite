@@ -1,0 +1,307 @@
+"""B29 native cancel failures, durable one-shot crash/replay and hostile final pricing inputs."""
+from __future__ import annotations
+
+import json
+from dataclasses import replace
+
+import pytest
+
+from v6lite import __main__ as cli
+from v6lite.models import IntentStatus, Purpose
+from v6lite.test_tp_timeout import CLAIM, PREFIX, timeout_price
+from v6lite.tests.test_batch23_contracts import (
+    _activate_tp, _g3t_working, _queue_tp, _safety as _fake_safety, _settle,
+)
+from v6lite.tests.test_batch29_native_timeout import (
+    native_timeout, overnight_run, _no_network, _safety as _native_safety,
+)
+
+KEY = PREFIX + "AAPL"
+TP = {Purpose.TP1, Purpose.TP2, Purpose.TP3}
+
+
+def _request(path):
+    return cli.main(["test-tp-timeout", "AAPL", "--operator", "John", "--config", str(path)])
+
+
+def _requests(rig):
+    return [req for req in rig.broker.sent if req.purpose in TP]
+
+
+def _claims(rig):
+    return [json.loads(row["payload"]) for row in rig.store.conn.execute(
+        "SELECT payload FROM audit WHERE kind='TEST_TP_TIMEOUT_RESULT' ORDER BY id")
+        if json.loads(row["payload"]).get("outcome") == "claimed"]
+
+
+def _confirm_real_reduction(rig, pid):
+    rig.broker.protection_auto_status = False
+    _queue_tp(rig, pid)
+    rig.engine._run_queue()
+    rig.engine._drain(rig.clock.now())
+    row = rig.store.protection(pid)
+    assert row["state"] == "REDUCE_PENDING"
+    assert row["confirmed_remaining"] == 3
+    assert not _requests(rig)
+    rig.broker.confirm_protection_modify(row["intent_id"])
+    _settle(rig)
+
+
+@pytest.mark.parametrize("response", ["native-rejection", "no-ACK"])
+def test_B29_injected_TP_cancel_failure_still_pages_P0_and_does_not_restore_unconfirmed(
+        native_timeout, monkeypatch, response):
+    server = native_timeout()
+    rig, pid = server.rig, server.pid
+    rejected = []
+
+    def cancel_response(ref):
+        # The original synthetic broker continues to report the DAY TP as
+        # working. Neither a cancel receipt nor successful restoration exists.
+        native = rig.broker.orders[ref]
+        assert native.remaining == 1 and native.status in {"Submitted", "PreSubmitted"}
+        if response == "native-rejection":
+            rejected.append((server.loop.time(), ref))
+            server.wrapper.lastTime = rig.clock.now()
+            server.wrapper.error(native.broker_order_id, 10148,
+                "synthetic B29 cancel rejected: TP order remains working", "")
+        # no-ACK intentionally emits no wrapper message at all.
+
+    monkeypatch.setattr(server, "cancel_response", cancel_response)
+    server.request(monkeypatch)
+    server.start_injected_tp()
+    server.until(lambda: any(level == "P0" for level, _ in server.alerts()), timeout=45)
+    assert server.cancel_wire is not None
+    assert server.cancel_at is None and server.restore_wire is None and server.restore_ack_at is None
+    assert rig.broker.orders[server.held_ref].remaining == 1
+    assert rig.broker.orders[server.ref].remaining == 2
+    assert rig.store.position(pid)["qty_open"] == 3
+    assert len(server.tp_packets) == 1 and len(server.actual_fills) == 0
+    assert rig.broker.cancels == [server.held_ref]
+    assert len(rig.broker.sent_protections) == 1
+    if response == "native-rejection":
+        assert rejected
+        events = [json.loads(row["payload"]) for row in rig.store.conn.execute(
+            "SELECT payload FROM audit WHERE kind='TP_EVIDENCE' ORDER BY id")]
+        assert any(event.get("error_code") == 10148 for event in events)
+    _native_safety(rig)
+
+
+class SimulatedProcessCrash(BaseException):
+    """Escape ordinary Exception handlers at the documented fail point."""
+
+
+def test_B29_crash_after_durable_claim_consumes_once_and_RAM_cannot_replay_ask(
+        tmp_path, monkeypatch):
+    rig, pid, path = _g3t_working(tmp_path, monkeypatch)
+    assert _request(path) == 0
+    accepted = json.loads(rig.store.control(KEY))
+    create_intent = rig.store.create_intent
+    captured = []
+
+    def crash_on_create(now, req, **kwargs):
+        if req.purpose in TP:
+            # This fact must already exist from the actual production claim;
+            # the test only observes it, and fails if the sequence is wrong.
+            fact_raw = rig.store.control(CLAIM + req.intent_id)
+            assert fact_raw is not None
+            fact = json.loads(fact_raw)
+            assert fact["request_id"] == accepted["request_id"]
+            assert fact["intent_id"] == req.intent_id and fact["position_id"] == pid
+            assert rig.store.control(KEY) is None
+            assert rig.store.intent(req.intent_id) is None
+            assert req.limit_price == timeout_price(fact["pricing"]["ask"])
+            captured.append((req, fact))
+            raise SimulatedProcessCrash("synthetic crash before TP intent persistence")
+        return create_intent(now, req, **kwargs)
+
+    with monkeypatch.context() as patch:
+        patch.setattr(rig.store, "create_intent", crash_on_create)
+        with pytest.raises(SimulatedProcessCrash):
+            _confirm_real_reduction(rig, pid)
+    assert len(captured) == 1
+    req, fact = captured[0]
+    assert rig.store.control(KEY) is None
+    assert len(_claims(rig)) == 1
+    assert json.loads(rig.store.control(CLAIM + req.intent_id)) == fact
+    assert req.intent_id not in getattr(rig.engine, "_test_timeout_sending", set())
+    assert rig.store.intent(req.intent_id) is None
+    assert not _requests(rig)
+    # Real captured ask request and persisted receipt are replayed through
+    # the ordinary send entrypoint. No epoch/proof/permit is installed.
+    result = rig.engine._send(rig.clock.now(), req, atr=None, count_entry_day=None)
+    assert result != "sent" and result != "unknown"
+    assert not _requests(rig)
+    assert rig.store.intent(req.intent_id)["status"] == IntentStatus.REJECTED
+    assert rig.store.control(KEY) is None and len(_claims(rig)) == 1
+    assert req.intent_id not in getattr(rig.engine, "_test_timeout_sending", set())
+    _fake_safety(rig)
+
+
+@pytest.mark.parametrize("marker", [
+    "unknown-request", True, {"request_id": "synthetic-forgery"}, 29, "different-intent",
+])
+def test_B29_forged_snapshot_marker_does_not_authorize_ask_or_change_normal_bid(
+        tmp_path, monkeypatch, marker):
+    rig, pid, _ = _g3t_working(tmp_path, monkeypatch)
+    # Produce one ordinary TP with the real engine and broker confirmation.
+    normal = _activate_tp(rig, pid)
+    quote = rig.broker.quote("AAPL")
+    assert normal.limit_price <= quote.bid
+    snapshot = json.loads(rig.store.control("tp_send:" + normal.intent_id))
+    assert rig.engine._tp_pricing_ok(rig.clock.now(), snapshot, normal)
+    forged = dict(snapshot, test_timeout_request_id=marker,
+                  calculated_price=timeout_price(snapshot["ask"]),
+                  sent_price=timeout_price(snapshot["ask"]))
+    ask_req = replace(normal, limit_price=forged["sent_price"])
+    if marker == "different-intent":
+        ask_req = replace(ask_req, intent_id="v6l-synthetic-unclaimed-other-intent")
+    # This is untrusted input to the real gate, not a replacement for that
+    # gate and not a fabricated successful claim or broker proof.
+    assert not rig.engine._tp_pricing_ok(rig.clock.now(), forged, ask_req)
+    assert rig.store.controls_with_prefix(CLAIM) == {}
+    assert _requests(rig) == [normal]
+    assert normal.limit_price <= quote.bid
+    _fake_safety(rig)
+
+
+@pytest.mark.parametrize("changed", [
+    "workflow", "generation", "protection-binding", "intent-binding", "epoch",
+])
+def test_B29_change_after_true_claim_is_refused_by_final_pricing_gate_before_wire(
+        tmp_path, monkeypatch, changed):
+    rig, pid, path = _g3t_working(tmp_path, monkeypatch)
+    assert _request(path) == 0
+    create_intent = rig.store.create_intent
+    observed = []
+
+    def create_then_invalidate(now, req, **kwargs):
+        value = create_intent(now, req, **kwargs)
+        if req.purpose not in TP:
+            return value
+        raw = rig.store.control(CLAIM + req.intent_id)
+        assert raw is not None, "the claim must be produced by the real engine first"
+        fact = json.loads(raw)
+        assert req.limit_price == timeout_price(fact["pricing"]["ask"])
+        assert rig.store.control(KEY) is None
+        assert fact["workflow_id"]
+        observed.append((req, fact))
+        row = rig.store.protection(pid)
+        if changed == "workflow":
+            key = "tp_workflow:" + pid
+            workflow = json.loads(rig.store.control(key))
+            workflow["workflow_id"] = workflow["workflow_id"] + "-changed-after-claim"
+            rig.store.set_control(now, key, json.dumps(workflow))
+        elif changed == "generation":
+            # Start a genuine same-quantity STP modification through the
+            # product path. Its pending generation invalidates the earlier
+            # reduction receipt without editing a SQL proof/generation.
+            own = next(order for order in rig.broker.open_orders()
+                       if order.intent_id == row["intent_id"])
+            assert rig.engine._protection_modify(
+                now, row, own, int(row["confirmed_remaining"]),
+                increase=False, state="PRICE_PENDING",
+                trigger=float(row["trigger_price"]) + .01, limit=None)
+            assert rig.store.protection(pid)["modify_generation"] > fact["generation"]
+        elif changed in {"protection-binding", "intent-binding"}:
+            # Invalidate an existing real control receipt; no valid
+            # replacement authority or successful proof is fabricated.
+            field = "protection_intent_id" if changed == "protection-binding" else "intent_id"
+            fact[field] = str(fact[field]) + "-mismatched"
+            rig.store.set_control(now, CLAIM + req.intent_id, json.dumps(fact))
+        elif changed == "epoch":
+            old = rig.store.control("test_entry_ready")
+            rig.store.set_control(now, "test_entry_ready", old + "-retired")
+        return value
+
+    with monkeypatch.context() as patch:
+        patch.setattr(rig.store, "create_intent", create_then_invalidate)
+        _confirm_real_reduction(rig, pid)
+    assert len(observed) == 1
+    req, _ = observed[0]
+    assert not _requests(rig), "a changed claim context must prevent the actual TP broker write"
+    assert rig.store.intent(req.intent_id)["status"] == IntentStatus.REJECTED
+    assert rig.store.control(KEY) is None and len(_claims(rig)) == 1
+    assert req.intent_id not in getattr(rig.engine, "_test_timeout_sending", set())
+    _fake_safety(rig)
+
+
+@pytest.mark.parametrize("raw", (["invalid"], 42, "invalid", True))
+def test_B29_malformed_control_is_audited_and_cannot_reprice_normal_TP(tmp_path, monkeypatch, raw):
+    rig, pid, _ = _g3t_working(tmp_path, monkeypatch)
+    rig.store.set_control(rig.clock.now(), KEY, json.dumps(raw))
+    req = _activate_tp(rig, pid)
+    assert req.limit_price <= rig.broker.quote("AAPL").bid
+    assert rig.store.control(KEY) is None and _claims(rig) == []
+    assert any(json.loads(row["payload"]).get("outcome", "").startswith("refused:")
+        for row in rig.store.conn.execute("SELECT payload FROM audit WHERE kind='TEST_TP_TIMEOUT_RESULT'"))
+    _fake_safety(rig)
+
+
+def test_B29_daily_report_has_separate_timeout_evidence_and_restored_S(tmp_path, monkeypatch):
+    from v6lite.report import daily_report
+    from v6lite.market_calendar import trading_day
+    from v6lite.tests.test_batch23_contracts import _watch_boundaries
+    rig, pid, path = _g3t_working(tmp_path, monkeypatch)
+    _watch_boundaries(rig)  # Observe actual completed query sets before any restore.
+    assert _request(path) == 0
+    req = _activate_tp(rig, pid)
+    assert req.limit_price > rig.broker.quote("AAPL").ask
+    rig.advance(seconds=10); rig.tick()
+    rig.broker.confirm_cancel(req.intent_id)
+    rig.engine._drain(rig.clock.now()); _settle(rig)
+    assert rig.store.protection(pid)["state"] == "RESTORE_PENDING"
+    rig.broker.confirm_protection_modify(rig.store.protection(pid)["intent_id"])
+    _settle(rig)
+    assert rig.store.protection(pid)["confirmed_remaining"] == 3
+    text = daily_report(rig.store, rig.cfg, trading_day(rig.clock.now()))
+    assert "## Test TP timeout / 测试止盈超时" in text
+    assert all(word in text for word in ("claimed", "cancel_request", "cancel_confirm", "restore_confirm", "gap_b_seconds", "restored_S"))
+    assert str(rig.store.intent(req.intent_id)["broker_order_id"]) in text
+    _fake_safety(rig)
+
+
+def test_B29_timeout_report_summary_is_bounded_under_repeated_refusals(tmp_path, monkeypatch):
+    from v6lite.report import daily_report
+    from v6lite.market_calendar import trading_day
+    rig, _, _ = _g3t_working(tmp_path, monkeypatch)
+    with rig.store.tx():
+        for n in range(2000):
+            rig.store.audit(rig.clock.now(), "TEST_TP_TIMEOUT_RESULT", request_id=f"synthetic-refused-{n}",
+                symbol="AAPL", phase="refused", outcome="refused:already_pending", reason="synthetic detail "*60)
+    text = daily_report(rig.store, rig.cfg, trading_day(rig.clock.now()))
+    assert "## Test TP timeout / 测试止盈超时" in text
+    assert "另有 1988 个请求" in text
+    assert len(text.encode("utf-8")) <= 100*1024
+    assert "## Fills" in text and "## Events" in text
+    assert rig.store.conn.execute("SELECT COUNT(*) FROM audit WHERE kind='TEST_TP_TIMEOUT_RESULT'").fetchone()[0] == 2000
+
+
+def test_B29_report_uses_last_restored_S_not_historical_peak(tmp_path, monkeypatch):
+    from v6lite.report import daily_report
+    from v6lite.market_calendar import trading_day
+    rig, _, _ = _g3t_working(tmp_path, monkeypatch)
+    # Pure report fixture, never read as order/position authority.
+    for quantity in (3, 2):
+        rig.store.audit(rig.clock.now(), "TEST_TP_TIMEOUT_RESULT", request_id="synthetic-report-lifecycle",
+            symbol="AAPL", phase="restore_confirm", restored_S=quantity)
+    section = daily_report(rig.store, rig.cfg, trading_day(rig.clock.now())).split(
+        "## Test TP timeout / 测试止盈超时",1)[1].split("## Fills",1)[0]
+    assert "restored_S=2" in section and "restored_S=3" not in section
+
+
+def test_B29_timeout_phone_card_names_test_and_identifies_actual_order(tmp_path, monkeypatch, record_property):
+    rig, pid, path = _g3t_working(tmp_path, monkeypatch)
+    assert _request(path) == 0
+    req = _activate_tp(rig, pid)
+    rig.advance(seconds=10); rig.tick()
+    cards = [(title, body) for title, body in rig.channel.messages
+             if "测试：止盈超时注入已触发，正在撤单并恢复保护" in title]
+    assert len(cards) == 1, rig.channel.messages
+    title, body = cards[0]
+    assert "TEST" in title and "AAPL" in body and "TP1" in body
+    assert str(rig.store.intent(req.intent_id)["broker_order_id"]) in body
+    assert f"{req.limit_price:.2f}" in body and "30" in body
+    assert "运行状态有新变化" not in body
+    record_property("b29_INFO_phone_title", title)
+    record_property("b29_INFO_phone_body", body)
+    _fake_safety(rig)

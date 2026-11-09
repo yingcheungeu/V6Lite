@@ -1,0 +1,20 @@
+{
+  "reviewer": "/root",
+  "valid_natural_red": true,
+  "receipt": "red_overnight_b25.json",
+  "baseline_commit": "97fa8c6d68cfd7b700c1474dc6f8a94e158fd2d2",
+  "baseline_code_sha": "ea71abe782e4cf68",
+  "totals": {
+    "tests": 33,
+    "failures": 31,
+    "errors": 0,
+    "skipped": 0
+  },
+  "spec_sha256": "c0b66a415cae00bb0eaed24990300ee7b09b78baacb6631fe41d96bf12e9449c",
+  "root_review": "Actual contract assertion failures: undeclared default-off switch, no valid overnight TP reduction, missing required specific P1, missing-entry false full_exec escape, stale authority and unguarded BE. No fixture setup errors or skips. Two pre-existing safety controls already pass.",
+  "safe_controls_already_passed": [
+    "test_B26_historical_entry_proof_does_not_replace_protected_release_execution_evidence",
+    "test_B26_default_off_retains_b25_overnight_stop_and_blocks_new_TP"
+  ],
+  "scope": "Only sole batch26_implement may modify overnight production after this proof; never weaken old tests or S+T+X/identity assertions."
+}

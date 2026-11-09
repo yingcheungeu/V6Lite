@@ -1,0 +1,12 @@
+...................                                                      [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch32_open_orders.py::test_B32_three_native_identical_rows_confirm_gen4_and_TP2
+  v6lite\tests\test_batch32_open_orders.py:85: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B32_three_native_identical_rows_confirm_gen4_and_TP2(oct29,monkeypatch,record_property):
+
+v6lite/tests/test_batch31_evidence_replay.py::test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End
+  v6lite\tests\test_batch31_evidence_replay.py:79: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End(evidence_run,monkeypatch,record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+19 passed, 2 warnings in 6.36s

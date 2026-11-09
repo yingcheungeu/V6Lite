@@ -1,0 +1,903 @@
+FFFFFFFFFFFFFFFFFFFF.......FFFFFFFFFFFFFF                                [100%]
+================================== FAILURES ===================================
+_ test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Cancelled] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:215: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    _broker_cancel(rig, pid, raw=raw, code=code, shape=shape)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-38c056d2621542d2b04a；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Inactive] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:215: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    _broker_cancel(rig, pid, raw=raw, code=code, shape=shape)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-86a122adc8c54ecaa420；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Cancelled] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:215: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    _broker_cancel(rig, pid, raw=raw, code=code, shape=shape)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-c6d97d751d94472ebb90；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Inactive] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:215: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    _broker_cancel(rig, pid, raw=raw, code=code, shape=shape)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-db68e6ac22924cb6b4c5；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Cancelled] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:215: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    _broker_cancel(rig, pid, raw=raw, code=code, shape=shape)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-d18c0fb6926444eab14a；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Inactive] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:215: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    _broker_cancel(rig, pid, raw=raw, code=code, shape=shape)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-2dac5e792f9848799e5f；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Cancelled] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:225: in test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three
+    _broker_cancel(rig, pid, raw=raw)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-2e325b2f7ae9461b9e34；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Inactive] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:225: in test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three
+    _broker_cancel(rig, pid, raw=raw)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-43a74774c41a4eefaeb9；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[metadata_cleared] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:241: in test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages
+    _broker_cancel(rig, pid, shape=shape)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-a5e64d3afc454066a56d；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[prices_reset] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:241: in test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages
+    _broker_cancel(rig, pid, shape=shape)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-30aec51c4d334d34903a；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[201] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:257: in test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card
+    _broker_cancel(rig, pid, code=code, reason=LONG_REASON)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-ce3eb3049df24df2807c；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[202] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:257: in test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card
+    _broker_cancel(rig, pid, code=code, reason=LONG_REASON)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-6b99624cc018423aa6d5；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute _
+v6lite\tests\test_batch22_item9_broker_cancel.py:265: in test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute
+    adapter, trade = _broker_cancel(rig, pid)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-0973041cb5244296b471；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position _
+v6lite\tests\test_batch22_item9_broker_cancel.py:286: in test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position
+    adapter, trade = _broker_cancel(rig, pid, shape='prices_reset')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-32720f965829446ab4b3；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[account] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:337: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-48aa1f213f4e482c97f6；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[orderId] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:337: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-fbd9e3f66ff54b30b51c；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[permId] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:337: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-6d2c1bc31eaa484380d2；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[conId] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:337: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-361389fce9cf4909ad88；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[clientId] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:337: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-7e48abee671844498551；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[symbol] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:337: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-5a05f23bcd8840ceb769；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[positions] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:435: in test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence
+    _broker_cancel(rig, pid)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-eaea4da19de9403286f9；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[executions] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:435: in test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence
+    _broker_cancel(rig, pid)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-25e7d50954f949ea84b2；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance _
+v6lite\tests\test_batch22_item9_broker_cancel.py:547: in test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance
+    _broker_cancel(rig, pid, shape='metadata_cleared')
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-599af981620f4e32a0a1；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps _
+v6lite\tests\test_batch22_item9_broker_cancel.py:569: in test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps
+    _broker_cancel(rig, pid)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-1c77556046c945188370；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_reason_above_nine_hundred_UTF16_units_is_exact_in_remote_embed_segments _
+v6lite\tests\test_batch22_item9_broker_cancel.py:583: in test_B22_item9_reason_above_nine_hundred_UTF16_units_is_exact_in_remote_embed_segments
+    _broker_cancel(rig, pid, reason=MULTICARD_REASON)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-d2da643bc7bb494c8367；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[first-card-failed] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:598: in test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact
+    _deliver(rig, adapter, trade, send_error=False)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-75f93d3bac6c4648ba0e；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+ERROR    v6lite.alerts:alerts.py:899 alert channel memory failed (RuntimeError)
+_ test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[primary-ACK-reason-part-failed] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:598: in test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact
+    _deliver(rig, adapter, trade, send_error=False)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-b9d29f4703ed4e53a333；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-202-Order canceled by system: synthetic rule] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:624: in test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart
+    _broker_cancel(rig, pid, raw=raw, code=code, reason=reason)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-7748eb83c6044aa0b8b9；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Inactive-0-Broker has cancelled the protective order] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:624: in test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart
+    _broker_cancel(rig, pid, raw=raw, code=code, reason=reason)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-ce7d859ea32144baa25b；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-10147-Synthetic broker terminal reason outside 201 and 202] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:624: in test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart
+    _broker_cancel(rig, pid, raw=raw, code=code, reason=reason)
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-2bbc838e6bc746a39db3；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-cleared-fields] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:650: in test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-babb7010255740ab81d0；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-zero-permId] _
+v6lite\tests\test_batch22_item9_broker_cancel.py:650: in test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-38c118bc2c0541c4a5d5；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_failed_reason_part_then_real_external_SELL_has_independent_remote_provenance _
+v6lite\tests\test_batch22_item9_broker_cancel.py:668: in test_B22_item9_failed_reason_part_then_real_external_SELL_has_independent_remote_provenance
+    _deliver(rig, adapter, trade, send_error=False)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-8f2ef6ce6b524e848f69；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B22_item9_real_complete_working_recovery_retires_terminal_suppression_before_new_crossing _
+v6lite\tests\test_batch22_item9_broker_cancel.py:725: in test_B22_item9_real_complete_working_recovery_retires_terminal_suppression_before_new_crossing
+    _broker_cancel(rig, pid, code=0, reason='Synthetic ordinary terminal status later corrected by broker')
+v6lite\tests\test_batch22_item9_broker_cancel.py:192: in _broker_cancel
+    _deliver(rig, adapter, trade)
+v6lite\tests\test_batch22_item9_broker_cancel.py:158: in _deliver
+    rig.engine._on_urgent_broker_event(event)
+v6lite\engine.py:616: in _on_urgent_broker_event
+    self._handle_event(self.clock.now(), event)
+v6lite\engine.py:721: in _handle_event
+    self._on_status(now, event)
+v6lite\engine.py:888: in _on_status
+    terminal_metadata = self._protection_capture_terminal(now, ev, native_valid=native_valid)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\protection_cancellations.py:94: in _protection_capture_terminal
+    self.store.update_protection(now, row["position_id"], state="UNKNOWN")
+v6lite\store.py:597: in update_protection
+    with self.tx():
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+v6lite\store.py:320: in tx
+    self.conn.execute("BEGIN IMMEDIATE")
+E   sqlite3.OperationalError: cannot start a transaction within a transaction
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure 待核实 | 待核实 orderRef=v6l-protect-b6ae979d9cc64761a011；成交回调本地处理失败 OperationalError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Cancelled]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Inactive]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Cancelled]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Inactive]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Cancelled]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Inactive]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Cancelled]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Inactive]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[metadata_cleared]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[prices_reset]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[201]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[202]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[account]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[orderId]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[permId]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[conId]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[clientId]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[symbol]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[positions]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[executions]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_reason_above_nine_hundred_UTF16_units_is_exact_in_remote_embed_segments
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[first-card-failed]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[primary-ACK-reason-part-failed]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-202-Order canceled by system: synthetic rule]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Inactive-0-Broker has cancelled the protective order]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-10147-Synthetic broker terminal reason outside 201 and 202]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-cleared-fields]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-zero-permId]
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_failed_reason_part_then_real_external_SELL_has_independent_remote_provenance
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_real_complete_working_recovery_retires_terminal_suppression_before_new_crossing
+34 failed, 7 passed in 12.42s

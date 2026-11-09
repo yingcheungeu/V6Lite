@@ -1,0 +1,33 @@
+.................F...........                                            [100%]
+================================== FAILURES ===================================
+______ test_B31_waiting_close_card_allows_other_position_TP_and_queries _______
+v6lite\tests\test_batch31_close_card.py:74: in test_B31_waiting_close_card_allows_other_position_TP_and_queries
+    _two_open_positions(rig)
+v6lite\tests\test_review_round2.py:859: in _two_open_positions
+    rig.start()
+v6lite\tests\helpers.py:102: in start
+    self.engine.startup()
+v6lite\engine.py:276: in startup
+    self._check_budget()
+v6lite\engine.py:269: in _check_budget
+    raise StartupError(f"exit_check_interval_seconds={interval} is shorter than the largest blocking "
+E   v6lite.engine.StartupError: exit_check_interval_seconds=1 is shorter than the largest blocking broker call (25s) + 3s margin
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:62: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60
+  v6lite\tests\test_batch31_overnight.py:195: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60(oct27,record_property):
+
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+  v6lite\tests\test_batch31_close_card.py:9: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('arrival',[.009,None])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_waiting_close_card_allows_other_position_TP_and_queries
+1 failed, 28 passed, 5 warnings in 10.04s

@@ -1,0 +1,26 @@
+{
+  "label": "focused_frozen",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T14:41:17.419532-07:00",
+  "end_pt": "2026-10-20T14:41:32.485096-07:00",
+  "seconds": 15.062,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch28_lifecycle.py",
+    "v6lite/tests/test_batch28_exit_edges.py",
+    "v6lite/tests/test_batch25_restart.py",
+    "v6lite/tests/test_batch25_reconnect_alerts.py",
+    "v6lite/tests/test_batch26_shutdown_report.py",
+    "v6lite/tests/test_review_round3.py",
+    "v6lite/tests/test_batch10.py"
+  ],
+  "tests": 145,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_unchanged": true,
+  "inventory_sha256": "eae672f2664ff1a80a0acd34acb0adb122b16ca4d3b8a7286182462688c92256",
+  "incomplete": false,
+  "failed_cases": []
+}

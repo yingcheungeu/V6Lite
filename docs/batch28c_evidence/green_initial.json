@@ -1,0 +1,39 @@
+{
+  "label": "green_initial",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T15:36:24.816363-07:00",
+  "end_pt": "2026-10-21T15:37:32.533682-07:00",
+  "seconds": 67.719,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28c_price_confirmation.py",
+    "v6lite/tests/test_batch28c_price_edges.py",
+    "v6lite/tests/test_batch28c_fill_race.py",
+    "v6lite/tests/test_batch28c_fill_edges.py",
+    "v6lite/tests/test_batch28c_native_latency.py",
+    "v6lite/tests/test_batch28c_native_edges.py"
+  ],
+  "code_sha": "8701c459325fffab",
+  "source_unchanged": true,
+  "inventory_sha256": "ba30d4c72cbf81ec4d5da66dc178c0289349db1c223b82e8a949f973874232da",
+  "incomplete": false,
+  "tests": 38,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-live-openOrder]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 18, 1000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP.<locals>.<lambda> at 0x000002034A72FA60>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-owned-snapshot]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 18, 1000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP.<locals>.<lambda> at 0x000002034A930F40>()"
+    }
+  ]
+}

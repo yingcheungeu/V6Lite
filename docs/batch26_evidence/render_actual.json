@@ -1,0 +1,23 @@
+{
+  "label": "render_actual",
+  "code_sha": "af35c49fbe84e7c3",
+  "start_pt": "2026-10-15T17:54:17.011669-07:00",
+  "end_pt": "2026-10-15T17:54:19.288032-07:00",
+  "returncode": 0,
+  "source_unchanged": true,
+  "source_sha256": {
+    "v6lite": "af35c49fbe84e7c3d66e51c003915b4911aa945cc7c8081dfb91b3a89d2ab40e",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675",
+    "renderer": "1b1f96b69af2abf4a5e209ea569cddc3a68af2ab9a43148c361b08b2060d6d10"
+  },
+  "process_counts": {
+    "unknown": 0,
+    "runtime": 0
+  },
+  "stdout_sha256": "a71356a5d0eb3995ec935d2edaed6e5bfb5df3570d013cdc3bd5ba900271e7a5",
+  "network": "Forbidden by real fixture; MemoryChannel only",
+  "outputs": {
+    "render_samples.json": "aeccab599141cf522c359dc5394e8bc88510d34721d42975666cf87d9aaa0438",
+    "render_samples.md": "ef55c2bc6782e23abf9d0dd42aa1f740a8b16f7a0aaa02df0984fdaea7e58a16"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch26_card_evidence.py::test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[cancelled_gtc-0]",
+    "v6lite/tests/test_batch26_card_evidence.py::test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[stable_missing_entry-3]",
+    "v6lite/tests/test_batch26_card_evidence.py::test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[working_query_failed-\\u672a\\u77e5]"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch26_card_evidence.py::test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[cancelled_gtc-0]",
+    "v6lite/tests/test_batch26_card_evidence.py::test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[stable_missing_entry-3]",
+    "v6lite/tests/test_batch26_card_evidence.py::test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[working_query_failed-\\u672a\\u77e5]"
+  ]
+}

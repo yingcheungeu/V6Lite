@@ -1,0 +1,25 @@
+{
+  "label": "green_cancel_edges_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-22T08:13:30.701465-07:00",
+  "end_pt": "2026-10-22T08:18:00.824485-07:00",
+  "seconds": 270.125,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch28d_cancel_edges.py"
+  ],
+  "code_sha": "1d861131eaf98275",
+  "source_unchanged": true,
+  "inventory_sha256": "b98b7efe8b966b64097487647d990b7969c70683e29bc545567b1decc79c2b21",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "b9291bbbea1051de4b61493ac694fafc9da1a700795fd731c6c2c1f4e6662931",
+  "XML_sha256_before_masking": "e5ca5bbf5b2b5e6c4171ff9b086456c2b2d8bd6e72acc35e5f4dd0be5729eeed",
+  "delivered_log_sha256": "7b6579dffcbf00dce95d72f83da7751c8b3a6ae83fa2f75f3a457abd5dfef88d",
+  "delivered_XML_sha256": "e5ca5bbf5b2b5e6c4171ff9b086456c2b2d8bd6e72acc35e5f4dd0be5729eeed",
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="1.959" timestamp="2026-10-23T21:49:09.499672-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch29_native_timeout" name="test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1" time="0.189"><failure message="v6lite.approval.GateError: test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则">v6lite\tests\test_batch29_native_timeout.py:256: in test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1
+    server.request(monkeypatch)
+v6lite\tests\test_batch29_native_timeout.py:186: in request
+    cli.cmd_test_tp_timeout(SimpleNamespace(symbol='AAPL', operator='John'), self.rig.cfg)
+v6lite\__main__.py:486: in cmd_test_tp_timeout
+    raise GateError("test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则")
+E   v6lite.approval.GateError: test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则</failure></testcase><testcase classname="v6lite.tests.test_batch29_native_timeout" name="test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once" time="0.177"><failure message="v6lite.approval.GateError: test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则">v6lite\tests\test_batch29_native_timeout.py:292: in test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+    server.request(monkeypatch)
+v6lite\tests\test_batch29_native_timeout.py:186: in request
+    cli.cmd_test_tp_timeout(SimpleNamespace(symbol='AAPL', operator='John'), self.rig.cfg)
+v6lite\__main__.py:486: in cmd_test_tp_timeout
+    raise GateError("test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则")
+E   v6lite.approval.GateError: test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,11 @@
+{
+  "automation_id": "v6-lite-28d",
+  "kind": "heartbeat",
+  "status": "ACTIVE",
+  "scheduled_pt": "2026-10-22T13:31:00-07:00",
+  "code_sha": "fb68fbc9c751d214",
+  "source_inventory_sha256": "e7eb42453f3c4bfa66c26673c4375223533a16e9f9ba5e20d39026fac4913be9",
+  "create_tool_succeeded": true,
+  "view_card_rendered": true,
+  "full_runs_pending": 3
+}

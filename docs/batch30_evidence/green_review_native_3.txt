@@ -1,0 +1,32 @@
+....FF..........                                                         [100%]
+================================== FAILURES ===================================
+_ test_B30_native_300s_maintenance_repairs_only_known_closed_commission[End-before-fee] _
+v6lite\tests\test_batch30_native_commission.py:167: in test_B30_native_300s_maintenance_repairs_only_known_closed_commission
+    assert len(server.requests) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = <v6lite.tests.test_batch30_native_commission.CommissionWire object at 0x00000271DED1FCD0>.requests
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-e9601beef585491d84ca；净值 -0.17 USD；含估算佣金 1.00 USD
+_ test_B30_native_300s_maintenance_repairs_only_known_closed_commission[fee-before-first-exec] _
+v6lite\tests\test_batch30_native_commission.py:167: in test_B30_native_300s_maintenance_repairs_only_known_closed_commission
+    assert len(server.requests) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = <v6lite.tests.test_batch30_native_commission.CommissionWire object at 0x00000271BE94AE10>.requests
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-e091db296f624ec5aadb；净值 -0.17 USD；含估算佣金 1.00 USD
+============================== warnings summary ===============================
+v6lite/tests/test_batch30_report_audit.py::test_B30_real_native_timeout_audit_only_changes_and_at_most_eight_rows
+  v6lite\tests\test_batch30_report_audit.py:25: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B30_real_native_timeout_audit_only_changes_and_at_most_eight_rows(native_timeout, monkeypatch, record_property):
+
+v6lite/tests/test_batch30_report_audit.py::test_B30_report_splits_actual_normal_and_injected_windows_and_normal_compliance
+  v6lite\tests\test_batch30_report_audit.py:44: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B30_report_splits_actual_normal_and_injected_windows_and_normal_compliance(tmp_path, monkeypatch, record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch30_native_commission.py::test_B30_native_300s_maintenance_repairs_only_known_closed_commission[End-before-fee]
+FAILED v6lite/tests/test_batch30_native_commission.py::test_B30_native_300s_maintenance_repairs_only_known_closed_commission[fee-before-first-exec]
+2 failed, 14 passed, 2 warnings in 27.18s

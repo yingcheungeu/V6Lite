@@ -1,0 +1,170 @@
+{
+  "baseline_tracked_original_files_checked": 90,
+  "baseline_original_byte_mismatches": [],
+  "production_search_regex": "STP LMT|StopLimitOrder|submit_stop_limit|limit_offset_pct|lmtPrice|\\bMKT\\b|MarketOrder",
+  "production_search_hits": [
+    {
+      "file": "v6lite/broker/base.py",
+      "line": 4,
+      "excerpt": "(_place_order). LMT orders and typed protective STP are the only contracts; there is no MKT"
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 62,
+      "excerpt": "# ib_insync uses UNSET_DOUBLE for STP's absent lmtPrice."
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 534,
+      "excerpt": "if (getattr(trade.order, \"orderType\", \"\") in {\"STP\", \"STP LMT\"} and"
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 537,
+      "excerpt": "if getattr(trade.order, \"orderType\", \"\") in {\"STP\", \"STP LMT\"} and ("
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 568,
+      "excerpt": "_stop_limit_price(getattr(trade.order, \"lmtPrice\", None)),"
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 792,
+      "excerpt": "\"\"\"Submit GTC SELL STP, with no lmtPrice.  BrokerAck is local, not confirmation.\"\"\""
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 840,
+      "excerpt": "_stop_limit_price(getattr(old, \"lmtPrice\", None)) is not None or"
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 883,
+      "excerpt": "getattr(trade.order, \"orderType\", \"\") in {\"STP\", \"STP LMT\"})"
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 890,
+      "excerpt": "_stop_limit_price(getattr(trade.order, \"lmtPrice\", None)) is not None):"
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 1173,
+      "excerpt": "_stop_limit_price(getattr(order, \"lmtPrice\", None)),"
+    },
+    {
+      "file": "v6lite/config.py",
+      "line": 358,
+      "excerpt": "if \"limit_offset_pct\" in protection:"
+    },
+    {
+      "file": "v6lite/config.py",
+      "line": 359,
+      "excerpt": "raise ConfigError(\"保护单已改为 STP，不再使用 limit_offset_pct，请从配置中删除\")"
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1259,
+      "excerpt": "if len(matches) != 1 or matches[0].tif == \"GTC\" or matches[0].order_type in {\"STP\", \"STP LMT\"}:"
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1609,
+      "excerpt": "raise StoreError(\"旧类型保护单 STP LMT，需人工处理；release refused\")"
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2649,
+      "excerpt": "(o.tif == \"GTC\" or o.order_type in {\"STP\", \"STP LMT\"})]"
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2661,
+      "excerpt": "and o.tif != \"GTC\" and o.order_type not in {\"STP\", \"STP LMT\"}}"
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2695,
+      "excerpt": "o.tif != \"GTC\" and o.order_type not in {\"STP\", \"STP LMT\"})"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 92,
+      "excerpt": "\"legacy type\": \"1）在同一 TWS 人工核对旧保护单与持仓；2）不要把 STP LMT 改认成 STP，不自动撤单、改价或重挂；3）由 John 处置并保留旧状态证据，未经复核保持入场冻结。\","
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 183,
+      "excerpt": "\"旧合同止损价（STP LMT，仅供人工核对）\")"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 244,
+      "excerpt": "\"STP LMT is legacy evidence; no automatic conversion, cancellation or replacement\")"
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 75,
+      "excerpt": "order_type TEXT NOT NULL DEFAULT 'STP LMT',"
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 281,
+      "excerpt": "Existing contracts acquire honest STP LMT metadata. Both nullable"
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 288,
+      "excerpt": "self.conn.execute(\"ALTER TABLE protections ADD COLUMN order_type TEXT NOT NULL DEFAULT 'STP LMT'\")"
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 823,
+      "excerpt": "self.raise_anomaly(now, code, \"legacy STP LMT protection; not automatically converted or booked\")"
+    }
+  ],
+  "agents": [
+    {
+      "agent": "batch20_time_logs",
+      "result": "PASS",
+      "scope": "configuration/native adapter/dry boundary/B21 launcher",
+      "evidence": [
+        "ibkr.py:791,805,810,850 STP/centfloor/no limit",
+        "ibkr.py:525,537,569 native STK/USD and unknown RTH",
+        "ibkr.py:877,881-901 cancel ref/namespace/strict tuple/three IDs",
+        "__main__.py:209,ibkr.py:758,760,860 dry physical boundary",
+        "scripts/v6.ps1:133-165 console/wait/env,28-42 tag,174-185 config,240 YES,247 recheck"
+      ],
+      "nonblocking": "test_batch15.py:246 intentionally missing identity also omits currency; new per-field tests cover single-factor conId etc."
+    },
+    {
+      "agent": "batch20_protection_incident",
+      "result": "PASS",
+      "scope": "lifecycle/legacy/refusal/trigger/retired replacement",
+      "evidence": [
+        "protection_engine.py:308,934,1454 lifecycle identity and capacity",
+        "protection_engine.py:396 explicit terminal refusal does not rehang",
+        "protection_engine.py:239 legacy guard",
+        "protection_engine.py:1174 persistent first crossing,partial/rebound/no quote/RTH",
+        "protection_incidents.py:108-142 strong new proof plus real old cancellation/retired lineage only; local CANCELLED insufficient",
+        "engine.py:775-780 true same-ID full fill selectively ends event"
+      ],
+      "limit": "capacity proven at serialized checkpoints; do not claim physical no-oversell at arbitrary instant under late-fill/ACK/external order races"
+    },
+    {
+      "agent": "batch20_equivalents",
+      "result": "PASS",
+      "scope": "schema/audit/unknown stop/report execution day",
+      "evidence": [
+        "store.py:278 schema4 atomic layout with original rows/index/trigger",
+        "protection_engine.py:532; store.py:701 current/retired strict identity",
+        "store.py:967-996 stop candidates/unknown,per-exec price and signed USD/bps,quantity weighted cumulative average",
+        "store.py:751,1008 idempotent replay and CLOSED retired audit without second PnL",
+        "report.py:131 execution trading_day"
+      ]
+    }
+  ],
+  "mutations_by_reviewers": false,
+  "gateway_or_runtime_accessed": false
+}

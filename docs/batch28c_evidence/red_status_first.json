@@ -1,0 +1,28 @@
+{
+  "label": "red_status_first",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:19:42.226457-07:00",
+  "end_pt": "2026-10-21T20:19:53.879026-07:00",
+  "seconds": 11.656,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28c_ack_ordering.py"
+  ],
+  "code_sha": "952452b1fcb5bc80",
+  "source_unchanged": true,
+  "inventory_sha256": "888a96fac9964df93e8ff9244f47a637845cd7f43976c5596e2e2d12a984c0d3",
+  "incomplete": false,
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28c_ack_ordering",
+      "name": "test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second",
+      "kind": "failure",
+      "message": "AssertionError: (4.219000000011874, [(169772.343, '16', ('16', '1', '')), (169772.39, '61', ('61', '1', '')), (169772.453, '7', ('7', ...DU******001', '20261021-04:00:00', ...)), (169773.609, '16', ('16', '1', '')), (169773.656, '61', ('61', '1', '')), ...])\nassert 4.219000000011874 <= 1.0"
+    }
+  ]
+}

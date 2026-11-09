@@ -1,0 +1,169 @@
+{
+  "label": "red_review_b24_finalspec",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-14T12:31:29.980919-07:00",
+  "end_pt": "2026-10-14T12:31:32.743753-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "2db6af8f04f145f6",
+  "source_unchanged": true,
+  "worktree_code_sha": "7612508962288831",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "7612508962288831ffa1d37879f428f52ec8baebdee3c3834adef86cdfdeecdf",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_review_regressions.py",
+      "sha256": "6f85a548546f305e10b78b6c357afb71a60c07f3d6b5a253669c1961ff0ca88c"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 15,
+    "failures": 10,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x000002117F42F5B0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x000002117F24C130>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x000002117F42EB60>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x000002117F24E110>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x000002117F24F2E0>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x000002117F6A8220>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "outcome": "failure",
+      "message": "assert (3 == 2)\n +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 29, 999000, tzinfo=datetime.timezone.utc)])"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "outcome": "failure",
+      "message": "assert 3 == (3 - 1)\n +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 29, 999000, tzinfo=datetime.timezone.utc)])"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "outcome": "failure",
+      "message": "AssertionError: retry recovery on the existing healthy socket\nassert (1 == 1 and 1 == 2)\n +  where 1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])\n +  and   1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "outcome": "failure",
+      "message": "assert (3 == 2)\n +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 30, tzinfo=datetime.timezone.utc)])"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]"
+    ],
+    "executed": [
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]"
+    ]
+  },
+  "stdout_sha256": "53bab4503e56ac4244f4184d455775c392a88a0d3cde63c674d7e470d3318a0f",
+  "junit_sha256": "1fb63b880bb57a726496604d47ad26a8a54afbc032f7a2d2abbe992d9d638e0f",
+  "inventory_sha256": "c78e4e6fdc9a5bee3e0f47d650f7a87f31280850c194a861b0fc475c3bc28c01"
+}

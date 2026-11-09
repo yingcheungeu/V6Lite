@@ -1,0 +1,28 @@
+{
+  "label": "red_pair_window_calibrated",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:56:33.254294-07:00",
+  "end_pt": "2026-10-21T20:56:44.887763-07:00",
+  "seconds": 11.64,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28c_pair_window.py"
+  ],
+  "code_sha": "b49f1f454cad8a1a",
+  "source_unchanged": true,
+  "inventory_sha256": "15c734dceca6745bff077d9def15fefdcdb3546222ee463e72fbf8e8d1051792",
+  "incomplete": false,
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28c_pair_window",
+      "name": "test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick",
+      "kind": "failure",
+      "message": "AssertionError: (4.234000000025844, [(171983.359, '16', ('16', '1', '')), (171983.437, '61', ('61', '1', '')), (171983.5, '7', ('7', '...'DU******001', '20261021-04:00:00', ...)), (171984.64, '16', ('16', '1', '')), (171984.718, '61', ('61', '1', '')), ...])\nassert 4.234000000025844 <= 1.0"
+    }
+  ]
+}

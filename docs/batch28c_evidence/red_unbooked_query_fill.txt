@@ -1,0 +1,13 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___ test_B28c_own_TP_race_does_not_hide_extra_unbooked_SELL_in_native_query ___
+v6lite\tests\test_batch28c_fill_query_edges.py:32: in test_B28c_own_TP_race_does_not_hide_extra_unbooked_SELL_in_native_query
+    assert any(level=='P0' for level,_ in rig._b26_alerts), 'known query-row contradiction must not be silently superseded'
+E   AssertionError: known query-row contradiction must not be silently superseded
+E   assert False
+E    +  where False = any(<generator object test_B28c_own_TP_race_does_not_hide_extra_unbooked_SELL_in_native_query.<locals>.<genexpr> at 0x0000020B6FBB3840>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28c_fill_query_edges.py::test_B28c_own_TP_race_does_not_hide_extra_unbooked_SELL_in_native_query
+1 failed in 1.20s

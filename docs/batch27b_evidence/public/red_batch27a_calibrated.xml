@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="27" skipped="0" tests="34" time="4.733" timestamp="2026-10-16T21:34:56.473423-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger" time="0.150"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:143: in test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger
+    tp1,ref,fill=_filled_tp1(rig,pid)
+                 ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec]" time="0.148"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:173: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch]" time="0.149"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:173: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch]" time="0.152"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:173: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day]" time="0.144"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:173: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]" time="0.146"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:173: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only]" time="0.144"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:197: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End]" time="0.149"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:197: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter]" time="0.148"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:197: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter]" time="0.150"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:197: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]" time="0.145"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:197: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]" time="0.147"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:197: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity]" time="0.146"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:216: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId]" time="0.146"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:216: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId]" time="0.147"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:216: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional]" time="0.142"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:216: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal]" time="0.150"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:216: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin]" time="0.145"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:216: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:131: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_failed_a_card_has_one_unverified_time_prefix" time="0.146"><failure message="AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL&#10;  核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。&#10;  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']&#10;assert (1 == 1 and 0 == 1)&#10; +  where 1 = len(['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'])&#10; +  and   0 = &lt;built-in method count of str object at 0x000001FD56F1DCA0&gt;('账本成交时间尚未核实')&#10; +    where &lt;built-in method count of str object at 0x000001FD56F1DCA0&gt; = '#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'.count">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:245: in test_B27b_failed_a_card_has_one_unverified_time_prefix
+    assert len(pages)==1 and pages[0].count('账本成交时间尚未核实')==1,pages
+E   AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert (1 == 1 and 0 == 1)
+E    +  where 1 = len(['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'])
+E    +  and   0 = &lt;built-in method count of str object at 0x000001FD56F1DCA0&gt;('账本成交时间尚未核实')
+E    +    where &lt;built-in method count of str object at 0x000001FD56F1DCA0&gt; = '#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'.count</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_failed_d_card_shows_actual_complete_query_count" time="0.149"><failure message="AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL&#10;  核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。&#10;  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']&#10;assert False&#10; +  where False = any(&lt;generator object test_B27b_failed_d_card_shows_actual_complete_query_count.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001FD562984A0&gt;)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:269: in test_B27b_failed_d_card_shows_actual_complete_query_count
+    assert any(re.search(r'当日可见成交[=：]\s*3\s*条',page) for page in pages),pages
+E   AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert False
+E    +  where False = any(&lt;generator object test_B27b_failed_d_card_shows_actual_complete_query_count.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001FD562984A0&gt;)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[naive-20261020 10:01:00]" time="0.027"><failure message="AssertionError: raw native field 15 must survive the actual decoder -&gt; event -&gt; audit chain&#10;assert []">..\..\v6lite\tests\test_batch27b_raw_execution_time.py:183: in test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification
+    assert matches,'raw native field 15 must survive the actual decoder -&gt; event -&gt; audit chain'
+E   AssertionError: raw native field 15 must survive the actual decoder -&gt; event -&gt; audit chain
+E   assert []</failure></testcase><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[unparseable-not-a-valid-execution-time]" time="0.027"><failure message="AssertionError: raw native field 15 must survive the actual decoder -&gt; event -&gt; audit chain&#10;assert []">..\..\v6lite\tests\test_batch27b_raw_execution_time.py:183: in test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification
+    assert matches,'raw native field 15 must survive the actual decoder -&gt; event -&gt; audit chain'
+E   AssertionError: raw native field 15 must survive the actual decoder -&gt; event -&gt; audit chain
+E   assert []</failure></testcase><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[zoned-20261020 14:01:00 UTC]" time="0.028"><failure message="AssertionError: raw native field 15 must survive the actual decoder -&gt; event -&gt; audit chain&#10;assert []">..\..\v6lite\tests\test_batch27b_raw_execution_time.py:183: in test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification
+    assert matches,'raw native field 15 must survive the actual decoder -&gt; event -&gt; audit chain'
+E   AssertionError: raw native field 15 must survive the actual decoder -&gt; event -&gt; audit chain
+E   assert []</failure></testcase><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_complete_native_query_raw_classification_summary_and_audit_are_redacted" time="0.026"><failure message="AssertionError: []&#10;assert 0 == 1&#10; +  where 0 = len([])">..\..\v6lite\tests\test_batch27b_raw_execution_time.py:214: in test_B27b_complete_native_query_raw_classification_summary_and_audit_are_redacted
+    assert len(summaries)==1,summaries
+E   AssertionError: []
+E   assert 0 == 1
+E    +  where 0 = len([])</failure></testcase><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day0-20261020-04:00:00]" time="0.003"><failure message="AssertionError: assert '' == '20261020-04:00:00'&#10;  &#10;  - 20261020-04:00:00">..\..\v6lite\tests\test_batch27b_raw_execution_time.py:237: in test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope
+    assert harness.filters[-1][1].time==expected_filter
+E   AssertionError: assert '' == '20261020-04:00:00'
+E     
+E     - 20261020-04:00:00</failure></testcase><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day1-20261102-05:00:00]" time="0.003"><failure message="AssertionError: assert '' == '20261102-05:00:00'&#10;  &#10;  - 20261102-05:00:00">..\..\v6lite\tests\test_batch27b_raw_execution_time.py:237: in test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope
+    assert harness.filters[-1][1].time==expected_filter
+E   AssertionError: assert '' == '20261102-05:00:00'
+E     
+E     - 20261102-05:00:00</failure></testcase><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[missing-End]" time="0.003" /><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[generation-reset]" time="0.003" /><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[cross-midnight]" time="0.002" /><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[unscoped-filter]" time="0.016" /><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[historical-filter]" time="0.003" /><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_legacy_non_overnight_client_and_release_account_queries_keep_unbounded_wire_filter" time="0.002" /><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_repeating_identical_native_raw_observations_does_not_flood_new_observation_audit" time="0.029" /><testcase classname="v6lite.tests.test_batch27b_raw_execution_time" name="test_B27b_invalid_raw_is_scoped_to_its_actual_reqId_and_never_poisons_another_complete_query" time="0.027"><failure message="assert (False)&#10; +  where False = isinstance(None, dict)">..\..\v6lite\tests\test_batch27b_raw_execution_time.py:320: in test_B27b_invalid_raw_is_scoped_to_its_actual_reqId_and_never_poisons_another_complete_query
+    assert isinstance(inner_scope,dict) and inner_scope.get('complete') is True
+E   assert (False)
+E    +  where False = isinstance(None, dict)</failure></testcase></testsuite></testsuites>

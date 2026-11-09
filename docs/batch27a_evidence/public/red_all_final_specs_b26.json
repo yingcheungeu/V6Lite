@@ -1,0 +1,756 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_all_final_specs_b26",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-16T15:41:36.241387-07:00",
+  "end_pt": "2026-10-16T15:41:52.594739-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "579d13832e3f4237",
+  "source_unchanged": true,
+  "worktree_code_sha": "ea23ffaf568a3db5",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "ea23ffaf568a3db5952075343d30c238c43e59db7e3b5caf5de4aa3a9fc8440f",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27a_execution_time.py",
+      "sha256": "f2d9a1748696bd6aa3d45468f474ac36537d21b12f7a74fdd43e0eb9e2a3c993"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27a_lifecycle.py",
+      "sha256": "d8610c8689f30041fea721af27cf5e84f2c7b39ae27c9248186b124d2a303cd2"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27a_review_edges.py",
+      "sha256": "f7f4515cd96df08e9f649b424961930a8fda7e0b4000051b3823b082a9d654db"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 86,
+    "failures": 43,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-99ec110ffc6246e8b7c4\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-99ec110ffc6246e8b7c4\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-99ec110ffc6246e8b7c4\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-99ec110ffc6246e8b7c4\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-99ec110ffc6246e8b7c4\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-99ec110ffc6246e8b7c4\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-99ec110ffc6246e8b7c4\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-99ec110ffc6246e8b7c4\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-99ec110ffc6246e8b7c4\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-99ec110ffc6246e8b7c4\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[execId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[intent]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[side]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[quantity]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]",
+      "outcome": "failure",
+      "message": "AssertionError: callback must actively schedule a complete execution query, including after CLOSED\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]",
+      "outcome": "failure",
+      "message": "AssertionError: callback must actively schedule a complete execution query, including after CLOSED\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_completed_protection_query_also_verifies_existing_callback_exec",
+      "outcome": "failure",
+      "message": "assert '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-51519c5592294c0ab3d9\", \"AAPL\", \"BUY\", 3, 113.13, 1001, 51001, 10000]}' is None\n +  where '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-51519c5592294c0ab3d9\", \"AAPL\", \"BUY\", 3, 113.13, 1001, 51001, 10000]}' = control('execution_time_unverified:b27a-callback-entry.01.01')\n +    where control = <v6lite.store.Store object at 0x000001DABAF2C710>.control\n +      where <v6lite.store.Store object at 0x000001DABAF2C710> = <v6lite.tests.helpers.Rig object at 0x000001DABAF2C850>.store\n +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')\n +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-51519c5592294c0ab3d9', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]",
+      "outcome": "failure",
+      "message": "assert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]",
+      "outcome": "failure",
+      "message": "assert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]",
+      "outcome": "failure",
+      "message": "assert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them",
+      "outcome": "failure",
+      "message": "AssertionError: # V6-Lite daily report 2026-10-16 (paper)\n  \n  - account: DU******001   state role: formal\n  - code_sha: 579d13832e3f4237\n  - market data: real-time (1) | n/a RTH availability (no runtime RTH samples supplied)\n  - last health market data (instantaneous, not RTH availability): real-time (1)\n  \n  - realized P&L: -0.39   fees: 2.00   net: -2.39\n  - entries submitted: 1 / 4\n  - daily stop latched: False\n  - open positions: none\n  - 券商端保护: 无持仓；空窗统计 A=0.000s B=0.000s；当日止损成交：AAPL execId=0000e0d5.6ad25378.01.01 数量=3 止损价=108.13 成交价=113.00 成交均价=113.00 滑点=-14.61 USD / -450.38 bps\n  - kill switch: off\n  - open anomalies: none\n  - frozen symbols (operator must flatten, then `release`): none\n  - released positions (P&L of the operator's TWS trades is NOT in the figures above): none\n  \n  ## Fills\n  - 14:00:30Z AAPL BUY 3 @ 113.13 realized 0.00\n  - 18:55:44Z AAPL SELL 3 @ 113.00 realized -0.39\n  \n  ## Events\n  - 13:50:00Z LOSS_STATE {\"cooldown_until\": null, \"streak\": 0}\n  - 14:00:30Z SCAN {\"errors\": {}, \"min_score\": 60, \"signals\": [[\"AAPL\", 78]], \"vix\": 18.0}\n  - 14:00:30Z INTENT_STATUS {\"intent_id\": \"v6l-c18b697de96d43a387c7\", \"note\": null, \"status\": \"SENT\"}\n  - 14:00:31Z INTENT_STATUS {\"intent_id\": \"v6l-c18b697de96d43a387c7\", \"note\": null, \"status\": \"FILLED\"}\n  - 14:00:31Z INTENT_STATUS {\"intent_id\": \"v6l-protect-4aa3db95f3914b98b522\", \"note\": null, \"status\": \"SENT\"}\n  - 14:00:31Z PROTECT_GAP {\"exec_id\": \"0000fa4e.00000001.01.01\", \"gap_kind\": \"A\", \"intent_id\": \"v6l-protect-4aa3db95f3914b98b522\", \"position_id\": \"pos-ccabe5b31a1c4e8ba833\", \"recovered_u\n  - 18:55:44Z INTENT_STATUS {\"intent_id\": \"v6l-protect-4aa3db95f3914b98b522\", \"note\": null, \"status\": \"FILLED\"}\n  - 18:55:44Z TRADE_CLOSED {\"fees\": 2.0, \"gross\": -0.39, \"missing_fees\": 0, \"position_id\": \"pos-ccabe5b31a1c4e8ba833\", \"symbol\": \"AAPL\"}\n  - 18:55:44Z LOSS_STATE {\"cooldown_until\": null, \"streak\": 1}\n  \n  ## Operator notes\n  \n  - (market context, manual actions, things to review)\n  \nassert ('0000e0d5.6ad25378.01.01' in '# V6-Lite daily report 2026-10-16 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 579d13832e3f4237\\...E {\"cooldown_until\": null, \"streak\": 1}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n' and ('未核实' in '# V6-Lite daily report 2026-10-16 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 579d13832e3f4237\\...E {\"cooldown_until\": null, \"streak\": 1}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n' or 'unverified' in '# v6-lite daily report 2026-10-16 (paper)\\n\\n- account: du0000001   state role: formal\\n- code_sha: 579d13832e3f4237\\...e {\"cooldown_until\": null, \"streak\": 1}\\n\\n## operator notes\\n\\n- (market context, manual actions, things to review)\\n'))\n +  where '0000e0d5.6ad25378.01.01' = FillEvent(exec_id='0000e0d5.6ad25378.01.01', intent_id='v6l-protect-4aa3db95f3914b98b522', symbol='AAPL', side=<Side.S...e.utc), broker_order_id=1002, perm_id=51002, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id\n +  and   '# v6-lite daily report 2026-10-16 (paper)\\n\\n- account: du0000001   state role: formal\\n- code_sha: 579d13832e3f4237\\...e {\"cooldown_until\": null, \"streak\": 1}\\n\\n## operator notes\\n\\n- (market context, manual actions, things to review)\\n' = <built-in method lower of str object at 0x000001DA994A3A10>()\n +    where <built-in method lower of str object at 0x000001DA994A3A10> = '# V6-Lite daily report 2026-10-16 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 579d13832e3f4237\\...E {\"cooldown_until\": null, \"streak\": 1}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n'.lower"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[exact-cutoff-freeze]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-before-allow]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-after-freeze]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[null]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[array]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[string]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[number]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-null]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-short]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-long]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[bool-quantity]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[nan-price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[infinite-price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[naive-time]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[missing-pin]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[pin-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[row-conid-missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[UTC]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[+09:00]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[America/New_York]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed]",
+      "outcome": "failure",
+      "message": "AssertionError: closed positions also need a limited active retry while callback timestamps are pending\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty]",
+      "outcome": "failure",
+      "message": "AssertionError: closed positions also need a limited active retry while callback timestamps are pending\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain]",
+      "outcome": "failure",
+      "message": "AssertionError: closed positions also need a limited active retry while callback timestamps are pending\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-failed]",
+      "outcome": "failure",
+      "message": "AssertionError: closed positions also need a limited active retry while callback timestamps are pending\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-empty]",
+      "outcome": "failure",
+      "message": "AssertionError: closed positions also need a limited active retry while callback timestamps are pending\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-still-uncertain]",
+      "outcome": "failure",
+      "message": "AssertionError: closed positions also need a limited active retry while callback timestamps are pending\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_receive_time_basis_is_explicit_in_daily_report",
+      "outcome": "failure",
+      "message": "AssertionError: # V6-Lite daily report 2026-10-19 (paper)\n  \n  - account: DU******001   state role: formal\n  - code_sha: 579d13832e3f4237\n  - market data: real-time (1) | n/a RTH availability (no runtime RTH samples supplied)\n  - last health market data (instantaneous, not RTH availability): real-time (1)\n  \n  - realized P&L: 0.00   fees: 0.00   net: 0.00\n  - entries submitted: 0 / 4\n  - daily stop latched: False\n  - open positions: AAPL 3@113.13 stop 108.13\n  - 券商端保护: AAPL 截至 2026-10-19T14:01:00+00:00 最近一次券商快照确认，当前仍需核实，本地状态=WORKING P=3 S=3 类型=STP 止损价（触发后市价成交）=108.13 orderId=1002；空窗统计 A=0.000s B=0.000s\n  - kill switch: off\n  - open anomalies: none\n  - frozen symbols (operator must flatten, then `release`): none\n  - released positions (P&L of the operator's TWS trades is NOT in the figures above): none\n  \n  ## Fills\n  - none\n  \n  ## Events\n  - none\n  \n  ## Operator notes\n  \n  - (market context, manual actions, things to review)\n  \nassert ('0000e0d5.6ace9d9f.01.01' in '# V6-Lite daily report 2026-10-19 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 579d13832e3f4237\\...\\n## Fills\\n- none\\n\\n## Events\\n- none\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n')"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_callback_can_be_verified_by_first_natural_protection_query_without_extra_tick",
+      "outcome": "failure",
+      "message": "assert '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-7742d62262e14d7a9c53\", \"AAPL\", \"BUY\", 3, 113.13, 1001, 51001, 10000]}' is None\n +  where '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-7742d62262e14d7a9c53\", \"AAPL\", \"BUY\", 3, 113.13, 1001, 51001, 10000]}' = control('execution_time_unverified:b27a-callback-entry.01.01')\n +    where control = <v6lite.store.Store object at 0x000001DABB0B7890>.control\n +      where <v6lite.store.Store object at 0x000001DABB0B7890> = <v6lite.tests.helpers.Rig object at 0x000001DABB0B59D0>.store\n +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')\n +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-7742d62262e14d7a9c53', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[verified-history]",
+      "outcome": "failure",
+      "message": "AssertionError: fresh unchanged covered stop must end its old evidence episode\nassert '{\"signature\": \"[\\\\\"evidence incomplete\\\\\",[\\\\\"OPEN\\\\\",3],[\\\\\"WORKING\\\\\",\\\\\"v6l-protect-8e9cabda8a0d44618100\\\\\",1002,5...ue, \"intent_id\": \"v6l-protect-8e9cabda8a0d44618100\", \"p0_attempted\": true, \"last_notice\": \"2026-10-14T13:20:54+00:00\"}' is None\n +  where '{\"signature\": \"[\\\\\"evidence incomplete\\\\\",[\\\\\"OPEN\\\\\",3],[\\\\\"WORKING\\\\\",\\\\\"v6l-protect-8e9cabda8a0d44618100\\\\\",1002,5...ue, \"intent_id\": \"v6l-protect-8e9cabda8a0d44618100\", \"p0_attempted\": true, \"last_notice\": \"2026-10-14T13:20:54+00:00\"}' = control('protect_incident:pos-99ec110ffc6246e8b7c4:evidence incomplete')\n +    where control = <v6lite.store.Store object at 0x000001DABB207910>.control\n +      where <v6lite.store.Store object at 0x000001DABB207910> = <v6lite.tests.helpers.Rig object at 0x000001DABB05D750>.store"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[callback-history]",
+      "outcome": "failure",
+      "message": "AssertionError: fresh unchanged covered stop must end its old evidence episode\nassert '{\"signature\": \"[\\\\\"evidence incomplete\\\\\",[\\\\\"OPEN\\\\\",3],[\\\\\"WORKING\\\\\",\\\\\"v6l-protect-7a04326f79634650a514\\\\\",1002,5...ue, \"intent_id\": \"v6l-protect-7a04326f79634650a514\", \"p0_attempted\": true, \"last_notice\": \"2026-10-14T13:20:54+00:00\"}' is None\n +  where '{\"signature\": \"[\\\\\"evidence incomplete\\\\\",[\\\\\"OPEN\\\\\",3],[\\\\\"WORKING\\\\\",\\\\\"v6l-protect-7a04326f79634650a514\\\\\",1002,5...ue, \"intent_id\": \"v6l-protect-7a04326f79634650a514\", \"p0_attempted\": true, \"last_notice\": \"2026-10-14T13:20:54+00:00\"}' = control('protect_incident:pos-99ec110ffc6246e8b7c4:evidence incomplete')\n +    where control = <v6lite.store.Store object at 0x000001DABB28F390>.control\n +      where <v6lite.store.Store object at 0x000001DABB28F390> = <v6lite.tests.helpers.Rig object at 0x000001DABB06E690>.store"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_1016_Submitted_then_STP_fill_inside_query_closes_ledger_without_false_P0",
+      "outcome": "failure",
+      "message": "AssertionError: a proved own STOP close plus one in-flight stale query is audit-only\nassert ['protection ...齐全且一致后再解除冻结。'] == []\n  \n  Left contains one more item: 'protection evidence incomplete AAPL\\nAAPL 持仓数量=0 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–0） 股 可能超卖=...行三项证据查询失败：BrokerError\\n影响：持仓、工作单和成交三项证据不完整，不能安全增加保护数量。\\n你要做什么：1）在 TWS 分别核对持仓、所有工作单、成交；2）不要另下卖单或增加保护数量；3）证据齐全且一致后再解除冻结。'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[short-position]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[external-sell-working]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[freeze-policy]",
+      "outcome": "failure",
+      "message": "AssertionError: ('open_orders', [15.0, 15.0, 30.0, 45.0, 45.0, 60.0])\nassert [15.0, 15.0, ...0, 45.0, 60.0] == [15, 30, 45, 60]\n  \n  At index 1 diff: 15.0 != 30\n  Left contains 2 more items, first extra item: 45.0\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[callback-too-recent]",
+      "outcome": "failure",
+      "message": "AssertionError: ('open_orders', [15.0, 15.0, 30.0, 45.0, 45.0, 60.0])\nassert [15.0, 15.0, ...0, 45.0, 60.0] == [15, 30, 45, 60]\n  \n  At index 1 diff: 15.0 != 30\n  Left contains 2 more items, first extra item: 45.0\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[unknown-today-execution]",
+      "outcome": "failure",
+      "message": "AssertionError: ('open_orders', [15.0, 15.0, 30.0, 45.0, 45.0, 60.0])\nassert [15.0, 15.0, ...0, 45.0, 60.0] == [15, 30, 45, 60]\n  \n  At index 1 diff: 15.0 != 30\n  Left contains 2 more items, first extra item: 45.0\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_zero_duration_query_still_sends_actual_native_requests",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_close_notice_never_presents_sizing_reserve_as_observed_commission",
+      "outcome": "failure",
+      "message": "AssertionError: #x1F7E2 持仓已关闭\n  发生了什么：AAPL 持仓已关闭。\n  下一步：核对 TWS 成交与本机 report。\nassert ('-8.09' in '#x1F7E2 持仓已关闭\\n发生了什么：AAPL 持仓已关闭。\\n下一步：核对 TWS 成交与本机 report。')"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_prior_close_unavailable_retries_each_five_minutes_and_only_actual_close_clears_entry_block",
+      "outcome": "failure",
+      "message": "AssertionError: #x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\n  启动时间：2026-10-19 04:21 PT / 07:21 ET\n  模式：Paper · 真实下单（Paper） · 实时行情 · DU******001 · 版本 579d1383\n  状态：⚠️ 需关注\n  IBKR 已连接 · 对账一致 · 告警通道正常 · 旧 V6：未运行\n  daily_loss_baseline_unknown:prior_close:AAPL\n  入场窗口 10:00 ET 开启\n  报价可用 3/3 · V6-Lite 持仓：AAPL 3\n  监控：IBKR 心跳：每 60 秒，连续 2 次无应答即告警\n  持仓漂移：每 3600 秒对账，不一致即告警\n  每日健康报告：13:05 PT（收盘后 5 分钟）\n  扫描时间：10:00 ET / 07:00 PT\n  手动指令（本机命令行）：这些指令只能在本机命令行执行，不能在 Discord 输入。\n  status 查看状态 · report 查看日报\n  kill --reason 停止入场 · resume 恢复\n  ignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码\nassert ('前收盘价' in '#x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\\n启动时间：2026-10-19 04:21 PT / 07:21 ET\\n模式：Paper · 真实下单（Paper） · 实时行情 · DU******000...atus 查看状态 · report 查看日报\\nkill --reason 停止入场 · resume 恢复\\nignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码')"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+      "outcome": "failure",
+      "message": "AssertionError: #x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\n  启动时间：2026-10-19 04:21 PT / 07:21 ET\n  模式：Paper · 真实下单（Paper） · 实时行情 · DU******001 · 版本 579d1383\n  状态：⚠️ 需关注\n  IBKR 已连接 · 对账一致 · 告警通道正常 · 旧 V6：未运行\n  daily_loss_baseline_unknown:prior_close:AAPL\n  入场窗口 10:00 ET 开启\n  报价可用 3/3 · V6-Lite 持仓：AAPL 3\n  监控：IBKR 心跳：每 60 秒，连续 2 次无应答即告警\n  持仓漂移：每 3600 秒对账，不一致即告警\n  每日健康报告：13:05 PT（收盘后 5 分钟）\n  扫描时间：10:00 ET / 07:00 PT\n  手动指令（本机命令行）：这些指令只能在本机命令行执行，不能在 Discord 输入。\n  status 查看状态 · report 查看日报\n  kill --reason 停止入场 · resume 恢复\n  ignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码\nassert ('保护状态仍须独立核验' in '#x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\\n启动时间：2026-10-19 04:21 PT / 07:21 ET\\n模式：Paper · 真实下单（Paper） · 实时行情 · DU******000...atus 查看状态 · report 查看日报\\nkill --reason 停止入场 · resume 恢复\\nignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码' or '保护状态需独立核验' in '#x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\\n启动时间：2026-10-19 04:21 PT / 07:21 ET\\n模式：Paper · 真实下单（Paper） · 实时行情 · DU******000...atus 查看状态 · report 查看日报\\nkill --reason 停止入场 · resume 恢复\\nignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码')"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+      "outcome": "failure",
+      "message": "AssertionError: #x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\n  启动时间：2026-10-19 04:21 PT / 07:21 ET\n  模式：Paper · 真实下单（Paper） · 实时行情 · DU******001 · 版本 579d1383\n  状态：⚠️ 需关注\n  IBKR 已连接 · 对账一致 · 告警通道正常 · 旧 V6：未运行\n  daily_loss_baseline_unknown:prior_close:AAPL\n  protection_unconfirmed:AAPL\n  入场窗口 10:00 ET 开启\n  报价可用 3/3 · V6-Lite 持仓：AAPL 3\n  监控：IBKR 心跳：每 60 秒，连续 2 次无应答即告警\n  持仓漂移：每 3600 秒对账，不一致即告警\n  每日健康报告：13:05 PT（收盘后 5 分钟）\n  扫描时间：10:00 ET / 07:00 PT\n  手动指令（本机命令行）：这些指令只能在本机命令行执行，不能在 Discord 输入。\n  status 查看状态 · report 查看日报\n  kill --reason 停止入场 · resume 恢复\n  ignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码\nassert ('保护状态仍须独立核验' in '#x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\\n启动时间：2026-10-19 04:21 PT / 07:21 ET\\n模式：Paper · 真实下单（Paper） · 实时行情 · DU******000...atus 查看状态 · report 查看日报\\nkill --reason 停止入场 · resume 恢复\\nignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码' or '保护状态需独立核验' in '#x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\\n启动时间：2026-10-19 04:21 PT / 07:21 ET\\n模式：Paper · 真实下单（Paper） · 实时行情 · DU******000...atus 查看状态 · report 查看日报\\nkill --reason 停止入场 · resume 恢复\\nignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码')"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+      "outcome": "failure",
+      "message": "AssertionError: #x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\n  启动时间：2026-10-19 04:21 PT / 07:21 ET\n  模式：Paper · 真实下单（Paper） · 实时行情 · DU******001 · 版本 579d1383\n  状态：⚠️ 需关注\n  IBKR 已连接 · 对账一致 · 告警通道正常 · 旧 V6：未运行\n  daily_loss_baseline_unknown:prior_close:AAPL\n  入场窗口 10:00 ET 开启\n  报价可用 3/3 · V6-Lite 持仓：AAPL 3\n  监控：IBKR 心跳：每 60 秒，连续 2 次无应答即告警\n  持仓漂移：每 3600 秒对账，不一致即告警\n  每日健康报告：13:05 PT（收盘后 5 分钟）\n  扫描时间：10:00 ET / 07:00 PT\n  手动指令（本机命令行）：这些指令只能在本机命令行执行，不能在 Discord 输入。\n  status 查看状态 · report 查看日报\n  kill --reason 停止入场 · resume 恢复\n  ignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码\nassert ('保护状态仍须独立核验' in '#x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\\n启动时间：2026-10-19 04:21 PT / 07:21 ET\\n模式：Paper · 真实下单（Paper） · 实时行情 · DU******000...atus 查看状态 · report 查看日报\\nkill --reason 停止入场 · resume 恢复\\nignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码' or '保护状态需独立核验' in '#x1F7E2 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）\\n启动时间：2026-10-19 04:21 PT / 07:21 ET\\n模式：Paper · 真实下单（Paper） · 实时行情 · DU******000...atus 查看状态 · report 查看日报\\nkill --reason 停止入场 · resume 恢复\\nignore 标的 · release 标的 · resolve-intent ID · clear-anomaly 代码')"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+      "outcome": "failure",
+      "message": "assert True is False\n +  where True = <v6lite.engine.Engine object at 0x000001DABB00B5D0>._protection_priority_due\n +    where <v6lite.engine.Engine object at 0x000001DABB00B5D0> = <v6lite.tests.helpers.Rig object at 0x000001DABAF2D9D0>.engine"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+      "outcome": "failure",
+      "message": "AssertionError: resume bookkeeping cannot keep an already-flat evidence incident alive\nassert '{\"signature\": \"[\\\\\"evidence incomplete\\\\\",[\\\\\"OPEN\\\\\",3],[\\\\\"WORKING\\\\\",\\\\\"v6l-protect-fa45b81eaa0c4fa09199\\\\\",1002,5...ue, \"intent_id\": \"v6l-protect-fa45b81eaa0c4fa09199\", \"p0_attempted\": true, \"last_notice\": \"2026-10-14T13:20:54+00:00\"}' is None\n +  where '{\"signature\": \"[\\\\\"evidence incomplete\\\\\",[\\\\\"OPEN\\\\\",3],[\\\\\"WORKING\\\\\",\\\\\"v6l-protect-fa45b81eaa0c4fa09199\\\\\",1002,5...ue, \"intent_id\": \"v6l-protect-fa45b81eaa0c4fa09199\", \"p0_attempted\": true, \"last_notice\": \"2026-10-14T13:20:54+00:00\"}' = control('protect_incident:pos-da9e8296ee7c44a6b1dd:evidence incomplete')\n +    where control = <v6lite.store.Store object at 0x000001DA9ADF4B10>.control\n +      where <v6lite.store.Store object at 0x000001DA9ADF4B10> = <v6lite.tests.helpers.Rig object at 0x000001DA9ADF5510>.store"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+      "outcome": "failure",
+      "message": "AssertionError: assert (None is not None)\n +  where None = control('protect_incident:pos-054d1db0c6184f64b87c:evidence incomplete')\n +    where control = <v6lite.store.Store object at 0x000001DA98CBC710>.control\n +      where <v6lite.store.Store object at 0x000001DA98CBC710> = <v6lite.tests.helpers.Rig object at 0x000001DA98CBD3D0>.store"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields.<locals>.<genexpr> at 0x000001DA99990200>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields.<locals>.<genexpr> at 0x000001DA99990D60>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields.<locals>.<genexpr> at 0x000001DA99992880>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields.<locals>.<genexpr> at 0x000001DA99992A40>)"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[execId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[intent]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[symbol]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[side]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[quantity]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[price]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[orderId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[permId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[conId]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-callback]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-callback]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-callback]",
+      "::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]",
+      "::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]",
+      "::test_B27a_completed_protection_query_also_verifies_existing_callback_exec",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]",
+      "::test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them",
+      "::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[exact-cutoff-freeze]",
+      "::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-before-allow]",
+      "::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-after-freeze]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[null]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[array]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[string]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[number]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-null]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-short]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-long]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[bool-quantity]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[nan-price]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[infinite-price]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[naive-time]",
+      "::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[missing-pin]",
+      "::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[pin-conflict]",
+      "::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[row-conid-missing]",
+      "::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[UTC]",
+      "::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[+09:00]",
+      "::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[America/New_York]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-failed]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-empty]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-still-uncertain]",
+      "::test_B27a_history_receive_time_basis_is_explicit_in_daily_report",
+      "::test_B27a_callback_can_be_verified_by_first_natural_protection_query_without_extra_tick",
+      "::test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[verified-history]",
+      "::test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[callback-history]",
+      "::test_B27a_1016_Submitted_then_STP_fill_inside_query_closes_ledger_without_false_P0",
+      "::test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[short-position]",
+      "::test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[external-sell-working]",
+      "::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[freeze-policy]",
+      "::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[callback-too-recent]",
+      "::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[unknown-today-execution]",
+      "::test_B27a_zero_duration_query_still_sends_actual_native_requests",
+      "::test_B27a_close_notice_never_presents_sizing_reserve_as_observed_commission",
+      "::test_B27a_prior_close_unavailable_retries_each_five_minutes_and_only_actual_close_clears_entry_block",
+      "::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+      "::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+      "::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+      "::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+      "::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+      "::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+      "::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+      "::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+      "::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+      "::test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+      "::test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+      "::test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+      "::test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+      "::test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+      "::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+      "::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+      "::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+      "::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]"
+    ],
+    "executed": [
+      "::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[execId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[intent]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[symbol]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[side]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[quantity]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[price]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[orderId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[permId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[conId]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-callback]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-callback]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-callback]",
+      "::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]",
+      "::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]",
+      "::test_B27a_completed_protection_query_also_verifies_existing_callback_exec",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]",
+      "::test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them",
+      "::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[exact-cutoff-freeze]",
+      "::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-before-allow]",
+      "::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-after-freeze]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[null]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[array]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[string]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[number]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-null]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-short]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-long]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[bool-quantity]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[nan-price]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[infinite-price]",
+      "::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[naive-time]",
+      "::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[missing-pin]",
+      "::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[pin-conflict]",
+      "::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[row-conid-missing]",
+      "::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[UTC]",
+      "::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[+09:00]",
+      "::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[America/New_York]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-failed]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-empty]",
+      "::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-still-uncertain]",
+      "::test_B27a_history_receive_time_basis_is_explicit_in_daily_report",
+      "::test_B27a_callback_can_be_verified_by_first_natural_protection_query_without_extra_tick",
+      "::test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[verified-history]",
+      "::test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[callback-history]",
+      "::test_B27a_1016_Submitted_then_STP_fill_inside_query_closes_ledger_without_false_P0",
+      "::test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[short-position]",
+      "::test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[external-sell-working]",
+      "::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[freeze-policy]",
+      "::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[callback-too-recent]",
+      "::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[unknown-today-execution]",
+      "::test_B27a_zero_duration_query_still_sends_actual_native_requests",
+      "::test_B27a_close_notice_never_presents_sizing_reserve_as_observed_commission",
+      "::test_B27a_prior_close_unavailable_retries_each_five_minutes_and_only_actual_close_clears_entry_block",
+      "::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+      "::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+      "::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+      "::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+      "::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+      "::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+      "::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+      "::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+      "::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+      "::test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+      "::test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+      "::test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+      "::test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+      "::test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+      "::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+      "::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+      "::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+      "::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]"
+    ]
+  },
+  "stdout_sha256": "e981ce7ab2eb5951b052d5518374dbc927818ff3d18d80d2161c4f88ee2abc80",
+  "junit_sha256": "76461556da124d1a2b8848e796a84c4f20c90fb6b104af5186ebe2b748fcab7a",
+  "inventory_sha256": "cd139af99497c7a5576cc625e2a2eff109f196a897597b1b8f2149f701449152",
+  "publication_redaction": {
+    "rule": "All account-shaped values including synthetic fixtures masked; original receipts retained locally and not staged.",
+    "original_artifact_sha256": {
+      "red_all_final_specs_b26.json": "8cbf49bb3ef0f1e1d1cbf20ea8584d02976e3011b72b3a10e7fd8fd59628d9d9",
+      "red_all_final_specs_b26.txt": "93502fddb299ebac8bb26b5c0313ce61c5e1f69f0b0e73cae5925991408c3706",
+      "red_all_final_specs_b26.xml": "9e54576e7b9855968e863c7785e627596fc343374abd13e3a68262b63c7868f9",
+      "red_all_final_specs_b26_inventory.json": "fb530591b53f83ac47009617b1d4a11d8bd98ee1f3fdb362f75a1cc534ec3af3",
+      "red_all_final_specs_b26_progress.json": "d06c88acfbdf8eb695c50be20feca52a820729eae6c8a92ccf07e8281e064286"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "reviewer": "/root/batch24_tests",
+  "reviewed_at_pt": "2026-10-12T14:06:48.793850-07:00",
+  "read_only_review": true,
+  "unresolved_substantive_findings": [],
+  "tools_sha256": {
+    "build_batch24_report.py": "bbea7f1339f2a0d3eb6a3aa9adfdf0ff876967fa1248ea8bdda0841dc4d047da",
+    "render_samples.py": "f9d92506ed7d5e173f212cb6dca873a8fd5e7d51be57acea84d6094c25786ac9"
+  },
+  "checked": [
+    "raw stdout/XML/inventory hashes, actual JUnit totals/cases/inventory",
+    "full collection metadata, serial inventory/source binding, whole PT interval",
+    "safe checkpoint/red paths and nodeid-to-file hash mapping",
+    "current source/card JSON/plain Markdown binding and optimization guard",
+    "denylist, staged artifact rejection, validate-first manifest-last publication"
+  ],
+  "root_direct_checks": {
+    "guard": "PASS",
+    "current_green_receipt": "101 passed, raw evidence revalidated",
+    "tampered_stdout_junit_inventory_hashes": "REJECT",
+    "tampered_JUnit_totals": "REJECT",
+    "out-of-dev_paths": "REJECT",
+    "full_spanning_trading_block": "REJECT"
+  },
+  "checkpoint_review": "pending actual checkpoint"
+}

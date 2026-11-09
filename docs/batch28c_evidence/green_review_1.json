@@ -1,0 +1,32 @@
+{
+  "label": "green_review_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:53:01.816294-07:00",
+  "end_pt": "2026-10-21T20:53:13.993264-07:00",
+  "seconds": 12.188,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28c_old_raw_callback.py",
+    "v6lite/tests/test_batch28c_pair_window.py",
+    "v6lite/tests/test_batch28c_stop_query_contradiction.py",
+    "v6lite/tests/test_batch28b_callback_edges.py",
+    "v6lite/tests/test_ibkr_adapter.py"
+  ],
+  "code_sha": "f5fe3a9132f90174",
+  "source_unchanged": true,
+  "inventory_sha256": "885573290a29ced476eea7b497077fd71dd67dadf6b6f7c1bea7dc4d7b8ecbaa",
+  "incomplete": false,
+  "tests": 16,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28c_pair_window",
+      "name": "test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick",
+      "kind": "failure",
+      "message": "AssertionError: assert not [(171776.515, '16')]"
+    }
+  ]
+}

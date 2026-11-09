@@ -1,0 +1,29 @@
+{
+  "label": "release_full_2",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T21:24:10.044619-07:00",
+  "end_pt": "2026-10-21T21:43:37.033870-07:00",
+  "seconds": 1166.985,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests",
+    "scripts/tests"
+  ],
+  "code_sha": "737c9ad3b19d8211",
+  "source_unchanged": true,
+  "inventory_sha256": "4fd895e628ff23fcec03e29fde1d47a51b93c145e5ca826ea41d6c00adfe2513",
+  "incomplete": false,
+  "tests": 2087,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_strategy_parity",
+      "name": "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "kind": "skipped",
+      "message": "legacy market_scanner.py not present"
+    }
+  ]
+}

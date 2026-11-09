@@ -1,0 +1,65 @@
+{
+  "reviewed_by": "batch20_time_logs",
+  "verdict": "PASS",
+  "approval_scope": "PASS_SOURCE_STATIC; production, seven frozen new specifications, six legacy updates and five verification tools. This source approval does not replace final full-three/cards/report/manifest/plan bundle receipt.",
+  "code_sha": "a17d647ba28c51e4",
+  "independent_package_file_count": 108,
+  "production_sha256": {
+    "v6lite/broker/ibkr.py": "57e79cc8953f21bd477cc0ae7ccd8bd34c669fee84192119288c6856f61068fc",
+    "v6lite/engine.py": "9e379332fd2dfa68b54ebfbc07f9bdcfc242c9de56a29b60f4affc4b6d7fc1f0",
+    "v6lite/protection_engine.py": "d58b5ed6a077ae820fbaf80bc6e99a3032ddfe8cf562316eb860d7e0c5a24e2b",
+    "v6lite/tp_evidence.py": "59c5607ec7fd44b79cfd33555ba360a2cdf72d0a363c36300c9e4d5899278645",
+    "v6lite/report.py": "6b333c0e8239608a7525c23c23103308daefe63ff5e99ce794f6039a55eb561a",
+    "v6lite/store.py": "56cc4454b612aa96a798aa0e95a3ead3646bf0a9b5fe921733b1de3989d4c411"
+  },
+  "broker_boundary": [
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 773,
+      "finding": "Unique placeOrder is behind inner read_only gate; submit/modify/cancel also have public read_only gates."
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 917,
+      "finding": "Unique cancelOrder follows trusted protection namespace and complete wire/ID/account proof."
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 802,
+      "finding": "LimitOrder DAY explicitly usePriceMgmtAlgo=False and outsideRth=False."
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 820,
+      "finding": "StopOrder GTC explicitly usePriceMgmtAlgo=False/outsideRth=False; no LMT price."
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 865,
+      "finding": "Same-ID StopOrder modification explicitly usePriceMgmtAlgo=False/outsideRth=False."
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2542,
+      "finding": "Dry exits blocked before physical submission."
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2570,
+      "finding": "Dry ENTRY blocked before physical submission."
+    }
+  ],
+  "PMA_constructor_search": "All production Python AST constructors/search: only the three SDK paths above; no MarketOrder constructor, no enabled overridePercentageConstraints/PMA/IBALGO.",
+  "permissions": "23 core methods AST unchanged against 22a; cancellations.py bytes unchanged. Release is not claimed byte/AST unchanged: removing only two new full-error audit calls and normalizing the old80-character diagnostic leaf reproduces the 22a AST. _recover only its diagnostic200-character preview leaf changed. Submit/three-source query paths are AST-equivalent after dropping diagnostic-only audits; other cancel/modify deadline differences are evidence output or Chinese diagnostics, not gates/state/write arguments.",
+  "diagnostic_nine_catches": "Original UNKNOWN/REJECTED, maybe_sent, raise, query completeness, timing and write gates retained. Six dynamic diagnostic cases are representative; open_orders/positions_fresh/TP timeout cancel catches independently checked statically.",
+  "price_and_resume": "Same raw/numeric bid/ask/timestamp/age/formula checked after slow capacity queries and again after durable writes before physical submit. Unknown/hold not downgraded, definitely unsent does not record send. Position/pause/episode/John binding plus complete three-source full STP proof required for resume; no release/clear-hold rights and no same-tick TP. Ordinary unprotected TP rejection uses diagnostic-only context and persistent pause, never enables STP.",
+  "terminal_fact": "Display-only helper:202 cancellation first; code0 explicit cancellation plus cannot-accept reason remains cancellation;201 with explicit cancellation remains fact unknown. Hard native identity, quantities and states unaffected; original broker reason unaltered.",
+  "truncation_search": "All production.py numeric slices/truncate/shorten/ellipsis searched. Broker originals retained in state/audit/report and dedicated TP/P0 multipart with ACK retry. Remaining local approval/protection-plan/operator notes or generic title/summary/fallback limits are classified as previews; do not claim every UI is unlimited. Recovery ANOMALY.detail report now complete.",
+  "legacy_reviews": "All seven new spec hashes unchanged; six old tests preserve/amplify identity, quantity, holds, freeze, capacity, no additional write and zero MKT assertions. Last real-TP capacity test targeted XML/JSON/TXT verified at final code,1passed; original full failure not counted.",
+  "tools": "Serial/time/process/source/spec gates; per-case raw XML/case/hash checks; same final source/full3/test directory digests; cards bound to source/spec/script and local ACK+restart observation; one-time seal; normalized exact-scope stage and report/manifest/plan receipt hashes; index raw bytes verified with temporary autocrlf=false.",
+  "limitations": [
+    "Fake/offline does not prove real Paper price range, execution speed/slippage or Live maximum gap<=5seconds.",
+    "Final same-code full-three/card/report/manifest/plan receipt must be independently approved after generation."
+  ],
+  "reviewer_io": "Read-only; no tests, writes, broker/runtime/User-state access."
+}

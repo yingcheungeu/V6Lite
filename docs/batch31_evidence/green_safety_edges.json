@@ -1,0 +1,41 @@
+{
+  "label": "green_safety_edges",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T07:08:02.826172-07:00",
+  "end_pt": "2026-10-27T07:08:14.492406-07:00",
+  "seconds": 11.672,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch31_close_card.py",
+    "v6lite/tests/test_batch26_be_token_regression.py",
+    "v6lite/tests/test_batch28c_price_edges.py"
+  ],
+  "code_sha": "554e190f4c2216b1",
+  "source_unchanged": true,
+  "inventory_sha256": "7c12c008e3dcaae6b82727b9b5badf72d0cba85597023d8a138a1a9385d3fb9e",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "5f5ae8140bc842bd2304f925d58cabe802a8a798bee497e5f535c60a4e455bd5",
+  "XML_sha256_before_masking": "71fa59d57052399f014caa2a8f365b66d8767551a6521435ed9041bb905541a6",
+  "delivered_log_sha256": "a4d59581b47b403b63564d3da5fff14b80481502bacb21eaa03e2bdec78fb0a5",
+  "delivered_XML_sha256": "71fa59d57052399f014caa2a8f365b66d8767551a6521435ed9041bb905541a6",
+  "tests": 32,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]",
+      "kind": "failure",
+      "message": "assert 1.107 == 0.107\n +  where 1.107 = <built-in method total_seconds of datetime.timedelta object at 0x000001F0F6BF10B0>()\n +    where <built-in method total_seconds of datetime.timedelta object at 0x000001F0F6BF10B0> = (datetime.datetime(2026, 10, 27, 13, 33, 28, 108000, tzinfo=datetime.timezone.utc) - datetime.datetime(2026, 10, 27, 13, 33, 27, 1000, tzinfo=datetime.timezone.utc)).total_seconds"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]",
+      "kind": "failure",
+      "message": "assert 1.107 == 0.107\n +  where 1.107 = <built-in method total_seconds of datetime.timedelta object at 0x000001F0F6BE5830>()\n +    where <built-in method total_seconds of datetime.timedelta object at 0x000001F0F6BE5830> = (datetime.datetime(2026, 10, 27, 13, 33, 28, 108000, tzinfo=datetime.timezone.utc) - datetime.datetime(2026, 10, 27, 13, 33, 27, 1000, tzinfo=datetime.timezone.utc)).total_seconds"
+    }
+  ]
+}

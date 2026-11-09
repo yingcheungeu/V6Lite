@@ -1,0 +1,8 @@
+...                                                                      [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+  v6lite\tests\test_batch29_native_timeout.py:299: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+3 passed, 1 warning in 18.71s

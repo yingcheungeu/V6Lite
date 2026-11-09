@@ -1,0 +1,25 @@
+{
+  "label": "green_commission_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-26T15:17:38.803395-07:00",
+  "end_pt": "2026-10-26T15:17:40.805838-07:00",
+  "seconds": 2.0,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch30_commission.py"
+  ],
+  "code_sha": "b07e2294d5d76cdc",
+  "source_unchanged": true,
+  "inventory_sha256": "58d29d13509f2080b3d56c52de001e4284befd75b3d2ed27efbb4abd2b5d2646",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "5bdae8d7a584c0306c1df695c28eb6b44b2b5b0d191ef0f980902bf83fb8b501",
+  "XML_sha256_before_masking": "f90f9dd24afa5de5a93eb060c2d4a6c7701945554a734e9e063bc029ab2493e7",
+  "delivered_log_sha256": "a5f0f6afbb4c397c99a00b34a28beb2c73198c4b1e885b679df0e8ee41211218",
+  "delivered_XML_sha256": "f90f9dd24afa5de5a93eb060c2d4a6c7701945554a734e9e063bc029ab2493e7",
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

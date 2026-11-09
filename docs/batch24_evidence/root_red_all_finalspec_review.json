@@ -1,0 +1,36 @@
+{
+  "baseline_code_sha": "a17d647ba28c51e4",
+  "totals": {
+    "tests": 101,
+    "failures": 74,
+    "errors": 0,
+    "skipped": 0
+  },
+  "baseline_source_unchanged": true,
+  "final_specs_match": true,
+  "failure_types": {
+    "null": 74
+  },
+  "test_sha256": {
+    "v6lite/tests/test_batch24_stp_echo.py": "2fc7a6b36ef4b088a5dbf7b16fa018b4f05bc3c50baf13a2e59a194c25393541",
+    "v6lite/tests/test_batch24_pacing.py": "8b425b9e3ce7488e4c163b3433f639f54c52b6839c6f676c82678c96885d40fe",
+    "v6lite/tests/test_batch24_pacing_lifecycle.py": "de8db2b495562c51033f5c6b736eb3f7e1a34966bc960fc1cfadbb4da8154280",
+    "v6lite/tests/test_batch24_presentation.py": "635597eb75ef8ec92b1e2d3bab29f7626d7cfe8d7dd51f045ccf1d4b49c2c1d7",
+    "v6lite/tests/test_batch24_retry_second_round.py": "dcbdd83f3db5a1e0189d50c0648e63aed1148c2cb4fab70e371dd93897f11574",
+    "v6lite/tests/test_batch24_daily_labels.py": "55f7f5112a393deee55e8b9865338a1205eb5240418280a0fb1e1c336b4909cf",
+    "v6lite/tests/test_batch24_wire_latency.py": "5dbbb0b66c0fb45d6460dd646b7cb7076d8107bc9f9e66f785c309a0b969c12f",
+    "v6lite/tests/test_batch24_connectivity.py": "8ed05fdc02598bf9433734a2785be7951840ab505160f5fc9e568e51cb6dc5d0"
+  },
+  "evidence_sha256": {
+    "red_all_finalspec_baseline23.txt": "ca3126f622299aecd1ac23402056d0e57e212b643e92fb0efb2b6e87df518e6a",
+    "red_all_finalspec_baseline23.xml": "d1bd6b23a303d39644712a6fcd5ab172438208d0f8ea9c6713001a776d0a6f5c",
+    "red_all_finalspec_baseline23_receipt.json": "2d948b1e7d71e1eeeae5388acdc3439b2ade50f19d9e5cdcf621f06a3ff085c4"
+  },
+  "reviewer": "root",
+  "natural_failure_classification": {
+    "behavior_assertions": 71,
+    "public_STP_modify_cancel_rejections": 2,
+    "public_config_keys_wrongly_rejected": 1,
+    "fixture_or_import_failures": 0
+  }
+}

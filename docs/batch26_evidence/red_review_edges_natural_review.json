@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root",
+  "receipt": "red_review_edges_b25.json",
+  "source_code_sha": "ea71abe782e4cf68",
+  "valid_behavior_red_without_setup_errors": true,
+  "totals": {
+    "tests": 18,
+    "failures": 15,
+    "errors": 0,
+    "skipped": 0
+  },
+  "spec_sha256": "1299a21aff567d5919c0cca6ab6e548810956abd61fa6538353c3da1c62e203b",
+  "claim_limits": [
+    "B25 lacks basic opt-in overnight TP support, so current-day exec-conflict and tail tests fail before their later target branches. This is baseline capability red, not proof those branches were reached.",
+    "Initial candidate also fails healthy BE confirmation before six economic-conflict cases and final tail sequence. Final candidate must actually reach and validate those target branches.",
+    "Three bad-type TOML rejection controls already pass on B25; do not claim they independently prove the newly supported option schema. Positive loader support and direct strict validate provide the new red."
+  ],
+  "no_assertions_weakened": true
+}

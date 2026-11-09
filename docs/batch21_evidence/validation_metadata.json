@@ -1,0 +1,36 @@
+{
+  "validated_at_pt": "2026-10-08T21:00:52.572563-07:00",
+  "branch": "dev",
+  "head": "c5a39952635943dde5f1ae7f2a52da84c8327375",
+  "batch20_tag_type": "tag",
+  "code_sha": "cfe16edd7a7e4d7f",
+  "v6lite_diff_against_batch20_empty": true,
+  "InvokeV6Launcher_source_unchanged": true,
+  "Capture_branch_source_unchanged": true,
+  "PowerShell_AST_errors": 0,
+  "staging_area_empty": true,
+  "untouched_manual_sha256": "5d7eb6f043f4d933019f36b6cbfd28b28f8474c0b7097261f9bb77ae627133bf",
+  "user_entry_deployed": false,
+  "runtime_updated": false,
+  "default_trading_full_tests_run_in_batch21": 0,
+  "scripts_tests": {
+    "tests": "130",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "time": "164.196",
+    "timestamp": "2026-10-08T20:50:23.517705-07:00"
+  },
+  "owned_console_probe_count": 4,
+  "owned_console_probe_pass": 4,
+  "sources_sha256": {
+    "scripts/v6.ps1": "7a8a0794cee4efd5b4d151d07ff51a8ba3a0c7a7c4e814ba0073c316d8b3fb15",
+    "scripts/v6-user.ps1": "55978f6fdb9f50c2dc66cf5731436d675fa7b95021d8e7ac3911d2fe2825f9e8",
+    "scripts/tests/test_batch21_entry.py": "b367e6cab0ad80d8901e103ba1459b08a0ea4555d8506959a7630963ac18e470",
+    "scripts/tests/console_shutdown_child.py": "3732ac606a911fc34f4c64a631f7672d55b5e8b96eaf50c8346e9daa6518be6a",
+    "scripts/tests/console_shutdown_probe.py": "77bbeba33b1f4d94027cf30dddac46e845edd9e7a9d3672f20af63e918e99114"
+  },
+  "secret_or_webhook_value_reported": false,
+  "broker_connected": false,
+  "historical_user_state_accessed": false
+}

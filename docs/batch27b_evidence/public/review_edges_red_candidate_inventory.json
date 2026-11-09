@@ -1,0 +1,12 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-nonempty-intent-conflict]",
+    "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-positive-conId-conflict]",
+    "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_correct_today_account_row_cannot_hide_client_same_exec_positive_conId_conflict"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-nonempty-intent-conflict]",
+    "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-positive-conId-conflict]",
+    "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_correct_today_account_row_cannot_hide_client_same_exec_positive_conId_conflict"
+  ]
+}

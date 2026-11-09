@@ -1,0 +1,329 @@
+{
+  "label": "red_legacy_retry_boundary_b23",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-12T14:20:00.149184-07:00",
+  "end_pt": "2026-10-12T14:20:05.373238-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "a17d647ba28c51e4",
+  "source_unchanged": true,
+  "worktree_code_sha": "62a9b82bb52ec22c",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "62a9b82bb52ec22c6856c2359f2e9eb316dcc7c0c2ade9d49edfe1f6b9efdea7",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch20_protection_equivalents.py",
+      "sha256": "163913342d65b7785ed15df3377d7ee90c65dfd7553b6714b9255173b11cca7a"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 35,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_breakeven_stop_after_tp1_sells_remaining_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_exit_retries_then_escalates_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_L4_trade_result_uses_net_pnl_and_estimates_missing_commissions_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_C2_prior_day_held_sell_never_blocks_the_stop_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_C5_exit_orders_are_stamped_with_the_real_send_time_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_R8_commission_arriving_during_scan_can_latch_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_race_late_fill_of_cancelled_stop_cancels_the_retry_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_Q7_queued_exit_work_is_inside_the_protection_budget_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_SR3_blocked_exit_cannot_livelock_the_tick_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_SR3_stop_starts_in_the_same_pass_that_abandons_a_take_profit_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_a_stop_blocked_by_missing_evidence_pages_p0_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_R5_difference_found_at_the_exit_boundary_blocks_entries_at_once_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_F1_failed_fresh_order_query_refuses_the_sell_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_F7_exit_is_re_decided_with_the_latest_quote_before_sending_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_F8_back_off_is_honoured_when_the_queued_item_runs_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_missed_buy_freezes_then_flatten_and_release_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_price_only_correction_blocks_entries_while_exits_continue_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_prior_day_partial_entry_is_frozen_then_released_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_late_buy_after_release_of_a_recovery_position_is_evidence_only_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on",
+      "outcome": "failure",
+      "message": "assert 30 == 20"
+    },
+    {
+      "classname": "",
+      "name": "test_R4F1_release_needs_the_position_stream_to_agree_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_R5F2_old_order_without_a_position_row_never_books_after_flat_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_R5F3_batch4_state_release_record_alone_is_a_flat_point_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_SR6_A2_stale_position_stream_never_silences_a_stop_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_P2a_earlier_versions_evidence_rows_of_released_positions_refuse_the_state_protection_on",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_retired_gtc_full_late_fill_cancels_replacement_and_is_flat",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_retired_gtc_partial_late_fill_keeps_possible_capacity_until_ack_then_only_reduces",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_retired_gtc_duplicate_execution_replay_never_rebooks_or_rewrites_broker",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_retired_gtc_lineage_survives_store_and_engine_restart",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[broker_order_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[perm_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_retired_gtc_pending_reduction_waits_for_original_generation_without_rewrites",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "::test_breakeven_stop_after_tp1_sells_remaining_protection_on",
+      "::test_exit_retries_then_escalates_protection_on",
+      "::test_L4_trade_result_uses_net_pnl_and_estimates_missing_commissions_protection_on",
+      "::test_C2_prior_day_held_sell_never_blocks_the_stop_protection_on",
+      "::test_C5_exit_orders_are_stamped_with_the_real_send_time_protection_on",
+      "::test_R8_commission_arriving_during_scan_can_latch_protection_on",
+      "::test_race_late_fill_of_cancelled_stop_cancels_the_retry_protection_on",
+      "::test_Q7_queued_exit_work_is_inside_the_protection_budget_protection_on",
+      "::test_SR3_blocked_exit_cannot_livelock_the_tick_protection_on",
+      "::test_SR3_stop_starts_in_the_same_pass_that_abandons_a_take_profit_protection_on",
+      "::test_a_stop_blocked_by_missing_evidence_pages_p0_protection_on",
+      "::test_R5_difference_found_at_the_exit_boundary_blocks_entries_at_once_protection_on",
+      "::test_F1_failed_fresh_order_query_refuses_the_sell_protection_on",
+      "::test_F7_exit_is_re_decided_with_the_latest_quote_before_sending_protection_on",
+      "::test_F8_back_off_is_honoured_when_the_queued_item_runs_protection_on",
+      "::test_missed_buy_freezes_then_flatten_and_release_protection_on",
+      "::test_price_only_correction_blocks_entries_while_exits_continue_protection_on",
+      "::test_prior_day_partial_entry_is_frozen_then_released_protection_on",
+      "::test_late_buy_after_release_of_a_recovery_position_is_evidence_only_protection_on",
+      "::test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on",
+      "::test_R4F1_release_needs_the_position_stream_to_agree_protection_on",
+      "::test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released_protection_on",
+      "::test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0_protection_on",
+      "::test_R5F2_old_order_without_a_position_row_never_books_after_flat_protection_on",
+      "::test_R5F3_batch4_state_release_record_alone_is_a_flat_point_protection_on",
+      "::test_SR6_A2_stale_position_stream_never_silences_a_stop_protection_on",
+      "::test_P2a_earlier_versions_evidence_rows_of_released_positions_refuse_the_state_protection_on",
+      "::test_retired_gtc_full_late_fill_cancels_replacement_and_is_flat",
+      "::test_retired_gtc_partial_late_fill_keeps_possible_capacity_until_ack_then_only_reduces",
+      "::test_retired_gtc_duplicate_execution_replay_never_rebooks_or_rewrites_broker",
+      "::test_retired_gtc_lineage_survives_store_and_engine_restart",
+      "::test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[broker_order_id]",
+      "::test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[perm_id]",
+      "::test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[con_id]",
+      "::test_retired_gtc_pending_reduction_waits_for_original_generation_without_rewrites"
+    ],
+    "executed": [
+      "::test_breakeven_stop_after_tp1_sells_remaining_protection_on",
+      "::test_exit_retries_then_escalates_protection_on",
+      "::test_L4_trade_result_uses_net_pnl_and_estimates_missing_commissions_protection_on",
+      "::test_C2_prior_day_held_sell_never_blocks_the_stop_protection_on",
+      "::test_C5_exit_orders_are_stamped_with_the_real_send_time_protection_on",
+      "::test_R8_commission_arriving_during_scan_can_latch_protection_on",
+      "::test_race_late_fill_of_cancelled_stop_cancels_the_retry_protection_on",
+      "::test_Q7_queued_exit_work_is_inside_the_protection_budget_protection_on",
+      "::test_SR3_blocked_exit_cannot_livelock_the_tick_protection_on",
+      "::test_SR3_stop_starts_in_the_same_pass_that_abandons_a_take_profit_protection_on",
+      "::test_a_stop_blocked_by_missing_evidence_pages_p0_protection_on",
+      "::test_R5_difference_found_at_the_exit_boundary_blocks_entries_at_once_protection_on",
+      "::test_F1_failed_fresh_order_query_refuses_the_sell_protection_on",
+      "::test_F7_exit_is_re_decided_with_the_latest_quote_before_sending_protection_on",
+      "::test_F8_back_off_is_honoured_when_the_queued_item_runs_protection_on",
+      "::test_missed_buy_freezes_then_flatten_and_release_protection_on",
+      "::test_price_only_correction_blocks_entries_while_exits_continue_protection_on",
+      "::test_prior_day_partial_entry_is_frozen_then_released_protection_on",
+      "::test_late_buy_after_release_of_a_recovery_position_is_evidence_only_protection_on",
+      "::test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on",
+      "::test_R4F1_release_needs_the_position_stream_to_agree_protection_on",
+      "::test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released_protection_on",
+      "::test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0_protection_on",
+      "::test_R5F2_old_order_without_a_position_row_never_books_after_flat_protection_on",
+      "::test_R5F3_batch4_state_release_record_alone_is_a_flat_point_protection_on",
+      "::test_SR6_A2_stale_position_stream_never_silences_a_stop_protection_on",
+      "::test_P2a_earlier_versions_evidence_rows_of_released_positions_refuse_the_state_protection_on",
+      "::test_retired_gtc_full_late_fill_cancels_replacement_and_is_flat",
+      "::test_retired_gtc_partial_late_fill_keeps_possible_capacity_until_ack_then_only_reduces",
+      "::test_retired_gtc_duplicate_execution_replay_never_rebooks_or_rewrites_broker",
+      "::test_retired_gtc_lineage_survives_store_and_engine_restart",
+      "::test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[broker_order_id]",
+      "::test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[perm_id]",
+      "::test_retired_gtc_wrong_native_identity_is_quarantined_without_current_gtc_writes[con_id]",
+      "::test_retired_gtc_pending_reduction_waits_for_original_generation_without_rewrites"
+    ]
+  },
+  "stdout_sha256": "101217dd7f332d070e63e30d55c8165a1b1c20256add471359f7cf0919649b69",
+  "junit_sha256": "40d4715b96c37fa35d594cfc4e74ce6846e8a3717634d70a71d4b5a7cdb2051e",
+  "inventory_sha256": "25220702a361c9c0e013ef1074e38c42b295f2789602afad18c8443de45d93a6"
+}

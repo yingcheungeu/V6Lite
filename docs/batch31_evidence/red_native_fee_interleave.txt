@@ -1,0 +1,24 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_____ test_B31_native_fee_between_reduction_ACK_components_keeps_fast_TP ______
+docs\batch31_evidence\commission_interleave_spec.py:35: in test_B31_native_fee_between_reduction_ACK_components_keeps_fast_TP
+    assert server.fee_checks==[(True,True,True)]
+E   assert [(True, False, True)] == [(True, True, True)]
+E     
+E     At index 0 diff: (True, False, True) != (True, True, True)
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+___________ test_B31_native_fee_during_final_cancel_keeps_fast_TP3 ____________
+docs\batch31_evidence\commission_interleave_spec.py:60: in test_B31_native_fee_during_final_cancel_keeps_fast_TP3
+    assert server.fee_checks==[(True,True,True)]
+E   assert [(True, False, True)] == [(True, True, True)]
+E     
+E     At index 0 diff: (True, False, True) != (True, True, True)
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+=========================== short test summary info ===========================
+FAILED docs/batch31_evidence/commission_interleave_spec.py::test_B31_native_fee_between_reduction_ACK_components_keeps_fast_TP
+FAILED docs/batch31_evidence/commission_interleave_spec.py::test_B31_native_fee_during_final_cancel_keeps_fast_TP3
+2 failed in 65.09s (0:01:05)

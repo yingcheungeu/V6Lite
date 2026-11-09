@@ -1,0 +1,72 @@
+F.FF.FFF                                                                 [100%]
+================================== FAILURES ===================================
+_ test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof _
+v6lite\tests\test_batch31_overnight.py:154: in test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof
+    assert seen==['WORKING']
+E   AssertionError: assert ['PRICE_PENDING'] == ['WORKING']
+E     
+E     At index 0 diff: 'PRICE_PENDING' != 'WORKING'
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-4d4153da37e740508c41 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-873c9e9ee52e4edabff7 orderId=2801 permId=52801 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=339.62；上次确认=2026-10-27T13:33:27.001000+00:00 工作单证据时间=2026-10-27T13:33:28.001000+00:00；持仓、工作单、执行三项证据查询失败：ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-4d4153da37e740508c41 | AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=2.0 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=2801 permId=52801；历史账本入场=b28b-1020-entry.01.01@2026-10-26；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=当日可见，未宣称全账户；核验时间=2026-10-27T13:33:29.108000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_________ test_B31_old_confirmed_price_waits_without_freeze_or_P0[40] _________
+v6lite\tests\test_batch31_overnight.py:101: in test_B31_old_confirmed_price_waits_without_freeze_or_P0
+    assert bool(p1)==(seconds==40)
+E   assert False == (40 == 40)
+E    +  where False = bool([])
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+_ test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d[\u4fdd\u672c\u4fee\u6539\u5f85\u786e\u8ba4] _
+v6lite\tests\test_batch31_overnight.py:173: in test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d
+    _tick_until(rig,lambda: rig.store.control('frozen:AAPL') is None)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 27, 13, 35, 28, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 2801, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d.<locals>.<lambda> at 0x000002367EECA5C0>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-08a0178fb7d44a98bd16 | AAPL：保本修改待确认；券商 P=2 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=2801 permId=52801；历史账本入场=b28b-1020-entry.01.01@2026-10-26；当日可见成交=1 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-27T13:33:28.001000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_____ test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009] ______
+v6lite\tests\test_batch31_close_card.py:13: in test_B31_close_waits_for_final_fee_or_three_second_estimate
+    assert cards(rig)==[]
+E   AssertionError: assert ['🟢 持仓已关闭\n标的...，已触发冷却不自动解除。'] == []
+E     
+E     Left contains one more item: '🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-ea0feb35fdf94bb397a9；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。'
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-ea0feb35fdf94bb397a9；净值 -0.17 USD；含估算佣金 1.00 USD
+______ test_B31_close_waits_for_final_fee_or_three_second_estimate[None] ______
+v6lite\tests\test_batch31_close_card.py:13: in test_B31_close_waits_for_final_fee_or_three_second_estimate
+    assert cards(rig)==[]
+E   AssertionError: assert ['🟢 持仓已关闭\n标的...，已触发冷却不自动解除。'] == []
+E     
+E     Left contains one more item: '🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-fb1ac6eb17c84fb98a1f；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。'
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-fb1ac6eb17c84fb98a1f；净值 -0.17 USD；含估算佣金 1.00 USD
+_____________ test_B31_unrelated_commission_does_not_release_wait _____________
+v6lite\tests\test_batch31_close_card.py:36: in test_B31_unrelated_commission_does_not_release_wait
+    assert not cards(rig)
+E   AssertionError: assert not ['🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-075a51cfdfb24b919f24；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。']
+E    +  where ['🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-075a51cfdfb24b919f24；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。'] = cards(<v6lite.tests.helpers.Rig object at 0x000002367EAB65D0>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-075a51cfdfb24b919f24；净值 -0.17 USD；含估算佣金 1.00 USD
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+  v6lite\tests\test_batch31_close_card.py:9: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('arrival',[.009,None])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_old_confirmed_price_waits_without_freeze_or_P0[40]
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d[\u4fdd\u672c\u4fee\u6539\u5f85\u786e\u8ba4]
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_unrelated_commission_does_not_release_wait
+6 failed, 2 passed, 2 warnings in 3.89s

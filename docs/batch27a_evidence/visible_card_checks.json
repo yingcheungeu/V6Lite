@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checked": [
+    {
+      "nodeid": "v6lite/tests/test_batch27a_execution_time.py::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "title": "🟢 INFO · 过夜持仓自动止盈恢复 · AAPL",
+      "receipt_note_visible": true,
+      "constraints_visible": true
+    }
+  ],
+  "all_captured_cards": 493
+}

@@ -1,0 +1,43 @@
+{
+  "label": "focused_order_safety2",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T09:20:26.884010-07:00",
+  "end_pt": "2026-10-21T09:21:17.991126-07:00",
+  "seconds": 51.109,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch22_protection_lifecycle.py",
+    "v6lite/tests/test_batch22_trigger_incidents.py",
+    "v6lite/tests/test_batch22_trigger_replacement.py",
+    "v6lite/tests/test_batch22_snapshot_cancel.py",
+    "v6lite/tests/test_batch23_contracts.py",
+    "v6lite/tests/test_batch23_tp_evidence.py",
+    "v6lite/tests/test_batch23_terminal_fact.py",
+    "v6lite/tests/test_batch23_unprotected.py",
+    "v6lite/tests/test_batch24_evidence_deadline.py",
+    "v6lite/tests/test_batch24_pacing.py",
+    "v6lite/tests/test_batch24_pacing_lifecycle.py",
+    "v6lite/tests/test_batch24_retry_second_round.py",
+    "v6lite/tests/test_batch24_wire_latency.py",
+    "v6lite/tests/test_batch25_restart.py",
+    "v6lite/tests/test_batch25_reconnect_alerts.py",
+    "v6lite/tests/test_batch25_review_regressions.py"
+  ],
+  "code_sha": "c25c5878d97356ae",
+  "source_unchanged": true,
+  "inventory_sha256": "87aae2064834c589e7448196eeb654a51edb9115bd3abe017fb9ce6c9d30ea0b",
+  "incomplete": false,
+  "tests": 289,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch22_protection_lifecycle",
+      "name": "test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs",
+      "kind": "failure",
+      "message": "AssertionError: Batch22 must never open a network connection"
+    }
+  ]
+}

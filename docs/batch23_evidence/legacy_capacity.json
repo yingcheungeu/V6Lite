@@ -1,0 +1,39 @@
+{
+  "label": "legacy_capacity",
+  "select_expression": "test_race_final_sell_boundary_counts_other_working_sells",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "start_pt": "2026-10-09T15:53:21.909925-07:00",
+  "end_pt": "2026-10-09T15:53:22.847136-07:00",
+  "returncode": 0,
+  "source_code_sha": "a17d647ba28c51e4",
+  "source_unchanged": true,
+  "worktree_code_sha": "a17d647ba28c51e4",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_review_round2.py",
+      "sha256": "a8fa9a8f5daca49aed8b0de1a87097f257b02048a8807e769d951f06472d6b35"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_review_round2",
+      "name": "test_race_final_sell_boundary_counts_other_working_sells",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "stdout_sha256": "9850f671ec715ed7d26ff691b6aedf919b75a90ad45827316b3bf29d44c308d5",
+  "junit_sha256": "66ea3823fd44465ce24d2edd7b9cb7f18376be799a6d4314ef4c056b71727f47"
+}

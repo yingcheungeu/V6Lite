@@ -1,0 +1,14 @@
+{
+  "base_commit": "eb7027aa93ae0a0daa7159a0918383d307575d08",
+  "base_tag": "v6lite-batch28d",
+  "production_matches_base": true,
+  "instructions_sha256": "3ec28ab524576cac31bfd1902e34e2fe8c6f372b39c5bd5cddd67cf95d10f9a3",
+  "source_before": {
+    "v6lite/engine.py": "8fcd58d153934b744036f1ce098f5e1722735ee34811a60a2c9a9f491cf09be3",
+    "v6lite/__main__.py": "6728878918683c32551b3a972dc9047fd014a8dd1d60ea88ac05300e794e95bb",
+    "v6lite/protection_engine.py": "e5162bd787c81e453ef68adf42aa9cdf2658120eaeb229eb1110a36e2f8f298d",
+    "v6lite/tp_evidence.py": "03949365aef281007c08c72f6695e4d3877903d23b15c826041443b9b1c60e7c",
+    "v6lite/report.py": "a1bedacdc03d224aa5311972c3752750b2e142a48988ce538bc46b8c7c618896",
+    "scripts/v6.ps1": "7a8a0794cee4efd5b4d151d07ff51a8ba3a0c7a7c4e814ba0073c316d8b3fb15"
+  }
+}

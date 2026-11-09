@@ -1,0 +1,8 @@
+..........................................                               [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch33_open_delay.py::test_B33_oct29_real_overnight_replay
+  v6lite\tests\test_batch33_open_delay.py:74: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B33_oct29_real_overnight_replay(opening, record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+42 passed, 1 warning in 5.72s

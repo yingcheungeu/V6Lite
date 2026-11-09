@@ -1,0 +1,8 @@
+{
+  "file": "v6lite/tests/test_batch29_native_timeout.py",
+  "before_sha256": "8ce50421bf0e4b9c15559418970a5c0d4e3965c4f9e3e4c5a31a86b1338871d7",
+  "after_sha256": "3c787237db0103eda026948c2a4ee346b53f0e9a2b2c67a377cd374db941150d",
+  "failed_receipt": "green_native_2",
+  "reason": "replace manually repeated active evidence rounds with real Engine.tick steady scheduling; defer unsolicited modify echo until actual queryEnd, as accepted B28d native fixture; no gate/proof/oracle/assertion weakening",
+  "prior_actual_result": "nonfilled injection had restored original GTC=3 and closed B=19.047 seconds; retry was starved by test-only query ordering; late fill booked once with P=S=2 but BE echo duplicated in query"
+}

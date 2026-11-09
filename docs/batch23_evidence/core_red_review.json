@@ -1,0 +1,23 @@
+{
+  "phase": "corrected_core_red",
+  "record": "red_22a_run2.json",
+  "spec_snapshot": "core_red_spec_run2.py",
+  "spec_sha256": "90f93dfaa635f62c295c0de9fa5e9c75f32b79c475cacd3b32a202ccf102e6fe",
+  "totals": {
+    "tests": 30,
+    "failures": 28,
+    "errors": 0,
+    "passed": 2
+  },
+  "core_behavior_verified": [
+    "B original T0 overwritten after 3.6s query latency",
+    "Async TP terminal remains TP_ACTIVE",
+    "Missing price-rejection P0/full reason/persistent pause",
+    "3.01s and invalid bid/ask still reduce protection",
+    "Old 1% TP limit and implicit SDK PMA defaults",
+    "Missing price mismatch card and automatic TP evidence",
+    "Cancelled card wording contradicts terminal fact"
+  ],
+  "two_example_assertions": "paper_test/paper_g3n omit execution section; replace missing-key access with explicit default/field assertion before final accepted red",
+  "production_changes_before_this_phase": false
+}

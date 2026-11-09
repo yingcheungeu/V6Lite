@@ -1,0 +1,37 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+_ test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-intent-0] _
+v6lite\tests\test_batch27b_review_followups.py:62: in test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d
+    assert all('当日可见成交=未完成' not in page for page in pages),pages
+E   AssertionError: ['🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     核验结果：AAPL：当日可见成交存在明确的原生 intent/合约身份冲突：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert False
+E    +  where False = all(<generator object test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d.<locals>.<genexpr> at 0x00000196FF877E00>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-0413439ee8704855902e | AAPL：当日可见成交存在明确的原生 intent/合约身份冲突：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=b27b-1019-entry.01.01@2026-10-19；当日可见成交=未完成 条，未知项=b27b-1019-entry.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-20T14:01:34+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-conId-0] _
+v6lite\tests\test_batch27b_review_followups.py:62: in test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d
+    assert all('当日可见成交=未完成' not in page for page in pages),pages
+E   AssertionError: ['🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     核验结果：AAPL：当日可见成交存在明确的原生 intent/合约身份冲突：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert False
+E    +  where False = all(<generator object test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d.<locals>.<genexpr> at 0x00000196FF9129B0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-708191b490c64f73af87 | AAPL：当日可见成交存在明确的原生 intent/合约身份冲突：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=b27b-1019-entry.01.01@2026-10-19；当日可见成交=未完成 条，未知项=b27b-1019-entry.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-20T14:01:34+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[today-conId-1] _
+v6lite\tests\test_batch27b_review_followups.py:62: in test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d
+    assert all('当日可见成交=未完成' not in page for page in pages),pages
+E   AssertionError: ['🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     核验结果：AAPL：当日可见成交存在明确的原生 intent/合约身份冲突：b27b-1020-tp1.01.01；券商 P=2 股，账本=2 股，当前工作 STP S=2 股；...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert False
+E    +  where False = all(<generator object test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d.<locals>.<genexpr> at 0x00000196FF854790>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-bb77f14efe664a8a843f | AAPL：当日可见成交存在明确的原生 intent/合约身份冲突：b27b-1020-tp1.01.01；券商 P=2 股，账本=2 股，当前工作 STP S=2 股；本地上次确认 STP S=2 股；GTC orderId=1002 permId=51002；历史账本入场=b27b-1019-entry.01.01@2026-10-19；当日可见成交=未完成 条，未知项=b27b-1020-tp1.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-20T14:01:48+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-intent-0]
+FAILED v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-conId-0]
+FAILED v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[today-conId-1]
+3 failed in 1.57s

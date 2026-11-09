@@ -1,0 +1,53 @@
+{
+  "dependencies": {
+    "version": "0.9.86",
+    "sources": {
+      "wrapper.py": "4ed7299106979c0b2518658d4d3ef371fe5a39b254586254650edc35217cb0c1",
+      "decoder.py": "b06cbe24eca37e3386d0ab213deb43e493171e8cbb7c26060ea4936f97f79b4c",
+      "client.py": "1d86989d6815881ea88576e8e3bdcf34fe40d1da778dfee68619ee80e53a2822",
+      "ib.py": "b5f60220c941a335c47cbb0257a342e3122b1f07cc9f809a36a0e7c9b4ba84fc",
+      "order.py": "f014b063b899fd9ec1cd4bd4cf9cc834de0efb89c089bdeb673c09b392131ca7",
+      "util.py": "86c7250f24545721a4fd230e747b0d01e66cb1f8a4ad12e152c7a70d4b37d964"
+    }
+  },
+  "dependencies_unchanged": true,
+  "label": "red_b32_required",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-31T15:28:32.203197-07:00",
+  "end_pt": "2026-10-31T15:28:36.218069-07:00",
+  "seconds": 4.015,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch33_open_delay.py::test_B33_oct29_real_overnight_replay",
+    "v6lite/tests/test_batch33_open_delay.py::test_B33_stop_crossing_at_open_plus_5_is_unchanged",
+    "v6lite/tests/test_batch33_open_delay.py::test_B33_last_overnight_share_waits_before_TP3_cancel"
+  ],
+  "code_sha": "4eab242db288e387",
+  "source_unchanged": true,
+  "inventory_sha256": "ad728c040f9676415f213a080849cd807260d6eda0e63c3b1f2e80514cd1d319",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "af81a0e6c4554bfd9cf49e5576eea4342919207472cb253ac2f8aa148700d49d",
+  "XML_sha256_before_masking": "06d3b55c180e6c3ce442360cfd15eb199127a77249eff98c1a251cbaaaddfff1",
+  "delivered_log_sha256": "aac7e10552da904cdf95283b5c712227e33e6f9a7982b9b80d06d899f8aae06b",
+  "delivered_XML_sha256": "38d677e05b8356b25e51bfecb6897a4016f89a52492edfbbea35e3d3e969868a",
+  "tests": 3,
+  "failures": 1,
+  "errors": 1,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_oct29_real_overnight_replay",
+      "kind": "failure",
+      "message": "assert (1, 1, 1, 0) == (1, 1, 0, 0)\n  \n  At index 2 diff: 1 != 0\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_last_overnight_share_waits_before_TP3_cancel",
+      "kind": "error",
+      "message": "failed on setup with \"AssertionError: ('deadline', datetime.datetime(2026, 10, 28, 15, 5, 30, 3000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function start_tp.<locals>.<lambda> at 0x000001D8E23DDE40>()\""
+    }
+  ]
+}

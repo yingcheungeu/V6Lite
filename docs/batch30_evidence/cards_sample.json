@@ -1,0 +1,8 @@
+{
+  "source_receipt": "focused_final_2",
+  "XML_sha256": "bc01bbfbefe30160fadefdde447e1d8d87b8c635fe70cbe04fa37f1b2f069cdf",
+  "b30_closed_card": "#x1F7E2 持仓已关闭\n标的与持仓：AAPL；positionId=pos-b6b3c783159e4c0cb492；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。",
+  "b30_cooldown_card": "#x1F7E1 亏损后冷却\n发生了什么：2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00\npositionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定\npositionId=pos-b6b3c783159e4c0cb492；净值 -0.17 USD；含估算佣金 1.00 USD\n判定口径：估算净值 < 0 计为亏损；缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底。\n你要做什么：核对各持仓最终佣金；佣金补齐不会自动解除已触发的冷却。",
+  "b30_fee_sign_change_card": "#x1F7E2 佣金补齐，净值符号改变\n发生了什么：AAPL positionId=pos-07b543b0b1a74e058550；佣金补齐后净值符号改变，原估算净值 -0.17，最终净值 0.82 USD；已触发冷却不自动解除，原截止 2026-10-26T16:52:06+00:00。真实费用形成新亏损时原风控继续适用。\n你要做什么：核对最终账本；是否解除既有冷却由操作员复核，系统不自动解除。",
+  "b30_close_estimate_basis": "{\"estimated_fees\": 1.0, \"estimated_net\": -0.1699999999999111, \"estimates\": {\"0000dc8f.6bef670d.01.01\": {\"amount\": 1.0, \"exec_id\": \"0000dc8f.6bef670d.01.01\", \"identity\": [\"AAPL\", \"SELL\", 1, 344.72, 1002, 51002], \"minimum_usd\": 1.0, \"sample_exec_ids\": [\"0000fa4e.00000003.01.01\", \"0000fa4e.00000002.01.01\"], \"source\": \"recent_same_symbol_side_quantity_median\"}}, \"gross\": 3.8400000000000887, \"missing_count\": 1, \"observed_at\": \"2026-10-26T15:52:06+00:00\", \"position_id\": \"pos-b6b3c783159e4c0cb492\", \"reported_fees\": 3.01, \"reported_net\": 0.8300000000000889, \"symbol\": \"AAPL\", \"version\": 30}"
+}

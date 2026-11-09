@@ -1,0 +1,254 @@
+{
+  "generated_at_pt": "2026-10-15T18:02:16.903134-07:00",
+  "synthetic": true,
+  "source": "Real Engine paths, SQLite reopen, Alerter.send, AlertCard.as_embed/as_plain_text, MemoryChannel",
+  "phone_delivery_performed": false,
+  "network_and_IB_connect_forbidden": true,
+  "cases": [
+    {
+      "case": "restore_INFO",
+      "engine_generated": true,
+      "cards": [
+        {
+          "level": "INFO",
+          "subject": "overnight TP restored pos-cee8acc01c2442cd84bc",
+          "body": "AAPL：依据运行约束 A、B，历史账本 + 当日可见三项核验符合，自动止盈恢复；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+          "plain_text": "🟢 INFO · 过夜持仓自动止盈恢复 · AAPL\n证据：AAPL：依据运行约束 A、B，历史账本 + 当日可见三项核验符合，自动止盈恢复；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。\n权限：仅止盈、保本及本次止盈自身恢复；不提供完整历史成交权限。\n你要做什么：1）核对标的、股数与 GTC 编号；2）观察后续止盈/保本结果；3）出现差异时保持冻结并在同一 TWS 核查。",
+          "embed": {
+            "title": "🟢 INFO · 过夜持仓自动止盈恢复 · AAPL",
+            "color": 3066993,
+            "fields": [
+              {
+                "name": "证据",
+                "value": "AAPL：依据运行约束 A、B，历史账本 + 当日可见三项核验符合，自动止盈恢复；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+                "inline": false
+              },
+              {
+                "name": "权限",
+                "value": "仅止盈、保本及本次止盈自身恢复；不提供完整历史成交权限。",
+                "inline": false
+              },
+              {
+                "name": "你要做什么",
+                "value": "1）核对标的、股数与 GTC 编号；2）观察后续止盈/保本结果；3）出现差异时保持冻结并在同一 TWS 核查。",
+                "inline": false
+              }
+            ]
+          },
+          "queued_delivery_id": "161e5a9c-1",
+          "memory_delivery": true
+        }
+      ]
+    },
+    {
+      "case": "freeze_policy",
+      "engine_generated": true,
+      "cards": [
+        {
+          "level": "P1",
+          "subject": "overnight TP evidence pos-39a789a862534d86bfa6",
+          "body": "AAPL：overnight_tp=freeze：默认只保留止损，过夜自动止盈/保本受限制；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+          "plain_text": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：overnight_tp=freeze：默认只保留止损，过夜自动止盈/保本受限制；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。\n影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+          "embed": {
+            "title": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL",
+            "color": 15965202,
+            "fields": [
+              {
+                "name": "核验结果",
+                "value": "AAPL：overnight_tp=freeze：默认只保留止损，过夜自动止盈/保本受限制；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+                "inline": false
+              },
+              {
+                "name": "影响",
+                "value": "冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。",
+                "inline": false
+              },
+              {
+                "name": "你要做什么",
+                "value": "1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+                "inline": false
+              }
+            ]
+          },
+          "queued_delivery_id": "0697d531-3",
+          "memory_delivery": true
+        }
+      ]
+    },
+    {
+      "case": "manual_sell_one",
+      "engine_generated": true,
+      "cards": [
+        {
+          "level": "P1",
+          "subject": "overnight TP evidence pos-75958d8acb054438bac3",
+          "body": "AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=2.0 股，账本=3 股，当前工作 STP S=未知 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+          "plain_text": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=2.0 股，账本=3 股，当前工作 STP S=未知 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。\n影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+          "embed": {
+            "title": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL",
+            "color": 15965202,
+            "fields": [
+              {
+                "name": "核验结果",
+                "value": "AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=2.0 股，账本=3 股，当前工作 STP S=未知 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+                "inline": false
+              },
+              {
+                "name": "影响",
+                "value": "冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。",
+                "inline": false
+              },
+              {
+                "name": "你要做什么",
+                "value": "1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+                "inline": false
+              }
+            ]
+          },
+          "queued_delivery_id": "25d58789-4",
+          "memory_delivery": true
+        }
+      ]
+    },
+    {
+      "case": "cancelled_gtc",
+      "engine_generated": true,
+      "cards": [
+        {
+          "level": "P1",
+          "subject": "overnight TP evidence pos-c7986dd0400349ca8772",
+          "body": "AAPL：GTC STP 工作状态/保护数量与持仓不一致，或存在其他工作中卖单；券商 P=3 股，账本=3 股，当前工作 STP S=0 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+          "plain_text": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：GTC STP 工作状态/保护数量与持仓不一致，或存在其他工作中卖单；券商 P=3 股，账本=3 股，当前工作 STP S=0 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。\n影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+          "embed": {
+            "title": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL",
+            "color": 15965202,
+            "fields": [
+              {
+                "name": "核验结果",
+                "value": "AAPL：GTC STP 工作状态/保护数量与持仓不一致，或存在其他工作中卖单；券商 P=3 股，账本=3 股，当前工作 STP S=0 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+                "inline": false
+              },
+              {
+                "name": "影响",
+                "value": "冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。",
+                "inline": false
+              },
+              {
+                "name": "你要做什么",
+                "value": "1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+                "inline": false
+              }
+            ]
+          },
+          "queued_delivery_id": "89ae9ab6-1",
+          "memory_delivery": true
+        }
+      ]
+    },
+    {
+      "case": "missing_entry_exec",
+      "engine_generated": true,
+      "cards": [
+        {
+          "level": "P1",
+          "subject": "overnight TP evidence pos-34547b16dbc6459fa5c9",
+          "body": "AAPL：账本缺少已持久化的入场成交 execId；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=缺少入场 execId；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+          "plain_text": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：账本缺少已持久化的入场成交 execId；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=缺少入场 execId；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。\n影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+          "embed": {
+            "title": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL",
+            "color": 15965202,
+            "fields": [
+              {
+                "name": "核验结果",
+                "value": "AAPL：账本缺少已持久化的入场成交 execId；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=缺少入场 execId；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+                "inline": false
+              },
+              {
+                "name": "影响",
+                "value": "冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。",
+                "inline": false
+              },
+              {
+                "name": "你要做什么",
+                "value": "1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+                "inline": false
+              }
+            ]
+          },
+          "queued_delivery_id": "a9dc4cc5-1",
+          "memory_delivery": true
+        }
+      ]
+    },
+    {
+      "case": "unknown_today_exec",
+      "engine_generated": true,
+      "cards": [
+        {
+          "level": "P1",
+          "subject": "overnight TP evidence pos-c0902dda74ec4569937d",
+          "body": "AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-unknown-today.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-unknown-today.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+          "plain_text": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-unknown-today.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-unknown-today.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。\n影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+          "embed": {
+            "title": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL",
+            "color": 15965202,
+            "fields": [
+              {
+                "name": "核验结果",
+                "value": "AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-unknown-today.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-unknown-today.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+                "inline": false
+              },
+              {
+                "name": "影响",
+                "value": "冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。",
+                "inline": false
+              },
+              {
+                "name": "你要做什么",
+                "value": "1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+                "inline": false
+              }
+            ]
+          },
+          "queued_delivery_id": "5d32b9f0-2",
+          "memory_delivery": true
+        }
+      ]
+    },
+    {
+      "case": "position_mismatch",
+      "engine_generated": true,
+      "cards": [
+        {
+          "level": "P1",
+          "subject": "overnight TP evidence pos-3d4497f7b42c4a428286",
+          "body": "AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=4.0 股，账本=3 股，当前工作 STP S=未知 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+          "plain_text": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=4.0 股，账本=3 股，当前工作 STP S=未知 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。\n影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+          "embed": {
+            "title": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL",
+            "color": 15965202,
+            "fields": [
+              {
+                "name": "核验结果",
+                "value": "AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=4.0 股，账本=3 股，当前工作 STP S=未知 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。",
+                "inline": false
+              },
+              {
+                "name": "影响",
+                "value": "冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。",
+                "inline": false
+              },
+              {
+                "name": "你要做什么",
+                "value": "1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。",
+                "inline": false
+              }
+            ]
+          },
+          "queued_delivery_id": "cf33218e-3",
+          "memory_delivery": true
+        }
+      ]
+    }
+  ]
+}

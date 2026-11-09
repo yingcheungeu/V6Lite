@@ -1,0 +1,36 @@
+...FF.................................                                   [100%]
+================================== FAILURES ===================================
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-live-openOrder] _
+v6lite\tests\test_batch28c_price_confirmation.py:362: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    _tick_until(rig, lambda: bool(_overnight_p1(rig)))
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 18, 1000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP.<locals>.<lambda> at 0x000002034A72FA60>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-90f7f288e26343e8b2d9 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:17.001000+00:00 工作单证据时间=2026-10-21T15:03:18.001000+00:00；工作中的保护合同价格与已确认或本代待确认价格不一致；不跟随券商价格改写账本
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-41fa2b032e944d37abc3 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-owned-snapshot] _
+v6lite\tests\test_batch28c_price_confirmation.py:362: in test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP
+    _tick_until(rig, lambda: bool(_overnight_p1(rig)))
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 18, 1000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP.<locals>.<lambda> at 0x000002034A930F40>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-13e59bb021134c408969 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:17.001000+00:00 工作单证据时间=2026-10-21T15:03:18.001000+00:00；工作中的保护合同价格与已确认或本代待确认价格不一致；不跟随券商价格改写账本
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-894bf48680eb40049027 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+============================== warnings summary ===============================
+v6lite/tests/test_batch28c_native_latency.py::test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+  v6lite\tests\test_batch28c_native_latency.py:306: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-live-openOrder]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[aux-price-owned-snapshot]
+2 failed, 36 passed, 1 warning in 67.00s (0:01:07)

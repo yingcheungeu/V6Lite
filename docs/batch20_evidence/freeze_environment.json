@@ -1,0 +1,19 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "dev_head": "abbdb4f2f7a558262a0859d5a6bf7ee859e46d2f",
+  "branch": "dev",
+  "code_sha": "cfe16edd7a7e4d7f",
+  "release_method_AST_unchanged": true,
+  "operator_manual_sha256": "5d7eb6f043f4d933019f36b6cbfd28b28f8474c0b7097261f9bb77ae627133bf",
+  "full_test_env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUTF8": "1",
+    "PYTHONUNBUFFERED": "1",
+    "V6LITE_LEGACY_SCANNER": "C:\\Dev\\TradingV6\\market_scanner.py",
+    "V6LITE_TEST_PROTECTION": "absent"
+  },
+  "production_writer": "root only",
+  "state_access": "explicit log read; sqlite mode=ro and query_only; byte hashes unchanged",
+  "freeze_pt": "2026-10-08T15:57:39.569780-07:00"
+}

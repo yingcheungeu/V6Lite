@@ -1,0 +1,71 @@
+{
+  "checked_pt": "2026-10-09T08:57:53.418346-07:00",
+  "head": "42c77da139ce308ca133eb7e2e40beaf33ecac9d",
+  "branch": "dev",
+  "code_sha": "f27e144de9eb406b",
+  "index_empty": true,
+  "baseline_tag_object": "18f44ab40bc934327c6cacd921e6717ff21c3a80",
+  "windows": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "ast_files": 94,
+  "unchanged_functions": [
+    {
+      "file": "v6lite/engine.py",
+      "function": "_apply_releases",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_on_status",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_send_tp",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_modify",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_replace_after_cancel",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_hard_protection_deadlines",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_preflight_protection_deadlines",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_order_valid",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_native_quantity_valid",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_explicit_refusal",
+      "unchanged": true
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "function": "_status_identity",
+      "unchanged": true
+    }
+  ],
+  "full_three_runs_for_this_patch": "NOT RUN: prohibited weekday 06:00-13:30 PT",
+  "archive_access": false,
+  "runtime_access": false
+}

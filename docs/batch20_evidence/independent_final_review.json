@@ -1,0 +1,45 @@
+{
+  "reviewer": "batch20_protection_incident",
+  "mode": "independent serial read-only, no tests run or files edited",
+  "result": "PASS; no blocking",
+  "report_sha256": "8f6e63228d8040df58bbe821b87fb4106a0aec09c4e9d9096bece70f6766bb64",
+  "code_sha": "cfe16edd7a7e4d7f",
+  "manifest_files": 154,
+  "all_manifest_hashes_bytes_and_report_rows_match": true,
+  "three_full_xml_passed": [
+    1055,
+    1055,
+    1055
+  ],
+  "all_three_failed_errors_skipped": 0,
+  "baseline_delivery": {
+    "failed": 61,
+    "passed": 68,
+    "cases": 129,
+    "errors": 0,
+    "skipped": 0
+  },
+  "baseline83package_files_equal_B19": true,
+  "five_new_test_hashes_match": true,
+  "equivalent_mapping": {
+    "cases": 27,
+    "B19_failed": 3,
+    "B19_passed": 24,
+    "final_passed": 27
+  },
+  "release_AST_unchanged": true,
+  "release_AST_sha256": "611f658328d94163d6228a0dc09ef4c6d99ad5bcaac7cc6c9623f553a396b6e3",
+  "five_changed_old_test_assert_AST_counts_preserved": [
+    6,
+    3,
+    6,
+    1,
+    3
+  ],
+  "original_L3_test_file_unchanged": true,
+  "all_source_line_citations_and_sanitized_log_quotes_checked": true,
+  "five_FakeBroker_samples_equal_report": true,
+  "old_history_not_automatically_repaired": true,
+  "real_TWS_not_exercised": true,
+  "operator_manual_unchanged": true
+}

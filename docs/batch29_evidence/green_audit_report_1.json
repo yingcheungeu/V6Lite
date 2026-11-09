@@ -1,0 +1,27 @@
+{
+  "label": "green_audit_report_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T22:10:15.492671-07:00",
+  "end_pt": "2026-10-23T22:10:34.985093-07:00",
+  "seconds": 19.485,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once",
+    "v6lite/tests/test_batch29_faults.py::test_B29_daily_report_has_separate_timeout_evidence_and_restored_S",
+    "v6lite/tests/test_batch29_faults.py::test_B29_timeout_report_summary_is_bounded_under_repeated_refusals"
+  ],
+  "code_sha": "74dea0ca34cf6009",
+  "source_unchanged": true,
+  "inventory_sha256": "8efd110f65468fcbe4af34f468aa2bf21ca94b332a300a26882b24ebf3b197cd",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "7da97dd6b396880a2ba042565ddee1fb268bb001d46c6fbe01bde70f9c1a3ce0",
+  "XML_sha256_before_masking": "2a151c68e61acea39d1d49cb74ff6b2d0f9e048401733cc59ff618be5916663a",
+  "delivered_log_sha256": "44413415b899dca4c7de007043cd96507521c82ae5023d1e467c8e0d93d30e38",
+  "delivered_XML_sha256": "2a151c68e61acea39d1d49cb74ff6b2d0f9e048401733cc59ff618be5916663a",
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

@@ -1,0 +1,12 @@
+..............................................                           [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch32_offline_release.py::test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding
+  v6lite\tests\test_batch32_offline_release.py:115: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding(offline_oct29,record_property):
+
+v6lite/tests/test_batch32_release.py::test_B32_release_title_names_frozen_symbol_and_verified_zero_shares
+  v6lite\tests\test_batch32_release.py:5: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B32_release_title_names_frozen_symbol_and_verified_zero_shares(tmp_path,record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+46 passed, 2 warnings in 15.66s

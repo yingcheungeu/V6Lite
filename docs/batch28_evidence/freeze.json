@@ -1,0 +1,27 @@
+{
+  "baseline_tag": "v6lite-batch28a",
+  "baseline_commit": "a1ed23fc24d5757eed238502e2f19789ba698df7",
+  "code_sha": "c8ac27d8026b39c7",
+  "package_sha256": "c8ac27d8026b39c7b201dc37148f0ce3fa6eccfed46973e79501af7a221a0069",
+  "owned_files": {
+    "v6lite/engine.py": "9b8f8fd330d63d5150e8383bb632365c247450d4529b49fbf27b8187dc90a5df",
+    "v6lite/report.py": "a1bedacdc03d224aa5311972c3752750b2e142a48988ce538bc46b8c7c618896",
+    "v6lite/observations.py": "f7d8bfdfa05c2ac5443325a34a7dbc94e883b92ea65143a0fe279c7fe4cf0552",
+    "v6lite/store.py": "d68ee27280e441afdc2544705400d3a0b9ee57b4db1e40ab404edec36c7a4e51",
+    "v6lite/tests/test_batch10.py": "a3b8c0e25195e039a1e0c24840d632707e8e88bcf04dfae4cddbe2411d76d16e",
+    "v6lite/tests/test_g2_day1.py": "1824076e437aaa67642382655089b7088a817ddab13601430f4531e6adcf04fd",
+    "v6lite/tests/test_g2_day1_selfreview.py": "04fa52c8ef8b36197d6911213a994e564efdd3ac971a6fd70951a1c05b2ba254",
+    "v6lite/tests/test_review_round2.py": "c5deb6362b360566871eac651f98592c793f5ec14ca87a0848652b5a469528d3",
+    "v6lite/tests/test_batch17_heartbeat_account.py": "3360d6f32602226856710372cb082a54611d2af5d6ca65433185a1a8427825ef",
+    "v6lite/tests/test_batch19_funds.py": "28a7926c0d02d857ccd12441007a1dd509995c7baf45fcfa79e4d1dcc4478cfe",
+    "v6lite/tests/test_batch28_section2.py": "9c79d611507e78d6a3d7dfb51987be97312cc2ae95c0961f7bc734ddb5ea6779",
+    "v6lite/tests/test_batch28_section2_review_edges.py": "11cc3f4c50becdf3fd095d620b782aba5bab1cb0fadf0708738806c978b200ab"
+  },
+  "instructions_sha256": "646e8209a5a8d0e9876a42a8b6f47b46ad0444a193eb9d869b731da0bb2389a6",
+  "accepted_28a_report_sha256": "908356ef49cbd2217115e3f63b810fd396f6dfa2ed4439ddeabd9b744ebaec28",
+  "operator_manual_observed_sha256": "3a0b250ce67a4c4511e991f0acd31e32235eee52fae02bd7bad3bd2b87e21880",
+  "operator_manual_owned": false,
+  "compiled_sources": 155,
+  "source_compile": "all v6lite/scripts .py compiled from bytes without writing bytecode",
+  "recorded_pt": "2026-10-20T19:57:49.603052-07:00"
+}

@@ -1,0 +1,47 @@
+{
+  "label": "red_review_deadline",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:55:53.443486-07:00",
+  "end_pt": "2026-10-21T20:56:07.598765-07:00",
+  "seconds": 14.156,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28c_pair_deadline.py",
+    "v6lite/tests/test_batch28c_stop_query_contradiction.py"
+  ],
+  "code_sha": "65e3714c92af3751",
+  "source_unchanged": true,
+  "inventory_sha256": "3febffdcde45cb91b3516e4865bd4a0bb2bf284fd902e31842dca96e3f782cd5",
+  "incomplete": false,
+  "tests": 6,
+  "failures": 4,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28c_pair_deadline",
+      "name": "test_B28c_expired_pair_cannot_be_revived_inside_late_native_callback[False]",
+      "kind": "failure",
+      "message": "AssertionError: late pair cannot authorize without a new complete proof\nassert 171950.078 is None\n +  where 171950.078 = <v6lite.tests.test_batch28c_pair_deadline.LatePairServer object at 0x000002277F6C7350>.tp_wire"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_pair_deadline",
+      "name": "test_B28c_expired_pair_cannot_be_revived_inside_late_native_callback[True]",
+      "kind": "failure",
+      "message": "AssertionError: late pair cannot authorize without a new complete proof\nassert 171955.296 is None\n +  where 171955.296 = <v6lite.tests.test_batch28c_pair_deadline.LatePairServer object at 0x000002277F8CB8D0>.tp_wire"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_stop_query_contradiction",
+      "name": "test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP[missing]",
+      "kind": "failure",
+      "message": "AssertionError: independent STP contradiction must not be discarded\nassert False\n +  where False = any(<generator object test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP.<locals>.<genexpr> at 0x000002277F86F840>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_stop_query_contradiction",
+      "name": "test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP[duplicate]",
+      "kind": "failure",
+      "message": "AssertionError: independent STP contradiction must not be discarded\nassert False\n +  where False = any(<generator object test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP.<locals>.<genexpr> at 0x000002277F7C6B20>)"
+    }
+  ]
+}

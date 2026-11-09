@@ -1,0 +1,25 @@
+{
+  "base_commit": "0d9a72a90bbfe0519049dff42bce0b3e23a8f9b0",
+  "intended_tag": "v6lite-batch28c",
+  "code_sha": "737c9ad3b19d8211",
+  "package_sha256": "737c9ad3b19d82110cb62eb6a9fbefa6bfd2c39ef85e65662a242a617ca87c42",
+  "report_sha256": "46362c47022536cd118f1045fc1818bcf98553468eaa9dc93542cb31efd53841",
+  "full_labels": [
+    "release_full_1",
+    "release_full_2",
+    "release_full_3"
+  ],
+  "same_inventory": true,
+  "serial_full_runs": 3,
+  "source_unchanged": true,
+  "all_full_after_1330_pt": true,
+  "operator_manual_staged": false,
+  "merge_push_deploy": false,
+  "manifest_sha256": "4bd0c6c5bf9b03f8faf01c66fd67b261fe47a7dbe6d9a114fc33245fc7c33e5b",
+  "report_before_measurements_sha256": "6c6aba7e6e825288520eb56f844551e873ebd495c1e353150605f616ffb780c5",
+  "actual_native_latency_measurements_in_report": true,
+  "report_before_pairing_sha256": "a66eda93e91abdb89b253d4a58638d8a0e43af975955e1539c270a29bde0d2b7",
+  "paired_native_latency_verified": true,
+  "report_before_whitespace_note_sha256": "c858ebac6ab30c4f6193e93354e2c47fec30a0dc4fe4d412c97886efafdb1139",
+  "frozen_source_EOF_blank_preserved": true
+}

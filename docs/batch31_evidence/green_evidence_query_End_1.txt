@@ -1,0 +1,71 @@
+F.......F.........FF.................                                    [100%]
+================================== FAILURES ===================================
+____ test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End ____
+v6lite\tests\test_batch31_evidence_replay.py:118: in test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End
+    assert states==['WORKING'],'an owned complete openOrders snapshot must acknowledge the already-issued BE without TP permission'
+E   AssertionError: an owned complete openOrders snapshot must acknowledge the already-issued BE without TP permission
+E   assert ['PRICE_PENDING'] == ['WORKING']
+E     
+E     At index 0 diff: 'PRICE_PENDING' != 'WORKING'
+E     Use -v to get more diff
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+_________ test_B31_restart_pending_uses_owned_complete_round_then_TP2 _________
+v6lite\tests\test_batch31_overnight.py:149: in test_B31_restart_pending_uses_owned_complete_round_then_TP2
+    assert any(a['source']=='own complete three-source round' for a in _audits(rig,'PROTECT_PRICE_CONFIRMED'))
+E   assert False
+E    +  where False = any(<generator object test_B31_restart_pending_uses_owned_complete_round_then_TP2.<locals>.<genexpr> at 0x000002A1ED7EC1E0>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-27T13:33:28.001000+00:00
+_ test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[same-day] _
+v6lite\tests\test_batch28c_price_confirmation.py:325: in test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming
+    assert {'open_orders', 'positions_fresh', 'executions_today',
+E   AssertionError: assert {'account_exe...itions_fresh'} <= {'open_orders'}
+E     
+E     Extra items in the left set:
+E     'positions_fresh'
+E     'executions_today'
+E     'account_executions_today_scoped'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-21T15:03:18.001000+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-f7d144e85609403fa1ec | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:986 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-f7d144e85609403fa1ec | AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=未知 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=当日可见，未宣称全账户；核验时间=2026-10-21T15:03:22.001000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[next-trading-day] _
+v6lite\tests\test_batch28c_price_confirmation.py:325: in test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming
+    assert {'open_orders', 'positions_fresh', 'executions_today',
+E   AssertionError: assert {'account_exe...itions_fresh'} <= {'open_orders'}
+E     
+E     Extra items in the left set:
+E     'positions_fresh'
+E     'executions_today'
+E     'account_executions_today_scoped'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-21T15:03:18.001000+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-33ad54b579c540378cba | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:986 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-33ad54b579c540378cba | AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=未知 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-22T13:31:01+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_evidence_replay.py::test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End
+  v6lite\tests\test_batch31_evidence_replay.py:79: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End(evidence_run,monkeypatch,record_property):
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:73: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60
+  v6lite\tests\test_batch31_overnight.py:213: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60(oct27,record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_evidence_replay.py::test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_restart_pending_uses_owned_complete_round_then_TP2
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[same-day]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[next-trading-day]
+4 failed, 33 passed, 4 warnings in 13.91s

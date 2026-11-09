@@ -1,0 +1,17 @@
+................................                                         [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_evidence_replay.py::test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End
+  v6lite\tests\test_batch31_evidence_replay.py:79: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End(evidence_run,monkeypatch,record_property):
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:73: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60
+  v6lite\tests\test_batch31_overnight.py:216: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60(oct27,record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+32 passed, 4 warnings in 11.15s

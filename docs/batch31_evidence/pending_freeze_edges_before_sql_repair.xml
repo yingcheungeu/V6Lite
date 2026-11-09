@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="12" time="5.441" timestamp="2026-10-27T06:57:55.536153-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]" time="0.350"><properties><property name="b31_ack_observed_at" value="2026-10-27T13:33:28.108000+00:00" /></properties></testcase><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]" time="0.338"><properties><property name="b31_ack_observed_at" value="2026-10-27T13:33:28.108000+00:00" /></properties></testcase><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_old_confirmed_price_waits_without_freeze_or_P0[20]" time="0.343" /><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_old_confirmed_price_waits_without_freeze_or_P0[40]" time="0.439" /><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_real_contradiction_retains_STP_and_freezes[aux]" time="0.265" /><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_real_contradiction_retains_STP_and_freezes[quantity]" time="0.291" /><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_real_contradiction_retains_STP_and_freezes[permId]" time="0.304" /><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_restart_pending_uses_owned_complete_round_then_TP2" time="0.400" /><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof" time="0.366" /><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d[\u4fdd\u672c\u4fee\u6539\u5f85\u786e\u8ba4]" time="0.301"><failure message="sqlite3.OperationalError: no such column: time">v6lite\tests\test_batch31_overnight.py:173: in test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d
+    _tick_until(rig,lambda: rig.store.control('frozen:AAPL') is None)
+v6lite\tests\test_batch28b_overnight_refresh.py:44: in _tick_until
+    rig.tick()
+v6lite\tests\helpers.py:99: in tick
+    self.engine.tick()
+v6lite\engine.py:555: in tick
+    self._tick(now)
+v6lite\engine.py:606: in _tick
+    self._tick_step("protection", lambda: self._protection_progress(
+v6lite\engine.py:589: in _tick_step
+    return action()
+           ^^^^^^^^
+v6lite\engine.py:606: in &lt;lambda&gt;
+    self._tick_step("protection", lambda: self._protection_progress(
+v6lite\protection_engine.py:1079: in _protection_progress
+    self._protection_progress_one(self.clock.now(), row, pos)
+v6lite\protection_engine.py:1162: in _protection_progress_one
+    self._overnight_clear_price_freeze(now, row, held, own, others)
+v6lite\overnight_evidence.py:350: in _overnight_clear_price_freeze
+    ack = self.store.conn.execute(
+E   sqlite3.OperationalError: no such column: time</failure></testcase><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d[\u771f\u5b9e\u4fdd\u62a4\u8eab\u4efd\u51b2\u7a81]" time="0.329" /><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_ambiguous_legacy_freeze_cannot_be_mistaken_for_pending_only" time="0.315" /></testsuite></testsuites>

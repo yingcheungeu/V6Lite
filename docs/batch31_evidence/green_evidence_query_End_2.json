@@ -1,0 +1,36 @@
+{
+  "label": "green_evidence_query_End_2",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T09:13:19.277709-07:00",
+  "end_pt": "2026-10-27T09:13:53.645135-07:00",
+  "seconds": 34.36,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_evidence_replay.py",
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch28c_price_confirmation.py",
+    "v6lite/tests/test_batch28c_price_edges.py",
+    "v6lite/tests/test_batch28b_overnight_refresh.py"
+  ],
+  "code_sha": "81a5aefb3b277c64",
+  "source_unchanged": true,
+  "inventory_sha256": "8476005c4fa03e1e58b2b5e68054ef2b905507a115d9a80ffaa6895aa2aa2f32",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "83605dddbe5472c1bff857571093aa80f94a398689918e0ecc23497fe5706f95",
+  "XML_sha256_before_masking": "fcf934632a86afaf214587117d20866593aee32233ce60bbe40d8b81d8276947",
+  "delivered_log_sha256": "870a1bf9662ef2fea76488762567ebf9a1a43b03a52d9199ef816faf35b42b33",
+  "delivered_XML_sha256": "fcf934632a86afaf214587117d20866593aee32233ce60bbe40d8b81d8276947",
+  "tests": 45,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_evidence_replay",
+      "name": "test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End",
+      "kind": "failure",
+      "message": "AssertionError: assert [('openOrder', '')] == [('openOrder'...ders', '0.0')]\n  \n  Right contains one more item: ('openOrders', '0.0')\n  Use -v to get more diff"
+    }
+  ]
+}

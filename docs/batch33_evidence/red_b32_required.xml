@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="1" skipped="0" tests="3" time="3.232" timestamp="2026-10-31T15:28:32.777602-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_oct29_real_overnight_replay" time="0.237"><failure message="assert (1, 1, 1, 0) == (1, 1, 0, 0)&#10;  &#10;  At index 2 diff: 1 != 0&#10;  Use -v to get more diff">v6lite\tests\test_batch33_open_delay.py:81: in test_B33_oct29_real_overnight_replay
+    hold(rig, pid, before)
+v6lite\tests\test_batch33_open_delay.py:38: in hold
+    assert _writes(rig) == before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_stop_crossing_at_open_plus_5_is_unchanged" time="0.281" /><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_last_overnight_share_waits_before_TP3_cancel" time="1.052"><error message="failed on setup with &quot;AssertionError: ('deadline', datetime.datetime(2026, 10, 28, 15, 5, 30, 3000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function start_tp.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D8E23DDE40&gt;()&quot;">v6lite\tests\test_batch33_open_delay.py:124: in last_overnight
+    finish_tp(rig, pid, wire, Purpose.TP2)
+v6lite\tests\test_batch33_open_delay.py:60: in finish_tp
+    req = start_tp(rig, pid, wire)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch33_open_delay.py:55: in start_tp
+    _tick_until(rig, lambda: len(_tp_requests(rig)) &gt; count)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 28, 15, 5, 30, 3000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function start_tp.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D8E23DDE40&gt;()</error></testcase></testsuite></testsuites>

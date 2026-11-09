@@ -1,0 +1,30 @@
+{
+  "label": "addendum_refusal_cards_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T09:48:28.192723-07:00",
+  "end_pt": "2026-10-29T09:48:35.447462-07:00",
+  "seconds": 7.25,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch32_release.py",
+    "v6lite/tests/test_batch24_presentation.py",
+    "v6lite/tests/test_batch22_schema_audit.py",
+    "v6lite/tests/test_batch23_broker_diagnostics.py",
+    "v6lite/tests/test_batch23_unprotected.py"
+  ],
+  "code_sha": "caff74f4825a6d82",
+  "source_unchanged": true,
+  "inventory_sha256": "8aa60267f0d6e100ba4ded12f3087d22c39ac94e94eec92d2d5b3de24414d5de",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "87a2571bec9cb532e5394b8da35a72896567659117df08592165cfef7b6c97b7",
+  "XML_sha256_before_masking": "4629126f9e7562d33e96e1e368f51796f90d82a1cde02184666eaef654105e93",
+  "delivered_log_sha256": "2b7d37daed20f852db6569e26e48fd32dda8585f6fc1a475fe284f6ed466b6b4",
+  "delivered_XML_sha256": "4629126f9e7562d33e96e1e368f51796f90d82a1cde02184666eaef654105e93",
+  "tests": 52,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

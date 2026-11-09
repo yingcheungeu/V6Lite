@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="6" time="0.839" timestamp="2026-10-12T07:55:53.478125-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch24_pacing_lifecycle" name="test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]" time="0.182"><failure message="AssertionError: [0.0, 0.0]&#10;assert (0.0 - 0.0) &gt;= (1 - 1e-06)">tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_pacing_lifecycle_locked/test_B24_reset_or_disconnect_d0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000246B003FBD0&gt;
+request = &lt;FixtureRequest for &lt;Function test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]&gt;&gt;
+operation = 'reset'
+
+    @pytest.mark.parametrize('operation', ['reset', 'disconnect'])
+    def test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect(
+            tmp_path, monkeypatch, request, operation):
+        adapter, loop, messages = _native_wire(tmp_path, monkeypatch, request)
+        client = adapter.ib.client
+        # One old-socket query is actually sent and gets its own End. Keeping its
+        # rate timestamp across reconnect avoids a channel burst after reset.
+        client.reqPositions(); adapter.ib.wrapper.positionEnd()
+        for n in range(client.MaxRequests - 1):
+            client.sendMsg('49\0old-capacity-' + str(n) + '\0')
+        client.sendMsg('3\0obsolete-place\0')
+        client.sendMsg('4\0obsolete-cancel\0')
+        timers = list(loop.queue)
+        assert timers and len(client._msgQ) &gt;= 2
+        assert not any('obsolete-' in message for _, message in messages)
+        _invalidate(client, operation)
+        _reconnect_without_network(adapter)
+        start_of_new_generation = len(messages)
+        assert adapter.positions_fresh() == []
+        _force_obsolete_timers(loop, timers)
+        loop.drain()
+        assert not any('obsolete-' in message for _, message in messages), messages
+        position_times = [at for at, message in messages if _opcode(message) == '61']
+        assert len(position_times) == 2
+&gt;       assert position_times[1] - position_times[0] &gt;= 1 - 1e-6, position_times
+E       AssertionError: [0.0, 0.0]
+E       assert (0.0 - 0.0) &gt;= (1 - 1e-06)
+
+v6lite\tests\test_batch24_pacing_lifecycle.py:72: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch24_pacing_lifecycle" name="test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]" time="0.004"><failure message="AssertionError: [0.0, 0.0]&#10;assert (0.0 - 0.0) &gt;= (1 - 1e-06)">tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_pacing_lifecycle_locked/test_B24_reset_or_disconnect_d1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000246AFE07250&gt;
+request = &lt;FixtureRequest for &lt;Function test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]&gt;&gt;
+operation = 'disconnect'
+
+    @pytest.mark.parametrize('operation', ['reset', 'disconnect'])
+    def test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect(
+            tmp_path, monkeypatch, request, operation):
+        adapter, loop, messages = _native_wire(tmp_path, monkeypatch, request)
+        client = adapter.ib.client
+        # One old-socket query is actually sent and gets its own End. Keeping its
+        # rate timestamp across reconnect avoids a channel burst after reset.
+        client.reqPositions(); adapter.ib.wrapper.positionEnd()
+        for n in range(client.MaxRequests - 1):
+            client.sendMsg('49\0old-capacity-' + str(n) + '\0')
+        client.sendMsg('3\0obsolete-place\0')
+        client.sendMsg('4\0obsolete-cancel\0')
+        timers = list(loop.queue)
+        assert timers and len(client._msgQ) &gt;= 2
+        assert not any('obsolete-' in message for _, message in messages)
+        _invalidate(client, operation)
+        _reconnect_without_network(adapter)
+        start_of_new_generation = len(messages)
+        assert adapter.positions_fresh() == []
+        _force_obsolete_timers(loop, timers)
+        loop.drain()
+        assert not any('obsolete-' in message for _, message in messages), messages
+        position_times = [at for at, message in messages if _opcode(message) == '61']
+        assert len(position_times) == 2
+&gt;       assert position_times[1] - position_times[0] &gt;= 1 - 1e-6, position_times
+E       AssertionError: [0.0, 0.0]
+E       assert (0.0 - 0.0) &gt;= (1 - 1e-06)
+
+v6lite\tests\test_batch24_pacing_lifecycle.py:72: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch24_pacing_lifecycle" name="test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]" time="0.003"><failure message="AssertionError: ('old deque continued after reset', ['3\x00old-place-one\x00', '4\x00old-cancel-two\x00', '3\x00old-place-three\x00'])&#10;assert ['3\x00old-pl...ce-three\x00'] == ['3\x00old-place-one\x00']&#10;  &#10;  Left contains 2 more items, first extra item: '4\x00old-cancel-two\x00'&#10;  Use -v to get more diff">tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_pacing_lifecycle_locked/test_B24_reset_or_disconnect_i0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000246B03C4890&gt;
+request = &lt;FixtureRequest for &lt;Function test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]&gt;&gt;
+operation = 'reset'
+
+    @pytest.mark.parametrize('operation', ['reset', 'disconnect'])
+    def test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes(
+            tmp_path, monkeypatch, request, operation):
+        adapter, loop, messages = _native_wire(tmp_path, monkeypatch, request)
+        client = adapter.ib.client
+        for n in range(client.MaxRequests):
+            client.sendMsg('49\0old-capacity-' + str(n) + '\0')
+        client.sendMsg('3\0old-place-one\0')
+        client.sendMsg('4\0old-cancel-two\0')
+        client.sendMsg('3\0old-place-three\0')
+        timers = list(loop.queue)
+        assert timers and len(client._msgQ) == 3
+        assert not any(_opcode(message) in {'3', '4'} for _, message in messages)
+        reset_count = []
+        def transport(packet):
+            message = packet[4:].decode()
+            messages.append((loop.time(), message))
+            if message == '3\0old-place-one\0':
+                reset_count.append(operation)
+                # Actual native lifecycle reset while sendMsg still owns local
+                # deque references; the drain must notice the changed generation.
+                _invalidate(client, operation)
+                # A new generation may become ready while the old drain still
+                # owns its stack. Its valid protection must drain automatically,
+                # without resurrecting old messages or needing an external kick.
+                _reconnect_without_network(adapter)
+                client.sendMsg('3\0new-generation-stop\0')
+        monkeypatch.setattr(client.conn, 'sendMsg', transport)
+        loop.queue.clear()
+        loop.now = 2.0
+        _force_obsolete_timers(loop, timers)
+        loop.drain()
+        sent_old_writes = [message for _, message in messages if _opcode(message) in {'3', '4'} and 'old-' in message]
+        assert reset_count == [operation]
+&gt;       assert sent_old_writes == ['3\0old-place-one\0'], ('old deque continued after reset', sent_old_writes)
+E       AssertionError: ('old deque continued after reset', ['3\x00old-place-one\x00', '4\x00old-cancel-two\x00', '3\x00old-place-three\x00'])
+E       assert ['3\x00old-pl...ce-three\x00'] == ['3\x00old-place-one\x00']
+E         
+E         Left contains 2 more items, first extra item: '4\x00old-cancel-two\x00'
+E         Use -v to get more diff
+
+v6lite\tests\test_batch24_pacing_lifecycle.py:110: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch24_pacing_lifecycle" name="test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]" time="0.003"><failure message="AssertionError: ('old deque continued after reset', ['3\x00old-place-one\x00', '4\x00old-cancel-two\x00', '3\x00old-place-three\x00'])&#10;assert ['3\x00old-pl...ce-three\x00'] == ['3\x00old-place-one\x00']&#10;  &#10;  Left contains 2 more items, first extra item: '4\x00old-cancel-two\x00'&#10;  Use -v to get more diff">tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_pacing_lifecycle_locked/test_B24_reset_or_disconnect_i1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000246AEB02DD0&gt;
+request = &lt;FixtureRequest for &lt;Function test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]&gt;&gt;
+operation = 'disconnect'
+
+    @pytest.mark.parametrize('operation', ['reset', 'disconnect'])
+    def test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes(
+            tmp_path, monkeypatch, request, operation):
+        adapter, loop, messages = _native_wire(tmp_path, monkeypatch, request)
+        client = adapter.ib.client
+        for n in range(client.MaxRequests):
+            client.sendMsg('49\0old-capacity-' + str(n) + '\0')
+        client.sendMsg('3\0old-place-one\0')
+        client.sendMsg('4\0old-cancel-two\0')
+        client.sendMsg('3\0old-place-three\0')
+        timers = list(loop.queue)
+        assert timers and len(client._msgQ) == 3
+        assert not any(_opcode(message) in {'3', '4'} for _, message in messages)
+        reset_count = []
+        def transport(packet):
+            message = packet[4:].decode()
+            messages.append((loop.time(), message))
+            if message == '3\0old-place-one\0':
+                reset_count.append(operation)
+                # Actual native lifecycle reset while sendMsg still owns local
+                # deque references; the drain must notice the changed generation.
+                _invalidate(client, operation)
+                # A new generation may become ready while the old drain still
+                # owns its stack. Its valid protection must drain automatically,
+                # without resurrecting old messages or needing an external kick.
+                _reconnect_without_network(adapter)
+                client.sendMsg('3\0new-generation-stop\0')
+        monkeypatch.setattr(client.conn, 'sendMsg', transport)
+        loop.queue.clear()
+        loop.now = 2.0
+        _force_obsolete_timers(loop, timers)
+        loop.drain()
+        sent_old_writes = [message for _, message in messages if _opcode(message) in {'3', '4'} and 'old-' in message]
+        assert reset_count == [operation]
+&gt;       assert sent_old_writes == ['3\0old-place-one\0'], ('old deque continued after reset', sent_old_writes)
+E       AssertionError: ('old deque continued after reset', ['3\x00old-place-one\x00', '4\x00old-cancel-two\x00', '3\x00old-place-three\x00'])
+E       assert ['3\x00old-pl...ce-three\x00'] == ['3\x00old-place-one\x00']
+E         
+E         Left contains 2 more items, first extra item: '4\x00old-cancel-two\x00'
+E         Use -v to get more diff
+
+v6lite\tests\test_batch24_pacing_lifecycle.py:110: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch24_pacing_lifecycle" name="test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot" time="0.003" /><testcase classname="v6lite.tests.test_batch24_pacing_lifecycle" name="test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence" time="0.003" /></testsuite></testsuites>

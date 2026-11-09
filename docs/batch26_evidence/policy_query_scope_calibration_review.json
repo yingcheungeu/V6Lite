@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-15",
+  "original_spec_sha256": "b7b6d740e9d3907a10a52bf902528a530ded9f044e880e2fda60223b5ae4da60",
+  "archive": "docs/batch26_evidence/pre_1015_policy_query_scope.py",
+  "corrected_spec_sha256": "b9090294e8ccb86d4583a21596b57135b5fe5d74129dc04882d63a86dc062c8d",
+  "reason": "The user requires default freeze to retain B25 stop-only behavior; only explicit constraint invokes additional account-visible execution authority. Requiring freeze account_executions_today was a test-scope overreach, not a product defect.",
+  "changes": [
+    "freeze retains three active complete queries at seconds 15 and 30, with zero account_executions_today queries",
+    "constraint failures still require all four active queries exactly at seconds 15 and 30",
+    "all card, persistence, no-write, identity, capacity and BE assertions remain unchanged"
+  ],
+  "historical_receipt": "red_1015_policy_unfixed_candidate: 12 failed, 1 passed, 0 errors; original freeze four-channel assertion must not be claimed as a product defect",
+  "test_execution": "none; ROOT will rerun natural red serially"
+}

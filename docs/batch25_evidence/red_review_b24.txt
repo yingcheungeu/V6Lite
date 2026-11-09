@@ -1,0 +1,107 @@
+FFFFFFFFFF....F                                                          [100%]
+================================== FAILURES ===================================
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted] _
+..\..\v6lite\tests\test_batch25_review_regressions.py:53: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert all(getattr(event, 'connection_snapshot', False) for event in statuses + prices)
+E   assert False
+E    +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x00000290CBA034C0>)
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled] _
+..\..\v6lite\tests\test_batch25_review_regressions.py:53: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert all(getattr(event, 'connection_snapshot', False) for event in statuses + prices)
+E   assert False
+E    +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x00000290CBBD8220>)
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted] _
+..\..\v6lite\tests\test_batch25_review_regressions.py:53: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert all(getattr(event, 'connection_snapshot', False) for event in statuses + prices)
+E   assert False
+E    +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x00000290CBBD9210>)
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled] _
+..\..\v6lite\tests\test_batch25_review_regressions.py:53: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert all(getattr(event, 'connection_snapshot', False) for event in statuses + prices)
+E   assert False
+E    +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x00000290CBBD9E40>)
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted] _
+..\..\v6lite\tests\test_batch25_review_regressions.py:53: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert all(getattr(event, 'connection_snapshot', False) for event in statuses + prices)
+E   assert False
+E    +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x00000290CBBDB970>)
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled] _
+..\..\v6lite\tests\test_batch25_review_regressions.py:53: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert all(getattr(event, 'connection_snapshot', False) for event in statuses + prices)
+E   assert False
+E    +  where False = all(<generator object test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync.<locals>.<genexpr> at 0x00000290EBE6C7C0>)
+_ test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit _
+..\..\v6lite\tests\test_batch25_review_regressions.py:111: in test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit
+    assert len(attempts) == 2 and _p0_stop(rig) == []
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 29, 999000, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic native socket reset
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: SDK synchronization incomplete; registered End missing: openOrders [generation=1 PID=9001 reqId=701 elapsed=1.125s attempt=1]
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: SDK synchronization incomplete; registered End missing: openOrders [generation=2 PID=9002 reqId=702 elapsed=2.125s attempt=2]
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: SDK synchronization incomplete; registered End missing: openOrders [generation=3 PID=9003 reqId=703 elapsed=3.125s attempt=3]
+_ test_B25_review_normalization_preserves_truly_different_query_failure_causes _
+..\..\v6lite\tests\test_batch25_review_regressions.py:134: in test_B25_review_normalization_preserves_truly_different_query_failure_causes
+    assert len(attempts) == count-1
+E   assert 3 == (3 - 1)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 29, 999000, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic native socket reset
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: SDK synchronization incomplete; registered End missing: openOrders [generation=1 PID=9001 reqId=701 elapsed=1.125s attempt=1]
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: SDK synchronization incomplete; registered End missing: positions [generation=2 PID=9002 reqId=702 elapsed=2.125s attempt=2]
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: executions request refused by broker [generation=3 PID=9003 reqId=703 elapsed=3.125s attempt=3]
+_ test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget _
+..\..\v6lite\tests\test_batch25_review_regressions.py:170: in test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget
+    assert len(physical) == 1 and len(execution_queries) == 2, 'retry recovery on the existing healthy socket'
+E   AssertionError: retry recovery on the existing healthy socket
+E   assert (1 == 1 and 1 == 2)
+E    +  where 1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])
+E    +  and   1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic repeated physical socket reset
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: recovery failed | synthetic executions temporarily unavailable after reconnect
+_ test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry _
+..\..\v6lite\tests\test_batch25_review_regressions.py:194: in test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry
+    assert len(attempts) == 2 and len(_p0_stop(rig)) == 1
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 30, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic native socket reset
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: synthetic persistent native channel reset
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: synthetic persistent native channel reset
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: synthetic persistent native channel reset
+_ test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL] _
+..\..\v6lite\tests\test_batch25_review_regressions.py:255: in test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells
+    rig.engine._protection_progress(rig.clock.now())
+v6lite\protection_engine.py:908: in _protection_progress
+    self._protection_progress_one(self.clock.now(), row, pos)
+v6lite\protection_engine.py:1055: in _protection_progress_one
+    self._protection_modify(now, row, order, safe_target, increase=False,
+v6lite\protection_engine.py:1306: in _protection_modify
+    self.broker.modify_protection(req)
+v6lite\tests\test_batch23_contracts.py:181: in write
+    _safety(rig,req);rig._b23_write_checks.append((_name,'before'))
+    ^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch23_contracts.py:154: in _safety
+    assert total<=truth.get(symbol,0),(symbol,'S+T+X',total,'P',truth.get(symbol,0),by_ref)
+E   AssertionError: ('AAPL', 'S+T+X', 4, 'P', 3, {'external-b25-prior-day-seller': ('AAPL', 1), 'v6l-protect-36dcbbb5e9684b04822c': ('AAPL', 3)})
+E   assert 4 <= 3
+E    +  where 3 = <built-in method get of dict object at 0x00000290EBE4D4C0>('AAPL', 0)
+E    +    where <built-in method get of dict object at 0x00000290EBE4D4C0> = {'AAPL': 3}.get
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: non-V6-Lite order on managed AAPL | external-b25-prior-day-seller SELL remaining 1 is working; its shares are reserved and V6-Lite will not sell them
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-4cb76970e8bf4126af26 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection external sell AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=1 股 未保护=0 股 可能超卖=1 股；当前快照已核实；orderRef=v6l-protect-36dcbbb5e9684b04822c orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=external-b25-prior-day-seller orderId=1003 1 股；止损价（触发后市价成交）=108.47；上次确认=2026-10-07T14:01:00+00:00 工作单证据时间=2026-10-07T14:01:00+00:00；外部卖单最多=1 股；外部订单号=external-b25-prior-day-seller
+=========================== short test summary info ===========================
+FAILED ::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]
+FAILED ::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]
+FAILED ::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]
+FAILED ::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]
+FAILED ::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]
+FAILED ::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]
+FAILED ::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit
+FAILED ::test_B25_review_normalization_preserves_truly_different_query_failure_causes
+FAILED ::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget
+FAILED ::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry
+FAILED ::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]
+11 failed, 4 passed in 2.39s

@@ -1,0 +1,11 @@
+{
+  "reason": "Add human evidence-scope and default-off switch rulings to every-run preserved input guard before overnight implementation",
+  "old_runner_sha256": "8fa07a1c756e68dde7388c82d38a2b799d3acf6f066a672566684c44664da0fe",
+  "new_runner_sha256": "a0d533cae8209ab675997232fb3ebcfc7001e9b37d38089ac94906ce872277b4",
+  "new_locked_inputs": {
+    "docs/V6_LITE_BATCH26_EVIDENCE_RULING_2026-10-14.md": "1b8a03ca6bd93272a10ddd4545ff8fd6b3764b3015a6f1b26edf9fcae90f15f5",
+    "docs/batch26_evidence/evidence_ruling.json": "fe71e04846794caac05578281aced4828f965a793ffbd3f8d19ac51ce71a3410",
+    "docs/batch26_evidence/switch_ruling.json": "3dd8134c3130de68296da3da99fbde5719a5bd3a23464befe952f5ad81bfb532"
+  },
+  "pytest_program_and_assertions_unchanged": true
+}

@@ -1,0 +1,47 @@
+{
+  "verdict": "PASS",
+  "reviewed_by": "batch20_time_logs",
+  "recorded_by": "root",
+  "recorded_pt": "2026-10-09T13:57:26.697819-07:00",
+  "code_sha": "f27e144de9eb406b",
+  "report_sha256": "2cc9477f84ce0f949711a8d51b6e5a070f294a8b999cb1f35a0a9a9f902c5a38",
+  "manifest_sha256": "df38d46202bf5897e0541829a6e8b14a24f61d08de7f4c116af6c64fba39f0a5",
+  "commit_plan_sha256": "cd7b83bff8bccbdbc7fb821cb66ccad892a49984b1a95ef78123a6aa38125765",
+  "manifest_entries_verified": 219,
+  "original_manifest_entries_verified": 200,
+  "planned_files_verified": 131,
+  "expected_staged_files_with_plan_and_receipt": 133,
+  "full_runs": [
+    {
+      "passed": 1344,
+      "skipped": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "passed": 1344,
+      "skipped": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "passed": 1344,
+      "skipped": 1,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "same_skip": "test_scoring_matches_legacy_scanner_on_identical_bars",
+  "all_case_metadata_and_xml_matched": true,
+  "critical_permission_functions_unchanged": 11,
+  "initial_tooling_failure_counted_as_gate": false,
+  "head": "42c77da139ce308ca133eb7e2e40beaf33ecac9d",
+  "old_tag_object": "18f44ab40bc934327c6cacd921e6717ff21c3a80",
+  "index_empty_before_staging": true,
+  "ignored_log_files_explicitly_included": 4,
+  "secret_findings": 0,
+  "largest_planned_file_bytes": 701740,
+  "independent_writes_or_tests": false,
+  "runtime_user_archive_access": false,
+  "scope": "frozen source, offline full3 evidence and exact commit plan; root performs actual git operations afterwards"
+}

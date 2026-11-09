@@ -1,0 +1,67 @@
+{
+  "database": "C:\\Users\\yu-ch\\.v6lite\\paper-test\\v6lite.sqlite3",
+  "open_mode": "mode=ro",
+  "query_only": 1,
+  "fill": {
+    "exec_id": "0000e0d5.6ac87b1f.01.01",
+    "intent_id": "v6l-41f204b49aae4e169a08",
+    "position_id": "pos-51d6129a72c7481995fa",
+    "symbol": "AAPL",
+    "side": "BUY",
+    "quantity": 3,
+    "price": 337.74,
+    "time": "2026-10-08T21:58:09+00:00",
+    "trading_day": "2026-10-08",
+    "broker_order_id": 32,
+    "perm_id": 1099402928,
+    "realized_pnl": 0.0
+  },
+  "position": {
+    "position_id": "pos-51d6129a72c7481995fa",
+    "symbol": "AAPL",
+    "status": "OPEN",
+    "qty_open": 3,
+    "entry_price": 337.74,
+    "opened_at": "2026-10-08T14:58:10.108493+00:00",
+    "closed_at": null,
+    "realized_pnl": 0.0
+  },
+  "protection": {
+    "position_id": "pos-51d6129a72c7481995fa",
+    "intent_id": "v6l-protect-f8b6a01253464972b4b5",
+    "symbol": "AAPL",
+    "state": "UNKNOWN",
+    "broker_order_id": 33,
+    "perm_id": null,
+    "con_id": 265598,
+    "client_id": 132,
+    "requested_qty": 3,
+    "confirmed_remaining": 0,
+    "pending_max_remaining": 3,
+    "pending_qty": 3,
+    "confirmed_at": null,
+    "gap_a_started_at": "2026-10-08T14:58:10.108493+00:00"
+  },
+  "protection_intent": {
+    "intent_id": "v6l-protect-f8b6a01253464972b4b5",
+    "status": "CANCEL_SEEN",
+    "broker_order_id": 33,
+    "perm_id": 1099402929,
+    "last_raw_status": "Cancelled",
+    "cancel_seen_at": "2026-10-08T14:58:10.371305+00:00",
+    "cancel_requested_at": null,
+    "hold_reason": null,
+    "note": null
+  },
+  "related_hashes_before": {
+    "v6lite.sqlite3": "0956e0446b0efa74d50673483b4918876759c0334995c49c7eb569be9b84fabe",
+    "v6lite.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "v6lite.sqlite3-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+  },
+  "related_hashes_after": {
+    "v6lite.sqlite3": "0956e0446b0efa74d50673483b4918876759c0334995c49c7eb569be9b84fabe",
+    "v6lite.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "v6lite.sqlite3-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+  },
+  "bytes_unchanged": true
+}

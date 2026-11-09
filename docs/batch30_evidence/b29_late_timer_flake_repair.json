@@ -1,0 +1,9 @@
+{
+  "first_occurrence_receipt": "focused_final_1",
+  "test": "test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once",
+  "observed": "late_fill_at == cancel_at on Windows; independent half/full RTT timers both overdue in one event-loop turn",
+  "repair": "chain the native Cancelled callback timer after actual late-fill callback delivery, preserving half RTT and strict cancel_wire < late_fill_at < cancel_at assertion; no product/gates/proofs/oracle changes",
+  "old_source_sha256": "387b71595c5378e17e7a79df6517a4d2708578dfd2782a18a6c244c6cf7e3e4b",
+  "new_source_sha256": "7616bd66f24d8f073ec39c1183d3acac19eecdeb23beda29077b153690adf4d2",
+  "third_flake_gate_waived": false
+}

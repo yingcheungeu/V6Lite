@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="17.871" timestamp="2026-10-23T22:08:28.291331-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch29_native_timeout" name="test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once" time="16.863"><failure message="AssertionError: [{'operator': 'John', 'outcome': 'requested', 'phase': 'requested', 'request_id': '33443e5b1c5f4b69af20024ff0fe709f', ...d73447abedf', ...}, {'S': 2, 'ask': 343.97, 'gap_b_seconds': 2.359, 'intent_id': 'v6l-c1da2feded73447abedf', ...}, ...]&#10;assert {'cancel_conf...lose', 'send'} &lt;= {'cancel_requ...nd', 'status'}&#10;  &#10;  Extra items in the left set:&#10;  'cancel_confirm'">v6lite\tests\test_batch29_native_timeout.py:321: in test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+    server.assert_audit()
+v6lite\tests\test_batch29_native_timeout.py:230: in assert_audit
+    assert {'claimed', 'send', 'cancel_request', 'cancel_confirm', 'gap_close'} &lt;= phases, rows
+E   AssertionError: [{'operator': 'John', 'outcome': 'requested', 'phase': 'requested', 'request_id': '33443e5b1c5f4b69af20024ff0fe709f', ...d73447abedf', ...}, {'S': 2, 'ask': 343.97, 'gap_b_seconds': 2.359, 'intent_id': 'v6l-c1da2feded73447abedf', ...}, ...]
+E   assert {'cancel_conf...lose', 'send'} &lt;= {'cancel_requ...nd', 'status'}
+E     
+E     Extra items in the left set:
+E     'cancel_confirm'</failure></testcase></testsuite></testsuites>

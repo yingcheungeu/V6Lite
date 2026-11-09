@@ -1,0 +1,91 @@
+....................................................................FFFF [ 63%]
+FFF......................................                                [100%]
+================================== FAILURES ===================================
+___ test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[held] ____
+v6lite\tests\test_batch19_funds.py:382: in test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness
+    assert getattr(rig.broker, "account_refreshes", 0) == before + 1
+E   AssertionError: assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E317AA50>, 'account_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E317AA50> = <v6lite.tests.helpers.Rig object at 0x000001E1E3179050>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:56:00+00:00; funds snapshot requested; funds/readiness evidence requires verification
+_ test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[broker_only] _
+v6lite\tests\test_batch19_funds.py:382: in test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness
+    assert getattr(rig.broker, "account_refreshes", 0) == before + 1
+E   AssertionError: assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E3216110>, 'account_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E3216110> = <v6lite.tests.helpers.Rig object at 0x000001E1E31A3610>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:55:29+00:00; funds snapshot requested; funds/readiness evidence requires verification
+__ test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[unknown] __
+v6lite\tests\test_batch19_funds.py:382: in test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness
+    assert getattr(rig.broker, "account_refreshes", 0) == before + 1
+E   AssertionError: assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E1E66E10>, 'account_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E1E66E10> = <v6lite.tests.helpers.Rig object at 0x000001E1E1E67B10>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:55:29+00:00; funds snapshot requested; funds/readiness evidence requires verification
+__ test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[expired] __
+v6lite\tests\test_batch19_funds.py:382: in test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness
+    assert getattr(rig.broker, "account_refreshes", 0) == before + 1
+E   AssertionError: assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E1991C50>, 'account_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E1991C50> = <v6lite.tests.helpers.Rig object at 0x000001E1E1991590>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 14:00:30+00:00; funds snapshot requested; funds/readiness evidence requires verification
+_ test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[clock_backwards] _
+v6lite\tests\test_batch19_funds.py:382: in test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness
+    assert getattr(rig.broker, "account_refreshes", 0) == before + 1
+E   AssertionError: assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E2EDC0D0>, 'account_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E2EDC0D0> = <v6lite.tests.helpers.Rig object at 0x000001E1E2EDD250>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:55:28+00:00; funds snapshot requested; funds/readiness evidence requires verification
+__ test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[active] ___
+v6lite\tests\test_batch19_funds.py:382: in test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness
+    assert getattr(rig.broker, "account_refreshes", 0) == before + 1
+E   AssertionError: assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E1A0FA50>, 'account_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E1A0FA50> = <v6lite.tests.helpers.Rig object at 0x000001E1E1A0CB50>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:55:29+00:00; funds snapshot requested; funds/readiness evidence requires verification
+_ test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[new_fill] __
+v6lite\tests\test_batch19_funds.py:382: in test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness
+    assert getattr(rig.broker, "account_refreshes", 0) == before + 1
+E   AssertionError: assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E2EC4590>, 'account_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E2EC4590> = <v6lite.tests.helpers.Rig object at 0x000001E1E1B23F50>.broker
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b19-evidence | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+WARNING  v6lite.engine:engine.py:1295 [ACCOUNT_STREAM] silent since 2026-10-06 13:55:29+00:00; funds snapshot requested; funds/readiness evidence requires verification
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts
+  v6lite\tests\test_batch27_observer_atomicity.py:19: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history
+  v6lite\tests\test_batch27_daily_report_volume.py:81: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear
+  v6lite\tests\test_batch27_daily_report_volume.py:126: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear(
+
+v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice
+  v6lite\tests\test_batch27_masked_report_budget.py:17: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice(
+
+v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice
+  v6lite\tests\test_batch27_short_account_budget.py:22: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch19_funds.py::test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[held]
+FAILED v6lite/tests/test_batch19_funds.py::test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[broker_only]
+FAILED v6lite/tests/test_batch19_funds.py::test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[unknown]
+FAILED v6lite/tests/test_batch19_funds.py::test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[expired]
+FAILED v6lite/tests/test_batch19_funds.py::test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[clock_backwards]
+FAILED v6lite/tests/test_batch19_funds.py::test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[active]
+FAILED v6lite/tests/test_batch19_funds.py::test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[new_fill]
+7 failed, 106 passed, 5 warnings in 13.89s

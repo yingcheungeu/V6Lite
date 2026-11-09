@@ -1,0 +1,18 @@
+{
+  "base_commit": "4456af6d1e70be1daa32d5d7870f34d422373383",
+  "intended_tag": "v6lite-batch32",
+  "code_sha": "5e94c5d34a138e7d",
+  "package_sha256": "5e94c5d34a138e7df06ec15ac57a1f46958185ed0c7cb9f862e845b75b0c984f",
+  "report_sha256": "cbe41814d070ae71965c7c83df79dc1ca8f86bf309c300028ce4d5e94f5809b6",
+  "full_labels": [
+    "final_full_1",
+    "final_full_2",
+    "final_full_3"
+  ],
+  "serial_full_runs": 3,
+  "source_unchanged": true,
+  "all_full_after_1330_pt": true,
+  "merge_push_deploy": false,
+  "manifest_sha256": "29b5171144a2ccb48a4e920312d11f8df0bf9cfdf8b7f329451c27dd311746bc",
+  "unowned_output_files_excluded": []
+}

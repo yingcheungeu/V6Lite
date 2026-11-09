@@ -1,0 +1,21 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____ test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second _____
+v6lite\tests\test_batch28d_native_final_tp.py:358: in test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second
+    assert delay <= 1., ('Cancelled -> actual DAY LMT conn.sendMsg', delay, server.requests)
+E   AssertionError: ('Cancelled -> actual DAY LMT conn.sendMsg', 8.469000000011874, [(211763.531, '16', ('16', '1', '')), (211763.593, '61...DU******001', '20261021-04:00:00', ...)), (211764.781, '16', ('16', '1', '')), (211764.828, '61', ('61', '1', '')), ...])
+E   assert 8.469000000011874 <= 1.0
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-bab8abc92cd045adbbee | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=0 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–0） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-ab3698fe7ae341bbaad0 orderId=706 permId=50706 TP=v6l-4343dd840cc749da95da TP orderId=739 TP剩余=0 股；外部订单=无券商新快照；止损价（触发后市价成交）=342.77；上次确认=2026-10-22T15:03:29.438000+00:00 工作单证据时间=2026-10-22T15:04:02.938000+00:00；持仓、工作单、执行三项证据查询失败：ProtectionEvidenceContradiction
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-bab8abc92cd045adbbee | AAPL：当日新鲜持仓/工作单/成交核验失败：same-round TP fill does not explain all broker/ledger/order facts；券商 P=0.0 股，账本=0 股，当前工作 STP S=未知 股；本地上次确认 STP S=0 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=当日可见，未宣称全账户；核验时间=2026-10-22T15:04:05.016000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+============================== warnings summary ===============================
+v6lite/tests/test_batch28d_native_final_tp.py::test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second
+  v6lite\tests\test_batch28d_native_final_tp.py:350: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28d_native_final_tp.py::test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second
+1 failed, 1 warning in 57.37s

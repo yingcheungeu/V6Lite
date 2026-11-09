@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="20" skipped="0" tests="30" time="2.949" timestamp="2026-10-09T14:07:28.306538-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="" name="test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds" time="0.272"><failure message="AssertionError: assert 0.01 == 0.002&#10; +  where 0.01 = LiteConfig(mode='paper', account='DU0000001', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)).exit_limit_band_pct&#10; +    where LiteConfig(mode='paper', account='DU0000001', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)) = &lt;v6lite.tests.helpers.Rig object at 0x000001D555CDE350&gt;.cfg">..\red_specs\test_batch23_tp_evidence.py:293: in test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds
+    assert rig.cfg.exit_limit_band_pct == .002
+E   AssertionError: assert 0.01 == 0.002
+E    +  where 0.01 = LiteConfig(mode='paper', account='DU0000001', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)).exit_limit_band_pct
+E    +    where LiteConfig(mode='paper', account='DU0000001', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)) = &lt;v6lite.tests.helpers.Rig object at 0x000001D555CDE350&gt;.cfg</failure></testcase><testcase classname="" name="test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper.toml]" time="0.001"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper.toml'">..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper.toml'</failure></testcase><testcase classname="" name="test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_delayed.toml]" time="0.001"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper_delayed.toml'">..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper_delayed.toml'</failure></testcase><testcase classname="" name="test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_test.toml]" time="0.001"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper_test.toml'">..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper_test.toml'</failure></testcase><testcase classname="" name="test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_g3n.toml]" time="0.001"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper_g3n.toml'">..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper_g3n.toml'</failure></testcase><testcase classname="" name="test_B23_all_shipped_examples_use_0_2_percent_exit_band[live.toml]" time="0.001"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\live.toml'">..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\live.toml'</failure></testcase><testcase classname="" name="test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline" time="0.100"><failure message="AssertionError: assert 'WORKING' == 'PROTECT_CANCEL_PENDING'&#10;  &#10;  - PROTECT_CANCEL_PENDING&#10;  + WORKING">..\red_specs\test_batch23_tp_evidence.py:309: in test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline
+    assert row['state']=='PROTECT_CANCEL_PENDING'
+E   AssertionError: assert 'WORKING' == 'PROTECT_CANCEL_PENDING'
+E     
+E     - PROTECT_CANCEL_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule]" time="0.083"><failure message="AssertionError: assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\red_specs\test_batch23_tp_evidence.py:344: in test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price]" time="0.079"><failure message="AssertionError: assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\red_specs\test_batch23_tp_evidence.py:344: in test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot" time="0.079"><failure message="AssertionError: assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\red_specs\test_batch23_tp_evidence.py:362: in test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart" time="0.079"><failure message="AssertionError: assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\red_specs\test_batch23_tp_evidence.py:383: in test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart
+    rig,pid,req=scenario_tp_price_rejection(tmp_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:256: in scenario_tp_price_rejection
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.0-True]" time="0.077"><failure message="AssertionError: assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\red_specs\test_batch23_tp_evidence.py:415: in test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting
+    assert rig.store.protection(pid)['state']=='REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.01-False]" time="0.083" /><testcase classname="" name="test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[0.0-130.0]" time="0.078" /><testcase classname="" name="test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[-1.0-130.0]" time="0.077" /><testcase classname="" name="test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[130.0-129.0]" time="0.079" /><testcase classname="" name="test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send" time="0.072"><failure message="KeyError: 'v6l-protect-95009ae3857f4cf1a057'">..\red_specs\test_batch23_tp_evidence.py:440: in test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send
+    rig,pid,_=scenario_second_stale(tmp_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:285: in scenario_second_stale
+    rig.broker.confirm_protection_modify(ref)
+v6lite\broker\fake.py:255: in confirm_protection_modify
+    req = self.protection_pending_modifications.pop(intent_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'v6l-protect-95009ae3857f4cf1a057'</failure></testcase><testcase classname="" name="test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark" time="0.073"><failure message="KeyError: 'v6l-protect-3dd5e14837d24b4ea2e2'">..\red_specs\test_batch23_tp_evidence.py:463: in test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark
+    rig.broker.confirm_protection_modify(ref); _settle(rig)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\fake.py:255: in confirm_protection_modify
+    req = self.protection_pending_modifications.pop(intent_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'v6l-protect-3dd5e14837d24b4ea2e2'</failure></testcase><testcase classname="" name="test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[ENTRY]" time="0.019" /><testcase classname="" name="test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP1]" time="0.020" /><testcase classname="" name="test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP2]" time="0.020" /><testcase classname="" name="test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP3]" time="0.021" /><testcase classname="" name="test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[False]" time="0.020" /><testcase classname="" name="test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[True]" time="0.021" /><testcase classname="" name="test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working]" time="0.077"><failure message="AssertionError: assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\red_specs\test_batch23_tp_evidence.py:502: in test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap]" time="0.076"><failure message="AssertionError: assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\red_specs\test_batch23_tp_evidence.py:502: in test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap" time="0.090"><failure message="assert False&#10; +  where False = any(&lt;generator object test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001D575E642E0&gt;)">..\red_specs\test_batch23_tp_evidence.py:527: in test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap
+    assert any(e.get('aux_price')==trade.order.auxPrice and e.get('mkt_cap_price')==trade.orderStatus.mktCapPrice for e in all_audits)
+E   assert False
+E    +  where False = any(&lt;generator object test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001D575E642E0&gt;)</failure></testcase><testcase classname="" name="test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity" time="0.099"><failure message="assert False&#10; +  where False = all(&lt;generator object test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001D575E67060&gt;)">..\red_specs\test_batch23_tp_evidence.py:536: in test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity
+    assert all('GTC absent from complete working snapshot' not in body for _,body in cards)
+E   assert False
+E    +  where False = all(&lt;generator object test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001D575E67060&gt;)</failure></testcase><testcase classname="" name="test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference" time="0.078"><failure message="AssertionError: assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\red_specs\test_batch23_tp_evidence.py:545: in test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write" time="0.075"><failure message="assert (None is not None)">..\red_specs\test_batch23_tp_evidence.py:582: in test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write
+    _queue_tp(rig,pid)
+..\red_specs\test_batch23_tp_evidence.py:145: in _queue_tp
+    assert st is not None and st['status'] == 'PENDING'
+E   assert (None is not None)</failure></testcase></testsuite></testsuites>

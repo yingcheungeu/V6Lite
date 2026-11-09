@@ -1,0 +1,15 @@
+{
+  "red_artifact": "red_pacing_baseline23",
+  "baseline_code_sha": "a17d647ba28c51e4",
+  "baseline_production_unchanged": true,
+  "totals": {
+    "tests": 26,
+    "failures": 26,
+    "errors": 0,
+    "skipped": 0
+  },
+  "stdout_sha256": "02ae852590f0d918196ee08e6d516fe0c9dd0b064a70f4237a85a3551b502dd5",
+  "junit_sha256": "a42f86dc63b12acc53117510414573609c11c42fe974b71965c7fbf07f643de2",
+  "reviewer": "root",
+  "check": "PASS"
+}

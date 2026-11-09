@@ -1,0 +1,198 @@
+"""B30 NATIVE COMMISSION DRAFT: prepared, NOT RUN by investigation agent.
+
+No socket is opened. Installed ib_insync Wrapper/startReq/Client request
+methods and actual execDetailsEnd are retained. Only the synthetic transport
+and native broker reply schedule are controlled. No Future or End is forged.
+
+The maintenance integration cases reuse the sibling C:/tmp draft helper
+`test_batch30_commission_red._close_oct26`. When root integrates both drafts
+into v6lite/tests, update that import to the integrated helper module path.
+The planned production API is Engine._refresh_missing_commissions(now).
+There is no import of any new B30 product module.
+"""
+from __future__ import annotations
+
+from dataclasses import replace
+
+import pytest
+from ib_insync import CommissionReport, Execution, ExecutionFilter, Stock
+
+from v6lite.models import CommissionEvent
+from v6lite.tests.helpers import et, make_cfg
+from v6lite.tests.test_batch23_contracts import _no_network
+from v6lite.tests.test_batch25_restart import _native_server
+from v6lite.tests.test_batch24_pacing import _opcode
+
+
+class CommissionWire:
+    """Own-request native rows, followed by independently scheduled fees.
+
+    `orders=False` ensures these already-closed executions have no Trade.
+    Thus wrapper.commissionReport updates wrapper.fills but emits no event.
+    """
+    def __init__(self, tmp_path, monkeypatch, request, *, cfg=None, clock=None, fill=None):
+        cfg = cfg or make_cfg(tmp_path)
+        (self.adapter,self.clock,self.trace,self.wire,_,_,_) = _native_server(
+            tmp_path,monkeypatch,request,cfg=cfg,clock=clock,orders=False)
+        self.adapter.connect()
+        self.ib = self.adapter.ib
+        self.client,self.wrapper = self.ib.client,self.ib.wrapper
+        self.requests = []
+        if fill is None:
+            self.contract = Stock('AAPL','SMART','USD',conId=265598)
+            self.execution = Execution(execId='b30-native-closed.01.01',
+                time=self.clock.now(),acctNumber=cfg.account,exchange='NASDAQ',
+                side='SLD',shares=1.,price=344.72,permId=852061,
+                clientId=cfg.client_id,orderId=85206,orderRef='v6l-b30-native-closed')
+        else:
+            self.contract = Stock(fill.symbol,'SMART','USD',conId=fill.con_id)
+            self.execution = Execution(execId=fill.exec_id,time=fill.time,
+                acctNumber=cfg.account,exchange='NASDAQ',
+                side='SLD' if str(fill.side)=='SELL' else 'BOT',shares=fill.quantity,
+                price=fill.price,permId=fill.perm_id,clientId=cfg.client_id,
+                orderId=fill.broker_order_id,orderRef=fill.intent_id)
+        assert self.execution.permId not in self.wrapper.permId2Trade
+        self.native_notifications = []
+        self.ib.commissionReportEvent += self._observe_report_event
+        monkeypatch.setattr(self.ib,'reqExecutions',self._query)
+        self.adapter.drain_events()
+
+    def _observe_report_event(self,*args):
+        self.native_notifications.append(args)
+
+    def _query(self, filt=None):
+        req_id = self.client.getReqId()
+        future = self.wrapper.startReq(req_id)
+        self.client.reqExecutions(req_id,filt or ExecutionFilter())
+        self.adapter._b25_offline_drain()
+        self.requests.append((req_id,self.clock.now()))
+        self.trace.append(('b30','native-own-request',req_id))
+        assert not future.done(), 'server End has not arrived yet'
+        self.wrapper.lastTime = self.clock.now()
+        ex = self.execution
+        # Decode the actual inbound SDK execution row so adapter provenance
+        # records this request's raw row as well as its real matching End.
+        fields = ['11',str(req_id),str(ex.orderId),str(self.contract.conId),
+            self.contract.symbol,'STK','','0','','','SMART','USD',
+            self.contract.symbol,'NMS',ex.execId,
+            ex.time.strftime('%Y%m%d %H:%M:%S UTC'),ex.acctNumber,ex.exchange,
+            ex.side,str(ex.shares),str(ex.price),str(ex.permId),str(ex.clientId),
+            '0',str(ex.shares),str(ex.price),ex.orderRef,'','0','','1']
+        assert len(fields) == 31
+        self.client.decoder.interpret(fields)
+        assert not future.done(), 'row cannot complete the native Future'
+        self.wrapper.execDetailsEnd(req_id)
+        self.trace.append(('b30','native-own-End',req_id))
+        assert future.done(), 'only actual execDetailsEnd finishes this query'
+        return future.result()
+
+    def report(self, value=1.):
+        self.wrapper.commissionReport(CommissionReport(execId=self.execution.execId,
+            commission=value,currency='USD'))
+
+    def commission_events(self):
+        return [event for event in self.adapter.drain_events()
+                if isinstance(event,CommissionEvent)]
+
+    def assert_no_order_packets(self):
+        assert not [message for _,message in self.wire if _opcode(message) in {'3','4'}]
+        assert len([message for _,message in self.wire if _opcode(message)=='7']) == len(self.requests)
+        assert all(self.trace.index(('b30','native-own-request',rid)) <
+                   self.trace.index(('b30','native-own-End',rid)) for rid,_ in self.requests)
+
+
+def test_B30_native_End_before_late_commission_without_Trade_uses_canonical_next_query(
+        tmp_path,monkeypatch,request):
+    server = CommissionWire(tmp_path,monkeypatch,request)
+    [first] = server.adapter.executions_today()
+    assert first.exec_id == server.execution.execId and first.commission is None
+    canonical = server.wrapper.fills[first.exec_id]
+    assert canonical.commissionReport.execId == ''
+    assert server.native_notifications == [] and server.commission_events() == []
+    server.report(1.)
+    assert canonical.commissionReport.execId == first.exec_id
+    assert canonical.commissionReport.commission == 1.
+    assert server.native_notifications == [] and server.commission_events() == []
+    server.clock.advance(seconds=300)
+    [second] = server.adapter.executions_today()
+    assert second.exec_id == first.exec_id and second.commission == 1.
+    assert server.wrapper.fills[first.exec_id] is canonical
+    assert len(server.requests) == 2
+    assert (server.requests[1][1]-server.requests[0][1]).total_seconds() >= 300
+    server.assert_no_order_packets()
+
+
+def test_B30_native_commission_before_any_exec_is_not_mistaken_for_zero_fee(
+        tmp_path,monkeypatch,request):
+    server = CommissionWire(tmp_path,monkeypatch,request)
+    assert server.execution.execId not in server.wrapper.fills
+    server.report(1.)  # real SDK discards a report with no canonical Fill
+    assert server.execution.execId not in server.wrapper.fills
+    assert server.native_notifications == [] and server.commission_events() == []
+    [first] = server.adapter.executions_today()
+    assert first.commission is None
+    server.report(1.)  # a later broker report updates the now-known Fill
+    assert server.native_notifications == [] and server.commission_events() == []
+    server.clock.advance(seconds=300)
+    [second] = server.adapter.executions_today()
+    assert second.commission == 1. and second.exec_id == first.exec_id
+    server.assert_no_order_packets()
+
+
+@pytest.mark.parametrize('early_report',[False,True],ids=['End-before-fee','fee-before-first-exec'])
+def test_B30_native_300s_maintenance_repairs_only_known_closed_commission(
+        tmp_path,monkeypatch,request,early_report):
+    # Sibling draft import is deliberately local: adapter-only cases remain
+    # self-contained, and root can move both helpers without product imports.
+    from test_batch30_commission_red import _close_oct26
+    rig,pid,final = _close_oct26(tmp_path/'economic-book')
+    try:
+        server = CommissionWire(tmp_path/'native-read',monkeypatch,request,
+                                cfg=rig.cfg,clock=rig.clock,fill=final)
+        if early_report:
+            server.report(1.)
+            assert server.execution.execId not in server.wrapper.fills
+        before_fills = [tuple(row) for row in rig.store.conn.execute(
+            'SELECT exec_id,position_id,symbol,side,quantity,price,time,trading_day FROM fills ORDER BY exec_id')]
+        before_pos = dict(rig.store.position(pid))
+        before_controls = rig.store.controls_with_prefix('execution_time_')
+        before_until = rig.store.control('cooldown_until')
+        def writes():
+            return tuple(len(x) for x in (rig.broker.sent,rig.broker.sent_protections,
+                         rig.broker.modified_protections,rig.broker.cancels))
+        before_writes = writes()
+        rig.channel.messages.clear()
+        monkeypatch.setattr(rig.broker,'executions_today',server.adapter.executions_today)
+        rig.engine._refresh_missing_commissions(rig.clock.now())
+        assert len(server.requests) == 1
+        assert rig.store.conn.execute('SELECT 1 FROM commissions WHERE exec_id=?',
+                                      (final.exec_id,)).fetchone() is None
+        assert rig.store.position_net_pnl(pid) == pytest.approx(.83)
+        assert server.commission_events() == []
+        server.report(1.)  # native End has already happened; no event is emitted
+        assert server.native_notifications == [] and server.commission_events() == []
+        rig.advance(seconds=299)
+        rig.engine._refresh_missing_commissions(rig.clock.now())
+        assert len(server.requests) == 1, 'no second attempt before persistent 300s window'
+        rig.advance(seconds=1)
+        rig.engine._refresh_missing_commissions(rig.clock.now())
+        assert len(server.requests) == 2
+        assert (server.requests[1][1]-server.requests[0][1]).total_seconds() >= 300
+        assert rig.store.position_net_pnl(pid) == pytest.approx(-.17)
+        [commission] = rig.store.conn.execute('SELECT commission FROM commissions WHERE exec_id=?',
+                                             (final.exec_id,)).fetchone()
+        assert commission == 1.
+        after_fills = [tuple(row) for row in rig.store.conn.execute(
+            'SELECT exec_id,position_id,symbol,side,quantity,price,time,trading_day FROM fills ORDER BY exec_id')]
+        assert after_fills == before_fills
+        assert dict(rig.store.position(pid)) == before_pos
+        assert rig.store.controls_with_prefix('execution_time_') == before_controls
+        assert rig.store.control('cooldown_until') == before_until
+        assert writes() == before_writes
+        assert not rig.channel.messages, 'same-sign fee repair needs no remote card'
+        server.assert_no_order_packets()
+        rig.advance(seconds=300)
+        rig.engine._refresh_missing_commissions(rig.clock.now())
+        assert len(server.requests) == 2, 'fully reported fee must stop scheduled polling'
+    finally:
+        rig.alerter.close(); rig.store.close()

@@ -1,0 +1,90 @@
+FFFF...............................................F................F    [100%]
+================================== FAILURES ===================================
+_ test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one] _
+v6lite\tests\test_batch27_observation_audit.py:243: in test_B27_thirteen_hours_native_observations_are_bounded_and_counted
+    assert rig.store.protection(pid)["confirmed_at"] == rig.clock.now().isoformat()
+E   AssertionError: assert '2026-10-16T00:16:26+00:00' == '2026-10-16T00:16:28+00:00'
+E     
+E     - 2026-10-16T00:16:28+00:00
+E     ?                   ^
+E     + 2026-10-16T00:16:26+00:00
+E     ?                   ^
+_ test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten] _
+v6lite\tests\test_batch27_observation_audit.py:243: in test_B27_thirteen_hours_native_observations_are_bounded_and_counted
+    assert rig.store.protection(pid)["confirmed_at"] == rig.clock.now().isoformat()
+E   AssertionError: assert '2026-10-16T00:16:26+00:00' == '2026-10-16T00:16:28+00:00'
+E     
+E     - 2026-10-16T00:16:28+00:00
+E     ?                   ^
+E     + 2026-10-16T00:16:26+00:00
+E     ?                   ^
+_ test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one] _
+v6lite\tests\test_batch27_observation_audit.py:243: in test_B27_thirteen_hours_native_observations_are_bounded_and_counted
+    assert rig.store.protection(pid)["confirmed_at"] == rig.clock.now().isoformat()
+E   AssertionError: assert '2026-10-16T00:16:40+00:00' == '2026-10-16T00:16:42+00:00'
+E     
+E     - 2026-10-16T00:16:42+00:00
+E     ?                   ^
+E     + 2026-10-16T00:16:40+00:00
+E     ?                   ^
+_ test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten] _
+v6lite\tests\test_batch27_observation_audit.py:243: in test_B27_thirteen_hours_native_observations_are_bounded_and_counted
+    assert rig.store.protection(pid)["confirmed_at"] == rig.clock.now().isoformat()
+E   AssertionError: assert '2026-10-16T00:16:40+00:00' == '2026-10-16T00:16:42+00:00'
+E     
+E     - 2026-10-16T00:16:42+00:00
+E     ?                   ^
+E     + 2026-10-16T00:16:40+00:00
+E     ?                   ^
+_ test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical _
+v6lite\tests\test_batch27_daily_report_volume.py:153: in test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical
+    assert len(section.splitlines()) <= 200, ("ordinary Events lines", len(section.splitlines()))
+E   AssertionError: ('ordinary Events lines', 201)
+E   assert 201 <= 200
+E    +  where 201 = len(['', '', '| Kind | Count | First UTC | Last UTC |', '|---|---:|---|---|', '| ANOMALY | 3 | 2026-10-15T23:16:41+00:00 | 2026-10-15T23:16:43+00:00 |', '| SCAN | 1,000 | 2026-10-15T11:16:41+00:00 | 2026-10-15T11:33:20+00:00 |', ...])
+E    +    where ['', '', '| Kind | Count | First UTC | Last UTC |', '|---|---:|---|---|', '| ANOMALY | 3 | 2026-10-15T23:16:41+00:00 | 2026-10-15T23:16:43+00:00 |', '| SCAN | 1,000 | 2026-10-15T11:16:41+00:00 | 2026-10-15T11:33:20+00:00 |', ...] = <built-in method splitlines of str object at 0x0000023BB9FFB460>()
+E    +      where <built-in method splitlines of str object at 0x0000023BB9FFB460> = '\n\n| Kind | Count | First UTC | Last UTC |\n|---|---:|---|---|\n| ANOMALY | 3 | 2026-10-15T23:16:41+00:00 | 2026-10-...: "B27-ordinary-187"}\n- 11:19:49Z SCAN {"counter": 188, "marker": "B27-ordinary-188"}\n- 另有 811 条，完整记录在状态库 audit 表。\n'.splitlines
+___ test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression ____
+v6lite\tests\test_batch27_logging_volume.py:278: in test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression
+    adapter.ib.wrapper.error(555, 201, "synthetic native rejection account=" + adapter.cfg.account)
+E   TypeError: Wrapper.error() missing 1 required positional argument: 'advancedOrderRejectJson'
+---------------------------- Captured stdout call -----------------------------
+2026-10-18 08:26:17,809 INFO v6lite.ibkr [CONNECT_SNAPSHOT] openOrders End generation=1 count=1
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.ibkr:ibkr.py:391 [CONNECT_SNAPSHOT] openOrders End generation=1 count=1
+-------------------------- Captured stdout teardown ---------------------------
+2026-10-18 08:26:17,823 INFO v6lite.ibkr [QUERY_SUMMARY] {"channels": {"positions": {"count": 1, "drained": 0, "max_seconds": 0.0}}}
+---------------------------- Captured log teardown ----------------------------
+INFO     v6lite.ibkr:telemetry.py:54 [QUERY_SUMMARY] {"channels": {"positions": {"count": 1, "drained": 0, "max_seconds": 0.0}}}
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]
+v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]
+v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]
+v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]
+  v6lite\tests\test_batch27_observation_audit.py:194: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("holdings", [1, 10], ids=["one", "ten"])
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history
+  v6lite\tests\test_batch27_daily_report_volume.py:81: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear
+  v6lite\tests\test_batch27_daily_report_volume.py:126: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear(
+
+v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]
+v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]
+v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]
+v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]
+  v6lite\tests\test_batch27_logging_volume.py:115: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("holdings", [1, 10], ids=["one", "ten"])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]
+FAILED v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]
+FAILED v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]
+FAILED v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]
+FAILED v6lite/tests/test_batch27_daily_report_volume.py::test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical
+FAILED v6lite/tests/test_batch27_logging_volume.py::test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression
+6 failed, 63 passed, 10 warnings in 311.82s (0:05:11)

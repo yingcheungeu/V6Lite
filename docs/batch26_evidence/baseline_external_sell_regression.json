@@ -1,0 +1,66 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "baseline_external_sell_regression",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-14T22:24:27.024629-07:00",
+  "end_pt": "2026-10-14T22:24:28.461397-07:00",
+  "returncode": 0,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "ea71abe782e4cf68",
+  "source_unchanged": true,
+  "worktree_code_sha": "b1a099352f9adaad",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "b1a099352f9adaad99b77006c56235bf449d9938407c31394b83481e79627b5c",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_external_sell_regression.py",
+      "sha256": "9e759902a8b9f9844b894a5d3f08eff26738b4682f9b518508244481348332e1"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[same-engine]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[SQLite-reopen]",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "::test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[same-engine]",
+      "::test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[SQLite-reopen]"
+    ],
+    "executed": [
+      "::test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[same-engine]",
+      "::test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[SQLite-reopen]"
+    ]
+  },
+  "stdout_sha256": "3035c6d15cf72f816329db0a4de97aae01ed865a5f403abbb3b51459170fd6e0",
+  "junit_sha256": "7c312a8a73009e7a0ce70300941efd76dcd427aa6fbffcb53f2dfc22b9a0cbc5",
+  "inventory_sha256": "dc61ac9f6ba8a60ed77e4b6044c227ff5bb3a3a48a5ed57a2b8256b14f5b49af"
+}

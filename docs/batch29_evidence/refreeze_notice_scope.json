@@ -1,0 +1,32 @@
+{
+  "reason": "red_notice_scope_1 shows two real valid timeout claims within five minutes but only first reaches phone; scope delivery dedupe to exact request while retaining same-request dedupe",
+  "old_code_sha": "adfe89897bb2bbe0",
+  "old_package_sha256": "adfe89897bb2bbe0b0b059086a82bd5edd0f82a3035e643364322fa33c43a49a",
+  "old_inventory_sha256": "ee21c521982480945e0b700bebb90d86243863a318ede468f77a1b2ebc55b15a",
+  "old_freeze": "docs/batch29_evidence/freeze_prior_notice_scope.json",
+  "old_valid_full_receipts": [
+    "final_full_1",
+    "final_full_2"
+  ],
+  "old_full_not_final_delivery": true,
+  "archives": {
+    "v6lite/test_tp_timeout.py": {
+      "archive": "docs/batch29_evidence/prior_notice_scope_test_tp_timeout.py.txt",
+      "sha256": "08c46ebd5d7a2b6424d9168ef7cdd631d338b8f8b731ccb0a2ee260b8c8b4fda"
+    },
+    "v6lite/tests/test_batch29_faults.py": {
+      "archive": "docs/batch29_evidence/prior_notice_scope_faults.py.txt",
+      "sha256": "555cce66537f4995f2df1a1567a3dc8b8869f246d0bcf6274a46a9458ee7155b"
+    },
+    "docs/batch29_evidence/v6lite_b29_closeout.py": {
+      "archive": "docs/batch29_evidence/prior_notice_scope_closeout.py.txt",
+      "sha256": "4777515e50583987e899974cf679593e8703e4868f17d00aaf53cbe81ddca643"
+    }
+  },
+  "final_full_labels": [
+    "notice_fixed_full_1",
+    "notice_fixed_full_2",
+    "notice_fixed_full_3"
+  ],
+  "order_authority_unchanged": true
+}

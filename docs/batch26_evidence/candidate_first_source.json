@@ -1,0 +1,26 @@
+{
+  "phase": "first overnight candidate; before root baseline-edge red and candidate green",
+  "code_sha": "b6320521dd5bbd1e",
+  "package_sha256": "b6320521dd5bbd1e535476b43cb057a3343ac6987ffbcc86bf8f30a621f5b7cc",
+  "production_sha256": {
+    "v6lite/config.py": "06dd18b7d12ad959a9ff433f15c482f113f4994a12bc80c658a1337c1f1dfaf5",
+    "v6lite/engine.py": "5c3d896700afb4a1e88ca0595e57b6ce66e7dc81d645c0215d6af3a52ba822f7",
+    "v6lite/protection_engine.py": "f9af51a2120a32891e3632a925e66c7bb1afba2e26265f44593e97934048656a",
+    "v6lite/overnight_evidence.py": "e5d0b75b594d5da596afae52884080905b72b57b075d115920e13dfc12a14757",
+    "v6lite/tp_evidence.py": "17572b9e72e11d894429ef9d32e4caa34c35e29f21a46de471e13eb7cb57f479"
+  },
+  "examples_sha256": {
+    "v6lite/examples/live.toml": "43f2243df9d0e9a90a8b81110667c28dd8337cd893dd1d5eb4365aa516c869c8",
+    "v6lite/examples/paper.toml": "a1534d0716b244c971f930fdafc542b759d7a7dc7a0aa693f4f56d07bc0cb16a",
+    "v6lite/examples/paper_delayed.toml": "0613f7f991730c487998f77300b1f999b6bcf35595f6de8fc3a36c45e04490e6",
+    "v6lite/examples/paper_g3n.toml": "a497c2362e105899468e6c07bebaf993db077ed62cb72c2f471c86987249f4db",
+    "v6lite/examples/paper_test.toml": "58d7693b040c88286d716b6cfd30796310c6edb74cc3b020444512719d13be0f"
+  },
+  "spec_sha256": {
+    "v6lite/tests/test_batch26_overnight_evidence.py": "c0b66a415cae00bb0eaed24990300ee7b09b78baacb6631fe41d96bf12e9449c",
+    "v6lite/tests/test_batch26_review_edges.py": "1299a21aff567d5919c0cca6ab6e548810956abd61fa6538353c3da1c62e203b",
+    "v6lite/tests/test_batch26_shutdown_report.py": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93"
+  },
+  "sole_production_implementer": "/root/batch26_implement",
+  "no_candidate_tests_run_yet": true
+}

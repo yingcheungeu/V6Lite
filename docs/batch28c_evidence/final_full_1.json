@@ -1,0 +1,35 @@
+{
+  "label": "final_full_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:32:45.348314-07:00",
+  "end_pt": "2026-10-21T20:50:50.319598-07:00",
+  "seconds": 1084.969,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests",
+    "scripts/tests"
+  ],
+  "code_sha": "8bb49003b5fdc535",
+  "source_unchanged": true,
+  "inventory_sha256": "5e1065ec30214ca3aa332478f6bdfc774932330f463657355d325b53cb06b579",
+  "incomplete": false,
+  "tests": 2078,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 1,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_no_dependency_on_legacy_v6_package",
+      "kind": "failure",
+      "message": "  File \"<unknown>\", line 1\n    \ufeff\"\"\"B28c independent TP-fill/query races; native execution decoding, no sockets.\n    ^\nSyntaxError: invalid non-printable character U+FEFF"
+    },
+    {
+      "classname": "v6lite.tests.test_strategy_parity",
+      "name": "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "kind": "skipped",
+      "message": "legacy market_scanner.py not present"
+    }
+  ]
+}

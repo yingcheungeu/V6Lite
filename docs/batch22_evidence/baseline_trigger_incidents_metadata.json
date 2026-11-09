@@ -1,0 +1,16 @@
+{
+  "baseline": "v6lite-batch20",
+  "test_sha256": "a3c1ad8c925c53ce95577de7ee707093b98ff74468ed13cda66da7e30cc8db17",
+  "exit_code": 1,
+  "seconds": 2.25,
+  "suite": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "6",
+    "skipped": "0",
+    "tests": "6",
+    "time": "1.549",
+    "timestamp": "2026-10-08T22:48:42.723514-07:00",
+    "hostname": "DESKTOP-BF9GHJ8"
+  }
+}

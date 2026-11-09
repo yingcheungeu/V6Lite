@@ -1,0 +1,18 @@
+{
+  "baseline_code_sha": "a17d647ba28c51e4",
+  "totals": {
+    "tests": 6,
+    "failures": 4,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_unchanged": true,
+  "test_sha256": {
+    "v6lite/tests/test_batch24_pacing_lifecycle.py": "a19ceb6d19a0ffadbb60ea536db2c35defc2cab9459ea4bb6310532d7fadfa43"
+  },
+  "evidence_sha256": {
+    "red_pacing_lifecycle_baseline23.txt": "00d1a2c3a1d209abeec62bc8590a983637ad5ac9c4c9617625695d30e70576f9",
+    "red_pacing_lifecycle_baseline23.xml": "4f910f989d8673807d7a307439a5c439e2fc6357c3777d43d649d729b0f313da",
+    "red_pacing_lifecycle_baseline23_receipt.json": "415addde2133342352481cd52e20fd46e374ad806e74037b139015383428806f"
+  }
+}

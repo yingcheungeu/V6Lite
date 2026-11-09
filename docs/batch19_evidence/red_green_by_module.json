@@ -1,0 +1,64 @@
+{
+  "baseline_code_sha": "9725a81b8e5e3e11",
+  "final_code_sha": "6293dd4e2377603c",
+  "red": {
+    "test_batch19.py": {
+      "tests": 20,
+      "failed": 17,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 3
+    },
+    "test_batch19_funds.py": {
+      "tests": 35,
+      "failed": 27,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 8
+    },
+    "test_batch19_review_edges.py": {
+      "tests": 13,
+      "failed": 13,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 0
+    },
+    "test_batch19_protection_equivalents.py": {
+      "tests": 6,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 6
+    }
+  },
+  "green": {
+    "test_batch19.py": {
+      "tests": 20,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 20
+    },
+    "test_batch19_funds.py": {
+      "tests": 35,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 35
+    },
+    "test_batch19_review_edges.py": {
+      "tests": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 13
+    },
+    "test_batch19_protection_equivalents.py": {
+      "tests": 6,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 6
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "run": 1,
+    "start_pt": "2026-10-08T15:30:43.006917-07:00",
+    "end_pt": "2026-10-08T15:34:38.530343-07:00",
+    "exit_code": 1,
+    "code_sha_before": "d468566d1afcee3f",
+    "code_sha_after": "d468566d1afcee3f",
+    "tail": "7 failed, 1046 passed in 234.68s (0:03:54)"
+  }
+]

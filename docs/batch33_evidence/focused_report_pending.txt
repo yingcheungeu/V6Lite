@@ -1,0 +1,17 @@
+..............................F............                              [100%]
+================================== FAILURES ===================================
+____ test_B33_report_observes_workflow_start_for_preexisting_pending_stage ____
+v6lite\tests\test_batch33_open_delay.py:311: in test_B33_report_observes_workflow_start_for_preexisting_pending_stage
+    assert '实际开始 2026-10-29T13:30:30' in report and '尚未开始' not in report.split('## Opening TP deferrals')[1].split('## Commission')[0]
+E   assert ('实际开始 2026-10-29T13:30:30' in '# V6-Lite daily report 2026-10-29 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 704d6bc96b8df60..."position_id": "pos-8d5685b94b044c6a92f\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch33_open_delay.py::test_B33_oct29_real_overnight_replay
+  v6lite\tests\test_batch33_open_delay.py:74: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B33_oct29_real_overnight_replay(opening, record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_report_observes_workflow_start_for_preexisting_pending_stage
+1 failed, 42 passed, 1 warning in 6.32s

@@ -1,0 +1,352 @@
+........................................................................ [  4%]
+........................................................................ [  9%]
+........................................................................ [ 13%]
+........................................................................ [ 18%]
+...........................................................F............ [ 23%]
+........................................................................ [ 27%]
+........................................................................ [ 32%]
+...................FFFFFFFFFFFFFFF..F................................... [ 36%]
+........................................................................ [ 41%]
+........................................................................ [ 46%]
+........................................................................ [ 50%]
+........................................................................ [ 55%]
+........................................................................ [ 60%]
+........................................................................ [ 64%]
+........................................................................ [ 69%]
+........................................................................ [ 73%]
+........................................................................ [ 78%]
+........................................................................ [ 83%]
+....................................FFFFF...........F................... [ 87%]
+.......................................s................................ [ 92%]
+........................................................................ [ 97%]
+..............................................                           [100%]
+================================== FAILURES ===================================
+__ test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled __
+v6lite\tests\test_batch16_f6_steady_timeout.py:50: in test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled
+    assert len(pages) == 1, pages
+E   AssertionError: []
+E   assert 0 == 1
+E    +  where 0 = len([])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-0b6808c7b2774fdebfd2 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=1.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=13.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=59.0s cause=ProtectionEvidenceQueryError
+________ test_explicit_utc_query_is_not_polluted_by_bad_callback_clock ________
+v6lite\tests\test_batch20_execution_time.py:152: in test_explicit_utc_query_is_not_polluted_by_bad_callback_clock
+    query = _query(broker)
+            ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_ test_new_unverified_fill_confirms_exact_time_once_without_economic_rebooking _
+v6lite\tests\test_batch20_execution_time.py:170: in test_new_unverified_fill_confirms_exact_time_once_without_economic_rebooking
+    query = _query(broker)
+            ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+___ test_authoritative_query_first_then_bad_callback_never_regresses_clock ____
+v6lite\tests\test_batch20_execution_time.py:190: in test_authoritative_query_first_then_bad_callback_never_regresses_clock
+    query = _query(broker)
+            ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+___ test_time_marker_survives_restart_and_allows_only_new_fill_confirmation ___
+v6lite\tests\test_batch20_execution_time.py:223: in test_time_marker_survives_restart_and_allows_only_new_fill_confirmation
+    query = _query(restarted_broker)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+___ test_legacy_fill_without_marker_is_reviewed_once_and_never_auto_retimed ___
+v6lite\tests\test_batch20_execution_time.py:233: in test_legacy_fill_without_marker_is_reviewed_once_and_never_auto_retimed
+    correct = _query(broker)
+              ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_ test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes0] _
+v6lite\tests\test_batch20_execution_time.py:267: in test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed
+    query = replace(_query(broker), **changes)
+                    ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_ test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes1] _
+v6lite\tests\test_batch20_execution_time.py:267: in test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed
+    query = replace(_query(broker), **changes)
+                    ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_ test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes2] _
+v6lite\tests\test_batch20_execution_time.py:267: in test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed
+    query = replace(_query(broker), **changes)
+                    ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_ test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes3] _
+v6lite\tests\test_batch20_execution_time.py:267: in test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed
+    query = replace(_query(broker), **changes)
+                    ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_ test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes4] _
+v6lite\tests\test_batch20_execution_time.py:267: in test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed
+    query = replace(_query(broker), **changes)
+                    ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_ test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes5] _
+v6lite\tests\test_batch20_execution_time.py:267: in test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed
+    query = replace(_query(broker), **changes)
+                    ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_ test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes6] _
+v6lite\tests\test_batch20_execution_time.py:267: in test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed
+    query = replace(_query(broker), **changes)
+                    ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_ test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes7] _
+v6lite\tests\test_batch20_execution_time.py:267: in test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed
+    query = replace(_query(broker), **changes)
+                    ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+________ test_incomplete_execution_query_cannot_confirm_new_fill_clock ________
+v6lite\tests\test_batch20_execution_time.py:288: in test_incomplete_execution_query_cannot_confirm_new_fill_clock
+    broker.executions_today()
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_________ test_time_confirmation_never_moves_protection_gap_deadline __________
+v6lite\tests\test_batch20_execution_time.py:308: in test_time_confirmation_never_moves_protection_gap_deadline
+    store.record_fill(RECEIVED + timedelta(seconds=1), _query(broker), recovered=True)
+                                                       ^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_execution_time.py:80: in _query
+    events = broker.executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_____ test_verified_sell_time_recomputes_closed_at_without_reapplying_pnl _____
+v6lite\tests\test_batch20_execution_time.py:408: in test_verified_sell_time_recomputes_closed_at_without_reapplying_pnl
+    verified = broker.executions_today()[0]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1183: in executions_today
+    fills = self._complete_executions(ExecutionFilter(clientId=self.client_id,
+v6lite\broker\ibkr.py:1171: in _complete_executions
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+___ test_R4F1_late_end_of_a_timed_out_request_never_completes_the_next_one ____
+v6lite\tests\test_review_round5.py:106: in test_R4F1_late_end_of_a_timed_out_request_never_completes_the_next_one
+    assert broker._req_sent["positions"] == 1 and broker._req_ended["positions"] == 0
+E   assert (0 == 1)
+____ test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty ____
+v6lite\tests\test_review_round5.py:123: in test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty
+    broker.positions_fresh()                                   # never a [] that reads as "flat"
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:627: in positions_fresh
+    for p in self._clean_request("positions", self.ib.reqPositions):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:439: in _clean_request
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+
+During handling of the above exception, another exception occurred:
+v6lite\tests\test_review_round5.py:122: in test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty
+    with pytest.raises(BrokerError, match="not ended"):
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'not ended'
+E     Actual message: 'query socket disconnected; evidence unavailable'
+________________ test_R4F1_open_orders_channel_is_guarded_too _________________
+v6lite\tests\test_review_round5.py:135: in test_R4F1_open_orders_channel_is_guarded_too
+    broker.open_orders()
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:439: in _clean_request
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+
+During handling of the above exception, another exception occurred:
+v6lite\tests\test_review_round5.py:134: in test_R4F1_open_orders_channel_is_guarded_too
+    with pytest.raises(BrokerError, match="not ended"):
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'not ended'
+E     Actual message: 'query socket disconnected; evidence unavailable'
+__________ test_R4F1_a_channel_stuck_too_long_renews_the_connection ___________
+v6lite\tests\test_review_round5.py:148: in test_R4F1_a_channel_stuck_too_long_renews_the_connection
+    broker.positions_fresh()
+v6lite\broker\ibkr.py:627: in positions_fresh
+    for p in self._clean_request("positions", self.ib.reqPositions):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:439: in _clean_request
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+
+During handling of the above exception, another exception occurred:
+v6lite\tests\test_review_round5.py:147: in test_R4F1_a_channel_stuck_too_long_renews_the_connection
+    with pytest.raises(BrokerError, match="renewed"):
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'renewed'
+E     Actual message: 'query socket disconnected; evidence unavailable'
+______ test_R4F1_streamed_update_inside_a_request_does_not_double_count _______
+v6lite\tests\test_review_round5.py:159: in test_R4F1_streamed_update_inside_a_request_does_not_double_count
+    assert [(p.symbol, p.quantity) for p in broker.positions_fresh()] == [("AAPL", 18.0)]
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:627: in positions_fresh
+    for p in self._clean_request("positions", self.ib.reqPositions):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:439: in _clean_request
+    self._assert_query_generation(generation, ib)
+v6lite\broker\ibkr.py:400: in _assert_query_generation
+    raise BrokerError("query socket disconnected; evidence unavailable")
+E   v6lite.broker.base.BrokerError: query socket disconnected; evidence unavailable
+_________________ test_cancel_lookup_uses_the_guarded_channel _________________
+v6lite\tests\test_review_round5_selfreview.py:216: in test_cancel_lookup_uses_the_guarded_channel
+    assert broker._req_sent["openOrders"] == 1 and broker._req_ended["openOrders"] == 0
+E   assert (0 == 1)
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled
+FAILED v6lite/tests/test_batch20_execution_time.py::test_explicit_utc_query_is_not_polluted_by_bad_callback_clock
+FAILED v6lite/tests/test_batch20_execution_time.py::test_new_unverified_fill_confirms_exact_time_once_without_economic_rebooking
+FAILED v6lite/tests/test_batch20_execution_time.py::test_authoritative_query_first_then_bad_callback_never_regresses_clock
+FAILED v6lite/tests/test_batch20_execution_time.py::test_time_marker_survives_restart_and_allows_only_new_fill_confirmation
+FAILED v6lite/tests/test_batch20_execution_time.py::test_legacy_fill_without_marker_is_reviewed_once_and_never_auto_retimed
+FAILED v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes0]
+FAILED v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes1]
+FAILED v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes2]
+FAILED v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes3]
+FAILED v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes4]
+FAILED v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes5]
+FAILED v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes6]
+FAILED v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes7]
+FAILED v6lite/tests/test_batch20_execution_time.py::test_incomplete_execution_query_cannot_confirm_new_fill_clock
+FAILED v6lite/tests/test_batch20_execution_time.py::test_time_confirmation_never_moves_protection_gap_deadline
+FAILED v6lite/tests/test_batch20_execution_time.py::test_verified_sell_time_recomputes_closed_at_without_reapplying_pnl
+FAILED v6lite/tests/test_review_round5.py::test_R4F1_late_end_of_a_timed_out_request_never_completes_the_next_one
+FAILED v6lite/tests/test_review_round5.py::test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty
+FAILED v6lite/tests/test_review_round5.py::test_R4F1_open_orders_channel_is_guarded_too
+FAILED v6lite/tests/test_review_round5.py::test_R4F1_a_channel_stuck_too_long_renews_the_connection
+FAILED v6lite/tests/test_review_round5.py::test_R4F1_streamed_update_inside_a_request_does_not_double_count
+FAILED v6lite/tests/test_review_round5_selfreview.py::test_cancel_lookup_uses_the_guarded_channel
+23 failed, 1534 passed, 1 skipped in 328.37s (0:05:28)

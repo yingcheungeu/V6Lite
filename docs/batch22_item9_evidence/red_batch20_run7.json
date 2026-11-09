@@ -1,0 +1,224 @@
+{
+  "label": "red_batch20_run7",
+  "start_pt": "2026-10-09T08:34:28.160136-07:00",
+  "end_pt": "2026-10-09T08:34:34.526064-07:00",
+  "returncode": 1,
+  "source_code_sha": "cfe16edd7a7e4d7f",
+  "source_unchanged": true,
+  "spec_sha256": "5feb74e05e0b0bb40a14548cfd1cf36a64b7c546bdbde182cf05307d59fc585a",
+  "totals": {
+    "tests": 41,
+    "failures": 24,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Inactive]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Inactive]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Inactive]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert False\n +  where False = any(<generator object test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three.<locals>.<genexpr> at 0x000002104836D990>)"
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Inactive]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert False\n +  where False = any(<generator object test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three.<locals>.<genexpr> at 0x000002104836DC60>)"
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[metadata_cleared]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[prices_reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[201]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert False\n +  where False = any(<generator object test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card.<locals>.<genexpr> at 0x0000021048353D80>)"
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[202]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert False\n +  where False = any(<generator object test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card.<locals>.<genexpr> at 0x0000021048328AC0>)"
+    },
+    {
+      "name": "test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute",
+      "outcome": "failure",
+      "message": "AssertionError: same broker-cancellation incident must not downgrade into a 30-minute P1 reminder\nassert [('#x1F7E0 P1 · 仍未解...成交三项证据后再决定。')] == []\n  \n  Left contains one more item: ('#x1F7E0 P1 · 仍未解决 · 保护单状态无法核实', '#x1F7E0 P1 · 仍未解决 · 保护单状态无法核实\\n发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护...t\\n影响：保护订单身份或状态未知，未保护 待核实 股仍须券商核实。\\n你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')\n  Use -v to get more diff"
+    },
+    {
+      "name": "test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[auxPrice]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_planned_final_share_cancel_202_normal_reason_keeps_real_L7_TP_flow",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[positions]",
+      "outcome": "failure",
+      "message": "AssertionError: ('after complete three-source proof the cancelled protection must report accurate coverage', [])\nassert False\n +  where False = any(<generator object test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence.<locals>.<genexpr> at 0x000002104836ED40>)"
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[executions]",
+      "outcome": "failure",
+      "message": "AssertionError: ('after complete three-source proof the cancelled protection must report accurate coverage', [])\nassert False\n +  where False = any(<generator object test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence.<locals>.<genexpr> at 0x0000021048226D40>)"
+    },
+    {
+      "name": "test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps",
+      "outcome": "failure",
+      "message": "assert []"
+    },
+    {
+      "name": "test_B22_item9_reason_above_nine_hundred_UTF16_units_is_exact_in_remote_embed_segments",
+      "outcome": "failure",
+      "message": "AssertionError: a >900 UTF16 reason must be visible across multiple real remote cards\nassert 0 >= 2\n +  where 0 = len([])"
+    },
+    {
+      "name": "test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[first-card-failed]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 1 >= 2\n +  where 1 = len([{'color': 15158332, 'fields': [{'inline': False, 'name': '发生了什么', 'value': 'AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0...'value': '1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。'}], 'title': '#x1F534 P0 · 保护单状态无法核实'}])\n +    where [{'color': 15158332, 'fields': [{'inline': False, 'name': '发生了什么', 'value': 'AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0...'value': '1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。'}], 'title': '#x1F534 P0 · 保护单状态无法核实'}] = <Users.yu-ch.AppData.Local.Temp.v6lite_b22_item9_2y3mid70.spec_item9._CardMemory object at 0x000002104827D4D0>.attempts"
+    },
+    {
+      "name": "test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[primary-ACK-reason-part-failed]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 1 >= 2\n +  where 1 = len([{'color': 15158332, 'fields': [{'inline': False, 'name': '发生了什么', 'value': 'AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0...'value': '1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。'}], 'title': '#x1F534 P0 · 保护单状态无法核实'}])\n +    where [{'color': 15158332, 'fields': [{'inline': False, 'name': '发生了什么', 'value': 'AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0...'value': '1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。'}], 'title': '#x1F534 P0 · 保护单状态无法核实'}] = <Users.yu-ch.AppData.Local.Temp.v6lite_b22_item9_2y3mid70.spec_item9._CardMemory object at 0x00000210484480D0>.attempts"
+    },
+    {
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-202-Order canceled by system: synthetic rule]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Inactive-0-Broker has cancelled the protective order]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-10147-Synthetic broker terminal reason outside 201 and 202]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-cleared-fields]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-zero-permId]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_failed_reason_part_then_real_external_SELL_has_independent_remote_provenance",
+      "outcome": "failure",
+      "message": "assert ([])"
+    },
+    {
+      "name": "test_B22_item9_real_complete_working_recovery_retires_terminal_suppression_before_new_crossing",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "stdout_sha256": "e338ce98f1a39db812534cb3dcab81bed4c0bf38b74649e0559c2b7112a67bdf",
+  "junit_sha256": "76fb9c02c8fd8d66b121c2d59db90947770fac4cbb9081b40518e096d6712bef"
+}

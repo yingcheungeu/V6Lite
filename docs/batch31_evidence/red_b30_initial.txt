@@ -1,0 +1,112 @@
+EEEEEEEEFFF                                                              [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+v6lite\tests\test_batch28b_overnight_refresh.py:54: in overnight_run
+    def make(*, entry_day=ENTRY_DAY, tp_day=TP_DAY, entry_price=entry_price,
+                                                                ^^^^^^^^^^^
+E   NameError: name 'entry_price' is not defined
+_ ERROR at setup of test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+v6lite\tests\test_batch28b_overnight_refresh.py:54: in overnight_run
+    def make(*, entry_day=ENTRY_DAY, tp_day=TP_DAY, entry_price=entry_price,
+                                                                ^^^^^^^^^^^
+E   NameError: name 'entry_price' is not defined
+_ ERROR at setup of test_B31_old_confirmed_price_waits_without_freeze_or_P0[20] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+v6lite\tests\test_batch28b_overnight_refresh.py:54: in overnight_run
+    def make(*, entry_day=ENTRY_DAY, tp_day=TP_DAY, entry_price=entry_price,
+                                                                ^^^^^^^^^^^
+E   NameError: name 'entry_price' is not defined
+_ ERROR at setup of test_B31_old_confirmed_price_waits_without_freeze_or_P0[40] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+v6lite\tests\test_batch28b_overnight_refresh.py:54: in overnight_run
+    def make(*, entry_day=ENTRY_DAY, tp_day=TP_DAY, entry_price=entry_price,
+                                                                ^^^^^^^^^^^
+E   NameError: name 'entry_price' is not defined
+_ ERROR at setup of test_B31_real_contradiction_retains_STP_and_freezes[aux] __
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+v6lite\tests\test_batch28b_overnight_refresh.py:54: in overnight_run
+    def make(*, entry_day=ENTRY_DAY, tp_day=TP_DAY, entry_price=entry_price,
+                                                                ^^^^^^^^^^^
+E   NameError: name 'entry_price' is not defined
+_ ERROR at setup of test_B31_real_contradiction_retains_STP_and_freezes[quantity] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+v6lite\tests\test_batch28b_overnight_refresh.py:54: in overnight_run
+    def make(*, entry_day=ENTRY_DAY, tp_day=TP_DAY, entry_price=entry_price,
+                                                                ^^^^^^^^^^^
+E   NameError: name 'entry_price' is not defined
+_ ERROR at setup of test_B31_real_contradiction_retains_STP_and_freezes[permId] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+v6lite\tests\test_batch28b_overnight_refresh.py:54: in overnight_run
+    def make(*, entry_day=ENTRY_DAY, tp_day=TP_DAY, entry_price=entry_price,
+                                                                ^^^^^^^^^^^
+E   NameError: name 'entry_price' is not defined
+_ ERROR at setup of test_B31_restart_pending_uses_owned_complete_round_then_TP2 _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+v6lite\tests\test_batch28b_overnight_refresh.py:54: in overnight_run
+    def make(*, entry_day=ENTRY_DAY, tp_day=TP_DAY, entry_price=entry_price,
+                                                                ^^^^^^^^^^^
+E   NameError: name 'entry_price' is not defined
+================================== FAILURES ===================================
+_____ test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009] ______
+v6lite\tests\test_batch31_close_card.py:13: in test_B31_close_waits_for_final_fee_or_three_second_estimate
+    assert cards(rig)==[]
+E   AssertionError: assert ['🟢 持仓已关闭\n标的...，已触发冷却不自动解除。'] == []
+E     
+E     Left contains one more item: '🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-929a99a0e0034127abc6；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。'
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-929a99a0e0034127abc6；净值 -0.17 USD；含估算佣金 1.00 USD
+______ test_B31_close_waits_for_final_fee_or_three_second_estimate[None] ______
+v6lite\tests\test_batch31_close_card.py:13: in test_B31_close_waits_for_final_fee_or_three_second_estimate
+    assert cards(rig)==[]
+E   AssertionError: assert ['🟢 持仓已关闭\n标的...，已触发冷却不自动解除。'] == []
+E     
+E     Left contains one more item: '🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-4486546f88ee4ff98a45；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。'
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-4486546f88ee4ff98a45；净值 -0.17 USD；含估算佣金 1.00 USD
+_____________ test_B31_unrelated_commission_does_not_release_wait _____________
+v6lite\tests\test_batch31_close_card.py:36: in test_B31_unrelated_commission_does_not_release_wait
+    assert not cards(rig)
+E   AssertionError: assert not ['🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-1df49a5c25614a5ba9fd；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。']
+E    +  where ['🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-1df49a5c25614a5ba9fd；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。'] = cards(<v6lite.tests.helpers.Rig object at 0x0000015B28E20990>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-1df49a5c25614a5ba9fd；净值 -0.17 USD；含估算佣金 1.00 USD
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+  v6lite\tests\test_batch31_close_card.py:9: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('arrival',[.009,None])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_unrelated_commission_does_not_release_wait
+ERROR v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+ERROR v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+ERROR v6lite/tests/test_batch31_overnight.py::test_B31_old_confirmed_price_waits_without_freeze_or_P0[20]
+ERROR v6lite/tests/test_batch31_overnight.py::test_B31_old_confirmed_price_waits_without_freeze_or_P0[40]
+ERROR v6lite/tests/test_batch31_overnight.py::test_B31_real_contradiction_retains_STP_and_freezes[aux]
+ERROR v6lite/tests/test_batch31_overnight.py::test_B31_real_contradiction_retains_STP_and_freezes[quantity]
+ERROR v6lite/tests/test_batch31_overnight.py::test_B31_real_contradiction_retains_STP_and_freezes[permId]
+ERROR v6lite/tests/test_batch31_overnight.py::test_B31_restart_pending_uses_owned_complete_round_then_TP2
+3 failed, 2 warnings, 8 errors in 2.81s

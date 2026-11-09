@@ -1,0 +1,14 @@
+{
+  "candidate_code_sha": "61a190db8bf2e7cc",
+  "totals": {
+    "tests": 243,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "failed_case": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+  "finding": "Default freeze is normal policy; healthy quiet takeover has no TP/BE denied action and must retain original B25 no-P0/P1 contract. Explain once upon actual denied TP/BE, not immediately at healthy startup. Constraint evidence failure still explains immediately.",
+  "original_85_tests": "must remain byte identical",
+  "independent_review": "/root/b26_review confirmed original regression and policy-test timing refinement, not a waiver",
+  "receipt_sha256": "05a4f67a43034e24ff777e783e813ed97c205c03772438f14d06fbbfd1fbeb92"
+}

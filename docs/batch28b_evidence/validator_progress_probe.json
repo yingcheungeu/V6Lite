@@ -1,0 +1,21 @@
+{
+  "label": "validator_progress_probe",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T09:33:55.903438-07:00",
+  "end_pt": "2026-10-21T09:33:58.695453-07:00",
+  "seconds": 2.797,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch28b_refresh_edges.py"
+  ],
+  "code_sha": "3edad37f5f36037b",
+  "source_unchanged": true,
+  "inventory_sha256": "a555834391c4e0b59577a6ee81cb84332f6f92ae72eb492c1dbebcec8e6deb21",
+  "incomplete": false,
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

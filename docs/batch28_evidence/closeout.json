@@ -1,0 +1,45 @@
+{
+  "scope": "batch28 section2 plus inherited accepted batch28a",
+  "baseline_commit": "a1ed23fc24d5757eed238502e2f19789ba698df7",
+  "intended_tag": "v6lite-batch28",
+  "code_sha": "c8ac27d8026b39c7",
+  "package_sha256": "c8ac27d8026b39c7b201dc37148f0ce3fa6eccfed46973e79501af7a221a0069",
+  "consecutive_full_runs": 3,
+  "same_inventory": true,
+  "serial_runs": true,
+  "source_unchanged": true,
+  "results": [
+    {
+      "label": "final_full_1",
+      "tests": 2003,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 1,
+      "start_pt": "2026-10-20T19:57:50.399980-07:00",
+      "end_pt": "2026-10-20T20:11:32.402125-07:00"
+    },
+    {
+      "label": "final_full_2",
+      "tests": 2003,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 1,
+      "start_pt": "2026-10-20T20:11:32.634590-07:00",
+      "end_pt": "2026-10-20T20:25:47.529973-07:00"
+    },
+    {
+      "label": "final_full_3",
+      "tests": 2003,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 1,
+      "start_pt": "2026-10-20T20:25:47.757663-07:00",
+      "end_pt": "2026-10-20T20:39:37.905042-07:00"
+    }
+  ],
+  "operator_manual_staged": false,
+  "accepted_28a_report_preserved": true,
+  "manifest_sha256": "d7d3104389245027354a758a9d6e84ee378e3a5da5fa8b8a20e6bbc8ed645064",
+  "merge_or_push_or_deployment": false,
+  "post_commit_check": "Verify local annotated tag archive against package_sha256; commit identity is supplied by git, not embedded recursively in this file."
+}

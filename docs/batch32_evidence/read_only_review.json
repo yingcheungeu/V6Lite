@@ -1,0 +1,66 @@
+{
+  "reviewers": [
+    "batch32_snapshot_investigation",
+    "batch32_opening_release_investigation"
+  ],
+  "reviews_read_only": true,
+  "tests_run_by_reviewers": false,
+  "single_production_implementer": "root",
+  "source_hashes": {
+    "v6lite/broker/open_orders.py": "6c406d963920b236846e844f27853df901b4f8ab2aa3818af6f3e2b096de9f13",
+    "v6lite/broker/ibkr.py": "44591cffb6c854650bd69fa89a912ba2783e211efd03ace2a4f5031c5ee3020b",
+    "v6lite/models.py": "eb2c36378ec51bb63748144bab7fffde16f115da58c1165bd5b114ab6791143b",
+    "v6lite/engine.py": "4985a04ac41266905ccd762e2ab1e8682234176331b045b791d78a60697a52c2"
+  },
+  "focused_receipt": "focused_matrix_1",
+  "focused_passed": 467,
+  "code_sha": "5bcb047fb58259d0",
+  "no_blocking_findings_in_reviewed_scope": true,
+  "resolved_findings": [
+    "Original quantity preserved and finite integer checked, including bad3 -> bad1",
+    "Exact numeric canonical does not use float or Decimal context rounding",
+    "Mutable SDK duplicate aliases without raw preservation rejected",
+    "All known symbols frozen; permId/orderId/ref binding; unbound component raises anomaly",
+    "Duplicate event is audit-only and uses bounded 256 RAM cache, no permanent per-query control growth",
+    "Release card shared by RELEASED/CLOSED branches; operator free text remains local; no extra broker action"
+  ],
+  "limits": [
+    "Snapshot reviewer could not independently run git diff due sandbox metadata error; root checked full Git change scope",
+    "Reviewers inspected receipts but did not run tests",
+    "No broker-environment validation",
+    "10/29 confirms three equal recorded rows, not exact callback roles/spacing",
+    "10/27 duplicate cause remains inference"
+  ],
+  "opening_TP_proposal_only": true,
+  "addendum_A_review": {
+    "saved_at_utc": "2026-10-29T20:27:00.294289+00:00",
+    "review_mode": "read-only static review; production implementation only by primary agent; serial tests by primary",
+    "findings_and_resolution": [
+      {
+        "finding": "SDK interpret swallows completed row decode failures",
+        "resolution": "instance handlers[101] guard marks round incomplete and requires decoder/capture counts equal"
+      },
+      {
+        "finding": "SDK datetime parser truncates unknown suffixes and ambiguous naive clocks",
+        "resolution": "exact full-string formats, explicit zone, DST round-trip uniqueness"
+      },
+      {
+        "finding": "post-SDK float projection can hide raw precision/tail differences",
+        "resolution": "complete native101 tokens in duplicate signature; pre-parse exact Decimal quantities/aux capture"
+      },
+      {
+        "finding": "wrong snapshot type could escape as AttributeError",
+        "resolution": "explicit CompletedOrdersSnapshot type refusal before field access"
+      },
+      {
+        "finding": "staged proof must not write CANCEL_SEEN and must share release transaction",
+        "resolution": "RAM proof plus full-row CAS, proof audit in existing final transaction; rollback tested before and after proof audit"
+      }
+    ],
+    "reviewer_limitations": "secondary agents provided targeted static findings; their later turns hit account usage limits. Primary agent applied and verified the fixes and owns final review.",
+    "online_unknown_status": "No new UNKNOWN bypass/resolve-intent rewrite; no-hold and previously confirmed exact binding plus all seven native terminal predicates are required for this specifically authorized release path.",
+    "final_focused_label": "focused_addendum_final_2",
+    "verified_code_sha": "5e94c5d34a138e7d",
+    "verified_focused_passed": 604
+  }
+}

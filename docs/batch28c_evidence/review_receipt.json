@@ -1,0 +1,50 @@
+{
+  "root_is_sole_production_editor": true,
+  "parallel_agents_read_only_final_reviews": true,
+  "original_spec_assertions_unchanged": true,
+  "old_spec_encoding_only_changes": [
+    {
+      "path": "v6lite/tests/test_batch28c_fill_race.py",
+      "before_sha256": "cd73882282fa292ce0ba6c93dd5b4704422dfbf71ec9d870520e73e87948c388",
+      "after_sha256": "7fdb900e968c4cccab300c42da60ad40d9a18d2bfc3a3741246760eddef74183",
+      "change": "remove UTF-8 BOM only; all test source/assertions unchanged"
+    },
+    {
+      "path": "v6lite/tests/test_batch28c_native_edges.py",
+      "before_sha256": "fc22057c04cbbd7ebd1209e5964e738cb01046c159ef8b111b08e98d24f80a54",
+      "after_sha256": "d83003420cbe28f14afa520f02d5c29da39fe49da7d53ae18516f2854a0560c0",
+      "change": "remove UTF-8 BOM only; all test source/assertions unchanged"
+    },
+    {
+      "path": "v6lite/tests/test_batch28c_native_latency.py",
+      "before_sha256": "1d5e42bd749993e89b19c79977af5d72c4315de41e8757bec83c3c4599f95ef7",
+      "after_sha256": "2116a72ff3f53881703eb2d53cd6c8619a4e76d498d5efd1700f1b8191b19ef5",
+      "change": "remove UTF-8 BOM only; all test source/assertions unchanged"
+    }
+  ],
+  "raw_generation_isolation": {
+    "red": "red_final_review",
+    "fix": "installation-bound socket/owner guards before SDK mutation; reinstall without wrapper stacking"
+  },
+  "ACK_collection": {
+    "red_control": "red_pair_window_calibrated",
+    "old_window_ACK_to_wire_seconds": 4.234,
+    "native_timer_calibration": "First assertions used theoretical .40s cutoff; corrected to actual callback time and explicit .30s ordinary pass.",
+    "deadline_red": "red_review_deadline",
+    "fix": "Shared bounded first-component/request/proof deadlines at ordinary and callback entry; duplicates cannot extend."
+  },
+  "generic_P0": {
+    "red": "red_final_review",
+    "additional_red": "red_review_deadline",
+    "fix": "Only exact own GTC delta with unique original STP can supersede stale P; independent unknown BUY/SELL/missing/duplicate STP remains Contradiction/P0."
+  },
+  "full_failure": {
+    "receipt": "final_full_1",
+    "reason": "UTF-8 BOM rejected by pre-existing AST dependency check",
+    "retained": true,
+    "counts_toward_final_three": false,
+    "classification": "test source encoding regression, not a timing flake"
+  },
+  "failed_attempts_overwritten": false,
+  "timing_flake_waivers": []
+}

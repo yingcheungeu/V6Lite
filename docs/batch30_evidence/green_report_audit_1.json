@@ -1,0 +1,32 @@
+{
+  "label": "green_report_audit_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-26T15:18:30.372017-07:00",
+  "end_pt": "2026-10-26T15:18:56.955127-07:00",
+  "seconds": 26.593,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch30_report_audit.py"
+  ],
+  "code_sha": "b07e2294d5d76cdc",
+  "source_unchanged": true,
+  "inventory_sha256": "58d29d13509f2080b3d56c52de001e4284befd75b3d2ed27efbb4abd2b5d2646",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "37d6e9bd41a2a0bd5e1feb6d65d395031713e33ba974e34150cb585fd6240025",
+  "XML_sha256_before_masking": "72c4d9b87261f1577e329284f493b8b7d0cd50a0980c77daa70352e636630b95",
+  "delivered_log_sha256": "17f47126bad2a9caf68dbd63858d10ee7f4d35747f3709abea6639ddd7e22a45",
+  "delivered_XML_sha256": "72c4d9b87261f1577e329284f493b8b7d0cd50a0980c77daa70352e636630b95",
+  "tests": 7,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch30_report_audit",
+      "name": "test_B30_lost_send_control_recovers_exact_immutable_send_bid",
+      "kind": "failure",
+      "message": "assert '\u6210\u4ea4\u76f8\u5bf9 bid=+0.0700 USD/\u80a1' in '- \u5238\u5546\u7aef\u4fdd\u62a4: AAPL \u622a\u81f3 2026-10-06T14:01:32+00:00 \u6700\u8fd1\u4e00\u6b21\u5238\u5546\u5feb\u7167\u786e\u8ba4\uff0c\u5f53\u524d\u4ecd\u9700\u6838\u5b9e\uff0c\u672c\u5730\u72b6\u6001=WORKING P=2 S=2 \u7c7b\u578b=STP \u6b62\u635f\u4ef7\uff08\u89e6\u53d1\u540e\u5e02\u4ef7\u6210\u4ea4\uff09=113.53 orderId=...rRef=v6l-ef95a8aa83a240479aec execId=0000fa4e.00000002.01.01 \u6570\u91cf=1 \u6210\u4ea4\u4ef7=114.31 \u53d1\u9001\u65f6 bid=\u672a\u77e5 \u6210\u4ea4\u76f8\u5bf9 bid=\u672a\u77e5\uff08\u53d1\u9001\u5feb\u7167\u7f3a\u5931\uff09 B\u7a7a\u7a97=0.000s'\n +  where '- \u5238\u5546\u7aef\u4fdd\u62a4: AAPL \u622a\u81f3 2026-10-06T14:01:32+00:00 \u6700\u8fd1\u4e00\u6b21\u5238\u5546\u5feb\u7167\u786e\u8ba4\uff0c\u5f53\u524d\u4ecd\u9700\u6838\u5b9e\uff0c\u672c\u5730\u72b6\u6001=WORKING P=2 S=2 \u7c7b\u578b=STP \u6b62\u635f\u4ef7\uff08\u89e6\u53d1\u540e\u5e02\u4ef7\u6210\u4ea4\uff09=113.53 orderId=...rRef=v6l-ef95a8aa83a240479aec execId=0000fa4e.00000002.01.01 \u6570\u91cf=1 \u6210\u4ea4\u4ef7=114.31 \u53d1\u9001\u65f6 bid=\u672a\u77e5 \u6210\u4ea4\u76f8\u5bf9 bid=\u672a\u77e5\uff08\u53d1\u9001\u5feb\u7167\u7f3a\u5931\uff09 B\u7a7a\u7a97=0.000s' = _report_tp_line('# V6-Lite daily report 2026-10-06 (paper) TEST\\n\\n- account: DU******001   state role: test\\n- code_sha: b07e2294d5d7...pending_trigger\": null, \"position_id\": \\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n', '0000fa4e.00000002.01.01')\n +    where '0000fa4e.00000002.01.01' = FillEvent(exec_id='0000fa4e.00000002.01.01', intent_id='v6l-ef95a8aa83a240479aec', symbol='AAPL', side=<Side.SELL: 'SE...broker_order_id=1003, perm_id=51003, commission=1.0, time_source='', time_uncertain=False, con_id=10000, raw_time=None).exec_id"
+    }
+  ]
+}

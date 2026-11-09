@@ -1,0 +1,8 @@
+{
+  "excluded_from_product_red": [
+    "red_batch20.json",
+    "red_batch22.json"
+  ],
+  "reason": "Global socket.connect guard blocked Windows asyncio socketpair initialization; 29 deterministic fixture failures on each baseline, not product regression evidence.",
+  "production_unchanged": true
+}

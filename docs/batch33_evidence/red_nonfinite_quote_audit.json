@@ -1,0 +1,63 @@
+{
+  "dependencies": {
+    "version": "0.9.86",
+    "sources": {
+      "wrapper.py": "4ed7299106979c0b2518658d4d3ef371fe5a39b254586254650edc35217cb0c1",
+      "decoder.py": "b06cbe24eca37e3386d0ab213deb43e493171e8cbb7c26060ea4936f97f79b4c",
+      "client.py": "1d86989d6815881ea88576e8e3bdcf34fe40d1da778dfee68619ee80e53a2822",
+      "ib.py": "b5f60220c941a335c47cbb0257a342e3122b1f07cc9f809a36a0e7c9b4ba84fc",
+      "order.py": "f014b063b899fd9ec1cd4bd4cf9cc834de0efb89c089bdeb673c09b392131ca7",
+      "util.py": "86c7250f24545721a4fd230e747b0d01e66cb1f8a4ad12e152c7a70d4b37d964"
+    }
+  },
+  "dependencies_unchanged": true,
+  "label": "red_nonfinite_quote_audit",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-31T16:30:22.477951-07:00",
+  "end_pt": "2026-10-31T16:30:25.155333-07:00",
+  "seconds": 2.688,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch33_open_delay.py::test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent"
+  ],
+  "code_sha": "a90c107010525c87",
+  "source_unchanged": true,
+  "inventory_sha256": "cb7947422fd128513045ce3bec0c9dcae0a17acf835b8002aa63b26cc67dbd8f",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "b077dd2ef3f8b09247cd93c413ca71a17b86ace43b73544a0a768c46e884217b",
+  "XML_sha256_before_masking": "fc3c99add8e1b69f96996739ca3cbefa98a3647fae9f938dd61905a53db50787",
+  "delivered_log_sha256": "a309f395fbe1616096564889b406360890e861b0150cf00a4750f5d6e6c4b2a8",
+  "delivered_XML_sha256": "fc3c99add8e1b69f96996739ca3cbefa98a3647fae9f938dd61905a53db50787",
+  "tests": 4,
+  "failures": 4,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[bid-nan]",
+      "kind": "failure",
+      "message": "AssertionError: new audit must not persist JSON NaN/Infinity\nassert (1 == 1 and 0 == 1)\n +  where 1 = len([<sqlite3.Row object at 0x0000020D0A3A3280>])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[ask-inf]",
+      "kind": "failure",
+      "message": "AssertionError: new audit must not persist JSON NaN/Infinity\nassert (1 == 1 and 0 == 1)\n +  where 1 = len([<sqlite3.Row object at 0x0000020D0A0BCA90>])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[last-nan]",
+      "kind": "failure",
+      "message": "AssertionError: new audit must not persist JSON NaN/Infinity\nassert (1 == 1 and 0 == 1)\n +  where 1 = len([<sqlite3.Row object at 0x0000020D0A3F2A70>])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[last-inf]",
+      "kind": "failure",
+      "message": "AssertionError: new audit must not persist JSON NaN/Infinity\nassert (0 == 1)\n +  where 0 = len([])"
+    }
+  ]
+}

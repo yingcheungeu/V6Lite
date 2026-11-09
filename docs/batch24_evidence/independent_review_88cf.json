@@ -1,0 +1,42 @@
+{
+  "reviewer": "/root/batch24_investigate",
+  "reviewed_at_pt": "2026-10-12T14:05:18.939276-07:00",
+  "reviewed_code_sha": "88cf8d9327c2240b",
+  "package_files": 117,
+  "production_sha256": {
+    "v6lite/alerts.py": "682d46286bf45b041c41624544ebd97807530f5f5f1868c2b6359b5db58f6940",
+    "v6lite/broker/fake.py": "1a2b8040abcb629e8d73df613c5bbf662f75ca3073e303f64faac585076dc864",
+    "v6lite/broker/ibkr.py": "d2bb5f7372feb598a515b9b2bde06d3cbdb90296736b08edb015716778eb09bb",
+    "v6lite/broker/pacing.py": "08a81aff78939b7b1d6068e13650707173441cad51784ffbf870be5646672b17",
+    "v6lite/config.py": "0318237f52b4306cf56378c8c51eb16c4f168083afe7c34d2132e21687282275",
+    "v6lite/engine.py": "87d554c0c9e419d4d7e423abf71fab4a6d51c3a540a0a433154ebb57b2042577",
+    "v6lite/models.py": "4d8ea31dd03a64f7169f3ee08f4fb4bbeffb47f933422043766506c7f7d573a4",
+    "v6lite/protection.py": "fa4be7ec8e88bb2ee2c5cc77be2a6249725ff1bcd80e2865d056bba345d3f40d",
+    "v6lite/protection_cancellations.py": "201be298237fb25a3af0f374d047964eeeb6f07024763c03af99ee4c6b43da8e",
+    "v6lite/protection_engine.py": "a45ac2ddbc0b5f5d23cb4f7159e23670315ed599f7caa9815911bf9c1deae824",
+    "v6lite/protection_incidents.py": "d2bfad41ee00515fa4e9e961e30ae9d965d6b849b4541183e87451fb134cfdc4",
+    "v6lite/tp_evidence.py": "d75d3db409f3b6c3a91524c690553dee2cc098e833033ea284af0d29e0f5d2eb",
+    "v6lite/report.py": "96b07cede3ba71749d9ee366b98b726ddbbaa8dd842ff0de0b2653c9af132f48"
+  },
+  "unresolved_substantive_findings": [],
+  "read_only": true,
+  "candidate_tests_run_by_reviewer": false,
+  "red_evidence": {
+    "tests": 101,
+    "failures": 74,
+    "passed": 27,
+    "errors": 0,
+    "skipped": 0,
+    "baseline_code_sha": "a17d647ba28c51e4"
+  },
+  "scope": [
+    "STP echo audit-only, strict native identity and cent/quantity",
+    "fresh three-source complete evidence and per-position shared retry",
+    "second-round workflows, replacement and resume origin binding",
+    "native query pacing, generation reset/End, actual wire send timing",
+    "2110 single warning/raw audit and unchanged connection classification",
+    "P0 held-P1 suppression and ordinary DAY-P1 retained",
+    "Windows JobObject new child-only gate/timeout/tree cleanup"
+  ],
+  "review_result": "No unresolved substantive finding in batch24 production scope"
+}

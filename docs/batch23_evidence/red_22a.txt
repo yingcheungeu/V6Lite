@@ -1,0 +1,211 @@
+FFFFFFFFFFFF....FF......FFFFFF                                           [100%]
+================================== FAILURES ===================================
+____ test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds ____
+..\red_specs\test_batch23_tp_evidence.py:293: in test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds
+    assert rig.cfg.exit_limit_band_pct == .002
+E   AssertionError: assert 0.01 == 0.002
+E    +  where 0.01 = LiteConfig(mode='paper', account='DU0000000', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)).exit_limit_band_pct
+E    +    where LiteConfig(mode='paper', account='DU0000000', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)) = <v6lite.tests.helpers.Rig object at 0x000001D555CDE350>.cfg
+_____ test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper.toml] _____
+..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper.toml'
+_ test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_delayed.toml] _
+..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper_delayed.toml'
+__ test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_test.toml] ___
+..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper_test.toml'
+___ test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_g3n.toml] ___
+..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\paper_g3n.toml'
+_____ test_B23_all_shipped_examples_use_0_2_percent_exit_band[live.toml] ______
+..\red_specs\test_batch23_tp_evidence.py:300: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    raw=tomllib.loads((Path(__file__).resolve().parents[1]/'examples'/filename).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\examples\\live.toml'
+_ test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline _
+..\red_specs\test_batch23_tp_evidence.py:309: in test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline
+    assert row['state']=='PROTECT_CANCEL_PENDING'
+E   AssertionError: assert 'WORKING' == 'PROTECT_CANCEL_PENDING'
+E     
+E     - PROTECT_CANCEL_PENDING
+E     + WORKING
+_ test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule] _
+..\red_specs\test_batch23_tp_evidence.py:344: in test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+_ test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price] _
+..\red_specs\test_batch23_tp_evidence.py:344: in test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+_ test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot _
+..\red_specs\test_batch23_tp_evidence.py:362: in test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+_ test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart _
+..\red_specs\test_batch23_tp_evidence.py:383: in test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart
+    rig,pid,req=scenario_tp_price_rejection(tmp_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:256: in scenario_tp_price_rejection
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+_ test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.0-True] _
+..\red_specs\test_batch23_tp_evidence.py:415: in test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting
+    assert rig.store.protection(pid)['state']=='REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+_ test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send _
+..\red_specs\test_batch23_tp_evidence.py:440: in test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send
+    rig,pid,_=scenario_second_stale(tmp_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:285: in scenario_second_stale
+    rig.broker.confirm_protection_modify(ref)
+v6lite\broker\fake.py:255: in confirm_protection_modify
+    req = self.protection_pending_modifications.pop(intent_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'v6l-protect-95009ae3857f4cf1a057'
+________ test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark _________
+..\red_specs\test_batch23_tp_evidence.py:463: in test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark
+    rig.broker.confirm_protection_modify(ref); _settle(rig)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\fake.py:255: in confirm_protection_modify
+    req = self.protection_pending_modifications.pop(intent_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'v6l-protect-3dd5e14837d24b4ea2e2'
+_ test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working] _
+..\red_specs\test_batch23_tp_evidence.py:502: in test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+_ test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap] _
+..\red_specs\test_batch23_tp_evidence.py:502: in test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+__ test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap __
+..\red_specs\test_batch23_tp_evidence.py:527: in test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap
+    assert any(e.get('aux_price')==trade.order.auxPrice and e.get('mkt_cap_price')==trade.orderStatus.mktCapPrice for e in all_audits)
+E   assert False
+E    +  where False = any(<generator object test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap.<locals>.<genexpr> at 0x000001D575E642E0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-cb1b09ffe1254b80acbe orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；native account/client/conId/type/price/quantity identity invalid; no release authority
+_ test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity _
+..\red_specs\test_batch23_tp_evidence.py:536: in test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity
+    assert all('GTC absent from complete working snapshot' not in body for _,body in cards)
+E   assert False
+E    +  where False = all(<generator object test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity.<locals>.<genexpr> at 0x000001D575E67060>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=待核实（上次确认 3） 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-ec0f3adac0fd4682b3d9 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled by system: synthetic broker cancellation
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=3 股 可能超卖=0 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-ec0f3adac0fd4682b3d9 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；GTC absent from complete working snapshot; no duplicate submission；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled by system: synthetic broker cancellation
+__ test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference ___
+..\red_specs\test_batch23_tp_evidence.py:545: in test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference
+    req=_activate_tp(rig,pid)
+        ^^^^^^^^^^^^^^^^^^^^^
+..\red_specs\test_batch23_tp_evidence.py:165: in _activate_tp
+    assert row['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+__ test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write ___
+..\red_specs\test_batch23_tp_evidence.py:582: in test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write
+    _queue_tp(rig,pid)
+..\red_specs\test_batch23_tp_evidence.py:145: in _queue_tp
+    assert st is not None and st['status'] == 'PENDING'
+E   assert (None is not None)
+=========================== short test summary info ===========================
+FAILED ::test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper.toml]
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_delayed.toml]
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_test.toml]
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_g3n.toml]
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[live.toml]
+FAILED ::test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline
+FAILED ::test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule]
+FAILED ::test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price]
+FAILED ::test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot
+FAILED ::test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart
+FAILED ::test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.0-True]
+FAILED ::test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send
+FAILED ::test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark - KeyEr...
+FAILED ::test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working]
+FAILED ::test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap]
+FAILED ::test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap
+FAILED ::test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity
+FAILED ::test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference
+FAILED ::test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write
+20 failed, 10 passed in 2.99s

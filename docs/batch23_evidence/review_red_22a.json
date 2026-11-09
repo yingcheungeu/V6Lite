@@ -1,0 +1,156 @@
+{
+  "label": "review_red_22a",
+  "v6lite_runtime_processes": 0,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "start_pt": "2026-10-09T14:58:33.545715-07:00",
+  "end_pt": "2026-10-09T14:58:36.940962-07:00",
+  "returncode": 1,
+  "source_code_sha": "f27e144de9eb406b",
+  "source_unchanged": true,
+  "worktree_code_sha": "ad3a09d225bba249",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\review_specs\\fcf063c69658\\test_batch23_error_provenance.py",
+      "sha256": "fcf063c69658242b034f401e0a0a65382c53e542edbda716679962086f54345b"
+    }
+  ],
+  "totals": {
+    "tests": 21,
+    "failures": 19,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-cleared-metadata]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-zero-perm]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[funds]",
+      "outcome": "failure",
+      "message": "AssertionError: [StatusEvent(intent_id='v6l-protect-9b7da439bdb143be9af3', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...side_rth=False, account='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None)]\nassert not [StatusEvent(intent_id='v6l-protect-9b7da439bdb143be9af3', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...side_rth=False, account='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None)]"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[history]",
+      "outcome": "failure",
+      "message": "AssertionError: [StatusEvent(intent_id='v6l-protect-31a9cd20facc4354af16', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...side_rth=False, account='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None)]\nassert not [StatusEvent(intent_id='v6l-protect-31a9cd20facc4354af16', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...side_rth=False, account='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None)]"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_array]",
+      "outcome": "failure",
+      "message": "AssertionError: booked TP executions need one audit even when its optional send input is corrupt\nassert 0 == 1\n +  where 0 = len([])"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_null]",
+      "outcome": "failure",
+      "message": "AssertionError: booked TP executions need one audit even when its optional send input is corrupt\nassert 0 == 1\n +  where 0 = len([])"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_string]",
+      "outcome": "failure",
+      "message": "AssertionError: booked TP executions need one audit even when its optional send input is corrupt\nassert 0 == 1\n +  where 0 = len([])"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_bid]",
+      "outcome": "failure",
+      "message": "AssertionError: booked TP executions need one audit even when its optional send input is corrupt\nassert 0 == 1\n +  where 0 = len([])"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[nan_bid]",
+      "outcome": "failure",
+      "message": "AssertionError: booked TP executions need one audit even when its optional send input is corrupt\nassert 0 == 1\n +  where 0 = len([])"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_gap]",
+      "outcome": "failure",
+      "message": "AssertionError: booked TP executions need one audit even when its optional send input is corrupt\nassert 0 == 1\n +  where 0 = len([])"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'TP_ACTIVE' == 'TP_NEEDS_RESTORE'\n  \n  - TP_NEEDS_RESTORE\n  + TP_ACTIVE"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price]",
+      "outcome": "failure",
+      "message": "AssertionError: the actual broker diagnostic must be durable before checking its report\nassert False\n +  where False = any(<generator object test_B23_full_broker_reason_tail_survives_actual_daily_report.<locals>.<genexpr> at 0x000002CA2FA52B60>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal]",
+      "outcome": "failure",
+      "message": "AssertionError: the full local daily report must keep broker reason, not the 160-character event preview\nassert ('Synthetic protect_terminal diagnostic: 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文...原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E 完整保留原文#x1F34E END-DAILY-protect_terminal' in '# V6-Lite daily report 2026-10-06 (paper)\\n\\n- account: DU0000000   state role: formal\\n- code_sha: f27e144de9eb406b\\...\"signals\": [[\"AAPL\", 78]], \"vix\": 18.0}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n')"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query]",
+      "outcome": "failure",
+      "message": "AssertionError: the actual broker diagnostic must be durable before checking its report\nassert False\n +  where False = any(<generator object test_B23_full_broker_reason_tail_survives_actual_daily_report.<locals>.<genexpr> at 0x000002CA2FA51D50>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[empty]",
+      "outcome": "failure",
+      "message": "AssertionError: a real price rejection must persist its pause episode\nassert None"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[missing]",
+      "outcome": "failure",
+      "message": "AssertionError: a real price rejection must persist its pause episode\nassert None"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches",
+      "outcome": "failure",
+      "message": "AssertionError: a real price rejection must persist its pause episode\nassert None"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot",
+      "outcome": "failure",
+      "message": "AssertionError: assert 118.45 == 119.41\n +  where 118.45 = OrderRequest(intent_id='v6l-9588f74aba0c4ddc80fd', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=118.45, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-254c868ba0f84ddfbd6b').limit_price"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[capacity_proof]",
+      "outcome": "failure",
+      "message": "AssertionError: assert [OrderRequest...83b49d395e4')] == []\n  \n  Left contains one more item: OrderRequest(intent_id='v6l-51cb57e4b8554f3b9b3a', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=118.45, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-0bf7bf7e683b49d395e4')\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[durable_intent]",
+      "outcome": "failure",
+      "message": "AssertionError: assert [OrderRequest...9224a15a70d')] == []\n  \n  Left contains one more item: OrderRequest(intent_id='v6l-96d86af7a55c467b8864', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=118.45, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-0fe9ab8d59224a15a70d')\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof.<locals>.<genexpr> at 0x000002CA2FA21C40>)"
+    }
+  ],
+  "stdout_sha256": "a78c1a8a2df568961ae4b4355d9fe60d1b3d5bc4771b836c3b3d636bdc985dcb",
+  "junit_sha256": "5bb333b3d3689bf3c558c897f21052fe1c74b46d28a94870bf31fa508fbed004"
+}

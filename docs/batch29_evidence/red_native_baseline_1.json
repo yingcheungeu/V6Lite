@@ -1,0 +1,38 @@
+{
+  "label": "red_native_baseline_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T21:49:08.776687-07:00",
+  "end_pt": "2026-10-23T21:49:11.653992-07:00",
+  "seconds": 2.875,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch29_native_timeout.py"
+  ],
+  "code_sha": "0c2c9cb0ed078dee",
+  "source_unchanged": true,
+  "inventory_sha256": "b71f9c916d7630efcec7ee598fa1b2c5dbf63218f97a53db6414b6e7e83df9b6",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "862c02cc33fd8af56acbdb2e36474719275b6e0d8798f2e2c78f6149e4801fa3",
+  "XML_sha256_before_masking": "b68fc0e3615d44c69872e946ab02bf55a93b378e100d304d22a19baecc7af29b",
+  "delivered_log_sha256": "a2a9b23f90ce77e9d8f8dc4bbed44fb99614afc956f7c86a5d74728b31180161",
+  "delivered_XML_sha256": "b68fc0e3615d44c69872e946ab02bf55a93b378e100d304d22a19baecc7af29b",
+  "tests": 2,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch29_native_timeout",
+      "name": "test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1",
+      "kind": "failure",
+      "message": "v6lite.approval.GateError: test-tp-timeout \u5df2\u7981\u7528\u5236\u9020\u8d85\u65f6\u6539\u4ef7\uff1b\u6240\u6709 TP \u53ea\u7528\u65b0\u9c9c bid\uff0c\u79bb\u7ebf\u6301\u5355\u9a8c\u8bc1 B \u89c4\u5219"
+    },
+    {
+      "classname": "v6lite.tests.test_batch29_native_timeout",
+      "name": "test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once",
+      "kind": "failure",
+      "message": "v6lite.approval.GateError: test-tp-timeout \u5df2\u7981\u7528\u5236\u9020\u8d85\u65f6\u6539\u4ef7\uff1b\u6240\u6709 TP \u53ea\u7528\u65b0\u9c9c bid\uff0c\u79bb\u7ebf\u6301\u5355\u9a8c\u8bc1 B \u89c4\u5219"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once _
+v6lite\tests\test_batch29_native_timeout.py:321: in test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+    server.assert_audit()
+v6lite\tests\test_batch29_native_timeout.py:230: in assert_audit
+    assert {'claimed', 'send', 'cancel_request', 'cancel_confirm', 'gap_close'} <= phases, rows
+E   AssertionError: [{'operator': 'John', 'outcome': 'requested', 'phase': 'requested', 'request_id': '33443e5b1c5f4b69af20024ff0fe709f', ...d73447abedf', ...}, {'S': 2, 'ask': 343.97, 'gap_b_seconds': 2.359, 'intent_id': 'v6l-c1da2feded73447abedf', ...}, ...]
+E   assert {'cancel_conf...lose', 'send'} <= {'cancel_requ...nd', 'status'}
+E     
+E     Extra items in the left set:
+E     'cancel_confirm'
+---------------------------- Captured stdout call -----------------------------
+TEST TP timeout requested: AAPL; expires in 5 minutes; final stage excluded
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+  v6lite\tests\test_batch29_native_timeout.py:299: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+1 failed, 1 warning in 17.90s

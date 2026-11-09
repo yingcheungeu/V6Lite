@@ -1,0 +1,70 @@
+[
+  {
+    "tag": "v6lite-batch25",
+    "commit": "97fa8c6d68cfd7b700c1474dc6f8a94e158fd2d2",
+    "archive_sha256": "58c80e5cb9cd2bdcac48c69ff0de1d2b75a8a4816af77c28c82f9c16a84d58e3",
+    "exit_code": 1,
+    "replay_sha256": "b1b5215a34d7fbe126170cb7621d999986b3e4fb5983c51f14852c0872df33d3",
+    "output_tail": [
+      "E   ConnectionError: Socket disconnect",
+      "------------------------------ Captured log call ------------------------------",
+      "ERROR    ib_insync.client:client.py:374 [Errno 10054] An existing connection was forcibly closed by the remote host",
+      "=========================== short test summary info ===========================",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[WinError64]",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[Peer-closed-connection]",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[ConnectionResetError]",
+      "3 failed, 10 deselected in 1.83s"
+    ]
+  },
+  {
+    "tag": "v6lite-batch26",
+    "commit": "78a0905e0c45482cf6db7427016231b69144422d",
+    "archive_sha256": "158b1fba47c549268482cd0784591e097ec1ead4c6be41435670edcb8330f51f",
+    "exit_code": 1,
+    "replay_sha256": "b1b5215a34d7fbe126170cb7621d999986b3e4fb5983c51f14852c0872df33d3",
+    "output_tail": [
+      "E   ConnectionError: Socket disconnect",
+      "------------------------------ Captured log call ------------------------------",
+      "ERROR    ib_insync.client:client.py:374 [Errno 10054] An existing connection was forcibly closed by the remote host",
+      "=========================== short test summary info ===========================",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[WinError64]",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[Peer-closed-connection]",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[ConnectionResetError]",
+      "3 failed, 10 deselected in 1.86s"
+    ]
+  },
+  {
+    "tag": "v6lite-batch27b",
+    "commit": "54a893ba655c8e04ef64cfcbb6d49a2ebcdcddaa",
+    "archive_sha256": "83ed6769efae3c2ed911cafaf378c4681976c10c8e99c4e6b918910672cce1a4",
+    "exit_code": 1,
+    "replay_sha256": "b1b5215a34d7fbe126170cb7621d999986b3e4fb5983c51f14852c0872df33d3",
+    "output_tail": [
+      "E   ConnectionError: Socket disconnect",
+      "------------------------------ Captured log call ------------------------------",
+      "ERROR    ib_insync.client:client.py:374 [Errno 10054] An existing connection was forcibly closed by the remote host",
+      "=========================== short test summary info ===========================",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[WinError64]",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[Peer-closed-connection]",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[ConnectionResetError]",
+      "3 failed, 10 deselected in 1.93s"
+    ]
+  },
+  {
+    "tag": "v6lite-batch27",
+    "commit": "a5ae5945fbe8861b20616af51af10788c69f177f",
+    "archive_sha256": "9ba6c1e78b19a154479c79fd3bb3451e14b829c80d1294e1d86f4fea23329a75",
+    "exit_code": 1,
+    "replay_sha256": "b1b5215a34d7fbe126170cb7621d999986b3e4fb5983c51f14852c0872df33d3",
+    "output_tail": [
+      "E   ConnectionError: Socket disconnect",
+      "------------------------------ Captured log call ------------------------------",
+      "ERROR    ib_insync.client:client.py:374 [Errno 10054] An existing connection was forcibly closed by the remote host",
+      "=========================== short test summary info ===========================",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[WinError64]",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[Peer-closed-connection]",
+      "FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[ConnectionResetError]",
+      "3 failed, 10 deselected in 2.03s"
+    ]
+  }
+]

@@ -1,0 +1,198 @@
+FFFFFFFFFFF.FFFFFFFFFFFFFFFFF.                                           [100%]
+================================== FAILURES ===================================
+____ test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds ____
+..\red_specs\test_batch23_tp_evidence.py:295: in test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds
+    assert rig.cfg.exit_limit_band_pct == .002
+E   AssertionError: assert 0.01 == 0.002
+E    +  where 0.01 = LiteConfig(mode='paper', account='DU0000000', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)).exit_limit_band_pct
+E    +    where LiteConfig(mode='paper', account='DU0000000', host='127.0.0.1', port=4002, client_id=131, market_data_type=1, scan_sym...seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60)) = <v6lite.tests.helpers.Rig object at 0x0000022AFACA9550>.cfg
+_____ test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper.toml] _____
+..\red_specs\test_batch23_tp_evidence.py:303: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    assert raw['execution']['exit_limit_band_pct'] == .002
+E   assert 0.01 == 0.002
+_ test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_delayed.toml] _
+..\red_specs\test_batch23_tp_evidence.py:303: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    assert raw['execution']['exit_limit_band_pct'] == .002
+E   assert 0.01 == 0.002
+__ test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_test.toml] ___
+..\red_specs\test_batch23_tp_evidence.py:303: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    assert raw['execution']['exit_limit_band_pct'] == .002
+           ^^^^^^^^^^^^^^^^
+E   KeyError: 'execution'
+___ test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_g3n.toml] ___
+..\red_specs\test_batch23_tp_evidence.py:303: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    assert raw['execution']['exit_limit_band_pct'] == .002
+           ^^^^^^^^^^^^^^^^
+E   KeyError: 'execution'
+_____ test_B23_all_shipped_examples_use_0_2_percent_exit_band[live.toml] ______
+..\red_specs\test_batch23_tp_evidence.py:303: in test_B23_all_shipped_examples_use_0_2_percent_exit_band
+    assert raw['execution']['exit_limit_band_pct'] == .002
+E   assert 0.01 == 0.002
+_ test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline _
+..\red_specs\test_batch23_tp_evidence.py:332: in test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline
+    assert row['gap_b_started_at']==t0.isoformat(), 'three-source latency is part of B, not permission to rewrite T0'
+E   AssertionError: three-source latency is part of B, not permission to rewrite T0
+E   assert '2026-10-06T1....600000+00:00' == '2026-10-06T14:01:02+00:00'
+E     
+E     - 2026-10-06T14:01:02+00:00
+E     ?                   ^
+E     + 2026-10-06T14:01:05.600000+00:00
+E     ?                   ^^^^^^^^
+_ test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule] _
+..\red_specs\test_batch23_tp_evidence.py:350: in test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait
+    assert rig.store.protection(pid)['state']=='TP_NEEDS_RESTORE'
+E   AssertionError: assert 'TP_ACTIVE' == 'TP_NEEDS_RESTORE'
+E     
+E     - TP_NEEDS_RESTORE
+E     + TP_ACTIVE
+_ test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price] _
+..\red_specs\test_batch23_tp_evidence.py:350: in test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait
+    assert rig.store.protection(pid)['state']=='TP_NEEDS_RESTORE'
+E   AssertionError: assert 'TP_ACTIVE' == 'TP_NEEDS_RESTORE'
+E     
+E     - TP_NEEDS_RESTORE
+E     + TP_ACTIVE
+_ test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot _
+..\red_specs\test_batch23_tp_evidence.py:368: in test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot
+    assert cards, 'price rejection must have its own actual remote P0'
+E   AssertionError: price rejection must have its own actual remote P0
+E   assert []
+_ test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart _
+..\red_specs\test_batch23_tp_evidence.py:387: in test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart
+    assert raw, 'a broker price rejection must durably pause this position TP stage'
+E   AssertionError: a broker price rejection must durably pause this position TP stage
+E   assert None
+_ test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.01-False] _
+..\red_specs\test_batch23_tp_evidence.py:420: in test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting
+    assert _writes(rig)==before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff
+_ test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[0.0-130.0] _
+..\red_specs\test_batch23_tp_evidence.py:435: in test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last
+    assert _writes(rig)==before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff
+_ test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[-1.0-130.0] _
+..\red_specs\test_batch23_tp_evidence.py:435: in test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last
+    assert _writes(rig)==before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff
+_ test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[130.0-129.0] _
+..\red_specs\test_batch23_tp_evidence.py:435: in test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last
+    assert _writes(rig)==before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff
+_ test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send _
+..\red_specs\test_batch23_tp_evidence.py:444: in test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send
+    assert not [r for r in rig.broker.sent if r.purpose in TP_PURPOSES]
+E   AssertionError: assert not [OrderRequest(intent_id='v6l-6bcf29d521c1445f998c', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=118.45, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-5c1451f79da74f2f841e')]
+________ test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark _________
+..\red_specs\test_batch23_tp_evidence.py:468: in test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark
+    assert req.limit_price==expected==120.13
+E   AssertionError: assert 119.17 == 120.13
+E    +  where 119.17 = OrderRequest(intent_id='v6l-76c00752f46f402a82bb', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=119.17, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-6bfc744c6afe4d02a12a').limit_price
+_ test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[ENTRY] _
+..\red_specs\test_batch23_tp_evidence.py:488: in test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo
+    assert kwargs_seen and all(k.get('usePriceMgmtAlgo') is False for k in kwargs_seen), 'False must be explicit at the real SDK constructor boundary'
+E   AssertionError: False must be explicit at the real SDK constructor boundary
+E   assert ([{'account': 'DU0000000', 'orderRef': 'v6l-b23-pma-ENTRY', 'outsideRth': False, 'tif': 'DAY'}] and False)
+E    +  where False = all(<generator object test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo.<locals>.<genexpr> at 0x0000022AF9496960>)
+_ test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP1] _
+..\red_specs\test_batch23_tp_evidence.py:488: in test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo
+    assert kwargs_seen and all(k.get('usePriceMgmtAlgo') is False for k in kwargs_seen), 'False must be explicit at the real SDK constructor boundary'
+E   AssertionError: False must be explicit at the real SDK constructor boundary
+E   assert ([{'account': 'DU0000000', 'orderRef': 'v6l-b23-pma-TP1', 'outsideRth': False, 'tif': 'DAY'}] and False)
+E    +  where False = all(<generator object test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo.<locals>.<genexpr> at 0x0000022AF9496260>)
+_ test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP2] _
+..\red_specs\test_batch23_tp_evidence.py:488: in test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo
+    assert kwargs_seen and all(k.get('usePriceMgmtAlgo') is False for k in kwargs_seen), 'False must be explicit at the real SDK constructor boundary'
+E   AssertionError: False must be explicit at the real SDK constructor boundary
+E   assert ([{'account': 'DU0000000', 'orderRef': 'v6l-b23-pma-TP2', 'outsideRth': False, 'tif': 'DAY'}] and False)
+E    +  where False = all(<generator object test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo.<locals>.<genexpr> at 0x0000022AFED358C0>)
+_ test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP3] _
+..\red_specs\test_batch23_tp_evidence.py:488: in test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo
+    assert kwargs_seen and all(k.get('usePriceMgmtAlgo') is False for k in kwargs_seen), 'False must be explicit at the real SDK constructor boundary'
+E   AssertionError: False must be explicit at the real SDK constructor boundary
+E   assert ([{'account': 'DU0000000', 'orderRef': 'v6l-b23-pma-TP3', 'outsideRth': False, 'tif': 'DAY'}] and False)
+E    +  where False = all(<generator object test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo.<locals>.<genexpr> at 0x0000022AFED36500>)
+_ test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[False] _
+..\red_specs\test_batch23_tp_evidence.py:512: in test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA
+    assert kwargs_seen and all(k.get('usePriceMgmtAlgo') is False for k in kwargs_seen), 'False must be explicit at submit and same-ID modification constructors'
+E   AssertionError: False must be explicit at submit and same-ID modification constructors
+E   assert ([{'account': 'DU0000000', 'orderRef': 'v6l-protect-b23-pma', 'outsideRth': False, 'tif': 'GTC'}] and False)
+E    +  where False = all(<generator object test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA.<locals>.<genexpr> at 0x0000022AFED34BA0>)
+_ test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[True] __
+..\red_specs\test_batch23_tp_evidence.py:512: in test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA
+    assert kwargs_seen and all(k.get('usePriceMgmtAlgo') is False for k in kwargs_seen), 'False must be explicit at submit and same-ID modification constructors'
+E   AssertionError: False must be explicit at submit and same-ID modification constructors
+E   assert ([{'account': 'DU0000000', 'orderRef': 'v6l-protect-b23-pma', 'outsideRth': False, 'tif': 'GTC'}, {'account': 'DU0000000', 'clientId': 131, 'orderId': 77, 'orderRef': 'v6l-protect-b23-pma', ...}] and False)
+E    +  where False = all(<generator object test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA.<locals>.<genexpr> at 0x0000022AFED351C0>)
+_ test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working] _
+..\red_specs\test_batch23_tp_evidence.py:525: in test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger
+    assert any('P1' in title and '价格' in title for title,_ in rig.channel.messages)
+E   assert False
+E    +  where False = any(<generator object test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger.<locals>.<genexpr> at 0x0000022AF9497A00>)
+_ test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap] _
+..\red_specs\test_batch23_tp_evidence.py:525: in test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger
+    assert any('P1' in title and '价格' in title for title,_ in rig.channel.messages)
+E   assert False
+E    +  where False = any(<generator object test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger.<locals>.<genexpr> at 0x0000022AF9496C00>)
+__ test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap __
+..\red_specs\test_batch23_tp_evidence.py:545: in test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap
+    assert any(e.get('aux_price')==trade.order.auxPrice and e.get('mkt_cap_price')==trade.orderStatus.mktCapPrice for e in all_audits)
+E   assert False
+E    +  where False = any(<generator object test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap.<locals>.<genexpr> at 0x0000022AF9494E40>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-a43fde4d4bef4bccbc25 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；native account/client/conId/type/price/quantity identity invalid; no release authority
+_ test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity _
+..\red_specs\test_batch23_tp_evidence.py:554: in test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity
+    assert all('GTC absent from complete working snapshot' not in body for _,body in cards)
+E   assert False
+E    +  where False = all(<generator object test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity.<locals>.<genexpr> at 0x0000022AFACDBCA0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=待核实（上次确认 3） 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-9cc6164141a74731a831 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled by system: synthetic broker cancellation
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=3 股 可能超卖=0 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-9cc6164141a74731a831 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；GTC absent from complete working snapshot; no duplicate submission；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled by system: synthetic broker cancellation
+__ test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference ___
+..\red_specs\test_batch23_tp_evidence.py:575: in test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference
+    assert {'reduce_request','reduce_confirm','send','status','fill'}.issubset(phases)
+E   AssertionError: assert False
+E    +  where False = <built-in method issubset of set object at 0x0000022AFED36180>(set())
+E    +    where <built-in method issubset of set object at 0x0000022AFED36180> = {'fill', 'reduce_confirm', 'reduce_request', 'send', 'status'}.issubset
+=========================== short test summary info ===========================
+FAILED ::test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper.toml]
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_delayed.toml]
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_test.toml]
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[paper_g3n.toml]
+FAILED ::test_B23_all_shipped_examples_use_0_2_percent_exit_band[live.toml]
+FAILED ::test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline
+FAILED ::test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule]
+FAILED ::test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price]
+FAILED ::test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot
+FAILED ::test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart
+FAILED ::test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.01-False]
+FAILED ::test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[0.0-130.0]
+FAILED ::test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[-1.0-130.0]
+FAILED ::test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[130.0-129.0]
+FAILED ::test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send
+FAILED ::test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark - Asser...
+FAILED ::test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[ENTRY]
+FAILED ::test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP1]
+FAILED ::test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP2]
+FAILED ::test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP3]
+FAILED ::test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[False]
+FAILED ::test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[True]
+FAILED ::test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working]
+FAILED ::test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap]
+FAILED ::test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap
+FAILED ::test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity
+FAILED ::test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference
+28 failed, 2 passed in 2.96s

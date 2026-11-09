@@ -1,0 +1,7 @@
+{
+  "reason": "prepare stopped at check_base before compile/collection/freeze because copied uppercase instruction filename still BATCH29; corrected to BATCH30 while keeping authorized SHA.",
+  "old_tool_sha256": "93a5902aa5d691dfe5a68f09d04e4542953bab14453962c5ebbda714406ebad9",
+  "new_tool_sha256": "797da547cfe7dd2989ad791f5caf79511655c4c990d06123b5670b431b535abc",
+  "source_unchanged": true,
+  "freeze_not_yet_created": true
+}

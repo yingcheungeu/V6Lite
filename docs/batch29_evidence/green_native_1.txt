@@ -1,0 +1,46 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_ test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1 _
+v6lite\tests\test_batch29_native_timeout.py:257: in test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1
+    server.start_injected_tp()
+v6lite\tests\test_batch29_native_timeout.py:198: in start_injected_tp
+    assert self.rig.broker.orders[self.ref].remaining == 2
+E   AssertionError: assert 1 == 2
+E    +  where 1 = _Order(req=ProtectionRequest(intent_id='v6l-protect-edbe513fe0aa43b19453', position_id='pos-f954fdc4d5d049d38034', sym...ount='DU******001', allow_lookup=True, order_type='STP'), broker_order_id=706, status='PreSubmitted', filled=0, fills=[]).remaining
+---------------------------- Captured stdout call -----------------------------
+TEST TP timeout requested: AAPL; expires in 5 minutes; final stage excluded
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: overnight TP evidence pos-f954fdc4d5d049d38034 | AAPL：本次止盈的 S+T+X 超过券商持仓；券商 P=3 股，账本=3 股，当前工作 STP S=2 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-21T15:03:14.516000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P0: protection external sell AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=1 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-edbe513fe0aa43b19453 orderId=706 permId=50706 TP=v6l-c32aa68419174b9d989f TP orderId=711 TP剩余=1 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:14.516000+00:00 工作单证据时间=2026-10-21T15:03:12.547000+00:00；可能卖出总量=4 股，实际持仓=3 股；只减保护数量，禁止新增卖单
+_ test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once _
+v6lite\tests\test_batch29_native_timeout.py:293: in test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+    server.start_injected_tp()
+v6lite\tests\test_batch29_native_timeout.py:198: in start_injected_tp
+    assert self.rig.broker.orders[self.ref].remaining == 2
+E   AssertionError: assert 1 == 2
+E    +  where 1 = _Order(req=ProtectionRequest(intent_id='v6l-protect-80ffe381952c48a08253', position_id='pos-27ebcac3e2ba45d9a677', sym...ount='DU******001', allow_lookup=True, order_type='STP'), broker_order_id=706, status='PreSubmitted', filled=0, fills=[]).remaining
+---------------------------- Captured stdout call -----------------------------
+TEST TP timeout requested: AAPL; expires in 5 minutes; final stage excluded
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: overnight TP evidence pos-27ebcac3e2ba45d9a677 | AAPL：本次止盈的 S+T+X 超过券商持仓；券商 P=3 股，账本=3 股，当前工作 STP S=2 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-21T15:03:14.485000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P0: protection external sell AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=1 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-80ffe381952c48a08253 orderId=706 permId=50706 TP=v6l-b93d318a9c0143978dde TP orderId=711 TP剩余=1 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:14.485000+00:00 工作单证据时间=2026-10-21T15:03:12.485000+00:00；可能卖出总量=4 股，实际持仓=3 股；只减保护数量，禁止新增卖单
+============================== warnings summary ===============================
+v6lite\config.py:77
+  C:\Dev\V6Lite-dev\v6lite\config.py:77: PytestCollectionWarning: cannot collect test class 'TestConfig' because it has a __init__ constructor (from: v6lite/tests/test_batch29_native_timeout.py)
+    @dataclass(frozen=True)
+
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1
+  v6lite\tests\test_batch29_native_timeout.py:252: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1(
+
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+  v6lite\tests\test_batch29_native_timeout.py:288: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch29_native_timeout.py::test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1
+FAILED v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+2 failed, 3 warnings in 16.68s

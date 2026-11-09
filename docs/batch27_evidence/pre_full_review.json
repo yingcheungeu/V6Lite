@@ -1,0 +1,62 @@
+{
+  "status": "approved for full3",
+  "recorded_by": "ROOT from independent read-only agent messages",
+  "review_agent": "/root/b27a_review",
+  "time_pt": "2026-10-18T17:25:45.197573-07:00",
+  "code_sha": "73babb393a9f86f9",
+  "full_code_sha256": "73babb393a9f86f93c3f1ff14169eeec84579dbe1d8a061452d9eb4521dad319",
+  "receipt_checks": {
+    "final_legacy_contract_and_reports": {
+      "sha256": "afbcae2745b4d464ececbd159bcff6204a605e94dd855e36a8ee9fb46e41f905",
+      "junit_sha256": "a252ef6efb216ce8675111cf842e410b9302a020f18231a85e50bf9c8efc0f81",
+      "inventory_sha256": "945cb3d1284b3ccc3c314b69a2f25765dde5f6d47268d48284416bd01d35c67c",
+      "totals": {
+        "tests": 117,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "samples_final_green": {
+      "sha256": "c54ccd00b1f8d954ea315894362aba1027000598bd10e0c23168bc2df451d29d",
+      "junit_sha256": "86aef96a7f41608bf2055157e0076b86fe56b91974a239ca4c3608d804cac568",
+      "inventory_sha256": "9eaae784cb5698f38b9ff1588f7e2a8cb942b08fc19794625407ee951f673bb5",
+      "totals": {
+        "tests": 98,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  },
+  "legacy_contract_migration": {
+    "path": "v6lite/tests/test_batch10.py",
+    "function": "test_F5_query_elapsed_includes_old_end_drain",
+    "original_sha256": "5b875c8df97861e22427223e7065a74bddf04a5da1c7115b431871369d177c47",
+    "current_sha256": "e5004f67d963f2717d774ab8bd5204f9a87a381f274b9d66f4766daa42bec8c9",
+    "token_substitution": "logging.INFO -> logging.DEBUG",
+    "substitution_count": 2,
+    "outside_function_bytes_unchanged": true,
+    "all_other_function_bytes_unchanged": true,
+    "reason": "Batch27 section2.3 replaces INFO success QUERY logs with DEBUG; elapsed/drain/native End and unique record assertions unchanged"
+  },
+  "checks": [
+    "150 compile; original execution-complete and phone-card AST preserved",
+    "137 other original files unchanged; all production files identical to previously frozen2378 candidate",
+    "117 legacy/report and98 new tests0fail/0error; unique collected=executed",
+    "11 actual complete attachments and11 saved main files raw CRLF SHA/count/links verified; max66843bytes/199 Events",
+    "20 pure render outputs are separately identified; final sample uses the actual saved candidate audit-0 file",
+    "Original full1 INFO-contract failures preserved; not a flake, not counted as passed; exact2-token test migration only",
+    "Strict runner/certifier/builder guard cannot permit any other original test changes"
+  ],
+  "artifact_verification_sha256": "f617a6d51e8a4656c3a21d443035e7f2b29fa81dac9d1f8085688dc2e9e09c45",
+  "source_compile_sha256": "f0846aa90fd7cf1b90ea30fe4472b029dd6c1e262277f542e5cec3bcfdaaebf7",
+  "supersedes_review_sha256": "219cec02e9ed46db1c588b553ea1083109e0f923c0b479f8a89c7795af1e490a",
+  "line_endings_note": "Saved markdown fields normalize LF; source hashes/bytes refer to original Windows CRLF bytes, independently reconstructed",
+  "remaining_required": [
+    "full3 expected1946 nodes=1848 old+98 new",
+    "unique legacy skip unchanged",
+    "no edits during full3; every run PT/deadline and candidate guards",
+    "final independent report/manifest audit before scoped commit/tag"
+  ]
+}

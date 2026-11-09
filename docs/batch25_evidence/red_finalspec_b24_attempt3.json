@@ -1,0 +1,317 @@
+{
+  "label": "red_finalspec_b24_attempt3",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-14T07:08:39.679905-07:00",
+  "end_pt": "2026-10-14T07:08:43.506346-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "2db6af8f04f145f6",
+  "source_unchanged": true,
+  "worktree_code_sha": "4fe3c212d8cd8980",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "4fe3c212d8cd8980112c286cc24d331e22d0d8822374e3faa6554498dedffd1a",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_reconnect_alerts.py",
+      "sha256": "60ab5265d112a27e7cf6ada6fcac1fe9b39be272a1146b454df170dfab61bc45"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_restart.py",
+      "sha256": "25b86bf9f3a068e04bfa84dccffb86fa356a3b5696d904c731318cbd882b544a"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 33,
+    "failures": 24,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "outcome": "failure",
+      "message": "assert (3 == 2)\n +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "outcome": "failure",
+      "message": "AssertionError: changed reasons cannot reopen the previous shorter delay\nassert 3 == (3 - 1)\n +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "outcome": "failure",
+      "message": "assert (3 == 2)\n +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 31, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 2, tzinfo=datetime.timezone.utc)])"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "outcome": "failure",
+      "message": "AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []\n  \n  Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "outcome": "failure",
+      "message": "AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []\n  \n  Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "outcome": "failure",
+      "message": "AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []\n  \n  Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "outcome": "failure",
+      "message": "AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []\n  \n  Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "outcome": "failure",
+      "message": "AssertionError: assert [('#x1F7E0 P1 · 券商查...不增加卖单或绕过核验。')] == []\n  \n  Left contains one more item: ('#x1F7E0 P1 · 券商查询已限速 · AAPL', '#x1F7E0 P1 · 券商查询已限速 · AAPL\\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "outcome": "failure",
+      "message": "AssertionError: assert [] == ['openOrder',...synchronized']\n  \n  Right contains 4 more items, first extra item: 'openOrder'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "outcome": "failure",
+      "message": "AssertionError: current-connection bootstrap End is expected\nassert 'openOrders' not in {'openOrders'}\n +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD44C36810>._channel_poisoned"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "outcome": "failure",
+      "message": "AssertionError: current-connection bootstrap End is expected\nassert 'openOrders' not in {'openOrders'}\n +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD246FAC10>._channel_poisoned"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "outcome": "failure",
+      "message": "AssertionError: current-connection bootstrap End is expected\nassert 'openOrders' not in {'openOrders'}\n +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD2456E4D0>._channel_poisoned"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "outcome": "failure",
+      "message": "AssertionError: current-connection bootstrap End is expected\nassert 'openOrders' not in {'openOrders'}\n +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD24842850>._channel_poisoned"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "outcome": "failure",
+      "message": "AssertionError: current-connection bootstrap End is expected\nassert 'openOrders' not in {'openOrders'}\n +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD44DE40D0>._channel_poisoned"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "outcome": "failure",
+      "message": "AssertionError: current-connection bootstrap End is expected\nassert 'openOrders' not in {'openOrders'}\n +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD44DDB050>._channel_poisoned"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "outcome": "failure",
+      "message": "assert ([datetime.dat...timezone.utc)] == []\n  \n  Left contains one more item: datetime.datetime(2026, 10, 14, 13, 19, 52, tzinfo=datetime.timezone.utc)\n  Use -v to get more diff)"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "outcome": "failure",
+      "message": "assert ([datetime.dat...timezone.utc)] == []\n  \n  Left contains one more item: datetime.datetime(2026, 10, 14, 13, 19, 52, tzinfo=datetime.timezone.utc)\n  Use -v to get more diff)"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "outcome": "failure",
+      "message": "AssertionError: a failed SDK connection must never be marked synchronized\nassert not True\n +  where True = is_connected()\n +    where is_connected = getattr(<v6lite.broker.ibkr.IbkrBroker object at 0x000001FD248439D0>, 'is_synchronized', is_connected)\n +      where is_connected = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD248439D0>.is_connected"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "outcome": "failure",
+      "message": "AssertionError: a failed SDK connection must never be marked synchronized\nassert not True\n +  where True = is_connected()\n +    where is_connected = getattr(<v6lite.broker.ibkr.IbkrBroker object at 0x000001FD44CFF710>, 'is_synchronized', is_connected)\n +      where is_connected = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD44CFF710>.is_connected"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "outcome": "failure",
+      "message": "v6lite.broker.base.BrokerError: openOrders: request/End count mismatch (sent 2, ended 1, expected 2); evidence unavailable"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "outcome": "failure",
+      "message": "AssertionError: SDK return is not synchronization authority when a registered End is still owed\nassert (False or not True)\n +  where True = is_connected()\n +    where is_connected = getattr(<v6lite.broker.ibkr.IbkrBroker object at 0x000001FD44D0D390>, 'is_synchronized', is_connected)\n +      where is_connected = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD44D0D390>.is_connected"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "outcome": "failure",
+      "message": "AssertionError: SDK return is not synchronization authority when a registered End is still owed\nassert (False or not True)\n +  where True = is_connected()\n +    where is_connected = getattr(<v6lite.broker.ibkr.IbkrBroker object at 0x000001FD44DD48D0>, 'is_synchronized', is_connected)\n +      where is_connected = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FD44DD48D0>.is_connected"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "outcome": "failure",
+      "message": "AssertionError: uncertain send/End exception cannot leave a clean reusable channel\nassert False"
+    },
+    {
+      "classname": "",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "outcome": "failure",
+      "message": "AssertionError: uncertain send/End exception cannot leave a clean reusable channel\nassert False"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "::test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "::test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "::test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "::test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "::test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "::test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "::test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "::test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "::test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]"
+    ],
+    "executed": [
+      "::test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "::test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "::test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "::test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "::test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "::test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "::test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "::test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "::test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]"
+    ]
+  },
+  "stdout_sha256": "51fdc9274d964ff8d20c3c5e956eb72b0466038be3747d4bc0a0a70c40983dca",
+  "junit_sha256": "82853832913485986573e46d5a5b7017865c81bbaaaef05f2c2a70673bd803cd",
+  "inventory_sha256": "a9ccbeca779c3585523837e83f34d6c62aa636cd0b6b322ee0aa1b06a3e429b3"
+}

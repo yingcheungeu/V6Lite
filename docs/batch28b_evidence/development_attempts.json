@@ -1,0 +1,163 @@
+{
+  "attempts": [
+    {
+      "label": "focused_callbacks1",
+      "classification": "original stop full/partial fill race and subsequent fresh contradiction behavior",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_callbacks1.xml",
+      "raw_xml_sha256": "27aa266a7d19ef6fdfcbfcfe6a110a2fc4f2ebac8b061a302e45d7dff1678d5e"
+    },
+    {
+      "label": "focused_edges1",
+      "classification": "new budget, 15s, native End timeout/generation and core timing behavior",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_edges1.xml",
+      "raw_xml_sha256": "323675a63f0cb00593c924dd8fd6868caed52ea76db45dd010b7e8b02e8945a4"
+    },
+    {
+      "label": "focused_order_safety1",
+      "classification": "validation infrastructure error: basetemp parent absent; 284 setup errors, not product failures",
+      "tests": 289,
+      "failures": 0,
+      "errors": 284,
+      "skipped": 0,
+      "xml_file": "focused_order_safety1.xml",
+      "raw_xml_sha256": "8f3e082f7d7fa9787f07998b4c028136dc495bcf575f97682592fdd47927cfdc"
+    },
+    {
+      "label": "focused_order_safety2",
+      "classification": "deterministic focused-collection cold SDK import in network-forbidden fixture; Windows event-loop socketpair, not TWS",
+      "tests": 289,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_order_safety2.xml",
+      "raw_xml_sha256": "4b814e41c4c2f18bd369c80b3de0ab241823c68c7e48869cb48199ffc4342d32"
+    },
+    {
+      "label": "focused_order_safety3",
+      "classification": "native SDK collection included; no network guard weakened; 304 passed",
+      "tests": 304,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_order_safety3.xml",
+      "raw_xml_sha256": "c77746e8fd7fc4cecec89d60299ff370f3c9b92a43bade4e39e0dc466bd9925e"
+    },
+    {
+      "label": "focused_order_safety4",
+      "classification": "final source order-safety focused validation",
+      "tests": 304,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_order_safety4.xml",
+      "raw_xml_sha256": "3f586a16f97e2008cd85b6ceebcdef2a72cd2629428ed5a474e2d86091ccb66c"
+    },
+    {
+      "label": "focused_overnight1",
+      "classification": "development: 9 old expectations fail; reject overbroad request-failure suppression",
+      "tests": 185,
+      "failures": 9,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_overnight1.xml",
+      "raw_xml_sha256": "0892fdacab30ead1eacbe2cf336b908dce3d137d33714f137ac3778f0cf71264"
+    },
+    {
+      "label": "focused_overnight2",
+      "classification": "explicit server failures retained; only 3 generation/day expectations superseded by B28b remain",
+      "tests": 85,
+      "failures": 3,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_overnight2.xml",
+      "raw_xml_sha256": "a67447e2d8362fa277f9802f0987cc6cd662655559da2044e0baba45e801aaea"
+    },
+    {
+      "label": "focused_overnight3",
+      "classification": "3 obsolete generation/day P1 expectations migrated, all actual-failure safety assertions retained",
+      "tests": 185,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_overnight3.xml",
+      "raw_xml_sha256": "7efa89c79a6107bcff5ca4b62c4df62f2ee719ce130f323c0ad21af369a49a03"
+    },
+    {
+      "label": "focused_overnight_final",
+      "classification": "real product regression: superseded-state exception hid existing short/other-SELL P0; must fix, old tests unchanged",
+      "tests": 263,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_overnight_final.xml",
+      "raw_xml_sha256": "582dbd80b7bc00173ebc5da08e77abdadd7d4b322bf16fa20fd3924102ed47a2"
+    },
+    {
+      "label": "focused_overnight_final2",
+      "classification": "fixed: only proven own-fill closure can supersede; known dangers retain original P0",
+      "tests": 263,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "focused_overnight_final2.xml",
+      "raw_xml_sha256": "aa5da3fa959675c247b2d94480bf2e44afaf2c298c69d0fe56613645b821cdda"
+    },
+    {
+      "label": "green1",
+      "classification": "development candidate: false alerts removed; positive cases exposed 15s phase starvation",
+      "tests": 8,
+      "failures": 4,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "green1.xml",
+      "raw_xml_sha256": "39770ec161a8b19eb0441dea11b4ab5a5fc459da845248edbcd5295dd92a8f26"
+    },
+    {
+      "label": "green2",
+      "classification": "completed proof wakes pending decisions; original frozen 8 specs pass",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "green2.xml",
+      "raw_xml_sha256": "d7584069d09c562fb98e3896569fb436ae171695ddadde461ea316b2351cb4c6"
+    },
+    {
+      "label": "red_batch28",
+      "classification": "isolated unmodified v6lite-batch28; all 8 new behavior contracts fail",
+      "tests": 8,
+      "failures": 8,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "red_batch28.xml",
+      "raw_xml_sha256": "4baae39dc01e3e414af7ca3e6cb0d1a4075da5cda8e9af5bd38d3548d9ddc868"
+    },
+    {
+      "label": "validator_progress_probe",
+      "classification": "validation receipt",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xml_file": "validator_progress_probe.xml",
+      "raw_xml_sha256": "a1858b8e03d8a46e0a647c435b6fcc609411192a65eb8a741aba479b708528a9"
+    }
+  ],
+  "genuine_timing_flakes": 0,
+  "no_third_flake_waived": true,
+  "all_failures_preserved": true,
+  "historical_contracts_migrated": [
+    "B26 generation-change",
+    "B27b generation-reset",
+    "B27b cross-midnight"
+  ],
+  "core_frozen_spec_sha256": "ac645f05a291c606ef1355a81f40ddfb0877014f53821706f14e1add97798278"
+}

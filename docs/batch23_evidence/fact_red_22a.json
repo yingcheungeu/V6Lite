@@ -1,0 +1,38 @@
+{
+  "label": "fact_red_22a",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "start_pt": "2026-10-09T15:32:30.922792-07:00",
+  "end_pt": "2026-10-09T15:32:32.036575-07:00",
+  "returncode": 0,
+  "source_code_sha": "f27e144de9eb406b",
+  "source_unchanged": true,
+  "worktree_code_sha": "b5526e309e7cd35d",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\fact_specs\\9629999e9099\\test_batch23_terminal_fact.py",
+      "sha256": "9629999e9099ec51860f412340411bb3aba2848c218c3dbea0240c7a73bd8b0a"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "stdout_sha256": "8afe2471606046b386cbefd7224d475f9d94ddb804d914ca3a5b3472c14d8f5c",
+  "junit_sha256": "99216c0191baeedc381ec330ed0aeab58571ce76f81cbeaea3e61ff661117e32"
+}

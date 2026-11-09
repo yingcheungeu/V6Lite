@@ -1,0 +1,52 @@
+...F....FFF                                                              [100%]
+================================== FAILURES ===================================
+_________ test_B31_old_confirmed_price_waits_without_freeze_or_P0[40] _________
+v6lite\tests\test_batch31_overnight.py:101: in test_B31_old_confirmed_price_waits_without_freeze_or_P0
+    assert bool(p1)==(seconds==40)
+E   assert False == (40 == 40)
+E    +  where False = bool([])
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+_____ test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009] ______
+v6lite\tests\test_batch31_close_card.py:13: in test_B31_close_waits_for_final_fee_or_three_second_estimate
+    assert cards(rig)==[]
+E   AssertionError: assert ['🟢 持仓已关闭\n标的...，已触发冷却不自动解除。'] == []
+E     
+E     Left contains one more item: '🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-6031f86bd4f641b79b68；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。'
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-6031f86bd4f641b79b68；净值 -0.17 USD；含估算佣金 1.00 USD
+______ test_B31_close_waits_for_final_fee_or_three_second_estimate[None] ______
+v6lite\tests\test_batch31_close_card.py:13: in test_B31_close_waits_for_final_fee_or_three_second_estimate
+    assert cards(rig)==[]
+E   AssertionError: assert ['🟢 持仓已关闭\n标的...，已触发冷却不自动解除。'] == []
+E     
+E     Left contains one more item: '🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-26ba3771f75948569137；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。'
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-26ba3771f75948569137；净值 -0.17 USD；含估算佣金 1.00 USD
+_____________ test_B31_unrelated_commission_does_not_release_wait _____________
+v6lite\tests\test_batch31_close_card.py:36: in test_B31_unrelated_commission_does_not_release_wait
+    assert not cards(rig)
+E   AssertionError: assert not ['🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-afe2ff9bc9da4610911c；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。']
+E    +  where ['🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-afe2ff9bc9da4610911c；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD；佣金已回报 3.01 + 估算 1.00 USD；已回报净值 0.83 USD；估算净值 -0.17 USD（1 笔佣金未回报）\n说明：缺佣金按近期同标的同方向同数量实际佣金估算，配置最低值兜底；实际回报后复算，已触发冷却不自动解除。'] = cards(<v6lite.tests.helpers.Rig object at 0x000001D87EE5E4D0>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00 | positionId=b30-prior-opening-stop-loss；净值 -2.00 USD；佣金已回报/已核定 | positionId=pos-afe2ff9bc9da4610911c；净值 -0.17 USD；含估算佣金 1.00 USD
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:62: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+  v6lite\tests\test_batch31_close_card.py:9: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('arrival',[.009,None])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_old_confirmed_price_waits_without_freeze_or_P0[40]
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+FAILED v6lite/tests/test_batch31_close_card.py::test_B31_unrelated_commission_does_not_release_wait
+4 failed, 7 passed, 4 warnings in 4.75s

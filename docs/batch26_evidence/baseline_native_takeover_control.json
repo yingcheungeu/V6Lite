@@ -1,0 +1,242 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "baseline_native_takeover_control",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-15T17:52:17.630075-07:00",
+  "end_pt": "2026-10-15T17:52:19.976453-07:00",
+  "returncode": 0,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "ea71abe782e4cf68",
+  "source_unchanged": true,
+  "worktree_code_sha": "dd4c0138dc564f53",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "dd4c0138dc564f534d52a93f533bc27d7e4153b351c579676018803c5b94a018",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_restart.py",
+      "sha256": "dd75b6fe9f3b8a416ca3f6fbf7479975264ed1c2dddd6c0fd6c899da7e134f2d"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-connection-after-wire]",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "::test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "::test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "::test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-connection-after-wire]"
+    ],
+    "executed": [
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "::test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "::test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "::test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-connection-after-wire]"
+    ]
+  },
+  "stdout_sha256": "f43ecb1e9f4af25e57e94be0408eae8f44ebd4d00aa9c01bff840ae940d23dbc",
+  "junit_sha256": "79eae1795687f828f1bf64a972272d5aa89c5572fd921d42555f4cbf9e11c8a6",
+  "inventory_sha256": "a99210da57d0160e7ca65ddf72fd1a554c12ffda3afd5b01914906ecdde2af3d"
+}

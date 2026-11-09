@@ -1,0 +1,9 @@
+{
+  "source_receipt": "focused_addendum_final_2",
+  "XML_sha256": "6a7a8fd2a3e8612028725c3dead67fc71271d3f8a1de01fdc960def34d010d74",
+  "cards": {
+    "b32_release_card_title": "✅ 已解除冻结 · AAPL · 持仓 0 股",
+    "b32_release_card_body": "✅ 已解除冻结 · AAPL · 持仓 0 股\n核验结果：AAPL：券商持仓 0 股，工作单与成交核验通过；冻结已解除。\n后续：核对本机 status 与 TWS；当日不再新入场。",
+    "b32a_refusal_card": "TEST · 人工释放被拒 · AAPL\n发生了什么：具体原因：保护单 2890 的撤单未被核实：completed orders 中未找到同 permId 的 Cancelled/ApiCancelled 记录。\n影响：冻结继续，尚未释放。\n你要做什么：在 TWS 核对 AAPL 的持仓、在途单及上述缺项；补齐证据后在本机重新运行 release AAPL。"
+  }
+}

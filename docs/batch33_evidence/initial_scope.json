@@ -1,0 +1,8 @@
+{
+  "lane": "code fix/offline exit logic",
+  "base": "ea692ddf9c142ae760cc3dfbe9c0d79d9b8b18aa",
+  "manual_sha256": "de5237bc5c03b462398b83acb3eb91aff039dd4c2589b9a1794614bc151565f0",
+  "instructions_sha256": "8f4c31c82b4ebc3c1633b1ecad362ec57b83646723c98a742b9315eed050784f",
+  "no_broker_connection": true,
+  "weekend_full_suite_allowed": true
+}

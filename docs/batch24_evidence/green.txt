@@ -1,0 +1,51 @@
+........................FF...FF......................................... [ 87%]
+..........                                                               [100%]
+================================== FAILURES ===================================
+_ test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator] _
+v6lite\tests\test_batch24_pacing.py:276: in test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position
+    assert len(times) <= 42, (driver, channel, len(times))
+E   AssertionError: ('coordinator', 'positions', 52)
+E   assert 52 <= 42
+E    +  where 52 = len([1791295231.0, 1791295232.0, 1791295234.0, 1791295238.0, 1791295246.0, 1791295246.0, ...])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-193175c3bc9644ebaf09 orderId=1003 permId=51003 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；原生账户、客户端、合约、类型、价格或数量身份无效；不授予释放权限
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-c14d168c8237434ba2fb | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    eventkit.event:event.py:217 Value () caused exception for event Event<disconnectedEvent, [[None, <weakref at 0x000002571A0645E0; dead>, <function IbkrBroker._on_disconnect at 0x00000257187B7920>]]>
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py", line 202, in emit
+    result = func(*args)
+             ^^^^^^^^^^^
+TypeError: IbkrBroker._on_disconnect() missing 1 required positional argument: 'self'
+ERROR    eventkit.event:event.py:217 Value () caused exception for event Event<disconnectedEvent, [[None, <weakref at 0x0000025717E26570; dead>, <function IbkrBroker._on_disconnect at 0x00000257187B7920>]]>
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py", line 202, in emit
+    result = func(*args)
+             ^^^^^^^^^^^
+TypeError: IbkrBroker._on_disconnect() missing 1 required positional argument: 'self'
+_ test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop] _
+v6lite\tests\test_batch24_pacing.py:276: in test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position
+    assert len(times) <= 42, (driver, channel, len(times))
+E   AssertionError: ('main-loop', 'positions', 52)
+E   assert 52 <= 42
+E    +  where 52 = len([1791295231.0, 1791295232.3, 1791295234.5, 1791295238.9, 1791295246.6, 1791295246.6, ...])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-63c1052945524828894e orderId=1003 permId=51003 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；原生账户、客户端、合约、类型、价格或数量身份无效；不授予释放权限
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-9d7f22af442f4805aa49 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset] _
+v6lite\tests\test_batch24_pacing_lifecycle.py:87: in test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes
+    assert timers and len(client._msgQ) == 3
+E   AssertionError: assert ([(1.000001, 1, namespace(cancelled=True, cancel=<function OfflineLoop.call_at.<locals>.<lambda> at 0x0000025719C7A7A0>...r.pacing.IbkrMessagePacer object at 0x0000025719D2F690>>, (<ib_insync.client.Client object at 0x0000025719D35810>, 1))] and 4 == 3)
+E    +  where 4 = len(deque(['3\x00old-place-one\x00', '4\x00old-cancel-two\x00', '3\x00old-place-three\x00', '49\x00old-capacity-9\x00']))
+E    +    where deque(['3\x00old-place-one\x00', '4\x00old-cancel-two\x00', '3\x00old-place-three\x00', '49\x00old-capacity-9\x00']) = <ib_insync.client.Client object at 0x0000025719D35810>._msgQ
+_ test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect] _
+v6lite\tests\test_batch24_pacing_lifecycle.py:87: in test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes
+    assert timers and len(client._msgQ) == 3
+E   AssertionError: assert ([(1.000001, 1, namespace(cancelled=True, cancel=<function OfflineLoop.call_at.<locals>.<lambda> at 0x0000025719C5D1C0>...r.pacing.IbkrMessagePacer object at 0x0000025719CE2F50>>, (<ib_insync.client.Client object at 0x0000025719CE0690>, 1))] and 4 == 3)
+E    +  where 4 = len(deque(['3\x00old-place-one\x00', '4\x00old-cancel-two\x00', '3\x00old-place-three\x00', '49\x00old-capacity-9\x00']))
+E    +    where deque(['3\x00old-place-one\x00', '4\x00old-cancel-two\x00', '3\x00old-place-three\x00', '49\x00old-capacity-9\x00']) = <ib_insync.client.Client object at 0x0000025719CE0690>._msgQ
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator]
+FAILED v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop]
+FAILED v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]
+FAILED v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]
+4 failed, 78 passed in 8.35s

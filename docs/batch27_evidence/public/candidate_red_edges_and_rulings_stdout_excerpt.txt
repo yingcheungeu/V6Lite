@@ -1,0 +1,180 @@
+FFFFFFFFFFFFFFFFF                                                        [100%]
+================================== FAILURES ===================================
+_ test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts _
+v6lite\tests\test_batch27_observer_atomicity.py:53: in test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts
+    assert counts == expected, ("exact retry counts", dict(counts), dict(expected))
+E   AssertionError: ('exact retry counts', {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 8, ('pos-99ec110ffc6246e8b7c4', 'PROT...4', 'PROTECT_STATE'): 4, ('pos-b27-volume-1', 'ORDER_PRICE_OBSERVATION'): 4, ('pos-b27-volume-1', 'PROTECT_STATE'): 4})
+E   assert Counter({('po...T_STATE'): 4}) == Counter({('po...T_STATE'): 4})
+E     
+E     Omitting 2 identical items, use -vv to show
+E     Differing items:
+E     {('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 8} != {('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 4}
+E     {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 8} != {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 4}
+E     Use -v to get more diff
+_ test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails _
+v6lite\tests\test_batch27_reset_isolation.py:44: in test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails
+    assert all(value == 0 for value in adapter._req_sent.values())
+E   assert False
+E    +  where False = all(<generator object test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails.<locals>.<genexpr> at 0x0000028E9E4BADC0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.ibkr:ibkr.py:397 unsolicited openOrders End; channel poisoned
+WARNING  v6lite.ibkr:ibkr.py:516 [QUERY] channel=positions failed: positions: an earlier request has not ended yet (1 owed); evidence unavailable
+_ test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report] _
+v6lite\tests\test_batch27_critical_attachments.py:97: in test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans
+    section, size, lines = _bounded(text)
+                           ^^^^^^^^^^^^^^
+v6lite\tests\test_batch27_critical_attachments.py:37: in _bounded
+    assert size <= 100 * 1024 and lines <= 200, ("critical main report cap", size, lines)
+E   AssertionError: ('critical main report cap', 12627, 201)
+E   assert (12627 <= (100 * 1024) and 201 <= 200)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-163f331d4c894f33a1a8 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.52；上次确认=2026-10-15T11:16:41+00:00 工作单证据时间=过期或缺失；工作中的保护合同价格与已确认或本代待确认价格不一致；不跟随券商价格改写账本
+_ test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement] _
+v6lite\tests\test_batch27_critical_attachments.py:97: in test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans
+    section, size, lines = _bounded(text)
+                           ^^^^^^^^^^^^^^
+v6lite\tests\test_batch27_critical_attachments.py:37: in _bounded
+    assert size <= 100 * 1024 and lines <= 200, ("critical main report cap", size, lines)
+E   AssertionError: ('critical main report cap', 12645, 201)
+E   assert (12645 <= (100 * 1024) and 201 <= 200)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-163f331d4c894f33a1a8 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.52；上次确认=2026-10-15T11:16:41+00:00 工作单证据时间=过期或缺失；工作中的保护合同价格与已确认或本代待确认价格不一致；不跟随券商价格改写账本
+_ test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main _
+v6lite\tests\test_batch27_critical_attachments.py:137: in test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main
+    records, digest = _attachment(path, text)
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch27_critical_attachments.py:50: in _attachment
+    assert matches, "main report must link the actual complete critical attachment"
+E   AssertionError: main report must link the actual complete critical attachment
+E   assert []
+_ test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one] _
+v6lite\tests\test_batch27_execution_log_aggregation.py:110: in test_B27_full_native_evidence_log_budget_includes_complete_executions
+    assert len(normal) <= budget, ("full native normal lines", len(normal), budget, index)
+E   AssertionError: ('full native normal lines', 2017, 2000, 2000)
+E   assert 2017 <= 2000
+E    +  where 2017 = len(['2026-10-18 08:36:44,998 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...,015 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41', ...])
+---------------------------- Captured stdout call -----------------------------
+2026-10-18 08:36:44,998 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,012 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,013 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,013 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,014 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,015 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,016 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,016 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,017 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,017 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,018 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,018 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,019 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,019 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,020 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,020 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,021 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,021 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,022 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,022 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,023 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,023 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,024 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,024 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,025 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,026 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,042 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,042 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,043 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,043 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,044 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,044 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,045 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,045 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,046 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,046 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,047 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,047 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,048 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,048 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,049 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,049 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,050 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,050 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,051 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,051 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,052 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,052 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,053 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,053 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,054 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,054 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,055 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,055 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,056 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,056 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,057 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,058 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,058 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,059 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,059 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,060 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,075 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,075 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,076 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,076 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,076 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,077 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,077 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,078 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,078 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,079 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,079 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,080 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,080 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,081 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,081 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,082 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,082 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,083 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,083 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,084 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,084 INFO v6lite.ibkr [QUERY_SUMMARY] {"channels": {"openOrders": {"count": 121, "drained": 0, "max_seconds": 0.0}, "positions": {"count": 120, "drained": 0, "max_seconds": 0.0}}}
+2026-10-18 08:36:45,084 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,085 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:36:45,086 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41

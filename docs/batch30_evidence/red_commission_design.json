@@ -1,0 +1,8 @@
+{
+  "external_test_path": "C:\\tmp\\test_batch30_commission_red.py",
+  "source_archive": "docs/batch30_evidence/red_commission_source.py.txt",
+  "source_sha256": "4baf7a64e679bed1720dafa6271055f837035cd62d55c35529b00cc7e20a1f34",
+  "production_matches_baseline_tag": true,
+  "new_source_imports": false,
+  "case_count": 3
+}

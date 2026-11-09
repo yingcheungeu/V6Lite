@@ -1,0 +1,1011 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "final_legacy_contract_and_reports",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T17:16:03.220883-07:00",
+  "end_pt": "2026-10-18T17:16:15.595432-07:00",
+  "returncode": 0,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "73babb393a9f86f9",
+  "source_unchanged": true,
+  "worktree_code_sha": "73babb393a9f86f9",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "73babb393a9f86f93c3f1ff14169eeec84579dbe1d8a061452d9eb4521dad319",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch10.py",
+      "sha256": "e5004f67d963f2717d774ab8bd5204f9a87a381f274b9d66f4766daa42bec8c9"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_shutdown_report.py",
+      "sha256": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_broker_diagnostics.py",
+      "sha256": "f5bcb0a7ab3d199123dbbbfcdc2d562c137d0626f85f5196375a1e047ff9d37e"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_error_provenance.py",
+      "sha256": "fcf063c69658242b034f401e0a0a65382c53e542edbda716679962086f54345b"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch22_schema_audit.py",
+      "sha256": "374ae51b92eee5ea1e48ff4ca145422f1d106b0d33cf8f94b57d6261b24c7927"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 117,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_each_dry_attempt_reports_final_gate_and_never_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_early_refusal_reports_every_attempt_without_writes[global_kill-kill_switch:batch10 early refusal]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_early_refusal_reports_every_attempt_without_writes[symbol_ignored-protected_or_ignored]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_early_refusal_reports_every_attempt_without_writes[no_quote-no_quote]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_early_refusal_reports_every_attempt_without_writes[price_drift-price_drift]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_early_refusal_reports_every_attempt_without_writes[size_zero-size_below_one_share]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_dry_attempt_queries_working_orders_and_rechecks_inputs",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_stale_funds_is_a_reported_refusal_not_a_false_would_buy",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_combo_arriving_in_entry_query_refuses_dry_attempt",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_event_arriving_during_query_is_processed_before_gate",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_dry_stream_resubscribes_after_210_seconds_without_faking_freshness",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F2_paper_formal_delayed_data_fails_with_config_error",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F2_delayed_data_remains_available_for_dry_run",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F3_start_open_and_two_hour_repeats_only",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F3_outside_rth_repetition_is_logged_without_paging",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F3_changed_symbols_page_immediately_and_resolve_resets_condition",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F3_other_alert_repeat_windows_are_preserved[P1-60-2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F3_other_alert_repeat_windows_are_preserved[P0-30-3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F4_code_sha_is_present_and_identical_in_all_four_outputs",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F4_code_digest_covers_sorted_non_cache_files",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F5_history_logs_symbol_elapsed_count_and_last_date",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F5_query_elapsed_includes_old_end_drain[positions-reqPositions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F5_query_elapsed_includes_old_end_drain[openOrders-reqAllOpenOrders]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F5_slow_tick_reports_elapsed_and_work_phase",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F6_delivery_result_is_single_line_and_never_contains_secret[ok]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F6_delivery_result_is_single_line_and_never_contains_secret[fail]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F7_probe_refresh_is_nonblocking_and_times_first_new_callback",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F7_probe_timing_summary_keeps_full_names",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F7_report_counts_actual_unusable_quotes_not_only_subscription_errors",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_just_before_early_close_does_not_report[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_just_before_early_close_does_not_report[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_written_local_report_marker_also_prevents_duplicate_rendering[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_written_local_report_marker_also_prevents_duplicate_rendering[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_broker_diagnostics",
+      "name": "test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-cleared-metadata]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-zero-perm]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[funds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[history]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_array]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_null]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_string]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_bid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[nan_bid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[empty]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[capacity_proof]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[durable_intent]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch23_error_provenance",
+      "name": "test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_old_schema4_empty_protection_database_remains_compatible",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_old_schema4_rows_gain_only_legacy_type_metadata_and_keep_indexes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_schema_upgrade_rolls_back_both_tables_when_protection_ddl_fails",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_legacy_protection_startup_pages_p0_and_makes_zero_broker_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_legacy_type_release_is_refused_even_with_complete_flat_proof",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-STOP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-STOP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-STOP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[-1.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_new_protection_plan_uses_stp_metadata_and_null_limit_before_entry_fill",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_new_stp_intent_has_null_limit_and_native_order_has_no_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[partial-adverse]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[full-favorable]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_protect_average_is_per_intent_weighted_actual_execution_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_retired_identity_persists_order_type_and_original_stop_across_reopen",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_retired_fill_uses_immutable_old_stop_not_replacement_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_price_pending_execution_audit_keeps_stop_and_slippage_unknown",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_after_closed_real_retired_exec_is_audited_without_second_pnl_or_close",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch10.py::test_F1_each_dry_attempt_reports_final_gate_and_never_writes",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[global_kill-kill_switch:batch10 early refusal]",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[symbol_ignored-protected_or_ignored]",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[no_quote-no_quote]",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[price_drift-price_drift]",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[size_zero-size_below_one_share]",
+      "v6lite/tests/test_batch10.py::test_F1_dry_attempt_queries_working_orders_and_rechecks_inputs",
+      "v6lite/tests/test_batch10.py::test_F1_stale_funds_is_a_reported_refusal_not_a_false_would_buy",
+      "v6lite/tests/test_batch10.py::test_F1_combo_arriving_in_entry_query_refuses_dry_attempt",
+      "v6lite/tests/test_batch10.py::test_F1_event_arriving_during_query_is_processed_before_gate",
+      "v6lite/tests/test_batch10.py::test_F1_dry_stream_resubscribes_after_210_seconds_without_faking_freshness",
+      "v6lite/tests/test_batch10.py::test_F2_paper_formal_delayed_data_fails_with_config_error",
+      "v6lite/tests/test_batch10.py::test_F2_delayed_data_remains_available_for_dry_run",
+      "v6lite/tests/test_batch10.py::test_F3_start_open_and_two_hour_repeats_only",
+      "v6lite/tests/test_batch10.py::test_F3_outside_rth_repetition_is_logged_without_paging",
+      "v6lite/tests/test_batch10.py::test_F3_changed_symbols_page_immediately_and_resolve_resets_condition",
+      "v6lite/tests/test_batch10.py::test_F3_other_alert_repeat_windows_are_preserved[P1-60-2]",
+      "v6lite/tests/test_batch10.py::test_F3_other_alert_repeat_windows_are_preserved[P0-30-3]",
+      "v6lite/tests/test_batch10.py::test_F4_code_sha_is_present_and_identical_in_all_four_outputs",
+      "v6lite/tests/test_batch10.py::test_F4_code_digest_covers_sorted_non_cache_files",
+      "v6lite/tests/test_batch10.py::test_F5_history_logs_symbol_elapsed_count_and_last_date",
+      "v6lite/tests/test_batch10.py::test_F5_query_elapsed_includes_old_end_drain[positions-reqPositions]",
+      "v6lite/tests/test_batch10.py::test_F5_query_elapsed_includes_old_end_drain[openOrders-reqAllOpenOrders]",
+      "v6lite/tests/test_batch10.py::test_F5_slow_tick_reports_elapsed_and_work_phase",
+      "v6lite/tests/test_batch10.py::test_F6_delivery_result_is_single_line_and_never_contains_secret[ok]",
+      "v6lite/tests/test_batch10.py::test_F6_delivery_result_is_single_line_and_never_contains_secret[fail]",
+      "v6lite/tests/test_batch10.py::test_F7_probe_refresh_is_nonblocking_and_times_first_new_callback",
+      "v6lite/tests/test_batch10.py::test_F7_probe_timing_summary_keeps_full_names",
+      "v6lite/tests/test_batch10.py::test_F7_report_counts_actual_unusable_quotes_not_only_subscription_errors",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_just_before_early_close_does_not_report[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_just_before_early_close_does_not_report[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_written_local_report_marker_also_prevents_duplicate_rendering[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_written_local_report_marker_also_prevents_duplicate_rendering[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-cleared-metadata]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-zero-perm]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[funds]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[history]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_array]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_null]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_string]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_bid]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[nan_bid]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_gap]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[empty]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[missing]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[capacity_proof]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[durable_intent]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_old_schema4_empty_protection_database_remains_compatible",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_old_schema4_rows_gain_only_legacy_type_metadata_and_keep_indexes",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_schema_upgrade_rolls_back_both_tables_when_protection_ddl_fails",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_legacy_protection_startup_pages_p0_and_makes_zero_broker_writes",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_legacy_type_release_is_refused_even_with_complete_flat_proof",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-ENTRY]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-TP1]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-STOP]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-ENTRY]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-TP1]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-STOP]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-ENTRY]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-TP1]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-STOP]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[0.0]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[-1.0]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_new_protection_plan_uses_stp_metadata_and_null_limit_before_entry_fill",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_new_stp_intent_has_null_limit_and_native_order_has_no_limit",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[partial-adverse]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[full-favorable]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_protect_average_is_per_intent_weighted_actual_execution_price",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_retired_identity_persists_order_type_and_original_stop_across_reopen",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_retired_fill_uses_immutable_old_stop_not_replacement_price",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_price_pending_execution_audit_keeps_stop_and_slippage_unknown",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_after_closed_real_retired_exec_is_audited_without_second_pnl_or_close"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch10.py::test_F1_each_dry_attempt_reports_final_gate_and_never_writes",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[global_kill-kill_switch:batch10 early refusal]",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[symbol_ignored-protected_or_ignored]",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[no_quote-no_quote]",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[price_drift-price_drift]",
+      "v6lite/tests/test_batch10.py::test_F1_early_refusal_reports_every_attempt_without_writes[size_zero-size_below_one_share]",
+      "v6lite/tests/test_batch10.py::test_F1_dry_attempt_queries_working_orders_and_rechecks_inputs",
+      "v6lite/tests/test_batch10.py::test_F1_stale_funds_is_a_reported_refusal_not_a_false_would_buy",
+      "v6lite/tests/test_batch10.py::test_F1_combo_arriving_in_entry_query_refuses_dry_attempt",
+      "v6lite/tests/test_batch10.py::test_F1_event_arriving_during_query_is_processed_before_gate",
+      "v6lite/tests/test_batch10.py::test_F1_dry_stream_resubscribes_after_210_seconds_without_faking_freshness",
+      "v6lite/tests/test_batch10.py::test_F2_paper_formal_delayed_data_fails_with_config_error",
+      "v6lite/tests/test_batch10.py::test_F2_delayed_data_remains_available_for_dry_run",
+      "v6lite/tests/test_batch10.py::test_F3_start_open_and_two_hour_repeats_only",
+      "v6lite/tests/test_batch10.py::test_F3_outside_rth_repetition_is_logged_without_paging",
+      "v6lite/tests/test_batch10.py::test_F3_changed_symbols_page_immediately_and_resolve_resets_condition",
+      "v6lite/tests/test_batch10.py::test_F3_other_alert_repeat_windows_are_preserved[P1-60-2]",
+      "v6lite/tests/test_batch10.py::test_F3_other_alert_repeat_windows_are_preserved[P0-30-3]",
+      "v6lite/tests/test_batch10.py::test_F4_code_sha_is_present_and_identical_in_all_four_outputs",
+      "v6lite/tests/test_batch10.py::test_F4_code_digest_covers_sorted_non_cache_files",
+      "v6lite/tests/test_batch10.py::test_F5_history_logs_symbol_elapsed_count_and_last_date",
+      "v6lite/tests/test_batch10.py::test_F5_query_elapsed_includes_old_end_drain[positions-reqPositions]",
+      "v6lite/tests/test_batch10.py::test_F5_query_elapsed_includes_old_end_drain[openOrders-reqAllOpenOrders]",
+      "v6lite/tests/test_batch10.py::test_F5_slow_tick_reports_elapsed_and_work_phase",
+      "v6lite/tests/test_batch10.py::test_F6_delivery_result_is_single_line_and_never_contains_secret[ok]",
+      "v6lite/tests/test_batch10.py::test_F6_delivery_result_is_single_line_and_never_contains_secret[fail]",
+      "v6lite/tests/test_batch10.py::test_F7_probe_refresh_is_nonblocking_and_times_first_new_callback",
+      "v6lite/tests/test_batch10.py::test_F7_probe_timing_summary_keeps_full_names",
+      "v6lite/tests/test_batch10.py::test_F7_report_counts_actual_unusable_quotes_not_only_subscription_errors",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_just_before_early_close_does_not_report[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_just_before_early_close_does_not_report[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_written_local_report_marker_also_prevents_duplicate_rendering[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_written_local_report_marker_also_prevents_duplicate_rendering[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1]",
+      "v6lite/tests/test_batch23_broker_diagnostics.py::test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-cleared-metadata]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-zero-perm]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[funds]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[history]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_array]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_null]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_string]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_bid]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[nan_bid]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_gap]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[empty]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[missing]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[capacity_proof]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[durable_intent]",
+      "v6lite/tests/test_batch23_error_provenance.py::test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_old_schema4_empty_protection_database_remains_compatible",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_old_schema4_rows_gain_only_legacy_type_metadata_and_keep_indexes",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_schema_upgrade_rolls_back_both_tables_when_protection_ddl_fails",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_legacy_protection_startup_pages_p0_and_makes_zero_broker_writes",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_legacy_type_release_is_refused_even_with_complete_flat_proof",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-ENTRY]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-TP1]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-STOP]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-ENTRY]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-TP1]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-STOP]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-ENTRY]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-TP1]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-STOP]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[0.0]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[-1.0]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_new_protection_plan_uses_stp_metadata_and_null_limit_before_entry_fill",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_new_stp_intent_has_null_limit_and_native_order_has_no_limit",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[partial-adverse]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[full-favorable]",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_protect_average_is_per_intent_weighted_actual_execution_price",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_retired_identity_persists_order_type_and_original_stop_across_reopen",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_retired_fill_uses_immutable_old_stop_not_replacement_price",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_price_pending_execution_audit_keeps_stop_and_slippage_unknown",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day",
+      "v6lite/tests/test_batch22_schema_audit.py::test_B22_after_closed_real_retired_exec_is_audited_without_second_pnl_or_close"
+    ]
+  },
+  "stdout_sha256": "63c211d2e181ca465e996f570c6903d558fb1d9a2cc51d0f894c0e507a743e33",
+  "junit_sha256": "a252ef6efb216ce8675111cf842e410b9302a020f18231a85e50bf9c8efc0f81",
+  "inventory_sha256": "ec4d290fcf7e4f268f427e3efa814b0b344d8b94770f6f4c6b983bf83e8b7ab9",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "final_legacy_contract_and_reports.json": "afbcae2745b4d464ececbd159bcff6204a605e94dd855e36a8ee9fb46e41f905",
+      "final_legacy_contract_and_reports.xml": "a252ef6efb216ce8675111cf842e410b9302a020f18231a85e50bf9c8efc0f81",
+      "final_legacy_contract_and_reports_inventory.json": "945cb3d1284b3ccc3c314b69a2f25765dde5f6d47268d48284416bd01d35c67c",
+      "final_legacy_contract_and_reports.txt": "63c211d2e181ca465e996f570c6903d558fb1d9a2cc51d0f894c0e507a743e33"
+    }
+  }
+}

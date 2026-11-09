@@ -1,0 +1,137 @@
+FFF......F...................F......................FFFF..               [100%]
+================================== FAILURES ===================================
+_ test_B28c_native_openOrder_only_BE_confirms_then_TP2_TP3_complete_without_oversell _
+v6lite\tests\test_batch28c_price_confirmation.py:297: in test_B28c_native_openOrder_only_BE_confirms_then_TP2_TP3_complete_without_oversell
+    _finish_tp2_and_tp3(rig, pid, wire)
+v6lite\tests\test_batch28c_price_confirmation.py:257: in _finish_tp2_and_tp3
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 25, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function _finish_tp2_and_tp3.<locals>.<lambda> at 0x000002B37E4979C0>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+_ test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[same-day] _
+v6lite\tests\test_batch28c_price_confirmation.py:335: in test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 35, 1000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming.<locals>.<lambda> at 0x000002B37E8880E0>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-21T15:03:25.001000+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+_ test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[next-trading-day] _
+v6lite\tests\test_batch28c_price_confirmation.py:335: in test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 33, 8, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming.<locals>.<lambda> at 0x000002B37E88BC40>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-21T15:03:25.001000+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+_ test_B28c_creation_bound_connect_openOrder_cannot_confirm_after_sync_finishes _
+v6lite\tests\test_batch28c_price_confirmation.py:378: in test_B28c_creation_bound_connect_openOrder_cannot_confirm_after_sync_finishes
+    assert all(event.connection_snapshot for event in events)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28c_price_confirmation.py:378: in <genexpr>
+    assert all(event.connection_snapshot for event in events)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'ExecutionTimeDiagnosticEvent' object has no attribute 'connection_snapshot'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+__ test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second __
+v6lite\tests\test_batch28c_native_latency.py:315: in test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+    assert elapsed <= 1., ('ACK -> actual conn.sendMsg DAY LMT', elapsed, server.requests, server.ends)
+E   AssertionError: ('ACK -> actual conn.sendMsg DAY LMT', 4.203000000008615, [(169520.625, '16', ('16', '1', '')), (169520.687, '61', ('6...ecutions', 707), (169521.859, 'account', 708), (169521.921, 'openOrders', None), (169522.015, 'positions', None), ...])
+E   assert 4.203000000008615 <= 1.0
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:39: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    _tick_until(rig, lambda: any(proof and name == 'account_executions_today_scoped'
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 4, 10, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade.<locals>.<lambda> at 0x000002B37E778F40>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-505881b6f72e45ddb0be | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-f38c74d4dae64741ad0e orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:25.001000+00:00 工作单证据时间=2026-10-21T15:03:24.001000+00:00；持仓、工作单、执行三项证据查询失败：ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-505881b6f72e45ddb0be | AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=2.0 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=当日可见，未宣称全账户；核验时间=2026-10-21T15:03:26.002000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker/runtime mismatch | open_orders_unavailable:protection STK/USD contract evidence incomplete or inconsistent | Resolve with `status`, then `ignore` for unmanaged holdings (v1 has no adopt). A managed position that stays different is frozen: flatten it in TWS, then `release` it. Broker truth is never overwritten.
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:39: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    _tick_until(rig, lambda: any(proof and name == 'account_executions_today_scoped'
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 4, 10, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade.<locals>.<lambda> at 0x000002B37E77A160>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-57d2677ce64b4bf6960e | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-59d6f2d3ba974320ba90 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:25.001000+00:00 工作单证据时间=2026-10-21T15:03:24.001000+00:00；持仓、工作单、执行三项证据查询失败：ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-57d2677ce64b4bf6960e | AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=2.0 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=当日可见，未宣称全账户；核验时间=2026-10-21T15:03:26.002000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker/runtime mismatch | open_orders_unavailable:protection STK/USD contract evidence incomplete or inconsistent | Resolve with `status`, then `ignore` for unmanaged holdings (v1 has no adopt). A managed position that stays different is frozen: flatten it in TWS, then `release` it. Broker truth is never overwritten.
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:39: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    _tick_until(rig, lambda: any(proof and name == 'account_executions_today_scoped'
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 4, 10, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade.<locals>.<lambda> at 0x000002B37E6C7740>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-76f57cf37c4f406cb4a8 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-1e86aa92e25c4100ae9c orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:25.001000+00:00 工作单证据时间=2026-10-21T15:03:24.001000+00:00；持仓、工作单、执行三项证据查询失败：ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-76f57cf37c4f406cb4a8 | AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=2.0 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=当日可见，未宣称全账户；核验时间=2026-10-21T15:03:26.002000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker/runtime mismatch | open_orders_unavailable:protection STK/USD contract evidence incomplete or inconsistent | Resolve with `status`, then `ignore` for unmanaged holdings (v1 has no adopt). A managed position that stays different is frozen: flatten it in TWS, then `release` it. Broker truth is never overwritten.
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:39: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    _tick_until(rig, lambda: any(proof and name == 'account_executions_today_scoped'
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 4, 10, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade.<locals>.<lambda> at 0x000002B37E810680>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.engine:engine.py:580 protection priority still pending after bounded continuation
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-66cb1222c7a6484ea5e6 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-05ef1cdda0fa49a29298 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=338.62；上次确认=2026-10-21T15:03:25.001000+00:00 工作单证据时间=2026-10-21T15:03:24.001000+00:00；持仓、工作单、执行三项证据查询失败：ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-66cb1222c7a6484ea5e6 | AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=2.0 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=当日可见，未宣称全账户；核验时间=2026-10-21T15:03:26.002000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker/runtime mismatch | open_orders_unavailable:protection STK/USD contract evidence incomplete or inconsistent | Resolve with `status`, then `ignore` for unmanaged holdings (v1 has no adopt). A managed position that stays different is frozen: flatten it in TWS, then `release` it. Broker truth is never overwritten.
+============================== warnings summary ===============================
+v6lite/tests/test_batch28c_native_latency.py::test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+  v6lite\tests\test_batch28c_native_latency.py:306: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_native_openOrder_only_BE_confirms_then_TP2_TP3_complete_without_oversell
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[same-day]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[next-trading-day]
+FAILED v6lite/tests/test_batch28c_price_confirmation.py::test_B28c_creation_bound_connect_openOrder_cannot_confirm_after_sync_finishes
+FAILED v6lite/tests/test_batch28c_native_latency.py::test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-owned-round]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-owned-round]
+9 failed, 49 passed, 1 warning in 98.84s (0:01:38)

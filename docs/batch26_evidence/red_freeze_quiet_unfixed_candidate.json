@@ -1,0 +1,154 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_freeze_quiet_unfixed_candidate",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-15T17:52:12.063331-07:00",
+  "end_pt": "2026-10-15T17:52:15.411217-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "dd4c0138dc564f53",
+  "source_unchanged": true,
+  "worktree_code_sha": "dd4c0138dc564f53",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "dd4c0138dc564f534d52a93f533bc27d7e4153b351c579676018803c5b94a018",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_constraint_policy.py",
+      "sha256": "d6123be09a81eb27287dd8fae4187121ccd129da8ce38113469f0d7b489c1a8b"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 13,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_enum_default_and_all_five_examples_remain_freeze",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]",
+      "outcome": "failure",
+      "message": "AssertionError: healthy default-freeze takeover must retain B25 silence\nassert ['overnight T...差异，不要盲目新增卖单。'] == []\n  \n  Left contains one more item: 'overnight TP evidence pos-0a91323fe3964442830a\\nAAPL：overnight_tp=freeze：默认只保留止损，过夜自动止盈/保本受限制；券商 P=3 股，账本=3 股，STP S=3...与券商一致。\\n影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_actual_missing_protection_still_retains_original_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_enum_default_and_all_five_examples_remain_freeze",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_actual_missing_protection_still_retains_original_P0",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_enum_default_and_all_five_examples_remain_freeze",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_actual_missing_protection_still_retains_original_P0",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence"
+    ]
+  },
+  "stdout_sha256": "d0e2d99ec3183e7f7391e5bb5fbd0cef555405a378aa33baf70329312e96f4e6",
+  "junit_sha256": "a7e6183f7230669bf5b8e1bd537d54b4d93c939eaeb1ae8796c043a206de66c1",
+  "inventory_sha256": "eee93952476f7466ffd310e608ef5c4b2a5449bf19ff9b6f3e4e3e074ce57cfe"
+}

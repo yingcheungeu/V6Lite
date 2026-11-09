@@ -1,0 +1,619 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "candidate_initial_69",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T08:21:05.522496-07:00",
+  "end_pt": "2026-10-18T08:26:18.053624-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "b48c659be8159ae7",
+  "source_unchanged": true,
+  "worktree_code_sha": "b48c659be8159ae7",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "b48c659be8159ae71384249aff0e9392d91fa0b88bb75a79ba945c9ec40c4002",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observation_audit.py",
+      "sha256": "754913f4edfdc3cb77b7e22d65ac64140a7754aba64ee3b0686bda35d5916ae1"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_daily_report_volume.py",
+      "sha256": "d063e2e5f289da20e61ea54d9cee8472caf9467789b8bce85b33501ca01d2c62"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py",
+      "sha256": "4010cb27dc176a4167c7de8201db37ed6ab2314e73e15db85e373c4f77026b6f"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 69,
+    "failures": 6,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]",
+      "outcome": "failure",
+      "message": "AssertionError: assert '2026-10-16T00:16:26+00:00' == '2026-10-16T00:16:28+00:00'\n  \n  - 2026-10-16T00:16:28+00:00\n  ?                   ^\n  + 2026-10-16T00:16:26+00:00\n  ?                   ^"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]",
+      "outcome": "failure",
+      "message": "AssertionError: assert '2026-10-16T00:16:26+00:00' == '2026-10-16T00:16:28+00:00'\n  \n  - 2026-10-16T00:16:28+00:00\n  ?                   ^\n  + 2026-10-16T00:16:26+00:00\n  ?                   ^"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]",
+      "outcome": "failure",
+      "message": "AssertionError: assert '2026-10-16T00:16:40+00:00' == '2026-10-16T00:16:42+00:00'\n  \n  - 2026-10-16T00:16:42+00:00\n  ?                   ^\n  + 2026-10-16T00:16:40+00:00\n  ?                   ^"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]",
+      "outcome": "failure",
+      "message": "AssertionError: assert '2026-10-16T00:16:40+00:00' == '2026-10-16T00:16:42+00:00'\n  \n  - 2026-10-16T00:16:42+00:00\n  ?                   ^\n  + 2026-10-16T00:16:40+00:00\n  ?                   ^"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[intent_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[client_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[trigger_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[limit_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[requested_qty]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[confirmed_remaining]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_max_remaining]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_qty]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[state]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_trigger]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_limit]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[modify_generation]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[status_seen_generation]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[broker_order_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[perm_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_a_started_at]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_b_started_at]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_stage]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_qty]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_intent_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_confirmed_at_refresh_persists_without_audit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[source]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[aux_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[broker_echo_lmt]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[mkt_cap_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[mkt_cap_price_raw]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[cap_valid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[error_code]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[reason]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[intent_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[position_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_repeated_price_error_or_reason_is_always_written[kwargs0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_repeated_price_error_or_reason_is_always_written[kwargs1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_audit_insert_failure_does_not_publish_dedup_cache",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_protection_tx_rollback_never_publishes_uncommitted_state",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_actual_socket_generation_flushes_old_counts_and_reobserves",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_restart_first_observation_is_not_suppressed_by_durable_history",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_observation_outer_transaction_rollback_preserves_first_sighting",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_actual_fresh_protection_progress_refreshes_row_without_state_audit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[sent_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[working_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_duplicate_tp_observations_still_execute_following_evidence_path",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical",
+      "outcome": "failure",
+      "message": "AssertionError: ('ordinary Events lines', 201)\nassert 201 <= 200\n +  where 201 = len(['', '', '| Kind | Count | First UTC | Last UTC |', '|---|---:|---|---|', '| ANOMALY | 3 | 2026-10-15T23:16:41+00:00 | 2026-10-15T23:16:43+00:00 |', '| SCAN | 1,000 | 2026-10-15T11:16:41+00:00 | 2026-10-15T11:33:20+00:00 |', ...])\n +    where ['', '', '| Kind | Count | First UTC | Last UTC |', '|---|---:|---|---|', '| ANOMALY | 3 | 2026-10-15T23:16:41+00:00 | 2026-10-15T23:16:43+00:00 |', '| SCAN | 1,000 | 2026-10-15T11:16:41+00:00 | 2026-10-15T11:33:20+00:00 |', ...] = <built-in method splitlines of str object at 0x0000023BB9FFB460>()\n +      where <built-in method splitlines of str object at 0x0000023BB9FFB460> = '\\n\\n| Kind | Count | First UTC | Last UTC |\\n|---|---:|---|---|\\n| ANOMALY | 3 | 2026-10-15T23:16:41+00:00 | 2026-10-...: \"B27-ordinary-187\"}\\n- 11:19:49Z SCAN {\"counter\": 188, \"marker\": \"B27-ordinary-188\"}\\n- 另有 811 条，完整记录在状态库 audit 表。\\n'.splitlines"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_consecutive_identical_ordinary_rows_have_count_and_first_last",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_report_account_mask_does_not_change_internal_identity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_successful_query_details_are_debug_and_not_info_file",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_summary_counts_channels_and_flushes_pending_on_disconnect",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_each_failed_query_remains_warning_with_no_success_claim",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DU******567]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[U******567]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DF******567]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DFA******567]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[F******567]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[I******567]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_startup_and_heartbeat_log_masks_leave_state_and_cards_unchanged",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression",
+      "outcome": "failure",
+      "message": "TypeError: Wrapper.error() missing 1 required positional argument: 'advancedOrderRejectJson'"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[account]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[client_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[con_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[trigger_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[limit_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[requested_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[confirmed_remaining]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_max_remaining]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[state]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_trigger]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_limit]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[modify_generation]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[status_seen_generation]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[broker_order_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[perm_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_a_started_at]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_b_started_at]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_stage]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_confirmed_at_refresh_persists_without_audit",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[source]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[aux_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[broker_echo_lmt]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[mkt_cap_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[mkt_cap_price_raw]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[cap_valid]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[error_code]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[reason]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[symbol]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[position_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_repeated_price_error_or_reason_is_always_written[kwargs0]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_repeated_price_error_or_reason_is_always_written[kwargs1]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_audit_insert_failure_does_not_publish_dedup_cache",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_protection_tx_rollback_never_publishes_uncommitted_state",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_actual_socket_generation_flushes_old_counts_and_reobserves",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_restart_first_observation_is_not_suppressed_by_durable_history",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_observation_outer_transaction_rollback_preserves_first_sighting",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_actual_fresh_protection_progress_refreshes_row_without_state_audit",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[sent_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[working_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_duplicate_tp_observations_still_execute_following_evidence_path",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_consecutive_identical_ordinary_rows_have_count_and_first_last",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_report_account_mask_does_not_change_internal_identity",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_successful_query_details_are_debug_and_not_info_file",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_summary_counts_channels_and_flushes_pending_on_disconnect",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_each_failed_query_remains_warning_with_no_success_claim",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DU******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[U******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DF******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DFA******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[F******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[I******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_startup_and_heartbeat_log_masks_leave_state_and_cards_unchanged",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[account]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[client_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[con_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[trigger_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[limit_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[requested_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[confirmed_remaining]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_max_remaining]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[state]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_trigger]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_limit]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[modify_generation]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[status_seen_generation]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[broker_order_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[perm_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_a_started_at]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_b_started_at]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_stage]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_confirmed_at_refresh_persists_without_audit",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[source]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[aux_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[broker_echo_lmt]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[mkt_cap_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[mkt_cap_price_raw]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[cap_valid]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[error_code]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[reason]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[symbol]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[position_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_repeated_price_error_or_reason_is_always_written[kwargs0]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_repeated_price_error_or_reason_is_always_written[kwargs1]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_audit_insert_failure_does_not_publish_dedup_cache",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_protection_tx_rollback_never_publishes_uncommitted_state",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_actual_socket_generation_flushes_old_counts_and_reobserves",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_restart_first_observation_is_not_suppressed_by_durable_history",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_observation_outer_transaction_rollback_preserves_first_sighting",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_actual_fresh_protection_progress_refreshes_row_without_state_audit",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[sent_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[working_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_duplicate_tp_observations_still_execute_following_evidence_path",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_consecutive_identical_ordinary_rows_have_count_and_first_last",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_report_account_mask_does_not_change_internal_identity",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_successful_query_details_are_debug_and_not_info_file",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_summary_counts_channels_and_flushes_pending_on_disconnect",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_each_failed_query_remains_warning_with_no_success_claim",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DU******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[U******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DF******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DFA******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[F******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[I******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_startup_and_heartbeat_log_masks_leave_state_and_cards_unchanged",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression"
+    ]
+  },
+  "stdout_sha256": "a8d02639470794f477cea8b840ba0ac12ed702d2b0bb0150ced3955ebdad716a",
+  "junit_sha256": "75758ff9aeb0bd977d4fed7e311f16b2225859bfe6c23598837fab12b1de7ea7",
+  "inventory_sha256": "c5a672116dd10d8c6e81f082530a23d688797c33a3524827a27d920a2e9f6d72",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "candidate_initial_69.json": "3182ab6de5d37c290dd4dbeaa252e90fff1c9506e1c7b71f42d8fbb903a0c915",
+      "candidate_initial_69.xml": "86df953ec80f17e8dfaa663ea37e50e661a3b41d5ac6071c62631f6ab2495c3a",
+      "candidate_initial_69_inventory.json": "d0780e519ff8ef6ec5b7f09b5f20e8782e176d1ce2d5b66bf5d4591911cf22a4",
+      "candidate_initial_69.txt": "a8d02639470794f477cea8b840ba0ac12ed702d2b0bb0150ced3955ebdad716a"
+    }
+  }
+}

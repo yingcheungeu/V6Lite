@@ -1,0 +1,71 @@
+{
+  "label": "focused_legacy_migrated",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T19:38:18.176286-07:00",
+  "end_pt": "2026-10-20T19:38:32.859683-07:00",
+  "seconds": 14.688,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch17_heartbeat_account.py",
+    "v6lite/tests/test_batch19.py",
+    "v6lite/tests/test_batch19_funds.py",
+    "v6lite/tests/test_batch19_review_edges.py",
+    "v6lite/tests/test_batch27_observer_atomicity.py",
+    "v6lite/tests/test_batch27_daily_report_volume.py",
+    "v6lite/tests/test_batch27_masked_report_budget.py",
+    "v6lite/tests/test_batch27_short_account_budget.py",
+    "v6lite/tests/test_batch28_lifecycle.py"
+  ],
+  "tests": 113,
+  "failures": 7,
+  "errors": 0,
+  "skipped": 0,
+  "source_unchanged": true,
+  "inventory_sha256": "cf73c25d53ba2585d60cf8b3051393e64cb0bbfddca3840502919447461615ce",
+  "incomplete": false,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch19_funds",
+      "name": "test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[held]",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == (0 + 1)\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E317AA50>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E317AA50> = <v6lite.tests.helpers.Rig object at 0x000001E1E3179050>.broker"
+    },
+    {
+      "classname": "v6lite.tests.test_batch19_funds",
+      "name": "test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[broker_only]",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == (0 + 1)\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E3216110>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E3216110> = <v6lite.tests.helpers.Rig object at 0x000001E1E31A3610>.broker"
+    },
+    {
+      "classname": "v6lite.tests.test_batch19_funds",
+      "name": "test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[unknown]",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == (0 + 1)\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E1E66E10>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E1E66E10> = <v6lite.tests.helpers.Rig object at 0x000001E1E1E67B10>.broker"
+    },
+    {
+      "classname": "v6lite.tests.test_batch19_funds",
+      "name": "test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[expired]",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == (0 + 1)\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E1991C50>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E1991C50> = <v6lite.tests.helpers.Rig object at 0x000001E1E1991590>.broker"
+    },
+    {
+      "classname": "v6lite.tests.test_batch19_funds",
+      "name": "test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[clock_backwards]",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == (0 + 1)\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E2EDC0D0>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E2EDC0D0> = <v6lite.tests.helpers.Rig object at 0x000001E1E2EDD250>.broker"
+    },
+    {
+      "classname": "v6lite.tests.test_batch19_funds",
+      "name": "test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[active]",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == (0 + 1)\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E1A0FA50>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E1A0FA50> = <v6lite.tests.helpers.Rig object at 0x000001E1E1A0CB50>.broker"
+    },
+    {
+      "classname": "v6lite.tests.test_batch19_funds",
+      "name": "test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[new_fill]",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == (0 + 1)\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x000001E1E2EC4590>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x000001E1E2EC4590> = <v6lite.tests.helpers.Rig object at 0x000001E1E1B23F50>.broker"
+    }
+  ]
+}

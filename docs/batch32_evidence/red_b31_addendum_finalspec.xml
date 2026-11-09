@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.501" timestamp="2026-10-29T10:03:00.007154-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch32_offline_release" name="test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding" time="0.432"><failure message="AssertionError: [{'reason': 'protected GTC cancel/identity unverified; release refused', 'request': '{&quot;operator&quot;: &quot;John&quot;, &quot;reason&quot;: &quot;flat and no GTC in TWS&quot;}', 'symbol': 'AAPL'}]&#10;assert 'OPEN' == 'RELEASED'&#10;  &#10;  - RELEASED&#10;  + OPEN">v6lite\tests\test_batch32_offline_release.py:131: in test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding
+    assert rig.store.position(pid)['status']=='RELEASED',refusals
+E   AssertionError: [{'reason': 'protected GTC cancel/identity unverified; release refused', 'request': '{"operator": "John", "reason": "flat and no GTC in TWS"}', 'symbol': 'AAPL'}]
+E   assert 'OPEN' == 'RELEASED'
+E     
+E     - RELEASED
+E     + OPEN</failure></testcase></testsuite></testsuites>

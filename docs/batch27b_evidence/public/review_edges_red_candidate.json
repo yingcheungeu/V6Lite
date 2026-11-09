@@ -1,0 +1,84 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "review_edges_red_candidate",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-17T14:42:10.802405-07:00",
+  "end_pt": "2026-10-17T14:42:13.501008-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "b74b033237942d1c",
+  "source_unchanged": true,
+  "worktree_code_sha": "b74b033237942d1c",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "b74b033237942d1cb31ec146a28911a36194d6fd79dd4df573969be776f6eb60",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27b_review_edges.py",
+      "sha256": "6f87a5a6b384b887324f0bbf76a044da4bdefcf36d93aeb07d759811ea80dc22"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 3,
+    "failures": 3,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27b_review_edges",
+      "name": "test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-nonempty-intent-conflict]",
+      "outcome": "failure",
+      "message": "AssertionError: historical receipt proof cannot waive a contradictory nonempty native identity\nassert []\n +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x0000017775298050>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_review_edges",
+      "name": "test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-positive-conId-conflict]",
+      "outcome": "failure",
+      "message": "AssertionError: historical receipt proof cannot waive a contradictory nonempty native identity\nassert []\n +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x00000177752C3390>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_review_edges",
+      "name": "test_B27b_review_correct_today_account_row_cannot_hide_client_same_exec_positive_conId_conflict",
+      "outcome": "failure",
+      "message": "AssertionError: matching scoped account row cannot erase a conflicting visible client row\nassert []\n +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x0000017753A182D0>)"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-nonempty-intent-conflict]",
+      "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-positive-conId-conflict]",
+      "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_correct_today_account_row_cannot_hide_client_same_exec_positive_conId_conflict"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-nonempty-intent-conflict]",
+      "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-positive-conId-conflict]",
+      "v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_correct_today_account_row_cannot_hide_client_same_exec_positive_conId_conflict"
+    ]
+  },
+  "stdout_sha256": "c8a3ecbdee7e931a21707640cb4fd8b7f915676043065799809fdf4b94e4ec8d",
+  "junit_sha256": "fb1cbef158fb78b60a70669c650dc247cb12e5bc064a25aebb513f0c957bfbfb",
+  "inventory_sha256": "bc594b41bfd750a4a33782f297dbc8f5e0a52f944816f34ad53515e6278e15f3",
+  "publication_redaction": {
+    "rule": "All synthetic account-shaped values masked. Original receipts preserved locally and excluded from staging.",
+    "original_artifact_sha256": {
+      "review_edges_red_candidate.json": "ce1ef6925492716d8e5e7b32fe7725fe41fd01ef74d38da9db6afe45b42d554e",
+      "review_edges_red_candidate.txt": "c8a3ecbdee7e931a21707640cb4fd8b7f915676043065799809fdf4b94e4ec8d",
+      "review_edges_red_candidate.xml": "5cdb61bb464f465c86e20f708eaa09504af8b654cf5a670b28cc484a577bb03a",
+      "review_edges_red_candidate_inventory.json": "7e000bf8023e347362121cc44b06dc7aebf9c39e3cb07c4dc2653838e7c77f70",
+      "review_edges_red_candidate_progress.json": "af57774d6fe515c74705a4447f7f06df27ed8971b37fd4d0ba493b02ba30bd10"
+    }
+  }
+}

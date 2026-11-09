@@ -1,0 +1,27 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_ test_B28d_spontaneous_working_after_cancelled_but_unsent_TP_is_immediately_held _
+v6lite\tests\test_batch28d_restore_contradiction.py:122: in test_B28d_spontaneous_working_after_cancelled_but_unsent_TP_is_immediately_held
+    assert snapshot['p0'], 'fresh spontaneous working contradiction must page before any further query'
+E   AssertionError: fresh spontaneous working contradiction must page before any further query
+E   assert []
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=1 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–1） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-0bf7a87a9b194c7c8b72 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=342.77；上次确认=2026-10-22T15:03:29.422000+00:00 工作单证据时间=2026-10-22T15:03:53.109000+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B28d_complete_own_query_cannot_restore_by_modifying_revived_cancelled_ID _
+v6lite\tests\test_batch28d_restore_contradiction.py:146: in test_B28d_complete_own_query_cannot_restore_by_modifying_revived_cancelled_ID
+    assert _p0(server), server.rig._b26_alerts[server.final_alert_start:]
+E   AssertionError: [('P1', 'protection tp not sent AAPL
+E     AAPL 持仓数量=1 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–1） 股 可能超卖=...仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。')]
+E   assert []
+E    +  where [] = _p0(<v6lite.tests.test_batch28d_restore_contradiction.RevivedCancelledStopServer object at 0x000001794362B690>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=1 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–1） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-0bcef9a86fb94ff0a063 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=342.77；上次确认=2026-10-22T15:03:29.407000+00:00 工作单证据时间=2026-10-22T15:03:53.063000+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: orphan V6-Lite order AAPL | v6l-protect-0bcef9a86fb94ff0a063 (PreSubmitted, remaining 1) is settled CANCELLED in this ledger. New entries are blocked. Cancel it in TWS (or restore the right state directory), then `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-ca7f91765bc643a59ee3 | AAPL：既有人工异常仍有效，不能由历史账本解除；券商 P=1 股，账本=1 股，当前工作 STP S=1 股；本地上次确认 STP S=0 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=1 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-22T15:03:56.422000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28d_restore_contradiction.py::test_B28d_spontaneous_working_after_cancelled_but_unsent_TP_is_immediately_held
+FAILED v6lite/tests/test_batch28d_restore_contradiction.py::test_B28d_complete_own_query_cannot_restore_by_modifying_revived_cancelled_ID
+2 failed in 105.02s (0:01:45)

@@ -1,0 +1,33 @@
+{
+  "label": "red_single_bad_native_filled",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T08:26:50.318430-07:00",
+  "end_pt": "2026-10-29T08:26:52.352855-07:00",
+  "seconds": 2.031,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch32_normalization_guards.py::test_B32_bad_native_filled_single_stays_unverifiable"
+  ],
+  "code_sha": "b02827758c6c9ff6",
+  "source_unchanged": true,
+  "inventory_sha256": "bd937c30e16e802ebd0fcb336eb829bc3c70a6fb055c1c06a0c10995f09703cf",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "e4484c302b5cee9482c3070af9f12382f48bffeb6edf9ceab075ada98e0e5ed2",
+  "XML_sha256_before_masking": "74f4b536f62238b93220770775520f539d66b0c74dbdd5cb1c393d45f78fbb65",
+  "delivered_log_sha256": "6f1ee0ad113ef25cff323a796c4fd29ac0bb5f2be470081362a810f22546e53e",
+  "delivered_XML_sha256": "74f4b536f62238b93220770775520f539d66b0c74dbdd5cb1c393d45f78fbb65",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch32_normalization_guards",
+      "name": "test_B32_bad_native_filled_single_stays_unverifiable",
+      "kind": "failure",
+      "message": "AssertionError: a new single bad row cannot bypass original native quantity completeness\nassert ([])"
+    }
+  ]
+}

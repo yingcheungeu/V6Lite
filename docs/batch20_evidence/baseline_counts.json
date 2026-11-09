@@ -1,0 +1,35 @@
+{
+  "phase": "final five new test modules on fresh B19 git archive",
+  "counts": {
+    "v6lite.tests.test_batch20_card_provenance": {
+      "passed": 0,
+      "failed": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    "v6lite.tests.test_batch20_execution_time": {
+      "passed": 7,
+      "failed": 20,
+      "errors": 0,
+      "skipped": 0
+    },
+    "v6lite.tests.test_batch20_protection_equivalents": {
+      "passed": 24,
+      "failed": 11,
+      "errors": 0,
+      "skipped": 0
+    },
+    "v6lite.tests.test_batch20_protection_incident": {
+      "passed": 36,
+      "failed": 24,
+      "errors": 0,
+      "skipped": 0
+    },
+    "v6lite.tests.test_batch20_template": {
+      "passed": 1,
+      "failed": 4,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+}

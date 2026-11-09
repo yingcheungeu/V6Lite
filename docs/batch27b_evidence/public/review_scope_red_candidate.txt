@@ -1,0 +1,31 @@
+FFF.                                                                     [100%]
+================================== FAILURES ===================================
+_ test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[missing-End] _
+v6lite\tests\test_batch27b_scope_completeness.py:69: in test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result
+    _assert_stop_only_unchanged(rig,pid,ref,before)
+v6lite\tests\test_batch27b_scope_completeness.py:44: in _assert_stop_only_unchanged
+    assert _p1(rig),'explicitly incomplete dedicated evidence must freeze before the first reduction'
+E   AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction
+E   assert []
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x00000179CF4EA310>)
+_ test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[list-only] _
+v6lite\tests\test_batch27b_scope_completeness.py:69: in test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result
+    _assert_stop_only_unchanged(rig,pid,ref,before)
+v6lite\tests\test_batch27b_scope_completeness.py:44: in _assert_stop_only_unchanged
+    assert _p1(rig),'explicitly incomplete dedicated evidence must freeze before the first reduction'
+E   AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction
+E   assert []
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x00000179AB70B0D0>)
+_ test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time _
+v6lite\tests\test_batch27b_scope_completeness.py:107: in test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time
+    _assert_stop_only_unchanged(rig,pid,ref,before)
+v6lite\tests\test_batch27b_scope_completeness.py:44: in _assert_stop_only_unchanged
+    assert _p1(rig),'explicitly incomplete dedicated evidence must freeze before the first reduction'
+E   AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction
+E   assert []
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x00000179CF55D290>)
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[missing-End]
+FAILED v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[list-only]
+FAILED v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time
+3 failed, 1 passed in 1.76s

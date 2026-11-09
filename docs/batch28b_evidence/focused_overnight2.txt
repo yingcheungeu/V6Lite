@@ -1,0 +1,43 @@
+..............................................................F......... [ 84%]
+...FF........                                                            [100%]
+================================== FAILURES ===================================
+____ test_B26_edge_query_generation_change_revokes_earlier_overnight_proof ____
+v6lite\tests\test_batch26_review_edges.py:200: in test_B26_edge_query_generation_change_revokes_earlier_overnight_proof
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000002D57EE7D750>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-13T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-6f5c1e6851534eae8b73 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:915 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset] _
+v6lite\tests\test_batch27b_current_day_evidence.py:207: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    assert _p1(rig) and _writes(rig)==before[0]
+E   assert ([])
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x000002D56C76C690>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-19T14:00:31+00:00
+WARNING  v6lite.ibkr:ibkr.py:1371 [EXECUTION_TIME_SUMMARY] query failed: query socket generation changed; evidence unavailable
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-f016eeacc1eb414bb092 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:915 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight] _
+v6lite\tests\test_batch27b_current_day_evidence.py:207: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    assert _p1(rig) and _writes(rig)==before[0]
+E   assert ([])
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x000002D57EB78890>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-19T14:00:31+00:00
+WARNING  v6lite.ibkr:telemetry.py:73 [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261020 14:01:46 incomplete_or_invalid=True role=account_visible_utc
+WARNING  v6lite.ibkr:telemetry.py:73 [EXECUTION_TIME_SUMMARY] returned=0 zoned=0 naive=0 unparseable=0 sample=- incomplete_or_invalid=True role=account_visible_utc
+WARNING  v6lite.ibkr:telemetry.py:73 [EXECUTION_TIME_SUMMARY] returned=0 zoned=0 naive=0 unparseable=0 sample=- incomplete_or_invalid=True role=account_visible_utc
+============================== warnings summary ===============================
+v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+  v6lite\tests\test_batch28b_overnight_refresh.py:204: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_query_generation_change_revokes_earlier_overnight_proof
+FAILED v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]
+FAILED v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]
+3 failed, 82 passed, 1 warning in 32.14s

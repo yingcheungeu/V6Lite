@@ -1,0 +1,78 @@
+{
+  "label": "release_full_3",
+  "XML_sha256": "50f3fb9e132121c7e3fb93b9aa7cc4955e14bad65c87d5da3378707ee7b70d44",
+  "source": "actual native conn.sendMsg timestamps in XML; independent completed offline SQLite audit",
+  "ACK_to_TP_physical_wire": [
+    {
+      "test": "test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second",
+      "name": "b28c_status_first_ACK_to_TP_wire_seconds",
+      "seconds": 0.09299999999348074
+    },
+    {
+      "test": "test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second",
+      "name": "b28c_ACK_to_TP_wire_seconds",
+      "seconds": 0.014999999984866008
+    },
+    {
+      "test": "test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick",
+      "name": "b28c_separated_ACK_to_TP_wire_seconds",
+      "seconds": 0.40599999998812564
+    }
+  ],
+  "gap_B_samples": [
+    {
+      "test_database": "test_B28c_overnight_reduction_0/b28b-0/state/v6lite.sqlite3",
+      "database_sha256": "b2a50879ead81d134102c1544fe2f678cb605a2cbd55d29243c6d1a67f21de30",
+      "gap_B": [
+        {
+          "ended_at": "2026-10-21T15:03:12.531000+00:00",
+          "gap_kind": "B",
+          "intent_id": "v6l-protect-23451a0d81164a92b11a",
+          "outcome": "TP fully filled",
+          "position_id": "pos-8d9d348a954545c6a2a6",
+          "secs": 0.078,
+          "started_at": "2026-10-21T15:03:12.453000+00:00",
+          "symbol": "AAPL",
+          "tp_intent_id": "v6l-54d6db1e1f9e431c8148",
+          "workflow_id": "tp-flow-0ca700699d41496386cf"
+        }
+      ]
+    },
+    {
+      "test_database": "test_B28c_status_then_400ms_op0/b28b-0/state/v6lite.sqlite3",
+      "database_sha256": "8fb6907a3794f07cf7ba6fee90c769ca037f5ebd3b38f7e77dfc1ae3168e2573",
+      "gap_B": [
+        {
+          "ended_at": "2026-10-21T15:03:12.953000+00:00",
+          "gap_kind": "B",
+          "intent_id": "v6l-protect-3a8c92f14a1543fc9137",
+          "outcome": "TP fully filled",
+          "position_id": "pos-a3c4104fa44e468ebe7b",
+          "secs": 0.468,
+          "started_at": "2026-10-21T15:03:12.485000+00:00",
+          "symbol": "AAPL",
+          "tp_intent_id": "v6l-5987a6a2810c47a89447",
+          "workflow_id": "tp-flow-e422c540d99747549506"
+        }
+      ]
+    },
+    {
+      "test_database": "test_B28c_status_then_openOrde0/b28b-0/state/v6lite.sqlite3",
+      "database_sha256": "0b515e18736bede1fc123ee854fe4cbee6eff83b5f8a5458750b8e30312fcb32",
+      "gap_B": [
+        {
+          "ended_at": "2026-10-21T15:03:12.625000+00:00",
+          "gap_kind": "B",
+          "intent_id": "v6l-protect-0792dfac18424973a33b",
+          "outcome": "TP fully filled",
+          "position_id": "pos-99b27429f1cb4a698369",
+          "secs": 0.141,
+          "started_at": "2026-10-21T15:03:12.484000+00:00",
+          "symbol": "AAPL",
+          "tp_intent_id": "v6l-8ea742a122834bbc9570",
+          "workflow_id": "tp-flow-990296bcf1b84e47b751"
+        }
+      ]
+    }
+  ]
+}

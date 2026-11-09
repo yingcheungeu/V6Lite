@@ -1,0 +1,33 @@
+{
+  "label": "red_b31_addendum_offline",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T09:54:19.837713-07:00",
+  "end_pt": "2026-10-29T09:54:22.016333-07:00",
+  "seconds": 2.172,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch32_offline_release.py"
+  ],
+  "code_sha": "759cfd963d96a26f",
+  "source_unchanged": true,
+  "inventory_sha256": "2aaaefb068b92315340ecbab70b16b23e06f01bb0a2f6d984e95b9a645736d9b",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "76adf7931455405752d6179c1f0b1cda3aab3cbf663a6609b8e9c74afc259e98",
+  "XML_sha256_before_masking": "ad6da9bb75ad5fd5a9031c31c25df76447d89b2af417151acafb0b5c2626c698",
+  "delivered_log_sha256": "a0544003881704cd2fe1294d9d3c9ca694781e78ced97c336871b5bb8992e18d",
+  "delivered_XML_sha256": "ad6da9bb75ad5fd5a9031c31c25df76447d89b2af417151acafb0b5c2626c698",
+  "tests": 1,
+  "failures": 0,
+  "errors": 1,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch32_offline_release",
+      "name": "test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding",
+      "kind": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Dev\\\\V6Lite-dev\\\\docs\\\\batch32_evidence\\\\baseline_b31\\\\v6lite\\\\tests\\\\fixtures\\\\b32_completed_native_fields.json'\""
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "label": "green_raw_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:15:21.260794-07:00",
+  "end_pt": "2026-10-21T20:17:00.830664-07:00",
+  "seconds": 99.563,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28c_price_confirmation.py",
+    "v6lite/tests/test_batch28c_price_edges.py",
+    "v6lite/tests/test_batch28c_fill_race.py",
+    "v6lite/tests/test_batch28c_fill_edges.py",
+    "v6lite/tests/test_batch28c_native_latency.py",
+    "v6lite/tests/test_batch28c_native_edges.py",
+    "v6lite/tests/test_batch28c_raw_open_order.py"
+  ],
+  "code_sha": "b20dc2ae7020cf32",
+  "source_unchanged": true,
+  "inventory_sha256": "85f5e9b9946f8501d364311165e77876d9ff78609eca86b6c881ce41b37f75ea",
+  "incomplete": false,
+  "tests": 58,
+  "failures": 9,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_native_openOrder_only_BE_confirms_then_TP2_TP3_complete_without_oversell",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 25, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function _finish_tp2_and_tp3.<locals>.<lambda> at 0x000002B37E4979C0>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[same-day]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 35, 1000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming.<locals>.<lambda> at 0x000002B37E8880E0>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming[next-trading-day]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 33, 8, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function test_B28c_reopen_PRICE_PENDING_waits_for_owned_complete_three_sources_before_confirming.<locals>.<lambda> at 0x000002B37E88BC40>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_creation_bound_connect_openOrder_cannot_confirm_after_sync_finishes",
+      "kind": "failure",
+      "message": "AttributeError: 'ExecutionTimeDiagnosticEvent' object has no attribute 'connection_snapshot'"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_native_latency",
+      "name": "test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second",
+      "kind": "failure",
+      "message": "AssertionError: ('ACK -> actual conn.sendMsg DAY LMT', 4.203000000008615, [(169520.625, '16', ('16', '1', '')), (169520.687, '61', ('6...ecutions', 707), (169521.859, 'account', 708), (169521.921, 'openOrders', None), (169522.015, 'positions', None), ...])\nassert 4.203000000008615 <= 1.0"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-live]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 4, 10, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade.<locals>.<lambda> at 0x000002B37E778F40>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 4, 10, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade.<locals>.<lambda> at 0x000002B37E77A160>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-live]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 4, 10, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade.<locals>.<lambda> at 0x000002B37E6C7740>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 4, 10, 2000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])\nassert False\n +  where False = <function test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade.<locals>.<lambda> at 0x000002B37E810680>()"
+    }
+  ]
+}

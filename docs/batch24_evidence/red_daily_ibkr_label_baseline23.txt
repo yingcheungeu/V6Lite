@@ -1,0 +1,30 @@
+{"baseline_tag": "v6lite-batch23", "baseline_head": "bd6b8fb9ecf8a08cf9685c8eaf6a46f00be794f0", "source_file": "C:\\Dev\\V6Lite-dev\\.pytest_cache\\batch24_baseline23\\v6lite\\__init__.py", "code_sha": "a17d647ba28c51e4", "test_files": ["v6lite/tests/test_batch12_v2.py::test_G3_chinese_daily_health_embed_and_plaintext_mail"], "test_sha256": {"v6lite/tests/test_batch12_v2.py::test_G3_chinese_daily_health_embed_and_plaintext_mail": "8b736302d3c595ca1c803923a2fe203ae614b2004a6b1f4e2f048b00a95cf37b"}}
+F                                                                        [100%]
+================================== FAILURES ===================================
+____________ test_G3_chinese_daily_health_embed_and_plaintext_mail ____________
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_daily_ibkr_label_baseline23/test_G3_chinese_daily_health_e0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000297F7D9F310>
+
+    def test_G3_chinese_daily_health_embed_and_plaintext_mail(tmp_path, monkeypatch):
+        rig, payloads, mails = _card_rig(tmp_path, monkeypatch, start=et(9, 50))
+        try:
+            rig.start()
+            rig.at(et(10, 0, 30))
+            rig.tick()
+            rig.at(et(16, 6))
+            rig.tick()
+            embed = _find_embed(payloads, "健康")
+            assert embed["title"].startswith(("✅ 正常", "⚠️ 需关注"))
+            names = [field["name"] for field in embed["fields"]]
+>           assert names == ["扫描", "下单/撤单", "持仓与漂移", "券商端保护", "IBKR 心跳",
+                             "告警送达", "行情可用率", "code_sha"]
+E                            AssertionError: assert ['扫描', '下单/撤单..., '告警送达', ...] == ['扫描', '下单/撤单..., '告警送达', ...]
+E                              
+E                              At index 4 diff: 'Gateway 心跳' != 'IBKR 心跳'
+E                              Use -v to get more diff
+
+v6lite\tests\test_batch12_v2.py:150: AssertionError
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch12_v2.py::test_G3_chinese_daily_health_embed_and_plaintext_mail
+1 failed in 0.87s

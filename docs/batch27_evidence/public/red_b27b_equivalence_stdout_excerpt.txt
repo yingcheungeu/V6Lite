@@ -1,0 +1,45 @@
+F.....F                                                                  [100%]
+================================== FAILURES ===================================
+_ test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls _
+..\..\v6lite\tests\test_batch27_observer_equivalence.py:137: in test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls
+    assert amount <= 5, ("scale target rows", kind, amount, index)
+E   AssertionError: ('scale target rows', 'PROTECT_STATE', 6, 4)
+E   assert 6 <= 5
+_ test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change _
+..\..\v6lite\tests\test_batch27_observer_equivalence.py:247: in test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change
+    assert adapter._req_sent["positions"] == 1 and adapter._req_ended["positions"] == 0
+E   assert (2 == 1)
+---------------------------- Captured stdout call -----------------------------
+2026-10-18 08:19:50,237 INFO ib_insync.wrapper openOrder: Trade(contract=Stock(conId=265598, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), order=Order(orderId=501, clientId=132, permId=45208044, action='SELL', totalQuantity=3, orderType='STP', lmtPrice=0.0, auxPrice=340.52, tif='GTC', orderRef='v6l-protect-163f331d4c894f33a1a8', account='DU******001'), orderStatus=OrderStatus(orderId=501, status='PreSubmitted', filled=0.0, remaining=0.0, avgFillPrice=0.0, permId=0, parentId=0, lastFillPrice=0.0, clientId=0, whyHeld='', mktCapPrice=0.0), fills=[], log=[], advancedError='')
+2026-10-18 08:19:50,238 INFO ib_insync.wrapper orderStatus: Trade(contract=Stock(conId=265598, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), order=Order(orderId=501, clientId=132, permId=45208044, action='SELL', totalQuantity=3, orderType='STP', lmtPrice=0.0, auxPrice=340.52, tif='GTC', orderRef='v6l-protect-163f331d4c894f33a1a8', account='DU******001'), orderStatus=OrderStatus(orderId=501, status='PreSubmitted', filled=0, remaining=3, avgFillPrice=0, permId=45208044, parentId=0, lastFillPrice=0, clientId=132, whyHeld='trigger', mktCapPrice=0), fills=[], log=[TradeLogEntry(time=datetime.datetime(2026, 10, 14, 13, 19, 52, tzinfo=datetime.timezone.utc), status='PreSubmitted', message='', errorCode=0)], advancedError='')
+2026-10-18 08:19:50,238 INFO v6lite.ibkr [CONNECT_SNAPSHOT] openOrders End generation=1 count=1
+2026-10-18 08:19:50,238 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=265598, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:19:50,238 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+------------------------------ Captured log call ------------------------------
+INFO     ib_insync.wrapper:wrapper.py:378 openOrder: Trade(contract=Stock(conId=265598, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), order=Order(orderId=501, clientId=132, permId=45208044, action='SELL', totalQuantity=3, orderType='STP', lmtPrice=0.0, auxPrice=340.52, tif='GTC', orderRef='v6l-protect-163f331d4c894f33a1a8', account='DU******001'), orderStatus=OrderStatus(orderId=501, status='PreSubmitted', filled=0.0, remaining=0.0, avgFillPrice=0.0, permId=0, parentId=0, lastFillPrice=0.0, clientId=0, whyHeld='', mktCapPrice=0.0), fills=[], log=[], advancedError='')
+INFO     ib_insync.wrapper:wrapper.py:440 orderStatus: Trade(contract=Stock(conId=265598, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), order=Order(orderId=501, clientId=132, permId=45208044, action='SELL', totalQuantity=3, orderType='STP', lmtPrice=0.0, auxPrice=340.52, tif='GTC', orderRef='v6l-protect-163f331d4c894f33a1a8', account='DU******001'), orderStatus=OrderStatus(orderId=501, status='PreSubmitted', filled=0, remaining=3, avgFillPrice=0, permId=45208044, parentId=0, lastFillPrice=0, clientId=132, whyHeld='trigger', mktCapPrice=0), fills=[], log=[TradeLogEntry(time=datetime.datetime(2026, 10, 14, 13, 19, 52, tzinfo=datetime.timezone.utc), status='PreSubmitted', message='', errorCode=0)], advancedError='')
+INFO     v6lite.ibkr:ibkr.py:385 [CONNECT_SNAPSHOT] openOrders End generation=1 count=1
+INFO     ib_insync.wrapper:wrapper.py:301 position: Position(account='DU******001', contract=Stock(conId=265598, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+INFO     v6lite.ibkr:ibkr.py:505 [QUERY] channel=positions secs=0.000 drained=False
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls
+  v6lite\tests\test_batch27_observer_equivalence.py:107: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls(
+
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]
+  v6lite\tests\test_batch27_observer_equivalence.py:180: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("failure", ["allow", "a", "b", "c", "d"])
+
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change
+  v6lite\tests\test_batch27_observer_equivalence.py:229: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED ..\..\v6lite\tests\test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls
+FAILED ..\..\v6lite\tests\test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change
+2 failed, 5 passed, 7 warnings in 2.76s

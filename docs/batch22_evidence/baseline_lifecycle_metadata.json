@@ -1,0 +1,13 @@
+{
+  "baseline_code_sha_before_test_overlay": "cfe16edd7a7e4d7f",
+  "baseline_commit": "c5a39952635943dde5f1ae7f2a52da84c8327375",
+  "test_sha256": "bee3803db93e5e6bd235ff43f3c0cafb9729da87d6deb986fc41acd6b7594b5b",
+  "exit_code": 1,
+  "duration": 6.869363784790039,
+  "counts": {
+    "tests": "52",
+    "failures": "51",
+    "errors": "0",
+    "skipped": "0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "real_red_cases": [
+    "green_report_audit_1: immutable send fallback missing workflow",
+    "red_review_edges_1: foreign NULL position report crash and old estimate cfg-floor drift"
+  ],
+  "native_fixture": "green_report_native_2 and green_review_native_3 both hit correct maintenance deferral because only urgent close drain ran. Replace first direct maintenance call with actual rig.tick; no flags, proofs, gates or economic state edited. Second attempted edit had ambiguous text precondition and stopped before applying fixture; shell still started test. All failures retained; future mutation/check/test calls separated.",
+  "old_test_changes": "B30 explicitly prevents automatic cooldown release after negative-to-positive fee reconciliation; derived P&L is still positive. Two L4 expectations updated. Two report label expectations updated to split normal/test B."
+}

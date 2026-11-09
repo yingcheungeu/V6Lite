@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="20" skipped="0" tests="20" time="4.703" timestamp="2026-10-16T21:32:28.096161-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger" time="0.173"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:136: in test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger
+    tp1,ref,fill=_filled_tp1(rig,pid)
+                 ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec]" time="0.172"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch]" time="0.164"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch]" time="0.172"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day]" time="0.164"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]" time="0.170"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only]" time="0.164"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End]" time="0.162"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter]" time="0.159"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter]" time="0.159"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]" time="0.164"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]" time="0.162"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity]" time="0.162"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId]" time="0.161"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId]" time="0.168"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional]" time="0.159"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal]" time="0.158"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin]" time="0.167"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_failed_a_card_has_one_unverified_time_prefix" time="0.161"><failure message="AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL&#10;  核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。&#10;  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']&#10;assert (1 == 1 and 2 == 1)&#10; +  where 1 = len(['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'])&#10; +  and   2 = &lt;built-in method count of str object at 0x000002905A39A8D0&gt;('账本成交时间尚未核实')&#10; +    where &lt;built-in method count of str object at 0x000002905A39A8D0&gt; = '#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP ...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'.count">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:238: in test_B27b_failed_a_card_has_one_unverified_time_prefix
+    assert len(pages)==1 and pages[0].count('账本成交时间尚未核实')==1,pages
+E   AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert (1 == 1 and 2 == 1)
+E    +  where 1 = len(['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'])
+E    +  and   2 = &lt;built-in method count of str object at 0x000002905A39A8D0&gt;('账本成交时间尚未核实')
+E    +    where &lt;built-in method count of str object at 0x000002905A39A8D0&gt; = '#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP ...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'.count</failure></testcase><testcase classname="v6lite.tests.test_batch27b_current_day_evidence" name="test_B27b_failed_d_card_shows_actual_complete_query_count" time="0.167"><failure message="ValueError: not enough values to unpack (expected 1, got 0)">..\..\v6lite\tests\test_batch27b_current_day_evidence.py:244: in test_B27b_failed_d_card_shows_actual_complete_query_count
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,1747 @@
+[
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 121, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 121}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:56+00:00\", \"last_at\": \"2026-10-15T11:46:56+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:47:11+00:00\", \"last_at\": \"2026-10-15T12:17:11+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T12:17:26+00:00\", \"last_at\": \"2026-10-15T12:47:26+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T12:47:41+00:00\", \"last_at\": \"2026-10-15T13:17:41+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T13:17:56+00:00\", \"last_at\": \"2026-10-15T13:47:56+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T13:48:11+00:00\", \"last_at\": \"2026-10-15T14:18:11+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T14:18:26+00:00\", \"last_at\": \"2026-10-15T14:48:26+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T14:48:41+00:00\", \"last_at\": \"2026-10-15T15:18:41+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T15:18:56+00:00\", \"last_at\": \"2026-10-15T15:48:56+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T15:49:11+00:00\", \"last_at\": \"2026-10-15T16:19:11+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T16:19:26+00:00\", \"last_at\": \"2026-10-15T16:49:26+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T16:49:41+00:00\", \"last_at\": \"2026-10-15T17:19:41+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T17:19:56+00:00\", \"last_at\": \"2026-10-15T17:49:56+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T17:50:11+00:00\", \"last_at\": \"2026-10-15T18:20:11+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T18:20:26+00:00\", \"last_at\": \"2026-10-15T18:50:26+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T18:50:41+00:00\", \"last_at\": \"2026-10-15T19:20:41+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T19:20:56+00:00\", \"last_at\": \"2026-10-15T19:50:56+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T19:51:11+00:00\", \"last_at\": \"2026-10-15T20:21:11+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T20:21:26+00:00\", \"last_at\": \"2026-10-15T20:51:26+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T20:51:41+00:00\", \"last_at\": \"2026-10-15T21:21:41+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T21:21:56+00:00\", \"last_at\": \"2026-10-15T21:51:56+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T21:52:11+00:00\", \"last_at\": \"2026-10-15T22:22:11+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T22:22:26+00:00\", \"last_at\": \"2026-10-15T22:52:26+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T22:52:41+00:00\", \"last_at\": \"2026-10-15T23:22:41+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T23:22:56+00:00\", \"last_at\": \"2026-10-15T23:52:56+00:00\", \"naive\": 121, \"returned\": 121, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 119, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 119}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T23:53:11+00:00\", \"last_at\": \"2026-10-16T00:16:26+00:00\", \"naive\": 94, \"returned\": 94, \"role\": \"legacy_client\", \"suppressed_queries\": 94, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=10 zoned=0 naive=10 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 121, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 121}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:56+00:00\", \"last_at\": \"2026-10-15T11:46:56+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:47:11+00:00\", \"last_at\": \"2026-10-15T12:17:11+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T12:17:26+00:00\", \"last_at\": \"2026-10-15T12:47:26+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T12:47:41+00:00\", \"last_at\": \"2026-10-15T13:17:41+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T13:17:56+00:00\", \"last_at\": \"2026-10-15T13:47:56+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T13:48:11+00:00\", \"last_at\": \"2026-10-15T14:18:11+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T14:18:26+00:00\", \"last_at\": \"2026-10-15T14:48:26+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T14:48:41+00:00\", \"last_at\": \"2026-10-15T15:18:41+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T15:18:56+00:00\", \"last_at\": \"2026-10-15T15:48:56+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T15:49:11+00:00\", \"last_at\": \"2026-10-15T16:19:11+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T16:19:26+00:00\", \"last_at\": \"2026-10-15T16:49:26+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T16:49:41+00:00\", \"last_at\": \"2026-10-15T17:19:41+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T17:19:56+00:00\", \"last_at\": \"2026-10-15T17:49:56+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T17:50:11+00:00\", \"last_at\": \"2026-10-15T18:20:11+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T18:20:26+00:00\", \"last_at\": \"2026-10-15T18:50:26+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T18:50:41+00:00\", \"last_at\": \"2026-10-15T19:20:41+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T19:20:56+00:00\", \"last_at\": \"2026-10-15T19:50:56+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T19:51:11+00:00\", \"last_at\": \"2026-10-15T20:21:11+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T20:21:26+00:00\", \"last_at\": \"2026-10-15T20:51:26+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T20:51:41+00:00\", \"last_at\": \"2026-10-15T21:21:41+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T21:21:56+00:00\", \"last_at\": \"2026-10-15T21:51:56+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T21:52:11+00:00\", \"last_at\": \"2026-10-15T22:22:11+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T22:22:26+00:00\", \"last_at\": \"2026-10-15T22:52:26+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T22:52:41+00:00\", \"last_at\": \"2026-10-15T23:22:41+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T23:22:56+00:00\", \"last_at\": \"2026-10-15T23:52:56+00:00\", \"naive\": 1210, \"returned\": 1210, \"role\": \"legacy_client\", \"suppressed_queries\": 121, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 119, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 119}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T23:53:11+00:00\", \"last_at\": \"2026-10-16T00:16:26+00:00\", \"naive\": 940, \"returned\": 940, \"role\": \"legacy_client\", \"suppressed_queries\": 94, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1801, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1801}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:42+00:00\", \"last_at\": \"2026-10-15T11:46:42+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:46:43+00:00\", \"last_at\": \"2026-10-15T12:16:43+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T12:16:44+00:00\", \"last_at\": \"2026-10-15T12:46:44+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T12:46:45+00:00\", \"last_at\": \"2026-10-15T13:16:45+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T13:16:46+00:00\", \"last_at\": \"2026-10-15T13:46:46+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T13:46:47+00:00\", \"last_at\": \"2026-10-15T14:16:47+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T14:16:48+00:00\", \"last_at\": \"2026-10-15T14:46:48+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T14:46:49+00:00\", \"last_at\": \"2026-10-15T15:16:49+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T15:16:50+00:00\", \"last_at\": \"2026-10-15T15:46:50+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T15:46:51+00:00\", \"last_at\": \"2026-10-15T16:16:51+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T16:16:52+00:00\", \"last_at\": \"2026-10-15T16:46:52+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T16:46:53+00:00\", \"last_at\": \"2026-10-15T17:16:53+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T17:16:54+00:00\", \"last_at\": \"2026-10-15T17:46:54+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T17:46:55+00:00\", \"last_at\": \"2026-10-15T18:16:55+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T18:16:56+00:00\", \"last_at\": \"2026-10-15T18:46:56+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T18:46:57+00:00\", \"last_at\": \"2026-10-15T19:16:57+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T19:16:58+00:00\", \"last_at\": \"2026-10-15T19:46:58+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T19:46:59+00:00\", \"last_at\": \"2026-10-15T20:16:59+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T20:17:00+00:00\", \"last_at\": \"2026-10-15T20:47:00+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T20:47:01+00:00\", \"last_at\": \"2026-10-15T21:17:01+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T21:17:02+00:00\", \"last_at\": \"2026-10-15T21:47:02+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T21:47:03+00:00\", \"last_at\": \"2026-10-15T22:17:03+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T22:17:04+00:00\", \"last_at\": \"2026-10-15T22:47:04+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T22:47:05+00:00\", \"last_at\": \"2026-10-15T23:17:05+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T23:17:06+00:00\", \"last_at\": \"2026-10-15T23:47:06+00:00\", \"naive\": 1801, \"returned\": 1801, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1799, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1799}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T23:47:07+00:00\", \"last_at\": \"2026-10-16T00:16:40+00:00\", \"naive\": 1774, \"returned\": 1774, \"role\": \"legacy_client\", \"suppressed_queries\": 1774, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=10 zoned=0 naive=10 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1801, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1801}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:42+00:00\", \"last_at\": \"2026-10-15T11:46:42+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:46:43+00:00\", \"last_at\": \"2026-10-15T12:16:43+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T12:16:44+00:00\", \"last_at\": \"2026-10-15T12:46:44+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T12:46:45+00:00\", \"last_at\": \"2026-10-15T13:16:45+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T13:16:46+00:00\", \"last_at\": \"2026-10-15T13:46:46+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T13:46:47+00:00\", \"last_at\": \"2026-10-15T14:16:47+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T14:16:48+00:00\", \"last_at\": \"2026-10-15T14:46:48+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T14:46:49+00:00\", \"last_at\": \"2026-10-15T15:16:49+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T15:16:50+00:00\", \"last_at\": \"2026-10-15T15:46:50+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T15:46:51+00:00\", \"last_at\": \"2026-10-15T16:16:51+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T16:16:52+00:00\", \"last_at\": \"2026-10-15T16:46:52+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T16:46:53+00:00\", \"last_at\": \"2026-10-15T17:16:53+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T17:16:54+00:00\", \"last_at\": \"2026-10-15T17:46:54+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T17:46:55+00:00\", \"last_at\": \"2026-10-15T18:16:55+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T18:16:56+00:00\", \"last_at\": \"2026-10-15T18:46:56+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T18:46:57+00:00\", \"last_at\": \"2026-10-15T19:16:57+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T19:16:58+00:00\", \"last_at\": \"2026-10-15T19:46:58+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T19:46:59+00:00\", \"last_at\": \"2026-10-15T20:16:59+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T20:17:00+00:00\", \"last_at\": \"2026-10-15T20:47:00+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T20:47:01+00:00\", \"last_at\": \"2026-10-15T21:17:01+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T21:17:02+00:00\", \"last_at\": \"2026-10-15T21:47:02+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T21:47:03+00:00\", \"last_at\": \"2026-10-15T22:17:03+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T22:17:04+00:00\", \"last_at\": \"2026-10-15T22:47:04+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T22:47:05+00:00\", \"last_at\": \"2026-10-15T23:17:05+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T23:17:06+00:00\", \"last_at\": \"2026-10-15T23:47:06+00:00\", \"naive\": 18010, \"returned\": 18010, \"role\": \"legacy_client\", \"suppressed_queries\": 1801, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1799, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1799}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T23:47:07+00:00\", \"last_at\": \"2026-10-16T00:16:40+00:00\", \"naive\": 17740, \"returned\": 17740, \"role\": \"legacy_client\", \"suppressed_queries\": 1774, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[exec_id]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[exec_id]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[exec_id]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:43+00:00\", \"last_at\": \"2026-10-15T11:16:43+00:00\", \"naive\": 2, \"returned\": 2, \"role\": \"legacy_client\", \"suppressed_queries\": 1, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[price]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[price]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[price]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:43+00:00\", \"last_at\": \"2026-10-15T11:16:43+00:00\", \"naive\": 2, \"returned\": 2, \"role\": \"legacy_client\", \"suppressed_queries\": 1, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:42]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:42]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:42"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:42]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:43+00:00\", \"last_at\": \"2026-10-15T11:16:43+00:00\", \"naive\": 1, \"returned\": 1, \"role\": \"legacy_client\", \"suppressed_queries\": 1, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:41 UTC]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:41 UTC]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=1 naive=0 unparseable=0 sample=20261015 11:16:41 UTC"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:41 UTC]",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:43+00:00\", \"last_at\": \"2026-10-15T11:16:43+00:00\", \"naive\": 1, \"returned\": 1, \"role\": \"legacy_client\", \"suppressed_queries\": 1, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_client_and_scoped_roles_do_not_force_per_query_signature_churn",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_client_and_scoped_roles_do_not_force_per_query_signature_churn",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_client_and_scoped_roles_do_not_force_per_query_signature_churn",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:45+00:00\", \"last_at\": \"2026-10-15T11:16:53+00:00\", \"naive\": 3, \"returned\": 3, \"role\": \"legacy_client\", \"suppressed_queries\": 3, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_client_and_scoped_roles_do_not_force_per_query_signature_churn",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:47+00:00\", \"last_at\": \"2026-10-15T11:16:55+00:00\", \"naive\": 3, \"returned\": 3, \"role\": \"account_visible_utc\", \"suppressed_queries\": 3, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[unparseable]",
+    "level": "WARNING",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=0 unparseable=1 sample=bad-native incomplete_or_invalid=True role=account_visible_utc"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[unparseable]",
+    "level": "WARNING",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=0 unparseable=1 sample=bad-native incomplete_or_invalid=True role=account_visible_utc"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[missing-End]",
+    "level": "WARNING",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41 incomplete_or_invalid=True role=account_visible_utc"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[missing-End]",
+    "level": "WARNING",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41 incomplete_or_invalid=True role=account_visible_utc"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_execution_generation_flushes_counts_and_first_new_generation_is_info",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_execution_generation_flushes_counts_and_first_new_generation_is_info",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_AGGREGATE] {\"first_at\": \"2026-10-15T11:16:43+00:00\", \"last_at\": \"2026-10-15T11:16:47+00:00\", \"naive\": 3, \"returned\": 3, \"role\": \"legacy_client\", \"suppressed_queries\": 3, \"unparseable\": 0, \"zoned\": 0}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_execution_generation_flushes_counts_and_first_new_generation_is_info",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=2 zoned=2 naive=0 unparseable=0 sample=20261015 11:16:41 UTC"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=2 zoned=2 naive=0 unparseable=0 sample=20261015 11:16:42 UTC"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_successful_query_details_are_debug_and_not_info_file",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1}, \"positions\": {\"count\": 1, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 121, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 121}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 119, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 119}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 121, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 121}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 119, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 119}, \"positions\": {\"count\": 120, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 120}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1799, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1799}, \"positions\": {\"count\": 1798, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1798}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1}, \"positions\": {\"count\": 2, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 2}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1799, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1799}, \"positions\": {\"count\": 1798, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1798}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}, \"positions\": {\"count\": 1800, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1800}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 1, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1}, \"positions\": {\"count\": 2, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 2}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_summary_counts_channels_and_flushes_pending_on_disconnect",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 4, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.25, \"success\": 4}, \"positions\": {\"count\": 3, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.5, \"success\": 3}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_summary_counts_channels_and_flushes_pending_on_disconnect",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"positions\": {\"count\": 1, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.5, \"success\": 1}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_each_failed_query_remains_warning_with_no_success_claim",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"openOrders\": {\"count\": 2, \"drained\": 0, \"failed\": 2, \"max_seconds\": 0.0, \"success\": 0}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_logging_volume.py::test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"positions\": {\"count\": 1, \"drained\": 0, \"failed\": 0, \"max_seconds\": 0.0, \"success\": 1}}}"
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change",
+    "level": "INFO",
+    "text": "[QUERY_SUMMARY] {\"channels\": {\"positions\": {\"count\": 2, \"drained\": 1, \"failed\": 1, \"max_seconds\": 1.0499999523162842, \"success\": 1}}}"
+  }
+]

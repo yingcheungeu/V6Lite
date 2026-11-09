@@ -1,0 +1,25 @@
+{
+  "label": "green_report_ack_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T22:06:12.322933-07:00",
+  "end_pt": "2026-10-23T22:06:14.601770-07:00",
+  "seconds": 2.281,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch29_faults.py::test_B29_daily_report_has_separate_timeout_evidence_and_restored_S"
+  ],
+  "code_sha": "06849be85faf7345",
+  "source_unchanged": true,
+  "inventory_sha256": "ee88d8f63539d6c11c6ea10a1bd8df8f6325e04a7f31db6bc46c85f2a17f82b2",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "8964ec0c2d96a99a0012763cb299d0385e0125f9a98c492b18fdae2e013f728a",
+  "XML_sha256_before_masking": "58d421121afb4a3583397d591ccef2c49c9452897e62b7364f73d826bebc35e8",
+  "delivered_log_sha256": "2a92bbf3fc680c5f737a63682d4a7b7d7eca56fbe4539e6c0c1e056e39011aa9",
+  "delivered_XML_sha256": "58d421121afb4a3583397d591ccef2c49c9452897e62b7364f73d826bebc35e8",
+  "tests": 1,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

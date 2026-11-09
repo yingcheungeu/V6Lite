@@ -1,0 +1,13 @@
+........................................................................ [ 80%]
+..................                                                       [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only
+  v6lite\tests\test_batch27_diagnostic_attachment.py:26: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only(
+
+v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day
+  v6lite\tests\test_batch27_diagnostic_attachment.py:80: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+90 passed, 2 warnings in 10.36s

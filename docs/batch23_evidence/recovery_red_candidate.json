@@ -1,0 +1,38 @@
+{
+  "label": "recovery_red_candidate",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "start_pt": "2026-10-09T15:38:17.477126-07:00",
+  "end_pt": "2026-10-09T15:38:18.711208-07:00",
+  "returncode": 1,
+  "source_code_sha": "d02e48577baf5193",
+  "source_unchanged": true,
+  "worktree_code_sha": "d02e48577baf5193",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_recovery_diagnostic.py",
+      "sha256": "cf55cae52353ef0603d4d2a2205fa5c2643b59036c213059e7cd91e4606e53c0"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch23_recovery_diagnostic",
+      "name": "test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold",
+      "outcome": "failure",
+      "message": "assert ([] == []\n  \n  Use -v to get more diff and [<sqlite3.Row...0193EF8C4250>] == []\n  \n  Left contains one more item: <sqlite3.Row object at 0x00000193EF8C4250>\n  Use -v to get more diff)"
+    }
+  ],
+  "stdout_sha256": "47e417d8d13004fc90154c41dc948cd4f92ddf9887cd697ffa30722db740d55b",
+  "junit_sha256": "89bcec2121a0c67139e465354a2044ab9739c478aaab64dc29381d39e1920052"
+}

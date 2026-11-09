@@ -1,0 +1,67 @@
+{
+  "baseline_tag": "v6lite-batch22a",
+  "baseline_code_sha": "f27e144de9eb406b",
+  "methods": [
+    {
+      "file": "v6lite/engine.py",
+      "function": "_apply_releases",
+      "line": 1551,
+      "ast_sha256": "fcf81c4cc9ddb9f30a0fc7a4e39908c5875b78fa1360cfcd07684de8cc7b61ea"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_preflight_protection_deadlines",
+      "line": 39,
+      "ast_sha256": "acc5c9d3cd94fa8eb0c4709a96604ebd67b8e95336b6732f5392a3deccd7ca90"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_native_quantity_valid",
+      "line": 418,
+      "ast_sha256": "31a60595770d777681158a8d5b191ab9f2a5e19f74acce397169a2279c454d95"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_adopt_status_identity",
+      "line": 428,
+      "ast_sha256": "173d6ea35933311c966012da3189baf258e38b962bd79adff3616a0a81ecb6b9"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_explicit_refusal",
+      "line": 452,
+      "ast_sha256": "bb2df3cf7a4b5f38e85d3bb45881156c95c78b4c96951d8e23f2a00f37309966"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_order_valid",
+      "line": 593,
+      "ast_sha256": "b23554f61b5230326d5f81b3adad60a2acd4fbd9abc6783b8d1cad46ee7401eb"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_modify",
+      "line": 999,
+      "ast_sha256": "12ed8ed4c0e15cc72d0710cd4b410271cca63aab830e988728e88870af09945f"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_protection_cancel",
+      "line": 1048,
+      "ast_sha256": "a403ace8d79bbe84dc3f400dcd752c6ca2690d82d0d58a6da94f2d5453e225d3"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "function": "_hard_protection_deadlines",
+      "line": 1311,
+      "ast_sha256": "4990d96213fcb9cdaf5608b17c7d233fafa0d7ce5758dc0da1e003de51dc0d44"
+    },
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "function": "_status_identity",
+      "line": 1152,
+      "ast_sha256": "ced9846d27bc72fbbb6ae791095b9d3853c957da53eee676f8933bbc9bae47c7"
+    }
+  ],
+  "final_review": "compare release/authority functions unchanged; necessary timer/audit changes separately explained and tested without weakening original checks"
+}

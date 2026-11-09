@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.329" timestamp="2026-10-27T09:21:42.799557-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch31_snapshot_guards" name="test_B31_legacy_unknown_freeze_cannot_acquire_pending_only_cause_later" time="0.292"><failure message="AssertionError: assert None is not None&#10; +  where None = control('overnight_tp_frozen_at_price:pos-77dcccc029174078a16a:2026-10-27')&#10; +    where control = &lt;v6lite.store.Store object at 0x000001A2AFDCDA90&gt;.control&#10; +      where &lt;v6lite.store.Store object at 0x000001A2AFDCDA90&gt; = &lt;v6lite.tests.helpers.Rig object at 0x000001A2B08B4050&gt;.store">v6lite\tests\test_batch31_snapshot_guards.py:53: in test_B31_legacy_unknown_freeze_cannot_acquire_pending_only_cause_later
+    assert rig.store.control(marker) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('overnight_tp_frozen_at_price:pos-77dcccc029174078a16a:2026-10-27')
+E    +    where control = &lt;v6lite.store.Store object at 0x000001A2AFDCDA90&gt;.control
+E    +      where &lt;v6lite.store.Store object at 0x000001A2AFDCDA90&gt; = &lt;v6lite.tests.helpers.Rig object at 0x000001A2B08B4050&gt;.store</failure></testcase></testsuite></testsuites>

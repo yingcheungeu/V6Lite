@@ -1,0 +1,73 @@
+........................................................................ [  8%]
+........................................................................ [ 16%]
+........................................................................ [ 24%]
+........................................................................ [ 32%]
+........................................................................ [ 40%]
+........................................................................ [ 48%]
+........................................................................ [ 56%]
+........................................................................ [ 64%]
+........................................................................ [ 72%]
+........................................................................ [ 80%]
+........................................................................ [ 88%]
+........................................................................ [ 96%]
+.............................                                            [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+  v6lite\tests\test_batch28b_overnight_refresh.py:204: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen(
+
+v6lite/tests/test_batch28_section2.py::test_B28_candidate_due_flush_is_atomic_across_positions_and_retry_exactly_once
+  v6lite\tests\test_batch28_section2.py:386: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28_candidate_due_flush_is_atomic_across_positions_and_retry_exactly_once(
+
+v6lite/tests/test_batch28_section2.py::test_B28_candidate_due_flush_respects_outer_rollback_and_unfinished_window
+  v6lite\tests\test_batch28_section2.py:415: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28_candidate_due_flush_respects_outer_rollback_and_unfinished_window(
+
+v6lite/tests/test_batch28c_ack_ordering.py::test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second
+  v6lite\tests\test_batch28c_ack_ordering.py:31: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second(
+
+v6lite/tests/test_batch28c_native_latency.py::test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+  v6lite\tests\test_batch28c_native_latency.py:306: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second(
+
+v6lite/tests/test_batch28c_pair_window.py::test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick
+  v6lite\tests\test_batch28c_pair_window.py:43: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick(
+
+v6lite/tests/test_batch28d_last_stage.py::test_B28d_TP1_can_be_the_final_share_after_real_original_STP_partial_fill
+  v6lite\tests\test_batch28d_last_stage.py:75: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28d_TP1_can_be_the_final_share_after_real_original_STP_partial_fill(
+
+v6lite/tests/test_batch28d_native_final_tp.py::test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second
+  v6lite\tests\test_batch28d_native_final_tp.py:350: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second(
+
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1
+  v6lite\tests\test_batch29_native_timeout.py:263: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1(
+
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+  v6lite\tests\test_batch29_native_timeout.py:299: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history
+  v6lite\tests\test_batch27_daily_report_volume.py:81: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear
+  v6lite\tests\test_batch27_daily_report_volume.py:126: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear(
+
+v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]
+v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]
+  v6lite\tests\test_batch27_critical_attachments.py:75: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("shutdown", [False, True], ids=["normal-report", "shutdown-supplement"])
+
+v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main
+  v6lite\tests\test_batch27_critical_attachments.py:114: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+893 passed, 15 warnings in 1320.80s (0:22:00)

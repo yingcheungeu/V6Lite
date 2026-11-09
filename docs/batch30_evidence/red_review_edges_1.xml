@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="1.184" timestamp="2026-10-26T15:23:30.807504-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch30_edges" name="test_B30_foreign_unbound_missing_commission_does_not_break_daily_report" time="0.251"><failure message="TypeError: can only concatenate str (not &quot;NoneType&quot;) to str">v6lite\tests\test_batch30_edges.py:20: in test_B30_foreign_unbound_missing_commission_does_not_break_daily_report
+    text=daily_report(rig.store,rig.cfg,date(2026,10,6))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\report.py:453: in daily_report
+    missing_fees,estimated_fees = _commission_day_summary(store,cfg,key)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\report.py:438: in _commission_day_summary
+    result = fee_breakdown(trade,store,cfg)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\commissions.py:46: in fee_breakdown
+    basis = _json(store, BASIS+trade["position_id"]) if store is not None else {}
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: can only concatenate str (not "NoneType") to str</failure></testcase><testcase classname="v6lite.tests.test_batch30_edges" name="test_B30_closed_estimate_stays_frozen_after_config_floor_changes" time="0.172"><failure message="assert 5.0 == 1.0">v6lite\tests\test_batch30_edges.py:32: in test_B30_closed_estimate_stays_frozen_after_config_floor_changes
+    assert after['estimated_fees']==before['estimated_fees']
+E   assert 5.0 == 1.0</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,18 @@
+{
+  "id": "v6-lite-31",
+  "mode": "update",
+  "status": "ACTIVE",
+  "destination": "thread",
+  "time_pt": "2026-10-27T13:31:00-07:00",
+  "rrule": "FREQ=DAILY;BYHOUR=13;BYMINUTE=31;BYSECOND=0;COUNT=1",
+  "code_sha": "8ff7091296e313f9",
+  "candidate_revision": "R3",
+  "user_scope_resolved": true,
+  "stored_prompt_verified": true,
+  "updated_at_pt": "2026-10-27T14:16:20.986067-07:00",
+  "runs": [
+    "release_full_1",
+    "release_full_2",
+    "release_full_3"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "label": "green_ack_diagnostics",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T07:31:02.574465-07:00",
+  "end_pt": "2026-10-27T07:31:17.708527-07:00",
+  "seconds": 15.125,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch28c_price_edges.py",
+    "v6lite/tests/test_batch28c_raw_open_order.py"
+  ],
+  "code_sha": "f65631caea374a49",
+  "source_unchanged": true,
+  "inventory_sha256": "45a38d8409bbcd65ca652650b04005775fbb3cbb1220fc1709ed50f729f85289",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "57a82960d482b946835902e68b33d5c1ea38af5a2e4d31f516ca296567c77246",
+  "XML_sha256_before_masking": "42da121c4b09a74b75d727aba28c63c8dd948345fafcd82e1e469561b496bfbb",
+  "delivered_log_sha256": "43f9badcf2baef5c0e547fff5765b652860c21d029216504d898e9c1deba963c",
+  "delivered_XML_sha256": "42da121c4b09a74b75d727aba28c63c8dd948345fafcd82e1e469561b496bfbb",
+  "tests": 43,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

@@ -1,0 +1,42 @@
+{
+  "evidence_label": "focused",
+  "before_totals": {
+    "tests": 553,
+    "failures": 11,
+    "errors": 0,
+    "skipped": 0
+  },
+  "after_evidence_label": "focused_run2",
+  "after_totals": {
+    "tests": 553,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "production_regression": "code0 explicit cancellation + cannot accept reason display false contradiction repaired by sole production writer; original code0 expectations preserved",
+  "updates": [
+    {
+      "path": "v6lite/tests/test_batch22_config_broker.py",
+      "change": "Keep unique full identity StatusEvent; additionally assert same-tuple PriceObservation, actual STP aux and unknown LMT/cap."
+    },
+    {
+      "path": "v6lite/tests/test_batch16.py",
+      "change": "Disabled artificial-price timeout CLI refuses twice with no controls or broker writes. Fake-held valid fresh-bid TP retains ten-second cancel, original GTC full restoration, capacity and zero MKT."
+    },
+    {
+      "path": "v6lite/tests/test_batch22_protection_lifecycle.py",
+      "change": "Explicit 201 rejection uses rejection title/body, original full reason, unchanged freeze/no rehang guards."
+    },
+    {
+      "path": "v6lite/tests/test_batch20_card_provenance.py",
+      "change": "Cancelled202 uses cancellation fact; preserve all numbered manual actions and release safeguards."
+    },
+    {
+      "path": "v6lite/tests/test_batch22_item9_broker_cancel.py",
+      "change": "Only explicit201+explicit-cancellation contradictory samples require exact P0 terminal-fact-unknown title/body; all0/202 cancellation expectations remain strict."
+    }
+  ],
+  "unchanged": "Seven new specifications; old L4/F8 and unrelated assertions unchanged.",
+  "test_writer": "batch20_equivalents",
+  "tests_run_by": "root, serially"
+}

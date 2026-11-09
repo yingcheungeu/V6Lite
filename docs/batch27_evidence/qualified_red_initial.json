@@ -1,0 +1,67 @@
+{
+  "status": "two qualified baseline natural reds; no production edits before completion",
+  "runs": [
+    {
+      "label": "red_b26_initial",
+      "baseline": "b26",
+      "source_code_sha": "579d13832e3f4237",
+      "totals": {
+        "tests": 69,
+        "failures": 53,
+        "errors": 0,
+        "skipped": 0
+      },
+      "receipt_sha256": "65e822a13d4f42cec989e732dbe2accf704960dac367e2f452522d956f33087f",
+      "junit_sha256": "8a87df77816fa6dbb9445d0dc406e081f0453411507ab0036803dee163487fb7",
+      "specs": [
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_daily_report_volume.py",
+          "sha256": "d063e2e5f289da20e61ea54d9cee8472caf9467789b8bce85b33501ca01d2c62"
+        },
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py",
+          "sha256": "4010cb27dc176a4167c7de8201db37ed6ab2314e73e15db85e373c4f77026b6f"
+        },
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observation_audit.py",
+          "sha256": "754913f4edfdc3cb77b7e22d65ac64140a7754aba64ee3b0686bda35d5916ae1"
+        }
+      ],
+      "mandatory_behavior_failures_verified": true
+    },
+    {
+      "label": "red_b27b_initial",
+      "baseline": "b27b",
+      "source_code_sha": "d6dd37c12701ce95",
+      "totals": {
+        "tests": 69,
+        "failures": 53,
+        "errors": 0,
+        "skipped": 0
+      },
+      "receipt_sha256": "26111621c4e019c6713c16d67f44e79261e82d0506bbbbfd363bd2e1770587eb",
+      "junit_sha256": "a34f9da148b1ca1e594e6bd7f73138302fc8151da97be57364973ede69e86618",
+      "specs": [
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_daily_report_volume.py",
+          "sha256": "d063e2e5f289da20e61ea54d9cee8472caf9467789b8bce85b33501ca01d2c62"
+        },
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py",
+          "sha256": "4010cb27dc176a4167c7de8201db37ed6ab2314e73e15db85e373c4f77026b6f"
+        },
+        {
+          "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observation_audit.py",
+          "sha256": "754913f4edfdc3cb77b7e22d65ac64140a7754aba64ee3b0686bda35d5916ae1"
+        }
+      ],
+      "mandatory_behavior_failures_verified": true
+    }
+  ],
+  "note": "16 unchanged safety controls already pass on both baselines. 53 assertion failures are behavioral; 0 errors. No fixture calibration was needed.",
+  "red_worktree_proof": {
+    "virtual_tree": "unmodified archived batch27b v6lite plus exactly three frozen new specs",
+    "sha256": "caf5bc8df719f9af60547924863439205e07cdb53ed6b4b3b9c4998476e7dbd7",
+    "matches_each_red_worktree": true
+  }
+}

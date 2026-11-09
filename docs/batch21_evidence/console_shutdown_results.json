@@ -1,0 +1,332 @@
+[
+  {
+    "shell": "powershell.exe",
+    "mode": "dry",
+    "result": "PASS",
+    "parent_ps_alive": true,
+    "python_exited_before_prompt": true,
+    "signal": {
+      "attached_console_pids": [
+        32588,
+        38552,
+        39340,
+        41756
+      ],
+      "ownership_checked": true,
+      "helper_pid": 39340,
+      "signal": "CTRL_C_EVENT",
+      "signal_count_sent": 1,
+      "sent_at": 1791517686.4043336
+    },
+    "events": [
+      {
+        "name": "READY",
+        "at": 1791517686.238087,
+        "pid": 32588
+      },
+      {
+        "name": "SIGNAL",
+        "at": 1791517686.4053514,
+        "count": 1
+      },
+      {
+        "name": "SHUTDOWN_BEGIN",
+        "at": 1791517686.426896
+      },
+      {
+        "name": "SHUTDOWN_AUDIT_WRITTEN",
+        "at": 1791517687.9303257,
+        "payload": {
+          "dry_run": true
+        }
+      },
+      {
+        "name": "DISCONNECT_DONE",
+        "at": 1791517687.9313383
+      },
+      {
+        "name": "SHUTDOWN_AUDIT_CHECKED",
+        "at": 1791517687.9323394,
+        "payload": {
+          "dry_run": true
+        }
+      },
+      {
+        "name": "ALERTER_CLOSED",
+        "at": 1791517687.9323394
+      },
+      {
+        "name": "STORE_CLOSED",
+        "at": 1791517687.9358492
+      },
+      {
+        "name": "LOCK_RELEASED",
+        "at": 1791517687.9358492
+      },
+      {
+        "name": "CHILD_FINAL",
+        "at": 1791517687.937858
+      }
+    ],
+    "prompts": [
+      {
+        "python_alive": false,
+        "cwd_unchanged": true,
+        "parent_buffering_restored": true,
+        "at": 1791517688.032
+      }
+    ],
+    "temp_path": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite_B21_console_2b2pdq87\\powershell_dry"
+  },
+  {
+    "shell": "powershell.exe",
+    "mode": "paper_fake",
+    "result": "PASS",
+    "parent_ps_alive": true,
+    "python_exited_before_prompt": true,
+    "signal": {
+      "attached_console_pids": [
+        11884,
+        15148,
+        21148,
+        39516
+      ],
+      "ownership_checked": true,
+      "helper_pid": 15148,
+      "signal": "CTRL_C_EVENT",
+      "signal_count_sent": 1,
+      "sent_at": 1791517689.1360133
+    },
+    "events": [
+      {
+        "name": "READY",
+        "at": 1791517688.9846876,
+        "pid": 21148
+      },
+      {
+        "name": "SIGNAL",
+        "at": 1791517689.1360133,
+        "count": 1
+      },
+      {
+        "name": "SHUTDOWN_BEGIN",
+        "at": 1791517689.148658
+      },
+      {
+        "name": "SHUTDOWN_AUDIT_WRITTEN",
+        "at": 1791517691.1213765,
+        "payload": {
+          "broker_working": [],
+          "unresolved": []
+        }
+      },
+      {
+        "name": "DISCONNECT_DONE",
+        "at": 1791517691.1223943
+      },
+      {
+        "name": "SHUTDOWN_AUDIT_CHECKED",
+        "at": 1791517691.1234267,
+        "payload": {
+          "broker_working": [],
+          "unresolved": []
+        }
+      },
+      {
+        "name": "DAY_CANCELLED_GTC_RETAINED",
+        "at": 1791517691.1249723,
+        "gtc_remaining": 20
+      },
+      {
+        "name": "ALERTER_CLOSED",
+        "at": 1791517691.1260242
+      },
+      {
+        "name": "STORE_CLOSED",
+        "at": 1791517691.1335685
+      },
+      {
+        "name": "LOCK_RELEASED",
+        "at": 1791517691.1355698
+      },
+      {
+        "name": "CHILD_FINAL",
+        "at": 1791517691.13976
+      }
+    ],
+    "prompts": [
+      {
+        "python_alive": false,
+        "cwd_unchanged": true,
+        "parent_buffering_restored": true,
+        "at": 1791517691.241
+      }
+    ],
+    "temp_path": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite_B21_console_2b2pdq87\\powershell_paper_fake"
+  },
+  {
+    "shell": "pwsh.exe",
+    "mode": "dry",
+    "result": "PASS",
+    "parent_ps_alive": true,
+    "python_exited_before_prompt": true,
+    "signal": {
+      "attached_console_pids": [
+        17664,
+        19532,
+        24504,
+        31344
+      ],
+      "ownership_checked": true,
+      "helper_pid": 19532,
+      "signal": "CTRL_C_EVENT",
+      "signal_count_sent": 1,
+      "sent_at": 1791517693.794136
+    },
+    "events": [
+      {
+        "name": "READY",
+        "at": 1791517693.6224039,
+        "pid": 17664
+      },
+      {
+        "name": "SIGNAL",
+        "at": 1791517693.795109,
+        "count": 1
+      },
+      {
+        "name": "SHUTDOWN_BEGIN",
+        "at": 1791517693.8138394
+      },
+      {
+        "name": "SHUTDOWN_AUDIT_WRITTEN",
+        "at": 1791517695.3165221,
+        "payload": {
+          "dry_run": true
+        }
+      },
+      {
+        "name": "DISCONNECT_DONE",
+        "at": 1791517695.317531
+      },
+      {
+        "name": "SHUTDOWN_AUDIT_CHECKED",
+        "at": 1791517695.317531,
+        "payload": {
+          "dry_run": true
+        }
+      },
+      {
+        "name": "ALERTER_CLOSED",
+        "at": 1791517695.317531
+      },
+      {
+        "name": "STORE_CLOSED",
+        "at": 1791517695.3203337
+      },
+      {
+        "name": "LOCK_RELEASED",
+        "at": 1791517695.3213394
+      },
+      {
+        "name": "CHILD_FINAL",
+        "at": 1791517695.3223393
+      }
+    ],
+    "prompts": [
+      {
+        "parent_buffering_restored": true,
+        "python_alive": false,
+        "cwd_unchanged": true,
+        "at": 1791517695.39
+      }
+    ],
+    "temp_path": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite_B21_console_2b2pdq87\\pwsh_dry"
+  },
+  {
+    "shell": "pwsh.exe",
+    "mode": "paper_fake",
+    "result": "PASS",
+    "parent_ps_alive": true,
+    "python_exited_before_prompt": true,
+    "signal": {
+      "attached_console_pids": [
+        4748,
+        4752,
+        10372,
+        39804
+      ],
+      "ownership_checked": true,
+      "helper_pid": 39804,
+      "signal": "CTRL_C_EVENT",
+      "signal_count_sent": 1,
+      "sent_at": 1791517697.9060204
+    },
+    "events": [
+      {
+        "name": "READY",
+        "at": 1791517697.726133,
+        "pid": 10372
+      },
+      {
+        "name": "SIGNAL",
+        "at": 1791517697.9060204,
+        "count": 1
+      },
+      {
+        "name": "SHUTDOWN_BEGIN",
+        "at": 1791517697.9287431
+      },
+      {
+        "name": "SHUTDOWN_AUDIT_WRITTEN",
+        "at": 1791517699.8936281,
+        "payload": {
+          "broker_working": [],
+          "unresolved": []
+        }
+      },
+      {
+        "name": "DISCONNECT_DONE",
+        "at": 1791517699.8936281
+      },
+      {
+        "name": "SHUTDOWN_AUDIT_CHECKED",
+        "at": 1791517699.8936281,
+        "payload": {
+          "broker_working": [],
+          "unresolved": []
+        }
+      },
+      {
+        "name": "DAY_CANCELLED_GTC_RETAINED",
+        "at": 1791517699.896582,
+        "gtc_remaining": 20
+      },
+      {
+        "name": "ALERTER_CLOSED",
+        "at": 1791517699.896582
+      },
+      {
+        "name": "STORE_CLOSED",
+        "at": 1791517699.8980863
+      },
+      {
+        "name": "LOCK_RELEASED",
+        "at": 1791517699.8980863
+      },
+      {
+        "name": "CHILD_FINAL",
+        "at": 1791517699.8980863
+      }
+    ],
+    "prompts": [
+      {
+        "parent_buffering_restored": true,
+        "cwd_unchanged": true,
+        "python_alive": false,
+        "at": 1791517699.974
+      }
+    ],
+    "temp_path": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite_B21_console_2b2pdq87\\pwsh_paper_fake"
+  }
+]

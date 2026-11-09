@@ -1,0 +1,42 @@
+{
+  "recorded_by": "/root",
+  "reviewer": "/root/batch26_investigate",
+  "recorded_at_pt": "2026-10-14T21:08:58.910770-07:00",
+  "method": "Independent read-only baseline/current AST, bytes, raw stdout/JUnit/inventory and receipt audit; reviewer did not run pytest or edit Git/files",
+  "conclusion": "PASS for section 1 investigation and section 3 shutdown candidate only",
+  "unresolved_section1_findings": [
+    "Cross-client/TWS execution visibility requires explicit scope decision/evidence",
+    "Historical downtime continuity and coherent whole-database rollback cannot be proved by same-database hashes"
+  ],
+  "engine_sha256": "5c3d896700afb4a1e88ca0595e57b6ce66e7dc81d645c0215d6af3a52ba822f7",
+  "spec_sha256": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93",
+  "partial_code_sha": "24a687da4ef8bc13",
+  "other_127_baseline_files_byte_identical": true,
+  "legacy_85_test_files_unchanged": true,
+  "changed_engine_AST_methods": [
+    "shutdown",
+    "_end_of_day",
+    "_shutdown_report_after_close"
+  ],
+  "red": {
+    "receipt": "red_shutdown_b25_calibrated.json",
+    "passed": 20,
+    "failed": 15,
+    "errors": 0
+  },
+  "green": {
+    "receipt": "green_shutdown_candidate.json",
+    "passed": 35,
+    "failed": 0,
+    "errors": 0
+  },
+  "focused": {
+    "receipt": "focused_shutdown_b25_regressions.json",
+    "passed": 176,
+    "failed": 0,
+    "errors": 0
+  },
+  "B25_WORKING_GTC_and_STOP_filled_while_stopped_replays_passed": true,
+  "initial_35_setup_errors_preserved_but_not_counted_as_product_red": true,
+  "orders_overnight_protection_store_and_broker_paths_unchanged": true
+}

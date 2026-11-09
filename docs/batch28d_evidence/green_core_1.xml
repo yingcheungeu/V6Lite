@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="10" time="58.261" timestamp="2026-10-22T08:10:52.288365-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch28d_closed_tp_race" name="test_B28d_final_TP3_native_fill_invalidates_old_P1_without_P0_and_enters_terminal[complete-native-round]" time="0.736"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E735EE0&gt;()">v6lite\tests\test_batch28d_closed_tp_race.py:198: in test_B28d_final_TP3_native_fill_invalidates_old_P1_without_P0_and_enters_terminal
+    rig, pid, wire, tp, ref = _final_tp_inflight(price_run, tmp_path, monkeypatch)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28d_closed_tp_race.py:56: in _final_tp_inflight
+    _tick_until(rig, lambda: ref in rig.broker.cancels)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E735EE0&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28d_closed_tp_race" name="test_B28d_final_TP3_native_fill_invalidates_old_P1_without_P0_and_enters_terminal[failed-query-after-close]" time="0.740"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E54B060&gt;()">v6lite\tests\test_batch28d_closed_tp_race.py:198: in test_B28d_final_TP3_native_fill_invalidates_old_P1_without_P0_and_enters_terminal
+    rig, pid, wire, tp, ref = _final_tp_inflight(price_run, tmp_path, monkeypatch)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28d_closed_tp_race.py:56: in _final_tp_inflight
+    _tick_until(rig, lambda: ref in rig.broker.cancels)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E54B060&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28d_closed_tp_race" name="test_B28d_final_TP3_normal_callback_also_finishes_cancelled_protection" time="0.793"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E5A89A0&gt;()">v6lite\tests\test_batch28d_closed_tp_race.py:228: in test_B28d_final_TP3_normal_callback_also_finishes_cancelled_protection
+    rig, pid, wire, tp, ref = _final_tp_inflight(price_run, tmp_path, monkeypatch)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28d_closed_tp_race.py:56: in _final_tp_inflight
+    _tick_until(rig, lambda: ref in rig.broker.cancels)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E5A89A0&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28d_closed_tp_race" name="test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[unknown-native-SELL]" time="0.785"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E5AAF20&gt;()">v6lite\tests\test_batch28d_closed_tp_race.py:241: in test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel
+    rig, pid, wire, tp, ref = _final_tp_inflight(price_run, tmp_path, monkeypatch)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28d_closed_tp_race.py:56: in _final_tp_inflight
+    _tick_until(rig, lambda: ref in rig.broker.cancels)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E5AAF20&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28d_closed_tp_race" name="test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[unknown-query-SELL]" time="0.803"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E703A60&gt;()">v6lite\tests\test_batch28d_closed_tp_race.py:241: in test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel
+    rig, pid, wire, tp, ref = _final_tp_inflight(price_run, tmp_path, monkeypatch)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28d_closed_tp_race.py:56: in _final_tp_inflight
+    _tick_until(rig, lambda: ref in rig.broker.cancels)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E703A60&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28d_closed_tp_race" name="test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[other-SELL]" time="0.791"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E7EB9C0&gt;()">v6lite\tests\test_batch28d_closed_tp_race.py:241: in test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel
+    rig, pid, wire, tp, ref = _final_tp_inflight(price_run, tmp_path, monkeypatch)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28d_closed_tp_race.py:56: in _final_tp_inflight
+    _tick_until(rig, lambda: ref in rig.broker.cancels)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E7EB9C0&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28d_closed_tp_race" name="test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[ledger-nonzero]" time="0.791"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E5AB240&gt;()">v6lite\tests\test_batch28d_closed_tp_race.py:241: in test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel
+    rig, pid, wire, tp, ref = _final_tp_inflight(price_run, tmp_path, monkeypatch)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28d_closed_tp_race.py:56: in _final_tp_inflight
+    _tick_until(rig, lambda: ref in rig.broker.cancels)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E5AB240&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28d_closed_tp_race" name="test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel[cancel-identity-unconfirmed]" time="0.799"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF6CB61080&gt;()">v6lite\tests\test_batch28d_closed_tp_race.py:241: in test_B28d_final_TP_closure_never_excuses_unknown_SELL_nonzero_net_or_unconfirmed_cancel
+    rig, pid, wire, tp, ref = _final_tp_inflight(price_run, tmp_path, monkeypatch)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28d_closed_tp_race.py:56: in _final_tp_inflight
+    _tick_until(rig, lambda: ref in rig.broker.cancels)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 32, 25, 546000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _final_tp_inflight.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF6CB61080&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28d_tp_cards" name="test_B28d_actual_TP1_TP2_TP3_cards_name_stage_and_booked_fill" time="0.782"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 39, 3000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _finish_tp2_and_tp3.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E54A160&gt;()">v6lite\tests\test_batch28d_tp_cards.py:11: in test_B28d_actual_TP1_TP2_TP3_cards_name_stage_and_booked_fill
+    _finish_tp2_and_tp3(rig, pid, wire)
+v6lite\tests\test_batch28c_price_confirmation.py:269: in _finish_tp2_and_tp3
+    _tick_until(rig, lambda: ref in rig.broker.cancels)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 39, 3000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _finish_tp2_and_tp3.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF7E54A160&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28d_native_final_tp" name="test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second" time="49.849"><failure message="AssertionError: ('native replay deadline', 1, {'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}...1', '')), (212493.546, '61', ('61', '1', '')), (212493.609, '7', ('7', '3', '729', '131', 'DU******001', '', ...)), ...])&#10;assert False&#10; +  where False = &lt;function NativeFinalTPServer.final.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF6E2D0540&gt;()">v6lite\tests\test_batch28d_native_final_tp.py:353: in test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second
+    server.final()
+v6lite\tests\test_batch28d_native_final_tp.py:319: in final
+    self.until(lambda: self.cancel_wire is not None)
+v6lite\tests\test_batch28d_native_final_tp.py:290: in until
+    assert predicate(), ('native replay deadline', self.rig.store.position(self.pid)['qty_open'],
+E   AssertionError: ('native replay deadline', 1, {'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}...1', '')), (212493.546, '61', ('61', '1', '')), (212493.609, '7', ('7', '3', '729', '131', 'DU******001', '', ...)), ...])
+E   assert False
+E    +  where False = &lt;function NativeFinalTPServer.final.&lt;locals&gt;.&lt;lambda&gt; at 0x000001EF6E2D0540&gt;()</failure></testcase></testsuite></testsuites>

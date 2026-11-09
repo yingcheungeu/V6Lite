@@ -1,0 +1,30 @@
+.........FF...................                                           [100%]
+================================== FAILURES ===================================
+______________ test_B33_new_quote_must_be_fresh_at_actual_start _______________
+v6lite\tests\test_batch33_open_delay.py:208: in test_B33_new_quote_must_be_fresh_at_actual_start
+    hold(rig, pid, before)
+v6lite\tests\test_batch33_open_delay.py:41: in hold
+    assert not _audits(rig, 'STAGE_BEGIN')
+E   AssertionError: assert not [{'position_id': 'pos-727aa451d7634ca69d5d', 'stage': 'TP1', 'target': 1}]
+E    +  where [{'position_id': 'pos-727aa451d7634ca69d5d', 'stage': 'TP1', 'target': 1}] = _audits(<v6lite.tests.helpers.Rig object at 0x0000023D726E3A90>, 'STAGE_BEGIN')
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+______________ test_B33_existing_workflow_restoration_continues _______________
+v6lite\tests\test_batch33_open_delay.py:228: in test_B33_existing_workflow_restoration_continues
+    assert rig.store.protection(pid)['state'] == 'WORKING'
+E   AssertionError: assert 'RESTORE_PENDING' == 'WORKING'
+E     
+E     - WORKING
+E     + RESTORE_PENDING
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch33_open_delay.py::test_B33_oct29_real_overnight_replay
+  v6lite\tests\test_batch33_open_delay.py:74: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B33_oct29_real_overnight_replay(opening, record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_new_quote_must_be_fresh_at_actual_start
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_existing_workflow_restoration_continues
+2 failed, 28 passed, 1 warning in 4.23s

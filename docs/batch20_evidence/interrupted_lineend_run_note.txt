@@ -1,0 +1,1 @@
+Third incomplete serial attempt deliberately stopped to restore original LF after diff identified accidental whole-file CRLF conversion. Source logic unchanged by this normalization; all incomplete attempts excluded from final consecutive-three result. No flaky test waiver.

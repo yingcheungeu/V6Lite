@@ -1,0 +1,27 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+____ test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net _____
+C:\tmp\test_batch30_commission_red.py:69: in test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net
+    assert '已回报净值' in closed[0] and '0.83' in closed[0]
+E   AssertionError: assert ('已回报净值' in '🟢 持仓已关闭\n标的与持仓：AAPL；positionId=pos-43a96bca0650475b91c5；剩余持仓 0 股\n盈亏：AAPL 毛盈亏 3.84 USD，已回报佣金 3.01 USD，net P&L 0.83 USD；1 笔佣金未回报，佣金未计（尚非最终净盈亏）\n说明：未回报佣金到账后以账本复算；风控继续使用原保守估算，未据此解除任何门控。')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00
+_ test_B30_own_query_repairs_fee_once_without_reopening_cooldown[1.0--0.17-False] _
+C:\tmp\test_batch30_commission_red.py:99: in test_B30_own_query_repairs_fee_once_without_reopening_cooldown
+    assert calls, 'closed trade missing commission needs its own executions query'
+E   AssertionError: closed trade missing commission needs its own executions query
+E   assert []
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00
+_ test_B30_own_query_repairs_fee_once_without_reopening_cooldown[0.01-0.82-True] _
+C:\tmp\test_batch30_commission_red.py:99: in test_B30_own_query_repairs_fee_once_without_reopening_cooldown
+    assert calls, 'closed trade missing commission needs its own executions query'
+E   AssertionError: closed trade missing commission needs its own executions query
+E   assert []
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: loss cooldown | 2 consecutive losing trades; entries paused until 2026-10-26T16:52:06+00:00
+=========================== short test summary info ===========================
+FAILED ..\..\tmp\test_batch30_commission_red.py::test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net
+FAILED ..\..\tmp\test_batch30_commission_red.py::test_B30_own_query_repairs_fee_once_without_reopening_cooldown[1.0--0.17-False]
+FAILED ..\..\tmp\test_batch30_commission_red.py::test_B30_own_query_repairs_fee_once_without_reopening_cooldown[0.01-0.82-True]
+3 failed in 1.47s

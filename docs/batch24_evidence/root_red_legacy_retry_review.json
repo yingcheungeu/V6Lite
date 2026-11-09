@@ -1,0 +1,10 @@
+{
+  "baseline_code_sha": "a17d647ba28c51e4",
+  "raw_receipt": "red_legacy_retry_boundary_b23.json",
+  "raw_hashes_revalidated": true,
+  "tests": 35,
+  "natural_failures": 1,
+  "passed": 34,
+  "errors": 0,
+  "reason": "At first retry time 0, baseline immediately modified S20 to S30, failing new waiting-S20/no-query/no-write boundary; no import/fixture error."
+}

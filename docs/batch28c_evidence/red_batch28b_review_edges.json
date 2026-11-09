@@ -1,0 +1,21 @@
+{
+  "base": "v6lite-batch28b",
+  "base_commit": "0d9a72a90bbfe0519049dff42bce0b3e23a8f9b0",
+  "test_sha256": {
+    "v6lite/tests/test_batch28c_fill_edges.py": "667d514eae22f2a73ff588c77cf30989390f755bbaf6197772f0284c6333d84b",
+    "v6lite/tests/test_batch28c_fill_race.py": "cd73882282fa292ce0ba6c93dd5b4704422dfbf71ec9d870520e73e87948c388",
+    "v6lite/tests/test_batch28c_native_edges.py": "fc22057c04cbbd7ebd1209e5964e738cb01046c159ef8b111b08e98d24f80a54",
+    "v6lite/tests/test_batch28c_native_latency.py": "1d5e42bd749993e89b19c79977af5d72c4315de41e8757bec83c3c4599f95ef7",
+    "v6lite/tests/test_batch28c_price_confirmation.py": "1a9f028489fb5c0145853d4cf5417186a2f66187cf2b2f1430aa9f59063f9846",
+    "v6lite/tests/test_batch28c_price_edges.py": "f6ba5ac355cc547fc6245c2e49805bae3162d6f17f26a75b43eb3e26f80289ae"
+  },
+  "start_pt": "2026-10-21T15:34:28.329550-07:00",
+  "end_pt": "2026-10-21T15:35:48.417707-07:00",
+  "returncode": 1,
+  "archive_sha256": "a353dd7de6ef25ec6cd3c4ecf1623d4e049d4fdd7286a5ba53911eaf132ed4ef",
+  "stdout_raw_sha256": "0d0d23cba2f7ba86b6c57e6800422366889f8f61be520aa8c4c6a61c6c9d143e",
+  "tests": 38,
+  "failures": 17,
+  "errors": 0,
+  "skipped": 0
+}

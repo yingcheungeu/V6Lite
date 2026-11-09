@@ -1,0 +1,6 @@
+{
+  "report_unknown_fixture": "Missing original send control alone is recoverable from immutable send audit. Unknown fixtures remove/corrupt both diagnostic copies; no economic, identity, quantity or protection state is edited. Added positive fallback regression.",
+  "red_sources_preserved": true,
+  "native_import_only_adjusted": true,
+  "compile_calibration": "First implementation compile caught nested SQL f-string quotes in remote count; moved query to named local before any green tests."
+}

@@ -1,0 +1,10 @@
+{
+  "code_sha": "579d13832e3f4237",
+  "receipt_path": "render_actual_2.json",
+  "json_path": "render_actual_2_samples.json",
+  "markdown_path": "render_actual_2_samples.md",
+  "outputs": {
+    "render_actual_2_samples.json": "738d6df31e47aab7b3f7b00bf5d48fb4e0dfea0677243faab45e6763ea23da6c",
+    "render_actual_2_samples.md": "c61a26551a5e6ba5bca74ae09ad7e9355036283c55a21d618381b0a98fea4b0b"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "recorded_by": "/root",
+  "recorded_at_pt": "2026-10-14T12:50:40.465997-07:00",
+  "reviewers": [
+    "/root/batch25_investigate"
+  ],
+  "method": "Independent read-only source/raw receipt/XML/inventory/AST/sample inspection; no reviewer test execution or edits",
+  "reviewed_code_sha": "ea71abe782e4cf68",
+  "package_sha256": "ea71abe782e4cf689e51b0e07a98455c37ab18d26620d51c703b45736e702c6d",
+  "production_sha256": {
+    "v6lite/broker/base.py": "21b95859f214f9d969f0aa1ac3cc2eb6dad865efd2b2ad76638136e5023ce593",
+    "v6lite/models.py": "be454da959efd1aad8e2cc81ebdcb2d94ae2b0df79a22b8722ff93bb60fab473",
+    "v6lite/broker/ibkr.py": "ccd7babe8badd4b7d8dec15942509f4aa5af0748ed20feaa9493476af449faab",
+    "v6lite/broker/fake.py": "297d4aa54eec186f2b6843dadbaf3358876c65e3d186bcae5294f4d7d5db9def",
+    "v6lite/engine.py": "a197edf4c781eba435e7506a7ef2502724a95f15ac49db3db889fe650a1f6532",
+    "v6lite/protection_engine.py": "3164fb157dedc662059397e61558a4dc35a11f7ddd7fb8a641c8eb0913e75439"
+  },
+  "spec_sha256": {
+    "v6lite/tests/test_batch25_reconnect_alerts.py": "60ab5265d112a27e7cf6ada6fcac1fe9b39be272a1146b454df170dfab61bc45",
+    "v6lite/tests/test_batch25_restart.py": "dd75b6fe9f3b8a416ca3f6fbf7479975264ed1c2dddd6c0fd6c899da7e134f2d",
+    "v6lite/tests/test_batch25_review_regressions.py": "b882061f3259977c74b693565957e83274bed40b961c53d167661e3de840ce4c"
+  },
+  "legacy_fixture_exception": {
+    "v6lite/tests/test_review_round5_selfreview.py": {
+      "baseline_sha256": "86222acd134a13f3ab8937d1d7e8526b71bec2b98f6f70bbfc738df249d10ff5",
+      "candidate_sha256": "2036e85729559e65c226bae7e8be2c8b9eeb9d561366711a5a4a3ee8f88c3882",
+      "changed_function": "test_a_request_that_never_left_owes_no_end",
+      "all_original_asserts_and_raises_preserved": true,
+      "all_other_AST_nodes_identical": true
+    }
+  },
+  "unresolved_substantive_findings": [],
+  "reviewed_receipts": [
+    "red_final_all_b24_fixture_locked.json",
+    "green_final_acceptance.json",
+    "focused_final_acceptance.json",
+    "focused_crossday_release_acceptance.json"
+  ],
+  "source_refs": "source_anchors.json",
+  "reviewed_tools": {
+    "run_batch25_checks.py": "26014b757be44e054b3eedf1e35fda15ae6a1299b7fec88f943e5087a8dac861",
+    "acceptance_process.py": "f96c9e873541f6d61575f9f09b25491ede1335fd24785627d06d6b3cdbdbc08d",
+    "build_batch25_report.py": "8654cb72fc18d46ff135593041abdce2535d5f4128d566d915bc71e854a7e959",
+    "render_samples.py": "4589b3b50712ce1e205944ad6314312ac407bdcfb7ea274010b532c838a8c63c"
+  },
+  "samples_sha256": "ea0f797d991d9031585b6f7834ca561640d48e4f642144d40e59bac6f25c3bd6",
+  "samples_markdown_sha256": "4a2ce3e4f41d23cec056b83faae59cd91ed7177d35a07baee70592234df9fd79",
+  "verified_boundaries": [
+    "current generation/real handshake only bootstrap End exemption; registered owed End not erased; post-sync and old-generation strict refusal",
+    "SDK missing End on raised or swallowed timeout closes unverified socket; poison rejects owned fresh query",
+    "Snapshot creation-bound role persists when consumed after sync; only independent audit, no trading IDs/status/confirmation/hold/price authority",
+    "Actual executions and commissions retain ledger attribution and deduplication",
+    "at most two physical reconnects per stable cause in300sec; labeled incidental fields normalized but business numbers/raw reason retained; rolling budget survives success; stop latch never auto-unlocks",
+    "continuous failure30/60/120backoff, initial disconnected-tick immediate; virtual partial-recovery retry is not extra physical reconnect",
+    "partial recovery retry does not auto-clear manual recovery_failed anomaly",
+    "stable exact old GTC carry does not invent query failure; full_exec remainsFalse and existingretry/F4/manualhold/increase/recreate/TP/release boundaries remain",
+    "shared status predicate preserves original final BUY protection gate; no claim of actual BUY bypass",
+    "original tests unchanged exceptone explicit-unsent fixture; all original ConnectionError/entered/no-End count assertions preserved; after-wire same-message error counterproof remains dirty",
+    "rawtxt/XML/inventory hashes and every nodeid outcome match; all currently selected tests green and source/spec locks stable",
+    "real Engine/Alerter through FakeBroker emits exactlyone rebuild-stopP0 andone genuinequeryfailureP1; initialA queryP1zero"
+  ],
+  "known_limitations": [
+    "36line log cannot independently count instruction-only seven reconnects/60.8s alert or previous-day shutdown",
+    "Actual TWS download-open-orders setting and per-version origin of unnumbered End unknown; nextPaper manual validation required",
+    "Stable historicalcarry exception never clears priorretry/F4/manualhold; historical incomplete evidence may keep those facts gated",
+    "Windows default full3 pending after13:30 PT; focused receipts do not replace full acceptance"
+  ]
+}

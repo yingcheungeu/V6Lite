@@ -1,0 +1,44 @@
+{
+  "label": "red_refresh_edges_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-26T15:47:20.413571-07:00",
+  "end_pt": "2026-10-26T15:47:22.645398-07:00",
+  "seconds": 2.234,
+  "returncode": 1,
+  "args": [
+    "C:/tmp/test_batch30_refresh_edges_red.py"
+  ],
+  "code_sha": "4b7b841f0f492c05",
+  "source_unchanged": true,
+  "inventory_sha256": "9bc7f847429890f9be2f58cd9ba0c38a71a194a9ecbe0c9cf589a9d10b3ac563",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "62d4eb846c268949fa739aeb8e415cbedca4333869479e25fd34a9c2cd03c10f",
+  "XML_sha256_before_masking": "b40f2262d9a68cf1e3d2aad67f3ca1b08bd12a48c2fcc3dfe77d39d278eefa44",
+  "delivered_log_sha256": "04668917a52dd65583f313842ae041716e092a419a9778dd760fc7a7f7ffaad8",
+  "delivered_XML_sha256": "b40f2262d9a68cf1e3d2aad67f3ca1b08bd12a48c2fcc3dfe77d39d278eefa44",
+  "tests": 3,
+  "failures": 3,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "test_batch30_refresh_edges_red",
+      "name": "test_B30_success_then_new_fee_within_60_seconds_is_flushed_at_shutdown",
+      "kind": "failure",
+      "message": "assert ('# V6-Lite daily report 2026-10-26 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 4b7b841f0f492c0...f4fae69eb1b4a8f84a2\", \"symbol\": \"AAPL\"}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n' != '# V6-Lite daily report 2026-10-26 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 4b7b841f0f492c0...f4fae69eb1b4a8f84a2\", \"symbol\": \"AAPL\"}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n')"
+    },
+    {
+      "classname": "test_batch30_refresh_edges_red",
+      "name": "test_B30_known_current_day_open_or_unbound_fee_refreshes_topline_without_new_card[OPEN]",
+      "kind": "failure",
+      "message": "AssertionError: a known fee affects daily totals even without a closed position\nassert '# V6-Lite daily report 2026-10-26 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 4b7b841f0f492c0...4d0\", \"note\": null, \"status\": \"FILLED\"}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n' != '# V6-Lite daily report 2026-10-26 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 4b7b841f0f492c0...4d0\", \"note\": null, \"status\": \"FILLED\"}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n'"
+    },
+    {
+      "classname": "test_batch30_refresh_edges_red",
+      "name": "test_B30_known_current_day_open_or_unbound_fee_refreshes_topline_without_new_card[unbound]",
+      "kind": "failure",
+      "message": "AssertionError: a known fee affects daily totals even without a closed position\nassert '# V6-Lite daily report 2026-10-26 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 4b7b841f0f492c0...APL BUY 1@100.0 has no V6-Lite intent\"}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n' != '# V6-Lite daily report 2026-10-26 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 4b7b841f0f492c0...APL BUY 1@100.0 has no V6-Lite intent\"}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n'"
+    }
+  ]
+}

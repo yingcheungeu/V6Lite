@@ -1,0 +1,32 @@
+{
+  "label": "pending_freeze_edges_before_sql_repair",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T06:57:54.966015-07:00",
+  "end_pt": "2026-10-27T06:58:01.175718-07:00",
+  "seconds": 6.219,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py"
+  ],
+  "code_sha": "b2203fc738b8d560",
+  "source_unchanged": true,
+  "inventory_sha256": "8cd853533dbaba39d6a74510ec785fdffee00f53e1b005f4011e61c2a59bbc16",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "36e0925f7b0d3c13aa83df92c56e90f1b22d12ed9044917438e967be6bf392bc",
+  "XML_sha256_before_masking": "1ec046c9daa87faeca1fab1e471c45b255157b44241fac56d4b171befbc28dbf",
+  "delivered_log_sha256": "3ca3b742b2e37bd50ffb4a1b6d5d459e3d8a81a39134f34ea89905ef57995236",
+  "delivered_XML_sha256": "1ec046c9daa87faeca1fab1e471c45b255157b44241fac56d4b171befbc28dbf",
+  "tests": 12,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d[\\u4fdd\\u672c\\u4fee\\u6539\\u5f85\\u786e\\u8ba4]",
+      "kind": "failure",
+      "message": "sqlite3.OperationalError: no such column: time"
+    }
+  ]
+}

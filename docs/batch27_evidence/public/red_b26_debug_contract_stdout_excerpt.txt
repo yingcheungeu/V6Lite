@@ -1,0 +1,24 @@
+.....................FF......                                            [100%]
+================================== FAILURES ===================================
+____ test_F5_query_elapsed_includes_old_end_drain[positions-reqPositions] _____
+..\..\v6lite\tests\test_batch10.py:359: in test_F5_query_elapsed_includes_old_end_drain
+    assert len(rows) == 1 and rows[0].levelno == logging.DEBUG
+E   assert (1 == 1 and 20 == 10)
+E    +  where 1 = len([<LogRecord: v6lite.ibkr, 20, C:\Dev\V6Lite-dev\.pytest_cache\batch27_baseline_26\v6lite\broker\ibkr.py, 497, "[QUERY] channel=%s secs=%.3f drained=%s">])
+E    +  and   20 = <LogRecord: v6lite.ibkr, 20, C:\Dev\V6Lite-dev\.pytest_cache\batch27_baseline_26\v6lite\broker\ibkr.py, 497, "[QUERY] channel=%s secs=%.3f drained=%s">.levelno
+E    +  and   10 = logging.DEBUG
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.ibkr:ibkr.py:497 [QUERY] channel=positions secs=1.700 drained=True
+__ test_F5_query_elapsed_includes_old_end_drain[openOrders-reqAllOpenOrders] __
+..\..\v6lite\tests\test_batch10.py:359: in test_F5_query_elapsed_includes_old_end_drain
+    assert len(rows) == 1 and rows[0].levelno == logging.DEBUG
+E   assert (1 == 1 and 20 == 10)
+E    +  where 1 = len([<LogRecord: v6lite.ibkr, 20, C:\Dev\V6Lite-dev\.pytest_cache\batch27_baseline_26\v6lite\broker\ibkr.py, 497, "[QUERY] channel=%s secs=%.3f drained=%s">])
+E    +  and   20 = <LogRecord: v6lite.ibkr, 20, C:\Dev\V6Lite-dev\.pytest_cache\batch27_baseline_26\v6lite\broker\ibkr.py, 497, "[QUERY] channel=%s secs=%.3f drained=%s">.levelno
+E    +  and   10 = logging.DEBUG
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.ibkr:ibkr.py:497 [QUERY] channel=openOrders secs=1.700 drained=True
+=========================== short test summary info ===========================
+FAILED ..\..\v6lite\tests\test_batch10.py::test_F5_query_elapsed_includes_old_end_drain[positions-reqPositions]
+FAILED ..\..\v6lite\tests\test_batch10.py::test_F5_query_elapsed_includes_old_end_drain[openOrders-reqAllOpenOrders]
+2 failed, 27 passed in 2.41s

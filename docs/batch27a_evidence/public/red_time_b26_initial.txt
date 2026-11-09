@@ -1,0 +1,149 @@
+.FFFFFF...............FFFFFFF                                            [100%]
+================================== FAILURES ===================================
+_ test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:100: in test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history
+    tp, ref = _activate(rig, pid)  # Real reduce request -> native ACK -> DAY TP, with safety oracle.
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-96dc632a007749089596 | AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000e0d5.6ace9d9f.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-19T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:139: in test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP
+    assert '未执行（a 未通过）' in _overnight_p1(rig)[0], _overnight_p1(rig)
+E   AssertionError: ['overnight TP evidence pos-572900704d8e48d5b267
+E     AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert '未执行（a 未通过）' in 'overnight TP evidence pos-572900704d8e48d5b267\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-572900704d8e48d5b267 | AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000e0d5.6ace9d9f.01.01@2026-10-18；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-19T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:139: in test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP
+    assert '未执行（a 未通过）' in _overnight_p1(rig)[0], _overnight_p1(rig)
+E   AssertionError: ['overnight TP evidence pos-f79f191f41f34faba310
+E     AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert '未执行（a 未通过）' in 'overnight TP evidence pos-f79f191f41f34faba310\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-f79f191f41f34faba310 | AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000e0d5.6ace9d9f.01.01@2026-10-19；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-19T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:139: in test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP
+    assert '未执行（a 未通过）' in _overnight_p1(rig)[0], _overnight_p1(rig)
+E   AssertionError: ['overnight TP evidence pos-74034464ad25411cb06b
+E     AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert '未执行（a 未通过）' in 'overnight TP evidence pos-74034464ad25411cb06b\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-74034464ad25411cb06b | AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000e0d5.6ace9d9f.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-19T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:139: in test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP
+    assert '未执行（a 未通过）' in _overnight_p1(rig)[0], _overnight_p1(rig)
+E   AssertionError: ['overnight TP evidence pos-017066d51e184157b0e8
+E     AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert '未执行（a 未通过）' in 'overnight TP evidence pos-017066d51e184157b0e8\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-017066d51e184157b0e8 | AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000e0d5.6ace9d9f.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-19T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:139: in test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP
+    assert '未执行（a 未通过）' in _overnight_p1(rig)[0], _overnight_p1(rig)
+E   AssertionError: ['overnight TP evidence pos-04170aa206db45e3a015
+E     AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert '未执行（a 未通过）' in 'overnight TP evidence pos-04170aa206db45e3a015\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-04170aa206db45e3a015 | AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000e0d5.6ace9d9f.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-19T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+_ test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:232: in test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once
+    assert calls, 'callback must actively schedule a complete execution query, including after CLOSED'
+E   AssertionError: callback must actively schedule a complete execution query, including after CLOSED
+E   assert []
+_ test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:232: in test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once
+    assert calls, 'callback must actively schedule a complete execution query, including after CLOSED'
+E   AssertionError: callback must actively schedule a complete execution query, including after CLOSED
+E   assert []
+__ test_B27a_completed_protection_query_also_verifies_existing_callback_exec __
+..\..\v6lite\tests\test_batch27a_execution_time.py:253: in test_B27a_completed_protection_query_also_verifies_existing_callback_exec
+    assert rig.store.control(_time_key(callback.exec_id)) is None
+E   assert '{"provisional_time": "2026-10-16T14:00:30+00:00", "identity": ["b27a-callback-entry.01.01", "v6l-b3a7d115c00447a79adf", "AAPL", "BUY", 3, 113.13, 1001, 51001, 10000]}' is None
+E    +  where '{"provisional_time": "2026-10-16T14:00:30+00:00", "identity": ["b27a-callback-entry.01.01", "v6l-b3a7d115c00447a79adf", "AAPL", "BUY", 3, 113.13, 1001, 51001, 10000]}' = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x0000022A7E3E3A50>.control
+E    +      where <v6lite.store.Store object at 0x0000022A7E3E3A50> = <v6lite.tests.helpers.Rig object at 0x0000022A7E3E3410>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')
+E    +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-b3a7d115c00447a79adf', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id
+_ test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:272: in test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review
+    assert [item for item in _audits(rig, 'EXECUTION_TIME_REVIEW_REQUIRED') if item['exec_id'] == callback.exec_id]
+E   assert []
+_ test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:272: in test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review
+    assert [item for item in _audits(rig, 'EXECUTION_TIME_REVIEW_REQUIRED') if item['exec_id'] == callback.exec_id]
+E   assert []
+_ test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id] _
+..\..\v6lite\tests\test_batch27a_execution_time.py:272: in test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review
+    assert [item for item in _audits(rig, 'EXECUTION_TIME_REVIEW_REQUIRED') if item['exec_id'] == callback.exec_id]
+E   assert []
+_ test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them __
+..\..\v6lite\tests\test_batch27a_execution_time.py:279: in test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them
+    assert callback.exec_id in report and ('未核实' in report or 'unverified' in report.lower()), report
+E   AssertionError: # V6-Lite daily report 2026-10-16 (paper)
+E     
+E     - account: DU******001   state role: formal
+E     - code_sha: 579d13832e3f4237
+E     - market data: real-time (1) | n/a RTH availability (no runtime RTH samples supplied)
+E     - last health market data (instantaneous, not RTH availability): real-time (1)
+E     
+E     - realized P&L: -0.39   fees: 2.00   net: -2.39
+E     - entries submitted: 1 / 4
+E     - daily stop latched: False
+E     - open positions: none
+E     - 券商端保护: 无持仓；空窗统计 A=0.000s B=0.000s；当日止损成交：AAPL execId=0000e0d5.6ad25378.01.01 数量=3 止损价=108.13 成交价=113.00 成交均价=113.00 滑点=-14.61 USD / -450.38 bps
+E     - kill switch: off
+E     - open anomalies: none
+E     - frozen symbols (operator must flatten, then `release`): none
+E     - released positions (P&L of the operator's TWS trades is NOT in the figures above): none
+E     
+E     ## Fills
+E     - 14:00:30Z AAPL BUY 3 @ 113.13 realized 0.00
+E     - 18:55:44Z AAPL SELL 3 @ 113.00 realized -0.39
+E     
+E     ## Events
+E     - 13:50:00Z LOSS_STATE {"cooldown_until": null, "streak": 0}
+E     - 14:00:30Z SCAN {"errors": {}, "min_score": 60, "signals": [["AAPL", 78]], "vix": 18.0}
+E     - 14:00:30Z INTENT_STATUS {"intent_id": "v6l-6459c9e0483340dca784", "note": null, "status": "SENT"}
+E     - 14:00:31Z INTENT_STATUS {"intent_id": "v6l-6459c9e0483340dca784", "note": null, "status": "FILLED"}
+E     - 14:00:31Z INTENT_STATUS {"intent_id": "v6l-protect-6c51fa7c299445298e6c", "note": null, "status": "SENT"}
+E     - 14:00:31Z PROTECT_GAP {"exec_id": "0000fa4e.00000001.01.01", "gap_kind": "A", "intent_id": "v6l-protect-6c51fa7c299445298e6c", "position_id": "pos-9ff33b63087c45b083a2", "recovered_u
+E     - 18:55:44Z INTENT_STATUS {"intent_id": "v6l-protect-6c51fa7c299445298e6c", "note": null, "status": "FILLED"}
+E     - 18:55:44Z TRADE_CLOSED {"fees": 2.0, "gross": -0.39, "missing_fees": 0, "position_id": "pos-9ff33b63087c45b083a2", "symbol": "AAPL"}
+E     - 18:55:44Z LOSS_STATE {"cooldown_until": null, "streak": 1}
+E     
+E     ## Operator notes
+E     
+E     - (market context, manual actions, things to review)
+E     
+E   assert ('0000e0d5.6ad25378.01.01' in '# V6-Lite daily report 2026-10-16 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 579d13832e3f4237\...E {"cooldown_until": null, "streak": 1}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n' and ('未核实' in '# V6-Lite daily report 2026-10-16 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 579d13832e3f4237\...E {"cooldown_until": null, "streak": 1}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n' or 'unverified' in '# v6-lite daily report 2026-10-16 (paper)\n\n- account: du0000001   state role: formal\n- code_sha: 579d13832e3f4237\...e {"cooldown_until": null, "streak": 1}\n\n## operator notes\n\n- (market context, manual actions, things to review)\n'))
+E    +  where '0000e0d5.6ad25378.01.01' = FillEvent(exec_id='0000e0d5.6ad25378.01.01', intent_id='v6l-protect-6c51fa7c299445298e6c', symbol='AAPL', side=<Side.S...e.utc), broker_order_id=1002, perm_id=51002, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id
+E    +  and   '# v6-lite daily report 2026-10-16 (paper)\n\n- account: du0000001   state role: formal\n- code_sha: 579d13832e3f4237\...e {"cooldown_until": null, "streak": 1}\n\n## operator notes\n\n- (market context, manual actions, things to review)\n' = <built-in method lower of str object at 0x0000022A6097B740>()
+E    +    where <built-in method lower of str object at 0x0000022A6097B740> = '# V6-Lite daily report 2026-10-16 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: 579d13832e3f4237\...E {"cooldown_until": null, "streak": 1}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n'.lower
+=========================== short test summary info ===========================
+FAILED ::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]
+FAILED ::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]
+FAILED ::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]
+FAILED ::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]
+FAILED ::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]
+FAILED ::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]
+FAILED ::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]
+FAILED ::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]
+FAILED ::test_B27a_completed_protection_query_also_verifies_existing_callback_exec
+FAILED ::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]
+FAILED ::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]
+FAILED ::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]
+FAILED ::test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them
+13 failed, 16 passed in 6.12s

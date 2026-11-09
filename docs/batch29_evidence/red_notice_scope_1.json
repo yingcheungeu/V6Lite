@@ -1,0 +1,32 @@
+{
+  "label": "red_notice_scope_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T23:49:34.209820-07:00",
+  "end_pt": "2026-10-23T23:49:36.890430-07:00",
+  "seconds": 2.671,
+  "returncode": 1,
+  "args": [
+    "C:/tmp/v6lite_b29_notice_scope_case.py"
+  ],
+  "code_sha": "adfe89897bb2bbe0",
+  "source_unchanged": true,
+  "inventory_sha256": "ee21c521982480945e0b700bebb90d86243863a318ede468f77a1b2ebc55b15a",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "74fc0a6ad056b53da241d17c9c20205dae8356e19261c05ecb6bdd4ee94f203a",
+  "XML_sha256_before_masking": "be0d0869e5872b51dbe962fe3fc1439f6a430687f00703f065aad22431c906ec",
+  "delivered_log_sha256": "0ac0bafa3203d964948186364dd9ce7efaa080be0eb8a30ba0e5a9c38ce06045",
+  "delivered_XML_sha256": "be0d0869e5872b51dbe962fe3fc1439f6a430687f00703f065aad22431c906ec",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite_b29_notice_scope_case",
+      "name": "test_B29_two_distinct_timeout_requests_are_not_muted_by_shared_INFO_dedupe",
+      "kind": "failure",
+      "message": "AssertionError: [('TEST \u00b7 \u6d4b\u8bd5\uff1a\u6b62\u76c8\u8d85\u65f6\u6ce8\u5165\u5df2\u89e6\u53d1\uff0c\u6b63\u5728\u64a4\u5355\u5e76\u6062\u590d\u4fdd\u62a4', 'TEST \u00b7 \u6d4b\u8bd5\uff1a\u6b62\u76c8\u8d85\u65f6\u6ce8\u5165\u5df2\u89e6\u53d1\uff0c\u6b63\u5728\u64a4\u5355\u5e76\u6062\u590d\u4fdd\u62a4\n  \u53d1\u751f\u4e86\u4ec0\u4e48\uff1aAAPL TP1 orderId=1003\uff1bask=114.30\uff1b\u6d4b\u8bd5\u9650\u4ef7=115.45\uff1b...\u80a1 @114.02', 'TEST \u00b7 \u2705 TP1 \u5df2\u6210\u4ea4 \u00b7 AAPL \u00b7 1 \u80a1 @114.02\n  \u6210\u4ea4\uff1a\u672c\u6863\u7d2f\u8ba1\u6210\u4ea4 1 \u80a1\uff0c\u6210\u4ea4\u5747\u4ef7 114.02\uff0c\u5269\u4f59\u6301\u4ed3 2 \u80a1\u3002\n  \u8ba2\u5355\uff1av6l-57a49070952e434bbf0d')]\nassert 1 == 2\n +  where 1 = len([('TEST \u00b7 \u6d4b\u8bd5\uff1a\u6b62\u76c8\u8d85\u65f6\u6ce8\u5165\u5df2\u89e6\u53d1\uff0c\u6b63\u5728\u64a4\u5355\u5e76\u6062\u590d\u4fdd\u62a4', 'TEST \u00b7 \u6d4b\u8bd5\uff1a\u6b62\u76c8\u8d85\u65f6\u6ce8\u5165\u5df2\u89e6\u53d1\uff0c\u6b63\u5728\u64a4\u5355\u5e76\u6062\u590d\u4fdd\u62a4\\n\u53d1\u751f\u4e86\u4ec0\u4e48\uff1aAAPL TP1 orderId=1003\uff1bask=114.30\uff1b\u6d4b\u8bd5\u9650\u4ef7=115.45\uff1b...derId=1002\uff0c\u5f53\u524dS=2\u3002\\n\u5f71\u54cd\uff1a\u53d7\u9650Paper\u6d4b\u8bd5\u7684\u6b62\u76c8\u5355\u5df2\u5230B\u64a4\u5355\u95e8\u69db\uff1b\u6b63\u5728\u6838\u9a8c\u64a4\u5355\u53ca\u540c\u4e00GTC\u6062\u590d\u5b9e\u9645\u5269\u4f59\u6301\u4ed3\u3002\\n\u4f60\u8981\u505a\u4ec0\u4e48\uff1a\u6838\u5bf9TWS\u64a4\u5355\u3001\u8fdf\u5230\u6210\u4ea4\u548c\u4fdd\u62a4\u6570\u91cf\uff1b\u672c\u6b21\u6d4b\u8bd5\u65e0\u9700\u91cd\u590d\u547d\u4ee4\uff0c\u8d85\u8fc730\u79d2\u672a\u6062\u590d\u4ecd\u6309P0\u5904\u7f6e\u3002')])"
+    }
+  ]
+}

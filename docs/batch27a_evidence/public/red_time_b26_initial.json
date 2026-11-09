@@ -1,0 +1,291 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_time_b26_initial",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-16T15:27:19.716885-07:00",
+  "end_pt": "2026-10-16T15:27:26.583908-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "579d13832e3f4237",
+  "source_unchanged": true,
+  "worktree_code_sha": "077749571e7b7d5d",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "077749571e7b7d5de9735cc1fa518426234fd47426a33ba2d90a9a1ff40d5bb6",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27a_execution_time.py",
+      "sha256": "cd4cd5aa1da00a889c3c53e9f6861ee02f495f90965c906d610a1a3855dc0475"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 29,
+    "failures": 13,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-572900704d8e48d5b267\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-572900704d8e48d5b267\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-f79f191f41f34faba310\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-f79f191f41f34faba310\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-74034464ad25411cb06b\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-74034464ad25411cb06b\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-017066d51e184157b0e8\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-017066d51e184157b0e8\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]",
+      "outcome": "failure",
+      "message": "AssertionError: ['overnight TP evidence pos-04170aa206db45e3a015\n  AAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert '未执行（a 未通过）' in 'overnight TP evidence pos-04170aa206db45e3a015\\nAAPL：账本成交时间尚未核实；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC o...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[execId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[intent]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[side]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[quantity]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]",
+      "outcome": "failure",
+      "message": "AssertionError: callback must actively schedule a complete execution query, including after CLOSED\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]",
+      "outcome": "failure",
+      "message": "AssertionError: callback must actively schedule a complete execution query, including after CLOSED\nassert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_completed_protection_query_also_verifies_existing_callback_exec",
+      "outcome": "failure",
+      "message": "assert '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-b3a7d115c00447a79adf\", \"AAPL\", \"BUY\", 3, 113.13, 1001, 51001, 10000]}' is None\n +  where '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-b3a7d115c00447a79adf\", \"AAPL\", \"BUY\", 3, 113.13, 1001, 51001, 10000]}' = control('execution_time_unverified:b27a-callback-entry.01.01')\n +    where control = <v6lite.store.Store object at 0x0000022A7E3E3A50>.control\n +      where <v6lite.store.Store object at 0x0000022A7E3E3A50> = <v6lite.tests.helpers.Rig object at 0x0000022A7E3E3410>.store\n +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')\n +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-b3a7d115c00447a79adf', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]",
+      "outcome": "failure",
+      "message": "assert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]",
+      "outcome": "failure",
+      "message": "assert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]",
+      "outcome": "failure",
+      "message": "assert []"
+    },
+    {
+      "classname": "",
+      "name": "test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them",
+      "outcome": "failure",
+      "message": "AssertionError: # V6-Lite daily report 2026-10-16 (paper)\n  \n  - account: DU******001   state role: formal\n  - code_sha: 579d13832e3f4237\n  - market data: real-time (1) | n/a RTH availability (no runtime RTH samples supplied)\n  - last health market data (instantaneous, not RTH availability): real-time (1)\n  \n  - realized P&L: -0.39   fees: 2.00   net: -2.39\n  - entries submitted: 1 / 4\n  - daily stop latched: False\n  - open positions: none\n  - 券商端保护: 无持仓；空窗统计 A=0.000s B=0.000s；当日止损成交：AAPL execId=0000e0d5.6ad25378.01.01 数量=3 止损价=108.13 成交价=113.00 成交均价=113.00 滑点=-14.61 USD / -450.38 bps\n  - kill switch: off\n  - open anomalies: none\n  - frozen symbols (operator must flatten, then `release`): none\n  - released positions (P&L of the operator's TWS trades is NOT in the figures above): none\n  \n  ## Fills\n  - 14:00:30Z AAPL BUY 3 @ 113.13 realized 0.00\n  - 18:55:44Z AAPL SELL 3 @ 113.00 realized -0.39\n  \n  ## Events\n  - 13:50:00Z LOSS_STATE {\"cooldown_until\": null, \"streak\": 0}\n  - 14:00:30Z SCAN {\"errors\": {}, \"min_score\": 60, \"signals\": [[\"AAPL\", 78]], \"vix\": 18.0}\n  - 14:00:30Z INTENT_STATUS {\"intent_id\": \"v6l-6459c9e0483340dca784\", \"note\": null, \"status\": \"SENT\"}\n  - 14:00:31Z INTENT_STATUS {\"intent_id\": \"v6l-6459c9e0483340dca784\", \"note\": null, \"status\": \"FILLED\"}\n  - 14:00:31Z INTENT_STATUS {\"intent_id\": \"v6l-protect-6c51fa7c299445298e6c\", \"note\": null, \"status\": \"SENT\"}\n  - 14:00:31Z PROTECT_GAP {\"exec_id\": \"0000fa4e.00000001.01.01\", \"gap_kind\": \"A\", \"intent_id\": \"v6l-protect-6c51fa7c299445298e6c\", \"position_id\": \"pos-9ff33b63087c45b083a2\", \"recovered_u\n  - 18:55:44Z INTENT_STATUS {\"intent_id\": \"v6l-protect-6c51fa7c299445298e6c\", \"note\": null, \"status\": \"FILLED\"}\n  - 18:55:44Z TRADE_CLOSED {\"fees\": 2.0, \"gross\": -0.39, \"missing_fees\": 0, \"position_id\": \"pos-9ff33b63087c45b083a2\", \"symbol\": \"AAPL\"}\n  - 18:55:44Z LOSS_STATE {\"cooldown_until\": null, \"streak\": 1}\n  \n  ## Operator notes\n  \n  - (market context, manual actions, things to review)\n  \nassert ('0000e0d5.6ad25378.01.01' in '# V6-Lite daily report 2026-10-16 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 579d13832e3f4237\\...E {\"cooldown_until\": null, \"streak\": 1}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n' and ('未核实' in '# V6-Lite daily report 2026-10-16 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 579d13832e3f4237\\...E {\"cooldown_until\": null, \"streak\": 1}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n' or 'unverified' in '# v6-lite daily report 2026-10-16 (paper)\\n\\n- account: du0000001   state role: formal\\n- code_sha: 579d13832e3f4237\\...e {\"cooldown_until\": null, \"streak\": 1}\\n\\n## operator notes\\n\\n- (market context, manual actions, things to review)\\n'))\n +  where '0000e0d5.6ad25378.01.01' = FillEvent(exec_id='0000e0d5.6ad25378.01.01', intent_id='v6l-protect-6c51fa7c299445298e6c', symbol='AAPL', side=<Side.S...e.utc), broker_order_id=1002, perm_id=51002, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id\n +  and   '# v6-lite daily report 2026-10-16 (paper)\\n\\n- account: du0000001   state role: formal\\n- code_sha: 579d13832e3f4237\\...e {\"cooldown_until\": null, \"streak\": 1}\\n\\n## operator notes\\n\\n- (market context, manual actions, things to review)\\n' = <built-in method lower of str object at 0x0000022A6097B740>()\n +    where <built-in method lower of str object at 0x0000022A6097B740> = '# V6-Lite daily report 2026-10-16 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: 579d13832e3f4237\\...E {\"cooldown_until\": null, \"streak\": 1}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n'.lower"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[execId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[intent]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[symbol]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[side]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[quantity]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[price]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[orderId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[permId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[conId]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-callback]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-callback]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-callback]",
+      "::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]",
+      "::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]",
+      "::test_B27a_completed_protection_query_also_verifies_existing_callback_exec",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]",
+      "::test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them"
+    ],
+    "executed": [
+      "::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]",
+      "::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[execId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[intent]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[symbol]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[side]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[quantity]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[price]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[orderId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[permId]",
+      "::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[conId]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-callback]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-callback]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-verified]",
+      "::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-callback]",
+      "::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]",
+      "::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]",
+      "::test_B27a_completed_protection_query_also_verifies_existing_callback_exec",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]",
+      "::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]",
+      "::test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them"
+    ]
+  },
+  "stdout_sha256": "f41dafa7eea8b2b33071b5a382ac3d23ebff4edecd16fecd6a62f8619083cbe5",
+  "junit_sha256": "0b10777dab0c02d188131e9b43543d556015c2d3b41b050cff34fca3f6245099",
+  "inventory_sha256": "b70045f839944700834b3c44a4bf1e5b4ffba3c2ce3aba6ed533d8d5ae0ca91f",
+  "publication_redaction": {
+    "rule": "All account-shaped values including synthetic fixtures masked; original receipts retained locally and not staged.",
+    "original_artifact_sha256": {
+      "red_time_b26_initial.json": "250585d6da315ae8e92b43b0a347628b0b8fd06ec4f1c472ad8c5c0e5aee956b",
+      "red_time_b26_initial.txt": "d57291451b258b10d585f907159474dde953b4b9bc72279f688cb6a0622420c3",
+      "red_time_b26_initial.xml": "81e0c0f502e69996f05ff2dc476f45aebc9f51b8c2e29cf4040d2d76de480647",
+      "red_time_b26_initial_inventory.json": "03350a9fb8b8535193d7a08eb3c77736e2b5a39a586b53e7cf5b222bdcbe7ad7"
+    }
+  }
+}

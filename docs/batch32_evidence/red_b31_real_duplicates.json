@@ -1,0 +1,33 @@
+{
+  "label": "red_b31_real_duplicates",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T08:10:03.017434-07:00",
+  "end_pt": "2026-10-29T08:10:05.760808-07:00",
+  "seconds": 2.75,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch32_open_orders.py"
+  ],
+  "code_sha": "a0fcddf26251d5b7",
+  "source_unchanged": true,
+  "inventory_sha256": "69ffa53a3eb59b9d795703b418bee96df5de46c8be4749465a8f9a972a41ddbd",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "77ec9e93f874274bebca9a19a31cab7ed8573f448cc53753dfcdc56acf4a898a",
+  "XML_sha256_before_masking": "2b7dc018af50f80ea9c4123d1aeca8e37944ba6701d374957b97323ecc900758",
+  "delivered_log_sha256": "0b4b4269eabdb4fc544a89042a59f8cf00774f2d4ae923163a58d8df6300349e",
+  "delivered_XML_sha256": "2b7dc018af50f80ea9c4123d1aeca8e37944ba6701d374957b97323ecc900758",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch32_open_orders",
+      "name": "test_B32_three_native_identical_rows_confirm_gen4_and_TP2",
+      "kind": "failure",
+      "message": "AssertionError: the adapter must return one order and ACK the complete duplicate snapshot\nassert [(3, 'PRICE_PENDING')] == [(1, 'WORKING')]\n  \n  At index 0 diff: (3, 'PRICE_PENDING') != (1, 'WORKING')\n  Use -v to get more diff"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "label": "red_b30_gap_calibrated",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T06:59:14.241921-07:00",
+  "end_pt": "2026-10-27T06:59:16.306845-07:00",
+  "seconds": 2.063,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py::test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof"
+  ],
+  "code_sha": "db5df00acee0f343",
+  "source_unchanged": true,
+  "inventory_sha256": "4e00daace9a251e2adb8ba25e8bbf37a0946d3e0932d6acb3ed43efb7b0071c0",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "44a49856a839a3565297e2b00d1e21f64e16ff90fbb60ed9c1715d5e48dbeac0",
+  "XML_sha256_before_masking": "eef5788cad37355de4a9a90248ce9d1a166e59543b0271386b033db3946dbb5d",
+  "delivered_log_sha256": "496bd88fc4fdb158b82ae6d2cfc2c01f6ef59d900de71b38a652e1e88ff9099a",
+  "delivered_XML_sha256": "eef5788cad37355de4a9a90248ce9d1a166e59543b0271386b033db3946dbb5d",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof",
+      "kind": "failure",
+      "message": "AssertionError: live ACK must not depend on an unfinished unrelated receipt-proof round\nassert ['PRICE_PENDING'] == ['WORKING']\n  \n  At index 0 diff: 'PRICE_PENDING' != 'WORKING'\n  Use -v to get more diff"
+    }
+  ]
+}

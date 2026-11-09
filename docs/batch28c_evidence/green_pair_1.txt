@@ -1,0 +1,12 @@
+..............................................                           [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch28c_native_latency.py::test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second
+  v6lite\tests\test_batch28c_native_latency.py:306: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second(
+
+v6lite/tests/test_batch28c_ack_ordering.py::test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second
+  v6lite\tests\test_batch28c_ack_ordering.py:31: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+46 passed, 2 warnings in 51.50s

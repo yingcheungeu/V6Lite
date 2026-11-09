@@ -1,0 +1,34 @@
+{
+  "previous_batches": {
+    "status": "invalid harness setup",
+    "reason": "pytest --basetemp parent missing; 854 setup errors, not product regressions; raw receipt retained locally"
+  },
+  "previous_batches_valid": {
+    "status": "intentionally interrupted",
+    "reason": "superseded focused candidate before final refinements; no complete pytest result"
+  },
+  "full_1": {
+    "status": "intentionally interrupted",
+    "reason": "independent review found undelivered-fatal-page and physical-backoff edge cases; superseded before full_1_frozen; not counted as a completed full run"
+  },
+  "candidate_initial": {
+    "status": "complete",
+    "result": "13 passed"
+  },
+  "focused_edges_initial": {
+    "status": "complete",
+    "result": "57 passed"
+  },
+  "final_focused": {
+    "status": "complete superseded candidate",
+    "result": "141 passed"
+  },
+  "full_1_frozen": {
+    "status": "completed failed policy contract",
+    "tests": 1978,
+    "passed": 1975,
+    "failed": 2,
+    "skipped": 1,
+    "reason": "two superseded night/pre-RTH log-only expectations; not flaky; full receipt preserved; migration alters only their function bodies, not production; serial success count restarts at release_full_1"
+  }
+}

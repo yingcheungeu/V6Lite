@@ -1,0 +1,44 @@
+{
+  "label": "red_commission_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-26T14:24:11.416272-07:00",
+  "end_pt": "2026-10-26T14:24:13.599646-07:00",
+  "seconds": 2.188,
+  "returncode": 1,
+  "args": [
+    "C:/tmp/test_batch30_commission_red.py"
+  ],
+  "code_sha": "1bd6b193aedae3bc",
+  "source_unchanged": true,
+  "inventory_sha256": "8a383c7fef17eaa2c80d72ec30eb7f9d9f2cfa261b291a6ead99958bb65737eb",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "895f8de77c8115443af9a040dd7933314d61c44f970601940bf28e60ce193c38",
+  "XML_sha256_before_masking": "e0234c305e9a88beaf273cd2405eb597a76d02de23e64acc9fd9875c2698d2ff",
+  "delivered_log_sha256": "6cbe9cdfbdb9fda086efac06f5ab9f0eb73b8fa785a9ab641dbd40c4ce7ec635",
+  "delivered_XML_sha256": "e0234c305e9a88beaf273cd2405eb597a76d02de23e64acc9fd9875c2698d2ff",
+  "tests": 3,
+  "failures": 3,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "test_batch30_commission_red",
+      "name": "test_B30_close_and_cooldown_cards_explain_reported_and_estimated_net",
+      "kind": "failure",
+      "message": "AssertionError: assert ('\u5df2\u56de\u62a5\u51c0\u503c' in '#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684\u4e0e\u6301\u4ed3\uff1aAAPL\uff1bpositionId=pos-43a96bca0650475b91c5\uff1b\u5269\u4f59\u6301\u4ed3 0 \u80a1\\n\u76c8\u4e8f\uff1aAAPL \u6bdb\u76c8\u4e8f 3.84 USD\uff0c\u5df2\u56de\u62a5\u4f63\u91d1 3.01 USD\uff0cnet P&L 0.83 USD\uff1b1 \u7b14\u4f63\u91d1\u672a\u56de\u62a5\uff0c\u4f63\u91d1\u672a\u8ba1\uff08\u5c1a\u975e\u6700\u7ec8\u51c0\u76c8\u4e8f\uff09\\n\u8bf4\u660e\uff1a\u672a\u56de\u62a5\u4f63\u91d1\u5230\u8d26\u540e\u4ee5\u8d26\u672c\u590d\u7b97\uff1b\u98ce\u63a7\u7ee7\u7eed\u4f7f\u7528\u539f\u4fdd\u5b88\u4f30\u7b97\uff0c\u672a\u636e\u6b64\u89e3\u9664\u4efb\u4f55\u95e8\u63a7\u3002')"
+    },
+    {
+      "classname": "test_batch30_commission_red",
+      "name": "test_B30_own_query_repairs_fee_once_without_reopening_cooldown[1.0--0.17-False]",
+      "kind": "failure",
+      "message": "AssertionError: closed trade missing commission needs its own executions query\nassert []"
+    },
+    {
+      "classname": "test_batch30_commission_red",
+      "name": "test_B30_own_query_repairs_fee_once_without_reopening_cooldown[0.01-0.82-True]",
+      "kind": "failure",
+      "message": "AssertionError: closed trade missing commission needs its own executions query\nassert []"
+    }
+  ]
+}

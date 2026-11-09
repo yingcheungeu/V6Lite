@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="77" skipped="0" tests="105" time="15.466" timestamp="2026-10-15T17:44:19.195140-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="" name="test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[empty_binding]" time="0.427"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_be_token_regression.py:24: in test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[missing_modify_generation]" time="0.148"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_be_token_regression.py:24: in test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_policy_enum_default_and_all_five_examples_remain_freeze" time="0.001"><failure message="AssertionError: assert None == 'freeze'&#10; +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60), 'overnight_tp', None)&#10; +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60) = ProtectionConfig()">..\..\v6lite\tests\test_batch26_constraint_policy.py:57: in test_B26_policy_enum_default_and_all_five_examples_remain_freeze
+    assert getattr(ProtectionConfig(), 'overnight_tp', None) == 'freeze'
+E   AssertionError: assert None == 'freeze'
+E    +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60), 'overnight_tp', None)
+E    +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60) = ProtectionConfig()</failure></testcase><testcase classname="" name="test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[]" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE]" time="0.004"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint]" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled]" time="0.004"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof" time="0.148"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_constraint_policy.py:79: in test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze]" time="0.150"><failure message="AssertionError: restricted overnight TP needs one durable explanation card&#10;assert 0 == 1&#10; +  where 0 = len([])">..\..\v6lite\tests\test_batch26_constraint_policy.py:98: in test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart
+    assert len(pages) == 1, 'restricted overnight TP needs one durable explanation card'
+E   AssertionError: restricted overnight TP needs one durable explanation card
+E   assert 0 == 1
+E    +  where 0 = len([])</failure></testcase><testcase classname="" name="test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec]" time="0.149"><failure message="AssertionError: restricted overnight TP needs one durable explanation card&#10;assert 0 == 1&#10; +  where 0 = len([])">..\..\v6lite\tests\test_batch26_constraint_policy.py:98: in test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart
+    assert len(pages) == 1, 'restricted overnight TP needs one durable explanation card'
+E   AssertionError: restricted overnight TP needs one durable explanation card
+E   assert 0 == 1
+E    +  where 0 = len([])</failure></testcase><testcase classname="" name="test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]" time="0.205"><failure message="assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF2E0E50&gt;)">..\..\v6lite\tests\test_batch26_constraint_policy.py:172: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert len(_overnight_p1(rig)) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF2E0E50&gt;)</failure></testcase><testcase classname="" name="test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec]" time="0.221"><failure message="AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 15, tzinfo=datetime.timezone.utc)), ('positions_fresh', dateti...atetime.timezone.utc)), ('executions_today', datetime.datetime(2026, 10, 14, 14, 1, 30, tzinfo=datetime.timezone.utc))]&#10;assert Counter({'ope...ns_today': 2}) == Counter({'ope...ns_today': 2})&#10;  &#10;  Omitting 3 identical items, use -vv to show&#10;  Right contains 1 more item:&#10;  {'account_executions_today': 2}&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch26_constraint_policy.py:163: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert Counter(name for name, _ in calls) == Counter({name: 2 for name in expected_channels}), calls
+E   AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 15, tzinfo=datetime.timezone.utc)), ('positions_fresh', dateti...atetime.timezone.utc)), ('executions_today', datetime.datetime(2026, 10, 14, 14, 1, 30, tzinfo=datetime.timezone.utc))]
+E   assert Counter({'ope...ns_today': 2}) == Counter({'ope...ns_today': 2})
+E     
+E     Omitting 3 identical items, use -vv to show
+E     Right contains 1 more item:
+E     {'account_executions_today': 2}
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec]" time="0.233"><failure message="AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 15, tzinfo=datetime.timezone.utc)), ('positions_fresh', dateti...atetime.timezone.utc)), ('executions_today', datetime.datetime(2026, 10, 14, 14, 1, 30, tzinfo=datetime.timezone.utc))]&#10;assert Counter({'ope...ns_today': 2}) == Counter({'ope...ns_today': 2})&#10;  &#10;  Omitting 3 identical items, use -vv to show&#10;  Right contains 1 more item:&#10;  {'account_executions_today': 2}&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch26_constraint_policy.py:163: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert Counter(name for name, _ in calls) == Counter({name: 2 for name in expected_channels}), calls
+E   AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 15, tzinfo=datetime.timezone.utc)), ('positions_fresh', dateti...atetime.timezone.utc)), ('executions_today', datetime.datetime(2026, 10, 14, 14, 1, 30, tzinfo=datetime.timezone.utc))]
+E   assert Counter({'ope...ns_today': 2}) == Counter({'ope...ns_today': 2})
+E     
+E     Omitting 3 identical items, use -vv to show
+E     Right contains 1 more item:
+E     {'account_executions_today': 2}
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B26_policy_actual_missing_protection_still_retains_original_P0" time="0.188" /><testcase classname="" name="test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence" time="0.137"><failure message="AssertionError: same-day BE is a broker modification and also requires fresh full evidence&#10;assert (2, 1, 2, 0) == (2, 1, 1, 0)&#10;  &#10;  At index 2 diff: 2 != 1&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch26_constraint_policy.py:224: in test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence
+    assert _writes(rig) == before, 'same-day BE is a broker modification and also requires fresh full evidence'
+E   AssertionError: same-day BE is a broker modification and also requires fresh full evidence
+E   assert (2, 1, 2, 0) == (2, 1, 1, 0)
+E     
+E     At index 2 diff: 2 != 1
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[same-engine]" time="0.192" /><testcase classname="" name="test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[SQLite-reopen]" time="0.236" /><testcase classname="" name="test_B26_overnight_opt_in_default_is_declared_and_disabled" time="0.001"><failure message="AssertionError: assert None == 'freeze'&#10; +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60), 'overnight_tp', None)&#10; +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60) = ProtectionConfig()">..\..\v6lite\tests\test_batch26_overnight_evidence.py:343: in test_B26_overnight_opt_in_default_is_declared_and_disabled
+    assert getattr(ProtectionConfig(), 'overnight_tp', None) == 'freeze'
+E   AssertionError: assert None == 'freeze'
+E    +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60), 'overnight_tp', None)
+E    +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60) = ProtectionConfig()</failure></testcase><testcase classname="" name="test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC" time="0.160"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_overnight_evidence.py:352: in test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence" time="0.167"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_overnight_evidence.py:388: in test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[manual_sell_one]" time="0.178"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:436: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[cancelled_gtc]" time="0.171"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:436: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[missing_entry_exec]" time="0.181"><failure message="AssertionError: assert ([OrderRequest...65e4be0912b')] == []&#10;  &#10;  Left contains one more item: OrderRequest(intent_id='v6l-515046da7ada42b4ad49', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=119.07, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id='pos-bcf30c55c65e4be0912b')&#10;  Use -v to get more diff)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:433: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    assert _tp_requests(rig) == [] and _writes(rig) == before
+E   AssertionError: assert ([OrderRequest...65e4be0912b')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-515046da7ada42b4ad49', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=119.07, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id='pos-bcf30c55c65e4be0912b')
+E     Use -v to get more diff)</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[unknown_today_exec]" time="0.172"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:436: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[position_mismatch]" time="0.169"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:436: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[account]" time="0.172"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[client_id]" time="0.187"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[con_id]" time="0.171"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[broker_order_id]" time="0.165"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[perm_id]" time="0.173"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[aux_price]" time="0.172"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[order_type]" time="0.175"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[tif]" time="0.178"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[outside_rth]" time="0.162"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_perm]" time="0.161"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:476: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[orphan_intent]" time="0.162"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:476: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[net_quantity]" time="0.161"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:476: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_price]" time="0.175"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:476: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[open_orders]" time="0.180"><failure message="AssertionError: fresh query failure must revoke the earlier overnight TP authority&#10;assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF600690&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:493: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF600690&gt;)</failure></testcase><testcase classname="" name="test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[positions_fresh]" time="0.194"><failure message="AssertionError: fresh query failure must revoke the earlier overnight TP authority&#10;assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF2E7910&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:493: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF2E7910&gt;)</failure></testcase><testcase classname="" name="test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[executions_today]" time="0.198"><failure message="AssertionError: fresh query failure must revoke the earlier overnight TP authority&#10;assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221E206F0D0&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:493: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221E206F0D0&gt;)</failure></testcase><testcase classname="" name="test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[missing_entry_exec]" time="0.182"><failure message="AssertionError: assert ([OrderRequest...0154ab591d8')] == []&#10;  &#10;  Left contains one more item: OrderRequest(intent_id='v6l-660ecf8774b04cf494d7', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=119.07, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id='pos-e353c56970154ab591d8')&#10;  Use -v to get more diff)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:507: in test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes
+    assert _tp_requests(rig) == [] and _writes(rig) == before
+E   AssertionError: assert ([OrderRequest...0154ab591d8')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-660ecf8774b04cf494d7', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=119.07, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id='pos-e353c56970154ab591d8')
+E     Use -v to get more diff)</failure></testcase><testcase classname="" name="test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[external_working_sell]" time="0.188"><failure message="assert (0 == 0 and [])&#10; +  where 0 = len([])&#10; +    where [] = _restore_infos(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF407FD0&gt;)&#10; +  and   [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF407FD0&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:597: in test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes
+    assert len(_restore_infos(rig)) == old_info_count and _overnight_p1(rig)
+E   assert (0 == 0 and [])
+E    +  where 0 = len([])
+E    +    where [] = _restore_infos(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF407FD0&gt;)
+E    +  and   [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF407FD0&gt;)</failure></testcase><testcase classname="" name="test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[undercovered]" time="0.176"><failure message="assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221E12307D0&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:620: in test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221E12307D0&gt;)</failure></testcase><testcase classname="" name="test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[missing_gtc]" time="0.170"><failure message="assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF2D7A50&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:620: in test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF2D7A50&gt;)</failure></testcase><testcase classname="" name="test_B26_historical_entry_proof_does_not_replace_protected_release_execution_evidence" time="0.174" /><testcase classname="" name="test_B26_default_off_retains_b25_overnight_stop_and_blocks_new_TP" time="0.168" /><testcase classname="" name="test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore" time="0.196"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_overnight_evidence.py:661: in test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price" time="0.181"><failure message="assert (1, 1, 1, 0) == (1, 1, 0, 0)&#10;  &#10;  At index 2 diff: 1 != 0&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch26_overnight_evidence.py:686: in test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price
+    assert _writes(rig) == before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen" time="0.163"><failure message="assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = _restore_infos(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF63ED50&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:696: in test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen
+    assert len(_restore_infos(rig)) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = _restore_infos(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF63ED50&gt;)</failure></testcase><testcase classname="" name="test_B26_edge_real_TOML_omission_matches_freeze_and_constraint_changes_fingerprint" time="0.022"><failure message="Failed: valid reviewed overnight opt-in TOML must load: [protection] has keys that do not belong there: ['overnight_tp']">..\..\v6lite\tests\test_batch26_review_edges.py:38: in _must_load
+    return load_config(path)
+           ^^^^^^^^^^^^^^^^^
+v6lite\config.py:375: in load_config
+    raise ConfigError(f"[protection] has keys that do not belong there: {sorted(extra)}")
+E   v6lite.config.ConfigError: [protection] has keys that do not belong there: ['overnight_tp']
+
+During handling of the above exception, another exception occurred:
+..\..\v6lite\tests\test_batch26_review_edges.py:47: in test_B26_edge_real_TOML_omission_matches_freeze_and_constraint_changes_fingerprint
+    off = _must_load(_config_file(tmp_path, '"freeze"'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_review_edges.py:42: in _must_load
+    pytest.fail('valid reviewed overnight opt-in TOML must load: ' + str(exc))
+E   Failed: valid reviewed overnight opt-in TOML must load: [protection] has keys that do not belong there: ['overnight_tp']</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[0]" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[1]" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[true]" time="0.004"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[false]" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[None]" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[True]" time="0.004"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[False]" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_real_TOML_loader_rejects_non_enum_policy[0]" time="0.011" /><testcase classname="" name="test_B26_edge_real_TOML_loader_rejects_non_enum_policy[1]" time="0.014" /><testcase classname="" name="test_B26_edge_real_TOML_loader_rejects_non_enum_policy[&quot;false&quot;]" time="0.012" /><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[quantity]" time="0.168"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[price]" time="0.168"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[side]" time="0.163"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[broker_order_id]" time="0.161"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[perm_id]" time="0.163"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[duplicate_download]" time="0.158"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share" time="0.161"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:137: in test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share
+    tp1, old_ref = _activate(rig, pid)
+                   ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_query_generation_change_revokes_earlier_overnight_proof" time="0.176"><failure message="assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF56DA10&gt;)">..\..\v6lite\tests\test_batch26_review_edges.py:200: in test_B26_edge_query_generation_change_revokes_earlier_overnight_proof
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF56DA10&gt;)</failure></testcase><testcase classname="" name="test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission" time="0.169"><failure message="assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF2E1D90&gt;)">..\..\v6lite\tests\test_batch26_review_edges.py:220: in test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000221FF2E1D90&gt;)</failure></testcase><testcase classname="" name="test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper]" time="0.088"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_0/rig-0/reports/2026-10-14.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_0/rig-0/reports/2026-10-14.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run]" time="0.085"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_1/rig-0/reports/2026-10-14.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_1/rig-0/reports/2026-10-14.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper]" time="0.087"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_2/rig-0/reports/2026-10-14.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_2/rig-0/reports/2026-10-14.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run]" time="0.074"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_3/rig-0/reports/2026-10-14.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_3/rig-0/reports/2026-10-14.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper]" time="0.072"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_4/rig-0/reports/2026-10-14.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_4/rig-0/reports/2026-10-14.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run]" time="0.074"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_5/rig-0/reports/2026-10-14.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_5/rig-0/reports/2026-10-14.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-Paper]" time="0.083" /><testcase classname="" name="test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-dry-run]" time="0.072" /><testcase classname="" name="test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-Paper]" time="0.078" /><testcase classname="" name="test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-dry-run]" time="0.081" /><testcase classname="" name="test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-Paper]" time="0.082" /><testcase classname="" name="test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-dry-run]" time="0.082" /><testcase classname="" name="test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-Paper]" time="0.080" /><testcase classname="" name="test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-dry-run]" time="0.072" /><testcase classname="" name="test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper]" time="0.080"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u0/rig-0/reports/2026-11-27.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:167: in test_B26_shutdown_supplement_uses_the_actual_early_close
+    _assert_report(rig, '2026-11-27')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u0/rig-0/reports/2026-11-27.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run]" time="0.082"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u1/rig-0/reports/2026-11-27.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:167: in test_B26_shutdown_supplement_uses_the_actual_early_close
+    _assert_report(rig, '2026-11-27')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u1/rig-0/reports/2026-11-27.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper]" time="0.080"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u2/rig-0/reports/2026-11-27.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:167: in test_B26_shutdown_supplement_uses_the_actual_early_close
+    _assert_report(rig, '2026-11-27')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u2/rig-0/reports/2026-11-27.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run]" time="0.076"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u3/rig-0/reports/2026-11-27.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:167: in test_B26_shutdown_supplement_uses_the_actual_early_close
+    _assert_report(rig, '2026-11-27')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u3/rig-0/reports/2026-11-27.md').is_file</failure></testcase><testcase classname="" name="test_B26_shutdown_just_before_early_close_does_not_report[Paper]" time="0.104" /><testcase classname="" name="test_B26_shutdown_just_before_early_close_does_not_report[dry-run]" time="0.087" /><testcase classname="" name="test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[Paper]" time="0.139" /><testcase classname="" name="test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[dry-run]" time="0.123" /><testcase classname="" name="test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper]" time="0.074"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_supplement_delivery_i0/rig-0/reports/2026-10-14.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:209: in test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen
+    path, text = _assert_report(rig, DAY_KEY)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_supplement_delivery_i0/rig-0/reports/2026-10-14.md').is_file</failure></testcase><testcase classname="" name="test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run]" time="0.093"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_supplement_delivery_i1/rig-0/reports/2026-10-14.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:209: in test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen
+    path, text = _assert_report(rig, DAY_KEY)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_supplement_delivery_i1/rig-0/reports/2026-10-14.md').is_file</failure></testcase><testcase classname="" name="test_B26_written_local_report_marker_also_prevents_duplicate_rendering[Paper]" time="0.123" /><testcase classname="" name="test_B26_written_local_report_marker_also_prevents_duplicate_rendering[dry-run]" time="0.125" /><testcase classname="" name="test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-Paper]" time="0.082" /><testcase classname="" name="test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-dry-run]" time="0.084" /><testcase classname="" name="test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-Paper]" time="0.144" /><testcase classname="" name="test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-dry-run]" time="0.133" /><testcase classname="" name="test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[Paper]" time="0.086" /><testcase classname="" name="test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[dry-run]" time="0.086" /><testcase classname="" name="test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order" time="0.106"><failure message="AssertionError: shutdown after market close must write the real local daily report&#10;assert False&#10; +  where False = is_file()&#10; +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_supplement_preserves_0/rig-0/reports/2026-10-06.md').is_file">..\..\v6lite\tests\test_batch26_shutdown_report.py:378: in test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order
+    _assert_report(rig, '2026-10-06')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_supplement_preserves_0/rig-0/reports/2026-10-06.md').is_file</failure></testcase><testcase classname="" name="test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render]" time="0.113"><failure message="AssertionError: shutdown must attempt the real after-close report despite the injected failure&#10;assert 0 == 1&#10; +  where 0 = len([])">..\..\v6lite\tests\test_batch26_shutdown_report.py:404: in test_B26_report_failure_does_not_interrupt_safe_order_shutdown
+    assert len(attempts) == 1, 'shutdown must attempt the real after-close report despite the injected failure'
+E   AssertionError: shutdown must attempt the real after-close report despite the injected failure
+E   assert 0 == 1
+E    +  where 0 = len([])</failure></testcase><testcase classname="" name="test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]" time="0.114"><failure message="AssertionError: shutdown must attempt the real after-close report despite the injected failure&#10;assert 0 == 1&#10; +  where 0 = len([])">..\..\v6lite\tests\test_batch26_shutdown_report.py:404: in test_B26_report_failure_does_not_interrupt_safe_order_shutdown
+    assert len(attempts) == 1, 'shutdown must attempt the real after-close report despite the injected failure'
+E   AssertionError: shutdown must attempt the real after-close report despite the injected failure
+E   assert 0 == 1
+E    +  where 0 = len([])</failure></testcase></testsuite></testsuites>

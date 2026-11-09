@@ -1,0 +1,10 @@
+{
+  "tag": "v6lite-batch28a",
+  "commit": "a1ed23fc24d5757eed238502e2f19789ba698df7",
+  "spec_sha256": "9c79d611507e78d6a3d7dfb51987be97312cc2ae95c0961f7bc734ddb5ea6779",
+  "archive_sha256": "35a73a82832d69df31d7fa48d80af7ab7125fd3bf945ddab75cddf9d455edc08",
+  "returncode": 1,
+  "start_pt": "2026-10-20T19:39:12.734221-07:00",
+  "end_pt": "2026-10-20T19:39:16.946851-07:00",
+  "excluded_candidate_controls": 2
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "nodeid": "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_complete_native_query_raw_classification_summary_and_audit_are_redacted",
+    "level": "INFO",
+    "text": "[EXECUTION_TIME_SUMMARY] returned=3 zoned=1 naive=1 unparseable=1 sample=20261020 14:01:00 UTC"
+  }
+]

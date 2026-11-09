@@ -1,0 +1,21 @@
+{
+  "baseline_code_sha": "a17d647ba28c51e4",
+  "totals": {
+    "tests": 74,
+    "failures": 48,
+    "errors": 0,
+    "skipped": 0
+  },
+  "baseline_source_unchanged": true,
+  "production_matches_independent_review": true,
+  "test_sha256": {
+    "v6lite/tests/test_batch24_stp_echo.py": "2fc7a6b36ef4b088a5dbf7b16fa018b4f05bc3c50baf13a2e59a194c25393541",
+    "v6lite/tests/test_batch24_pacing.py": "8b425b9e3ce7488e4c163b3433f639f54c52b6839c6f676c82678c96885d40fe",
+    "v6lite/tests/test_batch24_pacing_lifecycle.py": "de8db2b495562c51033f5c6b736eb3f7e1a34966bc960fc1cfadbb4da8154280"
+  },
+  "evidence_sha256": {
+    "red_fixture_correction_locked.txt": "4c308a88b6490bab917ed59540efacdd6e935fbaaf840a37089ff58630e70aab",
+    "red_fixture_correction_locked.xml": "4c35f2fb9c9e5ca489a820990c4f965d98a0e514ff5e94a16c02be4cf30ee1cf",
+    "red_fixture_correction_locked_receipt.json": "0a7e55d2633e2c31b965539276ad060d9ab062dad553ee16163808b106da2626"
+  }
+}

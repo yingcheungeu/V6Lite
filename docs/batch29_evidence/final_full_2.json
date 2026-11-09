@@ -1,0 +1,33 @@
+{
+  "label": "final_full_2",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T23:14:31.407927-07:00",
+  "end_pt": "2026-10-23T23:49:08.668993-07:00",
+  "seconds": 2077.25,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests",
+    "scripts/tests"
+  ],
+  "code_sha": "adfe89897bb2bbe0",
+  "source_unchanged": true,
+  "inventory_sha256": "ee21c521982480945e0b700bebb90d86243863a318ede468f77a1b2ebc55b15a",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "5f5f9d2d13c2f9dbab183e620c8775c4c1fdbf1cc2f3d65126c40e026f4020f2",
+  "XML_sha256_before_masking": "5ad51adad727211f244d17d0eb609532f8982214ed6c147b8bbd8db4f2c95a95",
+  "delivered_log_sha256": "3715d06a4bd223fa5d9588189f697c4bd56a6f88d1937ebc96b7031cc1d6ce23",
+  "delivered_XML_sha256": "64790e647b5f73f07aa5e6eca8b9bc0c7078f52aea787d024255f7bf2842d7e6",
+  "tests": 2166,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_strategy_parity",
+      "name": "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "kind": "skipped",
+      "message": "legacy market_scanner.py not present"
+    }
+  ]
+}

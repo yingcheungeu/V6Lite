@@ -1,0 +1,194 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_review_edges_b25",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-14T22:18:06.534044-07:00",
+  "end_pt": "2026-10-14T22:18:09.338580-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "ea71abe782e4cf68",
+  "source_unchanged": true,
+  "worktree_code_sha": "b6320521dd5bbd1e",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "b6320521dd5bbd1e535476b43cb057a3343ac6987ffbcc86bf8f30a621f5b7cc",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_review_edges.py",
+      "sha256": "1299a21aff567d5919c0cca6ab6e548810956abd61fa6538353c3da1c62e203b"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 18,
+    "failures": 15,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B26_edge_real_TOML_omission_matches_false_and_true_changes_fingerprint",
+      "outcome": "failure",
+      "message": "Failed: valid reviewed overnight opt-in TOML must load: [protection] has keys that do not belong there: ['overnight_tp_enabled']"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[0]",
+      "outcome": "failure",
+      "message": "Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[1]",
+      "outcome": "failure",
+      "message": "Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[true]",
+      "outcome": "failure",
+      "message": "Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[false]",
+      "outcome": "failure",
+      "message": "Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[None]",
+      "outcome": "failure",
+      "message": "Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[\"false\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[quantity]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[price]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[side]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[broker_order_id]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[perm_id]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[duplicate_download]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_query_generation_change_revokes_earlier_overnight_proof",
+      "outcome": "failure",
+      "message": "assert []\n +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000001BDBF13F110>)"
+    },
+    {
+      "classname": "",
+      "name": "test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission",
+      "outcome": "failure",
+      "message": "assert []\n +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000001BDBF1B39D0>)"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "::test_B26_edge_real_TOML_omission_matches_false_and_true_changes_fingerprint",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[0]",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[1]",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[true]",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[false]",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[None]",
+      "::test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[0]",
+      "::test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[1]",
+      "::test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[\"false\"]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[quantity]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[price]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[side]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[broker_order_id]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[perm_id]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[duplicate_download]",
+      "::test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share",
+      "::test_B26_edge_query_generation_change_revokes_earlier_overnight_proof",
+      "::test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission"
+    ],
+    "executed": [
+      "::test_B26_edge_real_TOML_omission_matches_false_and_true_changes_fingerprint",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[0]",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[1]",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[true]",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[false]",
+      "::test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[None]",
+      "::test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[0]",
+      "::test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[1]",
+      "::test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[\"false\"]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[quantity]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[price]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[side]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[broker_order_id]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[perm_id]",
+      "::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[duplicate_download]",
+      "::test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share",
+      "::test_B26_edge_query_generation_change_revokes_earlier_overnight_proof",
+      "::test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission"
+    ]
+  },
+  "stdout_sha256": "c23a96c48de53054d4ef9bec094bedcf8c6f5f9216d0278a03abb67039c7280f",
+  "junit_sha256": "87f069d4c754a7baafd8b2b7ce22cbfe9a533477d2ab94507259cd904e79bf84",
+  "inventory_sha256": "853960bf578e38fbd401178e3457f47fa5653af5a554bbef99f157939a758caa"
+}

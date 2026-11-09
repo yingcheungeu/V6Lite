@@ -1,0 +1,97 @@
+{
+  "access_date_pt": "2026-10-08",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "IBKR Stop Limit",
+      "url": "https://www.interactivebrokers.com/docs/general/order-types/stop-limit",
+      "support": "API orderType/auxPrice/lmtPrice; no published distance ceiling"
+    },
+    {
+      "id": "S2",
+      "title": "IBKR Stop",
+      "url": "https://www.interactivebrokers.com/docs/general/order-types/stop",
+      "support": "STP market execution semantics"
+    },
+    {
+      "id": "S3",
+      "title": "Define Order Preset Value",
+      "url": "https://www.ibkrguides.com/traderworkstation/define-order-preset-value.htm",
+      "support": "Percentage/Number of Ticks compare bid/ask; displayed updated 2026-04-28"
+    },
+    {
+      "id": "S4",
+      "title": "TWS API Order",
+      "url": "https://www.interactivebrokers.com/docs/tws-api/ref/order",
+      "support": "overridePercentageConstraints scoped to TWS Presets"
+    },
+    {
+      "id": "S5",
+      "title": "TWS API Error Codes",
+      "url": "https://www.interactivebrokers.com/docs/tws-api/doc/error-handling/error-codes",
+      "support": "109,110,202 meanings"
+    },
+    {
+      "id": "S6",
+      "title": "Adaptive Stop Limit course",
+      "url": "https://www.interactivebrokers.com/campus/trading-lessons/adaptive-stop-limit/",
+      "support": "TWS Adaptive STP, DAY, GTC not allowed; IBKR replies 2025-09-17/2025-11-20 bracket limitation"
+    },
+    {
+      "id": "S7",
+      "title": "Adaptive API",
+      "url": "https://www.interactivebrokers.com/docs/general/order-types/algorithmic-orders/ib-algorithms/adaptive-algo",
+      "support": "strategy/priority fields do not prove arbitrary stop+GTC support"
+    },
+    {
+      "id": "S8",
+      "title": "Price Conditions",
+      "url": "https://www.interactivebrokers.com/docs/general/order-types/order-conditioning/price-conditions",
+      "support": "conditions exist; exact combination must be tested"
+    },
+    {
+      "id": "S9",
+      "title": "Paper limitations",
+      "url": "https://www.ibkrguides.com/clientportal/aboutpapertradingaccounts.htm",
+      "support": "simulated stop/complex order and top-of-book fill limitation"
+    },
+    {
+      "id": "S10",
+      "title": "Minimum Price Increment (legacy)",
+      "url": "https://interactivebrokers.github.io/tws-api/minimum_increment.html",
+      "support": "minTick/marketRule; deprecated legacy doc"
+    },
+    {
+      "id": "S11",
+      "title": "API Settings",
+      "url": "https://www.ibkrguides.com/traderworkstation/api.htm",
+      "support": "API precautions bypass has documented limited scope; displayed updated 2025-10-08"
+    },
+    {
+      "id": "S12",
+      "title": "Order Placement Considerations",
+      "url": "https://www.interactivebrokers.com/docs/tws-api/doc/orders/place-order/order-placement-considerations",
+      "support": "combine status/error/openOrder/exec evidence"
+    },
+    {
+      "id": "S13",
+      "title": "Microsoft GenerateConsoleCtrlEvent",
+      "url": "https://learn.microsoft.com/en-us/windows/console/generateconsolectrlevent",
+      "support": "CTRL_C_EVENT targets the attached console; control-event scope"
+    },
+    {
+      "id": "S14",
+      "title": "Microsoft AttachConsole",
+      "url": "https://learn.microsoft.com/en-us/windows/console/attachconsole",
+      "support": "explicit attachment to owned console"
+    },
+    {
+      "id": "S15",
+      "title": "Microsoft about_Scripts (PowerShell 5.1)",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-5.1",
+      "support": "script call operator and script scope"
+    }
+  ],
+  "rule_status": "no confirmed universal US stock STP LMT stop-limit distance ceiling",
+  "TWS_Gateway_or_Paper_connection": false
+}

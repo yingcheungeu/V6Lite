@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.901" timestamp="2026-10-23T23:49:34.785756-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite_b29_notice_scope_case" name="test_B29_two_distinct_timeout_requests_are_not_muted_by_shared_INFO_dedupe" time="0.550"><failure message="AssertionError: [('TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护', 'TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护&#10;  发生了什么：AAPL TP1 orderId=1003；ask=114.30；测试限价=115.45；...股 @114.02', 'TEST · ✅ TP1 已成交 · AAPL · 1 股 @114.02&#10;  成交：本档累计成交 1 股，成交均价 114.02，剩余持仓 2 股。&#10;  订单：v6l-57a49070952e434bbf0d')]&#10;assert 1 == 2&#10; +  where 1 = len([('TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护', 'TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护\n发生了什么：AAPL TP1 orderId=1003；ask=114.30；测试限价=115.45；...derId=1002，当前S=2。\n影响：受限Paper测试的止盈单已到B撤单门槛；正在核验撤单及同一GTC恢复实际剩余持仓。\n你要做什么：核对TWS撤单、迟到成交和保护数量；本次测试无需重复命令，超过30秒未恢复仍按P0处置。')])">C:\tmp\v6lite_b29_notice_scope_case.py:35: in test_B29_two_distinct_timeout_requests_are_not_muted_by_shared_INFO_dedupe
+    assert len(cards)==2, rig.channel.messages
+E   AssertionError: [('TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护', 'TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护
+E     发生了什么：AAPL TP1 orderId=1003；ask=114.30；测试限价=115.45；...股 @114.02', 'TEST · ✅ TP1 已成交 · AAPL · 1 股 @114.02
+E     成交：本档累计成交 1 股，成交均价 114.02，剩余持仓 2 股。
+E     订单：v6l-57a49070952e434bbf0d')]
+E   assert 1 == 2
+E    +  where 1 = len([('TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护', 'TEST · 测试：止盈超时注入已触发，正在撤单并恢复保护\n发生了什么：AAPL TP1 orderId=1003；ask=114.30；测试限价=115.45；...derId=1002，当前S=2。\n影响：受限Paper测试的止盈单已到B撤单门槛；正在核验撤单及同一GTC恢复实际剩余持仓。\n你要做什么：核对TWS撤单、迟到成交和保护数量；本次测试无需重复命令，超过30秒未恢复仍按P0处置。')])</failure></testcase></testsuite></testsuites>

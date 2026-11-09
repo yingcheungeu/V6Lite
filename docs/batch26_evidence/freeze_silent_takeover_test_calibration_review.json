@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-15",
+  "reason": "Independent review preserves the original B25 healthy native GTC silent takeover. Default freeze is normal stop-only policy: no refused TP/BE means no explanation incident. A real refused action must still produce exactly one durable constraint explanation.",
+  "prior_receipt": "focused243: 242 passed, 1 failed; unchanged B25 native healthy takeover expected no pages, but unconditional freeze startup P1 broke it.",
+  "archive": "docs/batch26_evidence/pre_freeze_silent_takeover_policy.py",
+  "archive_sha256": "b9090294e8ccb86d4583a21596b57135b5fe5d74129dc04882d63a86dc062c8d",
+  "corrected_spec_sha256": "d6123be09a81eb27287dd8fae4187121ccd129da8ce38113469f0d7b489c1a8b",
+  "ast_changed_functions": [
+    "test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds"
+  ],
+  "all_other_functions_AST_unchanged": true,
+  "unchanged_contracts": [
+    "freeze three query sets exactly at t=15,30; account query count zero",
+    "constraint missing ENTRY/unknown execution still gets one P1 on failed evidence",
+    "one-card reason-change/30-minute/restart test unchanged",
+    "no new writes/TP/GTC or relaxed capacity/identity assertions"
+  ],
+  "new_freeze_assertion": "31 healthy below-TP ticks emit zero explanations; an actual TP attempt then emits exactly one A/B explanation with no writes and original order identity/capacity retained.",
+  "execution": "No pytest or production edits by test author; ROOT must prove natural red on unmodified 61a candidate before the sole production implementer fixes it."
+}

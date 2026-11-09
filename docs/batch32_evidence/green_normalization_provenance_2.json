@@ -1,0 +1,28 @@
+{
+  "label": "green_normalization_provenance_2",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T08:36:06.063235-07:00",
+  "end_pt": "2026-10-29T08:36:25.139785-07:00",
+  "seconds": 19.078,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch32_open_orders.py",
+    "v6lite/tests/test_batch32_normalization_guards.py",
+    "v6lite/tests/test_batch32_release.py"
+  ],
+  "code_sha": "0085bf90032b6b92",
+  "source_unchanged": true,
+  "inventory_sha256": "221cab7e03df8c268589896117e2e4d4ca775459d647e684e5df0c68423ffd42",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "4941158e2accd2379e0378283a4ce566a55294352383818eb0e5acb26421bf93",
+  "XML_sha256_before_masking": "0e86e9d09924868b9f00b7adcaffcf4f0e3550561eae1d6980988b3da8d6c7f7",
+  "delivered_log_sha256": "6b751d4c84108d4e14d57733e8e8ee3cf164b14a7e97f094ef29bb0e3db58856",
+  "delivered_XML_sha256": "0e86e9d09924868b9f00b7adcaffcf4f0e3550561eae1d6980988b3da8d6c7f7",
+  "tests": 30,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

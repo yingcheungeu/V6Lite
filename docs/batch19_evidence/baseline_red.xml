@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="57" skipped="0" tests="74" time="4.136" timestamp="2026-10-07T14:10:19.610956-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch19" name="test_startup_title_and_mode_field_have_unique_execution_marker[paper-False-True-\u6f14\u7ec3\uff08\u4e0d\u4e0b\u5355\uff09]" time="0.213" /><testcase classname="v6lite.tests.test_batch19" name="test_startup_title_and_mode_field_have_unique_execution_marker[paper-True-True-\u6f14\u7ec3\uff08\u4e0d\u4e0b\u5355\uff09]" time="0.052"><failure message="AssertionError: #x1F9EA TEST V6-Lite 已启动（Paper 测试模式 · 实时行情）&#10;assert set() == {'演练（不下单）'}&#10;  &#10;  Extra items in the right set:&#10;  '演练（不下单）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:125: in test_startup_title_and_mode_field_have_unique_execution_marker
+    unique_marker(card.title, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: #x1F9EA TEST V6-Lite 已启动（Paper 测试模式 · 实时行情）
+E   assert set() == {'演练（不下单）'}
+E     
+E     Extra items in the right set:
+E     '演练（不下单）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_startup_title_and_mode_field_have_unique_execution_marker[paper-False-False-\u771f\u5b9e\u4e0b\u5355\uff08Paper\uff09]" time="0.056"><failure message="AssertionError: #x1F7E2 V6-Lite 已启动（Paper 正式运行 · 实时行情）&#10;assert set() == {'真实下单（Paper）'}&#10;  &#10;  Extra items in the right set:&#10;  '真实下单（Paper）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:125: in test_startup_title_and_mode_field_have_unique_execution_marker
+    unique_marker(card.title, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: #x1F7E2 V6-Lite 已启动（Paper 正式运行 · 实时行情）
+E   assert set() == {'真实下单（Paper）'}
+E     
+E     Extra items in the right set:
+E     '真实下单（Paper）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_startup_title_and_mode_field_have_unique_execution_marker[paper-True-False-\u771f\u5b9e\u4e0b\u5355\uff08Paper\uff09]" time="0.056"><failure message="AssertionError: #x1F9EA TEST V6-Lite 已启动（Paper 测试模式 · 实时行情）&#10;assert set() == {'真实下单（Paper）'}&#10;  &#10;  Extra items in the right set:&#10;  '真实下单（Paper）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:125: in test_startup_title_and_mode_field_have_unique_execution_marker
+    unique_marker(card.title, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: #x1F9EA TEST V6-Lite 已启动（Paper 测试模式 · 实时行情）
+E   assert set() == {'真实下单（Paper）'}
+E     
+E     Extra items in the right set:
+E     '真实下单（Paper）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_startup_title_and_mode_field_have_unique_execution_marker[live-False-True-\u6f14\u7ec3\uff08\u4e0d\u4e0b\u5355\uff09]" time="0.054" /><testcase classname="v6lite.tests.test_batch19" name="test_startup_title_and_mode_field_have_unique_execution_marker[live-False-False-\u771f\u5b9e\u4e0b\u5355\uff08Live\uff09]" time="0.055"><failure message="AssertionError: #x1F7E2 V6-Lite 已启动（Live 正式运行 · 实时行情）&#10;assert set() == {'真实下单（Live）'}&#10;  &#10;  Extra items in the right set:&#10;  '真实下单（Live）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:125: in test_startup_title_and_mode_field_have_unique_execution_marker
+    unique_marker(card.title, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: #x1F7E2 V6-Lite 已启动（Live 正式运行 · 实时行情）
+E   assert set() == {'真实下单（Live）'}
+E     
+E     Extra items in the right set:
+E     '真实下单（Live）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_daily_title_has_unique_execution_marker_through_engine_delivery[paper-False-True-\u6f14\u7ec3\uff08\u4e0d\u4e0b\u5355\uff09]" time="0.057"><failure message="AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06&#10;assert set() == {'演练（不下单）'}&#10;  &#10;  Extra items in the right set:&#10;  '演练（不下单）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:150: in test_daily_title_has_unique_execution_marker_through_engine_delivery
+    unique_marker(subject, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06
+E   assert set() == {'演练（不下单）'}
+E     
+E     Extra items in the right set:
+E     '演练（不下单）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_daily_title_has_unique_execution_marker_through_engine_delivery[paper-True-True-\u6f14\u7ec3\uff08\u4e0d\u4e0b\u5355\uff09]" time="0.055"><failure message="AssertionError: TEST · ✅ 正常 · V6-Lite 每日健康报告 2026-10-06&#10;assert set() == {'演练（不下单）'}&#10;  &#10;  Extra items in the right set:&#10;  '演练（不下单）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:150: in test_daily_title_has_unique_execution_marker_through_engine_delivery
+    unique_marker(subject, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: TEST · ✅ 正常 · V6-Lite 每日健康报告 2026-10-06
+E   assert set() == {'演练（不下单）'}
+E     
+E     Extra items in the right set:
+E     '演练（不下单）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_daily_title_has_unique_execution_marker_through_engine_delivery[paper-False-False-\u771f\u5b9e\u4e0b\u5355\uff08Paper\uff09]" time="0.059"><failure message="AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06&#10;assert set() == {'真实下单（Paper）'}&#10;  &#10;  Extra items in the right set:&#10;  '真实下单（Paper）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:150: in test_daily_title_has_unique_execution_marker_through_engine_delivery
+    unique_marker(subject, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06
+E   assert set() == {'真实下单（Paper）'}
+E     
+E     Extra items in the right set:
+E     '真实下单（Paper）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_daily_title_has_unique_execution_marker_through_engine_delivery[paper-True-False-\u771f\u5b9e\u4e0b\u5355\uff08Paper\uff09]" time="0.062"><failure message="AssertionError: TEST · ✅ 正常 · V6-Lite 每日健康报告 2026-10-06&#10;assert set() == {'真实下单（Paper）'}&#10;  &#10;  Extra items in the right set:&#10;  '真实下单（Paper）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:150: in test_daily_title_has_unique_execution_marker_through_engine_delivery
+    unique_marker(subject, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: TEST · ✅ 正常 · V6-Lite 每日健康报告 2026-10-06
+E   assert set() == {'真实下单（Paper）'}
+E     
+E     Extra items in the right set:
+E     '真实下单（Paper）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_daily_title_has_unique_execution_marker_through_engine_delivery[live-False-True-\u6f14\u7ec3\uff08\u4e0d\u4e0b\u5355\uff09]" time="0.055"><failure message="AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06&#10;assert set() == {'演练（不下单）'}&#10;  &#10;  Extra items in the right set:&#10;  '演练（不下单）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:150: in test_daily_title_has_unique_execution_marker_through_engine_delivery
+    unique_marker(subject, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06
+E   assert set() == {'演练（不下单）'}
+E     
+E     Extra items in the right set:
+E     '演练（不下单）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_daily_title_has_unique_execution_marker_through_engine_delivery[live-False-False-\u771f\u5b9e\u4e0b\u5355\uff08Live\uff09]" time="0.056"><failure message="AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06&#10;assert set() == {'真实下单（Live）'}&#10;  &#10;  Extra items in the right set:&#10;  '真实下单（Live）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:150: in test_daily_title_has_unique_execution_marker_through_engine_delivery
+    unique_marker(subject, expected)
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06
+E   assert set() == {'真实下单（Live）'}
+E     
+E     Extra items in the right set:
+E     '真实下单（Live）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_daily_health_card_legacy_test_mode_call_remains_compatible[False]" time="0.051"><failure message="AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06&#10;assert set() == {'真实下单（Paper）'}&#10;  &#10;  Extra items in the right set:&#10;  '真实下单（Paper）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:168: in test_daily_health_card_legacy_test_mode_call_remains_compatible
+    unique_marker(card.title, MARKERS[1])
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: ✅ 正常 · V6-Lite 每日健康报告 2026-10-06
+E   assert set() == {'真实下单（Paper）'}
+E     
+E     Extra items in the right set:
+E     '真实下单（Paper）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_daily_health_card_legacy_test_mode_call_remains_compatible[True]" time="0.050"><failure message="AssertionError: TEST · ✅ 正常 · V6-Lite 每日健康报告 2026-10-06&#10;assert set() == {'真实下单（Paper）'}&#10;  &#10;  Extra items in the right set:&#10;  '真实下单（Paper）'&#10;  Use -v to get more diff">v6lite\tests\test_batch19.py:168: in test_daily_health_card_legacy_test_mode_call_remains_compatible
+    unique_marker(card.title, MARKERS[1])
+v6lite\tests\test_batch19.py:83: in unique_marker
+    assert {marker for marker in MARKERS if marker in text} == {expected}, text
+E   AssertionError: TEST · ✅ 正常 · V6-Lite 每日健康报告 2026-10-06
+E   assert set() == {'真实下单（Paper）'}
+E     
+E     Extra items in the right set:
+E     '真实下单（Paper）'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_local_market_data_uses_same_rth_samples_as_phone_after_close[True-100%-6/6]" time="0.063"><failure message="AssertionError: assert ('100%' in '- market data: real-time (1) | requested real-time; no usable quotes 3/3')">v6lite\tests\test_batch19.py:193: in test_local_market_data_uses_same_rth_samples_as_phone_after_close
+    assert expected_percent in local and expected_ratio in local
+E   AssertionError: assert ('100%' in '- market data: real-time (1) | requested real-time; no usable quotes 3/3')</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_local_market_data_uses_same_rth_samples_as_phone_after_close[False-50%-3/6]" time="0.058"><failure message="AssertionError: assert ('50%' in '- market data: real-time (1) | requested real-time; no usable quotes 3/3')">v6lite\tests\test_batch19.py:193: in test_local_market_data_uses_same_rth_samples_as_phone_after_close
+    assert expected_percent in local and expected_ratio in local
+E   AssertionError: assert ('50%' in '- market data: real-time (1) | requested real-time; no usable quotes 3/3')</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_local_report_does_not_invent_rth_availability_or_reuse_previous_day[False]" time="0.055"><failure message="assert False&#10; +  where False = any(&lt;generator object test_local_report_does_not_invent_rth_availability_or_reuse_previous_day.&lt;locals&gt;.&lt;genexpr&gt; at 0x0000021132F96EA0&gt;)">v6lite\tests\test_batch19.py:216: in test_local_report_does_not_invent_rth_availability_or_reuse_previous_day
+    assert any(text in local for text in (
+E   assert False
+E    +  where False = any(&lt;generator object test_local_report_does_not_invent_rth_availability_or_reuse_previous_day.&lt;locals&gt;.&lt;genexpr&gt; at 0x0000021132F96EA0&gt;)</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_local_report_does_not_invent_rth_availability_or_reuse_previous_day[True]" time="0.062"><failure message="assert False&#10; +  where False = any(&lt;generator object test_local_report_does_not_invent_rth_availability_or_reuse_previous_day.&lt;locals&gt;.&lt;genexpr&gt; at 0x0000021154F973E0&gt;)">v6lite\tests\test_batch19.py:216: in test_local_report_does_not_invent_rth_availability_or_reuse_previous_day
+    assert any(text in local for text in (
+E   assert False
+E    +  where False = any(&lt;generator object test_local_report_does_not_invent_rth_availability_or_reuse_previous_day.&lt;locals&gt;.&lt;genexpr&gt; at 0x0000021154F973E0&gt;)</failure></testcase><testcase classname="v6lite.tests.test_batch19" name="test_daily_report_legacy_call_remains_readable_without_runtime_stats" time="0.051" /><testcase classname="v6lite.tests.test_batch19" name="test_g3n_example_loads_complete_formal_identity_without_creating_state" time="0.001"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite-b19-baseline-57c3fcdd7aa6455eb1aba1c378e7dbd4\\v6lite\\examples\\paper_g3n.toml'">v6lite\tests\test_batch19.py:239: in test_g3n_example_loads_complete_formal_identity_without_creating_state
+    cfg = load_config(path)  # natural baseline red: the requested example is absent
+          ^^^^^^^^^^^^^^^^^
+v6lite\config.py:340: in load_config
+    raw = tomllib.loads(config_path.read_text(encoding="utf-8"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite-b19-baseline-57c3fcdd7aa6455eb1aba1c378e7dbd4\\v6lite\\examples\\paper_g3n.toml'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_confirmed_flat_refreshes_funds_without_resetting_account_stream" time="0.052"><failure message="AssertionError: confirmed flat must not unsubscribe/resubscribe the classic account stream&#10;assert 1 == 0&#10; +  where 1 = getattr(&lt;v6lite.broker.fake.FakeBroker object at 0x0000021154FDC5D0&gt;, 'account_refreshes', 0)&#10; +    where &lt;v6lite.broker.fake.FakeBroker object at 0x0000021154FDC5D0&gt; = &lt;v6lite.tests.helpers.Rig object at 0x0000021154FDE210&gt;.broker">v6lite\tests\test_batch19_funds.py:100: in test_B19_confirmed_flat_refreshes_funds_without_resetting_account_stream
+    assert getattr(rig.broker, "account_refreshes", 0) == before, \
+E   AssertionError: confirmed flat must not unsubscribe/resubscribe the classic account stream
+E   assert 1 == 0
+E    +  where 1 = getattr(&lt;v6lite.broker.fake.FakeBroker object at 0x0000021154FDC5D0&gt;, 'account_refreshes', 0)
+E    +    where &lt;v6lite.broker.fake.FakeBroker object at 0x0000021154FDC5D0&gt; = &lt;v6lite.tests.helpers.Rig object at 0x0000021154FDE210&gt;.broker</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_funds_request_is_nonblocking_unique_and_never_resets_account_stream" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:116: in test_B19_funds_request_is_nonblocking_unique_and_never_resets_account_stream
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_complete_summary_accepts_actual_field_receive_times_not_end_time[USD]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:144: in test_B19_complete_summary_accepts_actual_field_receive_times_not_end_time
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_complete_summary_accepts_actual_field_receive_times_not_end_time[BASE]" time="0.004"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:144: in test_B19_complete_summary_accepts_actual_field_receive_times_not_end_time
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_same_value_summary_updates_seen_at_but_preserves_change_time" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:165: in test_B19_same_value_summary_updates_seen_at_but_preserves_change_time
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_summary_never_refreshes_funds[wrong_req]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:182: in test_B19_unproved_summary_never_refreshes_funds
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_summary_never_refreshes_funds[wrong_account]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:182: in test_B19_unproved_summary_never_refreshes_funds
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_summary_never_refreshes_funds[wrong_currency]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:182: in test_B19_unproved_summary_never_refreshes_funds
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_summary_never_refreshes_funds[missing_funds]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:182: in test_B19_unproved_summary_never_refreshes_funds
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_summary_never_refreshes_funds[missing_netliq]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:182: in test_B19_unproved_summary_never_refreshes_funds
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_summary_never_refreshes_funds[nan_funds]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:182: in test_B19_unproved_summary_never_refreshes_funds
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_summary_never_refreshes_funds[infinite_funds]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:182: in test_B19_unproved_summary_never_refreshes_funds
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_summary_never_refreshes_funds[nan_netliq]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:182: in test_B19_unproved_summary_never_refreshes_funds
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_timeout_cancels_single_subscription_and_old_reply_cannot_revive_it[funds_read]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:208: in test_B19_timeout_cancels_single_subscription_and_old_reply_cannot_revive_it
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_timeout_cancels_single_subscription_and_old_reply_cannot_revive_it[pump]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:208: in test_B19_timeout_cancels_single_subscription_and_old_reply_cannot_revive_it
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_timeout_cancels_single_subscription_and_old_reply_cannot_revive_it[field]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:208: in test_B19_timeout_cancels_single_subscription_and_old_reply_cannot_revive_it
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_timeout_cancels_single_subscription_and_old_reply_cannot_revive_it[end]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:208: in test_B19_timeout_cancels_single_subscription_and_old_reply_cannot_revive_it
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_old_summary_cannot_revive_funds_after_connection_generation_reset[disconnect]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:235: in test_B19_old_summary_cannot_revive_funds_after_connection_generation_reset
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_old_summary_cannot_revive_funds_after_connection_generation_reset[data_lost]" time="0.004"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:235: in test_B19_old_summary_cannot_revive_funds_after_connection_generation_reset
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_older_summary_cannot_overwrite_a_later_stream_message_even_at_equal_time[False]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:261: in test_B19_older_summary_cannot_overwrite_a_later_stream_message_even_at_equal_time
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_older_summary_cannot_overwrite_a_later_stream_message_even_at_equal_time[True]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:261: in test_B19_older_summary_cannot_overwrite_a_later_stream_message_even_at_equal_time
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_complete_summary_does_not_unlock_accountready_false" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:279: in test_B19_complete_summary_does_not_unlock_accountready_false
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_cancel_failure_disconnects_instead_of_leaking_subscription_or_trusting_funds" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:289: in test_B19_cancel_failure_disconnects_instead_of_leaking_subscription_or_trusting_funds
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_stale_flat_funds_remain_blocked_until_an_actual_fake_reply" time="0.051"><failure message="AssertionError: assert 1 == 0&#10; +  where 1 = getattr(&lt;v6lite.broker.fake.FakeBroker object at 0x000002115516D510&gt;, 'account_refreshes', 0)&#10; +    where &lt;v6lite.broker.fake.FakeBroker object at 0x000002115516D510&gt; = &lt;v6lite.tests.helpers.Rig object at 0x000002115516D710&gt;.broker">v6lite\tests\test_batch19_funds.py:330: in test_B19_stale_flat_funds_remain_blocked_until_an_actual_fake_reply
+    assert getattr(rig.broker, "account_refreshes", 0) == 0
+E   AssertionError: assert 1 == 0
+E    +  where 1 = getattr(&lt;v6lite.broker.fake.FakeBroker object at 0x000002115516D510&gt;, 'account_refreshes', 0)
+E    +    where &lt;v6lite.broker.fake.FakeBroker object at 0x000002115516D510&gt; = &lt;v6lite.tests.helpers.Rig object at 0x000002115516D710&gt;.broker</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[held]" time="0.090" /><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[broker_only]" time="0.065" /><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[unknown]" time="0.057" /><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[expired]" time="0.060" /><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[clock_backwards]" time="0.059" /><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[active]" time="0.059" /><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_unproved_flat_keeps_classic_refresh_and_funds_freshness[new_fill]" time="0.063" /><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_request_error_cancels_only_the_affected_download[True]" time="0.004"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:392: in test_B19_request_error_cancels_only_the_affected_download
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_request_error_cancels_only_the_affected_download[False]" time="0.004"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:392: in test_B19_request_error_cancels_only_the_affected_download
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_monotonic_timeout_survives_host_clock_going_backwards" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_funds.py:408: in test_B19_monotonic_timeout_survives_host_clock_going_backwards
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_funds" name="test_B19_final_entry_gate_keeps_270_second_ready_and_two_dollar_fee_checks" time="0.059" /><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_execution_marker_survives_long_daily_warning_title" time="0.001"><failure message="TypeError: daily_health_card() got an unexpected keyword argument 'mode'">v6lite\tests\test_batch19_review_edges.py:15: in test_execution_marker_survives_long_daily_warning_title
+    card = daily_health_card("\n".join(lines), date(2026, 10, 6), mode="live", dry_run=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: daily_health_card() got an unexpected keyword argument 'mode'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_backend_disconnect_cancels_summary_while_api_socket_stays_connected[1100-1101]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:25: in test_backend_disconnect_cancels_summary_while_api_socket_stays_connected
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_backend_disconnect_cancels_summary_while_api_socket_stays_connected[2110-1102]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:25: in test_backend_disconnect_cancels_summary_while_api_socket_stays_connected
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_failed_cancel_and_failed_disconnect_cannot_be_unlocked_by_old_stream" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:44: in test_failed_cancel_and_failed_disconnect_cannot_be_unlocked_by_old_stream
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_new_successful_socket_retains_actual_handshake_funds_receive_time" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:72: in test_new_successful_socket_retains_actual_handshake_funds_receive_time
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_verified_nonpositive_funds_replace_old_spendable_balance[0]" time="0.004"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:105: in test_verified_nonpositive_funds_replace_old_spendable_balance
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_verified_nonpositive_funds_replace_old_spendable_balance[-100]" time="0.004"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:105: in test_verified_nonpositive_funds_replace_old_spendable_balance
+    req_id, old = _start_download(adapter)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_handshake_reset_discards_prior_generation_fields[False-1100]" time="0.004"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:122: in test_handshake_reset_discards_prior_generation_fields
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_handshake_reset_discards_prior_generation_fields[False-1101]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:122: in test_handshake_reset_discards_prior_generation_fields
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_handshake_reset_discards_prior_generation_fields[False-1102]" time="0.003"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:122: in test_handshake_reset_discards_prior_generation_fields
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_handshake_reset_discards_prior_generation_fields[True-1100]" time="0.005"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:122: in test_handshake_reset_discards_prior_generation_fields
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_handshake_reset_discards_prior_generation_fields[True-1101]" time="0.004"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:122: in test_handshake_reset_discards_prior_generation_fields
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_review_edges" name="test_handshake_reset_discards_prior_generation_fields[True-1102]" time="0.005"><failure message="AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'">v6lite\tests\test_batch19_review_edges.py:122: in test_handshake_reset_discards_prior_generation_fields
+    req_id, _ = _start_download(adapter)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch19_funds.py:135: in _start_download
+    adapter.broker.refresh_funds()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute 'refresh_funds'</failure></testcase><testcase classname="v6lite.tests.test_batch19_protection_equivalents" name="test_R3_late_entry_fill_in_two_batches_is_fully_managed_protection_on" time="0.148" /><testcase classname="v6lite.tests.test_batch19_protection_equivalents" name="test_R3_late_entry_replay_after_restart_is_idempotent_protection_on" time="0.168" /><testcase classname="v6lite.tests.test_batch19_protection_equivalents" name="test_R3_three_late_batches_at_different_prices_protection_on" time="0.158" /><testcase classname="v6lite.tests.test_batch19_protection_equivalents" name="test_R6_baseline_uses_prior_close_holdings_not_current_quantity_protection_on" time="0.113" /><testcase classname="v6lite.tests.test_batch19_protection_equivalents" name="test_R6_full_exit_while_baseline_pending_counts_from_prior_close_protection_on" time="0.105" /><testcase classname="v6lite.tests.test_batch19_protection_equivalents" name="test_R6_prior_close_unknown_blocks_entries_but_not_exits_protection_on" time="0.108" /></testsuite></testsuites>

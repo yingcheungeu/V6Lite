@@ -1,0 +1,40 @@
+{
+  "label": "green_report_native_2",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-26T15:20:03.581244-07:00",
+  "end_pt": "2026-10-26T15:20:31.172895-07:00",
+  "seconds": 27.594,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch30_report_audit.py",
+    "v6lite/tests/test_batch30_native_commission.py",
+    "v6lite/tests/test_batch30_commission.py"
+  ],
+  "code_sha": "2e5b3c6aacd3398c",
+  "source_unchanged": true,
+  "inventory_sha256": "77b807949e9d4fa39a6b1a9485042cfa78c7067a9ffe7520f7c047161e4e59c9",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "92e0306d391f01d18c7c043a29bc72f724857685625a41a4b619ac9c080c7238",
+  "XML_sha256_before_masking": "e81c08119a2ff98243646cc65171bbb6eb57939a7592aea77137e07467f6fff3",
+  "delivered_log_sha256": "918f5d06e9bef443473cbd8a05f86379e486fc5d3640226b7a3c8a1e28532127",
+  "delivered_XML_sha256": "e81c08119a2ff98243646cc65171bbb6eb57939a7592aea77137e07467f6fff3",
+  "tests": 14,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch30_native_commission",
+      "name": "test_B30_native_300s_maintenance_repairs_only_known_closed_commission[End-before-fee]",
+      "kind": "failure",
+      "message": "assert 0 == 1\n +  where 0 = len([])\n +    where [] = <v6lite.tests.test_batch30_native_commission.CommissionWire object at 0x000001CFEA735790>.requests"
+    },
+    {
+      "classname": "v6lite.tests.test_batch30_native_commission",
+      "name": "test_B30_native_300s_maintenance_repairs_only_known_closed_commission[fee-before-first-exec]",
+      "kind": "failure",
+      "message": "assert 0 == 1\n +  where 0 = len([])\n +    where [] = <v6lite.tests.test_batch30_native_commission.CommissionWire object at 0x000001CFEA931E10>.requests"
+    }
+  ]
+}

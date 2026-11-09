@@ -1,0 +1,142 @@
+FFFFFFFFFFFF..FFF                                                        [100%]
+================================== FAILURES ===================================
+_ test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[held-normal-True-211-True-1000000.0-10] _
+v6lite\tests\test_batch28_section2.py:79: in test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence
+    assert getattr(rig.broker, 'funds_refreshes', 0) == funds_count + 1, case
+E   AssertionError: held-normal
+E   assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000172A73BFCD0>, 'funds_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x00000172A73BFCD0> = <v6lite.tests.helpers.Rig object at 0x00000172A5DA4C90>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1293 [ACCOUNT_STREAM] silent since 2026-10-20 14:56:29+00:00; re-subscribed
+_ test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[funds-unknown-True-211-True-None-30] _
+v6lite\tests\test_batch28_section2.py:79: in test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence
+    assert getattr(rig.broker, 'funds_refreshes', 0) == funds_count + 1, case
+E   AssertionError: funds-unknown
+E   assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000172A5F3D710>, 'funds_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x00000172A5F3D710> = <v6lite.tests.helpers.Rig object at 0x00000172A5F3D410>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1293 [ACCOUNT_STREAM] silent since 2026-10-20 14:56:29+00:00; re-subscribed
+_ test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[not-ready-False-211-True-1000000.0-30] _
+v6lite\tests\test_batch28_section2.py:79: in test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence
+    assert getattr(rig.broker, 'funds_refreshes', 0) == funds_count + 1, case
+E   AssertionError: not-ready
+E   assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000172A71274D0>, 'funds_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x00000172A71274D0> = <v6lite.tests.helpers.Rig object at 0x00000172A7124290>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1293 [ACCOUNT_STREAM] silent since 2026-10-20 14:56:29+00:00; re-subscribed
+_ test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[too-old-True-271-True-1000000.0-30] _
+v6lite\tests\test_batch28_section2.py:79: in test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence
+    assert getattr(rig.broker, 'funds_refreshes', 0) == funds_count + 1, case
+E   AssertionError: too-old
+E   assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000172A74A2750>, 'funds_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x00000172A74A2750> = <v6lite.tests.helpers.Rig object at 0x00000172A74A2410>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1293 [ACCOUNT_STREAM] silent since 2026-10-20 14:55:29+00:00; re-subscribed
+_ test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[unverified-True-211-False-1000000.0-30] _
+v6lite\tests\test_batch28_section2.py:79: in test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence
+    assert getattr(rig.broker, 'funds_refreshes', 0) == funds_count + 1, case
+E   AssertionError: unverified
+E   assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000172A7201290>, 'funds_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x00000172A7201290> = <v6lite.tests.helpers.Rig object at 0x00000172A7200850>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1293 [ACCOUNT_STREAM] silent since 2026-10-20 14:56:29+00:00; re-subscribed
+_ test_B28_missing_funds_timestamp_warns_and_does_not_cancel_account_stream[as_of] _
+v6lite\tests\test_batch28_section2.py:123: in test_B28_missing_funds_timestamp_warns_and_does_not_cancel_account_stream
+    assert getattr(rig.broker, 'account_refreshes', 0) == before
+E   AssertionError: assert 1 == 0
+E    +  where 1 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000172C75AF9D0>, 'account_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x00000172C75AF9D0> = <v6lite.tests.helpers.Rig object at 0x00000172C75AF2D0>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1293 [ACCOUNT_STREAM] silent since 2026-10-20 18:13:20+00:00; re-subscribed
+_ test_B28_missing_funds_timestamp_warns_and_does_not_cancel_account_stream[seen_at] _
+v6lite\tests\test_batch28_section2.py:123: in test_B28_missing_funds_timestamp_warns_and_does_not_cancel_account_stream
+    assert getattr(rig.broker, 'account_refreshes', 0) == before
+E   AssertionError: assert 1 == 0
+E    +  where 1 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000172A5F3E350>, 'account_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x00000172A5F3E350> = <v6lite.tests.helpers.Rig object at 0x00000172A5F3D410>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1293 [ACCOUNT_STREAM] silent since None; re-subscribed
+_ test_B28_funds_requests_stay_rate_limited_without_marking_silent_data_fresh _
+v6lite\tests\test_batch28_section2.py:147: in test_B28_funds_requests_stay_rate_limited_without_marking_silent_data_fresh
+    assert getattr(rig.broker, 'funds_refreshes', 0) == before + 1
+E   AssertionError: assert 0 == (0 + 1)
+E    +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000172A535FD90>, 'funds_refreshes', 0)
+E    +    where <v6lite.broker.fake.FakeBroker object at 0x00000172A535FD90> = <v6lite.tests.helpers.Rig object at 0x00000172A535DB10>.broker
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.engine:engine.py:1293 [ACCOUNT_STREAM] silent since 2026-10-20 18:13:20+00:00; re-subscribed
+_ test_B28_daily_local_and_phone_report_disclose_actual_restart_sample_start __
+v6lite\tests\test_batch28_section2.py:205: in test_B28_daily_local_and_phone_report_disclose_actual_restart_sample_start
+    _assert_scope(line, '2026-10-20', '12:09')
+v6lite\tests\test_batch28_section2.py:187: in _assert_scope
+    assert day in line and clock in line and 'PT' in line, line
+E   AssertionError: - market data: real-time (1) | 100% RTH availability · subscribed 3 · 6/6 symbol-samples · 2 samples (this process today; LIVE)
+E   assert ('2026-10-20' in '- market data: real-time (1) | 100% RTH availability · subscribed 3 · 6/6 symbol-samples · 2 samples (this process today; LIVE)')
+_ test_B28_single_process_scope_starts_at_first_rth_sample_not_engine_startup _
+v6lite\tests\test_batch28_section2.py:218: in test_B28_single_process_scope_starts_at_first_rth_sample_not_engine_startup
+    _assert_scope(line, '2026-10-20', '07:05')
+v6lite\tests\test_batch28_section2.py:187: in _assert_scope
+    assert day in line and clock in line and 'PT' in line, line
+E   AssertionError: - market data: real-time (1) | 100% RTH availability · subscribed 3 · 3/3 symbol-samples · 1 samples (this process today; LIVE)
+E   assert ('2026-10-20' in '- market data: real-time (1) | 100% RTH availability · subscribed 3 · 3/3 symbol-samples · 1 samples (this process today; LIVE)')
+___________ test_B28_cross_day_samples_reset_count_and_scope_start ____________
+v6lite\tests\test_batch28_section2.py:233: in test_B28_cross_day_samples_reset_count_and_scope_start
+    _assert_scope(line, '2026-10-21', '08:12')
+v6lite\tests\test_batch28_section2.py:187: in _assert_scope
+    assert day in line and clock in line and 'PT' in line, line
+E   AssertionError: - market data: real-time (1) | 100% RTH availability · subscribed 3 · 3/3 symbol-samples · 1 samples (this process today; LIVE)
+E   assert ('2026-10-21' in '- market data: real-time (1) | 100% RTH availability · subscribed 3 · 3/3 symbol-samples · 1 samples (this process today; LIVE)')
+__ test_B28_quote_none_is_sampled_as_monitoring_outage_and_keeps_first_scope __
+v6lite\tests\test_batch28_section2.py:249: in test_B28_quote_none_is_sampled_as_monitoring_outage_and_keeps_first_scope
+    _assert_scope(line, '2026-10-20', '07:05')
+v6lite\tests\test_batch28_section2.py:187: in _assert_scope
+    assert day in line and clock in line and 'PT' in line, line
+E   AssertionError: - market data: real-time (1) | 50% RTH availability · subscribed 3 · 3/6 symbol-samples · 2 samples (this process today; LIVE)
+E   assert ('2026-10-20' in '- market data: real-time (1) | 50% RTH availability · subscribed 3 · 3/6 symbol-samples · 2 samples (this process today; LIVE)')
+_ test_B28_important_events_display_chronologically_with_stable_equal_time_order _
+v6lite\tests\test_batch28_section2.py:298: in test_B28_important_events_display_chronologically_with_stable_equal_time_order
+    assert [next(item for item in expected if item in line) for line in lines] == expected
+E   AssertionError: assert ['latest-crit...ame-first-id'] == ['earliest-or...est-critical']
+E     
+E     At index 0 diff: 'latest-critical' != 'earliest-ordinary'
+E     Use -v to get more diff
+_ test_B28_chronology_preserves_priority_selection_budgets_attachment_and_omissions _
+v6lite\tests\test_batch28_section2.py:319: in test_B28_chronology_preserves_priority_selection_budgets_attachment_and_omissions
+    assert [line[2:10] for line in lines] == sorted(line[2:10] for line in lines)
+E   AssertionError: assert ['14:02:10', ...4:00:02', ...] == ['14:00:00', ...4:00:05', ...]
+E     
+E     At index 0 diff: '14:02:10' != '14:00:00'
+E     Use -v to get more diff
+_ test_B28_closed_window_is_durable_on_tick_without_new_repeat_or_graceful_shutdown _
+v6lite\tests\test_batch28_section2.py:382: in test_B28_closed_window_is_durable_on_tick_without_new_repeat_or_graceful_shutdown
+    assert counts == expected, (dict(counts), dict(expected))
+E   AssertionError: ({}, {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 4, ('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 4, ('pos-b27-volume-1', 'ORDER_PRICE_OBSERVATION'): 4, ('pos-b27-volume-1', 'PROTECT_STATE'): 4})
+E   assert Counter() == Counter({('po...T_STATE'): 4})
+E     
+E     Right contains 4 more items:
+E     {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 4,
+E      ('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 4,
+E      ('pos-b27-volume-1', 'ORDER_PRICE_OBSERVATION'): 4,
+E      ('pos-b27-volume-1', 'PROTECT_STATE'): 4}
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[held-normal-True-211-True-1000000.0-10]
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[funds-unknown-True-211-True-None-30]
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[not-ready-False-211-True-1000000.0-30]
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[too-old-True-271-True-1000000.0-30]
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_held_silent_account_uses_funds_snapshot_without_replacing_evidence[unverified-True-211-False-1000000.0-30]
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_missing_funds_timestamp_warns_and_does_not_cancel_account_stream[as_of]
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_missing_funds_timestamp_warns_and_does_not_cancel_account_stream[seen_at]
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_funds_requests_stay_rate_limited_without_marking_silent_data_fresh
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_daily_local_and_phone_report_disclose_actual_restart_sample_start
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_single_process_scope_starts_at_first_rth_sample_not_engine_startup
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_cross_day_samples_reset_count_and_scope_start
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_quote_none_is_sampled_as_monitoring_outage_and_keeps_first_scope
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_important_events_display_chronologically_with_stable_equal_time_order
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_chronology_preserves_priority_selection_budgets_attachment_and_omissions
+FAILED v6lite/tests/test_batch28_section2.py::test_B28_closed_window_is_durable_on_tick_without_new_repeat_or_graceful_shutdown
+15 failed, 2 passed, 2 deselected in 3.56s

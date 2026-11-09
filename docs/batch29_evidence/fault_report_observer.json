@@ -1,0 +1,8 @@
+{
+  "failed_receipt": "green_faults_1",
+  "passed": 17,
+  "failed": 1,
+  "reason": "report-only fixture had not installed existing B23 query observer, so its independent oracle could not release a terminal TP despite actual two-round restore; install observer before requests, no authority or assertion change",
+  "before_sha256": "1793d7cd35d47e1f68e42797a3e1e41e7232272a378241014177c9882bb22ef6",
+  "after_sha256": "ea9cbdc9a02609c1e198bcf9706a000b71099b2b4e5c122233500a904b84e391"
+}

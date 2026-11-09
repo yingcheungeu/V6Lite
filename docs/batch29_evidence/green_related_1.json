@@ -1,0 +1,28 @@
+{
+  "label": "green_related_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T21:59:35.311084-07:00",
+  "end_pt": "2026-10-23T22:03:13.157630-07:00",
+  "seconds": 217.844,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch16.py",
+    "v6lite/tests/test_batch23_contracts.py",
+    "v6lite/tests/test_batch29_controls.py",
+    "scripts/tests/test_v6_launchers.py"
+  ],
+  "code_sha": "95a70156aa8ada8d",
+  "source_unchanged": true,
+  "inventory_sha256": "076282e3e784aa15f35961b7558f1524e07e02894c7c25c398e77310eaf69565",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "68f355047cd096b670135195b64101d790a80fd50c83df40c7e3f0828428a05d",
+  "XML_sha256_before_masking": "395b2220c033b9fd4031cab9f0438949a0307c00e71aa04050677c5917b08310",
+  "delivered_log_sha256": "e71e182db8442a76360266001abffd09e65822a9b4b8516918032d7c91a65ecd",
+  "delivered_XML_sha256": "395b2220c033b9fd4031cab9f0438949a0307c00e71aa04050677c5917b08310",
+  "tests": 219,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

@@ -1,0 +1,44 @@
+{
+  "run_id": "20261009T145440Z_6652b822",
+  "scope": "single planned-cancel control; frozen tag sources in TEMP; serial",
+  "results": [
+    {
+      "baseline": "B20",
+      "tag": "v6lite-batch20",
+      "commit": "c5a39952635943dde5f1ae7f2a52da84c8327375",
+      "baseline_code_sha_before_test_copy": "cfe16edd7a7e4d7f",
+      "test_sha256": "a3dffa5d241c81660855889f2fb5dea5f61c6c1c34998eb7e0c377a98e8e7591",
+      "exit_code": 1,
+      "counts": {
+        "cases": 1,
+        "failed": 1,
+        "errors": 0,
+        "skipped": 0
+      },
+      "started_utc": "2026-10-09T14:54:41.269354+00:00",
+      "finished_utc": "2026-10-09T14:54:42.737213+00:00",
+      "log": "docs\\batch22_item9_evidence\\agent_planned_control_B20_20261009T145440Z_6652b822_attempt1.log",
+      "xml": "docs\\batch22_item9_evidence\\agent_planned_control_B20_20261009T145440Z_6652b822_attempt1.xml",
+      "temp_snapshot": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite_item9_agent_control_sgyz1jxd\\B20"
+    },
+    {
+      "baseline": "B22",
+      "tag": "v6lite-batch22",
+      "commit": "42c77da139ce308ca133eb7e2e40beaf33ecac9d",
+      "baseline_code_sha_before_test_copy": "d42320d23de79d6e",
+      "test_sha256": "a3dffa5d241c81660855889f2fb5dea5f61c6c1c34998eb7e0c377a98e8e7591",
+      "exit_code": 1,
+      "counts": {
+        "cases": 1,
+        "failed": 1,
+        "errors": 0,
+        "skipped": 0
+      },
+      "started_utc": "2026-10-09T14:54:43.782116+00:00",
+      "finished_utc": "2026-10-09T14:54:45.222471+00:00",
+      "log": "docs\\batch22_item9_evidence\\agent_planned_control_B22_20261009T145440Z_6652b822_attempt1.log",
+      "xml": "docs\\batch22_item9_evidence\\agent_planned_control_B22_20261009T145440Z_6652b822_attempt1.xml",
+      "temp_snapshot": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite_item9_agent_control_sgyz1jxd\\B22"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "reviewer": "/root/batch24_tests",
+  "reviewed_at_pt": "2026-10-12T14:24:26.211055-07:00",
+  "read_only_review": true,
+  "unresolved_substantive_findings": [],
+  "tools_sha256": {
+    "build_batch24_report.py": "6438d38ba8f951cd4c523d36a9fe682ec3f25d91d4fc6dc067129129852d3438",
+    "render_samples.py": "f9d92506ed7d5e173f212cb6dca873a8fd5e7d51be57acea84d6094c25786ac9"
+  },
+  "checked": [
+    "raw stdout/XML/inventory hashes, actual JUnit totals/cases/inventory",
+    "full collection metadata, serial inventory/source binding, whole PT interval",
+    "safe checkpoint/red paths and nodeid-to-file hash mapping",
+    "current source/card JSON/plain Markdown binding and optimization guard",
+    "denylist, staged artifact rejection, validate-first manifest-last publication"
+  ],
+  "root_direct_checks": {
+    "guard": "PASS",
+    "current_green_receipt": "101 passed; raw evidence revalidated, code 62a9b82bb52ec22c",
+    "tampered_stdout_junit_inventory_hashes": "REJECT",
+    "tampered_JUnit_totals": "REJECT",
+    "out-of-dev_paths": "REJECT",
+    "full_spanning_trading_block": "REJECT",
+    "current_focused_receipt": "896 passed; raw evidence revalidated, same code",
+    "actual_rendered_samples": "7 scenarios/cards; exact JSON-to-Markdown plaintext, same source SHA; network guarded"
+  },
+  "checkpoint_review": "pending actual checkpoint",
+  "final_followup_review": "Independent Agent accepted current tool implementation, source/render binding, supplemental harness red raw validation, and precise 896-run failure/driver attribution."
+}

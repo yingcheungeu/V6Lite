@@ -1,0 +1,14 @@
+{
+  "reason": "Independent b26_review ruled that external registration creates S3+X1>P3 before Lite observes it. The original positive-path _safety writer observer and zero-write expectation wrongly prohibited the existing gross-capacity emergency strict decrease/cancel. This is a test-domain calibration, not a product fix or permission to weaken capacity protection.",
+  "archive": "docs/batch26_evidence/pre_external_gross_fixture_calibration_test_batch26_overnight_evidence.py",
+  "archive_sha256": "d9ae28dc225beff43cef43cb3bb2cb766395027aaef1967fb51b49f42bdc05e8",
+  "corrected_sha256": "ed2ea61ef50e75b265e9a30c8d6793745d2bb1a5b4311548e34ff9995004339f",
+  "ast_changed_functions": [
+    "test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes"
+  ],
+  "safety_oracle_AST_unchanged": true,
+  "other_function_AST_unchanged": true,
+  "missing_entry_exec": "zero writes assertion preserved",
+  "external_only": "Pre-injection _safety succeeds. Explicit external 4>3 is never called safe. Only original strong-identity/same-price GTC strict reduction to <=P-X or original GTC cancel is admitted; all submits, increases, price changes and external-order cancel prohibited. Pending possible exposure cannot grow, actual native ACK plus fresh proof precedes unchanged _safety. Persistent external_sell/P0, no new INFO/TP and specific P1 required.",
+  "execution": "No pytest executed by test author; ROOT must rerun B25 natural red and final candidate green."
+}

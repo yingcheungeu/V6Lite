@@ -1,0 +1,8 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "code_sha": "a864ccd2f7680fba",
+  "source_unchanged": true,
+  "dependencies_unchanged": true,
+  "read_only_inputs_unchanged": true,
+  "original_baseline_unchanged": true,
+  "operator_manual_unchanged": true,
+  "serial_full_runs": [
+    {
+      "label": "final_full_1",
+      "tests": 2411,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "seconds": 2308.015,
+      "start_pt": "2026-10-31T16:33:36.744887-07:00",
+      "end_pt": "2026-10-31T17:12:04.765399-07:00"
+    },
+    {
+      "label": "final_full_2",
+      "tests": 2411,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "seconds": 2309.984,
+      "start_pt": "2026-10-31T17:12:05.201698-07:00",
+      "end_pt": "2026-10-31T17:50:35.182359-07:00"
+    },
+    {
+      "label": "final_full_3",
+      "tests": 2411,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "seconds": 2306.343,
+      "start_pt": "2026-10-31T17:50:35.676149-07:00",
+      "end_pt": "2026-10-31T18:29:02.017926-07:00"
+    }
+  ],
+  "case_identity_sha256": "304a4229137f50d2a90be3e1c17dcabf5dfa8629624ce0814d1201b061d16f31",
+  "skipped_cases": [
+    [
+      "v6lite.tests.test_strategy_parity",
+      "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "legacy market_scanner.py not present"
+    ]
+  ]
+}

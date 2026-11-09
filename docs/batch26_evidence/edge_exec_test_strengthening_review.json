@@ -1,0 +1,8 @@
+{
+  "reason": "Strengthen economic-conflict causality: old synthetic yesterday exec moved to today could be stopped by an unrelated timestamp review. Use a genuinely booked current-day TP1 exec with its original timestamp and mutate economic/identity fields only.",
+  "original_spec_sha256": "624f4c6602c3f915963f826b52857d7b7868fcb6005dba0edbe72c8f206310e5",
+  "preserved_original": "docs/batch26_evidence/test_batch26_review_edges_before_same_day_exec_strengthening.py",
+  "no_test_has_been_run_with_this_edge_version": true,
+  "scope": "Only independent test author may strengthen this one parameterized method; core33/shutdown35/other edge AST remain frozen",
+  "claim_limit": "B25 fails before reaching the new economic-conflict branch; do not mislabel that as independent branch red. Candidate receipt/source review must verify actual branch behavior."
+}

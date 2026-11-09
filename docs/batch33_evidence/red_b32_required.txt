@@ -1,0 +1,40 @@
+F.E                                                                      [100%]
+=================================== ERRORS ====================================
+___ ERROR at setup of test_B33_last_overnight_share_waits_before_TP3_cancel ___
+v6lite\tests\test_batch33_open_delay.py:124: in last_overnight
+    finish_tp(rig, pid, wire, Purpose.TP2)
+v6lite\tests\test_batch33_open_delay.py:60: in finish_tp
+    req = start_tp(rig, pid, wire)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch33_open_delay.py:55: in start_tp
+    _tick_until(rig, lambda: len(_tp_requests(rig)) > count)
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 28, 15, 5, 30, 3000, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function start_tp.<locals>.<lambda> at 0x000001D8E23DDE40>()
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-27T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:817 [V6-Lite] P0: protection gap B overdue AAPL | AAPL 持仓数量=2 股 保护单已确认=1 股 保护单可能=1 股 止盈在途=1 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–1） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-986936f91e8848e9884b orderId=706 permId=50706 TP=v6l-4716546a394446e6b133 TP orderId=708 TP剩余=1 股；外部订单=无券商新快照；止损价（触发后市价成交）=342.77；上次确认=2026-10-28T15:03:58.003000+00:00 工作单证据时间=2026-10-28T15:03:57.003000+00:00；B 空窗 30.0s
+================================== FAILURES ===================================
+____________________ test_B33_oct29_real_overnight_replay _____________________
+v6lite\tests\test_batch33_open_delay.py:81: in test_B33_oct29_real_overnight_replay
+    hold(rig, pid, before)
+v6lite\tests\test_batch33_open_delay.py:38: in hold
+    assert _writes(rig) == before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch33_open_delay.py::test_B33_oct29_real_overnight_replay
+  v6lite\tests\test_batch33_open_delay.py:72: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B33_oct29_real_overnight_replay(opening, record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_oct29_real_overnight_replay
+ERROR v6lite/tests/test_batch33_open_delay.py::test_B33_last_overnight_share_waits_before_TP3_cancel
+1 failed, 1 passed, 1 warning, 1 error in 3.26s

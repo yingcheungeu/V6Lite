@@ -1,0 +1,12 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_____ test_B32_identical_invalid_native_filled_cannot_be_promoted_to_ACK ______
+v6lite\tests\test_batch32_normalization_guards.py:36: in test_B32_identical_invalid_native_filled_cannot_be_promoted_to_ACK
+    assert errors, 'three equally malformed native fill counts must reject the entire query'
+E   AssertionError: three equally malformed native fill counts must reject the entire query
+E   assert []
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch32_normalization_guards.py::test_B32_identical_invalid_native_filled_cannot_be_promoted_to_ACK
+1 failed in 1.37s

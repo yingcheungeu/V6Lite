@@ -1,0 +1,172 @@
+FFFFFFFFFFFFFFFFFFFFF                                                    [100%]
+================================== FAILURES ===================================
+_ test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-cleared-metadata] _
+v6lite\tests\test_batch23_error_provenance.py:180: in test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority
+    assert events, 'same-order display-only terminal error must not disappear behind the strict authority gate'
+E   AssertionError: same-order display-only terminal error must not disappear behind the strict authority gate
+E   assert []
+_ test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-zero-perm] _
+v6lite\tests\test_batch23_error_provenance.py:180: in test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority
+    assert events, 'same-order display-only terminal error must not disappear behind the strict authority gate'
+E   AssertionError: same-order display-only terminal error must not disappear behind the strict authority gate
+E   assert []
+_ test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[funds] _
+v6lite\tests\test_batch23_error_provenance.py:234: in test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error
+    assert not [event for event in events if getattr(event, 'intent_id', None) == ref], events
+E   AssertionError: [PriceObservationEvent(identity=OpenOrder(intent_id='v6l-protect-d2097816ab1441fba097', broker_order_id=1002, symbol='...unt='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None, mkt_cap_price=None)]
+E   assert not [StatusEvent(intent_id='v6l-protect-d2097816ab1441fba097', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...unt='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None, mkt_cap_price=None)]
+------------------------------ Captured log call ------------------------------
+ERROR    ib_insync.wrapper:wrapper.py:1113 Error 201, reqId 1002: Synthetic nonorder funds request rejected; not an order. END-QUERY-PROVENANCE
+_ test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[history] _
+v6lite\tests\test_batch23_error_provenance.py:234: in test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error
+    assert not [event for event in events if getattr(event, 'intent_id', None) == ref], events
+E   AssertionError: [PriceObservationEvent(identity=OpenOrder(intent_id='v6l-protect-ae788b5c2bb4440e953f', broker_order_id=1002, symbol='...unt='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None, mkt_cap_price=None)]
+E   assert not [StatusEvent(intent_id='v6l-protect-ae788b5c2bb4440e953f', raw_status='Submitted', filled=0.0, remaining=3.0, broker_o...unt='DU0000000', total_quantity=3), error_code=201, identity_checked=True, terminal_identity=None, mkt_cap_price=None)]
+------------------------------ Captured log call ------------------------------
+ERROR    ib_insync.wrapper:wrapper.py:1113 Error 201, reqId 1002: Synthetic nonorder history request rejected; not an order. END-QUERY-PROVENANCE, contract: namespace(symbol='AAPL', conId=10000, secType='STK', currency='USD', exchange='SMART')
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_array] _
+v6lite\tests\test_batch23_error_provenance.py:286: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert booked is not None, ('optional diagnostic corruption rolled back a real execution', corruption, error)
+E   AssertionError: ('optional diagnostic corruption rolled back a real execution', 'json_array', "AttributeError: 'list' object has no attribute 'get'")
+E   assert None is not None
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure AAPL | AAPL orderRef=v6l-04d365f88cd14d97b841；成交回调本地处理失败 AttributeError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_null] _
+v6lite\tests\test_batch23_error_provenance.py:286: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert booked is not None, ('optional diagnostic corruption rolled back a real execution', corruption, error)
+E   AssertionError: ('optional diagnostic corruption rolled back a real execution', 'json_null', "AttributeError: 'NoneType' object has no attribute 'get'")
+E   assert None is not None
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure AAPL | AAPL orderRef=v6l-e2a099d5205f47319e04；成交回调本地处理失败 AttributeError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_string] _
+v6lite\tests\test_batch23_error_provenance.py:286: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert booked is not None, ('optional diagnostic corruption rolled back a real execution', corruption, error)
+E   AssertionError: ('optional diagnostic corruption rolled back a real execution', 'json_string', "AttributeError: 'str' object has no attribute 'get'")
+E   assert None is not None
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure AAPL | AAPL orderRef=v6l-e0e5ebe46bf3405b9a1e；成交回调本地处理失败 AttributeError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_bid] _
+v6lite\tests\test_batch23_error_provenance.py:286: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert booked is not None, ('optional diagnostic corruption rolled back a real execution', corruption, error)
+E   AssertionError: ('optional diagnostic corruption rolled back a real execution', 'bad_bid', "TypeError: unsupported operand type(s) for -: 'float' and 'str'")
+E   assert None is not None
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection callback failure AAPL | AAPL orderRef=v6l-70dfc9c0a0e04811a366；成交回调本地处理失败 TypeError；持仓数量、保护单剩余、止盈在途、外部卖单、未保护数量均待核实；保护单 orderId=待核实。
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[nan_bid] _
+v6lite\tests\test_batch23_error_provenance.py:307: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert event.get('bid_at_send') is None
+E   AssertionError: assert nan is None
+E    +  where nan = <built-in method get of dict object at 0x0000012B4E6FE040>('bid_at_send')
+E    +    where <built-in method get of dict object at 0x0000012B4E6FE040> = {'P': 2, 'S': 2, 'T': 0, 'X': None, ...}.get
+_ test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_gap] _
+v6lite\tests\test_batch23_error_provenance.py:286: in test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL
+    assert booked is not None, ('optional diagnostic corruption rolled back a real execution', corruption, error)
+E   AssertionError: ('optional diagnostic corruption rolled back a real execution', 'bad_gap', "ValueError: Invalid isoformat string: 'synthetic-invalid-clock'")
+E   assert None is not None
+_ test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause _
+v6lite\tests\test_batch23_error_provenance.py:318: in test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause
+    assert rig.store.control(f'tp_pause:{pid}') is None, 'a statement that the rejection is unrelated to price is not a price constraint'
+E   AssertionError: a statement that the rejection is unrelated to price is not a price constraint
+E   assert '{"workflow_id": "tp-flow-3de91bbb64024b16bc6d", "position_id": "pos-d4b247366fd742c0bcf7", "symbol": "AAPL", "stage":...", "pause_id": "tp-pause-78b1f8e3761e48f6ab4e", "at": "2026-10-06T14:01:02+00:00", "order_id": 1003, "perm_id": 51003}' is None
+E    +  where '{"workflow_id": "tp-flow-3de91bbb64024b16bc6d", "position_id": "pos-d4b247366fd742c0bcf7", "symbol": "AAPL", "stage":...", "pause_id": "tp-pause-78b1f8e3761e48f6ab4e", "at": "2026-10-06T14:01:02+00:00", "order_id": 1003, "perm_id": 51003}' = control('tp_pause:pos-d4b247366fd742c0bcf7')
+E    +    where control = <v6lite.store.Store object at 0x0000012B4D226690>.control
+E    +      where <v6lite.store.Store object at 0x0000012B4D226690> = <v6lite.tests.helpers.Rig object at 0x0000012B4D226B90>.store
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-2fdf9b2c4f75444695df orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-d4b247366fd742c0bcf7 stage=TP1 pause_id=tp-pause-78b1f8e3761e48f6ab4e；保护恢复仍需完整三项证据。；Synthetic terminal rejection unrelated to price
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price] __
+v6lite\tests\test_batch23_error_provenance.py:359: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert reason in report and 'END-DAILY-' + source in report, 'the full local daily report must keep broker reason, not the 160-character event preview'
+E   AssertionError: the full local daily report must keep broker reason, not the 160-character event preview
+E   assert ('Synthetic order_price diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保... 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-order_price' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU0000000   state role: formal\n- code_sha: ad3a09d225bba249\..."signals": [["AAPL", 78]], "vix": 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal] _
+v6lite\tests\test_batch23_error_provenance.py:359: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert reason in report and 'END-DAILY-' + source in report, 'the full local daily report must keep broker reason, not the 160-character event preview'
+E   AssertionError: the full local daily report must keep broker reason, not the 160-character event preview
+E   assert ('Synthetic protect_terminal diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文...原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-protect_terminal' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU0000000   state role: formal\n- code_sha: ad3a09d225bba249\..."signals": [["AAPL", 78]], "vix": 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-08d325685a9940f382d4 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；券商已明确拒绝 STP 请求；禁止自动重挂；券商状态=Inactive code=201；取消诊断与执行权限独立核验；券商原因原文=Synthetic protect_terminal diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-protect_terminal
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query] _
+v6lite\tests\test_batch23_error_provenance.py:359: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert reason in report and 'END-DAILY-' + source in report, 'the full local daily report must keep broker reason, not the 160-character event preview'
+E   AssertionError: the full local daily report must keep broker reason, not the 160-character event preview
+E   assert ('Synthetic positions_query diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎...留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-positions_query' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU0000000   state role: formal\n- code_sha: ad3a09d225bba249\..."signals": [["AAPL", 78]], "vix": 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+_ test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[empty] _
+v6lite\tests\test_batch23_error_provenance.py:377: in test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request
+    assert rig.store.control(f'tp_pause:{pid}') == raw, 'blank/missing equal values are not an identified pause episode'
+E   AssertionError: blank/missing equal values are not an identified pause episode
+E   assert None == '{"workflow_id": "tp-flow-09de2cc6ddca46fd918e", "position_id": "pos-0f471428973141569c57", "symbol": "AAPL", "stage":...": "2026-10-06T14:01:02+00:00", "pause_id": "", "at": "2026-10-06T14:01:02+00:00", "order_id": 1003, "perm_id": 51003}'
+E    +  where None = control('tp_pause:pos-0f471428973141569c57')
+E    +    where control = <v6lite.store.Store object at 0x0000012B6ECF8910>.control
+E    +      where <v6lite.store.Store object at 0x0000012B6ECF8910> = <v6lite.tests.helpers.Rig object at 0x0000012B6ECF89D0>.store
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-bac036a79b2f4e038541 orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-0f471428973141569c57 stage=TP1 pause_id=tp-pause-f6eb0198b87d410ab291；保护恢复仍需完整三项证据。；Order rejected - reason: Your order price is outside the allowed price range. Synthetic diagnostic; no live account or order. END-PRICE-B23
+_ test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[missing] _
+v6lite\tests\test_batch23_error_provenance.py:377: in test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request
+    assert rig.store.control(f'tp_pause:{pid}') == raw, 'blank/missing equal values are not an identified pause episode'
+E   AssertionError: blank/missing equal values are not an identified pause episode
+E   assert None == '{"workflow_id": "tp-flow-2ce27d53b3ce4c049567", "position_id": "pos-0240a40b602845deb032", "symbol": "AAPL", "stage":...0:00", "proof_at": "2026-10-06T14:01:02+00:00", "at": "2026-10-06T14:01:02+00:00", "order_id": 1003, "perm_id": 51003}'
+E    +  where None = control('tp_pause:pos-0240a40b602845deb032')
+E    +    where control = <v6lite.store.Store object at 0x0000012B4D201C10>.control
+E    +      where <v6lite.store.Store object at 0x0000012B4D201C10> = <v6lite.tests.helpers.Rig object at 0x0000012B4D202F90>.store
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-b5fe34e044084277b1e6 orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-0240a40b602845deb032 stage=TP1 pause_id=tp-pause-5b31a8e4b8294c2b90de；保护恢复仍需完整三项证据。；Order rejected - reason: Your order price is outside the allowed price range. Synthetic diagnostic; no live account or order. END-PRICE-B23
+_ test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches _
+v6lite\tests\test_batch23_error_provenance.py:402: in test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches
+    assert result == 2, 'explicit blank --pause-id must be rejected rather than recording a resume request'
+E   AssertionError: explicit blank --pause-id must be rejected rather than recording a resume request
+E   assert 0 == 2
+---------------------------- Captured stdout call -----------------------------
+TP resume queued; complete broker protection evidence is required; no immediate TP
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-df1f2b279b2544348f34 orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-4e86244fdb1346ff8e0d stage=TP1 pause_id=tp-pause-4f0be2da7e0c445ca073；保护恢复仍需完整三项证据。；Order rejected - reason: Your order price is outside the allowed price range. Synthetic diagnostic; no live account or order. END-PRICE-B23
+_ test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot _
+v6lite\tests\test_batch23_error_provenance.py:434: in test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot
+    assert event.get('bid_raw') == str(pricing.bid) and event.get('ask_raw') == str(pricing.ask)
+E   AssertionError: assert ('120.64' == '119.64'
+E     
+E     - 119.64
+E     + 120.64)
+_ test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[capacity_proof] _
+v6lite\tests\test_batch23_error_provenance.py:470: in test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence
+    assert [request for request in rig.broker.sent if request.purpose in TP_PURPOSES] == before_tp
+E   AssertionError: assert [OrderRequest...0ef4be883e5')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-a17bf634dd5d4388b71c', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=119.41, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-64b8b75a30ef4be883e5')
+E     Use -v to get more diff
+_ test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[durable_intent] _
+v6lite\tests\test_batch23_error_provenance.py:470: in test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence
+    assert [request for request in rig.broker.sent if request.purpose in TP_PURPOSES] == before_tp
+E   AssertionError: assert [OrderRequest...7b54feca909')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-901cc7478d674a39a5ab', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=119.41, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-6059c1b4f7b54feca909')
+E     Use -v to get more diff
+_ test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof _
+v6lite\tests\test_batch23_error_provenance.py:523: in test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof
+    assert len([order for order in rig.broker.sent if order.purpose in TP_PURPOSES]) == before
+E   AssertionError: assert 2 == 1
+E    +  where 2 = len([OrderRequest(intent_id='v6l-ae7206067942455683cf', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=1...e.SELL: 'SELL'>, quantity=1, limit_price=119.41, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-e96ca610135a4fa2a732')])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: order price mismatch AAPL | {'source': 'orderStatus', 'intent_id': 'v6l-ae7206067942455683cf', 'symbol': 'AAPL', 'position_id': 'pos-e96ca610135a4fa2a732', 'sent_price': 119.41, 'working_price': 119.66, 'aux_price': None, 'mkt_cap_price': None, 'mkt_cap_price_raw': '0.0', 'cap_valid': False, 'error_code': 0, 'reason': ''}
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-cleared-metadata]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_error_only_immediate_terminal_displays_reason_without_granting_cancel_or_release_authority[first-terminal-zero-perm]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[funds]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_known_nonorder_request_id_collision_cannot_become_native_order_error[history]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_array]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_null]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[json_string]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_bid]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[nan_bid]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_optional_send_audit_never_rolls_back_real_TP_fill_or_duplicates_PnL[bad_gap]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_explicit_nonprice_terminal_reason_restores_protection_without_creating_price_pause
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[empty]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_corrupt_pause_episode_id_cannot_be_consumed_by_equal_invalid_manual_request[missing]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_resume_CLI_rejects_explicit_blank_pause_id_even_if_corrupt_pause_matches
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_send_evidence_preserves_one_complete_actual_pricing_quote_snapshot
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[capacity_proof]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_final_physical_TP_boundary_rechecks_original_quote_after_slow_evidence_or_local_persistence[durable_intent]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_unprotected_ordinary_TP_price_observation_block_prevents_retry_after_real_terminal_proof
+21 failed in 3.11s

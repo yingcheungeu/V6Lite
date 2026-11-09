@@ -1,0 +1,8 @@
+..........                                                               [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch28d_native_final_tp.py::test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second
+  v6lite\tests\test_batch28d_native_final_tp.py:350: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+10 passed, 1 warning in 53.03s

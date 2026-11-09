@@ -1,0 +1,10 @@
+{
+  "collected": [
+    "::test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[same-engine]",
+    "::test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[SQLite-reopen]"
+  ],
+  "executed": [
+    "::test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[same-engine]",
+    "::test_B26_regression_visible_external_SELL_latches_original_P0_and_freeze_until_operator_release[SQLite-reopen]"
+  ]
+}

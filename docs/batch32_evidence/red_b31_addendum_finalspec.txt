@@ -1,0 +1,28 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding _
+v6lite\tests\test_batch32_offline_release.py:131: in test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding
+    assert rig.store.position(pid)['status']=='RELEASED',refusals
+E   AssertionError: [{'reason': 'protected GTC cancel/identity unverified; release refused', 'request': '{"operator": "John", "reason": "flat and no GTC in TWS"}', 'symbol': 'AAPL'}]
+E   assert 'OPEN' == 'RELEASED'
+E     
+E     - RELEASED
+E     + OPEN
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=SIGINT exception_type=None reason=operator requested stop at=2026-10-29T15:49:09+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-f5a1225b40764680b23f | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P0: protection evidence incomplete AAPL | AAPL 持仓数量=2 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-e0655f2d686c46248d98 orderId=2890 permId=753795445 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=344.57；上次确认=2026-10-29T13:30:46.002000+00:00 工作单证据时间=2026-10-29T16:14:05+00:00；持仓、工作单、执行三项证据查询失败：ProtectionEvidenceContradiction
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: overnight TP evidence pos-f5a1225b40764680b23f | AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=0.0 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=2890 permId=753795445；历史账本入场=b28b-1020-entry.01.01@2026-10-28；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-29T16:14:06+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker/runtime mismatch | AAPL: expected 2 broker 0 | Resolve with `status`, then `ignore` for unmanaged holdings (v1 has no adopt). A managed position that stays different is frozen: flatten it in TWS, then `release` it. Broker truth is never overwritten.
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: release refused AAPL | protected GTC cancel/identity unverified; release refused
+============================== warnings summary ===============================
+v6lite/tests/test_batch32_offline_release.py::test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding
+  v6lite\tests\test_batch32_offline_release.py:126: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding(offline_oct29,record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch32_offline_release.py::test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding
+1 failed, 1 warning in 1.52s

@@ -1,0 +1,25 @@
+{
+  "label": "green_native_3",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T21:58:21.727038-07:00",
+  "end_pt": "2026-10-23T21:59:21.847244-07:00",
+  "seconds": 60.109,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch29_native_timeout.py"
+  ],
+  "code_sha": "95a70156aa8ada8d",
+  "source_unchanged": true,
+  "inventory_sha256": "076282e3e784aa15f35961b7558f1524e07e02894c7c25c398e77310eaf69565",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "7dfa16c373621484a3dbe5df7423d1bb595c37e17c231272143737dbc85ab28b",
+  "XML_sha256_before_masking": "656e3579a3b2a5b6f0c28244c31e07bc488f29c32f7aafc002818287bc70a1ad",
+  "delivered_log_sha256": "9719924dd00b5c47913339402b6c4d52c74c20ae7a09d86d50f096d62ddfe0e0",
+  "delivered_XML_sha256": "656e3579a3b2a5b6f0c28244c31e07bc488f29c32f7aafc002818287bc70a1ad",
+  "tests": 2,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

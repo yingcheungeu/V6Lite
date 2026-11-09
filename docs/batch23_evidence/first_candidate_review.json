@@ -1,0 +1,32 @@
+{
+  "candidate_code_sha": "5671a607a8740898",
+  "evidence": "green.json",
+  "result": {
+    "passed": 68,
+    "failed": 5,
+    "errors": 0
+  },
+  "findings": [
+    {
+      "test": "first_stale_rounds",
+      "cause": "same-clock _evaluate_exits calls encounter normal 30-second scheduling gate; only one actual quote decision occurred",
+      "resolution": "exercise three actual _evaluate_position_exit + run_queue decision rounds, preserve cadence and all no-trade assertions"
+    },
+    {
+      "test": "cancel_with_late_partial_fill (two cases)",
+      "cause": "FakeBroker.fill emits additional bare Cancelled StatusEvent with missing permId after full native terminal evidence",
+      "resolution": "emit=False fill plus full native Cancelled filled1/remaining1; preserve three-source completeness, capacity oracle and strict production identity"
+    },
+    {
+      "test": "price_rejection P0 snapshot",
+      "cause": "119.7 and119.70 represent identical ask; string tail-zero assertion",
+      "resolution": "Decimal compare labeled bid/ask, keep exact quantity/order/perm/reason assertions"
+    },
+    {
+      "test": "working_price mismatch audit",
+      "cause": "spec expects invalid native cap0 as known0 while agreed canonical unknown is None",
+      "resolution": "None for unknown cap; maintain positive cap/sent/working/P1/reissue-block and immutableledger checks"
+    }
+  ],
+  "production_policy": "No weakening of native hard tuple, no nondue scheduling change, no value repricing. Original specification and failed raw output preserved; corrected specs must be red on22a before acceptance."
+}

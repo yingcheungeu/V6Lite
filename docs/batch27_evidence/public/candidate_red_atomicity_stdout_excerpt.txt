@@ -1,0 +1,22 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts _
+v6lite\tests\test_batch27_observer_atomicity.py:53: in test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts
+    assert counts == expected, ("exact retry counts", dict(counts), dict(expected))
+E   AssertionError: ('exact retry counts', {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 8, ('pos-99ec110ffc6246e8b7c4', 'PROT...4', 'PROTECT_STATE'): 4, ('pos-b27-volume-1', 'ORDER_PRICE_OBSERVATION'): 4, ('pos-b27-volume-1', 'PROTECT_STATE'): 4})
+E   assert Counter({('po...T_STATE'): 4}) == Counter({('po...T_STATE'): 4})
+E     
+E     Omitting 2 identical items, use -vv to show
+E     Differing items:
+E     {('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 8} != {('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 4}
+E     {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 8} != {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 4}
+E     Use -v to get more diff
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts
+  v6lite\tests\test_batch27_observer_atomicity.py:19: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts
+1 failed, 1 warning in 1.44s

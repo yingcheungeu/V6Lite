@@ -1,0 +1,84 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "review_count_red_candidate",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-17T14:50:59.081548-07:00",
+  "end_pt": "2026-10-17T14:51:01.271133-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "8151e372c5d62585",
+  "source_unchanged": true,
+  "worktree_code_sha": "8151e372c5d62585",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "8151e372c5d62585d0283de3299b6d3be3e83bb03182381cf31516026c470749",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27b_review_followups.py",
+      "sha256": "1660054f87b2c30f7110f96963d115853ce46e1f613efbd63ae67a1b0367d46e"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 3,
+    "failures": 3,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27b_review_followups",
+      "name": "test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-intent-0]",
+      "outcome": "failure",
+      "message": "AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n  核验结果：AAPL：当日可见成交存在明确的原生 intent/合约身份冲突：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert False\n +  where False = all(<generator object test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d.<locals>.<genexpr> at 0x00000196FF877E00>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_review_followups",
+      "name": "test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-conId-0]",
+      "outcome": "failure",
+      "message": "AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n  核验结果：AAPL：当日可见成交存在明确的原生 intent/合约身份冲突：b27b-1019-entry.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 ...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert False\n +  where False = all(<generator object test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d.<locals>.<genexpr> at 0x00000196FF9129B0>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_review_followups",
+      "name": "test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[today-conId-1]",
+      "outcome": "failure",
+      "message": "AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n  核验结果：AAPL：当日可见成交存在明确的原生 intent/合约身份冲突：b27b-1020-tp1.01.01；券商 P=2 股，账本=2 股，当前工作 STP S=2 股；...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert False\n +  where False = all(<generator object test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d.<locals>.<genexpr> at 0x00000196FF854790>)"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-intent-0]",
+      "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-conId-0]",
+      "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[today-conId-1]"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-intent-0]",
+      "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-conId-0]",
+      "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[today-conId-1]"
+    ]
+  },
+  "stdout_sha256": "4e1fe8eecbb734ae7abed13281a1d9f9597d2f6bd4d218c0e7dbfbbe1c2cf478",
+  "junit_sha256": "2246f36a8cd6806f5ac7d13fa232ababbe1434f526da5cef57f83317e442e823",
+  "inventory_sha256": "d7f4a3f7390881ff656db536ba190008907c0fa848fdbc458d675a52e40a3ad9",
+  "publication_redaction": {
+    "rule": "All synthetic account-shaped values masked. Original receipts preserved locally and excluded from staging.",
+    "original_artifact_sha256": {
+      "review_count_red_candidate.json": "fdcd67c0e585553637e4fbff22bde0d8a30bf79874202343cabeb02a4e1cccf4",
+      "review_count_red_candidate.txt": "4e1fe8eecbb734ae7abed13281a1d9f9597d2f6bd4d218c0e7dbfbbe1c2cf478",
+      "review_count_red_candidate.xml": "487d55c986d7fc8d0fb27c8df9a72193ed9951f851d238c8ec4a56000b18c53a",
+      "review_count_red_candidate_inventory.json": "f15509e8d90a0174474b85c11f5182ea56f4629f401892a23f94e7367a8bf00d",
+      "review_count_red_candidate_progress.json": "af57774d6fe515c74705a4447f7f06df27ed8971b37fd4d0ba493b02ba30bd10"
+    }
+  }
+}

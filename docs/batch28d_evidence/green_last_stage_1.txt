@@ -1,0 +1,8 @@
+.                                                                        [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch28d_last_stage.py::test_B28d_TP1_can_be_the_final_share_after_real_original_STP_partial_fill
+  v6lite\tests\test_batch28d_last_stage.py:75: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28d_TP1_can_be_the_final_share_after_real_original_STP_partial_fill(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1 passed, 1 warning in 8.84s

@@ -1,0 +1,42 @@
+{
+  "reviewers": [
+    "pending_investigation",
+    "commission_investigation"
+  ],
+  "single_production_implementer": "root",
+  "reviews_read_only": true,
+  "source_hashes": {
+    "v6lite/engine.py": "ae07b230c1dd7a852d15262888ddd8a5e7ccc9fcac9f4e38a91fe3c6a49b52c4",
+    "v6lite/commissions.py": "31211544d8ae37727b745ee109c5ee70233f3c4dda4eea17c51a98bdafaeb522",
+    "v6lite/broker/ibkr.py": "8fd9cd41a91971929c405648d89badac33646c3e4e483bd17afa846bd70d3030",
+    "v6lite/protection_confirmations.py": "720065054dea77931d58a852a56a97d66097c4cfb62ee411fae55a380e55170f",
+    "v6lite/protection_engine.py": "f9b7ffbae64a174b71d5cd1da34954cac885339f3e8bbb2c7e0320a81e5dfa04",
+    "v6lite/overnight_evidence.py": "3169f0645b3cae85360923196b4bdfcb64b6c18e8017894181ab954720069922",
+    "v6lite/tp_evidence.py": "025bcf74959a0ceddd393519eebd85504201c4f60cc709ca2cbdc6b2efcb8f5b",
+    "v6lite/models.py": "ececc73f3b333bfd15f09326c619aa237f32351bdfe871419ad5a3fe6b0ff679",
+    "v6lite/report.py": "b7b6b1bb7e1e6d506aca00a146d32f66e5058993a8a2de058c8fe6f4abb13bba",
+    "v6lite/tests/test_batch27_observation_audit.py": "220dee1dd7f56ba03dec25061e48663363c0afb80969ae4652bd040a8d175a91",
+    "v6lite/tests/test_batch27_observer_equivalence.py": "943afc047c71d50b838474772b8d8065ecc45f2f9e881696fd48681a3488c172"
+  },
+  "resolved_findings": [
+    "audit table uses ts, not time",
+    "urgent CommissionEvent preserves economically unchanged reduction/final-cancel tokens",
+    "ACK rejection checks are explicitly audited",
+    "closed-card send/queue and crash duplicate boundary documented",
+    "ACK deferred diagnostic uses normal audit with durable content dedupe; all 43 affected negative/positive cases pass",
+    "Same-socket newer round invalidates queued snapshot; red 2 failures then final focused green",
+    "Legacy marker plus later pending cause stays unclassified, including cross-day symbol freeze; red 1 failure then green",
+    "Poisoned openOrders channel rejects queued completed snapshot; red 1 failure then final focused green",
+    "CLOSE_CARD_SENT historical closing execution is filtered by execution trading day in main report; original b22 regression preserved",
+    "Old b27 sanitized SAMPLE remains exact; synthetic native metadata explicitly added to expected schema, all change/compression/equivalence contracts retained",
+    "Volatile observed_at removed from dedup payload; independent red 8-versus-1 and exact seven suppressed observations green"
+  ],
+  "remaining_acceptance_gap": null,
+  "safety_review": "No demonstrated weakening of a-d, strong identity, pending TP guards, fingerprints or S+T+X capacity; only CommissionEvent bypasses order invalidators",
+  "review_revision": "R3 full regression repairs",
+  "scope_resolution": "Direct user accepted conservative legacy freeze rule; scope_resolution.json preserves exact quote",
+  "review_limits": "Pending investigator identified newer-round/legacy-cause/poisoned-End findings in R2. Final post-poison-change/report re-review did not finish because reviewer hit usage limit; root inspected final guard and report, focused_final_3 passed all 187. Do not claim reviewer signed off on final report. R3 report filter/schema/volatile-time changes reviewed by root, not a second agent; all full failures and R2 snapshot retained.",
+  "final_focused_label": "focused_final_4",
+  "final_focused_passed": 201,
+  "code_sha": "8ff7091296e313f9"
+}

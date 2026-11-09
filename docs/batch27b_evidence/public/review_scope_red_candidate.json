@@ -1,0 +1,92 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "review_scope_red_candidate",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-17T14:57:13.182610-07:00",
+  "end_pt": "2026-10-17T14:57:15.603781-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "a9d29a683de12149",
+  "source_unchanged": true,
+  "worktree_code_sha": "a9d29a683de12149",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "a9d29a683de1214954a7cd9cd5df87b3ae50a622f8564d0f4fb921b818b69e24",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27b_scope_completeness.py",
+      "sha256": "be5f81d56679f2a99d37cad217bf014dcf658cab8dbbf07e70266fc7b0e77faa"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 4,
+    "failures": 3,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27b_scope_completeness",
+      "name": "test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[missing-End]",
+      "outcome": "failure",
+      "message": "AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction\nassert []\n +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x00000179CF4EA310>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_scope_completeness",
+      "name": "test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[list-only]",
+      "outcome": "failure",
+      "message": "AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction\nassert []\n +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x00000179AB70B0D0>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_scope_completeness",
+      "name": "test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time",
+      "outcome": "failure",
+      "message": "AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction\nassert []\n +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x00000179CF55D290>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_scope_completeness",
+      "name": "test_B27b_legacy_broker_without_scoped_capability_keeps_historical_stop_TP_compatibility",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[missing-End]",
+      "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[list-only]",
+      "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time",
+      "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_legacy_broker_without_scoped_capability_keeps_historical_stop_TP_compatibility"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[missing-End]",
+      "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[list-only]",
+      "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time",
+      "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_legacy_broker_without_scoped_capability_keeps_historical_stop_TP_compatibility"
+    ]
+  },
+  "stdout_sha256": "eebb1690dfe8e875b9f695616b64e8217e1125d08135932d5c5ef2235ede71da",
+  "junit_sha256": "581ce35bfd9e9c1f2750dd13ed587ce737ec5230327f2ebf4ec0065e8f2f9276",
+  "inventory_sha256": "bcb5cc1c5c2680f85a8858b449516d573388bcb0b8dfe724c528fb152e3e9b7c",
+  "publication_redaction": {
+    "rule": "All synthetic account-shaped values masked. Original receipts preserved locally and excluded from staging.",
+    "original_artifact_sha256": {
+      "review_scope_red_candidate.json": "020865f51661c537a209f94166e5f9f8cb967f0f60d6c881aee1c77a6cfe2a0e",
+      "review_scope_red_candidate.txt": "eebb1690dfe8e875b9f695616b64e8217e1125d08135932d5c5ef2235ede71da",
+      "review_scope_red_candidate.xml": "496b63733909f1507ae3e30ff35fb6a577c62d49c6f04e3a4ba7043f1a8f08a2",
+      "review_scope_red_candidate_inventory.json": "cdebaa3e2545410fb81b0f6fd3c213eff34736dfe5053ae6e5a8c911c8e754d6",
+      "review_scope_red_candidate_progress.json": "80dcf3e764909902818b08355c88173f14d0e2335293e4374f443c397e484623"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "B28b source diff plus unchanged regression safety boundaries",
+  "role": "independent read-only agent; no production edits, no pytest, no broker access",
+  "final_verdict": "no remaining blocking findings after known-danger guard correction; final focused tests must pass",
+  "resolved_findings": [
+    "new queued refresh must service protection before every blocking source",
+    "normal overnight steady and extra stale refresh must share 15s clock even after denial",
+    "completed proof must wake pending decisions to avoid aligned-15s starvation",
+    "own-stop fill or legitimate callback binding change invalidates old snapshot",
+    "only proven own-fill closure can be excused; visible short/other-SELL P0 retained"
+  ],
+  "review_limitation": "initial final read-only review missed short/other-SELL interaction; actual regression tests caught it and were not changed",
+  "preserved": [
+    "a-d",
+    "S+T+X<=P",
+    "strong identity",
+    "constraints A/B",
+    "full_exec restrictions",
+    "manual holds/freezes",
+    "parser unchanged"
+  ]
+}

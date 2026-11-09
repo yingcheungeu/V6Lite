@@ -1,0 +1,242 @@
+FFFFFFFFFFFFFFFFFFFF                                                     [100%]
+================================== FAILURES ===================================
+_ test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0 _
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:52: in test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0
+    assert len(calls) == 2 and _stop_pages(rig) == []
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic socket loss
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: openOrders: unsolicited End seen; connection renewed
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: openOrders: unsolicited End seen; connection renewed
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: openOrders: unsolicited End seen; connection renewed
+____ test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff ____
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:76: in test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff
+    assert len(calls) == expected-1, 'changed reasons cannot reopen the previous shorter delay'
+E   AssertionError: changed reasons cannot reopen the previous shorter delay
+E   assert 3 == (3 - 1)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic socket loss
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: native socket unavailable
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: openOrders proof unavailable
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: positions proof unavailable
+___ test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget ___
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:103: in test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget
+    assert len(calls) == 2 and len(_stop_pages(rig)) == 1
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 31, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 2, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic repeated native channel reset
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic repeated native channel reset
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic repeated native channel reset
+______ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0] ______
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:119: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · 🟠 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · 🟠 P1 · 券商查询已限速 · AAPL', 'TEST · 🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-5dbdbdfcd04047f3bd51 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+______ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1] ______
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:119: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · 🟠 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · 🟠 P1 · 券商查询已限速 · AAPL', 'TEST · 🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-9116e6b532f1457b8b7a | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+____ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999] ____
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:119: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · 🟠 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · 🟠 P1 · 券商查询已限速 · AAPL', 'TEST · 🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-a66679a343bb4e9eb2a5 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_____ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0] _____
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:119: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · 🟠 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · 🟠 P1 · 券商查询已限速 · AAPL', 'TEST · 🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: protection gap A warning AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-3255088aaf6c4956b4bc orderId=64 permId=- TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.22；上次确认=未获券商确认 工作单证据时间=过期或缺失；A 空窗 5.0s
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-beed944aa82a4399910b | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage _
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:140: in test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('🟠 P1 · 券商查...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('🟠 P1 · 券商查询已限速 · AAPL', '🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-1c39ef55026c47adac95 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:824 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate _
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:160: in test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate
+    assert not rig.engine.status_snapshot(rig.clock.now())['entries_allowed']
+E   assert not True
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-4a3b1a7a5e9e4ae5a7f2 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:824 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:824 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=1.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:824 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=3.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:824 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=7.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:824 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=15.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:824 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=31.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:824 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=61.0s cause=ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-4d8354eae53c486d827b orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=过期或缺失；持仓、工作单、执行三项证据查询已连续失败 61.0 秒
+_ test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync _
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:177: in test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync
+    assert stages == ['openOrder', 'orderStatus', 'openOrderEnd', 'synchronized']
+E   AssertionError: assert [] == ['openOrder',...synchronized']
+E     
+E     Right contains 4 more items, first extra item: 'openOrder'
+E     Use -v to get more diff
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero] _
+..\..\v6lite\tests\test_batch25_restart.py:149: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    adapter, clock, trace, wire, disconnects, _, _ = _native_server(
+..\..\v6lite\tests\test_batch25_restart.py:45: in _native_server
+    cfg = cfg or make_cfg(tmp_path, client_id=CLIENT_ID,
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite] _
+..\..\v6lite\tests\test_batch25_restart.py:149: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    adapter, clock, trace, wire, disconnects, _, _ = _native_server(
+..\..\v6lite\tests\test_batch25_restart.py:45: in _native_server
+    cfg = cfg or make_cfg(tmp_path, client_id=CLIENT_ID,
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET] _
+..\..\v6lite\tests\test_batch25_restart.py:149: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    adapter, clock, trace, wire, disconnects, _, _ = _native_server(
+..\..\v6lite\tests\test_batch25_restart.py:45: in _native_server
+    cfg = cfg or make_cfg(tmp_path, client_id=CLIENT_ID,
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero] _
+..\..\v6lite\tests\test_batch25_restart.py:149: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    adapter, clock, trace, wire, disconnects, _, _ = _native_server(
+..\..\v6lite\tests\test_batch25_restart.py:45: in _native_server
+    cfg = cfg or make_cfg(tmp_path, client_id=CLIENT_ID,
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite] _
+..\..\v6lite\tests\test_batch25_restart.py:149: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    adapter, clock, trace, wire, disconnects, _, _ = _native_server(
+..\..\v6lite\tests\test_batch25_restart.py:45: in _native_server
+    cfg = cfg or make_cfg(tmp_path, client_id=CLIENT_ID,
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET] _
+..\..\v6lite\tests\test_batch25_restart.py:149: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    adapter, clock, trace, wire, disconnects, _, _ = _native_server(
+..\..\v6lite\tests\test_batch25_restart.py:45: in _native_server
+    cfg = cfg or make_cfg(tmp_path, client_id=CLIENT_ID,
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+_ test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot _
+..\..\v6lite\tests\test_batch25_restart.py:176: in test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot
+    adapter, _, _, wire, disconnects, _, _ = _native_server(tmp_path, monkeypatch, request)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:45: in _native_server
+    cfg = cfg or make_cfg(tmp_path, client_id=CLIENT_ID,
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+______ test_B25_old_generation_End_cannot_complete_new_generation_Future ______
+..\..\v6lite\tests\test_batch25_restart.py:190: in test_B25_old_generation_End_cannot_complete_new_generation_Future
+    adapter, _, _, wire, _, _, _ = _native_server(tmp_path, monkeypatch, request)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:45: in _native_server
+    cfg = cfg or make_cfg(tmp_path, client_id=CLIENT_ID,
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+_ test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC] _
+..\..\v6lite\tests\test_batch25_restart.py:242: in test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once
+    rig, pid, entry = _persisted_overnight(tmp_path, monkeypatch)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:207: in _persisted_overnight
+    rig = Rig(tmp_path, client_id=CLIENT_ID, protection=ProtectionConfig(enabled=True),
+v6lite\tests\helpers.py:64: in __init__
+    self.cfg = make_cfg(tmp_path, **cfg_overrides)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+_ test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped] _
+..\..\v6lite\tests\test_batch25_restart.py:242: in test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once
+    rig, pid, entry = _persisted_overnight(tmp_path, monkeypatch)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:207: in _persisted_overnight
+    rig = Rig(tmp_path, client_id=CLIENT_ID, protection=ProtectionConfig(enabled=True),
+v6lite\tests\helpers.py:64: in __init__
+    self.cfg = make_cfg(tmp_path, **cfg_overrides)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\helpers.py:45: in make_cfg
+    return validate(replace(base, **overrides))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\config.py:312: in validate
+    raise ConfigError("protected formal runs require client_id=131; protected test runs require 132")
+E   v6lite.config.ConfigError: protected formal runs require client_id=131; protected test runs require 132
+=========================== short test summary info ===========================
+FAILED ::test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0
+FAILED ::test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff
+FAILED ::test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget
+FAILED ::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0] - ...
+FAILED ::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1] - ...
+FAILED ::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]
+FAILED ::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]
+FAILED ::test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage
+FAILED ::test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate
+FAILED ::test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]
+FAILED ::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot
+FAILED ::test_B25_old_generation_End_cannot_complete_new_generation_Future - ...
+FAILED ::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]
+FAILED ::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]
+20 failed in 2.85s

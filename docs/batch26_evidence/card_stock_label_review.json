@@ -1,0 +1,12 @@
+{
+  "reviewer": "/root/b26_review",
+  "finding": "Actual cancelled_gtc P1 reports old confirmed_remaining=3 as unlabelled current STP S=3 and claims existing broker stop although fresh own=[]; label historic last-confirmed separately and only report current working shares from complete fresh strong-identity snapshot, otherwise unknown. No permission change.",
+  "source_code_sha": "af35c49fbe84e7c3",
+  "old_render_receipt": "render_actual.json",
+  "retained_outputs": [
+    "render_samples.json",
+    "render_samples.md"
+  ],
+  "old_renderer_archive": "render_samples_before_stock_label_review.py",
+  "old_wrapper_archive": "run_render_samples_before_stock_label_review.py"
+}

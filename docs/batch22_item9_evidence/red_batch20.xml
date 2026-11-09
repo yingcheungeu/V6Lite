@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="29" skipped="0" tests="29" time="6.150" timestamp="2026-10-09T07:37:01.769651-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="" name="test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Cancelled]" time="0.137"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:186: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Inactive]" time="0.080"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:186: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Cancelled]" time="0.074"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:186: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Inactive]" time="0.080"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:186: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Cancelled]" time="0.076"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:186: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Inactive]" time="0.075"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:186: in test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Cancelled]" time="0.078"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:197: in test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Inactive]" time="0.075"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:197: in test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[metadata_cleared]" time="0.077"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:213: in test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[prices_reset]" time="0.079"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:213: in test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[201]" time="0.075"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:229: in test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[202]" time="0.076"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:229: in test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute" time="0.075"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:237: in test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position" time="0.080"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:255: in test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[account]" time="0.076"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:304: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[orderId]" time="0.094"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:304: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[permId]" time="0.078"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:304: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[conId]" time="0.076"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:304: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[clientId]" time="0.077"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:304: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[symbol]" time="0.076"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:304: in test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[account]" time="0.081"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:318: in test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[orderId]" time="0.076"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:318: in test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[permId]" time="0.079"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:318: in test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[conId]" time="0.079"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:318: in test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[clientId]" time="0.082"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:318: in test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[auxPrice]" time="0.082"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:318: in test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_planned_final_share_cancel_202_normal_reason_keeps_real_L7_TP_flow" time="0.078"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:331: in test_B22_item9_planned_final_share_cancel_202_normal_reason_keeps_real_L7_TP_flow
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[positions]" time="0.073"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:377: in test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase><testcase classname="" name="test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[executions]" time="0.077"><failure message="AssertionError: item9 fixtures must never open a network connection">..\spec_item9.py:377: in test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence
+    rig, pid = _pending_three(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:153: in _pending_three
+    adapter, trade = _wire(rig, pos['position_id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\spec_item9.py:116: in _wire
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:104: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\__init__.py:6: in &lt;module&gt;
+    from eventkit import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\__init__.py:3: in &lt;module&gt;
+    from .event import Event
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\event.py:9: in &lt;module&gt;
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:24: in &lt;module&gt;
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+..\..\..\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+..\..\..\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+..\spec_item9.py:40: in forbidden
+    raise AssertionError('item9 fixtures must never open a network connection')
+E   AssertionError: item9 fixtures must never open a network connection</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,15 @@
+.........................................F......                         [100%]
+================================== FAILURES ===================================
+_ test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget _
+v6lite\tests\test_batch25_review_regressions.py:174: in test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget
+    assert 'recovery_failed' in rig.store.anomalies()
+E   AssertionError: assert 'recovery_failed' in {'anomaly:recovery_failed': 'synthetic executions temporarily unavailable after reconnect'}
+E    +  where {'anomaly:recovery_failed': 'synthetic executions temporarily unavailable after reconnect'} = anomalies()
+E    +    where anomalies = <v6lite.store.Store object at 0x000001DDEF983C90>.anomalies
+E    +      where <v6lite.store.Store object at 0x000001DDEF983C90> = <v6lite.tests.helpers.Rig object at 0x000001DDEF983A50>.store
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic repeated physical socket reset
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: recovery failed | synthetic executions temporarily unavailable after reconnect
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch25_review_regressions.py::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget
+1 failed, 47 passed in 4.02s

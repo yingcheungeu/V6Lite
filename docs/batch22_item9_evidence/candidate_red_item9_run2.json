@@ -1,0 +1,229 @@
+{
+  "label": "candidate_red_item9_run2",
+  "start_pt": "2026-10-09T08:53:47.781354-07:00",
+  "end_pt": "2026-10-09T08:53:54.109339-07:00",
+  "returncode": 1,
+  "source_code_sha": "614ad81340ebd0e0",
+  "source_unchanged": true,
+  "spec_sha256": "58186f1047bf79a39e85e96be7140a6cbb740ae152ce9cfd000365e5daee4341",
+  "totals": {
+    "tests": 42,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[metadata_cleared]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[prices_reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[201]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[202]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute",
+      "outcome": "failure",
+      "message": "AssertionError: the same ACKed cancellation must not repeat P0 after 31 minutes\nassert [('#x1F534 P0 · 仍未解...开仓或自动重挂保护单。')] == []\n  \n  Left contains one more item: ('#x1F534 P0 · 仍未解决 · 券商已取消保护单', '#x1F534 P0 · 仍未解决 · 券商已取消保护单\\n发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待...S 的重新提交/IBALGO 建议；不要自动改价重挂保护单。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')\n  Use -v to get more diff"
+    },
+    {
+      "name": "test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[auxPrice]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_planned_final_share_cancel_202_normal_reason_keeps_real_L7_TP_flow",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[executions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_reason_above_nine_hundred_UTF16_units_is_exact_in_remote_embed_segments",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[first-card-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[primary-ACK-reason-part-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-202-Order canceled by system: synthetic rule]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Inactive-0-Broker has cancelled the protective order]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-10147-Synthetic broker terminal reason outside 201 and 202]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-cleared-fields]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-zero-permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_failed_reason_part_then_real_external_SELL_has_independent_remote_provenance",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_real_complete_working_recovery_retires_terminal_suppression_before_new_crossing",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_capture_crash_after_stop_commit_already_persists_identity_hold_and_blocks_release",
+      "outcome": "failure",
+      "message": "AssertionError: the terminal stop transaction must already revoke prior CANCEL_SEEN release authority\nassert None"
+    }
+  ],
+  "stdout_sha256": "8c1c9017de2b9c4b0942bdb68b5a76c9bcb852aef428dbbed52bb94ed87711b9",
+  "junit_sha256": "9df73b43c4757828e23ae0d165bc2a4b0ddaddb48481bceef2f7fbf8e81f095f"
+}

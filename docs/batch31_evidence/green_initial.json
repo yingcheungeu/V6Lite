@@ -1,0 +1,28 @@
+{
+  "label": "green_initial",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T06:52:26.833207-07:00",
+  "end_pt": "2026-10-27T06:52:34.132177-07:00",
+  "seconds": 7.297,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch31_close_card.py",
+    "v6lite/tests/test_batch26_be_token_regression.py",
+    "v6lite/tests/test_batch30_commission.py"
+  ],
+  "code_sha": "2296f15aa27ca5d3",
+  "source_unchanged": true,
+  "inventory_sha256": "147979fc7f7c45929b83d1112cac741ca6e5cbb1a3292ad865aeb1f022a80296",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "c791b61e12db690300e42d4013f73160e8659a61e4012b6075c190ab2485cb2e",
+  "XML_sha256_before_masking": "3debfa8b57d3d04a3a189d7be3c200e57a94cb12988e08a89bdf987ae0172dac",
+  "delivered_log_sha256": "2b4fbe5c01a939d0e35264227e286ce36816c0f2ff7487796b7a307b25caa6f9",
+  "delivered_XML_sha256": "3debfa8b57d3d04a3a189d7be3c200e57a94cb12988e08a89bdf987ae0172dac",
+  "tests": 17,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

@@ -1,0 +1,15 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs _
+v6lite\tests\test_batch23_terminal_fact.py:52: in test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs
+    assert any('券商已取消保护单' in title for title, _ in cards), cards
+E   AssertionError: [('🔴 P0 · 券商已拒绝保护单', '🔴 P0 · 券商已拒绝保护单
+E     发生了什么：AAPL 持仓数量=3 股 保护单已确认=待核实（上次确认 0） 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 ... 的重新提交/IBALGO 建议；不要自动改价重挂保护单。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')]
+E   assert False
+E    +  where False = any(<generator object test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs.<locals>.<genexpr> at 0x000002B3576E2A40>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=待核实（上次确认 0） 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已拒绝该保护请求；完整终态身份已核验；orderRef=v6l-protect-0f1896043af84e58b893 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；券商回报状态=Inactive；禁止未经核实重挂；券商状态=Inactive code=202；终态诊断与执行权限独立核验；券商原因原文=Order canceled by system: synthetic protective order cancellation. END-INACTIVE-202-ORIGINAL
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=3 股 可能超卖=0 股；券商已拒绝该保护请求；完整终态身份已核验；orderRef=v6l-protect-0f1896043af84e58b893 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；完整工作单快照未发现原 GTC；禁止重复提交；券商状态=Inactive code=202；终态诊断与执行权限独立核验；券商原因原文=Order canceled by system: synthetic protective order cancellation. END-INACTIVE-202-ORIGINAL
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch23_terminal_fact.py::test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs
+1 failed in 0.80s

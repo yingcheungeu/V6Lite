@@ -1,0 +1,88 @@
+........................................................................ [  8%]
+.............................................F.......................... [ 16%]
+........................................................................ [ 24%]
+.......................................................F.FF............. [ 32%]
+......................F................................................. [ 40%]
+........................................................................ [ 48%]
+........................................................................ [ 56%]
+........................................................................ [ 64%]
+........................................................................ [ 72%]
+........................................................................ [ 80%]
+........................................................................ [ 88%]
+........................................................................ [ 96%]
+................................                                         [100%]
+================================== FAILURES ===================================
+___ test_G3_daily_remote_report_is_one_screen_but_local_report_is_complete ____
+v6lite\tests\test_batch12.py:472: in test_G3_daily_remote_report_is_one_screen_but_local_report_is_complete
+    assert fragment in lowered, fragment
+E   AssertionError: gateway
+E   assert 'gateway' in '✅ 正常 · 演练（不下单） · v6-lite 每日健康报告 2026-10-06\n扫描：计划：10:00 et 信号 1 · 已入场 无\n信号：10:00 et aapl(78)\n结果：would_buy aapl gate...n告警送达：本进程今日截至报告时: 发出 2 · 失败 0\n行情可用率：100% 常规交易时段可用率 · 已订阅 3 · 6/6 标的样本 · 2 次采样 (本进程今日；实时行情)\ncode_sha：88cf8d9327c2240b'
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: alert self-test | V6-Lite alert path check at 2026-10-06T13:50:00+00:00
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:315 [STARTUP_SUMMARY] {"mode": "paper", "dry_run": true, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "DU0000000", "config_fingerprint": "b52a4230742b2f43", "code_sha": "88cf8d9327c2240b", "broker_connected": true, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": null, "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["risk_day_not_initialized", "outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] started | ``` | Started   Tue 2026-10-06 06:50 PT / 09:50 ET | Mode      PAPER · DRY-RUN · 演练（不下单） · LIVE data · DU0000000 · code 88cf8d93 | Status    OK  IBKR connected · reconcile OK · alerts OK |           Entries closed until 10:00 ET |           Quotes 3/3 usable · V6-Lite positions: none | Monitors  IBKR heartbeat 60s (page after 2 misses) |           Position drift check every 300s (page on mismatch) |           Daily health report 13:05 PT (close+5m) | Scans     10:00 ET / 07:00 PT | Commands  status | report | kill --reason | resume |           ignore SYM | release SYM | resolve-intent ID | clear-anomaly CODE | ```
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3020 [GATEWAY_TIME] server_time=2026-10-06T13:50:00+00:00 host_time=2026-10-06T13:50:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:2890 [HEARTBEAT] {"mode": "paper", "dry_run": true, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "DU0000000", "config_fingerprint": "b52a4230742b2f43", "code_sha": "88cf8d9327c2240b", "broker_connected": true, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.engine:engine.py:2408 [SCAN] AAPL   BUY     score= 78 adx=33.1 rsi=63.9 vol=1.0 
+INFO     v6lite.engine:engine.py:2408 [SCAN] SPY    NEUTRAL score= 30 adx=65.4 rsi=14.2 vol=1.0 
+INFO     v6lite.engine:engine.py:2408 [SCAN] TSLA   NEUTRAL score= 25 adx=65.4 rsi=14.2 vol=1.0 
+INFO     v6lite.engine:engine.py:2472 [DRY_RUN] WOULD_BUY AAPL 20 LMT 113.47 risk=$100 data=live gate=ok
+INFO     v6lite.engine:engine.py:2418 [ENTRY_DECISION] AAPL score=78 -> dry_run
+INFO     v6lite.engine:engine.py:3020 [GATEWAY_TIME] server_time=2026-10-06T14:00:30+00:00 host_time=2026-10-06T14:00:30+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:2890 [HEARTBEAT] {"mode": "paper", "dry_run": true, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "DU0000000", "config_fingerprint": "b52a4230742b2f43", "code_sha": "88cf8d9327c2240b", "broker_connected": true, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": true, "entry_blocks": [], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+INFO     v6lite.alerts:alerts.py:785 [V6-Lite] INFO: daily report 2026-10-06 | OK | Scans    10:00 ET signals=1 entered=- | Signals  10:00 ET AAPL(78) | Decisions WOULD_BUY AAPL gate=ok | Orders   0 placed · 0 canceled | Positions none · drift none · broker protection 无持仓；空窗统计 A=0.000s B=0.000s | Gateway  this process today, through report time: replies 2 · max verified 0s · misses 0 | Alerts   this process today, through report time: sent 2 · failed 0 | Quotes   100% RTH availability · subscribed 3 · 6/6 symbol-samples · 2 samples (this process today; LIVE) | code_sha 88cf8d9327c2240b
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+INFO     v6lite.engine:engine.py:3020 [GATEWAY_TIME] server_time=2026-10-06T20:06:00+00:00 host_time=2026-10-06T20:06:00+00:00 signed_skew_seconds=+0.000
+INFO     v6lite.engine:engine.py:2890 [HEARTBEAT] {"mode": "paper", "dry_run": true, "old_v6_pids": [], "old_v6_check_unknown": false, "account": "DU0000000", "config_fingerprint": "b52a4230742b2f43", "code_sha": "88cf8d9327c2240b", "broker_connected": true, "reconcile_ok": true, "alerts_healthy": true, "equity_for_sizing": 10000.0, "loss_streak": "0", "cooldown_until": null, "open_positions": [], "active_orders": [], "entries_allowed": false, "entry_blocks": ["outside_entry_window"], "market_data": {"requested": "live", "delayed_symbols": [], "no_subscription": [], "quote_symbols": 3, "usable_quotes": 3}}
+______ test_B16_F6_account_execution_request_filters_account_not_client _______
+v6lite\tests\test_batch16_f6_account_evidence.py:43: in test_B16_F6_account_execution_request_filters_account_not_client
+    events = broker.account_executions_today()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1214: in account_executions_today
+    fills = self._complete_executions(ExecutionFilter(acctCode=self.cfg.account))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1168: in _complete_executions
+    generation, ib = self._query_generation, self.ib
+                     ^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute '_query_generation'
+__ test_B16_F6_account_evidence_does_not_claim_other_client_spoofed_v6l_ref ___
+v6lite\tests\test_batch16_f6_account_evidence.py:103: in test_B16_F6_account_evidence_does_not_claim_other_client_spoofed_v6l_ref
+    evidence = broker.account_executions_today()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1214: in account_executions_today
+    fills = self._complete_executions(ExecutionFilter(acctCode=self.cfg.account))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1168: in _complete_executions
+    generation, ib = self._query_generation, self.ib
+                     ^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute '_query_generation'
+___________ test_B16_F6_account_evidence_ignores_other_account_sell ___________
+v6lite\tests\test_batch16_f6_account_evidence.py:128: in test_B16_F6_account_evidence_ignores_other_account_sell
+    evidence = broker.account_executions_today()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1214: in account_executions_today
+    fills = self._complete_executions(ExecutionFilter(acctCode=self.cfg.account))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:1168: in _complete_executions
+    generation, ib = self._query_generation, self.ib
+                     ^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'IbkrBroker' object has no attribute '_query_generation'
+__ test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on ___
+v6lite\tests\test_batch20_protection_equivalents.py:523: in test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on
+    enlarged = _working(rig,pos['position_id'],30)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch20_protection_equivalents.py:65: in _working
+    assert row['confirmed_remaining'] == row['pending_max_remaining'] == qty
+E   assert 20 == 30
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-4bad94feb0ec490e95b5 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:01:31+00:00 工作单证据时间=2026-10-06T14:02:14+00:00；BrokerError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-a004bb2add044295bf20 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch12.py::test_G3_daily_remote_report_is_one_screen_but_local_report_is_complete
+FAILED v6lite/tests/test_batch16_f6_account_evidence.py::test_B16_F6_account_execution_request_filters_account_not_client
+FAILED v6lite/tests/test_batch16_f6_account_evidence.py::test_B16_F6_account_evidence_does_not_claim_other_client_spoofed_v6l_ref
+FAILED v6lite/tests/test_batch16_f6_account_evidence.py::test_B16_F6_account_evidence_ignores_other_account_sell
+FAILED v6lite/tests/test_batch20_protection_equivalents.py::test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on
+5 failed, 891 passed in 93.86s (0:01:33)

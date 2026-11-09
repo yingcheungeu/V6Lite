@@ -1,0 +1,16 @@
+{
+  "status": "resolved",
+  "critical_overflow": {
+    "status": "resolved",
+    "conflict": "Events <=200 lines and entire report <=100KB versus P0/ANOMALY/fills never truncated when critical records alone exceed the cap.",
+    "decision": "主报守上限，关键事件另附完整附件",
+    "authority": "John explicit reply 2026-10-18"
+  },
+  "execution_summary_info": {
+    "status": "resolved",
+    "conflict": "27b promised each complete native execution query at INFO; 3120-6240 such lines per position in 13h conflicts with batch27 <=2000 normal INFO lines.",
+    "decision": "允许相同结果聚合；首次、变化和异常仍保留",
+    "authority": "John explicit reply 2026-10-18"
+  },
+  "independent_work": "audit-only RAM dedup; ordinary historical SQL report reduction; QUERY debug/summary; wrapper warning; output masking"
+}

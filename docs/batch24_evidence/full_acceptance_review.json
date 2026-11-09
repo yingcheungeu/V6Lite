@@ -1,0 +1,55 @@
+{
+  "recorded_by": "/root",
+  "independent_reviewer": "/root/batch24_investigate",
+  "read_only_review": true,
+  "recorded_at_pt": "2026-10-12T20:09:40.263009-07:00",
+  "result": "PASS",
+  "code_sha": "2db6af8f04f145f6",
+  "unresolved_substantive_findings": [],
+  "full_receipts": [
+    {
+      "path": "docs/batch24_evidence/full_1_attempt2.json",
+      "sha256": "ed4e809b53e9a18df89631b14335192dbe88e2f3d4c0b1f6db916e0674330946"
+    },
+    {
+      "path": "docs/batch24_evidence/full_2.json",
+      "sha256": "80d2b9f1a1a1adad83921ccbcaf8073c4de31b2a5092f5bd4184357016793fc6"
+    },
+    {
+      "path": "docs/batch24_evidence/full_3.json",
+      "sha256": "85d72f21e087cef8840efce794077d4fcee28b5f7906fe6ab52c2904d39b67a3"
+    }
+  ],
+  "actual_each_full": {
+    "tests": 1560,
+    "passed": 1559,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0
+  },
+  "independent_checks": [
+    "Raw stdout/JUnit/inventory digests equal receipts",
+    "Actual 1560 JUnit cases/outcomes equal each receipt; all three inventories and cases identical",
+    "Collection and execution all 1560 unique nodeids; same source full_collection_attempt2",
+    "Current canonical POSIX package hash and both source tree/spec hashes match all receipts",
+    "Every one of the 23 first-full failed cases passed in all three completed full runs",
+    "Only skip matches B23: legacy market_scanner.py not present; test_strategy_parity::test_scoring_matches_legacy_scanner_on_identical_bars",
+    "Windows dev .venv, full=true, returncode=0, timed_out=false, runtime/unknown=0",
+    "Collection before run1; strict serial chronology; all complete intervals after 13:30 PT"
+  ],
+  "full_pt_windows": [
+    [
+      "2026-10-12T14:53:46.063984-07:00",
+      "2026-10-12T14:59:18.765340-07:00"
+    ],
+    [
+      "2026-10-12T14:59:20.563437-07:00",
+      "2026-10-12T15:04:52.836053-07:00"
+    ],
+    [
+      "2026-10-12T15:04:54.612121-07:00",
+      "2026-10-12T15:10:25.631241-07:00"
+    ]
+  ],
+  "no_tests_run_or_source_files_changed_by_review": true
+}

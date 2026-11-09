@@ -1,0 +1,38 @@
+{
+  "label": "red_native_fee_interleave",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T07:25:18.061174-07:00",
+  "end_pt": "2026-10-27T07:26:23.893437-07:00",
+  "seconds": 65.828,
+  "returncode": 1,
+  "args": [
+    "docs/batch31_evidence/commission_interleave_spec.py"
+  ],
+  "code_sha": "c03c291d83bf2bee",
+  "source_unchanged": true,
+  "inventory_sha256": "39d302a7e10ece67f778542f9e6c9030453cb45276f8c9b117400ccdd322bc51",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "10f28fad1ba0f420d1d0d0695b3c6eac701748e29cfbc4f5ac2cb32713bbe0a9",
+  "XML_sha256_before_masking": "2b7e6b92052347ad07af68c3d1b1825b707f978842846ef5642accd8630b165a",
+  "delivered_log_sha256": "eaacb385ecc94b124206fb7618bfe95ff4ce44ccc52cff7de0b112a3b7ae801a",
+  "delivered_XML_sha256": "2b7e6b92052347ad07af68c3d1b1825b707f978842846ef5642accd8630b165a",
+  "tests": 2,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "docs.batch31_evidence.commission_interleave_spec",
+      "name": "test_B31_native_fee_between_reduction_ACK_components_keeps_fast_TP",
+      "kind": "failure",
+      "message": "assert [(True, False, True)] == [(True, True, True)]\n  \n  At index 0 diff: (True, False, True) != (True, True, True)\n  Use -v to get more diff"
+    },
+    {
+      "classname": "docs.batch31_evidence.commission_interleave_spec",
+      "name": "test_B31_native_fee_during_final_cancel_keeps_fast_TP3",
+      "kind": "failure",
+      "message": "assert [(True, False, True)] == [(True, True, True)]\n  \n  At index 0 diff: (True, False, True) != (True, True, True)\n  Use -v to get more diff"
+    }
+  ]
+}

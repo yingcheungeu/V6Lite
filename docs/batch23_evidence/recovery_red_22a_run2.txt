@@ -1,0 +1,16 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold _
+..\recovery_specs\ad3ea825f387\test_batch23_recovery_diagnostic.py:79: in test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold
+    assert rig.store.control('anomaly:recovery_failed') == cause
+E   AssertionError: assert 'Synthetic re...ginal diagnos' == 'Synthetic re...-NOT-TRUNCATE'
+E     
+E     Skipping 189 identical leading characters in diff, use -v to show
+E     - nal diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original d...
+E     
+E     ...Full output truncated (2 lines hidden), use '-vv' to show
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: recovery failed | Synthetic recovery open_orders BrokerError: original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; END-RECOVERY-ORIGINAL-CAUSE-DO-NOT-TRUNCATE
+=========================== short test summary info ===========================
+FAILED ::test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold
+1 failed in 0.65s

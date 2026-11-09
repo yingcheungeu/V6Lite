@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="31" skipped="0" tests="33" time="5.781" timestamp="2026-10-14T22:07:41.877820-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="" name="test_B26_overnight_opt_in_default_is_declared_and_disabled" time="0.195"><failure message="AssertionError: assert None is False&#10; +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60), 'overnight_tp_enabled', None)&#10; +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60) = ProtectionConfig()">..\..\v6lite\tests\test_batch26_overnight_evidence.py:340: in test_B26_overnight_opt_in_default_is_declared_and_disabled
+    assert getattr(ProtectionConfig(), 'overnight_tp_enabled', None) is False
+E   AssertionError: assert None is False
+E    +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60), 'overnight_tp_enabled', None)
+E    +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60) = ProtectionConfig()</failure></testcase><testcase classname="" name="test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC" time="0.135"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_overnight_evidence.py:349: in test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence" time="0.138"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_overnight_evidence.py:385: in test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[manual_sell_one]" time="0.139"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:433: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[cancelled_gtc]" time="0.140"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:433: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[missing_entry_exec]" time="0.152"><failure message="AssertionError: assert ([OrderRequest...3bb40c4a20d')] == []&#10;  &#10;  Left contains one more item: OrderRequest(intent_id='v6l-cc2c687eae69410d9246', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=119.07, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id='pos-68d3e1ac93bb40c4a20d')&#10;  Use -v to get more diff)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:430: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    assert _tp_requests(rig) == [] and _writes(rig) == before
+E   AssertionError: assert ([OrderRequest...3bb40c4a20d')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-cc2c687eae69410d9246', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=119.07, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id='pos-68d3e1ac93bb40c4a20d')
+E     Use -v to get more diff)</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[unknown_today_exec]" time="0.141"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:433: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[position_mismatch]" time="0.135"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:433: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[account]" time="0.149"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:454: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[client_id]" time="0.142"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:454: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[con_id]" time="0.141"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:454: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[broker_order_id]" time="0.142"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:454: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[perm_id]" time="0.141"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:454: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[aux_price]" time="0.138"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:454: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[order_type]" time="0.148"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:454: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[tif]" time="0.138"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:454: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[outside_rth]" time="0.139"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:454: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_perm]" time="0.138"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:473: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[orphan_intent]" time="0.132"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:473: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[net_quantity]" time="0.132"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:473: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_price]" time="0.133"><failure message="AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0&#10;assert []">..\..\v6lite\tests\test_batch26_overnight_evidence.py:473: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:334: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []</failure></testcase><testcase classname="" name="test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[open_orders]" time="0.137"><failure message="AssertionError: fresh query failure must revoke the earlier overnight TP authority&#10;assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8DA84D0&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:490: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8DA84D0&gt;)</failure></testcase><testcase classname="" name="test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[positions_fresh]" time="0.138"><failure message="AssertionError: fresh query failure must revoke the earlier overnight TP authority&#10;assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8B58810&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:490: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8B58810&gt;)</failure></testcase><testcase classname="" name="test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[executions_today]" time="0.137"><failure message="AssertionError: fresh query failure must revoke the earlier overnight TP authority&#10;assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8B59450&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:490: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8B59450&gt;)</failure></testcase><testcase classname="" name="test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[missing_entry_exec]" time="0.144"><failure message="AssertionError: assert ([OrderRequest...ec448349f52')] == []&#10;  &#10;  Left contains one more item: OrderRequest(intent_id='v6l-2bd01beb8c5b4774a91c', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=119.07, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id='pos-846b6139bec448349f52')&#10;  Use -v to get more diff)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:507: in test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes
+    assert _tp_requests(rig) == [] and _writes(rig) == before
+E   AssertionError: assert ([OrderRequest...ec448349f52')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-2bd01beb8c5b4774a91c', symbol='AAPL', side=&lt;Side.SELL: 'SELL'&gt;, quantity=1, limit_price=119.07, purpose=&lt;Purpose.TP1: 'TP1'&gt;, position_id='pos-846b6139bec448349f52')
+E     Use -v to get more diff)</failure></testcase><testcase classname="" name="test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[external_working_sell]" time="0.140"><failure message="AssertionError: ('S+T+X&lt;=P', 'AAPL', 4, 3.0, {'external-b26-seller': ('AAPL', 1), 'v6l-protect-da03584c53134b578162': ('AAPL', 3)})&#10;assert 4 &lt;= 3.0&#10; +  where 3.0 = &lt;built-in method get of dict object at 0x00000208B8BE2E00&gt;('AAPL', 0)&#10; +    where &lt;built-in method get of dict object at 0x00000208B8BE2E00&gt; = {'AAPL': 3.0}.get">..\..\v6lite\tests\test_batch26_overnight_evidence.py:506: in test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes
+    _attempt_tp(rig, pid)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:309: in _attempt_tp
+    rig.engine._protection_progress(rig.clock.now())
+v6lite\protection_engine.py:936: in _protection_progress
+    self._protection_progress_one(self.clock.now(), row, pos)
+v6lite\protection_engine.py:1094: in _protection_progress_one
+    self._protection_modify(now, row, order, safe_target, increase=False,
+v6lite\protection_engine.py:1345: in _protection_modify
+    self.broker.modify_protection(req)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:218: in write
+    _safety(rig, request)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:189: in _safety
+    assert total &lt;= truth.get(symbol, 0), ('S+T+X&lt;=P', symbol, total, truth.get(symbol, 0), claims)
+E   AssertionError: ('S+T+X&lt;=P', 'AAPL', 4, 3.0, {'external-b26-seller': ('AAPL', 1), 'v6l-protect-da03584c53134b578162': ('AAPL', 3)})
+E   assert 4 &lt;= 3.0
+E    +  where 3.0 = &lt;built-in method get of dict object at 0x00000208B8BE2E00&gt;('AAPL', 0)
+E    +    where &lt;built-in method get of dict object at 0x00000208B8BE2E00&gt; = {'AAPL': 3.0}.get</failure></testcase><testcase classname="" name="test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[undercovered]" time="0.144"><failure message="assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8BE0510&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:527: in test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8BE0510&gt;)</failure></testcase><testcase classname="" name="test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[missing_gtc]" time="0.139"><failure message="assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8E15010&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:527: in test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8E15010&gt;)</failure></testcase><testcase classname="" name="test_B26_historical_entry_proof_does_not_replace_protected_release_execution_evidence" time="0.135" /><testcase classname="" name="test_B26_default_off_retains_b25_overnight_stop_and_blocks_new_TP" time="0.130" /><testcase classname="" name="test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore" time="0.131"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_overnight_evidence.py:568: in test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price" time="0.139"><failure message="assert (1, 1, 1, 0) == (1, 1, 0, 0)&#10;  &#10;  At index 2 diff: 1 != 0&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch26_overnight_evidence.py:591: in test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price
+    assert _writes(rig) == before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen" time="0.132"><failure message="assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = _restore_infos(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8C9F690&gt;)">..\..\v6lite\tests\test_batch26_overnight_evidence.py:601: in test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen
+    assert len(_restore_infos(rig)) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = _restore_infos(&lt;v6lite.tests.helpers.Rig object at 0x00000208B8C9F690&gt;)</failure></testcase></testsuite></testsuites>

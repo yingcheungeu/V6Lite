@@ -1,0 +1,23 @@
+......F                                                                  [100%]
+================================== FAILURES ===================================
+________ test_B30_lost_send_control_recovers_exact_immutable_send_bid _________
+v6lite\tests\test_batch30_report_audit.py:155: in test_B30_lost_send_control_recovers_exact_immutable_send_bid
+    assert '成交相对 bid=+0.0700 USD/股' in _report_tp_line(text,fill.exec_id)
+E   assert '成交相对 bid=+0.0700 USD/股' in '- 券商端保护: AAPL 截至 2026-10-06T14:01:32+00:00 最近一次券商快照确认，当前仍需核实，本地状态=WORKING P=2 S=2 类型=STP 止损价（触发后市价成交）=113.53 orderId=...rRef=v6l-ef95a8aa83a240479aec execId=0000fa4e.00000002.01.01 数量=1 成交价=114.31 发送时 bid=未知 成交相对 bid=未知（发送快照缺失） B空窗=0.000s'
+E    +  where '- 券商端保护: AAPL 截至 2026-10-06T14:01:32+00:00 最近一次券商快照确认，当前仍需核实，本地状态=WORKING P=2 S=2 类型=STP 止损价（触发后市价成交）=113.53 orderId=...rRef=v6l-ef95a8aa83a240479aec execId=0000fa4e.00000002.01.01 数量=1 成交价=114.31 发送时 bid=未知 成交相对 bid=未知（发送快照缺失） B空窗=0.000s' = _report_tp_line('# V6-Lite daily report 2026-10-06 (paper) TEST\n\n- account: DU******001   state role: test\n- code_sha: b07e2294d5d7...pending_trigger": null, "position_id": \n\n## Operator notes\n\n- (market context, manual actions, things to review)\n', '0000fa4e.00000002.01.01')
+E    +    where '0000fa4e.00000002.01.01' = FillEvent(exec_id='0000fa4e.00000002.01.01', intent_id='v6l-ef95a8aa83a240479aec', symbol='AAPL', side=<Side.SELL: 'SE...broker_order_id=1003, perm_id=51003, commission=1.0, time_source='', time_uncertain=False, con_id=10000, raw_time=None).exec_id
+---------------------------- Captured stdout call -----------------------------
+TEST entry requested: AAPL; engine will evaluate it on its next tick
+============================== warnings summary ===============================
+v6lite/tests/test_batch30_report_audit.py::test_B30_real_native_timeout_audit_only_changes_and_at_most_eight_rows
+  v6lite\tests\test_batch30_report_audit.py:25: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B30_real_native_timeout_audit_only_changes_and_at_most_eight_rows(native_timeout, monkeypatch, record_property):
+
+v6lite/tests/test_batch30_report_audit.py::test_B30_report_splits_actual_normal_and_injected_windows_and_normal_compliance
+  v6lite\tests\test_batch30_report_audit.py:44: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B30_report_splits_actual_normal_and_injected_windows_and_normal_compliance(tmp_path, monkeypatch, record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch30_report_audit.py::test_B30_lost_send_control_recovers_exact_immutable_send_bid
+1 failed, 6 passed, 2 warnings in 25.82s

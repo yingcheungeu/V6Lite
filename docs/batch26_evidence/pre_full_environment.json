@@ -1,0 +1,26 @@
+{
+  "date_pt": "2026-10-15T18:04:03.902773-07:00",
+  "code_sha": "579d13832e3f4237",
+  "process_counts": {
+    "unknown": 0,
+    "runtime": 0
+  },
+  "baseline_tag": "v6lite-batch25",
+  "baseline_commit": "97fa8c6d68cfd7b700c1474dc6f8a94e158fd2d2",
+  "main_ref_preserved": "d607dae80aee180cfb68a2f8e89936bfd51e9ef3",
+  "index_empty": true,
+  "batch26_tag_absent": true,
+  "legacy_tests_byte_identical": 85,
+  "scripts_sha256": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675",
+  "preserved_input_hashes": {
+    "docs/V6_LITE_OPERATOR_MANUAL.md": "3df0e4a4f090f059d2579d96011346ceaadaa2c39837f3ab5abb2c6f24cf2576",
+    "docs/V6_LITE_BATCH26_INSTRUCTIONS.md": "dff7d8eff2edf4e2bfb18e3a63f6a018292cf2662fdcbae7c50268b8cdbee78b",
+    "docs/V6_LITE_BATCH26_INVESTIGATION_2026-10-14.md": "41f834b1b843bcbe73599ef92437b211225e5dbae5f632eb3959ca052f142805",
+    "docs/V6_LITE_BATCH26_EVIDENCE_RULING_2026-10-14.md": "1b8a03ca6bd93272a10ddd4545ff8fd6b3764b3015a6f1b26edf9fcae90f15f5",
+    "docs/batch26_evidence/evidence_ruling.json": "fe71e04846794caac05578281aced4828f965a793ffbd3f8d19ac51ce71a3410",
+    "docs/batch26_evidence/switch_ruling.json": "3dd8134c3130de68296da3da99fbde5719a5bd3a23464befe952f5ad81bfb532",
+    "docs/V6_LITE_BATCH26_RULING_ADDENDUM_2026-10-15.md": "d5a42c6a41c90dd289e4fe04471b6c4d4e1fa6dd408f0d66c49c4ec18a1fe94b"
+  },
+  "final_render_embed_cases": 7,
+  "embed_AB_nonproof_not_clipped": true
+}

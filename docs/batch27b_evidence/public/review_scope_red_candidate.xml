@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="4" time="1.733" timestamp="2026-10-17T14:57:13.689753-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch27b_scope_completeness" name="test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[missing-End]" time="0.186"><failure message="AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction&#10;assert []&#10; +  where [] = _p1(&lt;v6lite.tests.helpers.Rig object at 0x00000179CF4EA310&gt;)">v6lite\tests\test_batch27b_scope_completeness.py:69: in test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result
+    _assert_stop_only_unchanged(rig,pid,ref,before)
+v6lite\tests\test_batch27b_scope_completeness.py:44: in _assert_stop_only_unchanged
+    assert _p1(rig),'explicitly incomplete dedicated evidence must freeze before the first reduction'
+E   AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction
+E   assert []
+E    +  where [] = _p1(&lt;v6lite.tests.helpers.Rig object at 0x00000179CF4EA310&gt;)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_scope_completeness" name="test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[list-only]" time="0.174"><failure message="AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction&#10;assert []&#10; +  where [] = _p1(&lt;v6lite.tests.helpers.Rig object at 0x00000179AB70B0D0&gt;)">v6lite\tests\test_batch27b_scope_completeness.py:69: in test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result
+    _assert_stop_only_unchanged(rig,pid,ref,before)
+v6lite\tests\test_batch27b_scope_completeness.py:44: in _assert_stop_only_unchanged
+    assert _p1(rig),'explicitly incomplete dedicated evidence must freeze before the first reduction'
+E   AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction
+E   assert []
+E    +  where [] = _p1(&lt;v6lite.tests.helpers.Rig object at 0x00000179AB70B0D0&gt;)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_scope_completeness" name="test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time" time="0.168"><failure message="AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction&#10;assert []&#10; +  where [] = _p1(&lt;v6lite.tests.helpers.Rig object at 0x00000179CF55D290&gt;)">v6lite\tests\test_batch27b_scope_completeness.py:107: in test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time
+    _assert_stop_only_unchanged(rig,pid,ref,before)
+v6lite\tests\test_batch27b_scope_completeness.py:44: in _assert_stop_only_unchanged
+    assert _p1(rig),'explicitly incomplete dedicated evidence must freeze before the first reduction'
+E   AssertionError: explicitly incomplete dedicated evidence must freeze before the first reduction
+E   assert []
+E    +  where [] = _p1(&lt;v6lite.tests.helpers.Rig object at 0x00000179CF55D290&gt;)</failure></testcase><testcase classname="v6lite.tests.test_batch27b_scope_completeness" name="test_B27b_legacy_broker_without_scoped_capability_keeps_historical_stop_TP_compatibility" time="0.175" /></testsuite></testsuites>

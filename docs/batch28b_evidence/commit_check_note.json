@@ -1,0 +1,16 @@
+{
+  "classification": "raw diagnostic output only; no production/test/source changes",
+  "first_commit_attempt": "stopped before commit/tag at generated-log whitespace check",
+  "file": "docs/batch28b_evidence/focused_order_safety2.txt",
+  "preserved_sha256": "b5d3d038046f184da1b279945d12a9f74f0838fcadc23d7898ea9532ff0ce937",
+  "original_lines_with_space_only": [
+    47,
+    53,
+    55,
+    65
+  ],
+  "reason": "The historical failed Windows SDK import traceback contains space-only blank lines. Preserve original evidence bytes and SHA chain.",
+  "check_scope": "all staged files still checked except this exact generated traceback log",
+  "source_checks": "unchanged and enforced; no test waiver or retry; all three full-suite receipts unchanged",
+  "repository_hook_or_global_config_modified": false
+}

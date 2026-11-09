@@ -1,0 +1,22 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+    "v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice",
+    "v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice",
+    "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts",
+    "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+    "v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice",
+    "v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice",
+    "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts",
+    "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main"
+  ]
+}

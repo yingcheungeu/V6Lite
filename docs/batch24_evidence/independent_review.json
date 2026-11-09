@@ -1,0 +1,30 @@
+{
+  "reviewer": "batch24_investigate",
+  "review_mode": "independent read-only; no candidate tests; no file writes",
+  "reviewed_code_sha": "beb13c6910bd2355",
+  "unresolved_substantive_findings": [],
+  "coverage": [
+    "STP echo only audit and contractual limit None",
+    "strict native account/client/conId/ref/orderId/permId/SELL/STP/GTC/outsideRth/STK/USD/cent/quantity",
+    "native wire global10/channel>=1; reset old queue and End epochs; reentrant successor scheduling",
+    "position backoff and fairness without releasing holds",
+    "PreSubmitted working; first GTC no backoff",
+    "dedup P0/held-P1; DAY P1 retained",
+    "TP complete same-epoch/context fresh display; cap cents; IBKR labels; raw notice audit"
+  ],
+  "production_sha256": {
+    "v6lite\\alerts.py": "682d46286bf45b041c41624544ebd97807530f5f5f1868c2b6359b5db58f6940",
+    "v6lite\\broker\\fake.py": "1a2b8040abcb629e8d73df613c5bbf662f75ca3073e303f64faac585076dc864",
+    "v6lite\\broker\\ibkr.py": "80f4b479fdd7e5d39a67028d3e4c40e3b5e0a4e04ee62f63afdb6d7e282c27c3",
+    "v6lite\\broker\\pacing.py": "5875933a9d6a0873b661563f354449f6da2cfbcc6169faab6e1a32c1e512bbf2",
+    "v6lite\\config.py": "0318237f52b4306cf56378c8c51eb16c4f168083afe7c34d2132e21687282275",
+    "v6lite\\engine.py": "87d554c0c9e419d4d7e423abf71fab4a6d51c3a540a0a433154ebb57b2042577",
+    "v6lite\\models.py": "4d8ea31dd03a64f7169f3ee08f4fb4bbeffb47f933422043766506c7f7d573a4",
+    "v6lite\\protection.py": "fa4be7ec8e88bb2ee2c5cc77be2a6249725ff1bcd80e2865d056bba345d3f40d",
+    "v6lite\\protection_cancellations.py": "7c6224e128bb97784ac88c6ddf63784825749b2d62c31ebfcb4ae399c7a91a9d",
+    "v6lite\\protection_engine.py": "f3799849df31384f626a52b2143a6af92fd6bbcc718f7182d5d5baf4a5f08a50",
+    "v6lite\\protection_incidents.py": "d2bfad41ee00515fa4e9e961e30ae9d965d6b849b4541183e87451fb134cfdc4",
+    "v6lite\\tp_evidence.py": "8c445a37d16c9b691ab7104b1260a4384fc1989e4d50e456aa0da376dbaae8aa"
+  },
+  "note": "Later fixture-only corrections change aggregate code_sha; production files must continue to match this manifest."
+}

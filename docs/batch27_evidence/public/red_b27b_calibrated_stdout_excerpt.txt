@@ -1,0 +1,180 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFF.............FFF.FF..FFFFFFFFFFFFFFFFFFFFF    [100%]
+================================== FAILURES ===================================
+_ test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:226: in test_B27_thirteen_hours_native_observations_are_bounded_and_counted
+    assert amount <= 5 * holdings, (kind, amount, holdings, index)
+E   AssertionError: ('ORDER_PRICE_OBSERVATION', 6, 1, 5)
+E   assert 6 <= (5 * 1)
+_ test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:226: in test_B27_thirteen_hours_native_observations_are_bounded_and_counted
+    assert amount <= 5 * holdings, (kind, amount, holdings, index)
+E   AssertionError: ('ORDER_PRICE_OBSERVATION', 60, 10, 5)
+E   assert 60 <= (5 * 10)
+_ test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:226: in test_B27_thirteen_hours_native_observations_are_bounded_and_counted
+    assert amount <= 5 * holdings, (kind, amount, holdings, index)
+E   AssertionError: ('ORDER_PRICE_OBSERVATION', 6, 1, 5)
+E   assert 6 <= (5 * 1)
+_ test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:226: in test_B27_thirteen_hours_native_observations_are_bounded_and_counted
+    assert amount <= 5 * holdings, (kind, amount, holdings, index)
+E   AssertionError: ('ORDER_PRICE_OBSERVATION', 60, 10, 5)
+E   assert 60 <= (5 * 10)
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[intent_id] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'intent_id')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DA92FC890>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DA92FC890> = <v6lite.tests.helpers.Rig object at 0x0000014DA97CFB50>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[account] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'account')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DA97C3D90>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DA97C3D90> = <v6lite.tests.helpers.Rig object at 0x0000014DC9A4C750>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[client_id] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'client_id')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC9A82550>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC9A82550> = <v6lite.tests.helpers.Rig object at 0x0000014DA97C1190>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[con_id] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'con_id')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC9A5CC10>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC9A5CC10> = <v6lite.tests.helpers.Rig object at 0x0000014DC9A9C290>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[trigger_price] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'trigger_price')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DA931FE90>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DA931FE90> = <v6lite.tests.helpers.Rig object at 0x0000014DA97C14D0>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[limit_price] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'limit_price')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC99CAC90>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC99CAC90> = <v6lite.tests.helpers.Rig object at 0x0000014DA931C050>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[requested_qty] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'requested_qty')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DA9235AD0>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DA9235AD0> = <v6lite.tests.helpers.Rig object at 0x0000014DA9323AD0>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[confirmed_remaining] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'confirmed_remaining')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC997BE90>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC997BE90> = <v6lite.tests.helpers.Rig object at 0x0000014DA97B94D0>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_max_remaining] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'pending_max_remaining')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DA973FE90>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DA973FE90> = <v6lite.tests.helpers.Rig object at 0x0000014DC99794D0>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_qty] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'pending_qty')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DA97B0790>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DA97B0790> = <v6lite.tests.helpers.Rig object at 0x0000014DA973FA10>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[state] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'state')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC9A094D0>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC9A094D0> = <v6lite.tests.helpers.Rig object at 0x0000014DA97B3CD0>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_trigger] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'pending_trigger')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DA9362010>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DA9362010> = <v6lite.tests.helpers.Rig object at 0x0000014DA9236790>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_limit] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'pending_limit')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC99FDBD0>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC99FDBD0> = <v6lite.tests.helpers.Rig object at 0x0000014DC9A6D190>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[modify_generation] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'modify_generation')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC9ACB110>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC9ACB110> = <v6lite.tests.helpers.Rig object at 0x0000014DC99FF410>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[status_seen_generation] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'status_seen_generation')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC9AFD590>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC9AFD590> = <v6lite.tests.helpers.Rig object at 0x0000014DA7575F90>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[broker_order_id] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'broker_order_id')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DA936BE90>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DA936BE90> = <v6lite.tests.helpers.Rig object at 0x0000014DC9A68810>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[perm_id] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'perm_id')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC997B390>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC997B390> = <v6lite.tests.helpers.Rig object at 0x0000014DA9369F50>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_a_started_at] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'gap_a_started_at')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC99642D0>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC99642D0> = <v6lite.tests.helpers.Rig object at 0x0000014DC9AAC6D0>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_b_started_at] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'gap_b_started_at')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC9AA0350>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC9AA0350> = <v6lite.tests.helpers.Rig object at 0x0000014DA91E5510>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_stage] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'tp_stage')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC9A3D810>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC9A3D810> = <v6lite.tests.helpers.Rig object at 0x0000014DA979C5D0>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_qty] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'tp_qty')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DA9236F50>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DA9236F50> = <v6lite.tests.helpers.Rig object at 0x0000014DC9A3D610>.store
+_ test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_intent_id] _
+..\..\v6lite\tests\test_batch27_observation_audit.py:286: in test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged
+    assert _count(rig.store, "PROTECT_STATE") == before + 1, ("unchanged field", field)
+E   AssertionError: ('unchanged field', 'tp_intent_id')
+E   assert 3 == (1 + 1)
+E    +  where 3 = _count(<v6lite.store.Store object at 0x0000014DC99C9410>, 'PROTECT_STATE')
+E    +    where <v6lite.store.Store object at 0x0000014DC99C9410> = <v6lite.tests.helpers.Rig object at 0x0000014DA92348D0>.store
+____________ test_B27_confirmed_at_refresh_persists_without_audit _____________
+..\..\v6lite\tests\test_batch27_observation_audit.py:297: in test_B27_confirmed_at_refresh_persists_without_audit
+    assert _count(rig.store, "PROTECT_STATE") == before
+E   AssertionError: assert 2 == 1

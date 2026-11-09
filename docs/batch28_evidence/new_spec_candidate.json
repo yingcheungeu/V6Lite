@@ -1,0 +1,20 @@
+{
+  "label": "new_spec_candidate",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T19:39:17.283400-07:00",
+  "end_pt": "2026-10-20T19:39:20.523797-07:00",
+  "seconds": 3.235,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch28_section2.py"
+  ],
+  "tests": 19,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_unchanged": true,
+  "inventory_sha256": "92df24f44626d667c36861aa219b2a7255594a0f715dae87ed8b7133f6499afb",
+  "incomplete": false,
+  "failed_cases": []
+}

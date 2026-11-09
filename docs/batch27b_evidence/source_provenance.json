@@ -1,0 +1,71 @@
+{
+  "baseline": "v6lite-batch27a",
+  "sdk_distribution_version": "0.9.86",
+  "sources": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\.venv\\Lib\\site-packages\\ib_insync\\objects.py",
+      "sha256": "92dcd05a94521fab544dc9de12d1c3e64ba77e8a84925942e9c5a3da12ba2746",
+      "excerpts": [
+        {
+          "start": 80,
+          "end": 95,
+          "text": "80: \n81: \n82: @dataclass\n83: class ExecutionFilter:\n84:     clientId: int = 0\n85:     acctCode: str = ''\n86:     time: str = ''\n87:     symbol: str = ''\n88:     secType: str = ''\n89:     exchange: str = ''\n90:     side: str = ''\n91: \n92: \n93: @dataclass\n94: class BarData:\n95:     date: Union[date_, datetime] = EPOCH"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\.venv\\Lib\\site-packages\\ib_insync\\client.py",
+      "sha256": "1d86989d6815881ea88576e8e3bdcf34fe40d1da778dfee68619ee80e53a2822",
+      "excerpts": [
+        {
+          "start": 630,
+          "end": 650,
+          "text": "630: \n631:     def reqAccountUpdates(self, subscribe, acctCode):\n632:         self.send(6, 2, subscribe, acctCode)\n633: \n634:     def reqExecutions(self, reqId, execFilter):\n635:         self.send(\n636:             7, 3, reqId,\n637:             execFilter.clientId,\n638:             execFilter.acctCode,\n639:             execFilter.time,\n640:             execFilter.symbol,\n641:             execFilter.secType,\n642:             execFilter.exchange,\n643:             execFilter.side)\n644: \n645:     def reqIds(self, numIds):\n646:         self.send(8, 1, numIds)\n647: \n648:     def reqContractDetails(self, reqId, contract):\n649:         fields = [\n650:             9, 8, reqId,"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\.venv\\Lib\\site-packages\\ib_insync\\decoder.py",
+      "sha256": "b06cbe24eca37e3386d0ab213deb43e493171e8cbb7c26060ea4936f97f79b4c",
+      "excerpts": [
+        {
+          "start": 190,
+          "end": 202,
+          "text": "190: \n191:         return handler\n192: \n193:     def interpret(self, fields):\n194:         \"\"\"Decode fields and invoke corresponding wrapper method.\"\"\"\n195:         try:\n196:             msgId = int(fields[0])\n197:             handler = self.handlers[msgId]\n198:             handler(fields)\n199:         except Exception:\n200:             self.logger.exception(f'Error handling fields: {fields}')\n201: \n202:     def parse(self, obj):"
+        },
+        {
+          "start": 405,
+          "end": 455,
+          "text": "405:         self.parse(cd)\n406:         self.parse(c)\n407:         self.wrapper.bondContractDetails(int(reqId), cd)\n408: \n409:     def execDetails(self, fields):\n410:         c = Contract()\n411:         ex = Execution()\n412:         (\n413:             _,\n414:             reqId,\n415:             ex.orderId,\n416:             c.conId,\n417:             c.symbol,\n418:             c.secType,\n419:             c.lastTradeDateOrContractMonth,\n420:             c.strike,\n421:             c.right,\n422:             c.multiplier,\n423:             c.exchange,\n424:             c.currency,\n425:             c.localSymbol,\n426:             c.tradingClass,\n427:             ex.execId,\n428:             timeStr,\n429:             ex.acctNumber,\n430:             ex.exchange,\n431:             ex.side,\n432:             ex.shares,\n433:             ex.price,\n434:             ex.permId,\n435:             ex.clientId,\n436:             ex.liquidation,\n437:             ex.cumQty,\n438:             ex.avgPrice,\n439:             ex.orderRef,\n440:             ex.evRule,\n441:             ex.evMultiplier,\n442:             ex.modelCode,\n443:             ex.lastLiquidity) = fields\n444: \n445:         self.parse(c)\n446:         self.parse(ex)\n447:         time = cast(datetime, parseIBDatetime(timeStr))\n448:         if not time.tzinfo:\n449:             tz = self.wrapper.ib.TimezoneTWS\n450:             if tz:\n451:                 time = time.replace(tzinfo=ZoneInfo(str(tz)))\n452:         ex.time = time.astimezone(timezone.utc)\n453:         self.wrapper.execDetails(int(reqId), c, ex)\n454: \n455:     def historicalData(self, fields):"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\.venv\\Lib\\site-packages\\ib_insync\\wrapper.py",
+      "sha256": "4ed7299106979c0b2518658d4d3ef371fe5a39b254586254650edc35217cb0c1",
+      "excerpts": [
+        {
+          "start": 450,
+          "end": 500,
+          "text": "450:                 'orderStatus: No order found for '\n451:                 'orderId %s and clientId %s', orderId, clientId)\n452: \n453:     def execDetails(\n454:             self, reqId: int, contract: Contract, execution: Execution):\n455:         \"\"\"\n456:         This wrapper handles both live fills and responses to\n457:         reqExecutions.\n458:         \"\"\"\n459:         self._logger.info(f'execDetails {execution}')\n460:         if execution.orderId == UNSET_INTEGER:\n461:             # bug in TWS: executions of manual orders have unset value\n462:             execution.orderId = 0\n463:         trade = self.permId2Trade.get(execution.permId)\n464:         if not trade:\n465:             key = self.orderKey(\n466:                 execution.clientId, execution.orderId, execution.permId)\n467:             trade = self.trades.get(key)\n468:         if trade and contract == trade.contract:\n469:             contract = trade.contract\n470:         else:\n471:             contract = Contract.create(**dataclassAsDict(contract))\n472:         execId = execution.execId\n473:         isLive = reqId not in self._futures\n474:         time = self.lastTime if isLive else execution.time\n475:         fill = Fill(contract, execution, CommissionReport(), time)\n476:         if execId not in self.fills:\n477:             # first time we see this execution so add it\n478:             self.fills[execId] = fill\n479:             if trade:\n480:                 trade.fills.append(fill)\n481:                 logEntry = TradeLogEntry(\n482:                     time,\n483:                     trade.orderStatus.status,\n484:                     f'Fill {execution.shares}@{execution.price}')\n485:                 trade.log.append(logEntry)\n486:                 if isLive:\n487:                     self._logger.info(f'execDetails: {fill}')\n488:                     self.ib.execDetailsEvent.emit(trade, fill)\n489:                     trade.fillEvent(trade, fill)\n490:         if not isLive:\n491:             self._results[reqId].append(fill)\n492: \n493:     def execDetailsEnd(self, reqId: int):\n494:         self._endReq(reqId)\n495: \n496:     def commissionReport(self, commissionReport: CommissionReport):\n497:         if commissionReport.yield_ == UNSET_DOUBLE:\n498:             commissionReport.yield_ = 0.0\n499:         if commissionReport.realizedPNL == UNSET_DOUBLE:\n500:             commissionReport.realizedPNL = 0.0"
+        }
+      ]
+    }
+  ],
+  "official_sources": [
+    {
+      "url": "https://interactivebrokers.github.io/tws-api/executions_commissions.html",
+      "status": "deprecated official documentation, used only for explicit default/Trade Log caveat",
+      "finding": "Default execution history is since midnight, but TWS Trade Log can extend visible history to seven days. Complete matching delivery is followed by execDetailsEnd."
+    },
+    {
+      "url": "https://www.interactivebrokers.com/docs/tws-api/protobuf/execution-filter",
+      "finding": "ExecutionFilter.time requests executions at/after the designated instant; documents UTC YYYYMMDD-HH:mm:ss as an accepted representation."
+    }
+  ],
+  "paper_unknowns": [
+    "Whether John actual TWS version accepts the documented UTC filter format; no broker connection in this task.",
+    "Actual callback/query raw execution time strings, since no new on-site samples were provided.",
+    "Trade Log / client visibility can omit executions; complete visible query is not omniscience. Constraints A/B remain operator-accepted risks."
+  ]
+}

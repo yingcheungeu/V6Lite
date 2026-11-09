@@ -1,0 +1,14 @@
+{
+  "failed_attempt": "full_1",
+  "totals": {
+    "tests": 1455,
+    "passed": 1453,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 1
+  },
+  "case": "test_race_final_sell_boundary_counts_other_working_sells",
+  "reason": "Artificial direct TP request has no required immutable fresh-bid pricing provenance; production correctly refuses as definitely unsent.",
+  "fix_scope": "Only legacy test uses real TP workflow, keeps capacity rejection of oversized STOP and no physical extra SELL.",
+  "gate": "Failed full retained; start a fresh three consecutive full suites at the resulting frozen final code. No timing-flake waiver or retry-away."
+}

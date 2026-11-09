@@ -1,0 +1,88 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+_ test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[WinError64] _
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:341: in run
+    result = loop.run_until_complete(task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py:654: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:637: in sleep
+    async def sleep(delay, result=None):
+E   asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+v6lite\tests\test_batch28_lifecycle.py:200: in test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover
+    run_engine(rig.engine, rig.broker, should_stop=should_stop)
+v6lite\__main__.py:282: in run_engine
+    broker.pump(1.0)
+v6lite\tests\test_batch28_lifecycle.py:133: in pump
+    IbkrBroker.pump(adapter, seconds)
+v6lite\broker\ibkr.py:599: in pump
+    self.ib.sleep(min(0.05, left))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:386: in sleep
+    run(asyncio.sleep(secs))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:343: in run
+    raise globalErrorEvent.value() or e
+E   ConnectionError: Socket disconnect
+------------------------------ Captured log call ------------------------------
+ERROR    ib_insync.client:client.py:374 [WinError 64] The specified network name is no longer available
+_ test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[Peer-closed-connection] _
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:341: in run
+    result = loop.run_until_complete(task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py:654: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:637: in sleep
+    async def sleep(delay, result=None):
+E   asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+v6lite\tests\test_batch28_lifecycle.py:200: in test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover
+    run_engine(rig.engine, rig.broker, should_stop=should_stop)
+v6lite\__main__.py:282: in run_engine
+    broker.pump(1.0)
+v6lite\tests\test_batch28_lifecycle.py:133: in pump
+    IbkrBroker.pump(adapter, seconds)
+v6lite\broker\ibkr.py:599: in pump
+    self.ib.sleep(min(0.05, left))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:386: in sleep
+    run(asyncio.sleep(secs))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:343: in run
+    raise globalErrorEvent.value() or e
+E   ConnectionError: Socket disconnect
+------------------------------ Captured log call ------------------------------
+ERROR    ib_insync.client:client.py:374 Peer closed connection.
+_ test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[ConnectionResetError] _
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:341: in run
+    result = loop.run_until_complete(task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py:654: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:637: in sleep
+    async def sleep(delay, result=None):
+E   asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+v6lite\tests\test_batch28_lifecycle.py:200: in test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover
+    run_engine(rig.engine, rig.broker, should_stop=should_stop)
+v6lite\__main__.py:282: in run_engine
+    broker.pump(1.0)
+v6lite\tests\test_batch28_lifecycle.py:133: in pump
+    IbkrBroker.pump(adapter, seconds)
+v6lite\broker\ibkr.py:599: in pump
+    self.ib.sleep(min(0.05, left))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:386: in sleep
+    run(asyncio.sleep(secs))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:343: in run
+    raise globalErrorEvent.value() or e
+E   ConnectionError: Socket disconnect
+------------------------------ Captured log call ------------------------------
+ERROR    ib_insync.client:client.py:374 [Errno 10054] An existing connection was forcibly closed by the remote host
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[WinError64]
+FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[Peer-closed-connection]
+FAILED v6lite/tests/test_batch28_lifecycle.py::test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[ConnectionResetError]
+3 failed, 10 deselected in 1.93s

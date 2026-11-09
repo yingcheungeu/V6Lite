@@ -1,0 +1,204 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_review_edges_candidate",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-16T15:41:29.580612-07:00",
+  "end_pt": "2026-10-16T15:41:33.919794-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "ea23ffaf568a3db5",
+  "source_unchanged": true,
+  "worktree_code_sha": "ea23ffaf568a3db5",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "ea23ffaf568a3db5952075343d30c238c43e59db7e3b5caf5de4aa3a9fc8440f",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27a_review_edges.py",
+      "sha256": "f7f4515cd96df08e9f649b424961930a8fda7e0b4000051b3823b082a9d654db"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 18,
+    "failures": 11,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+      "outcome": "failure",
+      "message": "AssertionError: ('contradictory quantities are not a consistent repeated-WORKING observation', 1, 2)\nassert (False or 'WORKING' == 'UNKNOWN'\n +  where False = <v6lite.engine.Engine object at 0x000001C949C07550>._protection_priority_due\n +    where <v6lite.engine.Engine object at 0x000001C949C07550> = <v6lite.tests.helpers.Rig object at 0x000001C949C07110>.engine\n  \n  - UNKNOWN\n  + WORKING or None)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+      "outcome": "failure",
+      "message": "AssertionError: ('contradictory quantities are not a consistent repeated-WORKING observation', 0, 0)\nassert (False or 'WORKING' == 'UNKNOWN'\n +  where False = <v6lite.engine.Engine object at 0x000001C96B18C590>._protection_priority_due\n +    where <v6lite.engine.Engine object at 0x000001C96B18C590> = <v6lite.tests.helpers.Rig object at 0x000001C96B18FA10>.engine\n  \n  - UNKNOWN\n  + WORKING or None)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+      "outcome": "failure",
+      "message": "AssertionError: ('contradictory quantities are not a consistent repeated-WORKING observation', 0.5, 2.5)\nassert (False or 'WORKING' == 'UNKNOWN'\n +  where False = <v6lite.engine.Engine object at 0x000001C949B57C50>._protection_priority_due\n +    where <v6lite.engine.Engine object at 0x000001C949B57C50> = <v6lite.tests.helpers.Rig object at 0x000001C96B18FD50>.engine\n  \n  - UNKNOWN\n  + WORKING or None)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+      "outcome": "failure",
+      "message": "AssertionError: ('contradictory quantities are not a consistent repeated-WORKING observation', nan, 3)\nassert (False or 'WORKING' == 'UNKNOWN'\n +  where False = <v6lite.engine.Engine object at 0x000001C96B244590>._protection_priority_due\n +    where <v6lite.engine.Engine object at 0x000001C96B244590> = <v6lite.tests.helpers.Rig object at 0x000001C96B247290>.engine\n  \n  - UNKNOWN\n  + WORKING or None)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+      "outcome": "failure",
+      "message": "AssertionError: [datetime.datetime(2026, 10, 16, 14, 0, 45, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 16, 14, 1, tzinfo=datetime.timezone.utc)]\nassert [14.0, 29.0] == [15, 30]\n  \n  At index 0 diff: 14.0 != 15\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+      "outcome": "failure",
+      "message": "AssertionError: resume bookkeeping cannot keep an already-flat evidence incident alive\nassert '{\"signature\": \"[\\\\\"evidence incomplete\\\\\",[\\\\\"OPEN\\\\\",3],[\\\\\"WORKING\\\\\",\\\\\"v6l-protect-23a4c1bb7bd14737949e\\\\\",1002,5...ue, \"intent_id\": \"v6l-protect-23a4c1bb7bd14737949e\", \"p0_attempted\": true, \"last_notice\": \"2026-10-14T13:20:54+00:00\"}' is None\n +  where '{\"signature\": \"[\\\\\"evidence incomplete\\\\\",[\\\\\"OPEN\\\\\",3],[\\\\\"WORKING\\\\\",\\\\\"v6l-protect-23a4c1bb7bd14737949e\\\\\",1002,5...ue, \"intent_id\": \"v6l-protect-23a4c1bb7bd14737949e\", \"p0_attempted\": true, \"last_notice\": \"2026-10-14T13:20:54+00:00\"}' = control('protect_incident:pos-7c03806017984013a3ab:evidence incomplete')\n +    where control = <v6lite.store.Store object at 0x000001C94AEE06D0>.control\n +      where <v6lite.store.Store object at 0x000001C94AEE06D0> = <v6lite.tests.helpers.Rig object at 0x000001C949C053D0>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+      "outcome": "failure",
+      "message": "AssertionError: assert (None is not None)\n +  where None = control('protect_incident:pos-f2788be919424a84b13f:evidence incomplete')\n +    where control = <v6lite.store.Store object at 0x000001C96B7D3F90>.control\n +      where <v6lite.store.Store object at 0x000001C96B7D3F90> = <v6lite.tests.helpers.Rig object at 0x000001C96B7D1090>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+      "outcome": "failure",
+      "message": "assert None == '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-22008ece5f7742f9bfae\", \"AAPL\", \"BUY\", 3.0, 113.13, 1001, 51001, 10000]}'\n +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')\n +    where control = <v6lite.store.Store object at 0x000001C96B448550>.control\n +      where <v6lite.store.Store object at 0x000001C96B448550> = <v6lite.tests.helpers.Rig object at 0x000001C96B44A8D0>.store\n +    and   'execution_time_unverified:b27a-callback-entry.01.01' = <function _time_key at 0x000001C949ADF380>('b27a-callback-entry.01.01')\n +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-22008ece5f7742f9bfae', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+      "outcome": "failure",
+      "message": "assert None == '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-2854ce87357c46ba9401\", \"AAPL\", \"BUY\", 3, 113.13, 1001.0, 51001, 10000]}'\n +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')\n +    where control = <v6lite.store.Store object at 0x000001C96B426D90>.control\n +      where <v6lite.store.Store object at 0x000001C96B426D90> = <v6lite.tests.helpers.Rig object at 0x000001C96B427B50>.store\n +    and   'execution_time_unverified:b27a-callback-entry.01.01' = <function _time_key at 0x000001C949ADF380>('b27a-callback-entry.01.01')\n +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-2854ce87357c46ba9401', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+      "outcome": "failure",
+      "message": "assert None == '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-3a42852a11d1497cba6e\", \"AAPL\", \"BUY\", 3, 113.13, 1001, 51001.0, 10000]}'\n +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')\n +    where control = <v6lite.store.Store object at 0x000001C949BF6690>.control\n +      where <v6lite.store.Store object at 0x000001C949BF6690> = <v6lite.tests.helpers.Rig object at 0x000001C949BF5150>.store\n +    and   'execution_time_unverified:b27a-callback-entry.01.01' = <function _time_key at 0x000001C949ADF380>('b27a-callback-entry.01.01')\n +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-3a42852a11d1497cba6e', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]",
+      "outcome": "failure",
+      "message": "assert None == '{\"provisional_time\": \"2026-10-16T14:00:30+00:00\", \"identity\": [\"b27a-callback-entry.01.01\", \"v6l-729dd969ca3b44caab5c\", \"AAPL\", \"BUY\", 3, 113.13, 1001, 51001, 10000.0]}'\n +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')\n +    where control = <v6lite.store.Store object at 0x000001C949BF7050>.control\n +      where <v6lite.store.Store object at 0x000001C949BF7050> = <v6lite.tests.helpers.Rig object at 0x000001C949BF5FD0>.store\n +    and   'execution_time_unverified:b27a-callback-entry.01.01' = <function _time_key at 0x000001C949ADF380>('b27a-callback-entry.01.01')\n +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-729dd969ca3b44caab5c', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]"
+    ]
+  },
+  "stdout_sha256": "3e7a56b12393d5391123ce4badb2f3abf7de95ccaf475430ee689af14c69b65a",
+  "junit_sha256": "e2a5027f82709cf959e9fb09fced97712bca01ce0c5b1f71517e9e156adde82c",
+  "inventory_sha256": "958650f7b1c7d8c1cf4f4a68688d2a53e5ac8e79100f77e51403e9371ea8dd36",
+  "publication_redaction": {
+    "rule": "All account-shaped values including synthetic fixtures masked; original receipts retained locally and not staged.",
+    "original_artifact_sha256": {
+      "red_review_edges_candidate.json": "a53f2192aba5e3fab148e797ab19e5bd78ce6f1874df3068696546d76b733155",
+      "red_review_edges_candidate.txt": "3e7a56b12393d5391123ce4badb2f3abf7de95ccaf475430ee689af14c69b65a",
+      "red_review_edges_candidate.xml": "b12aee82ccd7f1a6b366ffa6afc369f17efb38d2c2dede8e4cadcd59e50b6c76",
+      "red_review_edges_candidate_inventory.json": "8a012f313f1675f85db839d4c9732c046f14737ad483900d86a64ff0ad25806e",
+      "red_review_edges_candidate_progress.json": "871a8fb2addda51f0b60a898f249053b8b3a2d42205c55da4d5e4ce246e55227"
+    }
+  }
+}

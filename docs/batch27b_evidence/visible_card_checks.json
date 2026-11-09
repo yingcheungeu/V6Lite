@@ -1,0 +1,24 @@
+{
+  "code_sha": "d6dd37c12701ce95",
+  "label": "samples_final_scoped_candidate",
+  "totals": {
+    "tests": 45,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "artifacts": {
+    "samples_final_scoped_candidate_cards.json": "4a5f8f2b262c0879640aa4f1b71ec1467b0620e23564a31d0a448a81d631a23c",
+    "samples_final_scoped_candidate_reports.json": "76c54a52ce20f17026cffc75fc19aa9448c3fdbd510e78cc272f7dd0aa6525a0",
+    "samples_final_scoped_candidate_query_summaries.json": "04155f43ce1ff06e78fb71a61b7fd51805d4b24268b1a7052e116bedb1d63e28"
+  },
+  "actual_cards": 238,
+  "day_only_cards": 2,
+  "actual_reports": 6,
+  "day_only_reports": 2,
+  "three_category_info_summaries": 1,
+  "A_B_accepted_risk_disclosure": "passed",
+  "known_conflict_d_count_0_0_1": "passed",
+  "unmasked_account_shapes": 0,
+  "capture_preserves_original_daily_return": true
+}

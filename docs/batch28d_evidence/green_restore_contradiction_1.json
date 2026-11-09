@@ -1,0 +1,25 @@
+{
+  "label": "green_restore_contradiction_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-22T08:38:23.451152-07:00",
+  "end_pt": "2026-10-22T08:39:58.347571-07:00",
+  "seconds": 94.891,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch28d_restore_contradiction.py"
+  ],
+  "code_sha": "fb68fbc9c751d214",
+  "source_unchanged": true,
+  "inventory_sha256": "e7eb42453f3c4bfa66c26673c4375223533a16e9f9ba5e20d39026fac4913be9",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "4e0812ce070a538ddb60ce8530fc92967448ad6cadb0de77b583513fc2b9f71e",
+  "XML_sha256_before_masking": "3b2539b0d07f90b72b2853280ccfa863d68cd2bd489be30b6637bbbb49ca0dd3",
+  "delivered_log_sha256": "14e70e644356cfc5fd8f9a045f75c1c226c986fae17c6147e6880467223d445e",
+  "delivered_XML_sha256": "3b2539b0d07f90b72b2853280ccfa863d68cd2bd489be30b6637bbbb49ca0dd3",
+  "tests": 2,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

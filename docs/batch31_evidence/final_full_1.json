@@ -1,0 +1,112 @@
+{
+  "label": "final_full_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T13:31:54.035368-07:00",
+  "end_pt": "2026-10-27T14:10:42.625958-07:00",
+  "seconds": 2328.594,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests",
+    "scripts/tests"
+  ],
+  "code_sha": "13c2c871fb98222c",
+  "source_unchanged": true,
+  "inventory_sha256": "495cf1cf32ea4773b1202b0016561009987b0b4bc9bb2a121fe98b007b546f7e",
+  "incomplete": false,
+  "read_only_inputs_unchanged": true,
+  "raw_stdout_normalized_utf8_sha256": "dc3c2564d8972b520b447e4ff4b9cd228049d471d0701bca2782d6f985f9a71f",
+  "XML_sha256_before_masking": "2151235ae3a91480ca075eaa4c8a31053e3ef4d7578bdf330888396d4746fbd0",
+  "delivered_log_sha256": "4b3e765fb20e6fd246a086e8f5070d47c1a50638d284da4221a70657c9dd0fe7",
+  "delivered_XML_sha256": "c2c16e95548cbcdc8cb88e14748d7935a090a84afebd0011258771841ef221ee",
+  "tests": 2264,
+  "failures": 13,
+  "errors": 0,
+  "skipped": 1,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch22_schema_audit",
+      "name": "test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day",
+      "kind": "failure",
+      "message": "AssertionError: # V6-Lite daily report 2026-10-07 (paper)\n  \n  - account: DU******001   state role: formal\n  - code_sha: 13c2c871fb98222c\n  - \u672c\u6b21\u4ec5\u6e32\u67d3\u4e3b\u62a5\uff0c\u672a\u5bfc\u51fa\u9644\u4ef6\uff1b\u5b8c\u6574\u5173\u952e\u4e8b\u5b9e\u4fdd\u7559\u5728\u72b6\u6001\u5e93 audit/fills\uff08\u53ef\u7528 report \u547d\u4ee4\u5bfc\u51fa\uff09\u3002\n  - market data: real-time (1) | n/a RTH availability (no runtime RTH samples supplied)\n  - last health market data (instantaneous, not RTH availability): real-time (1)\n  \n  - realized P&L: 0.00   fees: 0.00   net: 0.00\uff08\u6700\u7ec8\u4f63\u91d1\u53e3\u5f84\uff09\n  - entries submitted: 0 / 4\n  - daily stop latched: False\n  - open positions: none\n  - \u5238\u5546\u7aef\u4fdd\u62a4: \u65e0\u6301\u4ed3\uff1b\u7a7a\u7a97\u7edf\u8ba1 A=0.000s\uff1bB\uff08\u6b63\u5e38\uff09\u6700\u5927 0.000s\uff1bB\uff08\u6d4b\u8bd5\u6ce8\u5165\uff090.000s\uff1b\u6b63\u5e38\u6b62\u76c8 B \u2264 5 \u79d2\uff1a\u5408\u89c4\n  - kill switch: off\n  - open anomalies: none\n  - frozen symbols (operator must flatten, then `release`): none\n  - released positions (P&L of the operator's TWS trades is NOT in the figures above): none\n  \n  ## Test TP timeout / \u6d4b\u8bd5\u6b62\u76c8\u8d85\u65f6\n  - none\n  \n  ## Commission reconciliation / \u4f63\u91d1\u6838\u5bf9\n  - \u5f53\u65e5\u65e0\u5df2\u5173\u95ed\u6301\u4ed3\n  \n  ## Fills\n  - none\n  \n  ## Execution time verification / \u6210\u4ea4\u65f6\u95f4\u6838\u5b9e\n  - \u5f53\u65e5\u65e0\u672a\u6838\u5b9e\u6210\u4ea4\u65f6\u95f4\n  \n  ## Events\n  \n  | Kind | Count | First UTC | Last UTC |\n  |---|---:|---|---|\n  | CLOSE_CARD_SENT | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |\n  | COMMISSION_ESTIMATE_BASIS | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |\n  | FILL | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |\n  | INTENT_STATUS | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |\n  | LOSS_STATE | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |\n  | PROTECT_FILL | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |\n  | TRADE_CLOSED | 1 | 2026-10-07T14:00:00+00:00 | 2026-10-07T14:00:00+00:00 |\n  \n  ### Important events\n  - 14:00:00Z INTENT_STATUS {\"intent_id\": \"v6l-protect-7b6782036846430a9dd5\", \"note\": null, \"status\": \"FILLED\"}\n  - 14:00:00Z COMMISSION_ESTIMATE_BASIS {\"estimated_fees\": 0, \"estimated_net\": -112.0, \"estimates\": {}, \"gross\": -110.0, \"missing_count\": 0, \"observed_at\": \"2026-10-07T14:00:00+00:00\", \"position_id\": \n  - 14:00:00Z TRADE_CLOSED {\"fees\": 2.0, \"gross\": -110.0, \"missing_fees\": 0, \"position_id\": \"pos-d547e54b60f946279135\", \"symbol\": \"AAPL\"}\n  - 14:00:00Z LOSS_STATE {\"cooldown_until\": null, \"streak\": 1}\n  - 14:00:00Z CLOSE_CARD_SENT {\"closing_exec_id\": \"0000fa4e.00000002.01.01\", \"closing_fee_received\": true, \"deadline\": \"2026-10-07T14:00:03+00:00\", \"final\": true, \"position_id\": \"pos-d547e54\n  \n  ## Operator notes\n  \n  - (market context, manual actions, things to review)\n  \nassert '0000fa4e.00000002.01.01' not in '# V6-Lite d...to review)\\n'\n  \n  '0000fa4e.00000002.01.01' is contained here:\n    xec_id\": \"0000fa4e.00000002.01.01\", \"closing_fee_received\": true, \"deadline\": \"2026-10-07T14:00:03+00:00\", \"final\": true, \"position_id\": \"pos-d547e54\n  ?           +++++++++++++++++++++++\n    \n    ## Operator notes\n    \n    - (market context, manual actions, things to review)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[source]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[aux_price]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[broker_echo_lmt]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[mkt_cap_price]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[mkt_cap_price_raw]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[cap_valid]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[error_code]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[reason]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[intent_id]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[symbol]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[position_id]",
+      "kind": "failure",
+      "message": "AssertionError: assert {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "kind": "failure",
+      "message": "AssertionError: assert (<sqlite3.Row object at 0x00000242CB12C370> is not None and {'account_mat...': False, ...} == {'aux_price':...code': 0, ...}\n  \n  Omitting 13 identical items, use -vv to show\n  Left contains 17 more items:\n  {'account_matches': True,\n   'client_id': 131,\n   'con_id': 10000,\n   'confirmed_trigger': 340.52,...\n  \n  ...Full output truncated (14 lines hidden), use '-vv' to show)"
+    },
+    {
+      "classname": "v6lite.tests.test_strategy_parity",
+      "name": "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "kind": "skipped",
+      "message": "legacy market_scanner.py not present"
+    }
+  ]
+}

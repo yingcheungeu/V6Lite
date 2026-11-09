@@ -1,0 +1,12 @@
+{
+  "code_sha": "f41492ffc7cb495c",
+  "package_sha256": "f41492ffc7cb495ca487251d8061a707e14a1898c3b5cacdaa31398eedad0a6c",
+  "instructions_sha256": "646e8209a5a8d0e9876a42a8b6f47b46ad0444a193eb9d869b731da0bb2389a6",
+  "operator_manual_sha256": "9f81da63e8b5cb5a9c22110f0665cf8b8c8f9d39873e612ab32d955aa62199fa",
+  "scope": "batch28a section1 only",
+  "independent_review": "passed; no blocking findings; read-only reviewer did not execute tests",
+  "source_only_compile": {
+    "files": 153,
+    "status": "passed"
+  }
+}

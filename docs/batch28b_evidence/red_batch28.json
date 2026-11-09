@@ -1,0 +1,10 @@
+{
+  "base": "v6lite-batch28",
+  "base_commit": "a161c1cec3125bc9a281acc91562421f0d2378ce",
+  "test_sha256": "ac645f05a291c606ef1355a81f40ddfb0877014f53821706f14e1add97798278",
+  "start_pt": "2026-10-21T09:07:18.618526-07:00",
+  "end_pt": "2026-10-21T09:07:39.313313-07:00",
+  "returncode": 1,
+  "archive_sha256": "f7766cd34e06ae061984dd4426f3afb733181a3639a13a81f44058bc719f08f0",
+  "stdout_sha256": "f02abc54b9c63a6081f34efcc1932412fa6eea05f04baad6eb73cebad583d0a1"
+}

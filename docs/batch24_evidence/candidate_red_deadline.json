@@ -1,0 +1,77 @@
+{
+  "label": "candidate_red_deadline",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-12T14:43:01.469086-07:00",
+  "end_pt": "2026-10-12T14:43:02.816368-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "2741c3c3abc2e116",
+  "source_unchanged": true,
+  "worktree_code_sha": "2741c3c3abc2e116",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "2741c3c3abc2e116a29f9e1af7d1132818eae011e676d12e1d2183c682f75f70",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_evidence_deadline.py",
+      "sha256": "1dccecef16d493e3f37c61d4266ac5ca21a73ebba7b04dfdd5e67901dc0bc3e7"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch16_f6_steady_timeout.py",
+      "sha256": "733347eda5814cbd2a14f71a717c88274bdd51376cada2c9bceeab3fd2908c48"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 3,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch24_evidence_deadline",
+      "name": "test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "outcome": "failure",
+      "message": "assert 0 == 1\n +  where 0 = len([])\n +    where [] = _pages(<v6lite.tests.helpers.Rig object at 0x000001FA23BF6E50>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_evidence_deadline",
+      "name": "test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16_f6_steady_timeout",
+      "name": "test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled",
+      "outcome": "failure",
+      "message": "AssertionError: []\nassert 0 == 1\n +  where 0 = len([])"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled"
+    ]
+  },
+  "stdout_sha256": "f8f29170f84aba0ad0bb1655e576cadd8c71b677b9d01036681be9f3cc376ef5",
+  "junit_sha256": "7e43e0241e9f41a0f04a6d7ddcb2a73813369e53178e07f5dc05a45de477d274",
+  "inventory_sha256": "450ad62462fe108bea814ef9c01959a8e4b2dd24078fedbe95b451e4b0a7693b"
+}

@@ -1,0 +1,33 @@
+......F                                                                  [100%]
+================================== FAILURES ===================================
+_ test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change _
+v6lite\tests\test_batch27_observer_equivalence.py:247: in test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change
+    assert adapter._req_sent["positions"] == 1 and adapter._req_ended["positions"] == 0
+E   assert (2 == 1)
+---------------------------- Captured stdout call -----------------------------
+2026-10-18 08:38:29,527 INFO v6lite.ibkr [CONNECT_SNAPSHOT] openOrders End generation=1 count=1
+2026-10-18 08:38:29,527 WARNING v6lite.ibkr [QUERY] channel=positions failed: synthetic delayed native positionEnd
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.ibkr:ibkr.py:391 [CONNECT_SNAPSHOT] openOrders End generation=1 count=1
+WARNING  v6lite.ibkr:ibkr.py:516 [QUERY] channel=positions failed: synthetic delayed native positionEnd
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls
+  v6lite\tests\test_batch27_observer_equivalence.py:107: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls(
+
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]
+  v6lite\tests\test_batch27_observer_equivalence.py:180: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize("failure", ["allow", "a", "b", "c", "d"])
+
+v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change
+  v6lite\tests\test_batch27_observer_equivalence.py:229: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change
+1 failed, 6 passed, 7 warnings in 22.20s

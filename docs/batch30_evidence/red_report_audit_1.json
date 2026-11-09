@@ -1,0 +1,25 @@
+{
+  "label": "red_report_audit_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-26T14:22:37.684037-07:00",
+  "end_pt": "2026-10-26T14:22:38.307570-07:00",
+  "seconds": 0.625,
+  "returncode": 1,
+  "args": [
+    "C:/tmp/test_batch30_report_audit_DRAFT.py"
+  ],
+  "code_sha": "1bd6b193aedae3bc",
+  "source_unchanged": true,
+  "inventory_sha256": "8a383c7fef17eaa2c80d72ec30eb7f9d9f2cfa261b291a6ead99958bb65737eb",
+  "incomplete": true,
+  "raw_stdout_normalized_utf8_sha256": "d03b59b0913d7861da178b234538049c4bb1c02fbccc8f674e213401e73b2d71",
+  "XML_sha256_before_masking": null,
+  "delivered_log_sha256": "4e43044511351b93a5b4ef2107be5fce0ea1765549d023c0dea13b51721bfeed",
+  "delivered_XML_sha256": null,
+  "tests": 0,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

@@ -1,0 +1,61 @@
+{
+  "reviewed_by": "batch20_time_logs",
+  "recorded_by": "root",
+  "recorded_pt": "2026-10-09T09:02:33.161562-07:00",
+  "verdict": "PASS: frozen source and focused offline evidence only",
+  "code_sha": "f27e144de9eb406b",
+  "report_sha256": "e0df7b68600349591b1a2c1fd3223ea413d7c3903e6b15b2625a9b1025a5eecf",
+  "manifest_sha256": "53c79f52d84f7c376cbc477fc91d85a4ddf5c4e532340db48fbdbaf90a3e0357",
+  "spec_sha256": "58186f1047bf79a39e85e96be7140a6cbb740ae152ce9cfd000365e5daee4341",
+  "manifest_entries_verified": 200,
+  "report_table_entries_verified": 199,
+  "citations_verified": 18,
+  "old_tag_citations": 4,
+  "new_source_citations": 14,
+  "test_metadata_groups_verified": 27,
+  "python_ast_files": 94,
+  "critical_unchanged_functions": 11,
+  "final_tests": {
+    "candidate_red": {
+      "passed": 40,
+      "failed": 2,
+      "errors": 0
+    },
+    "batch20_red": {
+      "passed": 18,
+      "failed": 24,
+      "errors": 0
+    },
+    "batch22_red": {
+      "passed": 20,
+      "failed": 22,
+      "errors": 0
+    },
+    "green": {
+      "passed": 42,
+      "failed": 0,
+      "errors": 0
+    },
+    "focused": {
+      "passed": 291,
+      "failed": 0,
+      "errors": 0
+    }
+  },
+  "head": "42c77da139ce308ca133eb7e2e40beaf33ecac9d",
+  "batch22_tag_object": "18f44ab40bc934327c6cacd921e6717ff21c3a80",
+  "index_empty": true,
+  "full_three_runs": "NOT RUN: trading-window prohibition; pending after 13:30 PT",
+  "user_archive_access": false,
+  "runtime_access": false,
+  "broker_connections": 0,
+  "independent_review_writes": false,
+  "review_findings_fixed": [
+    "No repeat P0/P1 for an acknowledged unchanged cancellation",
+    "Necessary hold committed atomically with terminal stop state"
+  ],
+  "remaining_limits": [
+    "Actual Paper event fields/order of callbacks need John-provided logs",
+    "No new commit or tag until new full-suite gate passes"
+  ]
+}

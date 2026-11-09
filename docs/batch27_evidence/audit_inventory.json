@@ -1,0 +1,2475 @@
+{
+  "schema": "v6lite-batch27-audit-inventory-v1",
+  "created_at_utc": "2026-10-18T06:15:33.696233+00:00",
+  "scope": "read-only source investigation; only this new evidence JSON is written; no tests or broker connections",
+  "baseline": {
+    "tag": "v6lite-batch27b",
+    "commit": "54a893ba655c8e04ef64cfcbb6d49a2ebcdcddaa",
+    "code_sha": "d6dd37c12701ce95"
+  },
+  "instruction_sha256": "3cfb4765819725d083268218c0e94db523e037ca9cc3147161af95a8a2a5875b",
+  "manual_hash_only_sha256": "768e4df71b8f7f996aa3fb81aa27ef8845f11502fcfc1429cf131118bf64de62",
+  "search_methods": [
+    "rg -n --glob '*.py' 'PROTECT_STATE|ORDER_PRICE_OBSERVATION|OBSERVATION_SUMMARY|FROM audit|JOIN audit|audit_for_day|confirmed_at' v6lite scripts",
+    "AST walk every non-tests v6lite/**/*.py Call(Attribute.audit), preserving each source span and enclosing function/if context; expand IfExp and audit_kind assignment explicitly",
+    "Follow state consumers through Store.protection/intent, protection evidence, TP evidence, overnight a-d, recovery/release, clear-anomaly and reporting"
+  ],
+  "counts": {
+    "syntactic_audit_calls": 98,
+    "expanded_distinct_kinds": 73
+  },
+  "source_sha256": {
+    "v6lite/__main__.py": "1284cf8153eda67e74c6acf250796304c6a2390e7a91dabc6fce3f6f40c93a00",
+    "v6lite/engine.py": "1c4f6dad326894b48ac588fe7e3c3ebbf9d09f1607f3489c05e2f776c0ce2f61",
+    "v6lite/overnight_evidence.py": "e51fc4146417b234cde85547ee3057a104577d7d3e3941258a18c7b5dc5eb016",
+    "v6lite/protection_cancellations.py": "201be298237fb25a3af0f374d047964eeeb6f07024763c03af99ee4c6b43da8e",
+    "v6lite/protection_engine.py": "5bc5c52659d4277cd4af7cffb6aa00c479666fa87669c7fe9b3df68041743ce2",
+    "v6lite/protection_incidents.py": "0b497225215b7a1be4b54b0b8a07695b9db3d9feebae1fa905342b5572878a05",
+    "v6lite/store.py": "8d20f59c73e542ba88c3b3370e96c89a0b1532401b2f1b56a7a2b80ff574abfe",
+    "v6lite/tp_evidence.py": "17572b9e72e11d894429ef9d32e4caa34c35e29f21a46de471e13eb7cb57f479"
+  },
+  "target_kind_consumers": [
+    {
+      "file": "v6lite/report.py",
+      "line": 229,
+      "detail": "daily_report audit_for_day includes ORDER_PRICE_OBSERVATION at233; detail is presentation only"
+    },
+    {
+      "file": "v6lite/report.py",
+      "line": 43,
+      "detail": "SELECT MAX(ts) FROM audit indirectly includes both kinds for fallback clock when Store lacks Engine.report_clock; dedup can move this max backwards. Preserve future replay cutoff semantics via process observation clock / durable protections updated_at or confirmed_at and summary timestamps. Do not claim zero indirect dependency."
+    },
+    {
+      "file": "v6lite/tests/test_batch23_error_provenance.py",
+      "line": 348,
+      "detail": "ORDER reason raw provenance"
+    },
+    {
+      "file": "v6lite/tests/test_batch24_presentation.py",
+      "line": 90,
+      "detail": "ORDER contents"
+    },
+    {
+      "file": "v6lite/tests/test_batch25_review_regressions.py",
+      "line": 59,
+      "detail": "connection snapshots must not add ORDER rows; matching assertion at68"
+    }
+  ],
+  "safety_state_readers": [
+    {
+      "file": "v6lite/store.py",
+      "line": 519,
+      "excerpt": "SELECT * FROM protections WHERE position_id=?"
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 617,
+      "excerpt": "SELECT * FROM intents WHERE intent_id=?"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 978,
+      "excerpt": "checked = datetime.fromisoformat(row[\"confirmed_at\"]) if row[\"confirmed_at\"] else None",
+      "detail": "15-second steady scheduling; SQL UPDATE, confirmed_at and updated_at must be identical"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 1537,
+      "excerpt": "\"confirmed_at\")",
+      "detail": "BE action binding depends on row confirmed_at"
+    },
+    {
+      "file": "v6lite/report.py",
+      "line": 57,
+      "excerpt": "if row[\"confirmed_at\"]:",
+      "detail": "health confirmation presentation reads state row"
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 539,
+      "detail": "A gaps use protection_gap_a durable table and protections gap start, not target audit kinds"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 2087,
+      "detail": "B close reads protections row; writes PROTECT_GAP, retained"
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1374,
+      "detail": "recovery reads active intents, fills, broker fresh evidence"
+    },
+    {
+      "file": "v6lite/tp_evidence.py",
+      "line": 133,
+      "detail": "TP proof reads in-memory fresh proof, row and controls"
+    },
+    {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 328,
+      "detail": "overnight a-d reads ledger/markers/current fresh proof; no target-kind latest-record authority"
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1825,
+      "detail": "release requires fresh open_orders, executions and positions"
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 421,
+      "detail": "clear-anomaly consumes controls, not target audit history"
+    }
+  ],
+  "other_retained_audit_readers": [
+    {
+      "file": "v6lite/report.py",
+      "line": 79,
+      "kind": "PROTECT_GAP"
+    },
+    {
+      "file": "v6lite/report.py",
+      "line": 149,
+      "kind": "PROTECT_FILL"
+    },
+    {
+      "file": "v6lite/report.py",
+      "line": 171,
+      "kind": "TP_EVIDENCE"
+    },
+    {
+      "file": "v6lite/report.py",
+      "line": 182,
+      "kind": "TP_EVIDENCE"
+    },
+    {
+      "file": "v6lite/report.py",
+      "line": 244,
+      "kind": "STARTUP"
+    },
+    {
+      "file": "v6lite/report.py",
+      "line": 291,
+      "kind": "OVERNIGHT_CURRENT_DAY_TIME_BASIS"
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 1243,
+      "kind": "ANOMALY",
+      "detail": "legacy unsafe evidence-fill detection; retained"
+    }
+  ],
+  "connection_shutdown_notes": [
+    {
+      "file": "v6lite/broker/ibkr.py",
+      "line": 431,
+      "detail": "_reset_channels increments actual query_generation. ConnectionEvent loss/restoration can occur on same socket; do not treat as a new generation by itself."
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1046,
+      "detail": "_on_connection toggles flags/refresh, not a reliable generation change source."
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2997,
+      "detail": "normal shutdown cancels DAY, retains GTC, waits/drains, then SHUTDOWN at3072. Flush observations after order safety work and before SHUTDOWN/report; dry branch at3010 also flush. Never introduce broker query or change state rows."
+    }
+  ],
+  "all_kinds": [
+    {
+      "kind": "ANOMALY",
+      "classification": "repeated_observation",
+      "conditions": "每次 raise_anomaly；controls 重复覆盖也会写审计。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 416,
+          "function": "raise_anomaly",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"ANOMALY\", code=code, detail=detail)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "ANOMALY_CLEARED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "人工 clear-anomaly 成功清除 controls 后。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 430,
+          "function": "clear_anomaly",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"ANOMALY_CLEARED\", code=key, operator=operator, reason=reason)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "BROKER_QUERY_ERROR",
+      "classification": "repeated_observation",
+      "conditions": "每次真实 open_orders/positions/executions 或 release 查询失败。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 1636,
+          "function": "_fresh_positions",
+          "conditional_context": [
+            "not self.dry_run"
+          ],
+          "raw_call": "self.store.audit(self.clock.now(), \"BROKER_QUERY_ERROR\", source=\"positions_fresh\", full_error=str(exc))",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/engine.py",
+          "line": 1913,
+          "function": "_apply_releases",
+          "conditional_context": [
+            "for key, raw in requests.items():",
+            "release_protect_ids"
+          ],
+          "raw_call": "self.store.audit(self.clock.now(), \"BROKER_QUERY_ERROR\",\n                            source=\"release_account_executions_today\", evidence_round=1, symbol=symbol,\n                            position_id=(managed_protection_rows[0][\"position_id\"]\n                                         if len(managed_protection_rows) == 1 else None),\n                            full_error=str(exc), error_type=type(exc).__name__, maybe_sent=getattr(exc, \"maybe_sent\", None))",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/engine.py",
+          "line": 1943,
+          "function": "_apply_releases",
+          "conditional_context": [
+            "for key, raw in requests.items():",
+            "release_protect_ids"
+          ],
+          "raw_call": "self.store.audit(self.clock.now(), \"BROKER_QUERY_ERROR\",\n                            source=\"release_account_executions_today\", evidence_round=2, symbol=symbol,\n                            position_id=(managed_protection_rows[0][\"position_id\"]\n                                         if len(managed_protection_rows) == 1 else None),\n                            full_error=str(exc), error_type=type(exc).__name__, maybe_sent=getattr(exc, \"maybe_sent\", None))",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 585,
+          "function": "_protection_evidence_fresh",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(self.clock.now(), \"BROKER_QUERY_ERROR\", source=\"open_orders\",\n                intent_id=row[\"intent_id\"], position_id=row[\"position_id\"], symbol=row[\"symbol\"],\n                full_error=str(exc), error_type=type(exc).__name__, maybe_sent=getattr(exc, \"maybe_sent\", None))",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 595,
+          "function": "_protection_evidence_fresh",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(self.clock.now(), \"BROKER_QUERY_ERROR\", source=\"positions_fresh\",\n                intent_id=row[\"intent_id\"], position_id=row[\"position_id\"], symbol=row[\"symbol\"],\n                full_error=str(exc), error_type=type(exc).__name__, maybe_sent=getattr(exc, \"maybe_sent\", None))",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 604,
+          "function": "_protection_evidence_fresh",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(self.clock.now(), \"BROKER_QUERY_ERROR\", source=\"executions_today\",\n                intent_id=row[\"intent_id\"], position_id=row[\"position_id\"], symbol=row[\"symbol\"],\n                full_error=str(exc), error_type=type(exc).__name__, maybe_sent=getattr(exc, \"maybe_sent\", None))",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "CLIENT_ID_CHANGED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "启动发现已绑定 client_id 与当前不同且通过安全检查。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 515,
+          "function": "_check_client_identity",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"CLIENT_ID_CHANGED\", previous=previous, current=self.cfg.client_id)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "COMMISSION_CORRECTED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "已有佣金值发生实际变化；首次佣金仅写 commissions 行。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 669,
+          "function": "record_commission",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"COMMISSION_CORRECTED\", exec_id=exec_id, old=float(row[\"commission\"]), new=commission)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTION_SNAPSHOT_PRICE",
+      "classification": "repeated_observation",
+      "conditions": "每次连接握手期间缓存价格回调；只诊断，不授予交易权限。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 774,
+          "function": "_handle_event",
+          "conditional_context": [
+            "isinstance(event, AnomalyEvent)",
+            "isinstance(event, ConnectionEvent)",
+            "isinstance(event, BrokerNoticeEvent)",
+            "isinstance(event, ExecutionTimeDiagnosticEvent)",
+            "self.dry_run",
+            "isinstance(event, FillEvent)",
+            "isinstance(event, CommissionEvent)",
+            "isinstance(event, StatusEvent)",
+            "isinstance(event, PriceObservationEvent)",
+            "event.connection_snapshot"
+          ],
+          "raw_call": "self.store.audit(now, \"CONNECTION_SNAPSHOT_PRICE\", source=event.source,\n                    intent_id=event.identity.intent_id, raw_status=event.identity.status,\n                    broker_echo_lmt=event.identity.broker_echo_lmt,\n                    aux_price=event.identity.aux_price, error_code=event.error_code, reason=event.reason)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTION_SNAPSHOT_STATUS",
+      "classification": "repeated_observation",
+      "conditions": "每次连接握手期间缓存状态回调；只诊断，不更新订单事实。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 957,
+          "function": "_on_status",
+          "conditional_context": [
+            "ev.connection_snapshot"
+          ],
+          "raw_call": "self.store.audit(now, \"CONNECTION_SNAPSHOT_STATUS\", intent_id=ev.intent_id,\n                raw_status=ev.raw_status, broker_order_id=ev.broker_order_id, perm_id=ev.perm_id,\n                broker_echo_lmt=identity.broker_echo_lmt if identity is not None else ev.broker_echo_lmt,\n                error_code=ev.error_code, reason=ev.message)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "DAILY_STOP_LATCHED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "risk_days 当日止损首次从未锁存变为锁存。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 459,
+          "function": "latch_daily_stop",
+          "conditional_context": [
+            "cur.rowcount"
+          ],
+          "raw_call": "self.audit(now, \"DAILY_STOP_LATCHED\", day=day, reason=reason)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "DISPOSITION",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "人工设置 ignore。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 438,
+          "function": "set_disposition",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"DISPOSITION\", symbol=symbol.upper(), disposition=disposition,\n                       operator=operator)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "DRY_RUN",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "演练决策去重键首次出现，不是每 tick 必写。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 2714,
+          "function": "_record_dry_entry",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"DRY_RUN\", message=message)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/engine.py",
+          "line": 3382,
+          "function": "_dry_log",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"DRY_RUN\", message=message)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "EXCLUDED_SYMBOL_FILL",
+      "classification": "repeated_observation",
+      "conditions": "受保护或 ignore 标的的每次排除成交事件。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 789,
+          "function": "_ingest_fill",
+          "conditional_context": [
+            "not fill.intent_id and fill.symbol.upper() in self._excluded_symbols()"
+          ],
+          "raw_call": "self.store.audit(now, \"EXCLUDED_SYMBOL_FILL\", exec_id=fill.exec_id, symbol=fill.symbol,\n                             side=str(fill.side), qty=fill.quantity)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "EXECUTION_TIME_OBSERVED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "27b adapter 按 execId/source/category/raw/invalid 的新观测去重后发出。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 760,
+          "function": "_handle_event",
+          "conditional_context": [
+            "isinstance(event, AnomalyEvent)",
+            "isinstance(event, ConnectionEvent)",
+            "isinstance(event, BrokerNoticeEvent)",
+            "isinstance(event, ExecutionTimeDiagnosticEvent)"
+          ],
+          "raw_call": "self.store.audit(now, \"EXECUTION_TIME_REVIEW_REQUIRED\" if event.invalid else \"EXECUTION_TIME_OBSERVED\",\n                exec_id=event.exec_id, source=event.source, raw_time=event.raw_time,\n                category=event.category, reason=\"native execution decoder rejected row\" if event.invalid else \"raw time observation only\")",
+          "dynamic_expansion": {
+            "expression": "'EXECUTION_TIME_REVIEW_REQUIRED' if event.invalid else 'EXECUTION_TIME_OBSERVED'",
+            "basis": "engine.py:760 conditional event.invalid"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "EXECUTION_TIME_REVIEW_REQUIRED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "Store/主动核时按 execId 首次 review 控制项；原生坏行诊断另按27b观测键去重。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 1566,
+          "function": "_verify_queried_execution_times",
+          "conditional_context": [
+            "for pending in self.store.conn.execute(\"SELECT f.exec_id,f.time FROM fills f JOIN controls c ON c.key='execution_time_unverified:'||f.exec_id WHERE f.trading_day=?\", (trading_day(now).isoformat(),)).fetchall():",
+            "self.store.control(review) is None"
+          ],
+          "raw_call": "self.store.audit(now, \"EXECUTION_TIME_REVIEW_REQUIRED\", exec_id=pending[\"exec_id\"],\n                    recorded=pending[\"time\"], reported=None, raw_time=None, source=\"reqExecutions\",\n                    reason=\"complete current-day query did not include the pending execId; no economic rebooking\")",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/engine.py",
+          "line": 760,
+          "function": "_handle_event",
+          "conditional_context": [
+            "isinstance(event, AnomalyEvent)",
+            "isinstance(event, ConnectionEvent)",
+            "isinstance(event, BrokerNoticeEvent)",
+            "isinstance(event, ExecutionTimeDiagnosticEvent)"
+          ],
+          "raw_call": "self.store.audit(now, \"EXECUTION_TIME_REVIEW_REQUIRED\" if event.invalid else \"EXECUTION_TIME_OBSERVED\",\n                exec_id=event.exec_id, source=event.source, raw_time=event.raw_time,\n                category=event.category, reason=\"native execution decoder rejected row\" if event.invalid else \"raw time observation only\")",
+          "dynamic_expansion": {
+            "expression": "'EXECUTION_TIME_REVIEW_REQUIRED' if event.invalid else 'EXECUTION_TIME_OBSERVED'",
+            "basis": "engine.py:760 conditional event.invalid"
+          }
+        },
+        {
+          "file": "v6lite/store.py",
+          "line": 761,
+          "function": "_verify_execution_time",
+          "conditional_context": [
+            "self.control(review) is None"
+          ],
+          "raw_call": "self.audit(now, \"EXECUTION_TIME_REVIEW_REQUIRED\", exec_id=fill.exec_id,\n                       recorded=known[\"time\"], reported=corrected, raw_time=fill.raw_time, source=fill.time_source,\n                       reason=\"legacy record or nonmatching identity/trading day; no economic rebooking\")",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/store.py",
+          "line": 729,
+          "function": "_verify_execution_time",
+          "conditional_context": [
+            "fill.time_uncertain",
+            "self.control(key) is not None and self.control(review) is None"
+          ],
+          "raw_call": "self.audit(now, \"EXECUTION_TIME_REVIEW_REQUIRED\", exec_id=fill.exec_id,\n                           recorded=known[\"time\"], reported=None, raw_time=fill.raw_time, source=fill.time_source,\n                           reason=\"complete execution query timestamp has no explicit timezone; no economic rebooking\")",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "EXECUTION_TIME_UNVERIFIED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "新成交首次入账且时间不确定。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 856,
+          "function": "record_fill",
+          "conditional_context": [
+            "fill.time_uncertain"
+          ],
+          "raw_call": "self.audit(now, \"EXECUTION_TIME_UNVERIFIED\", exec_id=fill.exec_id,\n                           provisional=_iso(fill.time), source=fill.time_source, raw_time=fill.raw_time)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "EXECUTION_TIME_VERIFIED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "完整查询身份/交易日/provisional 全部匹配，清除未核时标记。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 752,
+          "function": "_verify_execution_time",
+          "conditional_context": [
+            "isinstance(pending, dict) and identity_matches and (pending.get('provisional_time') == known['time']) and (trading_day(fill.time).isoformat() == known['trading_day'])"
+          ],
+          "raw_call": "self.audit(now, \"EXECUTION_TIME_VERIFIED\", exec_id=fill.exec_id,\n                       previous=known[\"time\"], verified=corrected, source=fill.time_source, raw_time=fill.raw_time)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "FILL",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "execId 首次经济入账。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 861,
+          "function": "record_fill",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"FILL\", exec_id=fill.exec_id, intent_id=fill.intent_id, symbol=fill.symbol,\n                       side=str(fill.side), qty=fill.quantity, price=fill.price)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "FILL_QUARANTINED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "成交首次进入隔离证据区，不经济入账。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 1196,
+          "function": "_quarantine",
+          "conditional_context": [
+            "cur.rowcount"
+          ],
+          "raw_call": "self.audit(now, \"FILL_QUARANTINED\", exec_id=fill.exec_id, **payload)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "FREEZE_RESOLVED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "人工 flat 强核验后解决已关闭持仓的冻结。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 1302,
+          "function": "resolve_freeze",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"FREEZE_RESOLVED\", symbol=sym, operator=operator, reason=reason,\n                       day_latched=bool(cur.rowcount))",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "IBKR_NOTICE",
+      "classification": "repeated_observation",
+      "conditions": "每个券商 notice 回调，错误码逐条保留。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 757,
+          "function": "_handle_event",
+          "conditional_context": [
+            "isinstance(event, AnomalyEvent)",
+            "isinstance(event, ConnectionEvent)",
+            "isinstance(event, BrokerNoticeEvent)",
+            "not self.dry_run"
+          ],
+          "raw_call": "self.store.audit(now, \"IBKR_NOTICE\", req_id=event.req_id,\n                                 error_code=event.error_code, raw_message=event.raw_message)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "INTENT_CREATED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "新 intent 在 broker 调用前持久化。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 506,
+          "function": "create_intent",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"INTENT_CREATED\", intent_id=req.intent_id, symbol=req.symbol,\n                       side=str(req.side), qty=req.quantity, limit=req.limit_price,\n                       purpose=str(req.purpose))",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "INTENT_RESOLVED_BY_OPERATOR",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "人工 resolve-intent 强制结案。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/__main__.py",
+          "line": 417,
+          "function": "cmd_resolve_intent",
+          "conditional_context": [],
+          "raw_call": "store.audit(now, \"INTENT_RESOLVED_BY_OPERATOR\", intent_id=args.intent_id, operator=args.operator,\n                    reason=args.reason, previous=intent[\"status\"])",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "INTENT_STATUS",
+      "classification": "repeated_observation",
+      "conditions": "每个带 status 参数的 update_intent，或终态 metadata 原子 hold；不要求 status 值实际变化。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_cancellations.py",
+          "line": 121,
+          "function": "_protection_capture_terminal",
+          "conditional_context": [
+            "not native_valid and (not bare_exact) and (not intent['hold_reason'])"
+          ],
+          "raw_call": "self.store.audit(now, \"INTENT_STATUS\", intent_id=event.intent_id,\n                                 status=\"UNKNOWN\", note=reason)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/store.py",
+          "line": 637,
+          "function": "update_intent",
+          "conditional_context": [
+            "'status' in fields"
+          ],
+          "raw_call": "self.audit(now, \"INTENT_STATUS\", intent_id=intent_id, status=fields[\"status\"],\n                           note=fields.get(\"note\"))",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "KILL",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "每次人工 kill。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 397,
+          "function": "kill",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"KILL\", reason=reason)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "LOSS_STATE",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "连亏/cooldown 记录更新。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 929,
+          "function": "_update_loss_state",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"LOSS_STATE\", streak=state.streak, cooldown_until=until)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "ORDER_PRICE_OBSERVATION",
+      "classification": "repeated_observation",
+      "conditions": "强身份通过后的每次原生价格观察，当前无 payload 去重。",
+      "merge_authorized": true,
+      "merge_boundary": "仅去重 audit 写；TP_EVIDENCE、价格核验/状态/卡片仍每次执行；error_code/reason 逐条保留",
+      "write_sites": [
+        {
+          "file": "v6lite/tp_evidence.py",
+          "line": 413,
+          "function": "_on_price_observation",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"ORDER_PRICE_OBSERVATION\", **payload)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "OVERNIGHT_CURRENT_DAY_TIME_BASIS",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "当日全部 a-d 通过后，同 position/day/经济快照摘要首次记录。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/overnight_evidence.py",
+          "line": 148,
+          "function": "_overnight_record_today_basis",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"OVERNIGHT_CURRENT_DAY_TIME_BASIS\", position_id=row[\"position_id\"],\n            day=trading_day(now).isoformat(), exec_ids=ids, snapshots=snapshots, note=note,\n            query_request_id=scope[\"request_id\"], query_generation=scope[\"generation\"],\n            query_since=scope[\"since_utc\"].isoformat(), query_completed=scope[\"completed_at\"].isoformat())",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "OVERNIGHT_TP_FROZEN",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "已到止盈价但被冻结，同 position/day 最多一次。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/overnight_evidence.py",
+          "line": 303,
+          "function": "_overnight_before_tp_stage",
+          "conditional_context": [
+            "self.store.control(key) is None"
+          ],
+          "raw_call": "self.store.audit(now, \"OVERNIGHT_TP_FROZEN\", position_id=row[\"position_id\"],\n                symbol=row[\"symbol\"], stage=str(stage), day=trading_day(now).isoformat(),\n                reason=\"已到止盈价但过夜自动止盈冻结；只保留原 STP，未开始止盈阶段\")",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "POSITION_RELEASED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "人工 release 通过全部强核验后。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 1231,
+          "function": "release_position",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"POSITION_RELEASED\", release_id=rid, symbol=sym, position_id=pos[\"position_id\"],\n                       ledger_qty=pos[\"qty_open\"], operator=operator, reason=reason, day_latched=bool(cur.rowcount))",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECTION_DELIVERY_BATCH_INCOMPLETE",
+      "classification": "repeated_observation",
+      "conditions": "保护卡片不可变分片数不一致时每次 flush；可能重复。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_incidents.py",
+          "line": 96,
+          "function": "flush",
+          "conditional_context": [
+            "len(parts) != len(payloads)"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECTION_DELIVERY_BATCH_INCOMPLETE\", position_id=pid)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/protection_incidents.py",
+          "line": 90,
+          "function": "flush",
+          "conditional_context": [
+            "payloads is None",
+            "len(parts) != len(cards)"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECTION_DELIVERY_BATCH_INCOMPLETE\", position_id=pid)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECTION_INCIDENT_RESOLVED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "存在旧 incident 控制项且实际结束事件。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_incidents.py",
+          "line": 205,
+          "function": "_protection_resolve_incidents",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"PROTECTION_INCIDENT_RESOLVED\", position_id=row[\"position_id\"], reason=reason)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_BROKER_ECHO",
+      "classification": "repeated_observation",
+      "conditions": "非终态 intent 的每次 PROTECT 原生 orderStatus 事件。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 979,
+          "function": "_on_status",
+          "conditional_context": [
+            "intent['purpose'] == Purpose.PROTECT"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_BROKER_ECHO\", intent_id=ev.intent_id,\n                raw_status=ev.raw_status, broker_echo_lmt=(identity.broker_echo_lmt\n                if identity is not None else ev.broker_echo_lmt))",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_BROKER_ERROR",
+      "classification": "repeated_observation",
+      "conditions": "每次保护单提交/修改/撤销/超时撤销的 broker 异常。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 413,
+          "function": "_protection_submit_first",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(self.clock.now(), \"PROTECT_BROKER_ERROR\", source=\"submit_stop\",\n                intent_id=req.intent_id, position_id=req.position_id, symbol=req.symbol,\n                full_error=str(exc), error_type=type(exc).__name__, maybe_sent=exc.maybe_sent)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 1475,
+          "function": "_protection_modify",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(self.clock.now(), \"PROTECT_BROKER_ERROR\", source=\"modify_protection\",\n                intent_id=row[\"intent_id\"], position_id=row[\"position_id\"], symbol=row[\"symbol\"],\n                full_error=str(exc), error_type=type(exc).__name__, maybe_sent=exc.maybe_sent)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 1507,
+          "function": "_protection_cancel",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(self.clock.now(), \"PROTECT_BROKER_ERROR\", source=\"cancel_protection\",\n                intent_id=row[\"intent_id\"], position_id=row[\"position_id\"], symbol=row[\"symbol\"],\n                full_error=str(exc), error_type=type(exc).__name__, maybe_sent=exc.maybe_sent)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 1857,
+          "function": "_hard_protection_deadlines",
+          "conditional_context": [
+            "for row in self.store.protections():",
+            "row['gap_b_started_at']",
+            "secs >= self.cfg.protection.gap_b_cancel_seconds and row['state'] in {'TP_ACTIVE', 'FILLED'} and row['tp_stage'] and row['tp_intent_id']",
+            "iid and self.store.intent(iid) is not None and (self.store.intent(iid)['status'] not in {IntentStatus.CANCEL_REQUESTED, IntentStatus.CANCEL_SEEN, IntentStatus.CANCELLED, IntentStatus.FILLED})"
+          ],
+          "raw_call": "self.store.audit(self.clock.now(), \"PROTECT_BROKER_ERROR\", source=\"cancel_tp_timeout\",\n                                intent_id=iid, position_id=row[\"position_id\"], symbol=row[\"symbol\"],\n                                full_error=str(exc), error_type=type(exc).__name__, maybe_sent=exc.maybe_sent)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_BROKER_REJECTED",
+      "classification": "repeated_observation",
+      "conditions": "每次满足明确拒绝分类的 PROTECT 状态回调。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 528,
+          "function": "_protection_on_status",
+          "conditional_context": [
+            "self._protection_explicit_refusal(event, row, intent)"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_BROKER_REJECTED\", intent_id=event.intent_id,\n                             error_code=event.error_code, reason=event.message)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_BROKER_TERMINAL",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "终态诊断 raw_status/code/reason/identity/cancel_class 至少一项变化。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_cancellations.py",
+          "line": 126,
+          "function": "_protection_capture_terminal",
+          "conditional_context": [
+            "any((notice.get(key) != previous.get(key) for key in ('raw_status', 'error_code', 'reason', 'complete_identity', 'cancel_class')))"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_BROKER_TERMINAL\", position_id=row[\"position_id\"], **notice)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_FILL",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "当前或退休保护单成交经济入账，保留止损与滑点证据。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 1093,
+          "function": "_audit_protection_fill",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"PROTECT_FILL\", **payload)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_GAP",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "真实 A/B 空窗闭合；A 可逐 execId 及旧 schema 窗口，B逐 workflow。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 2095,
+          "function": "_protection_close_b",
+          "conditional_context": [
+            "row['gap_b_started_at']"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_GAP\", gap_kind=\"B\", secs=secs, symbol=row[\"symbol\"],\n                             position_id=row[\"position_id\"], workflow_id=workflow.get(\"workflow_id\"),\n                             tp_intent_id=row[\"tp_intent_id\"], started_at=row[\"gap_b_started_at\"],\n                             ended_at=now.isoformat(), intent_id=row[\"intent_id\"], outcome=outcome)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/store.py",
+          "line": 563,
+          "function": "close_protection_gaps_a",
+          "conditional_context": [
+            "for item in rows:"
+          ],
+          "raw_call": "self.audit(now, \"PROTECT_GAP\", gap_kind=\"A\", secs=seconds,\n                           position_id=position_id, exec_id=item[\"exec_id\"],\n                           recovered_unverified=recovered, **identity)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/store.py",
+          "line": 578,
+          "function": "close_protection_gaps_a",
+          "conditional_context": [
+            "legacy_is_older"
+          ],
+          "raw_call": "self.audit(now, \"PROTECT_GAP\", gap_kind=\"A\", secs=seconds,\n                           position_id=position_id, legacy_window=True, **identity)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_IDENTITY_RETIRED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "替换前归档已严格核对的保护单身份。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 699,
+          "function": "archive_protection_identity",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"PROTECT_IDENTITY_RETIRED\", **identity)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_PLANNED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "入场事务内或迟到成交恢复时新建保护计划。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 530,
+          "function": "create_protection_plan",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"PROTECT_PLANNED\", position_id=position_id,\n                       intent_id=intent_id, trigger=trigger, limit=limit)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/store.py",
+          "line": 515,
+          "function": "create_intent",
+          "conditional_context": [
+            "protection_plan is not None"
+          ],
+          "raw_call": "self.audit(now, \"PROTECT_PLANNED\", position_id=req.position_id,\n                           intent_id=protect_id, trigger=trigger, limit=limit)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_PREPLAN_ADJUSTED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "入场成交后计划止损需要调整。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 377,
+          "function": "_protection_on_entry_fill",
+          "conditional_context": [
+            "row['state'] == 'PLANNED'",
+            "(actual_trigger, actual_limit) != (row['trigger_price'], row['limit_price'])"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_PREPLAN_ADJUSTED\", position_id=position_id,\n                                 original_trigger=row[\"trigger_price\"], actual_trigger=actual_trigger)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_QUERY_LIMITED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "同一失败 episode 首次查询退避说明，控制项防重复。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 726,
+          "function": "_protection_rate_notice",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"PROTECT_QUERY_LIMITED\", position_id=row[\"position_id\"],\n                         intent_id=row[\"intent_id\"], symbol=row[\"symbol\"])",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_QUERY_SUPERSEDED_BY_FILL",
+      "classification": "repeated_observation",
+      "conditions": "查询中已确认自有保护成交关闭持仓，旧失败仅留审计。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 869,
+          "function": "_protection_query_failure",
+          "conditional_context": [
+            "self._protection_closed_by_own_fill(row)"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_QUERY_SUPERSEDED_BY_FILL\", position_id=row[\"position_id\"],\n                intent_id=row[\"intent_id\"], full_error=str(exc), error_type=type(exc).__name__)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_RETIRED_FILL",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "已入账保护成交来自退休身份，另留 lineage 审计。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 1095,
+          "function": "_audit_protection_fill",
+          "conditional_context": [
+            "retired"
+          ],
+          "raw_call": "self.audit(now, \"PROTECT_RETIRED_FILL\", **payload)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_STATE",
+      "classification": "repeated_observation",
+      "conditions": "update_protection 每次调用；confirmed_at-only 重复观察；另终态代码直接写 UNKNOWN。",
+      "merge_authorized": true,
+      "merge_boundary": "仅 update_protection 中除 confirmed_at/updated_at 外无实际字段变化；显式终态 UNKNOWN writer 保留",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_cancellations.py",
+          "line": 107,
+          "function": "_protection_capture_terminal",
+          "conditional_context": [
+            "row['state'] != 'REJECTED'"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_STATE\", position_id=row[\"position_id\"], state=\"UNKNOWN\")",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/store.py",
+          "line": 603,
+          "function": "update_protection",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"PROTECT_STATE\", position_id=position_id,\n                       **{key: value for key, value in fields.items() if key != \"updated_at\"})",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_STATUS_IDENTITY_MISMATCH",
+      "classification": "repeated_observation",
+      "conditions": "每次保护状态身份不符或取消身份缺失，伴冻结/人工核验。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 1012,
+          "function": "_on_status",
+          "conditional_context": [
+            "intent['purpose'] == Purpose.PROTECT and ev.raw_status in _CANCEL_HINTS",
+            "not exact"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_STATUS_IDENTITY_MISMATCH\",\n                                 intent_id=ev.intent_id, raw_status=ev.raw_status)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 446,
+          "function": "_protection_reject_status_identity",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"PROTECT_STATUS_IDENTITY_MISMATCH\", intent_id=event.intent_id,\n                         raw_status=event.raw_status)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_STATUS_IDENTITY_VERIFIED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "本地缺 orderId/permId 时，从严格原生 tuple 首次补全。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 484,
+          "function": "_protection_adopt_status_identity",
+          "conditional_context": [
+            "row['broker_order_id'] is None or row['perm_id'] is None"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_STATUS_IDENTITY_VERIFIED\", intent_id=event.intent_id,\n                                 broker_order_id=identity.broker_order_id, perm_id=identity.perm_id)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_TERMINAL_EPISODE_RESOLVED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "旧 coverage 终态事件实际结束。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_incidents.py",
+          "line": 204,
+          "function": "_protection_resolve_incidents",
+          "conditional_context": [
+            "prefix + 'coverage' in records"
+          ],
+          "raw_call": "self.store.audit(now, \"PROTECT_TERMINAL_EPISODE_RESOLVED\", position_id=row[\"position_id\"], reason=reason)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_TERMINAL_HOLD_PRESERVED",
+      "classification": "repeated_observation",
+      "conditions": "终态 metadata 不完整且 intent 已有人工 hold；每回调可写。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_cancellations.py",
+          "line": 142,
+          "function": "_protection_hold_terminal_metadata",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, audit_kind, intent_id=event.intent_id,\n                         raw_status=event.raw_status, reason=event.message)",
+          "dynamic_expansion": {
+            "expression": "audit_kind",
+            "basis": "protection_cancellations.py:141: \"PROTECT_TERMINAL_HOLD_PRESERVED\" if intent[\"hold_reason\"] else \"PROTECT_TERMINAL_METADATA_INCOMPLETE\""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_TERMINAL_METADATA_INCOMPLETE",
+      "classification": "repeated_observation",
+      "conditions": "终态 metadata 不完整且此前无 hold；每回调可写。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_cancellations.py",
+          "line": 142,
+          "function": "_protection_hold_terminal_metadata",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, audit_kind, intent_id=event.intent_id,\n                         raw_status=event.raw_status, reason=event.message)",
+          "dynamic_expansion": {
+            "expression": "audit_kind",
+            "basis": "protection_cancellations.py:141: \"PROTECT_TERMINAL_HOLD_PRESERVED\" if intent[\"hold_reason\"] else \"PROTECT_TERMINAL_METADATA_INCOMPLETE\""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "PROTECT_VERIFICATION_BACKOFF",
+      "classification": "repeated_observation",
+      "conditions": "每次实际证据核验失败；1/2/4/8/16/30秒退避，饱和后仍逐次留证。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 793,
+          "function": "_protection_verification_failure",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"PROTECT_VERIFICATION_BACKOFF\", position_id=pid,\n                         intent_id=row[\"intent_id\"], seconds=delay, failures=failures, workflow=workflow)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "RECONNECT_ATTEMPT",
+      "classification": "repeated_observation",
+      "conditions": "每次实际实体连接尝试。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 1108,
+          "function": "_record_reconnect_attempt",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"RECONNECT_ATTEMPT\", reason=reason, reason_key=key,\n                         attempts_in_window=len(self._reconnect_history[key]), window_seconds=300)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "RECONNECT_BACKOFF",
+      "classification": "repeated_observation",
+      "conditions": "每次重连/恢复失败后的退避状态。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 1117,
+          "function": "_reconnect_failure",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"RECONNECT_BACKOFF\", reason=self._reconnect_reason,\n                         consecutive_failures=self._reconnect_failures, seconds=delay)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "RECONNECT_STOPPED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "达到同原因重试门槛，停止自动重连。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 1136,
+          "function": "_stop_automatic_reconnect",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"RECONNECT_STOPPED\", reason=reason, reason_key=self._reconnect_reason_key(reason))",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "RELEASE_GTC_VERIFIED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "release 中原保护单强身份与终态证据通过。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 1958,
+          "function": "_apply_releases",
+          "conditional_context": [
+            "for key, raw in requests.items():",
+            "release_protect_ids"
+          ],
+          "raw_call": "self.store.audit(now, \"RELEASE_GTC_VERIFIED\", symbol=symbol,\n                                     protection_ids=sorted(release_protect_ids),\n                                     execution_ids=[item[0] for item in second_signature])",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "RELEASE_REFUSED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "消费 release 请求后任一核验失败。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 1992,
+          "function": "_apply_releases",
+          "conditional_context": [
+            "for key, raw in requests.items():"
+          ],
+          "raw_call": "self.store.audit(now, \"RELEASE_REFUSED\", symbol=symbol, request=raw, reason=str(exc))",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "RELEASE_REQUESTED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "人工 release 请求持久化。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/__main__.py",
+          "line": 359,
+          "function": "cmd_release",
+          "conditional_context": [],
+          "raw_call": "store.audit(now, \"RELEASE_REQUESTED\", symbol=args.symbol.upper(), **request)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "RESUME",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "人工 resume 成功，且当日 daily stop 未锁存。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 411,
+          "function": "resume",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"RESUME\", reason=reason, operator=operator)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "SCAN",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "每个扫描批次结果。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 2651,
+          "function": "scan_and_enter",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(self.clock.now(), \"SCAN\", vix=vix, min_score=min_score,\n                         signals=[(s.symbol, s.score) for s in signals],\n                         errors={r.symbol: r.error for r in results if r.error})",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "SHUTDOWN",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "演练或正常停机结案；保留不可合并。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 3072,
+          "function": "shutdown",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(self.clock.now(), \"SHUTDOWN\", unresolved=leftover, broker_working=still_working)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/engine.py",
+          "line": 3010,
+          "function": "shutdown",
+          "conditional_context": [
+            "self.dry_run"
+          ],
+          "raw_call": "self.store.audit(now, \"SHUTDOWN\", dry_run=True)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "STAGE_ABANDONED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "原阶段不再适用或发送前重新判定后放弃。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 2379,
+          "function": "_redecide",
+          "conditional_context": [
+            "st['filled_qty'] == 0"
+          ],
+          "raw_call": "self.store.audit(now, \"STAGE_ABANDONED\", position_id=position_id, stage=str(stage), at_send=True)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/engine.py",
+          "line": 2180,
+          "function": "_evaluate_position_exit",
+          "conditional_context": [
+            "pending",
+            "stage is not Purpose.STOP and (decision is None or decision.stage is not stage)",
+            "stage_row['filled_qty'] == 0"
+          ],
+          "raw_call": "self.store.audit(now, \"STAGE_ABANDONED\", position_id=pos.position_id, stage=str(stage))",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/protection_engine.py",
+          "line": 1628,
+          "function": "_protection_begin_tp",
+          "conditional_context": [
+            "decision is None or decision.stage is not stage",
+            "pending is not None and pending['status'] == 'PENDING'",
+            "int(pending['filled_qty']) == 0"
+          ],
+          "raw_call": "self.store.audit(now, \"STAGE_ABANDONED\", position_id=position_id,\n                                     stage=str(stage), at_send=True)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "STAGE_BEGIN",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "首次 INSERT OR IGNORE 成功创建阶段。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 1366,
+          "function": "begin_stage",
+          "conditional_context": [
+            "cur.rowcount"
+          ],
+          "raw_call": "self.audit(now, \"STAGE_BEGIN\", position_id=position_id, stage=str(stage), target=target_qty)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "STAGE_FINISH",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "阶段实际结束，完成或取消。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/store.py",
+          "line": 1391,
+          "function": "finish_stage",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"STAGE_FINISH\", position_id=position_id, stage=str(stage), status=status)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "STARTUP",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "启动完成的状态快照。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 343,
+          "function": "startup",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"STARTUP\", **summary)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TEST_ENTRY_CLAIMED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "测试入场请求成功 claim。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 2554,
+          "function": "_run_test_entry",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"TEST_ENTRY_CLAIMED\", request_id=request_id)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TEST_ENTRY_REQUESTED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "人工创建测试入场请求。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/__main__.py",
+          "line": 384,
+          "function": "cmd_test_entry",
+          "conditional_context": [],
+          "raw_call": "store.audit(now, \"TEST_ENTRY_REQUESTED\", request_id=request_id, symbol=symbol, operator=operator)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TEST_ENTRY_RESULT",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "测试入场完成或就绪状态撤销时的结果。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 2604,
+          "function": "_run_test_entry",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(self.clock.now(), \"TEST_ENTRY_RESULT\", request_id=request_id, outcome=outcome)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/engine.py",
+          "line": 2488,
+          "function": "_invalidate_test_entry_ready",
+          "conditional_context": [
+            "for key in self.store.controls_with_prefix('test_entry:'):"
+          ],
+          "raw_call": "self.store.audit(now, \"TEST_ENTRY_RESULT\", request_id=key.partition(\":\")[2],\n                                 outcome=outcome)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TEST_TP_TIMEOUT_RESULT",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "TP 非市价超时演练请求结果。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 2535,
+          "function": "_consume_test_tp_nonmarketable",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"TEST_TP_TIMEOUT_RESULT\", symbol=symbol,\n                             request_id=req.get(\"request_id\", \"-\"),\n                             outcome=\"claimed\" if valid else \"refused:expired_or_epoch\")",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/engine.py",
+          "line": 2492,
+          "function": "_invalidate_test_entry_ready",
+          "conditional_context": [
+            "for key in self.store.controls_with_prefix('test_tp_nonmarketable_once:'):"
+          ],
+          "raw_call": "self.store.audit(now, \"TEST_TP_TIMEOUT_RESULT\", symbol=key.partition(\":\")[2],\n                                 outcome=outcome)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TP_AUTO_PAUSED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "某 TP 拒价首次创建 pause 控制项。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/tp_evidence.py",
+          "line": 321,
+          "function": "_tp_price_rejected",
+          "conditional_context": [
+            "rejection is None"
+          ],
+          "raw_call": "self.store.audit(now, \"TP_AUTO_PAUSED\", **rejection)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TP_DEFINITELY_UNSENT",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "NEW TP 发送前门控证明确实未发出，持久化 REJECTED。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/tp_evidence.py",
+          "line": 233,
+          "function": "_tp_definitely_unsent",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"TP_DEFINITELY_UNSENT\", intent_id=req.intent_id, position_id=req.position_id,\n                         symbol=req.symbol, reason=reason, limit_price=req.limit_price)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TP_EVIDENCE",
+      "classification": "repeated_observation",
+      "conditions": "TP 发送/状态/减量/恢复/撤单/成交/空窗闭合；quote_skip 每次无效报价及 TP 价格观察均可高频。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 2921,
+          "function": "_send",
+          "conditional_context": [
+            "send_evidence is not None"
+          ],
+          "raw_call": "self.store.audit(now, \"TP_EVIDENCE\", **send_evidence)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/engine.py",
+          "line": 2890,
+          "function": "_send",
+          "conditional_context": [
+            "exc.maybe_sent",
+            "send_evidence is not None"
+          ],
+          "raw_call": "self.store.audit(now, \"TP_EVIDENCE\", **send_evidence)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/store.py",
+          "line": 976,
+          "function": "_audit_tp_fill",
+          "conditional_context": [],
+          "raw_call": "self.audit(now, \"TP_EVIDENCE\", **payload)",
+          "dynamic_expansion": null
+        },
+        {
+          "file": "v6lite/tp_evidence.py",
+          "line": 163,
+          "function": "_tp_record",
+          "conditional_context": [
+            "persist"
+          ],
+          "raw_call": "self.store.audit(now, \"TP_EVIDENCE\", **payload)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TP_RESUMED_BY_OPERATOR",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "有效人工 resume 请求消费，全部强核验成功。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/tp_evidence.py",
+          "line": 501,
+          "function": "_tp_consume_resume",
+          "conditional_context": [
+            "for key, raw in self.store.controls_with_prefix('resume_tp:').items():"
+          ],
+          "raw_call": "self.store.audit(self.clock.now(), \"TP_RESUMED_BY_OPERATOR\", **request)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TP_RESUME_REQUESTED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "人工 resume-tp 请求持久化。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/__main__.py",
+          "line": 344,
+          "function": "cmd_resume_tp",
+          "conditional_context": [],
+          "raw_call": "store.audit(now, \"TP_RESUME_REQUESTED\", **request)",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TP_SUBMIT_GATE_BLOCKED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "TP 发送前发现旧 intent 已非 NEW 或存在 hold，不得认定未发出。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/tp_evidence.py",
+          "line": 229,
+          "function": "_tp_definitely_unsent",
+          "conditional_context": [
+            "intent['status'] != IntentStatus.NEW or intent['hold_reason']"
+          ],
+          "raw_call": "self.store.audit(now, \"TP_SUBMIT_GATE_BLOCKED\", intent_id=req.intent_id, reason=reason,\n                             preserved_status=intent[\"status\"], hold_reason=intent[\"hold_reason\"])",
+          "dynamic_expansion": null
+        }
+      ]
+    },
+    {
+      "kind": "TRADE_CLOSED",
+      "classification": "state_change_or_discrete_event",
+      "conditions": "持仓确认关闭，按旧路径记录盈亏与费用状态。",
+      "merge_authorized": false,
+      "merge_boundary": "本批未授权合并；即使高频，完整保留，需另行裁定",
+      "write_sites": [
+        {
+          "file": "v6lite/engine.py",
+          "line": 910,
+          "function": "_on_position_closed",
+          "conditional_context": [],
+          "raw_call": "self.store.audit(now, \"TRADE_CLOSED\", position_id=position_id, symbol=symbol,\n                             gross=round(trade[\"gross\"], 4), fees=round(trade[\"fees\"], 4),\n                             missing_fees=len(trade[\"missing\"]))",
+          "dynamic_expansion": null
+        }
+      ]
+    }
+  ],
+  "call_index": [
+    {
+      "file": "v6lite/__main__.py",
+      "line": 344,
+      "expanded_kinds": [
+        "TP_RESUME_REQUESTED"
+      ]
+    },
+    {
+      "file": "v6lite/__main__.py",
+      "line": 359,
+      "expanded_kinds": [
+        "RELEASE_REQUESTED"
+      ]
+    },
+    {
+      "file": "v6lite/__main__.py",
+      "line": 384,
+      "expanded_kinds": [
+        "TEST_ENTRY_REQUESTED"
+      ]
+    },
+    {
+      "file": "v6lite/__main__.py",
+      "line": 417,
+      "expanded_kinds": [
+        "INTENT_RESOLVED_BY_OPERATOR"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 343,
+      "expanded_kinds": [
+        "STARTUP"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 515,
+      "expanded_kinds": [
+        "CLIENT_ID_CHANGED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 757,
+      "expanded_kinds": [
+        "IBKR_NOTICE"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 760,
+      "expanded_kinds": [
+        "EXECUTION_TIME_REVIEW_REQUIRED",
+        "EXECUTION_TIME_OBSERVED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 774,
+      "expanded_kinds": [
+        "CONNECTION_SNAPSHOT_PRICE"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 789,
+      "expanded_kinds": [
+        "EXCLUDED_SYMBOL_FILL"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 910,
+      "expanded_kinds": [
+        "TRADE_CLOSED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 929,
+      "expanded_kinds": [
+        "LOSS_STATE"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 957,
+      "expanded_kinds": [
+        "CONNECTION_SNAPSHOT_STATUS"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 979,
+      "expanded_kinds": [
+        "PROTECT_BROKER_ECHO"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1012,
+      "expanded_kinds": [
+        "PROTECT_STATUS_IDENTITY_MISMATCH"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1108,
+      "expanded_kinds": [
+        "RECONNECT_ATTEMPT"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1117,
+      "expanded_kinds": [
+        "RECONNECT_BACKOFF"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1136,
+      "expanded_kinds": [
+        "RECONNECT_STOPPED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1566,
+      "expanded_kinds": [
+        "EXECUTION_TIME_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1636,
+      "expanded_kinds": [
+        "BROKER_QUERY_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1913,
+      "expanded_kinds": [
+        "BROKER_QUERY_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1943,
+      "expanded_kinds": [
+        "BROKER_QUERY_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1958,
+      "expanded_kinds": [
+        "RELEASE_GTC_VERIFIED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 1992,
+      "expanded_kinds": [
+        "RELEASE_REFUSED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2180,
+      "expanded_kinds": [
+        "STAGE_ABANDONED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2379,
+      "expanded_kinds": [
+        "STAGE_ABANDONED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2488,
+      "expanded_kinds": [
+        "TEST_ENTRY_RESULT"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2492,
+      "expanded_kinds": [
+        "TEST_TP_TIMEOUT_RESULT"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2535,
+      "expanded_kinds": [
+        "TEST_TP_TIMEOUT_RESULT"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2554,
+      "expanded_kinds": [
+        "TEST_ENTRY_CLAIMED"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2604,
+      "expanded_kinds": [
+        "TEST_ENTRY_RESULT"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2651,
+      "expanded_kinds": [
+        "SCAN"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2714,
+      "expanded_kinds": [
+        "DRY_RUN"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2890,
+      "expanded_kinds": [
+        "TP_EVIDENCE"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 2921,
+      "expanded_kinds": [
+        "TP_EVIDENCE"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 3010,
+      "expanded_kinds": [
+        "SHUTDOWN"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 3072,
+      "expanded_kinds": [
+        "SHUTDOWN"
+      ]
+    },
+    {
+      "file": "v6lite/engine.py",
+      "line": 3382,
+      "expanded_kinds": [
+        "DRY_RUN"
+      ]
+    },
+    {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 148,
+      "expanded_kinds": [
+        "OVERNIGHT_CURRENT_DAY_TIME_BASIS"
+      ]
+    },
+    {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 303,
+      "expanded_kinds": [
+        "OVERNIGHT_TP_FROZEN"
+      ]
+    },
+    {
+      "file": "v6lite/protection_cancellations.py",
+      "line": 107,
+      "expanded_kinds": [
+        "PROTECT_STATE"
+      ]
+    },
+    {
+      "file": "v6lite/protection_cancellations.py",
+      "line": 121,
+      "expanded_kinds": [
+        "INTENT_STATUS"
+      ]
+    },
+    {
+      "file": "v6lite/protection_cancellations.py",
+      "line": 126,
+      "expanded_kinds": [
+        "PROTECT_BROKER_TERMINAL"
+      ]
+    },
+    {
+      "file": "v6lite/protection_cancellations.py",
+      "line": 142,
+      "expanded_kinds": [
+        "PROTECT_TERMINAL_HOLD_PRESERVED",
+        "PROTECT_TERMINAL_METADATA_INCOMPLETE"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 377,
+      "expanded_kinds": [
+        "PROTECT_PREPLAN_ADJUSTED"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 413,
+      "expanded_kinds": [
+        "PROTECT_BROKER_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 446,
+      "expanded_kinds": [
+        "PROTECT_STATUS_IDENTITY_MISMATCH"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 484,
+      "expanded_kinds": [
+        "PROTECT_STATUS_IDENTITY_VERIFIED"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 528,
+      "expanded_kinds": [
+        "PROTECT_BROKER_REJECTED"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 585,
+      "expanded_kinds": [
+        "BROKER_QUERY_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 595,
+      "expanded_kinds": [
+        "BROKER_QUERY_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 604,
+      "expanded_kinds": [
+        "BROKER_QUERY_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 726,
+      "expanded_kinds": [
+        "PROTECT_QUERY_LIMITED"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 793,
+      "expanded_kinds": [
+        "PROTECT_VERIFICATION_BACKOFF"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 869,
+      "expanded_kinds": [
+        "PROTECT_QUERY_SUPERSEDED_BY_FILL"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 1475,
+      "expanded_kinds": [
+        "PROTECT_BROKER_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 1507,
+      "expanded_kinds": [
+        "PROTECT_BROKER_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 1628,
+      "expanded_kinds": [
+        "STAGE_ABANDONED"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 1857,
+      "expanded_kinds": [
+        "PROTECT_BROKER_ERROR"
+      ]
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "line": 2095,
+      "expanded_kinds": [
+        "PROTECT_GAP"
+      ]
+    },
+    {
+      "file": "v6lite/protection_incidents.py",
+      "line": 90,
+      "expanded_kinds": [
+        "PROTECTION_DELIVERY_BATCH_INCOMPLETE"
+      ]
+    },
+    {
+      "file": "v6lite/protection_incidents.py",
+      "line": 96,
+      "expanded_kinds": [
+        "PROTECTION_DELIVERY_BATCH_INCOMPLETE"
+      ]
+    },
+    {
+      "file": "v6lite/protection_incidents.py",
+      "line": 204,
+      "expanded_kinds": [
+        "PROTECT_TERMINAL_EPISODE_RESOLVED"
+      ]
+    },
+    {
+      "file": "v6lite/protection_incidents.py",
+      "line": 205,
+      "expanded_kinds": [
+        "PROTECTION_INCIDENT_RESOLVED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 397,
+      "expanded_kinds": [
+        "KILL"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 411,
+      "expanded_kinds": [
+        "RESUME"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 416,
+      "expanded_kinds": [
+        "ANOMALY"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 430,
+      "expanded_kinds": [
+        "ANOMALY_CLEARED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 438,
+      "expanded_kinds": [
+        "DISPOSITION"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 459,
+      "expanded_kinds": [
+        "DAILY_STOP_LATCHED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 506,
+      "expanded_kinds": [
+        "INTENT_CREATED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 515,
+      "expanded_kinds": [
+        "PROTECT_PLANNED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 530,
+      "expanded_kinds": [
+        "PROTECT_PLANNED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 563,
+      "expanded_kinds": [
+        "PROTECT_GAP"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 578,
+      "expanded_kinds": [
+        "PROTECT_GAP"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 603,
+      "expanded_kinds": [
+        "PROTECT_STATE"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 637,
+      "expanded_kinds": [
+        "INTENT_STATUS"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 669,
+      "expanded_kinds": [
+        "COMMISSION_CORRECTED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 699,
+      "expanded_kinds": [
+        "PROTECT_IDENTITY_RETIRED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 729,
+      "expanded_kinds": [
+        "EXECUTION_TIME_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 752,
+      "expanded_kinds": [
+        "EXECUTION_TIME_VERIFIED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 761,
+      "expanded_kinds": [
+        "EXECUTION_TIME_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 856,
+      "expanded_kinds": [
+        "EXECUTION_TIME_UNVERIFIED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 861,
+      "expanded_kinds": [
+        "FILL"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 976,
+      "expanded_kinds": [
+        "TP_EVIDENCE"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 1093,
+      "expanded_kinds": [
+        "PROTECT_FILL"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 1095,
+      "expanded_kinds": [
+        "PROTECT_RETIRED_FILL"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 1196,
+      "expanded_kinds": [
+        "FILL_QUARANTINED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 1231,
+      "expanded_kinds": [
+        "POSITION_RELEASED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 1302,
+      "expanded_kinds": [
+        "FREEZE_RESOLVED"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 1366,
+      "expanded_kinds": [
+        "STAGE_BEGIN"
+      ]
+    },
+    {
+      "file": "v6lite/store.py",
+      "line": 1391,
+      "expanded_kinds": [
+        "STAGE_FINISH"
+      ]
+    },
+    {
+      "file": "v6lite/tp_evidence.py",
+      "line": 163,
+      "expanded_kinds": [
+        "TP_EVIDENCE"
+      ]
+    },
+    {
+      "file": "v6lite/tp_evidence.py",
+      "line": 229,
+      "expanded_kinds": [
+        "TP_SUBMIT_GATE_BLOCKED"
+      ]
+    },
+    {
+      "file": "v6lite/tp_evidence.py",
+      "line": 233,
+      "expanded_kinds": [
+        "TP_DEFINITELY_UNSENT"
+      ]
+    },
+    {
+      "file": "v6lite/tp_evidence.py",
+      "line": 321,
+      "expanded_kinds": [
+        "TP_AUTO_PAUSED"
+      ]
+    },
+    {
+      "file": "v6lite/tp_evidence.py",
+      "line": 413,
+      "expanded_kinds": [
+        "ORDER_PRICE_OBSERVATION"
+      ]
+    },
+    {
+      "file": "v6lite/tp_evidence.py",
+      "line": 501,
+      "expanded_kinds": [
+        "TP_RESUMED_BY_OPERATOR"
+      ]
+    }
+  ]
+}

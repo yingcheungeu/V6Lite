@@ -1,0 +1,9 @@
+{
+  "invalid_red_labels": [
+    "recovery_red_candidate",
+    "recovery_red_22a"
+  ],
+  "reason": "The fixture incorrectly required no local protection plan after an unfilled ENTRY; normal code pre-creates the plan before sending. Both reds stop before the target daily-report assertion.",
+  "accepted_correction": "Preserve the original pre-created plan rows exactly and require no physical protection submission; all UNKNOWN/hold/quantity/identity/ledger/write guards retained.",
+  "gate": "Only the later frozen-spec rerun reaching actual daily-report cause truncation may be accepted."
+}

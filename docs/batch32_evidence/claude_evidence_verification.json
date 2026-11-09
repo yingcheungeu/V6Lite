@@ -1,0 +1,11 @@
+{
+  "manifest_sha256": "9e56247d3a27aee3544065669e08257b1be623c9ceea916d0bb94fbb68412b7c",
+  "files": {
+    "README.md": "2fc3c4b662236d23a13907d81eeb7a3510e0a9f79075ce5ce657b0b778a2eacf",
+    "audit_20261029_open_tp1_be_window.jsonl": "421c3267863bee953288deea67f9e2226274e3900784a85272910d972795681b",
+    "state_snapshot_20261029.json": "5f09e229bd51eed4d103a0acc5e7f8a8683d7e2bbd190ea659b2427329d7056d"
+  },
+  "all_match": true,
+  "directory_read_only": true,
+  "excluded_from_allowlist": true
+}

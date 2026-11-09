@@ -1,0 +1,6 @@
+{
+  "expected_refusal": true,
+  "returncode": 1,
+  "output": "Full suite blocked during 06:00-13:30 PT\r\n",
+  "pytest_started": false
+}

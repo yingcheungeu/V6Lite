@@ -1,0 +1,29 @@
+F.                                                                       [100%]
+================================== FAILURES ===================================
+__ test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info ___
+v6lite\tests\test_batch27_execution_time_binding.py:58: in test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info
+    assert len(summaries) == first_info + 1, (
+E   AssertionError: ('execution-time association changed despite identical raw multiset/class/count', 1)
+E   assert 1 == (1 + 1)
+E    +  where 1 = len(['2026-10-18 08:56:11,484 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=2 naive=0 unparseable=0 sample=20261015 11:16:41 UTC'])
+---------------------------- Captured stdout call -----------------------------
+2026-10-18 08:56:11,484 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=2 naive=0 unparseable=0 sample=20261015 11:16:41 UTC
+------------------------------ Captured log call ------------------------------
+INFO     v6lite.ibkr:telemetry.py:77 [EXECUTION_TIME_SUMMARY] returned=2 zoned=2 naive=0 unparseable=0 sample=20261015 11:16:41 UTC
+-------------------------- Captured stdout teardown ---------------------------
+2026-10-18 08:56:11,699 INFO v6lite.ibkr [EXECUTION_TIME_AGGREGATE] {"first_at": "2026-10-15T11:16:43+00:00", "last_at": "2026-10-15T11:16:43+00:00", "naive": 0, "returned": 2, "role": "legacy_client", "suppressed_queries": 1, "unparseable": 0, "zoned": 2}
+---------------------------- Captured log teardown ----------------------------
+INFO     v6lite.ibkr:telemetry.py:95 [EXECUTION_TIME_AGGREGATE] {"first_at": "2026-10-15T11:16:43+00:00", "last_at": "2026-10-15T11:16:43+00:00", "naive": 0, "returned": 2, "role": "legacy_client", "suppressed_queries": 1, "unparseable": 0, "zoned": 2}
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info
+  v6lite\tests\test_batch27_execution_time_binding.py:17: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info(
+
+v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice
+  v6lite\tests\test_batch27_masked_report_budget.py:17: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info
+1 failed, 1 passed, 2 warnings in 1.87s

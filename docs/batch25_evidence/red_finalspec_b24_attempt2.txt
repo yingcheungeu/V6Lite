@@ -1,0 +1,306 @@
+FFFFFFFF.FFFFFFFF..FF.FFFFFF.FFFFF                                       [100%]
+================================== FAILURES ===================================
+_ test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0 _
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:53: in test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0
+    assert len(calls) == 2 and _stop_pages(rig) == []
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic socket loss
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: openOrders: unsolicited End seen; connection renewed
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: openOrders: unsolicited End seen; connection renewed
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: openOrders: unsolicited End seen; connection renewed
+____ test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff ____
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:77: in test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff
+    assert len(calls) == expected-1, 'changed reasons cannot reopen the previous shorter delay'
+E   AssertionError: changed reasons cannot reopen the previous shorter delay
+E   assert 3 == (3 - 1)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic socket loss
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: native socket unavailable
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: openOrders proof unavailable
+WARNING  v6lite.engine:engine.py:1042 reconnect failed: positions proof unavailable
+___ test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget ___
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:104: in test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget
+    assert len(calls) == 2 and len(_stop_pages(rig)) == 1
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 31, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 2, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic repeated native channel reset
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic repeated native channel reset
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic repeated native channel reset
+______ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0] ______
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:120: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · 🟠 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · 🟠 P1 · 券商查询已限速 · AAPL', 'TEST · 🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-9b161f0909ac4aa38ca8 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+______ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1] ______
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:120: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · 🟠 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · 🟠 P1 · 券商查询已限速 · AAPL', 'TEST · 🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-39e4265b1c6a4064a481 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+____ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999] ____
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:120: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · 🟠 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · 🟠 P1 · 券商查询已限速 · AAPL', 'TEST · 🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-94b1bde166774cc0ba3e | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_____ test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0] _____
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:120: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · 🟠 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · 🟠 P1 · 券商查询已限速 · AAPL', 'TEST · 🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: protection gap A warning AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-3255088aaf6c4956b4bc orderId=64 permId=- TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.22；上次确认=未获券商确认 工作单证据时间=过期或缺失；A 空窗 5.0s
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: broker queries limited pos-2e08a2c6888a45c9be9d | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_ test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage _
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:141: in test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('🟠 P1 · 券商查...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('🟠 P1 · 券商查询已限速 · AAPL', '🟠 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-8e51645d5dd94c77800d | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:824 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync _
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:183: in test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync
+    assert stages == ['openOrder', 'orderStatus', 'openOrderEnd', 'synchronized']
+E   AssertionError: assert [] == ['openOrder',...synchronized']
+E     
+E     Right contains 4 more items, first extra item: 'openOrder'
+E     Use -v to get more diff
+_ test_B25_true_strong_identity_failure_keeps_hold_and_entry_block_while_rate_page_once _
+..\..\v6lite\tests\test_batch25_reconnect_alerts.py:206: in test_B25_true_strong_identity_failure_keeps_hold_and_entry_block_while_rate_page_once
+    assert identity['state'] == 'UNKNOWN' or rig.store.intent(identity['intent_id'])['hold_reason'], (
+E   AssertionError: true identity contradiction keeps existing UNKNOWN/hold authority; no new frozen key required
+E   assert ('WORKING' == 'UNKNOWN'
+E     
+E     - UNKNOWN
+E     + WORKING or None)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-8a70b5dd4b5b43418ab4 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-518b0e91bbc64aea8549 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:47+00:00；账户、客户端、合约、类型或价格身份不一致
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero] _
+..\..\v6lite\tests\test_batch25_restart.py:156: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEFF1A5ED0>._channel_poisoned
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.ibkr:ibkr.py:363 unsolicited openOrders End; channel poisoned
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite] _
+..\..\v6lite\tests\test_batch25_restart.py:156: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEF2D48150>._channel_poisoned
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.ibkr:ibkr.py:363 unsolicited openOrders End; channel poisoned
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET] _
+..\..\v6lite\tests\test_batch25_restart.py:156: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEFF16AD50>._channel_poisoned
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.ibkr:ibkr.py:363 unsolicited openOrders End; channel poisoned
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero] _
+..\..\v6lite\tests\test_batch25_restart.py:156: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEF4EFB310>._channel_poisoned
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.ibkr:ibkr.py:363 unsolicited openOrders End; channel poisoned
+ERROR    v6lite.ibkr:ibkr.py:363 unsolicited openOrders End; channel poisoned
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite] _
+..\..\v6lite\tests\test_batch25_restart.py:156: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEFF155590>._channel_poisoned
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.ibkr:ibkr.py:363 unsolicited openOrders End; channel poisoned
+ERROR    v6lite.ibkr:ibkr.py:363 unsolicited openOrders End; channel poisoned
+_ test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET] _
+..\..\v6lite\tests\test_batch25_restart.py:156: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEFF1420D0>._channel_poisoned
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.ibkr:ibkr.py:363 unsolicited openOrders End; channel poisoned
+ERROR    v6lite.ibkr:ibkr.py:363 unsolicited openOrders End; channel poisoned
+_ test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC] _
+..\..\v6lite\tests\test_batch25_restart.py:250: in test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once
+    rig, pid, entry = _persisted_overnight(tmp_path, monkeypatch)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:224: in _persisted_overnight
+    [entry] = [req for req in rig.broker.sent if req.purpose is Purpose.ENTRY]
+    ^^^^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+_ test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped] _
+..\..\v6lite\tests\test_batch25_restart.py:250: in test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once
+    rig, pid, entry = _persisted_overnight(tmp_path, monkeypatch)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:224: in _persisted_overnight
+    [entry] = [req for req in rig.broker.sent if req.purpose is Purpose.ENTRY]
+    ^^^^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+_ test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders] _
+..\..\v6lite\tests\test_batch25_restart.py:350: in test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh
+    assert not getattr(adapter, 'is_synchronized', adapter.is_connected)(), (
+E   AssertionError: a failed SDK connection must never be marked synchronized
+E   assert not True
+E    +  where True = is_connected()
+E    +    where is_connected = getattr(<v6lite.broker.ibkr.IbkrBroker object at 0x000001FEF4BC5DD0>, 'is_synchronized', is_connected)
+E    +      where is_connected = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEF4BC5DD0>.is_connected
+_ test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions] _
+..\..\v6lite\tests\test_batch25_restart.py:350: in test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh
+    assert not getattr(adapter, 'is_synchronized', adapter.is_connected)(), (
+E   AssertionError: a failed SDK connection must never be marked synchronized
+E   assert not True
+E    +  where True = is_connected()
+E    +    where is_connected = getattr(<v6lite.broker.ibkr.IbkrBroker object at 0x000001FEFF342550>, 'is_synchronized', is_connected)
+E    +      where is_connected = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEFF342550>.is_connected
+_ test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send] _
+..\..\v6lite\tests\test_batch25_restart.py:389: in test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit
+    assert adapter.open_orders() == []
+           ^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:441: in _clean_request
+    result = call()               # a timeout raises; its End stays owed
+             ^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:384: in query
+    assert future.done()
+E   assert False
+E    +  where False = <built-in method done of _asyncio.Future object at 0x000001FEF1486F80>()
+E    +    where <built-in method done of _asyncio.Future object at 0x000001FEF1486F80> = <Future pending>.done
+_ test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed] _
+..\..\v6lite\tests\test_batch25_restart.py:395: in test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit
+    adapter.open_orders()
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:441: in _clean_request
+    result = call()               # a timeout raises; its End stays owed
+             ^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:386: in query
+    raise AssertionError('failed transport cannot return a completed query')
+E   AssertionError: failed transport cannot return a completed query
+_ test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions] _
+..\..\v6lite\tests\test_batch25_restart.py:406: in test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source
+    rig, pid, _ = _persisted_overnight(tmp_path, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:224: in _persisted_overnight
+    [entry] = [req for req in rig.broker.sent if req.purpose is Purpose.ENTRY]
+    ^^^^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+_ test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions] _
+..\..\v6lite\tests\test_batch25_restart.py:406: in test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source
+    rig, pid, _ = _persisted_overnight(tmp_path, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:224: in _persisted_overnight
+    [entry] = [req for req in rig.broker.sent if req.purpose is Purpose.ENTRY]
+    ^^^^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+_ test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders] _
+..\..\v6lite\tests\test_batch25_restart.py:503: in test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready
+    assert rejected or not getattr(adapter, 'is_synchronized', adapter.is_connected)(), (
+E   AssertionError: SDK return is not synchronization authority when a registered End is still owed
+E   assert (False or not True)
+E    +  where True = is_connected()
+E    +    where is_connected = getattr(<v6lite.broker.ibkr.IbkrBroker object at 0x000001FEFF1ABFD0>, 'is_synchronized', is_connected)
+E    +      where is_connected = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEFF1ABFD0>.is_connected
+_ test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions] _
+..\..\v6lite\tests\test_batch25_restart.py:503: in test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready
+    assert rejected or not getattr(adapter, 'is_synchronized', adapter.is_connected)(), (
+E   AssertionError: SDK return is not synchronization authority when a registered End is still owed
+E   assert (False or not True)
+E    +  where True = is_connected()
+E    +    where is_connected = getattr(<v6lite.broker.ibkr.IbkrBroker object at 0x000001FEF2D4B650>, 'is_synchronized', is_connected)
+E    +      where is_connected = <v6lite.broker.ibkr.IbkrBroker object at 0x000001FEF2D4B650>.is_connected
+_ test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End] _
+..\..\v6lite\tests\test_batch25_restart.py:552: in test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority
+    adapter.open_orders()
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:441: in _clean_request
+    result = call()               # a timeout raises; its End stays owed
+             ^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:549: in query
+    raise AssertionError('an uncertain send exception cannot yield successful query evidence')
+E   AssertionError: an uncertain send exception cannot yield successful query evidence
+_ test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw] _
+..\..\v6lite\tests\test_batch25_restart.py:552: in test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority
+    adapter.open_orders()
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:441: in _clean_request
+    result = call()               # a timeout raises; its End stays owed
+             ^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:549: in query
+    raise AssertionError('an uncertain send exception cannot yield successful query evidence')
+E   AssertionError: an uncertain send exception cannot yield successful query evidence
+_ test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error] _
+..\..\v6lite\tests\test_batch25_restart.py:552: in test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority
+    adapter.open_orders()
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:441: in _clean_request
+    result = call()               # a timeout raises; its End stays owed
+             ^^^^^^
+..\..\v6lite\tests\test_batch25_restart.py:549: in query
+    raise AssertionError('an uncertain send exception cannot yield successful query evidence')
+E   AssertionError: an uncertain send exception cannot yield successful query evidence
+=========================== short test summary info ===========================
+FAILED ::test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0
+FAILED ::test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff
+FAILED ::test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget
+FAILED ::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0] - ...
+FAILED ::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1] - ...
+FAILED ::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]
+FAILED ::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]
+FAILED ::test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage
+FAILED ::test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync
+FAILED ::test_B25_true_strong_identity_failure_keeps_hold_and_entry_block_while_rate_page_once
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]
+FAILED ::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]
+FAILED ::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]
+FAILED ::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]
+FAILED ::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]
+FAILED ::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]
+FAILED ::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]
+FAILED ::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]
+FAILED ::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]
+FAILED ::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]
+FAILED ::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]
+FAILED ::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]
+FAILED ::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]
+FAILED ::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]
+FAILED ::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]
+29 failed, 5 passed in 3.15s

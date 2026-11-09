@@ -1,0 +1,79 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "time_binding_fixed_short_mask_boundary",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T08:58:11.439654-07:00",
+  "end_pt": "2026-10-18T08:58:13.966852-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "3e59f31db64a4cda",
+  "source_unchanged": true,
+  "worktree_code_sha": "3e59f31db64a4cda",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "3e59f31db64a4cda68b0f9856fd92534fa534aee9e36df29df2a6e0a64b5146f",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_execution_time_binding.py",
+      "sha256": "a6ff1a47719efdc1882a426ee39d6884b8d6cddb574dc7b5f7bcce4229986907"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_short_account_budget.py",
+      "sha256": "ed7adccf9a71ef795d989f7f8c95982b2e6d3ac82b5faf901d752d786625ad92"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 2,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_execution_time_binding",
+      "name": "test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_short_account_budget",
+      "name": "test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice",
+      "outcome": "failure",
+      "message": "AssertionError: the final byte guard must retain an exact omission notice\nassert None is not None"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+      "v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_execution_time_binding.py::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info",
+      "v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice"
+    ]
+  },
+  "stdout_sha256": "189f10c640ce179a85ae9f0236e3366bac181f949bf85705357bed8f1b4e611a",
+  "junit_sha256": "783dc5076cca855ea64d4e3ffd20ef0b449ad40d07a719fcaeb7f114f7147981",
+  "inventory_sha256": "f6cc1fee785ed25b031c28e02557feabc2d8d600f188ac4c59bc771c82e46278",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "time_binding_fixed_short_mask_boundary.json": "370f6d0b07b9798389f78f8e7e4f7d5ddb95d02099627b3f1383f6e78666379f",
+      "time_binding_fixed_short_mask_boundary.xml": "c31ba6ba228eb4b4bc10c75018f2995a4839d4baa3c6275df31d5d5920fa0b4c",
+      "time_binding_fixed_short_mask_boundary_inventory.json": "a3fe2373b67ab4633aff905ea573ad9779f48a5a9f40c67c191085447f48850f",
+      "time_binding_fixed_short_mask_boundary.txt": "189f10c640ce179a85ae9f0236e3366bac181f949bf85705357bed8f1b4e611a"
+    }
+  }
+}

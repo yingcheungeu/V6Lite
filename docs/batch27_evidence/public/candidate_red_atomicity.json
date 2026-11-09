@@ -1,0 +1,67 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "candidate_red_atomicity",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T08:19:34.525890-07:00",
+  "end_pt": "2026-10-18T08:19:36.664306-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "b48c659be8159ae7",
+  "source_unchanged": true,
+  "worktree_code_sha": "b48c659be8159ae7",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "b48c659be8159ae71384249aff0e9392d91fa0b88bb75a79ba945c9ec40c4002",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observer_atomicity.py",
+      "sha256": "c48400b8ff14c415b2a94d4163eb783d63dce0660a97363da4ae3624a1923482"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_observer_atomicity",
+      "name": "test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts",
+      "outcome": "failure",
+      "message": "AssertionError: ('exact retry counts', {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 8, ('pos-99ec110ffc6246e8b7c4', 'PROT...4', 'PROTECT_STATE'): 4, ('pos-b27-volume-1', 'ORDER_PRICE_OBSERVATION'): 4, ('pos-b27-volume-1', 'PROTECT_STATE'): 4})\nassert Counter({('po...T_STATE'): 4}) == Counter({('po...T_STATE'): 4})\n  \n  Omitting 2 identical items, use -vv to show\n  Differing items:\n  {('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 8} != {('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 4}\n  {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 8} != {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 4}\n  Use -v to get more diff"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts"
+    ]
+  },
+  "stdout_sha256": "9ce86a4fb84999b2b55984abac9dce7ab456204da4abb461d4754b33e65af28f",
+  "junit_sha256": "8ae8027de3360feeefcc9294f4e4b117ad94be193c6748fc55eda97abd280f34",
+  "inventory_sha256": "b1a386ef637b863ad716d380117090d47c0ed4acfb500ce33d55e07f32e5633e",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "candidate_red_atomicity.json": "f48415bf4da231ef622949af05a4041614993f51fce1435c85d12886b25208ef",
+      "candidate_red_atomicity.xml": "2a4dc7b1922f67622a5cbc13074952cbda86639679f31e2c64698340a60130ab",
+      "candidate_red_atomicity_inventory.json": "637f573883e16f236e031f0e803419284c183616af2ce673a0cca5e75ad70aee",
+      "candidate_red_atomicity.txt": "9ce86a4fb84999b2b55984abac9dce7ab456204da4abb461d4754b33e65af28f"
+    }
+  }
+}

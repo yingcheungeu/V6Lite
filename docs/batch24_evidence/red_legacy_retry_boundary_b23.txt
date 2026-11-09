@@ -1,0 +1,14 @@
+...................F...............                                      [100%]
+================================== FAILURES ===================================
+__ test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on ___
+..\..\v6lite\tests\test_batch20_protection_equivalents.py:538: in test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on
+    waiting = _working(rig, pos['position_id'], 20)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch20_protection_equivalents.py:65: in _working
+    assert row['confirmed_remaining'] == row['pending_max_remaining'] == qty
+E   assert 30 == 20
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-3402c26ce7fb4501a45b orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:01:31+00:00 工作单证据时间=2026-10-06T14:02:14+00:00；BrokerError
+=========================== short test summary info ===========================
+FAILED ::test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger_protection_on
+1 failed, 34 passed in 4.69s

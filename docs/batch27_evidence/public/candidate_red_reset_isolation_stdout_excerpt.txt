@@ -1,0 +1,109 @@
+FE                                                                       [100%]
+=================================== ERRORS ====================================
+_ ERROR at teardown of test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails _
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\runner.py", line 353, in from_call
+  |     result: TResult | None = func()
+  |                              ^^^^^^
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\runner.py", line 245, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds),
+  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     raise exception
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\logging.py", line 858, in pytest_runtest_teardown
+  |     yield
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+  |     teardown.throw(exception)
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\capture.py", line 905, in pytest_runtest_teardown
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+  |     res = hook_impl.function(*args)
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\runner.py", line 194, in pytest_runtest_teardown
+  |     item.session._setupstate.teardown_exact(nextitem)
+  |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\runner.py", line 566, in teardown_exact
+  |     raise exceptions[0]
+  | ExceptionGroup: errors while tearing down <Function test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails> (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\runner.py", line 555, in teardown_exact
+    |     fin()
+    |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\fixtures.py", line 1053, in finish
+    |     raise exceptions[0]
+    |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\fixtures.py", line 1042, in finish
+    |     fin()
+    |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\fixtures.py", line 924, in _teardown_yield_fixture
+    |     next(it)
+    |   File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch27_observation_audit.py", line 169, in observation_rig
+    |     rig.store.close()
+    |   File "C:\Dev\V6Lite-dev\v6lite\store.py", line 321, in close
+    |     self.flush_observations(self._observation_clock(), reason="store_close")
+    |   File "C:\Dev\V6Lite-dev\v6lite\store.py", line 412, in flush_observations
+    |     self._observation_operation(lambda state: state.flush(self.audit, now, reason=reason))
+    |   File "C:\Dev\V6Lite-dev\v6lite\store.py", line 398, in _observation_operation
+    |     operation(candidate)
+    |   File "C:\Dev\V6Lite-dev\v6lite\store.py", line 412, in <lambda>
+    |     self._observation_operation(lambda state: state.flush(self.audit, now, reason=reason))
+    |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 28, in flush
+    |     write(now, "OBSERVATION_SUMMARY", position_id=pid, reason=reason,
+    |   File "C:\Dev\V6Lite-dev\v6lite\store.py", line 385, in audit
+    |     self.conn.execute("INSERT INTO audit(ts, kind, payload) VALUES (?, ?, ?)",
+    | sqlite3.IntegrityError: synthetic reset observer failure
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\runner.py", line 555, in teardown_exact
+    |     fin()
+    |   File "C:\Dev\V6Lite-dev\v6lite\broker\pacing.py", line 81, in reset
+    |     self.on_reset()
+    |   File "C:\Dev\V6Lite-dev\v6lite\broker\ibkr.py", line 440, in _reset_channels
+    |     self._observation_generation_handler(self._query_generation)
+    |   File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch27_reset_isolation.py", line 37, in <lambda>
+    |     lambda generation: rig.store.observation_generation(rig.clock.now(), generation))
+    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Dev\V6Lite-dev\v6lite\store.py", line 409, in observation_generation
+    |     self._observation_operation(lambda state: state.change_generation(self.audit, now, generation))
+    |   File "C:\Dev\V6Lite-dev\v6lite\store.py", line 398, in _observation_operation
+    |     operation(candidate)
+    |   File "C:\Dev\V6Lite-dev\v6lite\store.py", line 409, in <lambda>
+    |     self._observation_operation(lambda state: state.change_generation(self.audit, now, generation))
+    |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 39, in change_generation
+    |     self.flush(write, now, reason="connection_generation")
+    |   File "C:\Dev\V6Lite-dev\v6lite\observations.py", line 28, in flush
+    |     write(now, "OBSERVATION_SUMMARY", position_id=pid, reason=reason,
+    |   File "C:\Dev\V6Lite-dev\v6lite\store.py", line 385, in audit
+    |     self.conn.execute("INSERT INTO audit(ts, kind, payload) VALUES (?, ?, ?)",
+    | sqlite3.IntegrityError: synthetic reset observer failure
+    +------------------------------------
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.ibkr:ibkr.py:397 unsolicited openOrders End; channel poisoned
+WARNING  v6lite.ibkr:ibkr.py:516 [QUERY] channel=positions failed: positions: an earlier request has not ended yet (1 owed); evidence unavailable
+================================== FAILURES ===================================
+_ test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails _
+v6lite\tests\test_batch27_reset_isolation.py:43: in test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails
+    assert all(value == 0 for value in adapter._req_sent.values())
+E   assert False
+E    +  where False = all(<generator object test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails.<locals>.<genexpr> at 0x00000217791B0860>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.ibkr:ibkr.py:397 unsolicited openOrders End; channel poisoned
+WARNING  v6lite.ibkr:ibkr.py:516 [QUERY] channel=positions failed: positions: an earlier request has not ended yet (1 owed); evidence unavailable
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails
+  v6lite\tests\test_batch27_reset_isolation.py:13: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails
+ERROR v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails
+1 failed, 1 warning, 1 error in 1.71s

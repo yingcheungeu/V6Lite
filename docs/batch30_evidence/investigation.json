@@ -1,0 +1,44 @@
+{
+  "instruction_sha256": "97f1e552228934a2a3b851fcfef2cb64ce6af93f585b1781d5236629b8913493",
+  "exec_id": "0000dc8f.6bef670d.01.01",
+  "available_live_evidence": "Only user-provided sanitized instruction facts; no original Oct26 API callback DEBUG/log/DB provided. No runtime directory or broker was accessed.",
+  "specific_exec_root_cause": "Not uniquely proven: absence of commissionReport INFO logs is insufficient, as SDK INFO commission lines are demoted/filtered. Cannot assert TWS never sent or exact matching loss.",
+  "verified_paths": [
+    "Store commissions table accepts report before local fill; exact execId replay can update fees without booking economics twice.",
+    "Broker hooks commissionReportEvent before connection and reconnect; no missing-subscription defect identified.",
+    "Installed SDK wrapper updates canonical Fill commission but emits no commissionReportEvent when matching Trade is absent; a report before any canonical Fill is ignored.",
+    "Broker.executions_today already recovers commission from canonical wrapper.fills even when reqExecutions returns a new empty report.",
+    "Engine only periodically queried uncertain execution times, not commissions on closed fills; confirmed timestamps can leave missing commission indefinitely.",
+    "FILL_NOT_BOOKED commission_changed=False only describes that record_fill replay, not whether native TWS commission ever arrived.",
+    "Original full local daily report already has Test TP timeout section; remote ten-record card lacked it. Screenshot identity cannot be proved without the actual file.",
+    "Original TP fill audit captured uncertain time and null delta; later full query updated ledger time without rewriting immutable TP audit, while report still used old null."
+  ],
+  "sdk_version": "0.9.86",
+  "sdk_source_sha256": {
+    "wrapper.py": "4ed7299106979c0b2518658d4d3ef371fe5a39b254586254650edc35217cb0c1",
+    "decoder.py": "b06cbe24eca37e3386d0ab213deb43e493171e8cbb7c26060ea4936f97f79b4c",
+    "client.py": "1d86989d6815881ea88576e8e3bdcf34fe40d1da778dfee68619ee80e53a2822",
+    "ib.py": "b5f60220c941a335c47cbb0257a342e3122b1f07cc9f809a36a0e7c9b4ba84fc"
+  },
+  "no_real_broker_or_runtime_access": true,
+  "old_sizing_and_daily_stop_estimate": "estimate_fee minimum2USD/FILL remains unchanged; new closed-trade accounting floor1USD/history estimator is independent.",
+  "reviewers": [
+    "b30_commission_investigation: read-only SDK/repair/risk and artifact review",
+    "b30_report_audit_investigation: read-only lifecycle/report binding review"
+  ],
+  "resolved_review_findings": [
+    "Exact immutable send fallback without lost workflow",
+    "Malformed claim pricing conservative normal-B fallback",
+    "NULL position foreign-fill report safety",
+    "Closed per-exec estimate frozen despite future cfg/history",
+    "Actual negative fees same as existing adapter",
+    "Published local report silently refreshes final fees; successes not throttled; known OPEN/unbound current-day fees included"
+  ],
+  "report_scope": "Automatic silent fee refresh covers already-generated current trading-day local files; historical report command renders current ledger. No automatic historical runtime quote samples are invented.",
+  "offline_fixture_provenance": {
+    "prior_loss": "Only the prior loss classification is given; -2.00 USD and the prior fixture position id are synthetic seeds for testing the two-loss chain, not measured live P&L.",
+    "entry_344_52": "Inferred mean cost from the stated three 1-share sells (345.87,346.81,344.72) and gross3.84; original entry execution log was not provided.",
+    "reported_fee_distribution": "3.01 total is provided; the 1.01 BUY +1.00 TP1 +1.00 TP2 allocation is a controlled fixture choice, not a proven live per-exec breakdown. Runtime estimator uses actual booked comparable reports, not that allocation.",
+    "native_ids_and_cards": "All test orderIds, fixture position ids and MemoryChannel cards are offline synthetic artifacts; no live order or real notification was sent."
+  }
+}

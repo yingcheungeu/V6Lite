@@ -1,0 +1,207 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "candidate_red_edges_and_rulings",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T08:36:42.848197-07:00",
+  "end_pt": "2026-10-18T08:37:12.248508-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "39cc2d2230cb5590",
+  "source_unchanged": true,
+  "worktree_code_sha": "39cc2d2230cb5590",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "39cc2d2230cb55908bd336f19e70cd67efa0ace7acccb53279c01b8a912d5719",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observer_atomicity.py",
+      "sha256": "c48400b8ff14c415b2a94d4163eb783d63dce0660a97363da4ae3624a1923482"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_reset_isolation.py",
+      "sha256": "fa6d8899625b369541439a466a7ec6649ff0ce291cb3553bcecdc240994dc9b3"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_critical_attachments.py",
+      "sha256": "dfa9e321008d5f78bc69ccf28e54e4396cf988459aa3579a1eda4e046fd1179c"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_execution_log_aggregation.py",
+      "sha256": "6ef436b31b282adde8ab0736e5ff2a13aec57829de9f9e6bea2532c8032e8c50"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 17,
+    "failures": 17,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_observer_atomicity",
+      "name": "test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts",
+      "outcome": "failure",
+      "message": "AssertionError: ('exact retry counts', {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 8, ('pos-99ec110ffc6246e8b7c4', 'PROT...4', 'PROTECT_STATE'): 4, ('pos-b27-volume-1', 'ORDER_PRICE_OBSERVATION'): 4, ('pos-b27-volume-1', 'PROTECT_STATE'): 4})\nassert Counter({('po...T_STATE'): 4}) == Counter({('po...T_STATE'): 4})\n  \n  Omitting 2 identical items, use -vv to show\n  Differing items:\n  {('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 8} != {('pos-99ec110ffc6246e8b7c4', 'PROTECT_STATE'): 4}\n  {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 8} != {('pos-99ec110ffc6246e8b7c4', 'ORDER_PRICE_OBSERVATION'): 4}\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_reset_isolation",
+      "name": "test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails.<locals>.<genexpr> at 0x0000028E9E4BADC0>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_critical_attachments",
+      "name": "test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+      "outcome": "failure",
+      "message": "AssertionError: ('critical main report cap', 12627, 201)\nassert (12627 <= (100 * 1024) and 201 <= 200)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_critical_attachments",
+      "name": "test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+      "outcome": "failure",
+      "message": "AssertionError: ('critical main report cap', 12645, 201)\nassert (12645 <= (100 * 1024) and 201 <= 200)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_critical_attachments",
+      "name": "test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main",
+      "outcome": "failure",
+      "message": "AssertionError: main report must link the actual complete critical attachment\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+      "outcome": "failure",
+      "message": "AssertionError: ('full native normal lines', 2017, 2000, 2000)\nassert 2017 <= 2000\n +  where 2017 = len(['2026-10-18 08:36:44,998 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...,015 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41', ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+      "outcome": "failure",
+      "message": "AssertionError: fresh reqIds/timestamps cannot turn unchanged results into changes\nassert 3120 == 1\n +  where 3120 = len(['2026-10-18 08:36:46,113 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=10 zoned=0 naive=10 unparseable=0 sample=...26 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=10 zoned=0 naive=10 unparseable=0 sample=20261015 11:16:41', ...])\n +    where ['2026-10-18 08:36:46,113 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=10 zoned=0 naive=10 unparseable=0 sample=...26 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=10 zoned=0 naive=10 unparseable=0 sample=20261015 11:16:41', ...] = _normal_summaries('2026-10-18 08:36:46,113 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=10 zoned=0 naive=10 unparseable=0 sample=2...sages, 0 B received in 0 messages, session time 5.83 s.\\n2026-10-18 08:36:51,943 INFO ib_insync.client Disconnecting\\n')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+      "outcome": "failure",
+      "message": "AssertionError: ('full native normal lines', 2002, 2000, 2000)\nassert 2002 <= 2000\n +  where 2002 = len(['2026-10-18 08:36:51,978 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...,986 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41', ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+      "outcome": "failure",
+      "message": "AssertionError: ('full native normal lines', 10006, 10000, 10000)\nassert 10006 <= 10000\n +  where 10006 = len(['2026-10-18 08:36:53,079 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=10 zoned=0 naive=10 unparseable=0 sample=...94 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=10 zoned=0 naive=10 unparseable=0 sample=20261015 11:16:41', ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[exec_id]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 2 == 1\n +  where 2 = len(['2026-10-18 08:37:11,822 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20...37:11,826 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41'])\n +    where ['2026-10-18 08:37:11,822 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20...37:11,826 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41'] = _normal_summaries('2026-10-18 08:37:11,822 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=202...7:11,826 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41\\n')\n +      where '2026-10-18 08:37:11,822 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=202...7:11,826 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41\\n' = <function formatted_logs.<locals>.read at 0x0000028EBE69F100>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[price]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 2 == 1\n +  where 2 = len(['2026-10-18 08:37:11,843 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20...37:11,851 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41'])\n +    where ['2026-10-18 08:37:11,843 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20...37:11,851 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41'] = _normal_summaries('2026-10-18 08:37:11,843 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=202...7:11,851 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41\\n')\n +      where '2026-10-18 08:37:11,843 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=202...7:11,851 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=2 zoned=0 naive=2 unparseable=0 sample=20261015 11:16:41\\n' = <function formatted_logs.<locals>.read at 0x0000028EBE69DDA0>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:42]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 2 == 1\n +  where 2 = len(['2026-10-18 08:37:11,860 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...37:11,860 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41'])\n +    where ['2026-10-18 08:37:11,860 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...37:11,860 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41'] = _normal_summaries('2026-10-18 08:37:11,860 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=202...7:11,860 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41\\n')\n +      where '2026-10-18 08:37:11,860 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=202...7:11,860 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41\\n' = <function formatted_logs.<locals>.read at 0x0000028EBE64D260>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:41 UTC]",
+      "outcome": "failure",
+      "message": "AssertionError: assert 2 == 1\n +  where 2 = len(['2026-10-18 08:37:11,893 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...37:11,893 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41'])\n +    where ['2026-10-18 08:37:11,893 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...37:11,893 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41'] = _normal_summaries('2026-10-18 08:37:11,893 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=202...7:11,893 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41\\n')\n +      where '2026-10-18 08:37:11,893 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=202...7:11,893 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41\\n' = <function formatted_logs.<locals>.read at 0x0000028EBE5D65C0>()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_client_and_scoped_roles_do_not_force_per_query_signature_churn",
+      "outcome": "failure",
+      "message": "AssertionError: each role has one first result, not a new result every alternation\nassert 8 == 2\n +  where 8 = len(['2026-10-18 08:37:11,915 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...,918 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41', ...])\n +    where ['2026-10-18 08:37:11,915 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...,918 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41', ...] = _normal_summaries('2026-10-18 08:37:11,915 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=202...ages, 0 B received in 0 messages, session time 4.54 ms.\\n2026-10-18 08:37:11,919 INFO ib_insync.client Disconnecting\\n')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[unparseable]",
+      "outcome": "failure",
+      "message": "AssertionError: ('each abnormal query warning', 0)\nassert 0 == 2\n +  where 0 = len([])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[missing-End]",
+      "outcome": "failure",
+      "message": "AssertionError: ('each abnormal query warning', 0)\nassert 0 == 2\n +  where 0 = len([])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_execution_log_aggregation",
+      "name": "test_B27_execution_generation_flushes_counts_and_first_new_generation_is_info",
+      "outcome": "failure",
+      "message": "AssertionError: assert 5 == 2\n +  where 5 = len(['2026-10-18 08:37:11,960 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...37:11,960 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41'])\n +    where ['2026-10-18 08:37:11,960 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20...37:11,960 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41'] = _normal_summaries('2026-10-18 08:37:11,960 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=202...7:11,960 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41\\n')"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts",
+      "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[exec_id]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[price]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:42]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:41 UTC]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_client_and_scoped_roles_do_not_force_per_query_signature_churn",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[unparseable]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[missing-End]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_execution_generation_flushes_counts_and_first_new_generation_is_info"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts",
+      "v6lite/tests/test_batch27_reset_isolation.py::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+      "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[exec_id]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[price]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:42]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:41 UTC]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_client_and_scoped_roles_do_not_force_per_query_signature_churn",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[unparseable]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[missing-End]",
+      "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_execution_generation_flushes_counts_and_first_new_generation_is_info"
+    ]
+  },
+  "stdout_sha256": "9096907be4cfd0649b020c83040096582cbac40aec5e1d996c4eb36bd70f60bb",
+  "junit_sha256": "0881dfb48f0c02e053496582afb640a63000ca3aeec4cc7877016901d6cf3d19",
+  "inventory_sha256": "eb85f9c45d1bf56f033a0600f6ea9dab77ce6550238f23860a1255cee382a574",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "candidate_red_edges_and_rulings.json": "4a001a6eed66bc30e1accee08b65bd8063c9d7d41e408ccc459fa61c9b5c1193",
+      "candidate_red_edges_and_rulings.xml": "7d5d52cae41b7a831161dcb35e72a388d7ac5db00e9831547d68b92bcc2c84f1",
+      "candidate_red_edges_and_rulings_inventory.json": "0e9af2fb02ad16d4ae6f951ea165bff9e146044eba30a6a59bd33fc95625f98e",
+      "candidate_red_edges_and_rulings.txt": "9096907be4cfd0649b020c83040096582cbac40aec5e1d996c4eb36bd70f60bb"
+    }
+  }
+}

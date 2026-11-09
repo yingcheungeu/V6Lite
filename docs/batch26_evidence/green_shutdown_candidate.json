@@ -1,0 +1,329 @@
+{
+  "label": "green_shutdown_candidate",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-14T21:06:06.169148-07:00",
+  "end_pt": "2026-10-14T21:06:10.096241-07:00",
+  "returncode": 0,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "24a687da4ef8bc13",
+  "source_unchanged": true,
+  "worktree_code_sha": "24a687da4ef8bc13",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "24a687da4ef8bc13865ab67af29be9dc389bcc36d62219b349c4a0c708e6983c",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_shutdown_report.py",
+      "sha256": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 35,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_just_before_early_close_does_not_report[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_shutdown_just_before_early_close_does_not_report[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_written_local_report_marker_also_prevents_duplicate_rendering[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_written_local_report_marker_also_prevents_duplicate_rendering[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[Paper]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[dry-run]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_shutdown_report",
+      "name": "test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_just_before_early_close_does_not_report[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_just_before_early_close_does_not_report[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_written_local_report_marker_also_prevents_duplicate_rendering[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_written_local_report_marker_also_prevents_duplicate_rendering[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_before_regular_close_does_not_emit_a_daily_report[close-2m-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Saturday-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_on_a_nontrading_day_does_not_invent_a_daily_report[Thanksgiving-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_just_before_early_close_does_not_report[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_shutdown_just_before_early_close_does_not_report[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_scheduled_report_is_not_resent_at_shutdown_or_sqlite_reopen[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_written_local_report_marker_also_prevents_duplicate_rendering[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_written_local_report_marker_also_prevents_duplicate_rendering[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[known-delivery-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_already_generated_pending_report_is_not_retried_by_shutdown[unknown-after-SQLite-reopen-dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[Paper]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_normal_end_of_day_still_retries_a_failed_pending_delivery[dry-run]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render]",
+      "v6lite/tests/test_batch26_shutdown_report.py::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]"
+    ]
+  },
+  "stdout_sha256": "ab092366cb6cfd44a309e7da02d39fd2c0d00407e84476378b438c4a4c65c241",
+  "junit_sha256": "59b50cf6f245172f2d86edda589f2fcabbad4df341c8c075ef0c7a04c5124201",
+  "inventory_sha256": "1afa6c7ea3b9e88cb72ed887c4ad5ce302ff45e75d63758690bc831dbffceb3c"
+}

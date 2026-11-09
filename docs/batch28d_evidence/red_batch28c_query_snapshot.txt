@@ -1,0 +1,19 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___ test_B28d_query_snapshot_Cancelled_never_becomes_a_fast_cancel_receipt ____
+v6lite\tests\test_batch28d_cancel_edges.py:62: in test_B28d_query_snapshot_Cancelled_never_becomes_a_fast_cancel_receipt
+    assert all(not event.connection_snapshot and getattr(event, 'query_snapshot', False)
+E   AssertionError: [StatusEvent(intent_id='v6l-protect-1d2be01770ab45a39e33', raw_status='Cancelled', filled=0.0, remaining=1.0, broker_o...se, observed_at=datetime.datetime(2026, 10, 22, 15, 3, 55, 344000, tzinfo=datetime.timezone.utc), socket_generation=0)]
+E   assert False
+E    +  where False = all(<generator object test_B28d_query_snapshot_Cancelled_never_becomes_a_fast_cancel_receipt.<locals>.<genexpr> at 0x000001C6A0FE87C0>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.ibkr:ibkr.py:526 [QUERY] channel=openOrders failed: openOrders: request/End count mismatch (sent 13, ended 12, expected 12); evidence unavailable
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-b3172a8136c04fb682e2 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=1 股 保护单已确认=1 股 保护单可能=1 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–1） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-1d2be01770ab45a39e33 orderId=706 permId=50706 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=342.77；上次确认=2026-10-22T15:03:29.406000+00:00 工作单证据时间=2026-10-22T15:03:53.109000+00:00；持仓、工作单、执行三项证据查询失败：ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-b3172a8136c04fb682e2 | AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=1.0 股，账本=1 股，当前工作 STP S=未知 股；本地上次确认 STP S=1 股；GTC orderId=706 permId=50706；历史账本入场=b28b-1020-entry.01.01@2026-10-20；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-22T15:03:54.375000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+WARNING  v6lite.ibkr:ibkr.py:526 [QUERY] channel=openOrders failed: openOrders: an earlier request has not ended yet (1 owed); evidence unavailable
+WARNING  v6lite.ibkr:ibkr.py:526 [QUERY] channel=openOrders failed: openOrders: an earlier request has not ended yet (1 owed); evidence unavailable
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28d_cancel_edges.py::test_B28d_query_snapshot_Cancelled_never_becomes_a_fast_cancel_receipt
+1 failed in 53.74s

@@ -1,0 +1,36 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[exec_id]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[price]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:42]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:41 UTC]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_client_and_scoped_roles_do_not_force_per_query_signature_churn",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[unparseable]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[missing-End]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_execution_generation_flushes_counts_and_first_new_generation_is_info"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+    "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[exec_id]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_same_raw_counts_and_sample_but_economic_identity_change_is_immediate_info[price]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:42]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_raw_sample_or_classification_change_keeps_immediate_info[20261015 11:16:41 UTC]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_client_and_scoped_roles_do_not_force_per_query_signature_churn",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[unparseable]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_real_unparseable_or_incomplete_query_is_warning_every_time[missing-End]",
+    "v6lite/tests/test_batch27_execution_log_aggregation.py::test_B27_execution_generation_flushes_counts_and_first_new_generation_is_info"
+  ]
+}

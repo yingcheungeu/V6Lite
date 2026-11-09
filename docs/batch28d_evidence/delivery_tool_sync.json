@@ -1,0 +1,15 @@
+{
+  "scope": "task-only delivery tooling; production and test assertions unchanged",
+  "files": [
+    {
+      "file": "v6lite_b28d_closeout.py",
+      "before_sha256": "870e1094739eb429e5acc88d1f0f712d30daf2b59e5c59d3d67a3a9ff76e3d70",
+      "after_sha256": "d13df5047f3d76020e38fd8584ac201753e5fb0d5ee11edb70c8db8733d1183a"
+    },
+    {
+      "file": "v6lite_b28d_git_deliver.py",
+      "before_sha256": "2f54c4f1c83159506222d23614929086bb26fe5c6e4a68b5236f503851f5a7a4",
+      "after_sha256": "87f97c0d1ecf9f309a4e90e75a830388f7d94c40d2e82201e495fae2e263a40c"
+    }
+  ]
+}

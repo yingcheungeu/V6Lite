@@ -1,0 +1,19 @@
+{
+  "scope": "batch28 section2 on accepted batch28a",
+  "production_review": "passed; no blocking findings",
+  "resolved_findings": [
+    "detect same-day first restart after previous-day continuous process using prior runtime audit",
+    "flush due observation summaries after protection/exit work and defer during urgent continuation"
+  ],
+  "preserved_boundaries": [
+    "AccountReady and genuine funds timestamps",
+    "270-second funds entry gate",
+    "summary reqId/account/currency/End/sequence rules",
+    "actual reconnect subscription restoration",
+    "three-source takeover",
+    "critical-first event selection and exact UTF8 budgets",
+    "transactional candidate RAM publication after COMMIT"
+  ],
+  "historical_contract_review": "B10/G2 day1/G2 selfreview/review round2 migrations passed read-only review; rate limits, stale timestamps, no-order writes, and genuine simulated reply timing preserved; independent adapter resubscription tests unchanged",
+  "reviewer_actions": "read-only; no tests or broker access; root remains sole production implementer"
+}

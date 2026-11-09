@@ -1,0 +1,59 @@
+{
+  "reviewer": "/root",
+  "code_sha": "ea71abe782e4cf68",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "three_consecutive_default_full_runs": true,
+  "each_result": {
+    "passed": 1608,
+    "skipped": 1,
+    "failed": 0,
+    "errors": 0,
+    "total": 1609
+  },
+  "full_collection_retains_all_B24_nodes": true,
+  "all_cases_outcomes_and_inventories_identical": true,
+  "all_source_and_specs_unchanged": true,
+  "all_times_outside_trading_block": true,
+  "legacy_skip": [
+    {
+      "classname": "v6lite.tests.test_strategy_parity",
+      "name": "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "outcome": "skipped",
+      "message": "legacy market_scanner.py not present"
+    }
+  ],
+  "process_counts_after_full3": {
+    "unknown": 0,
+    "runtime": 0
+  },
+  "runs": [
+    {
+      "label": "full_1",
+      "start_pt": "2026-10-14T13:30:48.426564-07:00",
+      "end_pt": "2026-10-14T13:36:36.748889-07:00",
+      "receipt_sha256": "83b7a6a6c63ec4c325a7699635b453e4bad114ee4b55fdb82e7e6659336f080b",
+      "stdout_sha256": "b1eb94f9b49bd1949654f18f59f8db4e9739154d7a99bc95dacd0f5be7a09f04",
+      "junit_sha256": "4c5c59699f1ace65d09c79a58d1aad29f53bc6d10d4386c6d37e572b85528254",
+      "inventory_sha256": "7c0cae7b790248bbb0979884152a0a233ab3cdb1d34a5b0d270619a77c088abf"
+    },
+    {
+      "label": "full_2",
+      "start_pt": "2026-10-14T13:36:38.536969-07:00",
+      "end_pt": "2026-10-14T13:42:26.101298-07:00",
+      "receipt_sha256": "76eadada91480786a1c4a0930e469de09b0b9cd11feecb20c8efa393d809aaa5",
+      "stdout_sha256": "097ebfea0d3818b82edb00d7451f6f31471fb1576455da280dac57420ce3d52e",
+      "junit_sha256": "ca81f93e63971e5e0b67bc1fab2bf791c9ef2352e67715ab511cc47b4357f397",
+      "inventory_sha256": "7c0cae7b790248bbb0979884152a0a233ab3cdb1d34a5b0d270619a77c088abf"
+    },
+    {
+      "label": "full_3",
+      "start_pt": "2026-10-14T13:42:27.942400-07:00",
+      "end_pt": "2026-10-14T13:48:14.953677-07:00",
+      "receipt_sha256": "fb6725c89dfd447df5ca7c83ab0b0b4616c93afebe253571aa3b1f5cae0f991d",
+      "stdout_sha256": "7176a60785eee7e68a753969657e16d3bab4ec27617d61ea8527a33a587b1901",
+      "junit_sha256": "3ded0d0a707c6885c856d0c177f9aaa0d1b5197ec7ae4de9483fdb1d2326dfd3",
+      "inventory_sha256": "7c0cae7b790248bbb0979884152a0a233ab3cdb1d34a5b0d270619a77c088abf"
+    }
+  ]
+}

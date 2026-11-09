@@ -1,0 +1,6 @@
+{
+  "raw_log_path": "C:\\Dev\\V6Lite-dev\\docs\\batch28a_evidence\\previous_batches.txt",
+  "raw_log_sha256": "280c2d86763db759dffad9419505f3279c7be98c6c48c36bd8663a609fb4b850",
+  "qualified_product_result": false,
+  "reason": "missing pytest basetemp parent; 15 passed, 854 setup errors"
+}

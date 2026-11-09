@@ -1,0 +1,19 @@
+........................................................................ [ 27%]
+........................................................................ [ 54%]
+........................................................................ [ 82%]
+...............................................                          [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+  v6lite\tests\test_batch28b_overnight_refresh.py:204: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen(
+
+v6lite/tests/test_batch28_section2.py::test_B28_candidate_due_flush_is_atomic_across_positions_and_retry_exactly_once
+  v6lite\tests\test_batch28_section2.py:386: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28_candidate_due_flush_is_atomic_across_positions_and_retry_exactly_once(
+
+v6lite/tests/test_batch28_section2.py::test_B28_candidate_due_flush_respects_outer_rollback_and_unfinished_window
+  v6lite\tests\test_batch28_section2.py:415: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28_candidate_due_flush_respects_outer_rollback_and_unfinished_window(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+263 passed, 3 warnings in 59.89s

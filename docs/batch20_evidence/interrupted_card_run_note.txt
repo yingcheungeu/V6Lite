@@ -1,0 +1,1 @@
+Second serial full attempt deliberately stopped for card provenance: retired GTC execution incorrectly reused TP card wording; explicit refusal body still said unknown. Two independent scenario tests failed before fix, then corrected presentation. No complete run counted; final three runs restart from frozen source.

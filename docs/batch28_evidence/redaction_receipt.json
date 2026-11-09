@@ -1,0 +1,55 @@
+{
+  "final_full_1.xml": {
+    "raw_sha256": "18ecf2c801654b10aaa559a12f819cbb70c0ad6c39c8e89f1b0712dd6aab08cf",
+    "redacted_sha256": "6f18729535f346e75779f45df4f2513aa3362b9bb56b03d7cdb1c12192a886ec",
+    "synthetic_fixture_only": true,
+    "additional_steps": [
+      {
+        "input_sha256": "5eb8d374b96ebd3933d81afe47108bd276d4bd8a49b644e892e0ed4f402ece7f",
+        "output_sha256": "6f18729535f346e75779f45df4f2513aa3362b9bb56b03d7cdb1c12192a886ec",
+        "rule": "production redact_accounts: DFA/DU/DF/U/F/I"
+      }
+    ]
+  },
+  "final_full_2.xml": {
+    "raw_sha256": "cf5c17ef83f2f51c6fecd373ceb8f58546750a56aa62e2e2b2a3df8102fdd55d",
+    "redacted_sha256": "0341f67572e0f081918f10981dd84c2242ea823aaf7e327945d47417fd7f0f3d",
+    "synthetic_fixture_only": true,
+    "additional_steps": [
+      {
+        "input_sha256": "09e32bb775f531f4e7b3b21cc75a669af0a66a8402071a7754bdfd00110c4589",
+        "output_sha256": "0341f67572e0f081918f10981dd84c2242ea823aaf7e327945d47417fd7f0f3d",
+        "rule": "production redact_accounts: DFA/DU/DF/U/F/I"
+      }
+    ]
+  },
+  "final_full_3.xml": {
+    "raw_sha256": "88b667ed99635989a3d79a9bd398614bfed8afe9118b3aac47641a9bebff9443",
+    "redacted_sha256": "f07b21415f0349a07487bf1fcef00ddd0fba2201d1e6ee42277f9628692cbee4",
+    "synthetic_fixture_only": true,
+    "additional_steps": [
+      {
+        "input_sha256": "c774ea049e7fae0386d5fa7600ce4b1a2a3e97f24e8dd050b5d279a83144b0a8",
+        "output_sha256": "f07b21415f0349a07487bf1fcef00ddd0fba2201d1e6ee42277f9628692cbee4",
+        "rule": "production redact_accounts: DFA/DU/DF/U/F/I"
+      }
+    ]
+  },
+  "focused_legacy_initial_actual.txt": {
+    "raw_sha256": "9c05df33d0e772b61bb34b5d7205975af130691796058732fa2d8dec12621b58",
+    "redacted_sha256": "bcf85d3d955977ed12d72ea16a87aa2430d203081d4395ced00f60de0d98d2be",
+    "synthetic_fixture_only": true
+  },
+  "release_full_1.xml": {
+    "raw_sha256": "51bbd9fd38b010652e7bb9bd502509f1ec2cda5a732206931341a186da3f41ae",
+    "redacted_sha256": "21c111a7933702417ac6d75f0e47049d0ab7653b2f6de718a3203902780fa888",
+    "synthetic_fixture_only": true,
+    "additional_steps": [
+      {
+        "input_sha256": "77014db2e7cf1edf51bb753a00293ef75b2cd353cd1f7b72d5527d685758214d",
+        "output_sha256": "21c111a7933702417ac6d75f0e47049d0ab7653b2f6de718a3203902780fa888",
+        "rule": "production redact_accounts: DFA/DU/DF/U/F/I"
+      }
+    ]
+  }
+}

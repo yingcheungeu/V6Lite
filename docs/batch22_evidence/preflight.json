@@ -1,0 +1,11 @@
+{
+  "branch": "dev",
+  "baseline_ref": "v6lite-batch20",
+  "baseline_commit": "c5a39952635943dde5f1ae7f2a52da84c8327375",
+  "baseline_original_code_sha": "cfe16edd7a7e4d7f",
+  "baseline_path": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite_B22_baseline_jxkdvlvj\\source",
+  "instructions_sha256": "14206477aab33bdc242e331d88745695d0f828e8c9744d49eaa20df4ed43c18a",
+  "manual_untouched_sha256": "5d7eb6f043f4d933019f36b6cbfd28b28f8474c0b7097261f9bb77ae627133bf",
+  "initial_v6lite_process_count": 0,
+  "runtime_or_user_state_accessed": false
+}

@@ -1,0 +1,38 @@
+FF..............................                                         [100%]
+================================== FAILURES ===================================
+___ test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder] ____
+v6lite\tests\test_batch31_overnight.py:68: in test_B31_oct27_actual_restoration_pending_ack_and_TP2_close
+    assert (observed-rig.engine._protection_price_requests[pid][1]).total_seconds()==.107
+E   assert 1.107 == 0.107
+E    +  where 1.107 = <built-in method total_seconds of datetime.timedelta object at 0x000001F0F6BF10B0>()
+E    +    where <built-in method total_seconds of datetime.timedelta object at 0x000001F0F6BF10B0> = (datetime.datetime(2026, 10, 27, 13, 33, 28, 108000, tzinfo=datetime.timezone.utc) - datetime.datetime(2026, 10, 27, 13, 33, 27, 1000, tzinfo=datetime.timezone.utc)).total_seconds
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+___ test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round] ____
+v6lite\tests\test_batch31_overnight.py:68: in test_B31_oct27_actual_restoration_pending_ack_and_TP2_close
+    assert (observed-rig.engine._protection_price_requests[pid][1]).total_seconds()==.107
+E   assert 1.107 == 0.107
+E    +  where 1.107 = <built-in method total_seconds of datetime.timedelta object at 0x000001F0F6BE5830>()
+E    +    where <built-in method total_seconds of datetime.timedelta object at 0x000001F0F6BE5830> = (datetime.datetime(2026, 10, 27, 13, 33, 28, 108000, tzinfo=datetime.timezone.utc) - datetime.datetime(2026, 10, 27, 13, 33, 27, 1000, tzinfo=datetime.timezone.utc)).total_seconds
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:62: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60
+  v6lite\tests\test_batch31_overnight.py:196: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60(oct27,record_property):
+
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+  v6lite\tests\test_batch31_close_card.py:9: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('arrival',[.009,None])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+2 failed, 30 passed, 5 warnings in 10.92s

@@ -1,0 +1,17 @@
+..F.............                                                         [100%]
+================================== FAILURES ===================================
+____ test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick ____
+v6lite\tests\test_batch28c_pair_window.py:31: in test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick
+    assert not [(at, code) for at, code, _ in server.requests if server.ack_at <= at < server.ack_at+.40]
+E   AssertionError: assert not [(171776.515, '16')]
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch28c_pair_window.py::test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick
+  v6lite\tests\test_batch28c_pair_window.py:21: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28c_pair_window.py::test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick
+1 failed, 15 passed, 1 warning in 11.43s

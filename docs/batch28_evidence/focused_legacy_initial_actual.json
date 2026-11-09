@@ -1,0 +1,78 @@
+{
+  "label": "focused_legacy_initial_actual",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T19:37:23.405209-07:00",
+  "end_pt": "2026-10-20T19:37:30.526050-07:00",
+  "seconds": 7.125,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch17_heartbeat_account.py",
+    "v6lite/tests/test_batch19.py",
+    "v6lite/tests/test_batch27_observer_atomicity.py",
+    "v6lite/tests/test_batch28_lifecycle.py"
+  ],
+  "tests": 58,
+  "failures": 9,
+  "errors": 0,
+  "skipped": 0,
+  "source_unchanged": true,
+  "inventory_sha256": "fc09526414aaeb2c44db0b2057d6fed5dc23c02e60d610fac386906f2c902231",
+  "incomplete": false,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_held_account_silent_stream_keeps_warning_and_original_refresh[managed]",
+      "kind": "failure",
+      "message": "assert ([<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">] and 10 == 30)\n +  where 10 = <LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">.levelno\n +  and   30 = logging.WARNING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_held_account_silent_stream_keeps_warning_and_original_refresh[broker_only]",
+      "kind": "failure",
+      "message": "assert ([<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">] and 10 == 30)\n +  where 10 = <LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">.levelno\n +  and   30 = logging.WARNING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[stale_snapshot]",
+      "kind": "failure",
+      "message": "AssertionError: ('stale_snapshot', [<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\nassert (1 == 1 and 10 == 30)\n +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\n +  and   10 = <LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">.levelno\n +  and   30 = logging.WARNING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[clock_backwards]",
+      "kind": "failure",
+      "message": "AssertionError: ('clock_backwards', [<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\nassert (1 == 1 and 10 == 30)\n +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\n +  and   10 = <LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">.levelno\n +  and   30 = logging.WARNING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[new_fill_after_snapshot]",
+      "kind": "failure",
+      "message": "AssertionError: ('new_fill_after_snapshot', [<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\nassert (1 == 1 and 10 == 30)\n +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\n +  and   10 = <LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">.levelno\n +  and   30 = logging.WARNING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[same_timestamp_fill]",
+      "kind": "failure",
+      "message": "AssertionError: ('same_timestamp_fill', [<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\nassert (1 == 1 and 10 == 30)\n +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\n +  and   10 = <LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">.levelno\n +  and   30 = logging.WARNING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[active_intent]",
+      "kind": "failure",
+      "message": "AssertionError: ('active_intent', [<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\nassert (1 == 1 and 10 == 30)\n +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\n +  and   10 = <LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">.levelno\n +  and   30 = logging.WARNING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[query_failed]",
+      "kind": "failure",
+      "message": "AssertionError: ('query_failed', [<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\nassert (1 == 1 and 10 == 30)\n +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\n +  and   10 = <LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">.levelno\n +  and   30 = logging.WARNING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_excluded_external_stock_fill_invalidates_cached_flat_telemetry_without_booking_or_orders",
+      "kind": "failure",
+      "message": "AssertionError: [<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">]\nassert (1 == 1 and 10 == 30)\n +  where 1 = len([<LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">])\n +  and   10 = <LogRecord: v6lite.engine, 10, C:\\Dev\\V6Lite-dev\\v6lite\\engine.py, 1295, \"[ACCOUNT_STREAM] silent since %s; funds snapshot requested%s\">.levelno\n +  and   30 = logging.WARNING"
+    }
+  ]
+}

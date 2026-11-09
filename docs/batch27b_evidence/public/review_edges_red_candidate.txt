@@ -1,0 +1,25 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+_ test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-nonempty-intent-conflict] _
+v6lite\tests\test_batch27b_review_edges.py:80: in test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict
+    assert _p1(rig),'historical receipt proof cannot waive a contradictory nonempty native identity'
+E   AssertionError: historical receipt proof cannot waive a contradictory nonempty native identity
+E   assert []
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x0000017775298050>)
+_ test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-positive-conId-conflict] _
+v6lite\tests\test_batch27b_review_edges.py:80: in test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict
+    assert _p1(rig),'historical receipt proof cannot waive a contradictory nonempty native identity'
+E   AssertionError: historical receipt proof cannot waive a contradictory nonempty native identity
+E   assert []
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x00000177752C3390>)
+_ test_B27b_review_correct_today_account_row_cannot_hide_client_same_exec_positive_conId_conflict _
+v6lite\tests\test_batch27b_review_edges.py:103: in test_B27b_review_correct_today_account_row_cannot_hide_client_same_exec_positive_conId_conflict
+    assert _p1(rig),'matching scoped account row cannot erase a conflicting visible client row'
+E   AssertionError: matching scoped account row cannot erase a conflicting visible client row
+E   assert []
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x0000017753A182D0>)
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-nonempty-intent-conflict]
+FAILED v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_wide_historical_time_fallback_never_waives_explicit_client_identity_conflict[historical-positive-conId-conflict]
+FAILED v6lite/tests/test_batch27b_review_edges.py::test_B27b_review_correct_today_account_row_cannot_hide_client_same_exec_positive_conId_conflict
+3 failed in 2.07s

@@ -1,0 +1,15 @@
+........F....                                                            [100%]
+================================== FAILURES ===================================
+_ test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze] _
+v6lite\tests\test_batch26_constraint_policy.py:175: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert _overnight_p1(rig) == [], 'healthy default-freeze takeover must retain B25 silence'
+E   AssertionError: healthy default-freeze takeover must retain B25 silence
+E   assert ['overnight T...差异，不要盲目新增卖单。'] == []
+E     
+E     Left contains one more item: 'overnight TP evidence pos-0a91323fe3964442830a\nAAPL：overnight_tp=freeze：默认只保留止损，过夜自动止盈/保本受限制；券商 P=3 股，账本=3 股，STP S=3...与券商一致。\n影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-0a91323fe3964442830a | AAPL：overnight_tp=freeze：默认只保留止损，过夜自动止盈/保本受限制；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]
+1 failed, 12 passed in 2.52s

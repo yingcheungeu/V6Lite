@@ -1,0 +1,25 @@
+......................................................FFF............... [ 76%]
+......................                                                   [100%]
+================================== FAILURES ===================================
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price] __
+v6lite\tests\test_batch23_error_provenance.py:359: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert reason in report and 'END-DAILY-' + source in report, 'the full local daily report must keep broker reason, not the 160-character event preview'
+E   AssertionError: the full local daily report must keep broker reason, not the 160-character event preview
+E   assert ('Synthetic order_price diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保... 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-order_price' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU0000000   state role: formal\n- code_sha: bff2493663a08b43\..."signals": [["AAPL", 78]], "vix": 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal] _
+v6lite\tests\test_batch23_error_provenance.py:359: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert reason in report and 'END-DAILY-' + source in report, 'the full local daily report must keep broker reason, not the 160-character event preview'
+E   AssertionError: the full local daily report must keep broker reason, not the 160-character event preview
+E   assert ('Synthetic protect_terminal diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文...原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-protect_terminal' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU0000000   state role: formal\n- code_sha: bff2493663a08b43\..."signals": [["AAPL", 78]], "vix": 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-d3ff2089237d46218845 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；券商已明确拒绝 STP 请求；禁止自动重挂；券商状态=Inactive code=201；取消诊断与执行权限独立核验；券商原因原文=Synthetic protect_terminal diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-protect_terminal
+_ test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query] _
+v6lite\tests\test_batch23_error_provenance.py:359: in test_B23_full_broker_reason_tail_survives_actual_daily_report
+    assert reason in report and 'END-DAILY-' + source in report, 'the full local daily report must keep broker reason, not the 160-character event preview'
+E   AssertionError: the full local daily report must keep broker reason, not the 160-character event preview
+E   assert ('Synthetic positions_query diagnostic: 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎...留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 完整保留原文🍎 END-DAILY-positions_query' in '# V6-Lite daily report 2026-10-06 (paper)\n\n- account: DU0000000   state role: formal\n- code_sha: bff2493663a08b43\..."signals": [["AAPL", 78]], "vix": 18.0}\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[order_price]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[protect_terminal]
+FAILED v6lite/tests/test_batch23_error_provenance.py::test_B23_full_broker_reason_tail_survives_actual_daily_report[positions_query]
+3 failed, 91 passed in 9.72s

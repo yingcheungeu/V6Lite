@@ -1,0 +1,70 @@
+FFFFFF                                                                   [100%]
+================================== FAILURES ===================================
+_ test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop] _
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:199: in test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority
+    events = _assert_full_diagnostic_and_report(rig, kind='PROTECT_BROKER_ERROR',
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: submit_stop
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection rejected AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=3 股 可能超卖=待核实（可能上界0） 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-fe703abdfbac40db85c2 orderId=- permId=- TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；BrokerError
+_ test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection] _
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:199: in test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority
+    events = _assert_full_diagnostic_and_report(rig, kind='PROTECT_BROKER_ERROR',
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: modify_protection
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection rejected AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-48453e1c0edc43e6b33a orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；BrokerError
+_ test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection] _
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:199: in test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority
+    events = _assert_full_diagnostic_and_report(rig, kind='PROTECT_BROKER_ERROR',
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: cancel_protection
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=1 股 保护单已确认=1 股 保护单可能=1 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–1） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-42c02e33834a41899a4d orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=113.53；上次确认=2026-10-06T14:01:35+00:00 工作单证据时间=2026-10-06T14:02:06+00:00；GTC cancel BrokerError
+_ test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL _
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:217: in test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL
+    _assert_full_diagnostic_and_report(rig, kind='BROKER_QUERY_ERROR',
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: executions_today
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-d2fec54bbcd74987a626 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；ProtectionEvidenceQueryError
+_ test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1] _
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:258: in test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission
+    _assert_full_diagnostic_and_report(rig, kind='BROKER_QUERY_ERROR',
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: release_account_executions_today
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-6ef8510aba7c4278ae89 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=0；取消诊断与执行权限独立核验；券商原因原文=券商未提供原因
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-6ef8510aba7c4278ae89 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；three-source evidence failed: BrokerError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:0000fa4e.00000002.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: release refused AAPL | account execution evidence unavailable: BrokerError
+_ test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2] _
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:258: in test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission
+    _assert_full_diagnostic_and_report(rig, kind='BROKER_QUERY_ERROR',
+..\diagnostic_specs\f5bcb0a7ab3d\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: release_account_executions_today
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-78a6a0477b424345b298 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；broker status=Cancelled; no unverified replacement；券商状态=Cancelled code=0；取消诊断与执行权限独立核验；券商原因原文=券商未提供原因
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-78a6a0477b424345b298 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:00:31+00:00；three-source evidence failed: BrokerError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:0000fa4e.00000002.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: release refused AAPL | account execution evidence unavailable: BrokerError
+=========================== short test summary info ===========================
+FAILED ::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop]
+FAILED ::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection]
+FAILED ::test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection]
+FAILED ::test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL
+FAILED ::test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1]
+FAILED ::test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2]
+6 failed in 1.32s

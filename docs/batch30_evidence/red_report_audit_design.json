@@ -1,0 +1,8 @@
+{
+  "external_test_path": "C:\\tmp\\test_batch30_report_audit_DRAFT.py",
+  "source_archive": "docs/batch30_evidence/red_report_audit_source.py.txt",
+  "source_sha256": "8368d1eb7c5c688c3f70217830fee5ea7e4fa15fe5e17345c43a7ef567099e66",
+  "production_matches_baseline_tag": true,
+  "new_source_imports": false,
+  "case_count": 6
+}

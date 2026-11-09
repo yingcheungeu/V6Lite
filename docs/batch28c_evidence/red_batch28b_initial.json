@@ -1,0 +1,18 @@
+{
+  "base": "v6lite-batch28b",
+  "base_commit": "0d9a72a90bbfe0519049dff42bce0b3e23a8f9b0",
+  "test_sha256": {
+    "v6lite/tests/test_batch28c_fill_race.py": "2ec981665c2419f285277be8047d447944d946e2f04506bdb49da5b8af5f2ed9",
+    "v6lite/tests/test_batch28c_native_latency.py": "9816e70ca76a7f3540e19db17aca959611e6a3c60ccfa0183cfa6c5125585046",
+    "v6lite/tests/test_batch28c_price_confirmation.py": "1a9f028489fb5c0145853d4cf5417186a2f66187cf2b2f1430aa9f59063f9846"
+  },
+  "start_pt": "2026-10-21T15:25:38.598255-07:00",
+  "end_pt": "2026-10-21T15:26:24.512614-07:00",
+  "returncode": 1,
+  "archive_sha256": "a353dd7de6ef25ec6cd3c4ecf1623d4e049d4fdd7286a5ba53911eaf132ed4ef",
+  "stdout_raw_sha256": "6e5edba7592f5d221f8aae9f86830482534d63ded2ba7cf81a886bd88cf835bf",
+  "tests": 22,
+  "failures": 14,
+  "errors": 1,
+  "skipped": 0
+}

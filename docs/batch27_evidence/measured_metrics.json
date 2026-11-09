@@ -1,0 +1,1340 @@
+{
+  "candidate_equivalence_before_edges_fix": {
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_report": "{\"events_lines\": 31, \"bytes\": 7533}",
+      "b27_scale_candidate": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 26, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}",
+      "b27_scale_reference": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 0, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 46531, \"PROTECT_STATE\": 46147}}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    }
+  },
+  "candidate_initial_69": {
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "16",
+      "b27_legacy_report_bytes": "2418"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 2416, \"events_lines\": 16, \"materialized_rows\": 24, \"python_peak_bytes\": 26293, \"seconds\": 0.0602265999186784}",
+      "b27_report_90000": "{\"bytes\": 2418, \"events_lines\": 16, \"materialized_rows\": 24, \"python_peak_bytes\": 25989, \"seconds\": 0.5431260000914335}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 5071, \"holdings\": 1, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 5071, \"holdings\": 10, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 5322, \"holdings\": 1, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 5322, \"holdings\": 10, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    }
+  },
+  "candidate_red_atomicity": {
+    "v6lite.tests.test_batch27_observer_atomicity::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts": {
+      "b27_new_flush_retry": "{\"after_retry_rows\": 3, \"counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 8, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 8, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 4, \"pos-b27-volume-1:PROTECT_STATE\": 4}, \"partial_rows_after_failure\": 1}"
+    }
+  },
+  "candidate_red_edges_and_rulings": {
+    "v6lite.tests.test_batch27_observer_atomicity::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts": {
+      "b27_new_flush_retry": "{\"after_retry_rows\": 3, \"counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 8, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 8, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 4, \"pos-b27-volume-1:PROTECT_STATE\": 4}, \"partial_rows_after_failure\": 1}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]": {
+      "b27_exec_budget_failure": "{\"completed_rounds\": 2001, \"normal_lines\": 2017, \"budget\": 2000}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]": {
+      "b27_exec_budget_failure": "{\"completed_rounds\": 2001, \"normal_lines\": 2002, \"budget\": 2000}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]": {
+      "b27_exec_budget_failure": "{\"completed_rounds\": 10001, \"normal_lines\": 10006, \"budget\": 10000}"
+    }
+  },
+  "candidate_time_and_mask_binding": {
+    "v6lite.tests.test_batch27_masked_report_budget::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice": {
+      "b27_masked_report_budget": "{\"displayed_event_rows\": 74, \"events_lines\": 82, \"main_bytes\": 78118, \"masked_event_line_bytes\": 1048, \"omitted_rows\": 926, \"source_event_line_bytes\": 888, \"source_rows\": 1000}"
+    }
+  },
+  "full_1": {
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]": {
+      "b27_true_p0_report": "{\"critical_records\": 1013, \"critical_sha256\": \"91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8\", \"events_lines\": 199, \"main_bytes\": 12918, \"shutdown\": false}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]": {
+      "b27_true_p0_report": "{\"critical_records\": 1014, \"critical_sha256\": \"5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2\", \"events_lines\": 199, \"main_bytes\": 12943, \"shutdown\": true}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main": {
+      "b27_critical_overflow": "{\"attachment_records\": 311, \"attachment_sha256\": \"1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2\", \"events_lines\": 47, \"main_bytes\": 66767, \"source_critical_records\": 300, \"source_payload_bytes\": 1373400}"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "16",
+      "b27_legacy_report_bytes": "2546"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 2544, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27134, \"seconds\": 0.05705780000425875}",
+      "b27_report_90000": "{\"bytes\": 2546, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27262, \"seconds\": 0.47009539999999106}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only": {
+      "b27_real_diagnostic_attachment": "{\"attachment_records\": 15, \"attachment_sha256\": \"a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48\", \"diagnostic_observation_rows\": 4, \"events_lines\": 20, \"main_bytes\": 2984, \"normal_observation_rows\": 1, \"tp_evidence_copies_added\": 0}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day": {
+      "b27_old_fill_today_diagnostics": "{\"attachment_sha256\": \"bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf\", \"diagnostic_receive_day\": \"2026-10-16\", \"diagnostic_rows\": 2, \"events_lines\": 10, \"main_bytes\": 1934, \"original_ledger_day\": \"2026-10-15\"}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_time_binding::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info": {
+      "b27_execution_time_binding": "{\"changed_exec_times\": 2, \"first_or_changed_info\": 2, \"native_ends\": 2, \"native_queries\": 2}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6521, \"holdings\": 1, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6521, \"holdings\": 10, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6882, \"holdings\": 1, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6882, \"holdings\": 10, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_masked_report_budget::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice": {
+      "b27_masked_report_budget": "{\"displayed_event_rows\": 62, \"events_lines\": 70, \"main_bytes\": 66228, \"masked_event_line_bytes\": 1048, \"omitted_rows\": 938, \"source_event_line_bytes\": 888, \"source_rows\": 1000}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-1:PROTECT_STATE\": 3120, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-2:PROTECT_STATE\": 3120, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-3:PROTECT_STATE\": 3120, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-4:PROTECT_STATE\": 3120, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-5:PROTECT_STATE\": 3120, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-6:PROTECT_STATE\": 3120, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-7:PROTECT_STATE\": 3120, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-8:PROTECT_STATE\": 3120, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-9:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-1:PROTECT_STATE\": 46800, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-2:PROTECT_STATE\": 46800, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-3:PROTECT_STATE\": 46800, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-4:PROTECT_STATE\": 46800, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-5:PROTECT_STATE\": 46800, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-6:PROTECT_STATE\": 46800, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-7:PROTECT_STATE\": 46800, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-8:PROTECT_STATE\": 46800, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-9:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observer_atomicity::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts": {
+      "b27_new_flush_retry": "{\"after_retry_rows\": 2, \"counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 4, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 4, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 4, \"pos-b27-volume-1:PROTECT_STATE\": 4}, \"partial_rows_after_failure\": 0}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_report": "{\"events_lines\": 31, \"bytes\": 7661}",
+      "b27_scale_candidate": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 26, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}",
+      "b27_scale_reference": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 0, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 46531, \"PROTECT_STATE\": 46147}}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change": {
+      "b27_actual_drain": "{\"ended\": 3, \"initial_ended\": 1, \"initial_sent\": 1, \"max_seconds\": 1.0499999523162842, \"native_positions\": 2, \"new_ended\": 2, \"new_sent\": 2, \"sent\": 3, \"summary_count\": 2, \"summary_drained\": 1}"
+    },
+    "v6lite.tests.test_batch27_reset_isolation::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails": {
+      "b27_reset_isolation": "native invalidation completed despite observer SQLite failure"
+    },
+    "v6lite.tests.test_batch27_short_account_budget::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice": {
+      "b27_short_account_report_budget": "{\"displayed_event_rows\": 66, \"events_lines\": 74, \"main_bytes\": 66392, \"masked_event_line_bytes\": 998, \"omission_notice_present\": true, \"omitted_rows\": 934, \"source_event_line_bytes\": 596, \"source_rows\": 1000}"
+    }
+  },
+  "full_1_attempt2": {
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]": {
+      "b27_true_p0_report": "{\"critical_records\": 1013, \"critical_sha256\": \"91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8\", \"events_lines\": 199, \"main_bytes\": 12918, \"shutdown\": false}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]": {
+      "b27_true_p0_report": "{\"critical_records\": 1014, \"critical_sha256\": \"5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2\", \"events_lines\": 199, \"main_bytes\": 12943, \"shutdown\": true}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main": {
+      "b27_critical_overflow": "{\"attachment_records\": 311, \"attachment_sha256\": \"1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2\", \"events_lines\": 47, \"main_bytes\": 66767, \"source_critical_records\": 300, \"source_payload_bytes\": 1373400}"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "16",
+      "b27_legacy_report_bytes": "2546"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 2544, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27192, \"seconds\": 0.0508181001059711}",
+      "b27_report_90000": "{\"bytes\": 2546, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27262, \"seconds\": 0.4403812000527978}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only": {
+      "b27_real_diagnostic_attachment": "{\"attachment_records\": 15, \"attachment_sha256\": \"a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48\", \"diagnostic_observation_rows\": 4, \"events_lines\": 20, \"main_bytes\": 2984, \"normal_observation_rows\": 1, \"tp_evidence_copies_added\": 0}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day": {
+      "b27_old_fill_today_diagnostics": "{\"attachment_sha256\": \"bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf\", \"diagnostic_receive_day\": \"2026-10-16\", \"diagnostic_rows\": 2, \"events_lines\": 10, \"main_bytes\": 1934, \"original_ledger_day\": \"2026-10-15\"}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_time_binding::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info": {
+      "b27_execution_time_binding": "{\"changed_exec_times\": 2, \"first_or_changed_info\": 2, \"native_ends\": 2, \"native_queries\": 2}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6521, \"holdings\": 1, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6521, \"holdings\": 10, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6882, \"holdings\": 1, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6882, \"holdings\": 10, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_masked_report_budget::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice": {
+      "b27_masked_report_budget": "{\"displayed_event_rows\": 62, \"events_lines\": 70, \"main_bytes\": 66228, \"masked_event_line_bytes\": 1048, \"omitted_rows\": 938, \"source_event_line_bytes\": 888, \"source_rows\": 1000}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-1:PROTECT_STATE\": 3120, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-2:PROTECT_STATE\": 3120, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-3:PROTECT_STATE\": 3120, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-4:PROTECT_STATE\": 3120, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-5:PROTECT_STATE\": 3120, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-6:PROTECT_STATE\": 3120, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-7:PROTECT_STATE\": 3120, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-8:PROTECT_STATE\": 3120, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-9:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-1:PROTECT_STATE\": 46800, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-2:PROTECT_STATE\": 46800, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-3:PROTECT_STATE\": 46800, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-4:PROTECT_STATE\": 46800, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-5:PROTECT_STATE\": 46800, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-6:PROTECT_STATE\": 46800, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-7:PROTECT_STATE\": 46800, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-8:PROTECT_STATE\": 46800, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-9:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observer_atomicity::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts": {
+      "b27_new_flush_retry": "{\"after_retry_rows\": 2, \"counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 4, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 4, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 4, \"pos-b27-volume-1:PROTECT_STATE\": 4}, \"partial_rows_after_failure\": 0}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_report": "{\"events_lines\": 31, \"bytes\": 7661}",
+      "b27_scale_candidate": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 26, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}",
+      "b27_scale_reference": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 0, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 46531, \"PROTECT_STATE\": 46147}}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change": {
+      "b27_actual_drain": "{\"ended\": 3, \"initial_ended\": 1, \"initial_sent\": 1, \"max_seconds\": 1.0499999523162842, \"native_positions\": 2, \"new_ended\": 2, \"new_sent\": 2, \"sent\": 3, \"summary_count\": 2, \"summary_drained\": 1}"
+    },
+    "v6lite.tests.test_batch27_reset_isolation::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails": {
+      "b27_reset_isolation": "native invalidation completed despite observer SQLite failure"
+    },
+    "v6lite.tests.test_batch27_short_account_budget::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice": {
+      "b27_short_account_report_budget": "{\"displayed_event_rows\": 66, \"events_lines\": 74, \"main_bytes\": 66392, \"masked_event_line_bytes\": 998, \"omission_notice_present\": true, \"omitted_rows\": 934, \"source_event_line_bytes\": 596, \"source_rows\": 1000}"
+    }
+  },
+  "full_2": {
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]": {
+      "b27_true_p0_report": "{\"critical_records\": 1013, \"critical_sha256\": \"91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8\", \"events_lines\": 199, \"main_bytes\": 12918, \"shutdown\": false}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]": {
+      "b27_true_p0_report": "{\"critical_records\": 1014, \"critical_sha256\": \"5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2\", \"events_lines\": 199, \"main_bytes\": 12943, \"shutdown\": true}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main": {
+      "b27_critical_overflow": "{\"attachment_records\": 311, \"attachment_sha256\": \"1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2\", \"events_lines\": 47, \"main_bytes\": 66767, \"source_critical_records\": 300, \"source_payload_bytes\": 1373400}"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "16",
+      "b27_legacy_report_bytes": "2546"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 2544, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27168, \"seconds\": 0.050970999989658594}",
+      "b27_report_90000": "{\"bytes\": 2546, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27238, \"seconds\": 0.43724579992704093}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only": {
+      "b27_real_diagnostic_attachment": "{\"attachment_records\": 15, \"attachment_sha256\": \"a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48\", \"diagnostic_observation_rows\": 4, \"events_lines\": 20, \"main_bytes\": 2984, \"normal_observation_rows\": 1, \"tp_evidence_copies_added\": 0}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day": {
+      "b27_old_fill_today_diagnostics": "{\"attachment_sha256\": \"bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf\", \"diagnostic_receive_day\": \"2026-10-16\", \"diagnostic_rows\": 2, \"events_lines\": 10, \"main_bytes\": 1934, \"original_ledger_day\": \"2026-10-15\"}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_time_binding::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info": {
+      "b27_execution_time_binding": "{\"changed_exec_times\": 2, \"first_or_changed_info\": 2, \"native_ends\": 2, \"native_queries\": 2}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6521, \"holdings\": 1, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6521, \"holdings\": 10, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6882, \"holdings\": 1, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6882, \"holdings\": 10, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_masked_report_budget::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice": {
+      "b27_masked_report_budget": "{\"displayed_event_rows\": 62, \"events_lines\": 70, \"main_bytes\": 66228, \"masked_event_line_bytes\": 1048, \"omitted_rows\": 938, \"source_event_line_bytes\": 888, \"source_rows\": 1000}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-1:PROTECT_STATE\": 3120, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-2:PROTECT_STATE\": 3120, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-3:PROTECT_STATE\": 3120, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-4:PROTECT_STATE\": 3120, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-5:PROTECT_STATE\": 3120, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-6:PROTECT_STATE\": 3120, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-7:PROTECT_STATE\": 3120, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-8:PROTECT_STATE\": 3120, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-9:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-1:PROTECT_STATE\": 46800, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-2:PROTECT_STATE\": 46800, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-3:PROTECT_STATE\": 46800, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-4:PROTECT_STATE\": 46800, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-5:PROTECT_STATE\": 46800, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-6:PROTECT_STATE\": 46800, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-7:PROTECT_STATE\": 46800, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-8:PROTECT_STATE\": 46800, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-9:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observer_atomicity::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts": {
+      "b27_new_flush_retry": "{\"after_retry_rows\": 2, \"counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 4, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 4, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 4, \"pos-b27-volume-1:PROTECT_STATE\": 4}, \"partial_rows_after_failure\": 0}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_report": "{\"events_lines\": 31, \"bytes\": 7661}",
+      "b27_scale_candidate": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 26, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}",
+      "b27_scale_reference": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 0, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 46531, \"PROTECT_STATE\": 46147}}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change": {
+      "b27_actual_drain": "{\"ended\": 3, \"initial_ended\": 1, \"initial_sent\": 1, \"max_seconds\": 1.0499999523162842, \"native_positions\": 2, \"new_ended\": 2, \"new_sent\": 2, \"sent\": 3, \"summary_count\": 2, \"summary_drained\": 1}"
+    },
+    "v6lite.tests.test_batch27_reset_isolation::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails": {
+      "b27_reset_isolation": "native invalidation completed despite observer SQLite failure"
+    },
+    "v6lite.tests.test_batch27_short_account_budget::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice": {
+      "b27_short_account_report_budget": "{\"displayed_event_rows\": 66, \"events_lines\": 74, \"main_bytes\": 66392, \"masked_event_line_bytes\": 998, \"omission_notice_present\": true, \"omitted_rows\": 934, \"source_event_line_bytes\": 596, \"source_rows\": 1000}"
+    }
+  },
+  "full_3": {
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]": {
+      "b27_true_p0_report": "{\"critical_records\": 1013, \"critical_sha256\": \"91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8\", \"events_lines\": 199, \"main_bytes\": 12918, \"shutdown\": false}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]": {
+      "b27_true_p0_report": "{\"critical_records\": 1014, \"critical_sha256\": \"5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2\", \"events_lines\": 199, \"main_bytes\": 12943, \"shutdown\": true}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main": {
+      "b27_critical_overflow": "{\"attachment_records\": 311, \"attachment_sha256\": \"1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2\", \"events_lines\": 47, \"main_bytes\": 66767, \"source_critical_records\": 300, \"source_payload_bytes\": 1373400}"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "16",
+      "b27_legacy_report_bytes": "2546"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 2544, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27134, \"seconds\": 0.052096799947321415}",
+      "b27_report_90000": "{\"bytes\": 2546, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27262, \"seconds\": 0.45693360012955964}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only": {
+      "b27_real_diagnostic_attachment": "{\"attachment_records\": 15, \"attachment_sha256\": \"a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48\", \"diagnostic_observation_rows\": 4, \"events_lines\": 20, \"main_bytes\": 2984, \"normal_observation_rows\": 1, \"tp_evidence_copies_added\": 0}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day": {
+      "b27_old_fill_today_diagnostics": "{\"attachment_sha256\": \"bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf\", \"diagnostic_receive_day\": \"2026-10-16\", \"diagnostic_rows\": 2, \"events_lines\": 10, \"main_bytes\": 1934, \"original_ledger_day\": \"2026-10-15\"}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_time_binding::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info": {
+      "b27_execution_time_binding": "{\"changed_exec_times\": 2, \"first_or_changed_info\": 2, \"native_ends\": 2, \"native_queries\": 2}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6521, \"holdings\": 1, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6521, \"holdings\": 10, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6882, \"holdings\": 1, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6882, \"holdings\": 10, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_masked_report_budget::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice": {
+      "b27_masked_report_budget": "{\"displayed_event_rows\": 62, \"events_lines\": 70, \"main_bytes\": 66228, \"masked_event_line_bytes\": 1048, \"omitted_rows\": 938, \"source_event_line_bytes\": 888, \"source_rows\": 1000}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-1:PROTECT_STATE\": 3120, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-2:PROTECT_STATE\": 3120, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-3:PROTECT_STATE\": 3120, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-4:PROTECT_STATE\": 3120, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-5:PROTECT_STATE\": 3120, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-6:PROTECT_STATE\": 3120, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-7:PROTECT_STATE\": 3120, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-8:PROTECT_STATE\": 3120, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-9:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-1:PROTECT_STATE\": 46800, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-2:PROTECT_STATE\": 46800, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-3:PROTECT_STATE\": 46800, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-4:PROTECT_STATE\": 46800, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-5:PROTECT_STATE\": 46800, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-6:PROTECT_STATE\": 46800, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-7:PROTECT_STATE\": 46800, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-8:PROTECT_STATE\": 46800, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-9:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observer_atomicity::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts": {
+      "b27_new_flush_retry": "{\"after_retry_rows\": 2, \"counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 4, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 4, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 4, \"pos-b27-volume-1:PROTECT_STATE\": 4}, \"partial_rows_after_failure\": 0}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_report": "{\"events_lines\": 31, \"bytes\": 7661}",
+      "b27_scale_candidate": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 26, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}",
+      "b27_scale_reference": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 0, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 46531, \"PROTECT_STATE\": 46147}}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change": {
+      "b27_actual_drain": "{\"ended\": 3, \"initial_ended\": 1, \"initial_sent\": 1, \"max_seconds\": 1.0499999523162842, \"native_positions\": 2, \"new_ended\": 2, \"new_sent\": 2, \"sent\": 3, \"summary_count\": 2, \"summary_drained\": 1}"
+    },
+    "v6lite.tests.test_batch27_reset_isolation::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails": {
+      "b27_reset_isolation": "native invalidation completed despite observer SQLite failure"
+    },
+    "v6lite.tests.test_batch27_short_account_budget::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice": {
+      "b27_short_account_report_budget": "{\"displayed_event_rows\": 66, \"events_lines\": 74, \"main_bytes\": 66392, \"masked_event_line_bytes\": 998, \"omission_notice_present\": true, \"omitted_rows\": 934, \"source_event_line_bytes\": 596, \"source_rows\": 1000}"
+    }
+  },
+  "green_review_boundaries": {
+    "v6lite.tests.test_batch27_execution_time_binding::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info": {
+      "b27_execution_time_binding": "{\"changed_exec_times\": 2, \"first_or_changed_info\": 2, \"native_ends\": 2, \"native_queries\": 2}"
+    },
+    "v6lite.tests.test_batch27_short_account_budget::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice": {
+      "b27_short_account_report_budget": "{\"displayed_event_rows\": 66, \"events_lines\": 74, \"main_bytes\": 66392, \"masked_event_line_bytes\": 998, \"omission_notice_present\": true, \"omitted_rows\": 934, \"source_event_line_bytes\": 596, \"source_rows\": 1000}"
+    },
+    "v6lite.tests.test_batch27_masked_report_budget::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice": {
+      "b27_masked_report_budget": "{\"displayed_event_rows\": 62, \"events_lines\": 70, \"main_bytes\": 66228, \"masked_event_line_bytes\": 1048, \"omitted_rows\": 938, \"source_event_line_bytes\": 888, \"source_rows\": 1000}"
+    },
+    "v6lite.tests.test_batch27_observer_atomicity::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts": {
+      "b27_new_flush_retry": "{\"after_retry_rows\": 2, \"counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 4, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 4, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 4, \"pos-b27-volume-1:PROTECT_STATE\": 4}, \"partial_rows_after_failure\": 0}"
+    },
+    "v6lite.tests.test_batch27_reset_isolation::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails": {
+      "b27_reset_isolation": "native invalidation completed despite observer SQLite failure"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]": {
+      "b27_true_p0_report": "{\"critical_records\": 1013, \"critical_sha256\": \"91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8\", \"events_lines\": 199, \"main_bytes\": 12918, \"shutdown\": false}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]": {
+      "b27_true_p0_report": "{\"critical_records\": 1014, \"critical_sha256\": \"5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2\", \"events_lines\": 199, \"main_bytes\": 12943, \"shutdown\": true}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main": {
+      "b27_critical_overflow": "{\"attachment_records\": 311, \"attachment_sha256\": \"1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2\", \"events_lines\": 53, \"main_bytes\": 66816, \"source_critical_records\": 300, \"source_payload_bytes\": 1373400}"
+    }
+  },
+  "legacy_report_repair": {
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only": {
+      "b27_real_diagnostic_attachment": "{\"attachment_records\": 15, \"attachment_sha256\": \"a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48\", \"diagnostic_observation_rows\": 4, \"events_lines\": 20, \"main_bytes\": 2984, \"normal_observation_rows\": 1, \"tp_evidence_copies_added\": 0}"
+    }
+  },
+  "legacy_report_repair_calibrated": {
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only": {
+      "b27_real_diagnostic_attachment": "{\"attachment_records\": 15, \"attachment_sha256\": \"a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48\", \"diagnostic_observation_rows\": 4, \"events_lines\": 20, \"main_bytes\": 2984, \"normal_observation_rows\": 1, \"tp_evidence_copies_added\": 0}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day": {
+      "b27_old_fill_today_diagnostics": "{\"attachment_sha256\": \"bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf\", \"diagnostic_receive_day\": \"2026-10-16\", \"diagnostic_rows\": 2, \"events_lines\": 10, \"main_bytes\": 1934, \"original_ledger_day\": \"2026-10-15\"}"
+    }
+  },
+  "red_b26_calibrated": {
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "6",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "60",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "6",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "60",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "45007",
+      "b27_legacy_report_bytes": "8866913"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 986913, \"events_lines\": 5007, \"materialized_rows\": 5018, \"python_peak_bytes\": 8533955, \"seconds\": 0.25479769986122847}",
+      "b27_report_90000": "{\"bytes\": 8866913, \"events_lines\": 45007, \"materialized_rows\": 45018, \"python_peak_bytes\": 77732091, \"seconds\": 2.242043799953535}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "2408",
+      "b27_failure_completed_rounds": "801",
+      "b27_log_line_budget": "2000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "12026",
+      "b27_failure_completed_rounds": "1001",
+      "b27_log_line_budget": "10000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "2408",
+      "b27_failure_completed_rounds": "801",
+      "b27_log_line_budget": "2000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "12026",
+      "b27_failure_completed_rounds": "1001",
+      "b27_log_line_budget": "10000"
+    }
+  },
+  "red_b26_equivalence": {
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_failure_kind": "PROTECT_STATE",
+      "b27_scale_failure_rows": "6",
+      "b27_scale_completed_rounds": "5"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    }
+  },
+  "red_b26_equivalence_calibrated": {
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_failure_kind": "PROTECT_STATE",
+      "b27_scale_failure_rows": "6",
+      "b27_scale_completed_rounds": "5"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    }
+  },
+  "red_b26_initial": {
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "45007",
+      "b27_legacy_report_bytes": "8866913"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 986913, \"events_lines\": 5007, \"materialized_rows\": 5018, \"python_peak_bytes\": 8528011, \"seconds\": 0.22726329998113215}",
+      "b27_report_90000": "{\"bytes\": 8866913, \"events_lines\": 45007, \"materialized_rows\": 45018, \"python_peak_bytes\": 77732619, \"seconds\": 2.1765447000507265}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "2408",
+      "b27_failure_completed_rounds": "801",
+      "b27_log_line_budget": "2000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "12026",
+      "b27_failure_completed_rounds": "1001",
+      "b27_log_line_budget": "10000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "2408",
+      "b27_failure_completed_rounds": "801",
+      "b27_log_line_budget": "2000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "12026",
+      "b27_failure_completed_rounds": "1001",
+      "b27_log_line_budget": "10000"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "6",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "60",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "6",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "60",
+      "b27_completed_rounds": "6"
+    }
+  },
+  "red_b27b_calibrated": {
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "6",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "60",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "6",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "60",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "45007",
+      "b27_legacy_report_bytes": "8866999"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 986999, \"events_lines\": 5007, \"materialized_rows\": 5018, \"python_peak_bytes\": 8535423, \"seconds\": 0.24315989995375276}",
+      "b27_report_90000": "{\"bytes\": 8866999, \"events_lines\": 45007, \"materialized_rows\": 45018, \"python_peak_bytes\": 77733269, \"seconds\": 2.241357799852267}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "2408",
+      "b27_failure_completed_rounds": "801",
+      "b27_log_line_budget": "2000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "12026",
+      "b27_failure_completed_rounds": "1001",
+      "b27_log_line_budget": "10000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "2408",
+      "b27_failure_completed_rounds": "801",
+      "b27_log_line_budget": "2000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "12026",
+      "b27_failure_completed_rounds": "1001",
+      "b27_log_line_budget": "10000"
+    }
+  },
+  "red_b27b_equivalence": {
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_failure_kind": "PROTECT_STATE",
+      "b27_scale_failure_rows": "6",
+      "b27_scale_completed_rounds": "5"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    }
+  },
+  "red_b27b_equivalence_calibrated": {
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_failure_kind": "PROTECT_STATE",
+      "b27_scale_failure_rows": "6",
+      "b27_scale_completed_rounds": "5"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    }
+  },
+  "red_b27b_initial": {
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "45007",
+      "b27_legacy_report_bytes": "8866999"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 986999, \"events_lines\": 5007, \"materialized_rows\": 5018, \"python_peak_bytes\": 8529223, \"seconds\": 0.23159099998883903}",
+      "b27_report_90000": "{\"bytes\": 8866999, \"events_lines\": 45007, \"materialized_rows\": 45018, \"python_peak_bytes\": 77733807, \"seconds\": 2.193960699951276}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "2408",
+      "b27_failure_completed_rounds": "801",
+      "b27_log_line_budget": "2000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "12026",
+      "b27_failure_completed_rounds": "1001",
+      "b27_log_line_budget": "10000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "2408",
+      "b27_failure_completed_rounds": "801",
+      "b27_log_line_budget": "2000"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_normal_lines": "12026",
+      "b27_failure_completed_rounds": "1001",
+      "b27_log_line_budget": "10000"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "6",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "60",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "6",
+      "b27_completed_rounds": "6"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_failure_kind": "ORDER_PRICE_OBSERVATION",
+      "b27_failure_writes": "60",
+      "b27_completed_rounds": "6"
+    }
+  },
+  "red_b27b_rulings": {
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]": {
+      "b27_exec_budget_failure": "{\"completed_rounds\": 801, \"normal_lines\": 3205, \"budget\": 2000}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]": {
+      "b27_exec_budget_failure": "{\"completed_rounds\": 801, \"normal_lines\": 10423, \"budget\": 10000}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]": {
+      "b27_exec_budget_failure": "{\"completed_rounds\": 801, \"normal_lines\": 3205, \"budget\": 2000}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]": {
+      "b27_exec_budget_failure": "{\"completed_rounds\": 801, \"normal_lines\": 10423, \"budget\": 10000}"
+    }
+  },
+  "samples_final_green": {
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]": {
+      "b27_true_p0_report": "{\"critical_records\": 1013, \"critical_sha256\": \"91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8\", \"events_lines\": 199, \"main_bytes\": 12918, \"shutdown\": false}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]": {
+      "b27_true_p0_report": "{\"critical_records\": 1014, \"critical_sha256\": \"5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2\", \"events_lines\": 199, \"main_bytes\": 12943, \"shutdown\": true}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main": {
+      "b27_critical_overflow": "{\"attachment_records\": 311, \"attachment_sha256\": \"1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2\", \"events_lines\": 47, \"main_bytes\": 66767, \"source_critical_records\": 300, \"source_payload_bytes\": 1373400}"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "16",
+      "b27_legacy_report_bytes": "2546"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 2544, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27192, \"seconds\": 0.052822799887508154}",
+      "b27_report_90000": "{\"bytes\": 2546, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27262, \"seconds\": 0.4605161000508815}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only": {
+      "b27_real_diagnostic_attachment": "{\"attachment_records\": 15, \"attachment_sha256\": \"a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48\", \"diagnostic_observation_rows\": 4, \"events_lines\": 20, \"main_bytes\": 2984, \"normal_observation_rows\": 1, \"tp_evidence_copies_added\": 0}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day": {
+      "b27_old_fill_today_diagnostics": "{\"attachment_sha256\": \"bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf\", \"diagnostic_receive_day\": \"2026-10-16\", \"diagnostic_rows\": 2, \"events_lines\": 10, \"main_bytes\": 1934, \"original_ledger_day\": \"2026-10-15\"}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_time_binding::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info": {
+      "b27_execution_time_binding": "{\"changed_exec_times\": 2, \"first_or_changed_info\": 2, \"native_ends\": 2, \"native_queries\": 2}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6521, \"holdings\": 1, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6521, \"holdings\": 10, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6882, \"holdings\": 1, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6882, \"holdings\": 10, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_masked_report_budget::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice": {
+      "b27_masked_report_budget": "{\"displayed_event_rows\": 62, \"events_lines\": 70, \"main_bytes\": 66228, \"masked_event_line_bytes\": 1048, \"omitted_rows\": 938, \"source_event_line_bytes\": 888, \"source_rows\": 1000}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-1:PROTECT_STATE\": 3120, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-2:PROTECT_STATE\": 3120, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-3:PROTECT_STATE\": 3120, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-4:PROTECT_STATE\": 3120, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-5:PROTECT_STATE\": 3120, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-6:PROTECT_STATE\": 3120, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-7:PROTECT_STATE\": 3120, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-8:PROTECT_STATE\": 3120, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-9:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-1:PROTECT_STATE\": 46800, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-2:PROTECT_STATE\": 46800, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-3:PROTECT_STATE\": 46800, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-4:PROTECT_STATE\": 46800, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-5:PROTECT_STATE\": 46800, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-6:PROTECT_STATE\": 46800, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-7:PROTECT_STATE\": 46800, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-8:PROTECT_STATE\": 46800, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-9:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observer_atomicity::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts": {
+      "b27_new_flush_retry": "{\"after_retry_rows\": 2, \"counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 4, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 4, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 4, \"pos-b27-volume-1:PROTECT_STATE\": 4}, \"partial_rows_after_failure\": 0}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_report": "{\"events_lines\": 31, \"bytes\": 7661}",
+      "b27_scale_candidate": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 26, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}",
+      "b27_scale_reference": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 0, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 46531, \"PROTECT_STATE\": 46147}}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change": {
+      "b27_actual_drain": "{\"ended\": 3, \"initial_ended\": 1, \"initial_sent\": 1, \"max_seconds\": 1.0499999523162842, \"native_positions\": 2, \"new_ended\": 2, \"new_sent\": 2, \"sent\": 3, \"summary_count\": 2, \"summary_drained\": 1}"
+    },
+    "v6lite.tests.test_batch27_reset_isolation::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails": {
+      "b27_reset_isolation": "native invalidation completed despite observer SQLite failure"
+    },
+    "v6lite.tests.test_batch27_short_account_budget::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice": {
+      "b27_short_account_report_budget": "{\"displayed_event_rows\": 66, \"events_lines\": 74, \"main_bytes\": 66392, \"masked_event_line_bytes\": 998, \"omission_notice_present\": true, \"omitted_rows\": 934, \"source_event_line_bytes\": 596, \"source_rows\": 1000}"
+    }
+  },
+  "samples_new_green": {
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]": {
+      "b27_true_p0_report": "{\"critical_records\": 1013, \"critical_sha256\": \"91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8\", \"events_lines\": 199, \"main_bytes\": 12918, \"shutdown\": false}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]": {
+      "b27_true_p0_report": "{\"critical_records\": 1014, \"critical_sha256\": \"5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2\", \"events_lines\": 199, \"main_bytes\": 12943, \"shutdown\": true}"
+    },
+    "v6lite.tests.test_batch27_critical_attachments::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main": {
+      "b27_critical_overflow": "{\"attachment_records\": 311, \"attachment_sha256\": \"1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2\", \"events_lines\": 47, \"main_bytes\": 66767, \"source_critical_records\": 300, \"source_payload_bytes\": 1373400}"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history": {
+      "b27_legacy_event_lines": "16",
+      "b27_legacy_report_bytes": "2546"
+    },
+    "v6lite.tests.test_batch27_daily_report_volume::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear": {
+      "b27_report_10000": "{\"bytes\": 2544, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27192, \"seconds\": 0.054405400063842535}",
+      "b27_report_90000": "{\"bytes\": 2546, \"events_lines\": 16, \"materialized_rows\": 25, \"python_peak_bytes\": 27262, \"seconds\": 0.4672683000098914}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only": {
+      "b27_real_diagnostic_attachment": "{\"attachment_records\": 15, \"attachment_sha256\": \"a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48\", \"diagnostic_observation_rows\": 4, \"events_lines\": 20, \"main_bytes\": 2984, \"normal_observation_rows\": 1, \"tp_evidence_copies_added\": 0}"
+    },
+    "v6lite.tests.test_batch27_diagnostic_attachment::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day": {
+      "b27_old_fill_today_diagnostics": "{\"attachment_sha256\": \"bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf\", \"diagnostic_receive_day\": \"2026-10-16\", \"diagnostic_rows\": 2, \"events_lines\": 10, \"main_bytes\": 1934, \"original_ledger_day\": \"2026-10-15\"}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 3120, \"61\": 3120, \"7\": 3120}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 15, \"normal_lines\": 55, \"rounds\": 3120, \"suppressed_queries\": 3119}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-one]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 2000, \"execution_info_first_or_changed\": 1, \"holdings\": 1, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_log_aggregation::test_B27_full_native_evidence_log_budget_includes_complete_executions[1s-pressure-ten]": {
+      "b27_full_native_log_budget": "{\"actual_native_requests\": {\"16\": 46800, \"61\": 46800, \"7\": 46800}, \"aggregate_rows\": 26, \"budget\": 10000, \"execution_info_first_or_changed\": 1, \"holdings\": 10, \"interval_seconds\": 1, \"normal_lines\": 55, \"rounds\": 46800, \"suppressed_queries\": 46799}"
+    },
+    "v6lite.tests.test_batch27_execution_time_binding::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info": {
+      "b27_execution_time_binding": "{\"changed_exec_times\": 2, \"first_or_changed_info\": 2, \"native_ends\": 2, \"native_queries\": 2}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6521, \"holdings\": 1, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6521, \"holdings\": 10, \"interval_seconds\": 15, \"native_open_orders\": 3120, \"native_positions\": 3120, \"normal_lines\": 26, \"rounds\": 3120}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 2000, \"bytes\": 6882, \"holdings\": 1, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_logging_volume::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_log_metrics": "{\"budget\": 10000, \"bytes\": 6882, \"holdings\": 10, \"interval_seconds\": 1, \"native_open_orders\": 46800, \"native_positions\": 46800, \"normal_lines\": 27, \"rounds\": 46800}"
+    },
+    "v6lite.tests.test_batch27_masked_report_budget::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice": {
+      "b27_masked_report_budget": "{\"displayed_event_rows\": 62, \"events_lines\": 70, \"main_bytes\": 66228, \"masked_event_line_bytes\": 1048, \"omitted_rows\": 938, \"source_event_line_bytes\": 888, \"source_rows\": 1000}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "15",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 15, \"last_confirmed_time\": \"2026-10-16T00:16:26+00:00\", \"native_queries\": {\"openOrders\": 3122, \"positions\": 3120}, \"rounds\": 3120, \"shutdown_completed_at\": \"2026-10-16T00:16:28+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 3120, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-1:PROTECT_STATE\": 3120, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-2:PROTECT_STATE\": 3120, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-3:PROTECT_STATE\": 3120, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-4:PROTECT_STATE\": 3120, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-5:PROTECT_STATE\": 3120, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-6:PROTECT_STATE\": 3120, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-7:PROTECT_STATE\": 3120, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-8:PROTECT_STATE\": 3120, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 3119, \"pos-b27-volume-9:PROTECT_STATE\": 3120}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]": {
+      "b27_holdings": "1",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 1, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 26, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observation_audit::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]": {
+      "b27_holdings": "10",
+      "b27_interval_seconds": "1",
+      "b27_simulated_hours": "13",
+      "b27_audit_metrics": "{\"holdings\": 10, \"interval_seconds\": 1, \"last_confirmed_time\": \"2026-10-16T00:16:40+00:00\", \"native_queries\": {\"openOrders\": 46802, \"positions\": 46800}, \"rounds\": 46800, \"shutdown_completed_at\": \"2026-10-16T00:16:42+00:00\", \"summary_rows\": 260, \"suppressed_counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 46800, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-1:PROTECT_STATE\": 46800, \"pos-b27-volume-2:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-2:PROTECT_STATE\": 46800, \"pos-b27-volume-3:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-3:PROTECT_STATE\": 46800, \"pos-b27-volume-4:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-4:PROTECT_STATE\": 46800, \"pos-b27-volume-5:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-5:PROTECT_STATE\": 46800, \"pos-b27-volume-6:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-6:PROTECT_STATE\": 46800, \"pos-b27-volume-7:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-7:PROTECT_STATE\": 46800, \"pos-b27-volume-8:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-8:PROTECT_STATE\": 46800, \"pos-b27-volume-9:ORDER_PRICE_OBSERVATION\": 46799, \"pos-b27-volume-9:PROTECT_STATE\": 46800}, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 10, \"PROTECT_STATE\": 0}}"
+    },
+    "v6lite.tests.test_batch27_observer_atomicity::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts": {
+      "b27_new_flush_retry": "{\"after_retry_rows\": 2, \"counts\": {\"pos-99ec110ffc6246e8b7c4:ORDER_PRICE_OBSERVATION\": 4, \"pos-99ec110ffc6246e8b7c4:PROTECT_STATE\": 4, \"pos-b27-volume-1:ORDER_PRICE_OBSERVATION\": 4, \"pos-b27-volume-1:PROTECT_STATE\": 4}, \"partial_rows_after_failure\": 0}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls": {
+      "b27_scale_report": "{\"events_lines\": 31, \"bytes\": 7661}",
+      "b27_scale_candidate": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 26, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 1, \"PROTECT_STATE\": 0}}",
+      "b27_scale_reference": "{\"actual_cards\": 1, \"confirmed_at_observations\": 46147, \"non_target_audits\": 14, \"price_observations\": 46531, \"summary_rows\": 0, \"target_writes\": {\"ORDER_PRICE_OBSERVATION\": 46531, \"PROTECT_STATE\": 46147}}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"allowed\", \"scenario\": \"allow\", \"write_counts\": [2, 1, 1, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]": {
+      "b27_permission_candidate": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 3, \"decision\": \"refused\", \"scenario\": \"a\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]": {
+      "b27_permission_candidate": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 6, \"decision\": \"refused\", \"scenario\": \"b\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]": {
+      "b27_permission_candidate": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 5, \"decision\": \"refused\", \"scenario\": \"c\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]": {
+      "b27_permission_candidate": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}",
+      "b27_permission_reference": "{\"actual_cards\": 4, \"decision\": \"refused\", \"scenario\": \"d\", \"write_counts\": [1, 1, 0, 0]}"
+    },
+    "v6lite.tests.test_batch27_observer_equivalence::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change": {
+      "b27_actual_drain": "{\"ended\": 3, \"initial_ended\": 1, \"initial_sent\": 1, \"max_seconds\": 1.0499999523162842, \"native_positions\": 2, \"new_ended\": 2, \"new_sent\": 2, \"sent\": 3, \"summary_count\": 2, \"summary_drained\": 1}"
+    },
+    "v6lite.tests.test_batch27_reset_isolation::test_B27_new_reset_finishes_native_invalidation_even_when_observer_flush_fails": {
+      "b27_reset_isolation": "native invalidation completed despite observer SQLite failure"
+    },
+    "v6lite.tests.test_batch27_short_account_budget::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice": {
+      "b27_short_account_report_budget": "{\"displayed_event_rows\": 66, \"events_lines\": 74, \"main_bytes\": 66392, \"masked_event_line_bytes\": 998, \"omission_notice_present\": true, \"omitted_rows\": 934, \"source_event_line_bytes\": 596, \"source_rows\": 1000}"
+    }
+  },
+  "time_binding_fixed_short_mask_boundary": {
+    "v6lite.tests.test_batch27_execution_time_binding::test_B27_native_execution_time_swap_keeps_binding_and_emits_changed_info": {
+      "b27_execution_time_binding": "{\"changed_exec_times\": 2, \"first_or_changed_info\": 2, \"native_ends\": 2, \"native_queries\": 2}"
+    },
+    "v6lite.tests.test_batch27_short_account_budget::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice": {
+      "b27_short_account_report_budget": "{\"displayed_event_rows\": 102, \"events_lines\": 109, \"main_bytes\": 102400, \"masked_event_line_bytes\": 998, \"omission_notice_present\": false, \"omitted_rows\": null, \"source_event_line_bytes\": 596, \"source_rows\": 1000}"
+    }
+  }
+}

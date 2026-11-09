@@ -1,0 +1,24 @@
+{
+  "label": "focused_legacy_initial",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T19:37:16.105780-07:00",
+  "end_pt": "2026-10-20T19:37:16.858833-07:00",
+  "seconds": 0.75,
+  "returncode": 4,
+  "args": [
+    "v6lite/tests/test_batch17_heartbeat_account.py",
+    "v6lite/tests/test_batch19.py",
+    "v6lite/tests/test_batch27.py",
+    "v6lite/tests/test_batch27_observer_atomicity.py",
+    "v6lite/tests/test_batch28_lifecycle.py"
+  ],
+  "tests": 0,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_unchanged": true,
+  "inventory_sha256": "fc09526414aaeb2c44db0b2057d6fed5dc23c02e60d610fac386906f2c902231",
+  "incomplete": false,
+  "failed_cases": []
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="1.513" timestamp="2026-10-29T09:54:20.337571-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch32_offline_release" name="test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding" time="0.410"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch32_evidence\\baseline_b31\\v6lite\\tests\\fixtures\\b32_completed_native_fields.json'&quot;">v6lite\tests\test_batch32_offline_release.py:73: in offline_oct29
+    data=json.loads(Path(__file__).with_name('fixtures').joinpath('b32_completed_native_fields.json').read_text())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Dev\\V6Lite-dev\\docs\\batch32_evidence\\baseline_b31\\v6lite\\tests\\fixtures\\b32_completed_native_fields.json'</error></testcase></testsuite></testsuites>

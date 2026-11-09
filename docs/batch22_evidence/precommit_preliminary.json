@@ -1,0 +1,508 @@
+{
+  "batch21_frozen_manifest_files_match": 22,
+  "preexisting_index_empty": true,
+  "planned_task_files": [
+    {
+      "path": "docs/V6_LITE_G3_RUNBOOK_DRAFT.md",
+      "git_status": " M",
+      "bytes": 29085
+    },
+    {
+      "path": "scripts/v6.ps1",
+      "git_status": " M",
+      "bytes": 16619
+    },
+    {
+      "path": "v6lite/broker/base.py",
+      "git_status": " M",
+      "bytes": 3727
+    },
+    {
+      "path": "v6lite/broker/fake.py",
+      "git_status": " M",
+      "bytes": 16149
+    },
+    {
+      "path": "v6lite/broker/ibkr.py",
+      "git_status": " M",
+      "bytes": 65257
+    },
+    {
+      "path": "v6lite/config.py",
+      "git_status": " M",
+      "bytes": 18144
+    },
+    {
+      "path": "v6lite/engine.py",
+      "git_status": " M",
+      "bytes": 181676
+    },
+    {
+      "path": "v6lite/examples/live.toml",
+      "git_status": " M",
+      "bytes": 2975
+    },
+    {
+      "path": "v6lite/examples/paper.toml",
+      "git_status": " M",
+      "bytes": 2867
+    },
+    {
+      "path": "v6lite/examples/paper_delayed.toml",
+      "git_status": " M",
+      "bytes": 2966
+    },
+    {
+      "path": "v6lite/examples/paper_g3n.toml",
+      "git_status": " M",
+      "bytes": 1270
+    },
+    {
+      "path": "v6lite/examples/paper_test.toml",
+      "git_status": " M",
+      "bytes": 949
+    },
+    {
+      "path": "v6lite/models.py",
+      "git_status": " M",
+      "bytes": 6706
+    },
+    {
+      "path": "v6lite/protection.py",
+      "git_status": " M",
+      "bytes": 543
+    },
+    {
+      "path": "v6lite/protection_engine.py",
+      "git_status": " M",
+      "bytes": 98076
+    },
+    {
+      "path": "v6lite/protection_incidents.py",
+      "git_status": " M",
+      "bytes": 8547
+    },
+    {
+      "path": "v6lite/report.py",
+      "git_status": " M",
+      "bytes": 24232
+    },
+    {
+      "path": "v6lite/store.py",
+      "git_status": " M",
+      "bytes": 74233
+    },
+    {
+      "path": "v6lite/tests/test_batch15.py",
+      "git_status": " M",
+      "bytes": 71363
+    },
+    {
+      "path": "v6lite/tests/test_batch16.py",
+      "git_status": " M",
+      "bytes": 28722
+    },
+    {
+      "path": "v6lite/tests/test_batch16_f5_copy.py",
+      "git_status": " M",
+      "bytes": 15179
+    },
+    {
+      "path": "v6lite/tests/test_batch17_l3_recovery.py",
+      "git_status": " M",
+      "bytes": 15834
+    },
+    {
+      "path": "v6lite/tests/test_batch19.py",
+      "git_status": " M",
+      "bytes": 10690
+    },
+    {
+      "path": "v6lite/tests/test_batch20_execution_time.py",
+      "git_status": " M",
+      "bytes": 20596
+    },
+    {
+      "path": "v6lite/tests/test_batch20_protection_equivalents.py",
+      "git_status": " M",
+      "bytes": 51774
+    },
+    {
+      "path": "v6lite/tests/test_batch20_protection_incident.py",
+      "git_status": " M",
+      "bytes": 35215
+    },
+    {
+      "path": "v6lite/tests/test_soak.py",
+      "git_status": " M",
+      "bytes": 6157
+    },
+    {
+      "path": "docs/V6_LITE_BATCH21_POWERSHELL_ENTRY_2026-10-08.md",
+      "git_status": "??",
+      "bytes": 9285
+    },
+    {
+      "path": "docs/V6_LITE_BATCH21_RESEARCH_AND_OPTIONS_2026-10-08.md",
+      "git_status": "??",
+      "bytes": 14674
+    },
+    {
+      "path": "docs/V6_LITE_BATCH22_INSTRUCTIONS.md",
+      "git_status": "??",
+      "bytes": 5802
+    },
+    {
+      "path": "docs/batch21_evidence/console_shutdown_results.json",
+      "git_status": "??",
+      "bytes": 7268
+    },
+    {
+      "path": "docs/batch21_evidence/fake_cancel_fixture_events.json",
+      "git_status": "??",
+      "bytes": 977
+    },
+    {
+      "path": "docs/batch21_evidence/independent_review.json",
+      "git_status": "??",
+      "bytes": 1712
+    },
+    {
+      "path": "docs/batch21_evidence/official_sources.json",
+      "git_status": "??",
+      "bytes": 3790
+    },
+    {
+      "path": "docs/batch21_evidence/old_out_host_red_events.json",
+      "git_status": "??",
+      "bytes": 165
+    },
+    {
+      "path": "docs/batch21_evidence/old_out_host_red_prompt_events.jsonl",
+      "git_status": "??",
+      "bytes": 44
+    },
+    {
+      "path": "docs/batch21_evidence/old_out_host_red_signal.json",
+      "git_status": "??",
+      "bytes": 183
+    },
+    {
+      "path": "docs/batch21_evidence/scripts_final.xml",
+      "git_status": "??",
+      "bytes": 18874
+    },
+    {
+      "path": "docs/batch21_evidence/sha256_manifest.json",
+      "git_status": "??",
+      "bytes": 4268
+    },
+    {
+      "path": "docs/batch21_evidence/validation_metadata.json",
+      "git_status": "??",
+      "bytes": 1513
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_cancel_namespace.xml",
+      "git_status": "??",
+      "bytes": 3035
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_cancel_namespace_metadata.json",
+      "git_status": "??",
+      "bytes": 379
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_config.xml",
+      "git_status": "??",
+      "bytes": 34066
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_config_metadata.json",
+      "git_status": "??",
+      "bytes": 378
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_lifecycle.xml",
+      "git_status": "??",
+      "bytes": 65077
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_lifecycle_metadata.json",
+      "git_status": "??",
+      "bytes": 378
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_pending_audit.xml",
+      "git_status": "??",
+      "bytes": 3909
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_pending_audit_metadata.json",
+      "git_status": "??",
+      "bytes": 411
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_schema_audit.xml",
+      "git_status": "??",
+      "bytes": 48501
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_schema_audit_metadata.json",
+      "git_status": "??",
+      "bytes": 447
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_snapshot_cancel.xml",
+      "git_status": "??",
+      "bytes": 27612
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_snapshot_cancel_metadata.json",
+      "git_status": "??",
+      "bytes": 413
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_trigger_incidents.xml",
+      "git_status": "??",
+      "bytes": 8550
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_trigger_incidents_metadata.json",
+      "git_status": "??",
+      "bytes": 397
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_trigger_replacement.xml",
+      "git_status": "??",
+      "bytes": 1969
+    },
+    {
+      "path": "docs/batch22_evidence/baseline_trigger_replacement_metadata.json",
+      "git_status": "??",
+      "bytes": 377
+    },
+    {
+      "path": "docs/batch22_evidence/build_report.py",
+      "git_status": "??",
+      "bytes": 18658
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_cancel_namespace.xml",
+      "git_status": "??",
+      "bytes": 3035
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_cancel_namespace_metadata.json",
+      "git_status": "??",
+      "bytes": 399
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_pending_audit.xml",
+      "git_status": "??",
+      "bytes": 4033
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_pending_audit_metadata.json",
+      "git_status": "??",
+      "bytes": 418
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_snapshot_cancel.xml",
+      "git_status": "??",
+      "bytes": 27761
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_snapshot_cancel_metadata.json",
+      "git_status": "??",
+      "bytes": 438
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_trigger_incidents.xml",
+      "git_status": "??",
+      "bytes": 8550
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_trigger_incidents_metadata.json",
+      "git_status": "??",
+      "bytes": 438
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_trigger_replacement.xml",
+      "git_status": "??",
+      "bytes": 2582
+    },
+    {
+      "path": "docs/batch22_evidence/candidate_trigger_replacement_metadata.json",
+      "git_status": "??",
+      "bytes": 393
+    },
+    {
+      "path": "docs/batch22_evidence/cards.json",
+      "git_status": "??",
+      "bytes": 20725
+    },
+    {
+      "path": "docs/batch22_evidence/cards.md",
+      "git_status": "??",
+      "bytes": 15892
+    },
+    {
+      "path": "docs/batch22_evidence/daily_sample.md",
+      "git_status": "??",
+      "bytes": 1566
+    },
+    {
+      "path": "docs/batch22_evidence/development_regression.xml",
+      "git_status": "??",
+      "bytes": 164233
+    },
+    {
+      "path": "docs/batch22_evidence/focused_all_final.xml",
+      "git_status": "??",
+      "bytes": 36912
+    },
+    {
+      "path": "docs/batch22_evidence/focused_complete.xml",
+      "git_status": "??",
+      "bytes": 38506
+    },
+    {
+      "path": "docs/batch22_evidence/focused_complete_metadata.json",
+      "git_status": "??",
+      "bytes": 2009
+    },
+    {
+      "path": "docs/batch22_evidence/focused_final.xml",
+      "git_status": "??",
+      "bytes": 31706
+    },
+    {
+      "path": "docs/batch22_evidence/focused_green.xml",
+      "git_status": "??",
+      "bytes": 26755
+    },
+    {
+      "path": "docs/batch22_evidence/focused_initial.xml",
+      "git_status": "??",
+      "bytes": 27827
+    },
+    {
+      "path": "docs/batch22_evidence/full_1.xml",
+      "git_status": "??",
+      "bytes": 193981
+    },
+    {
+      "path": "docs/batch22_evidence/full_2.xml",
+      "git_status": "??",
+      "bytes": 193981
+    },
+    {
+      "path": "docs/batch22_evidence/full_validation.json",
+      "git_status": "??",
+      "bytes": 13204
+    },
+    {
+      "path": "docs/batch22_evidence/generate_cards.py",
+      "git_status": "??",
+      "bytes": 3446
+    },
+    {
+      "path": "docs/batch22_evidence/identity_trigger_final.xml",
+      "git_status": "??",
+      "bytes": 2856
+    },
+    {
+      "path": "docs/batch22_evidence/independent_source_review.json",
+      "git_status": "??",
+      "bytes": 6654
+    },
+    {
+      "path": "docs/batch22_evidence/preflight.json",
+      "git_status": "??",
+      "bytes": 555
+    },
+    {
+      "path": "docs/batch22_evidence/run_final_validation.py",
+      "git_status": "??",
+      "bytes": 3319
+    },
+    {
+      "path": "docs/batch22_evidence/slippage_sample.json",
+      "git_status": "??",
+      "bytes": 1323
+    },
+    {
+      "path": "docs/batch22_evidence/trigger_final.xml",
+      "git_status": "??",
+      "bytes": 3371
+    },
+    {
+      "path": "scripts/tests/console_shutdown_child.py",
+      "git_status": "??",
+      "bytes": 3719
+    },
+    {
+      "path": "scripts/tests/console_shutdown_probe.py",
+      "git_status": "??",
+      "bytes": 8641
+    },
+    {
+      "path": "scripts/tests/test_batch21_entry.py",
+      "git_status": "??",
+      "bytes": 3716
+    },
+    {
+      "path": "scripts/v6-user.ps1",
+      "git_status": "??",
+      "bytes": 39
+    },
+    {
+      "path": "v6lite/tests/test_batch22_cancel_namespace.py",
+      "git_status": "??",
+      "bytes": 3080
+    },
+    {
+      "path": "v6lite/tests/test_batch22_config_broker.py",
+      "git_status": "??",
+      "bytes": 23349
+    },
+    {
+      "path": "v6lite/tests/test_batch22_pending_stop_audit.py",
+      "git_status": "??",
+      "bytes": 9880
+    },
+    {
+      "path": "v6lite/tests/test_batch22_protection_lifecycle.py",
+      "git_status": "??",
+      "bytes": 36441
+    },
+    {
+      "path": "v6lite/tests/test_batch22_schema_audit.py",
+      "git_status": "??",
+      "bytes": 29777
+    },
+    {
+      "path": "v6lite/tests/test_batch22_snapshot_cancel.py",
+      "git_status": "??",
+      "bytes": 10065
+    },
+    {
+      "path": "v6lite/tests/test_batch22_trigger_incidents.py",
+      "git_status": "??",
+      "bytes": 11026
+    },
+    {
+      "path": "v6lite/tests/test_batch22_trigger_replacement.py",
+      "git_status": "??",
+      "bytes": 3263
+    }
+  ],
+  "excluded_external_edits": [
+    "docs/V6_LITE_OPERATOR_MANUAL.md"
+  ],
+  "large_file_threshold_bytes": 10485760,
+  "large_files": [],
+  "forbidden_paths": [],
+  "note": "preliminary before report generation; stage validation repeats after independent report/hash verification"
+}

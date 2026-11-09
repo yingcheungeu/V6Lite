@@ -1,0 +1,101 @@
+{
+  "reason": "repository * -text retains Windows CRLF; verbatim failure stdout/XML contains pytest E marker padding",
+  "temporary_CRLF_recognition": true,
+  "persistent_git_configuration_changed": false,
+  "source_docs_tools_strict_whitespace_check": true,
+  "verbatim_receipts_rewritten": false,
+  "exact_data_exceptions": [
+    {
+      "path": "docs/batch33_evidence/green_initial.txt",
+      "line": 31,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/green_initial.xml",
+      "line": 16,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/green_preopen_proof.txt",
+      "line": 16,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/green_preopen_proof.xml",
+      "line": 9,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_final_spec.txt",
+      "line": 9,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_final_spec.txt",
+      "line": 18,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_final_spec.xml",
+      "line": 6,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_final_spec.xml",
+      "line": 11,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_final_spec_after_json_guard.txt",
+      "line": 9,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_final_spec_after_json_guard.txt",
+      "line": 18,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_final_spec_after_json_guard.xml",
+      "line": 6,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_final_spec_after_json_guard.xml",
+      "line": 11,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_required.txt",
+      "line": 26,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_required.xml",
+      "line": 6,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_required_calibrated.txt",
+      "line": 9,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_required_calibrated.txt",
+      "line": 18,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_required_calibrated.xml",
+      "line": 6,
+      "content": "verbatim pytest E marker and whitespace"
+    },
+    {
+      "path": "docs/batch33_evidence/red_b32_required_calibrated.xml",
+      "line": 11,
+      "content": "verbatim pytest E marker and whitespace"
+    }
+  ],
+  "frozen_source_and_tools_unchanged": true,
+  "finalization": "same exact-allowlist commit/tag and blob checks as frozen helper; packaging-only continuation after global data-format lint"
+}

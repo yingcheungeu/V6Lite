@@ -1,0 +1,100 @@
+......................F.FFFF.....................FFF...............      [100%]
+================================== FAILURES ===================================
+_ test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback] _
+v6lite\tests\test_batch27a_execution_time.py:246: in test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once
+    rig, callback, query = callback_rig(stop_fill=stop_fill)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch27a_execution_time.py:236: in make
+    assert rig.store.control(_time_key(exec_id)) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x0000029256025490>.control
+E    +      where <v6lite.store.Store object at 0x0000029256025490> = <v6lite.tests.helpers.Rig object at 0x0000029256024790>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')
+__ test_B27a_completed_protection_query_also_verifies_existing_callback_exec __
+v6lite\tests\test_batch27a_execution_time.py:272: in test_B27a_completed_protection_query_also_verifies_existing_callback_exec
+    rig, callback, query = callback_rig()
+                           ^^^^^^^^^^^^^^
+v6lite\tests\test_batch27a_execution_time.py:236: in make
+    assert rig.store.control(_time_key(exec_id)) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x0000029256086090>.control
+E    +      where <v6lite.store.Store object at 0x0000029256086090> = <v6lite.tests.helpers.Rig object at 0x0000029256084590>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')
+_ test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price] _
+v6lite\tests\test_batch27a_execution_time.py:286: in test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review
+    rig, callback, query = callback_rig()
+                           ^^^^^^^^^^^^^^
+v6lite\tests\test_batch27a_execution_time.py:236: in make
+    assert rig.store.control(_time_key(exec_id)) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x0000029256023550>.control
+E    +      where <v6lite.store.Store object at 0x0000029256023550> = <v6lite.tests.helpers.Rig object at 0x0000029256022950>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')
+_ test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id] _
+v6lite\tests\test_batch27a_execution_time.py:286: in test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review
+    rig, callback, query = callback_rig()
+                           ^^^^^^^^^^^^^^
+v6lite\tests\test_batch27a_execution_time.py:236: in make
+    assert rig.store.control(_time_key(exec_id)) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x0000029235E0D910>.control
+E    +      where <v6lite.store.Store object at 0x0000029235E0D910> = <v6lite.tests.helpers.Rig object at 0x0000029235E0E510>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')
+_ test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id] _
+v6lite\tests\test_batch27a_execution_time.py:286: in test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review
+    rig, callback, query = callback_rig()
+                           ^^^^^^^^^^^^^^
+v6lite\tests\test_batch27a_execution_time.py:236: in make
+    assert rig.store.control(_time_key(exec_id)) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x0000029255FB4590>.control
+E    +      where <v6lite.store.Store object at 0x0000029255FB4590> = <v6lite.tests.helpers.Rig object at 0x0000029255FB6250>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')
+_ test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed] _
+v6lite\tests\test_batch27a_execution_time.py:406: in test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing
+    rig, callback, query = callback_rig(stop_fill=stop_fill)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch27a_execution_time.py:236: in make
+    assert rig.store.control(_time_key(exec_id)) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x0000029255EF2790>.control
+E    +      where <v6lite.store.Store object at 0x0000029255EF2790> = <v6lite.tests.helpers.Rig object at 0x0000029255EF1890>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')
+_ test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty] _
+v6lite\tests\test_batch27a_execution_time.py:406: in test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing
+    rig, callback, query = callback_rig(stop_fill=stop_fill)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch27a_execution_time.py:236: in make
+    assert rig.store.control(_time_key(exec_id)) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x0000029235BB7650>.control
+E    +      where <v6lite.store.Store object at 0x0000029235BB7650> = <v6lite.tests.helpers.Rig object at 0x0000029233C750D0>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')
+_ test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain] _
+v6lite\tests\test_batch27a_execution_time.py:406: in test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing
+    rig, callback, query = callback_rig(stop_fill=stop_fill)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch27a_execution_time.py:236: in make
+    assert rig.store.control(_time_key(exec_id)) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x00000292561A5450>.control
+E    +      where <v6lite.store.Store object at 0x00000292561A5450> = <v6lite.tests.helpers.Rig object at 0x00000292561A7AD0>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = _time_key('b27a-callback-entry.01.01')
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_completed_protection_query_also_verifies_existing_callback_exec
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed]
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty]
+FAILED v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain]
+8 failed, 59 passed in 13.39s

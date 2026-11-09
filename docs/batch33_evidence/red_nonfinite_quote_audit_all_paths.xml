@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="1.932" timestamp="2026-10-31T16:31:17.018187-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[bid-nan]" time="0.219"><failure message="AssertionError: new audit must not persist JSON NaN/Infinity&#10;assert (1 == 1 and 0 == 1)&#10; +  where 1 = len([&lt;sqlite3.Row object at 0x0000027DC6597DC0&gt;])">v6lite\tests\test_batch33_open_delay.py:378: in test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent
+    assert len(rows)==1 and rows[0]['valid']==1, 'new audit must not persist JSON NaN/Infinity'
+E   AssertionError: new audit must not persist JSON NaN/Infinity
+E   assert (1 == 1 and 0 == 1)
+E    +  where 1 = len([&lt;sqlite3.Row object at 0x0000027DC6597DC0&gt;])</failure></testcase><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[ask-inf]" time="0.204"><failure message="AssertionError: new audit must not persist JSON NaN/Infinity&#10;assert (1 == 1 and 0 == 1)&#10; +  where 1 = len([&lt;sqlite3.Row object at 0x0000027DC628A500&gt;])">v6lite\tests\test_batch33_open_delay.py:378: in test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent
+    assert len(rows)==1 and rows[0]['valid']==1, 'new audit must not persist JSON NaN/Infinity'
+E   AssertionError: new audit must not persist JSON NaN/Infinity
+E   assert (1 == 1 and 0 == 1)
+E    +  where 1 = len([&lt;sqlite3.Row object at 0x0000027DC628A500&gt;])</failure></testcase><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[last-nan]" time="0.209"><failure message="AssertionError: new audit must not persist JSON NaN/Infinity&#10;assert (1 == 1 and 0 == 1)&#10; +  where 1 = len([&lt;sqlite3.Row object at 0x0000027DE6993880&gt;])">v6lite\tests\test_batch33_open_delay.py:378: in test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent
+    assert len(rows)==1 and rows[0]['valid']==1, 'new audit must not persist JSON NaN/Infinity'
+E   AssertionError: new audit must not persist JSON NaN/Infinity
+E   assert (1 == 1 and 0 == 1)
+E    +  where 1 = len([&lt;sqlite3.Row object at 0x0000027DE6993880&gt;])</failure></testcase><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[last-inf]" time="0.218"><failure message="AssertionError: new audit must not persist JSON NaN/Infinity&#10;assert (1 == 1 and 0 == 1)&#10; +  where 1 = len([&lt;sqlite3.Row object at 0x0000027DE6A51DB0&gt;])">v6lite\tests\test_batch33_open_delay.py:378: in test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent
+    assert len(rows)==1 and rows[0]['valid']==1, 'new audit must not persist JSON NaN/Infinity'
+E   AssertionError: new audit must not persist JSON NaN/Infinity
+E   assert (1 == 1 and 0 == 1)
+E    +  where 1 = len([&lt;sqlite3.Row object at 0x0000027DE6A51DB0&gt;])</failure></testcase></testsuite></testsuites>

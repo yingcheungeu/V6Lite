@@ -1,0 +1,36 @@
+{
+  "collected": [
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+    "::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+    "::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+    "::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+    "::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+    "::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+    "::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+    "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+    "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+    "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]"
+  ],
+  "executed": [
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+    "::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+    "::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+    "::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+    "::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+    "::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+    "::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+    "::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+    "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+    "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+    "::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]"
+  ]
+}

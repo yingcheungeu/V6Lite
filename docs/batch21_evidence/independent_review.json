@@ -1,0 +1,35 @@
+{
+  "recorded_at_pt": "2026-10-08T21:06:55.820972-07:00",
+  "record_writer": "root; reviewers performed read-only checks and returned results in collaboration messages",
+  "research_reviewer": "/root/batch20_protection_incident",
+  "research_result": "PASS; no blocking or required corrections",
+  "research_checks": [
+    "official sources and unknown distance ceiling",
+    "Adaptive DAY/no GTC versus API unknown",
+    "A/B/C safety contracts and complete risk arithmetic",
+    "historical non-recovery ruling and no claim of completed archive"
+  ],
+  "serial_final_reviewer": "/root/batch20_equivalents",
+  "serial_final_result": "PASS; no blocking",
+  "serial_final_checks": [
+    "shared console, wait in normal/finally, CRT argv",
+    "Capture and all launcher gates identical to batch20",
+    "four controlled Ctrl+C records and complete resource closure",
+    "pytest XML 130 cases, zero failure/error/skip",
+    "21/21 prior manifest bytes/hash",
+    "code_sha, HEAD/tag, empty stage and untouched unrelated manual"
+  ],
+  "limitations": [
+    "static review and recorded synthetic tests, no new test run by reviewer",
+    "no actual John terminal keyboard/real CLI/TWS acceptance",
+    "no runtime or user-entry deployment",
+    "SHUTDOWN audit precedes disconnect and is insufficient by itself"
+  ],
+  "code_sha": "cfe16edd7a7e4d7f",
+  "head": "c5a39952635943dde5f1ae7f2a52da84c8327375",
+  "tag": "v6lite-batch20",
+  "reports_sha256": {
+    "docs/V6_LITE_BATCH21_RESEARCH_AND_OPTIONS_2026-10-08.md": "c9008b8d04940a88add4077fec3a1fa442c04084afa797caa9f9277ce01e4b33",
+    "docs/V6_LITE_BATCH21_POWERSHELL_ENTRY_2026-10-08.md": "d1a775ead637e9623f80798e6f388ac6d9443615f5d8f2b3a7aa7b5b99b5c30f"
+  }
+}

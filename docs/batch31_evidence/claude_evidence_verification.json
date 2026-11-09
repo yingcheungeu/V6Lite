@@ -1,0 +1,14 @@
+{
+  "directory_read_only": "C:\\Dev\\V6Lite-dev\\docs\\batch31_claude_evidence",
+  "manifest_sha256": "80c4d9646e2708b11b3f1c135bfbdad3a5f5beaeda22b62e02c95861d5633e00",
+  "files": {
+    "README.md": "afa35e8314d2d42616195cc774379a602396749c3fb4ccf639d4c9f295206f8b",
+    "audit_20261026_intraday_be_confirm.jsonl": "133bba83076630d894ba78d8768819e36621ecd1ef266d2298b282d09eec3c9f",
+    "audit_20261027_overnight_restore.jsonl": "d5f7ad3ee84f98f879fae864a430036025d7fe0eff457976b248ea36beddeb10",
+    "audit_20261027_tp1_be_window.jsonl": "73a879e37db78dbf38f0db49f41f8a4694ab3076465468ee0d504d782dde1fce",
+    "log_20261027_excerpt.txt": "8deeef20e82c068cbba5038e70d576d9c417fa30f8438fcad04484079f1bd842",
+    "state_snapshot_after_close.json": "41a274b332e13976be9aec74eeeaef379f65a15fa582841992ecf32500398d89"
+  },
+  "all_match": true,
+  "evidence_directory_excluded_from_allowlist": true
+}

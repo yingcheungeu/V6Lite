@@ -1,0 +1,55 @@
+F...............................                                         [100%]
+================================== FAILURES ===================================
+___ test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder] ____
+v6lite\tests\test_batch31_overnight.py:98: in test_B31_oct27_actual_restoration_pending_ack_and_TP2_close
+    req=tp2(rig,pid,wire)
+        ^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch31_overnight.py:67: in tp2
+    wire.ack()
+v6lite\tests\test_batch28c_price_confirmation.py:175: in ack
+    value = self.apply_pending()
+            ^^^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch28c_price_confirmation.py:169: in apply_pending
+    request = self.rig.broker.protection_pending_modifications.pop(ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'v6l-protect-7631f94d20bc4c729b6d'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+ERROR    v6lite.engine:engine.py:762 queued exit work failed
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 760, in _run_queue
+    fn()
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 2322, in <lambda>
+    fn = lambda: self._submit_exit(position_id, stage)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 2341, in _submit_exit
+    self._protection_begin_tp(self.clock.now(), position_id, stage)
+  File "C:\Dev\V6Lite-dev\v6lite\protection_engine.py", line 1816, in _protection_begin_tp
+    self._protection_modify(now, self.store.protection(position_id), own[0], target,
+  File "C:\Dev\V6Lite-dev\v6lite\protection_engine.py", line 1623, in _protection_modify
+    self.broker.modify_protection(req)
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch31_overnight.py", line 46, in modify
+    at_request(captured[-1])
+  File "C:\Dev\V6Lite-dev\v6lite\tests\test_batch31_overnight.py", line 80, in native_response
+    requested=rig.engine._protection_price_requests[pid][1]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: 'pos-15587b04371546e7b237'
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:73: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60
+  v6lite\tests\test_batch31_overnight.py:213: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60(oct27,record_property):
+
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+  v6lite\tests\test_batch31_close_card.py:9: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('arrival',[.009,None])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+1 failed, 31 passed, 5 warnings in 11.12s

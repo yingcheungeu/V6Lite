@@ -1,0 +1,115 @@
+.............................FFF..........................F............. [ 38%]
+.....FF................................................................. [ 77%]
+................F....FF..................                                [100%]
+================================== FAILURES ===================================
+_ test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[open_orders] _
+v6lite\tests\test_batch26_overnight_evidence.py:493: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000001DE593E9D90>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-13T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-afa16fc4e0e24e2ba727 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[positions_fresh] _
+v6lite\tests\test_batch26_overnight_evidence.py:493: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000001DE594EE890>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-13T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-7e79da27df5f4625b877 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.engine:engine.py:2133 exit check skipped, positions unavailable: synthetic B26 fresh positions_fresh unavailable
+_ test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[executions_today] _
+v6lite\tests\test_batch26_overnight_evidence.py:493: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000001DE594EFA50>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-13T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-ee2535d255bf49ba9ae0 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[working_query_failed-\u672a\u77e5] _
+v6lite\tests\test_batch26_card_evidence.py:76: in test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation
+    assert len(embeds) == 1, 'the real failed/restricted path must create one visible explanation card'
+E   AssertionError: the real failed/restricted path must create one visible explanation card
+E   assert 0 == 1
+E    +  where 0 = len([])
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-13T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-4622290d5b894551be3b | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+____ test_B26_edge_query_generation_change_revokes_earlier_overnight_proof ____
+v6lite\tests\test_batch26_review_edges.py:200: in test_B26_edge_query_generation_change_revokes_earlier_overnight_proof
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000001DE59613650>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-13T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-531d1c0f41ff4540bced | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission _
+v6lite\tests\test_batch26_review_edges.py:220: in test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000001DE59459F10>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-13T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-746c5faf2e504c218b7e | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query] _
+v6lite\tests\test_batch27b_current_day_evidence.py:188: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    assert _p1(rig),'the actual phone card must explain the failed current-day proof'
+E   AssertionError: the actual phone card must explain the failed current-day proof
+E   assert []
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x000001DE59866190>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-19T14:00:31+00:00
+ERROR    ib_insync.wrapper:wrapper.py:1113 Error 322, reqId 21: synthetic incomplete execution request
+WARNING  v6lite.ibkr:ibkr.py:1371 [EXECUTION_TIME_SUMMARY] query failed: API error: 322: synthetic incomplete execution request
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-930f5f5ff1c04b2592a2 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+ERROR    ib_insync.wrapper:wrapper.py:1113 Error 322, reqId 23: synthetic incomplete execution request
+WARNING  v6lite.ibkr:ibkr.py:1371 [EXECUTION_TIME_SUMMARY] query failed: API error: 322: synthetic incomplete execution request
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=32.0s cause=ProtectionEvidenceQueryError
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset] _
+v6lite\tests\test_batch27b_current_day_evidence.py:207: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    assert _p1(rig) and _writes(rig)==before[0]
+E   assert ([])
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x000001DE59864790>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-19T14:00:31+00:00
+WARNING  v6lite.ibkr:ibkr.py:1371 [EXECUTION_TIME_SUMMARY] query failed: query socket generation changed; evidence unavailable
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-e3de68b36362466f83c6 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:907 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight] _
+v6lite\tests\test_batch27b_current_day_evidence.py:207: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    assert _p1(rig) and _writes(rig)==before[0]
+E   assert ([])
+E    +  where [] = _p1(<v6lite.tests.helpers.Rig object at 0x000001DE594010D0>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-19T14:00:31+00:00
+WARNING  v6lite.ibkr:telemetry.py:73 [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261020 14:01:46 incomplete_or_invalid=True role=account_visible_utc
+WARNING  v6lite.ibkr:telemetry.py:73 [EXECUTION_TIME_SUMMARY] returned=0 zoned=0 naive=0 unparseable=0 sample=- incomplete_or_invalid=True role=account_visible_utc
+WARNING  v6lite.ibkr:telemetry.py:73 [EXECUTION_TIME_SUMMARY] returned=0 zoned=0 naive=0 unparseable=0 sample=- incomplete_or_invalid=True role=account_visible_utc
+============================== warnings summary ===============================
+v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+  v6lite\tests\test_batch28b_overnight_refresh.py:204: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch26_overnight_evidence.py::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[open_orders]
+FAILED v6lite/tests/test_batch26_overnight_evidence.py::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[positions_fresh]
+FAILED v6lite/tests/test_batch26_overnight_evidence.py::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[executions_today]
+FAILED v6lite/tests/test_batch26_card_evidence.py::test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[working_query_failed-\u672a\u77e5]
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_query_generation_change_revokes_earlier_overnight_proof
+FAILED v6lite/tests/test_batch26_review_edges.py::test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission
+FAILED v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]
+FAILED v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]
+FAILED v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]
+9 failed, 176 passed, 1 warning in 49.25s

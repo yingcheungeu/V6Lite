@@ -1,0 +1,23 @@
+{
+  "label": "policy_focused",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T14:56:08.966543-07:00",
+  "end_pt": "2026-10-20T14:56:18.127747-07:00",
+  "seconds": 9.157,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_engine.py",
+    "v6lite/tests/test_g2_day1_selfreview.py",
+    "v6lite/tests/test_batch28_lifecycle.py",
+    "v6lite/tests/test_batch28_exit_edges.py"
+  ],
+  "tests": 74,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_unchanged": true,
+  "inventory_sha256": "78e264f81394659c832478e14baa85e80ee0fb6f14f0a586680421061a121e70",
+  "incomplete": false,
+  "failed_cases": []
+}

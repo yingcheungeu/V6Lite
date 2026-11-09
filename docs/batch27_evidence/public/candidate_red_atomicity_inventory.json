@@ -1,0 +1,8 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts"
+  ]
+}

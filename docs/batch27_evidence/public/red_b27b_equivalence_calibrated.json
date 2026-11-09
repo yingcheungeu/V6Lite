@@ -1,0 +1,115 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_b27b_equivalence_calibrated",
+  "baseline": "b27b",
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T08:56:14.765801-07:00",
+  "end_pt": "2026-10-18T08:56:18.233262-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "d6dd37c12701ce95",
+  "source_unchanged": true,
+  "worktree_code_sha": "e8af99daae36778e",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "e8af99daae36778e4ad1d0df9574c061b456c5e62bf7ecfa9ac2f43d8e9b6cdb",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observer_equivalence.py",
+      "sha256": "26caed002a19e6fd7f089fdd3abad11f75c346517ffd29ef9913462aa28ecbe5"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 7,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "outcome": "failure",
+      "message": "AssertionError: ('scale target rows', 'PROTECT_STATE', 6, 4)\nassert 6 <= 5"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change",
+      "outcome": "failure",
+      "message": "AssertionError: normal owed-End recovery must retain final query statistics\nassert []"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change"
+    ]
+  },
+  "stdout_sha256": "a611c43ada1a444ec6930a14a4e98335baabce32a7f99141cd6910e47fd1aa73",
+  "junit_sha256": "ba3d19be8b5279e634fe9b0e135127449299b45302fd54ed687cd2bd419f7946",
+  "inventory_sha256": "b24fd39efbc754cce1ad7d37deece938648bea48b6b9b6db9137dbc06f69fecb",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "red_b27b_equivalence_calibrated.json": "ce0de22dfc53abb40f04c495485208d746013e6fd490508b1ba795ac352a9c66",
+      "red_b27b_equivalence_calibrated.xml": "31ad603d15110d478db83c5ea781417ec9c932b9dc5ee76c0cb2fcdb0d854494",
+      "red_b27b_equivalence_calibrated_inventory.json": "3a936104320f0ed4c215b07825a0c6030f33c3f8abfa4d0f6d6a7a48a4f616c4",
+      "red_b27b_equivalence_calibrated.txt": "a611c43ada1a444ec6930a14a4e98335baabce32a7f99141cd6910e47fd1aa73"
+    }
+  }
+}

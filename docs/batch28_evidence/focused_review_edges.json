@@ -1,0 +1,24 @@
+{
+  "label": "focused_review_edges",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T19:42:26.600619-07:00",
+  "end_pt": "2026-10-20T19:42:34.887675-07:00",
+  "seconds": 8.297,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch28_section2.py",
+    "v6lite/tests/test_batch28_section2_review_edges.py",
+    "v6lite/tests/test_batch17_heartbeat_account.py",
+    "v6lite/tests/test_batch19_funds.py",
+    "v6lite/tests/test_batch28_lifecycle.py"
+  ],
+  "tests": 97,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_unchanged": true,
+  "inventory_sha256": "fbb5764b6e44315694a98379f9633031c8dd5b24315016cbcadc5f97cd89e69a",
+  "incomplete": false,
+  "failed_cases": []
+}

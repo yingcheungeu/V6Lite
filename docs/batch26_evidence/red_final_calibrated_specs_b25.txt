@@ -1,0 +1,792 @@
+FFFFFFFFFFFFF.F..FFFFFFFFFFFFFFFFFFFFFFFFFFFF..FFFFFFFFFFF...FFFFFFFFFFF [ 68%]
+FFFF........FFFF....FF........FFF                                        [100%]
+================================== FAILURES ===================================
+_ test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[empty_binding] _
+..\..\v6lite\tests\test_batch26_be_token_regression.py:24: in test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-e3b5189acd8b4b8983d9 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[missing_modify_generation] _
+..\..\v6lite\tests\test_batch26_be_token_regression.py:24: in test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-0efec9f140a047538983 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+______ test_B26_policy_enum_default_and_all_five_examples_remain_freeze _______
+..\..\v6lite\tests\test_batch26_constraint_policy.py:57: in test_B26_policy_enum_default_and_all_five_examples_remain_freeze
+    assert getattr(ProtectionConfig(), 'overnight_tp', None) == 'freeze'
+E   AssertionError: assert None == 'freeze'
+E    +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60), 'overnight_tp', None)
+E    +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60) = ProtectionConfig()
+__ test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[] __
+..\..\v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE] _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint] _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled] _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:79: in test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-3ae5a8963e4f43968fbb orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze] _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:98: in test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart
+    assert len(pages) == 1, 'restricted overnight TP needs one durable explanation card'
+E   AssertionError: restricted overnight TP needs one durable explanation card
+E   assert 0 == 1
+E    +  where 0 = len([])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-f1914fb0c4bf47339e22 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec] _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:98: in test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart
+    assert len(pages) == 1, 'restricted overnight TP needs one durable explanation card'
+E   AssertionError: restricted overnight TP needs one durable explanation card
+E   assert 0 == 1
+E    +  where 0 = len([])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b26-policy-unknown-first.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-2f46c3a1c4414adb94c4 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze] _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:172: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert len(_overnight_p1(rig)) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000221FF2E0E50>)
+_ test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec] _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:163: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert Counter(name for name, _ in calls) == Counter({name: 2 for name in expected_channels}), calls
+E   AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 15, tzinfo=datetime.timezone.utc)), ('positions_fresh', dateti...atetime.timezone.utc)), ('executions_today', datetime.datetime(2026, 10, 14, 14, 1, 30, tzinfo=datetime.timezone.utc))]
+E   assert Counter({'ope...ns_today': 2}) == Counter({'ope...ns_today': 2})
+E     
+E     Omitting 3 identical items, use -vv to show
+E     Right contains 1 more item:
+E     {'account_executions_today': 2}
+E     Use -v to get more diff
+_ test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec] _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:163: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert Counter(name for name, _ in calls) == Counter({name: 2 for name in expected_channels}), calls
+E   AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 15, tzinfo=datetime.timezone.utc)), ('positions_fresh', dateti...atetime.timezone.utc)), ('executions_today', datetime.datetime(2026, 10, 14, 14, 1, 30, tzinfo=datetime.timezone.utc))]
+E   assert Counter({'ope...ns_today': 2}) == Counter({'ope...ns_today': 2})
+E     
+E     Omitting 3 identical items, use -vv to show
+E     Right contains 1 more item:
+E     {'account_executions_today': 2}
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b26-policy-unknown-cadence.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+_ test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence _
+..\..\v6lite\tests\test_batch26_constraint_policy.py:224: in test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence
+    assert _writes(rig) == before, 'same-day BE is a broker modification and also requires fresh full evidence'
+E   AssertionError: same-day BE is a broker modification and also requires fresh full evidence
+E   assert (2, 1, 2, 0) == (2, 1, 1, 0)
+E     
+E     At index 2 diff: 2 != 1
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-474c7d9a1b0d47d68143 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+_________ test_B26_overnight_opt_in_default_is_declared_and_disabled __________
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:343: in test_B26_overnight_opt_in_default_is_declared_and_disabled
+    assert getattr(ProtectionConfig(), 'overnight_tp', None) == 'freeze'
+E   AssertionError: assert None == 'freeze'
+E    +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60), 'overnight_tp', None)
+E    +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap_b_p0_seconds=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60) = ProtectionConfig()
+_ test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:352: in test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-8fb295d8ed9d4164a1ca orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:388: in test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-655bea97700c44bea5d4 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[manual_sell_one] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:436: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:0000e47e.00000002.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-7547fd6703cf43bc9a14 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-98808644453a416abaed orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；持仓、工作单、执行三项证据查询失败：BrokerError
+_ test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[cancelled_gtc] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:436: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-f79202f0765f4bb899a7 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-4a7241c398c843d1876e orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；完整工作单快照未发现原 GTC；禁止重复提交
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-4a7241c398c843d1876e orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[missing_entry_exec] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:433: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    assert _tp_requests(rig) == [] and _writes(rig) == before
+E   AssertionError: assert ([OrderRequest...65e4be0912b')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-515046da7ada42b4ad49', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=119.07, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-bcf30c55c65e4be0912b')
+E     Use -v to get more diff)
+_ test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[unknown_today_exec] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:436: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b26-unknown-today.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-285b3fa8c1c34be8b1b5 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[position_mismatch] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:436: in test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair
+    _p1_reason(rig, fragments)
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-b6047bfaf8eb42b0bde7 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-d9648225961a4516925b orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；持仓、工作单、执行三项证据查询失败：BrokerError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker/runtime mismatch | AAPL: expected 3 broker 4 | Resolve with `status`, then `ignore` for unmanaged holdings (v1 has no adopt). A managed position that stays different is frozen: flatten it in TWS, then `release` it. Broker truth is never overwritten.
+_ test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[account] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-f5fea48ff84a4c368ce4 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-98d3e23d93bd496e98d3 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-98d3e23d93bd496e98d3 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[client_id] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-1d42be01fc1c4014ae23 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-f69a6a5d62b5406fb0c0 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-f69a6a5d62b5406fb0c0 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[con_id] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-c458f01dc89c4e4fab4e | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-6486527584234026b814 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-6486527584234026b814 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[broker_order_id] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-0a9b9abea8d3439788b7 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-f0041f7398c048e5a64b orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-f0041f7398c048e5a64b orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[perm_id] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-611841908635425b967c | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-19b57e1bdb854655a11d orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-19b57e1bdb854655a11d orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[aux_price] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-918484edfb094fef852f | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-005b2c8dd5954e00a4da orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-005b2c8dd5954e00a4da orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[order_type] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-53e0c5236ee54b328e45 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-78f49dd272d9449bacae orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-78f49dd272d9449bacae orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[tif] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-39be3531f4d94ae88080 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-ff05da349f674f1eb419 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-ff05da349f674f1eb419 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[outside_rth] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:457: in test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity
+    _p1_reason(rig, ('身份', '保护', 'GTC', 'STP', '工作单'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-2fb270a4563d47aba1d8 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-cdfc13e9f41242adb23f orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:00+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-cdfc13e9f41242adb23f orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_perm] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:476: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-51935b088b96411783f9 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[orphan_intent] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:476: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-9c0d9fd994ae43bf836c orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[net_quantity] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:476: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-ab7d0c34fdb545bc837e orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_price] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:476: in test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals
+    _p1_reason(rig, ('入场', '账本', '成交', '数量', '价格', '身份'))
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:337: in _p1_reason
+    assert pages, 'failed overnight evidence must emit its own specific P1, not only a generic P0'
+E   AssertionError: failed overnight evidence must emit its own specific P1, not only a generic P0
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-cce287edaa4d4da382d6 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[open_orders] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:493: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000221FF600690>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-283d58b407804c0bb664 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:847 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-e26cc826be3546e2af06 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:00+00:00 工作单证据时间=过期或缺失；ProtectionEvidenceQueryError
+_ test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[positions_fresh] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:493: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000221FF2E7910>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-39f096d7b2a9436b9620 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:847 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.engine:engine.py:2027 exit check skipped, positions unavailable: synthetic B26 fresh positions_fresh unavailable
+_ test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[executions_today] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:493: in test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure
+    assert _overnight_p1(rig), 'fresh query failure must revoke the earlier overnight TP authority'
+E   AssertionError: fresh query failure must revoke the earlier overnight TP authority
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000221E206F0D0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-0dffb84423184b079a05 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:847 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-b6855cd547b04018b5db orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:00+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；ProtectionEvidenceQueryError
+_ test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[missing_entry_exec] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:507: in test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes
+    assert _tp_requests(rig) == [] and _writes(rig) == before
+E   AssertionError: assert ([OrderRequest...0154ab591d8')] == []
+E     
+E     Left contains one more item: OrderRequest(intent_id='v6l-660ecf8774b04cf494d7', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=119.07, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-e353c56970154ab591d8')
+E     Use -v to get more diff)
+_ test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[external_working_sell] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:597: in test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes
+    assert len(_restore_infos(rig)) == old_info_count and _overnight_p1(rig)
+E   assert (0 == 0 and [])
+E    +  where 0 = len([])
+E    +    where [] = _restore_infos(<v6lite.tests.helpers.Rig object at 0x00000221FF407FD0>)
+E    +  and   [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000221FF407FD0>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.alerts:alerts.py:785 [V6-Lite] P2: non-V6-Lite order on managed AAPL | external-b26-seller SELL remaining 1 is working; its shares are reserved and V6-Lite will not sell them
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-1b8c5661e55048a9aee0 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection external sell AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=1 股 未保护=0 股 可能超卖=1 股；当前快照已核实；orderRef=v6l-protect-c22d2809b36c42b2bd0f orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=external-b26-seller orderId=1003 1 股；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；外部卖单最多=1 股；外部订单号=external-b26-seller
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection external sell AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=1 股 未保护=待核实（可能范围 0–2） 股 可能超卖=待核实（可能上界1） 股；当前保护状态待核实；orderRef=v6l-protect-c22d2809b36c42b2bd0f orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=external-b26-seller orderId=1003 1 股；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；外部卖单最多=1 股；外部订单号=external-b26-seller
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection external sell AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=1 股 未保护=0 股 可能超卖=0 股；当前快照已核实；orderRef=v6l-protect-c22d2809b36c42b2bd0f orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=external-b26-seller orderId=1003 1 股；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；外部卖单最多=1 股；外部订单号=external-b26-seller
+_ test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[undercovered] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:620: in test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000221E12307D0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-c2a3f5e8bd2a4a8590cc | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-131f6299b1f847fab173 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:00+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；账户、客户端、合约、类型或价格身份不一致
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-131f6299b1f847fab173 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:00+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[missing_gtc] _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:620: in test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000221FF2D7A50>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-b8a5f61c78b34c72b144 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-8e553f083b9c42a89078 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:00+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；完整工作单快照未发现原 GTC；禁止重复提交
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-8e553f083b9c42a89078 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:00+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:661: in test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore
+    tp, ref = _activate(rig, pid)
+              ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-a200d6649b144796bf5f orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:686: in test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price
+    assert _writes(rig) == before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff
+_ test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen _
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:696: in test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen
+    assert len(_restore_infos(rig)) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = _restore_infos(<v6lite.tests.helpers.Rig object at 0x00000221FF63ED50>)
+_ test_B26_edge_real_TOML_omission_matches_freeze_and_constraint_changes_fingerprint _
+..\..\v6lite\tests\test_batch26_review_edges.py:38: in _must_load
+    return load_config(path)
+           ^^^^^^^^^^^^^^^^^
+v6lite\config.py:375: in load_config
+    raise ConfigError(f"[protection] has keys that do not belong there: {sorted(extra)}")
+E   v6lite.config.ConfigError: [protection] has keys that do not belong there: ['overnight_tp']
+
+During handling of the above exception, another exception occurred:
+..\..\v6lite\tests\test_batch26_review_edges.py:47: in test_B26_edge_real_TOML_omission_matches_freeze_and_constraint_changes_fingerprint
+    off = _must_load(_config_file(tmp_path, '"freeze"'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_review_edges.py:42: in _must_load
+    pytest.fail('valid reviewed overnight opt-in TOML must load: ' + str(exc))
+E   Failed: valid reviewed overnight opt-in TOML must load: [protection] has keys that do not belong there: ['overnight_tp']
+_ test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[0] _
+..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[1] _
+..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[true] _
+..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[false] _
+..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[None] _
+..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[True] _
+..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[False] _
+..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[quantity] _
+..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-6a8aec3903eb4feb92d4 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[price] _
+..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-bc70dc19127249238c24 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[side] _
+..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-0a2b57746c2d42259721 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[broker_order_id] _
+..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-2e73fa2243354373812a orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[perm_id] _
+..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-93abd699873d48428ffb orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[duplicate_download] _
+..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-67fc921a92c349f8bbb1 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share _
+..\..\v6lite\tests\test_batch26_review_edges.py:137: in test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share
+    tp1, old_ref = _activate(rig, pid)
+                   ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:322: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-777f5406e78a471c8649 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+____ test_B26_edge_query_generation_change_revokes_earlier_overnight_proof ____
+..\..\v6lite\tests\test_batch26_review_edges.py:200: in test_B26_edge_query_generation_change_revokes_earlier_overnight_proof
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000221FF56DA10>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-55ba605e9f2546938fdf | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:847 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-9da69f319d6946779a08 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:00+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；ProtectionEvidenceQueryError
+_ test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission _
+..\..\v6lite\tests\test_batch26_review_edges.py:220: in test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x00000221FF2E1D90>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-a2415e3c3fc1420f8605 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:847 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-c2259bcffdc34a94851e orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:00+00:00 工作单证据时间=2026-10-15T14:01:31+00:00；ProtectionEvidenceQueryError
+_ test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_0/rig-0/reports/2026-10-14.md').is_file
+_ test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_1/rig-0/reports/2026-10-14.md').is_file
+_ test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_2/rig-0/reports/2026-10-14.md').is_file
+_ test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_3/rig-0/reports/2026-10-14.md').is_file
+_ test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_4/rig-0/reports/2026-10-14.md').is_file
+_ test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:123: in test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once
+    _assert_report(rig, DAY_KEY)
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_after_close_5/rig-0/reports/2026-10-14.md').is_file
+__ test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper] ___
+..\..\v6lite\tests\test_batch26_shutdown_report.py:167: in test_B26_shutdown_supplement_uses_the_actual_early_close
+    _assert_report(rig, '2026-11-27')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u0/rig-0/reports/2026-11-27.md').is_file
+_ test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run] __
+..\..\v6lite\tests\test_batch26_shutdown_report.py:167: in test_B26_shutdown_supplement_uses_the_actual_early_close
+    _assert_report(rig, '2026-11-27')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u1/rig-0/reports/2026-11-27.md').is_file
+_ test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:167: in test_B26_shutdown_supplement_uses_the_actual_early_close
+    _assert_report(rig, '2026-11-27')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u2/rig-0/reports/2026-11-27.md').is_file
+_ test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:167: in test_B26_shutdown_supplement_uses_the_actual_early_close
+    _assert_report(rig, '2026-11-27')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_shutdown_supplement_u3/rig-0/reports/2026-11-27.md').is_file
+_ test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:209: in test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen
+    path, text = _assert_report(rig, DAY_KEY)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_supplement_delivery_i0/rig-0/reports/2026-10-14.md').is_file
+_ test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:209: in test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen
+    path, text = _assert_report(rig, DAY_KEY)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_supplement_delivery_i1/rig-0/reports/2026-10-14.md').is_file
+_ test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:378: in test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order
+    _assert_report(rig, '2026-10-06')
+..\..\v6lite\tests\test_batch26_shutdown_report.py:84: in _assert_report
+    assert path.is_file(), 'shutdown after market close must write the real local daily report'
+E   AssertionError: shutdown after market close must write the real local daily report
+E   assert False
+E    +  where False = is_file()
+E    +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_final_calibrated_specs_b25/pytest/test_B26_supplement_preserves_0/rig-0/reports/2026-10-06.md').is_file
+___ test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render] ____
+..\..\v6lite\tests\test_batch26_shutdown_report.py:404: in test_B26_report_failure_does_not_interrupt_safe_order_shutdown
+    assert len(attempts) == 1, 'shutdown must attempt the real after-close report despite the injected failure'
+E   AssertionError: shutdown must attempt the real after-close report despite the injected failure
+E   assert 0 == 1
+E    +  where 0 = len([])
+_ test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write] _
+..\..\v6lite\tests\test_batch26_shutdown_report.py:404: in test_B26_report_failure_does_not_interrupt_safe_order_shutdown
+    assert len(attempts) == 1, 'shutdown must attempt the real after-close report despite the injected failure'
+E   AssertionError: shutdown must attempt the real after-close report despite the injected failure
+E   assert 0 == 1
+E    +  where 0 = len([])
+=========================== short test summary info ===========================
+FAILED ::test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[empty_binding]
+FAILED ::test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[missing_modify_generation]
+FAILED ::test_B26_policy_enum_default_and_all_five_examples_remain_freeze - A...
+FAILED ::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[]
+FAILED ::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE]
+FAILED ::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint]
+FAILED ::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled]
+FAILED ::test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof
+FAILED ::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze]
+FAILED ::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec]
+FAILED ::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]
+FAILED ::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec]
+FAILED ::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec]
+FAILED ::test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence
+FAILED ::test_B26_overnight_opt_in_default_is_declared_and_disabled - Asserti...
+FAILED ::test_B26_opt_in_overnight_TP_waits_for_reduction_ACK_then_cancel_proof_and_restores_same_GTC
+FAILED ::test_B26_overnight_TP1_fill_modifies_only_same_STP_to_breakeven_with_today_fill_evidence
+FAILED ::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[manual_sell_one]
+FAILED ::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[cancelled_gtc]
+FAILED ::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[missing_entry_exec]
+FAILED ::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[unknown_today_exec]
+FAILED ::test_B26_each_required_overnight_evidence_failure_freezes_TP_with_specific_P1_and_no_auto_repair[position_mismatch]
+FAILED ::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[account]
+FAILED ::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[client_id]
+FAILED ::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[con_id]
+FAILED ::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[broker_order_id]
+FAILED ::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[perm_id]
+FAILED ::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[aux_price]
+FAILED ::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[order_type]
+FAILED ::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[tif]
+FAILED ::test_B26_overnight_evidence_never_relaxes_the_original_GTC_strong_identity[outside_rth]
+FAILED ::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_perm]
+FAILED ::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[orphan_intent]
+FAILED ::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[net_quantity]
+FAILED ::test_B26_history_requires_consistent_persisted_entry_identity_and_economic_totals[entry_price]
+FAILED ::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[open_orders]
+FAILED ::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[positions_fresh]
+FAILED ::test_B26_successful_earlier_overnight_proof_cannot_mask_a_new_query_failure[executions_today]
+FAILED ::test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[missing_entry_exec]
+FAILED ::test_B26_previous_overnight_success_never_authorizes_TP_after_evidence_changes[external_working_sell]
+FAILED ::test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[undercovered]
+FAILED ::test_B26_historical_TP_authority_is_not_permission_to_increase_or_recreate_a_GTC[missing_gtc]
+FAILED ::test_B26_disabling_opt_in_cannot_interrupt_an_already_started_TP_cancel_restore
+FAILED ::test_B26_invalid_overnight_ledger_cannot_modify_a_persisted_breakeven_price
+FAILED ::test_B26_overnight_restore_INFO_is_not_repeated_after_same_proof_and_sqlite_reopen
+FAILED ::test_B26_edge_real_TOML_omission_matches_freeze_and_constraint_changes_fingerprint
+FAILED ::test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[0]
+FAILED ::test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[1]
+FAILED ::test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[true]
+FAILED ::test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[false]
+FAILED ::test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[None]
+FAILED ::test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[True]
+FAILED ::test_B26_edge_validate_rejects_invalid_policy_without_truthiness_coercion[False]
+FAILED ::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[quantity]
+FAILED ::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[price]
+FAILED ::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[side]
+FAILED ::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[broker_order_id]
+FAILED ::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[perm_id]
+FAILED ::test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[duplicate_download]
+FAILED ::test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share
+FAILED ::test_B26_edge_query_generation_change_revokes_earlier_overnight_proof
+FAILED ::test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission
+FAILED ::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper]
+FAILED ::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run]
+FAILED ::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper]
+FAILED ::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run]
+FAILED ::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper]
+FAILED ::test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run]
+FAILED ::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper]
+FAILED ::test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run]
+FAILED ::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper]
+FAILED ::test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run]
+FAILED ::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper]
+FAILED ::test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run]
+FAILED ::test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order
+FAILED ::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render]
+FAILED ::test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]
+77 failed, 28 passed in 15.53s

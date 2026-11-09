@@ -1,0 +1,40 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+_ test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[bid-nan] _
+v6lite\tests\test_batch33_open_delay.py:375: in test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent
+    assert len(rows)==1 and rows[0]['valid']==1, 'new audit must not persist JSON NaN/Infinity'
+E   AssertionError: new audit must not persist JSON NaN/Infinity
+E   assert (1 == 1 and 0 == 1)
+E    +  where 1 = len([<sqlite3.Row object at 0x0000020D0A3A3280>])
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+_ test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[ask-inf] _
+v6lite\tests\test_batch33_open_delay.py:375: in test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent
+    assert len(rows)==1 and rows[0]['valid']==1, 'new audit must not persist JSON NaN/Infinity'
+E   AssertionError: new audit must not persist JSON NaN/Infinity
+E   assert (1 == 1 and 0 == 1)
+E    +  where 1 = len([<sqlite3.Row object at 0x0000020D0A0BCA90>])
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+_ test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[last-nan] _
+v6lite\tests\test_batch33_open_delay.py:375: in test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent
+    assert len(rows)==1 and rows[0]['valid']==1, 'new audit must not persist JSON NaN/Infinity'
+E   AssertionError: new audit must not persist JSON NaN/Infinity
+E   assert (1 == 1 and 0 == 1)
+E    +  where 1 = len([<sqlite3.Row object at 0x0000020D0A3F2A70>])
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+_ test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[last-inf] _
+v6lite\tests\test_batch33_open_delay.py:375: in test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent
+    assert len(rows)==1 and rows[0]['valid']==1, 'new audit must not persist JSON NaN/Infinity'
+E   AssertionError: new audit must not persist JSON NaN/Infinity
+E   assert (0 == 1)
+E    +  where 0 = len([])
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[bid-nan]
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[ask-inf]
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[last-nan]
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_defer_audit_nonfinite_quote_stays_valid_JSON_and_idempotent[last-inf]
+4 failed in 1.99s

@@ -1,0 +1,40 @@
+{
+  "label": "full_1_frozen",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T14:41:53.814114-07:00",
+  "end_pt": "2026-10-20T14:55:22.131364-07:00",
+  "seconds": 808.328,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests",
+    "scripts/tests"
+  ],
+  "tests": 1978,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 1,
+  "source_unchanged": true,
+  "inventory_sha256": "eae672f2664ff1a80a0acd34acb0adb122b16ca4d3b8a7286182462688c92256",
+  "incomplete": false,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_overnight_gateway_restart_is_logged_not_paged",
+      "kind": "failure",
+      "message": "AssertionError: assert 4 == 3\n +  where 4 = len([('#x1F7E2 \u544a\u8b66\u901a\u9053\u81ea\u68c0', '#x1F7E2 \u544a\u8b66\u901a\u9053\u81ea\u68c0\\n\u53d1\u751f\u4e86\u4ec0\u4e48\uff1aV6-Lite \u6b63\u5728\u9a8c\u8bc1\u8fdc\u7a0b\u544a\u8b66\u9001\u8fbe\u3002\\n\u4e0b\u4e00\u6b65\uff1a\u65e0\u9700\u64cd\u4f5c\u3002'), ('#x1F7E2 V6-Lite \u5df2\u542f\u52a8\uff08Paper \u771f\u5b9e\u4e0b\u5355\uff08Paper\uff09 \u00b7 \u5b9e\u65f6\u884c\u60c5\uff09', '#x1F7E2 V6-Lit...KR \u8fde\u63a5\u65ad\u5f00\\n\u53d1\u751f\u4e86\u4ec0\u4e48\uff1aIBKR API \u8fde\u63a5\u5df2\u65ad\u5f00\u3002\\n\u5f71\u54cd\uff1a\u5238\u5546\u72b6\u6001\u65e0\u6cd5\u9a8c\u8bc1\uff1b\u65b0\u5165\u573a\u6682\u505c\uff0c\u9000\u51fa\u9700\u5f85\u6062\u590d\u53ca\u5bf9\u8d26\u3002\\n\u4f60\u8981\u505a\u4ec0\u4e48\uff1a1\uff09\u68c0\u67e5 IBKR \u767b\u5f55\u548c API \u8fde\u63a5\uff1b2\uff09\u5728\u672c\u673a\u8fd0\u884c status\uff1b3\uff09\u786e\u8ba4\u91cd\u8fde\u548c\u5bf9\u8d26\u7ed3\u679c\u3002')])\n +    where [('#x1F7E2 \u544a\u8b66\u901a\u9053\u81ea\u68c0', '#x1F7E2 \u544a\u8b66\u901a\u9053\u81ea\u68c0\\n\u53d1\u751f\u4e86\u4ec0\u4e48\uff1aV6-Lite \u6b63\u5728\u9a8c\u8bc1\u8fdc\u7a0b\u544a\u8b66\u9001\u8fbe\u3002\\n\u4e0b\u4e00\u6b65\uff1a\u65e0\u9700\u64cd\u4f5c\u3002'), ('#x1F7E2 V6-Lite \u5df2\u542f\u52a8\uff08Paper \u771f\u5b9e\u4e0b\u5355\uff08Paper\uff09 \u00b7 \u5b9e\u65f6\u884c\u60c5\uff09', '#x1F7E2 V6-Lit...KR \u8fde\u63a5\u65ad\u5f00\\n\u53d1\u751f\u4e86\u4ec0\u4e48\uff1aIBKR API \u8fde\u63a5\u5df2\u65ad\u5f00\u3002\\n\u5f71\u54cd\uff1a\u5238\u5546\u72b6\u6001\u65e0\u6cd5\u9a8c\u8bc1\uff1b\u65b0\u5165\u573a\u6682\u505c\uff0c\u9000\u51fa\u9700\u5f85\u6062\u590d\u53ca\u5bf9\u8d26\u3002\\n\u4f60\u8981\u505a\u4ec0\u4e48\uff1a1\uff09\u68c0\u67e5 IBKR \u767b\u5f55\u548c API \u8fde\u63a5\uff1b2\uff09\u5728\u672c\u673a\u8fd0\u884c status\uff1b3\uff09\u786e\u8ba4\u91cd\u8fde\u548c\u5bf9\u8d26\u7ed3\u679c\u3002')] = <v6lite.alerts.MemoryChannel object at 0x000001E2785EE610>.messages\n +      where <v6lite.alerts.MemoryChannel object at 0x000001E2785EE610> = <v6lite.tests.helpers.Rig object at 0x000001E2782FAF50>.channel"
+    },
+    {
+      "classname": "v6lite.tests.test_g2_day1_selfreview",
+      "name": "test_R7_2_engine_pre_rth_disconnect_mutes_rth_disconnect_page",
+      "kind": "failure",
+      "message": "AssertionError: assert 'IBKR \u8fde\u63a5\u65ad\u5f00' not in '#x1F7E2 \u544a\u8b66\u901a\u9053\u81ea\u68c0 #x1F7E2 ...3\uff09\u786e\u8ba4\u91cd\u8fde\u548c\u5bf9\u8d26\u7ed3\u679c\u3002'\n  \n  'IBKR \u8fde\u63a5\u65ad\u5f00' is contained here:\n    \u4ee3\u7801\n    #x1F7E0 P1 \u00b7 IBKR \u8fde\u63a5\u65ad\u5f00 #x1F7E0 P1 \u00b7 IBKR \u8fde\u63a5\u65ad\u5f00\n    \u53d1\u751f\u4e86\u4ec0\u4e48\uff1aIBKR API \u8fde\u63a5\u5df2\u65ad\u5f00\u3002\n    \u5f71\u54cd\uff1a\u5238\u5546\u72b6\u6001\u65e0\u6cd5\u9a8c\u8bc1\uff1b\u65b0\u5165\u573a\u6682\u505c\uff0c\u9000\u51fa\u9700\u5f85\u6062\u590d\u53ca\u5bf9\u8d26\u3002\n    \u4f60\u8981\u505a\u4ec0\u4e48\uff1a1\uff09\u68c0\u67e5 IBKR \u767b\u5f55\u548c API \u8fde\u63a5\uff1b2\uff09\u5728\u672c\u673a\u8fd0\u884c status\uff1b3\uff09\u786e\u8ba4\u91cd\u8fde\u548c\u5bf9\u8d26\u7ed3\u679c\u3002"
+    },
+    {
+      "classname": "v6lite.tests.test_strategy_parity",
+      "name": "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "kind": "skipped",
+      "message": "legacy market_scanner.py not present"
+    }
+  ]
+}

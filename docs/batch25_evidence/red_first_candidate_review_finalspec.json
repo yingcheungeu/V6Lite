@@ -1,0 +1,169 @@
+{
+  "label": "red_first_candidate_review_finalspec",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-14T12:31:25.343128-07:00",
+  "end_pt": "2026-10-14T12:31:28.276747-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "7612508962288831",
+  "source_unchanged": true,
+  "worktree_code_sha": "7612508962288831",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "7612508962288831ffa1d37879f428f52ec8baebdee3c3834adef86cdfdeecdf",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_review_regressions.py",
+      "sha256": "6f85a548546f305e10b78b6c357afb71a60c07f3d6b5a253669c1961ff0ca88c"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 15,
+    "failures": 8,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "outcome": "failure",
+      "message": "AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority\nassert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}\n  \n  Omitting 19 identical items, use -vv to show\n  Differing items:\n  {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority\nassert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}\n  \n  Omitting 19 identical items, use -vv to show\n  Differing items:\n  {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "outcome": "failure",
+      "message": "AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority\nassert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}\n  \n  Omitting 19 identical items, use -vv to show\n  Differing items:\n  {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority\nassert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}\n  \n  Omitting 19 identical items, use -vv to show\n  Differing items:\n  {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "outcome": "failure",
+      "message": "AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority\nassert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}\n  \n  Omitting 19 identical items, use -vv to show\n  Differing items:\n  {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "outcome": "failure",
+      "message": "AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority\nassert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}\n  \n  Omitting 19 identical items, use -vv to show\n  Differing items:\n  {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "outcome": "failure",
+      "message": "AssertionError: incidental metadata is not a new cause\nassert (3 == 2)\n +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 30, tzinfo=datetime.timezone.utc)])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "outcome": "failure",
+      "message": "AssertionError: retry recovery on the existing healthy socket\nassert (1 == 1 and 1 == 2)\n +  where 1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])\n +  and   1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]"
+    ]
+  },
+  "stdout_sha256": "2d67cbdb2326b736d5734360728b448b2908c3f2008f4d4e96fac0a29c92c15b",
+  "junit_sha256": "9eea94c5b8bdba88865a3610cb4a4b68903633bcc045532aac742ab4e4b77eaf",
+  "inventory_sha256": "7cf2fdb69befce19356808d11b2f65175ee52b63929806e394c07a079be688c3"
+}

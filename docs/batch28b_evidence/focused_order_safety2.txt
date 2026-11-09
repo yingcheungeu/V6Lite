@@ -1,0 +1,73 @@
+..................................................F..................... [ 24%]
+........................................................................ [ 49%]
+........................................................................ [ 74%]
+........................................................................ [ 99%]
+.                                                                        [100%]
+================================== FAILURES ===================================
+_______ test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs _______
+v6lite\tests\test_batch22_protection_lifecycle.py:714: in test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs
+    adapter = IbkrBroker(rig.cfg)
+              ^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:137: in __init__
+    from ib_insync import IB  # imported lazily so tests never need a gateway
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\ib_insync\__init__.py:6: in <module>
+    from eventkit import Event
+.venv\Lib\site-packages\eventkit\__init__.py:3: in <module>
+    from .event import Event
+.venv\Lib\site-packages\eventkit\event.py:9: in <module>
+    from .util import NO_VALUE, get_event_loop, main_event_loop
+.venv\Lib\site-packages\eventkit\util.py:24: in <module>
+    main_event_loop = get_event_loop()
+                      ^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\eventkit\util.py:21: in get_event_loop
+    return asyncio.get_event_loop_policy().get_event_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py:678: in get_event_loop
+    self.set_event_loop(self.new_event_loop())
+                        ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py:699: in new_event_loop
+    return self._loop_factory()
+           ^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py:315: in __init__
+    super().__init__(proactor)
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py:639: in __init__
+    self._make_self_pipe()
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py:784: in _make_self_pipe
+    self._ssock, self._csock = socket.socketpair()
+                               ^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\socket.py:641: in socketpair
+    csock.connect((addr, port))
+v6lite\tests\test_batch22_protection_lifecycle.py:26: in forbidden
+    raise AssertionError("Batch22 must never open a network connection")
+E   AssertionError: Batch22 must never open a network connection
+============================== warnings summary ===============================
+v6lite/tests/test_batch22_trigger_incidents.py::test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[missing]
+  C:\Dev\V6Lite-dev\.venv\Lib\site-packages\_pytest\unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <function BaseEventLoop.__del__ at 0x000001AF1A49ADE0>
+  
+  Traceback (most recent call last):
+    File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 585, in __hash__
+      return self._hash
+             ^^^^^^^^^^
+  AttributeError: 'WindowsPath' object has no attribute '_hash'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 695, in __del__
+      self.close()
+    File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 696, in close
+      self._close_self_pipe()
+    File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 776, in _close_self_pipe
+      self._ssock.close()
+      ^^^^^^^^^^^
+  AttributeError: 'ProactorEventLoop' object has no attribute '_ssock'
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs
+1 failed, 288 passed, 1 warning in 50.27s

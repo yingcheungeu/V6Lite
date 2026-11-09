@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="15" skipped="0" tests="18" time="2.204" timestamp="2026-10-14T22:18:06.959781-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="" name="test_B26_edge_real_TOML_omission_matches_false_and_true_changes_fingerprint" time="0.213"><failure message="Failed: valid reviewed overnight opt-in TOML must load: [protection] has keys that do not belong there: ['overnight_tp_enabled']">..\..\v6lite\tests\test_batch26_review_edges.py:38: in _must_load
+    return load_config(path)
+           ^^^^^^^^^^^^^^^^^
+v6lite\config.py:375: in load_config
+    raise ConfigError(f"[protection] has keys that do not belong there: {sorted(extra)}")
+E   v6lite.config.ConfigError: [protection] has keys that do not belong there: ['overnight_tp_enabled']
+
+During handling of the above exception, another exception occurred:
+..\..\v6lite\tests\test_batch26_review_edges.py:47: in test_B26_edge_real_TOML_omission_matches_false_and_true_changes_fingerprint
+    off = _must_load(_config_file(tmp_path, 'false'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_review_edges.py:42: in _must_load
+    pytest.fail('valid reviewed overnight opt-in TOML must load: ' + str(exc))
+E   Failed: valid reviewed overnight opt-in TOML must load: [protection] has keys that do not belong there: ['overnight_tp_enabled']</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[0]" time="0.004"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp_enabled'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[1]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp_enabled'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[true]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp_enabled'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[false]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp_enabled'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion[None]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;">..\..\v6lite\tests\test_batch26_review_edges.py:60: in test_B26_edge_validate_rejects_non_bool_opt_in_without_truthiness_coercion
+    with pytest.raises(ConfigError, match='overnight_tp_enabled'):
+E   Failed: DID NOT RAISE &lt;class 'v6lite.config.ConfigError'&gt;</failure></testcase><testcase classname="" name="test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[0]" time="0.009" /><testcase classname="" name="test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[1]" time="0.008" /><testcase classname="" name="test_B26_edge_real_TOML_loader_rejects_non_bool_opt_in[&quot;false&quot;]" time="0.010" /><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[quantity]" time="0.139"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[price]" time="0.138"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[side]" time="0.136"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[broker_order_id]" time="0.132"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[perm_id]" time="0.132"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof[duplicate_download]" time="0.135"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:75: in test_B26_edge_same_execId_conflicting_economics_is_not_rebooked_or_accepted_as_TP_proof
+    tp1, ref = _activate(rig, pid)
+               ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share" time="0.139"><failure message="AssertionError: valid opt-in overnight evidence must allow the real TP reduction&#10;assert 'WORKING' == 'REDUCE_PENDING'&#10;  &#10;  - REDUCE_PENDING&#10;  + WORKING">..\..\v6lite\tests\test_batch26_review_edges.py:137: in test_B26_edge_real_TP1_TP2_fills_then_final_TP3_cancel_restores_only_one_share
+    tp1, old_ref = _activate(rig, pid)
+                   ^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch26_overnight_evidence.py:319: in _activate
+    assert row['state'] == 'REDUCE_PENDING', 'valid opt-in overnight evidence must allow the real TP reduction'
+E   AssertionError: valid opt-in overnight evidence must allow the real TP reduction
+E   assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING</failure></testcase><testcase classname="" name="test_B26_edge_query_generation_change_revokes_earlier_overnight_proof" time="0.135"><failure message="assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x000001BDBF13F110&gt;)">..\..\v6lite\tests\test_batch26_review_edges.py:200: in test_B26_edge_query_generation_change_revokes_earlier_overnight_proof
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x000001BDBF13F110&gt;)</failure></testcase><testcase classname="" name="test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission" time="0.136"><failure message="assert []&#10; +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x000001BDBF1B39D0&gt;)">..\..\v6lite\tests\test_batch26_review_edges.py:220: in test_B26_edge_new_trading_day_requires_new_queries_not_yesterdays_cached_permission
+    assert _overnight_p1(rig)
+E   assert []
+E    +  where [] = _overnight_p1(&lt;v6lite.tests.helpers.Rig object at 0x000001BDBF1B39D0&gt;)</failure></testcase></testsuite></testsuites>

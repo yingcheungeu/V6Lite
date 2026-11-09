@@ -1,0 +1,5 @@
+{
+  "reason": "preserve even interrupted receipts lacking final JSON; no source or assertion change",
+  "before_sha256": "9e7110d7e9ac4966377b63ae11ff9f66669afed831a2fb9e40bfa6a807099d0a",
+  "after_sha256": "e7ac55da1a726466660c9d3dd5e0932fd8f97b5ef82b674ddbbac3bdaab2712e"
+}

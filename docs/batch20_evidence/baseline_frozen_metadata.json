@@ -1,0 +1,16 @@
+{
+  "baseline_commit": "abbdb4f2f7a558262a0859d5a6bf7ee859e46d2f",
+  "baseline_package_code_sha": "6293dd4e2377603c",
+  "production_source": "git archive before copying only four new tests",
+  "candidate_code_sha": "d39d10e4c23bdc3b",
+  "temp_source": "C:\\Users\\yu-ch\\AppData\\Local\\Temp\\v6lite_B20_red_zk2ew140\\source",
+  "start_pt": "2026-10-08T15:23:35.563210-07:00",
+  "end_pt": "2026-10-08T15:23:47.151826-07:00",
+  "exit_code": 1,
+  "test_files": {
+    "test_batch20_execution_time.py": "374c34af1b4ef9e0e31eacef45351765d4ff279036edc4c03ebea25285e25d63",
+    "test_batch20_protection_incident.py": "5f9ff52ed9b35badbffee69a728ee026fc7777cbc3b2434f3a17881aeb07d2e5",
+    "test_batch20_template.py": "5a45963e180380fca0273e59881524ecea44e6c06b53f5def7e094e6033e0707",
+    "test_batch20_protection_equivalents.py": "a00b3ebbf9f08b92df1a27a5cb4735b60300c855a461d80cf7092afc6c6b7044"
+  }
+}

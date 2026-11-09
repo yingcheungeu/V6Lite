@@ -1,0 +1,9 @@
+{
+  "file": "v6lite/tests/test_batch29_native_timeout.py",
+  "before_sha256": "b3dd958551b85de7a3cd6eb106aa1a91d2273241860c4cb635f84505a9d82495",
+  "after_sha256": "8ce50421bf0e4b9c15559418970a5c0d4e3965c4f9e3e4c5a31a86b1338871d7",
+  "reason": "unsolicited TP openOrder during real query was also emitted in that query result, double-counting TP; delay only unsolicited echo until actual openOrderEnd, as accepted B28d fixture already does",
+  "production_gates_unchanged": true,
+  "oracle_and_assertions_unchanged": true,
+  "failed_receipt": "green_native_1"
+}

@@ -1,0 +1,29 @@
+{
+  "label": "focused_final_3",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T23:50:41.666787-07:00",
+  "end_pt": "2026-10-23T23:53:06.185502-07:00",
+  "seconds": 144.515,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch29_controls.py",
+    "v6lite/tests/test_batch29_native_timeout.py",
+    "v6lite/tests/test_batch29_faults.py",
+    "v6lite/tests/test_batch17_alerts.py",
+    "v6lite/tests/test_batch28d_tp_cards.py"
+  ],
+  "code_sha": "1bd6b193aedae3bc",
+  "source_unchanged": true,
+  "inventory_sha256": "8a383c7fef17eaa2c80d72ec30eb7f9d9f2cfa261b291a6ead99958bb65737eb",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "6432de15a92191e85328d67fa14420125df84077fa12e05e7bf2252c6134b32e",
+  "XML_sha256_before_masking": "2fa7c7cf9a390836a4c1a3c5a25e60bf269bc32c759703ac51677bd86504164b",
+  "delivered_log_sha256": "b1c02a739f5c06e5e826da122db5b4a9fd09eec8d21f59613d0daafae8f20c1d",
+  "delivered_XML_sha256": "2fa7c7cf9a390836a4c1a3c5a25e60bf269bc32c759703ac51677bd86504164b",
+  "tests": 52,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

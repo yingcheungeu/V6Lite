@@ -1,0 +1,40 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_ test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1 _
+v6lite\tests\test_batch29_native_timeout.py:256: in test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1
+    server.request(monkeypatch)
+v6lite\tests\test_batch29_native_timeout.py:186: in request
+    cli.cmd_test_tp_timeout(SimpleNamespace(symbol='AAPL', operator='John'), self.rig.cfg)
+v6lite\__main__.py:486: in cmd_test_tp_timeout
+    raise GateError("test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则")
+E   v6lite.approval.GateError: test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once _
+v6lite\tests\test_batch29_native_timeout.py:292: in test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+    server.request(monkeypatch)
+v6lite\tests\test_batch29_native_timeout.py:186: in request
+    cli.cmd_test_tp_timeout(SimpleNamespace(symbol='AAPL', operator='John'), self.rig.cfg)
+v6lite\__main__.py:486: in cmd_test_tp_timeout
+    raise GateError("test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则")
+E   v6lite.approval.GateError: test-tp-timeout 已禁用制造超时改价；所有 TP 只用新鲜 bid，离线持单验证 B 规则
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite\config.py:77
+  C:\Dev\V6Lite-dev\v6lite\config.py:77: PytestCollectionWarning: cannot collect test class 'TestConfig' because it has a __init__ constructor (from: v6lite/tests/test_batch29_native_timeout.py)
+    @dataclass(frozen=True)
+
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1
+  v6lite\tests\test_batch29_native_timeout.py:252: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1(
+
+v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+  v6lite\tests\test_batch29_native_timeout.py:288: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch29_native_timeout.py::test_B29_native_test_request_timeout_restores_same_GTC_then_retries_normal_TP1
+FAILED v6lite/tests/test_batch29_native_timeout.py::test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once
+2 failed, 3 warnings in 1.99s

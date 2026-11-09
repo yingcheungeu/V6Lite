@@ -1,0 +1,16 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___ test_B31_legacy_unknown_freeze_cannot_acquire_pending_only_cause_later ____
+v6lite\tests\test_batch31_snapshot_guards.py:53: in test_B31_legacy_unknown_freeze_cannot_acquire_pending_only_cause_later
+    assert rig.store.control(marker) is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('overnight_tp_frozen_at_price:pos-77dcccc029174078a16a:2026-10-27')
+E    +    where control = <v6lite.store.Store object at 0x000001A2AFDCDA90>.control
+E    +      where <v6lite.store.Store object at 0x000001A2AFDCDA90> = <v6lite.tests.helpers.Rig object at 0x000001A2B08B4050>.store
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite TEST] P1: overnight TP evidence pos-77dcccc029174078a16a | AAPL：修改待确认；券商 P=2 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=2801 permId=52801；历史账本入场=b28b-1020-entry.01.01@2026-10-26；当日可见成交=1 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-27T13:33:27.001000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_snapshot_guards.py::test_B31_legacy_unknown_freeze_cannot_acquire_pending_only_cause_later
+1 failed in 1.35s

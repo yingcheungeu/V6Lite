@@ -1,0 +1,8 @@
+{
+  "failure": "green_core_1: omitted TP_PURPOSES name in final cancel entry; no cancel wire emitted",
+  "repair": "use the already-imported explicit Purpose enum set",
+  "file": "v6lite/protection_engine.py",
+  "before_sha256": "d1b7a690b72c4f4514d4d71a3ee3636a6c6b19af98778c9f047f4e1746941aea",
+  "after_sha256": "a4faf068ca237ac8a74e65fb14b48a57068945831f15738a124730192a6747f7",
+  "test_assertions_unchanged": true
+}

@@ -1,0 +1,42 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+    "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]"
+  ]
+}

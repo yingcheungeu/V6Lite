@@ -1,0 +1,16 @@
+{
+  "baseline": "STP_candidate_before_snapshot_cancel_fix",
+  "test_sha256": "6531f1b9c3398e1cdbd0c7148e610b360846ff78a11dd3e6406e2cb92aa3286b",
+  "exit_code": 1,
+  "seconds": 1.547000000020489,
+  "suite": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "42",
+    "skipped": "0",
+    "tests": "48",
+    "time": "0.917",
+    "timestamp": "2026-10-08T22:48:15.820843-07:00",
+    "hostname": "DESKTOP-BF9GHJ8"
+  }
+}

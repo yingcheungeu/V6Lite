@@ -1,0 +1,20 @@
+.................F                                                       [100%]
+================================== FAILURES ===================================
+_____ test_B29_daily_report_has_separate_timeout_evidence_and_restored_S ______
+v6lite\tests\test_batch29_faults.py:249: in test_B29_daily_report_has_separate_timeout_evidence_and_restored_S
+    rig.engine._drain(rig.clock.now()); _settle(rig)
+                                        ^^^^^^^^^^^^
+v6lite\tests\test_batch23_contracts.py:209: in _settle
+    _safety(rig)
+v6lite\tests\test_batch23_contracts.py:154: in _safety
+    assert total<=truth.get(symbol,0),(symbol,'S+T+X',total,'P',truth.get(symbol,0),by_ref)
+E   AssertionError: ('AAPL', 'S+T+X', 4, 'P', 3, {'v6l-b121d9ba681c407c8905': ('AAPL', 1), 'v6l-protect-0bbdce190b464a1bba84': ('AAPL', 3)})
+E   assert 4 <= 3
+E    +  where 3 = <built-in method get of dict object at 0x000001F2DC932E80>('AAPL', 0)
+E    +    where <built-in method get of dict object at 0x000001F2DC932E80> = {'AAPL': 3}.get
+---------------------------- Captured stdout call -----------------------------
+TEST entry requested: AAPL; engine will evaluate it on its next tick
+TEST TP timeout requested: AAPL; expires in 5 minutes; final stage excluded
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch29_faults.py::test_B29_daily_report_has_separate_timeout_evidence_and_restored_S
+1 failed, 17 passed in 78.12s (0:01:18)

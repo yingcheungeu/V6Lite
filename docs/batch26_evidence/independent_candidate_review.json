@@ -1,0 +1,27 @@
+{
+  "reviewer": "/root/b26_review",
+  "decision": "PASS",
+  "mode": "independent read-only; no test execution or writes",
+  "code_sha": "579d13832e3f4237",
+  "package_sha256": "579d13832e3f4237cd150d4ff531d2eec227af94b22010e52f5e9518a21e756d",
+  "unresolved_substantive_findings": [],
+  "summary": [
+    "Current production and seven specs match final source leaves; all 17 source anchors match lines/excerpts/hashes; 85 legacy tests unchanged.",
+    "Last card delta only _overnight_display/_overnight_failure; current STP uses complete fresh same-generation identity proof, missing original shows0, unavailable proof unknown, local last-confirmed shown separately.",
+    "Actual final 7 cards retain A/B accepted risks, nontechnical-proof wording, symbols/numbers/order IDs/numbered steps; old samples and renderer preserved.",
+    "Final render selection binds raw stdout/full source/renderer/output hashes; report builder validates them.",
+    "Final baseline 108 specs:80 failures28 passes0 errors; current focused246 all passed; full unique collected/executed inventories and raw JUnit/output hashes checked.",
+    "Quiet default freeze keeps B25 healthy takeover quiet until actual TP/BE restriction; constraint failure still immediate once; original safety exception boundaries preserved.",
+    "Report body108/246 and B25 restart24 including native2 are accurate; risk acceptance and historical failure classifications are not overstated."
+  ],
+  "evidence_sha256": {
+    "final_candidate_source.json": "09ee2ce0f216f40b6256fa2eeebba0cfe7446e04f0ae149f437889d6e92438ca",
+    "source_anchors.json": "4456a25f58ad0b46671e772745e15caa13293db8fbbb7bd9741eedd3de7b59f4",
+    "final_source_compile.json": "301b6005e00747c641c3fafb2d7732189d1e1d5df4e4c0af4e5cafb60c678b02",
+    "report_body.md": "9b68a497407a3f7649b2cee8ab4c40105723d9edb36b40cb6c041aeb652b3439",
+    "focused_final_108_candidate.json": "e0bff7a29d923f7e53dd95009908794b097ba75ac1082b494de68d4f1ccb6143",
+    "red_final_108_specs_b25.json": "6df4745d99356757dec9af1029e4f4d1065f47a99c762a4232e56348ee83fb0c",
+    "render_actual_2.json": "e545508a47222bb45113cb282ad8e2a5a12088bbc3b360cb8e64990f8c20ee43",
+    "final_render_selection.json": "4121e4a1ce408d8aea03d22d24d1f19e8640ce6cefbb78d1d63b2fd41c2b97c2"
+  }
+}

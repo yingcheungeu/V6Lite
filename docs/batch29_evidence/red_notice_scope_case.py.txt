@@ -1,0 +1,39 @@
+"""Two separate real timeout requests must each reach the phone within five minutes."""
+from v6lite.models import Purpose
+from v6lite.alerts import Alerter
+from v6lite.tests.test_batch23_contracts import _g3t_working, _activate_tp, _settle, _watch_boundaries, _safety, _no_network
+from v6lite.tests.test_batch29_faults import _request
+
+
+def test_B29_two_distinct_timeout_requests_are_not_muted_by_shared_INFO_dedupe(tmp_path, monkeypatch):
+    rig, pid, path = _g3t_working(tmp_path, monkeypatch)
+    _watch_boundaries(rig)
+    assert _request(path) == 0
+    first = _activate_tp(rig, pid)
+    rig.advance(seconds=10); rig.tick()
+    first_notice_at = rig.clock.now()
+    rig.broker.confirm_cancel(first.intent_id)
+    rig.engine._drain(rig.clock.now()); _settle(rig)
+    rig.broker.confirm_protection_modify(rig.store.protection(pid)['intent_id'])
+    _settle(rig)
+    assert rig.store.protection(pid)['confirmed_remaining'] == 3
+    # Complete the ordinary TP1 retry through a real fill and BE ACK.
+    ordinary = _activate_tp(rig, pid)
+    assert ordinary.limit_price <= rig.broker.quote('AAPL').bid
+    rig.broker.protection_auto_status = True
+    rig.broker.fill(ordinary.intent_id)
+    _settle(rig)
+    assert rig.store.position(pid)['tp1_done'] and rig.store.position(pid)['qty_open'] == 2
+    assert rig.store.protection(pid)['state'] == 'WORKING'
+    assert _request(path) == 0
+    second = _activate_tp(rig, pid, Purpose.TP2)
+    assert second.limit_price > rig.broker.quote('AAPL').ask
+    rig.advance(seconds=10); rig.tick()
+    assert rig.clock.now()-first_notice_at < Alerter.DEDUPE_WINDOW
+    cards=[(title,body) for title,body in rig.channel.messages if
+           '测试：止盈超时注入已触发，正在撤单并恢复保护' in title]
+    assert len(cards)==2, rig.channel.messages
+    assert str(rig.store.intent(first.intent_id)['broker_order_id']) in cards[0][1]
+    assert str(rig.store.intent(second.intent_id)['broker_order_id']) in cards[1][1]
+    assert 'TP1' in cards[0][1] and 'TP2' in cards[1][1]
+    _safety(rig)

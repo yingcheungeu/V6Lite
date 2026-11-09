@@ -1,0 +1,35 @@
+{
+  "label": "green_core_complete",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T07:03:18.047715-07:00",
+  "end_pt": "2026-10-27T07:03:28.838206-07:00",
+  "seconds": 10.781,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch31_close_card.py",
+    "v6lite/tests/test_batch28c_price_edges.py",
+    "v6lite/tests/test_batch26_be_token_regression.py"
+  ],
+  "code_sha": "e46bf5be1c130656",
+  "source_unchanged": true,
+  "inventory_sha256": "80d0b52a3f18583d9ec9200b472eea072798c68391cae91ca3db237a6a45ab06",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "7f533f024023acb6f919d3ab7b6517456c03f17fd31ece588ef15020f6586549",
+  "XML_sha256_before_masking": "3cd9e341deac206b4e820246b33a06b56e0a5740c7507b53f80bfdca131e1469",
+  "delivered_log_sha256": "338af283c2790bb3eedff1e10760b7874c51a6359fae2a055d48cb59a06e55d3",
+  "delivered_XML_sha256": "3cd9e341deac206b4e820246b33a06b56e0a5740c7507b53f80bfdca131e1469",
+  "tests": 29,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_close_card",
+      "name": "test_B31_waiting_close_card_allows_other_position_TP_and_queries",
+      "kind": "failure",
+      "message": "v6lite.engine.StartupError: exit_check_interval_seconds=1 is shorter than the largest blocking broker call (25s) + 3s margin"
+    }
+  ]
+}

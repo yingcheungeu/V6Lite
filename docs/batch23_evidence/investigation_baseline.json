@@ -1,0 +1,753 @@
+{
+  "reviewed_by": "batch20_time_logs (read-only investigation), source excerpts collected by root",
+  "baseline_commit": "d9f57dca5ed73f001f9c68052f5fe27b8abc933e",
+  "source_code_sha": "f27e144de9eb406b",
+  "excerpts": [
+    {
+      "baseline_tag": "v6lite-batch22a",
+      "path": "v6lite/protection_engine.py",
+      "sha256": "8f2b9d4830a4fff93ab11f47b67e78bb991a955ccb02ce1d60d9db17b4fcbdb1",
+      "topic": "1.1 B original T0 overwritten",
+      "excerpt": [
+        {
+          "line": 920,
+          "text": "                                          \"final GTC cancel needs two stable three-source snapshots\")"
+        },
+        {
+          "line": 921,
+          "text": "                    return"
+        },
+        {
+          "line": 922,
+          "text": "                self.store.update_intent(now, row[\"intent_id\"], status=IntentStatus.CANCELLED,"
+        },
+        {
+          "line": 923,
+          "text": "                                         note=\"confirmed GTC cancellation before final TP\")"
+        },
+        {
+          "line": 924,
+          "text": "                self.store.update_protection(now, row[\"position_id\"], requested_qty=0,"
+        },
+        {
+          "line": 925,
+          "text": "                                             confirmed_remaining=0, pending_max_remaining=0,"
+        },
+        {
+          "line": 926,
+          "text": "                                             pending_qty=None, state=\"WORKING\", gap_b_started_at=now)"
+        },
+        {
+          "line": 927,
+          "text": "                self._protection_send_tp(now, self.store.protection(row[\"position_id\"]))"
+        },
+        {
+          "line": 928,
+          "text": "            return"
+        },
+        {
+          "line": 929,
+          "text": "        if row[\"state\"] == \"TP_NEEDS_RESTORE\":"
+        }
+      ]
+    },
+    {
+      "baseline_tag": "v6lite-batch22a",
+      "path": "v6lite/protection_engine.py",
+      "sha256": "8f2b9d4830a4fff93ab11f47b67e78bb991a955ccb02ce1d60d9db17b4fcbdb1",
+      "topic": "1.2 TP terminal only marks priority",
+      "excerpt": [
+        {
+          "line": 1507,
+          "text": "                self._protection_page(now, \"P0\", \"late tp fill\", latest,"
+        },
+        {
+          "line": 1508,
+          "text": "                                      detail + \"；减量请求未获确认，保护单状态无法核实\")"
+        },
+        {
+          "line": 1509,
+          "text": ""
+        },
+        {
+          "line": 1510,
+          "text": "    def _protection_on_tp_status(self, now: datetime, event) -> None:"
+        },
+        {
+          "line": 1511,
+          "text": "        row = next((p for p in self.store.protections() if p[\"tp_intent_id\"] == event.intent_id), None)"
+        },
+        {
+          "line": 1512,
+          "text": "        if row is None:"
+        },
+        {
+          "line": 1513,
+          "text": "            return"
+        },
+        {
+          "line": 1514,
+          "text": "        if event.raw_status in _TERMINAL:"
+        },
+        {
+          "line": 1515,
+          "text": "            self._protection_priority_due = True"
+        },
+        {
+          "line": 1516,
+          "text": "            if not self._in_urgent_callback:"
+        },
+        {
+          "line": 1517,
+          "text": "                self._protection_progress(self.clock.now())"
+        },
+        {
+          "line": 1518,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "baseline_tag": "v6lite-batch22a",
+      "path": "v6lite/engine.py",
+      "sha256": "ce975d7482d9d7ef5d086187c5f74dc0a4d0e01703bf22c09f60e8e871150421",
+      "topic": "1.3 async reason clipped",
+      "excerpt": [
+        {
+          "line": 930,
+          "text": "        # A status string is only a HINT. Cancelled can be followed by Filled"
+        },
+        {
+          "line": 931,
+          "text": "        # (GOOGL TP1 incident) and Submitted+0 is never a failure. Terminal"
+        },
+        {
+          "line": 932,
+          "text": "        # hints start a grace timer; settlement is decided from evidence."
+        },
+        {
+          "line": 933,
+          "text": "        if ev.raw_status in _CANCEL_HINTS or ev.raw_status == \"Filled\":"
+        },
+        {
+          "line": 934,
+          "text": "            if not intent[\"cancel_seen_at\"]:"
+        },
+        {
+          "line": 935,
+          "text": "                fields[\"cancel_seen_at\"] = now"
+        },
+        {
+          "line": 936,
+          "text": "            if ev.raw_status in _CANCEL_HINTS:"
+        },
+        {
+          "line": 937,
+          "text": "                fields[\"status\"] = IntentStatus.CANCEL_SEEN"
+        },
+        {
+          "line": 938,
+          "text": "                if ev.message:"
+        },
+        {
+          "line": 939,
+          "text": "                    fields[\"note\"] = ev.message[:200]"
+        },
+        {
+          "line": 940,
+          "text": "        self.store.update_intent(now, ev.intent_id, **fields)"
+        },
+        {
+          "line": 941,
+          "text": "        if intent[\"purpose\"] == Purpose.PROTECT:"
+        },
+        {
+          "line": 942,
+          "text": "            self._protection_on_status(now, ev)"
+        },
+        {
+          "line": 943,
+          "text": "        elif intent[\"purpose\"] in {Purpose.TP1, Purpose.TP2, Purpose.TP3}:"
+        },
+        {
+          "line": 944,
+          "text": "            self._protection_on_tp_status(now, ev)"
+        }
+      ]
+    },
+    {
+      "baseline_tag": "v6lite-batch22a",
+      "path": "v6lite/engine.py",
+      "sha256": "ce975d7482d9d7ef5d086187c5f74dc0a4d0e01703bf22c09f60e8e871150421",
+      "topic": "1.3 sync BrokerError clipped",
+      "excerpt": [
+        {
+          "line": 2554,
+          "text": "                                         client_id=self.cfg.client_id,"
+        },
+        {
+          "line": 2555,
+          "text": "                                         con_id=int(self.store.control(f\"conid:{req.symbol}\") or 0))"
+        },
+        {
+          "line": 2556,
+          "text": "        try:"
+        },
+        {
+          "line": 2557,
+          "text": "            ack = self.broker.submit_limit(req)"
+        },
+        {
+          "line": 2558,
+          "text": "        except BrokerError as exc:"
+        },
+        {
+          "line": 2559,
+          "text": "            if exc.maybe_sent:"
+        },
+        {
+          "line": 2560,
+          "text": "                self.store.update_intent(now, req.intent_id, status=IntentStatus.UNKNOWN, note=str(exc)[:200])"
+        },
+        {
+          "line": 2561,
+          "text": "                self.alerter.send(now, \"P1\", f\"order state unknown {req.symbol}\", str(exc))"
+        },
+        {
+          "line": 2562,
+          "text": "                return \"unknown\""
+        },
+        {
+          "line": 2563,
+          "text": "            self.store.update_intent(now, req.intent_id, status=IntentStatus.REJECTED, note=str(exc)[:200])"
+        },
+        {
+          "line": 2564,
+          "text": "            if req.purpose is not Purpose.ENTRY:"
+        },
+        {
+          "line": 2565,
+          "text": "                self.alerter.send(now, \"P1\", f\"exit rejected {req.symbol} {req.purpose}\", str(exc))"
+        },
+        {
+          "line": 2566,
+          "text": "            return \"rejected\""
+        },
+        {
+          "line": 2567,
+          "text": "        self.store.update_intent(now, req.intent_id, status=IntentStatus.SENT, sent_at=now,"
+        }
+      ]
+    },
+    {
+      "baseline_tag": "v6lite-batch22a",
+      "path": "v6lite/broker/ibkr.py",
+      "sha256": "5c8383e8e5062a3184bdc8ea08f5749110a76e750d7745a56094f1f407b3cd20",
+      "topic": "1.5 SDK order construction",
+      "excerpt": [
+        {
+          "line": 779,
+          "text": "        if req.purpose == Purpose.PROTECT:"
+        },
+        {
+          "line": 780,
+          "text": "            raise BrokerError(\"PROTECT must use typed STP submission\")"
+        },
+        {
+          "line": 781,
+          "text": "        price = _clean_price(req.limit_price)"
+        },
+        {
+          "line": 782,
+          "text": "        if price is None:"
+        },
+        {
+          "line": 783,
+          "text": "            raise BrokerError(\"limit price must be finite and positive\")"
+        },
+        {
+          "line": 784,
+          "text": "        contract = self._contracts.get(req.symbol)"
+        },
+        {
+          "line": 785,
+          "text": "        if contract is None:"
+        },
+        {
+          "line": 786,
+          "text": "            raise BrokerError(f\"{req.symbol} not qualified in this session\")"
+        },
+        {
+          "line": 787,
+          "text": "        order = LimitOrder(str(req.side), req.quantity, round(price, 2), tif=\"DAY\","
+        },
+        {
+          "line": 788,
+          "text": "                           orderRef=req.intent_id, account=self.cfg.account, outsideRth=False)"
+        },
+        {
+          "line": 789,
+          "text": "        return self._place_order(contract, order, req.intent_id)"
+        },
+        {
+          "line": 790,
+          "text": ""
+        },
+        {
+          "line": 791,
+          "text": "    def submit_stop(self, req: ProtectionRequest) -> BrokerAck:"
+        },
+        {
+          "line": 792,
+          "text": "        \"\"\"Submit GTC SELL STP, with no lmtPrice.  BrokerAck is local, not confirmation.\"\"\""
+        },
+        {
+          "line": 793,
+          "text": "        from ib_insync import StopOrder"
+        },
+        {
+          "line": 794,
+          "text": ""
+        },
+        {
+          "line": 795,
+          "text": "        if self.read_only:"
+        },
+        {
+          "line": 796,
+          "text": "            raise BrokerError(\"read-only session cannot place protection orders\")"
+        },
+        {
+          "line": 797,
+          "text": "        if not req.intent_id.startswith(ORDER_REF_PREFIX) or type(req.quantity) is not int or req.quantity <= 0:"
+        },
+        {
+          "line": 798,
+          "text": "            raise BrokerError(\"invalid protection identity or quantity\")"
+        },
+        {
+          "line": 799,
+          "text": "        if (req.order_type != \"STP\" or req.limit_price is not None or"
+        },
+        {
+          "line": 800,
+          "text": "                not _clean_price(req.trigger_price) or req.trigger_price < 1):"
+        },
+        {
+          "line": 801,
+          "text": "            raise BrokerError(\"protection requires STP, valid stop, and no limit price\")"
+        },
+        {
+          "line": 802,
+          "text": "        contract = self._contracts.get(req.symbol)"
+        },
+        {
+          "line": 803,
+          "text": "        if contract is None:"
+        },
+        {
+          "line": 804,
+          "text": "            raise BrokerError(f\"{req.symbol} not qualified in this session\")"
+        },
+        {
+          "line": 805,
+          "text": "        order = StopOrder(\"SELL\", req.quantity, protection_prices(req.trigger_price)[0],"
+        },
+        {
+          "line": 806,
+          "text": "                               tif=\"GTC\", outsideRth=False, orderRef=req.intent_id,"
+        },
+        {
+          "line": 807,
+          "text": "                               account=self.cfg.account)"
+        },
+        {
+          "line": 808,
+          "text": "        return self._place_order(contract, order, req.intent_id)"
+        },
+        {
+          "line": 809,
+          "text": ""
+        },
+        {
+          "line": 810,
+          "text": "    def modify_protection(self, req: ProtectionRequest) -> BrokerAck:"
+        },
+        {
+          "line": 811,
+          "text": "        \"\"\"Modify only the same client's existing order ID; unknown identity blocks.\"\"\""
+        },
+        {
+          "line": 812,
+          "text": "        from ib_insync import StopOrder"
+        },
+        {
+          "line": 813,
+          "text": ""
+        },
+        {
+          "line": 814,
+          "text": "        if self.read_only:"
+        }
+      ]
+    },
+    {
+      "baseline_tag": "v6lite-batch22a",
+      "path": "v6lite/broker/ibkr.py",
+      "sha256": "5c8383e8e5062a3184bdc8ea08f5749110a76e750d7745a56094f1f407b3cd20",
+      "topic": "1.5 SDK modification constructor",
+      "excerpt": [
+        {
+          "line": 842,
+          "text": "                getattr(old, \"orderType\", \"\") != \"STP\" or"
+        },
+        {
+          "line": 843,
+          "text": "                getattr(old, \"tif\", \"\") != \"GTC\" or"
+        },
+        {
+          "line": 844,
+          "text": "                getattr(old, \"account\", \"\") != self.cfg.account or"
+        },
+        {
+          "line": 845,
+          "text": "                getattr(trade.contract, \"symbol\", \"\").upper() != req.symbol or"
+        },
+        {
+          "line": 846,
+          "text": "                getattr(trade.contract, \"conId\", None) != req.con_id or"
+        },
+        {
+          "line": 847,
+          "text": "                getattr(old, \"orderId\", None) != req.broker_order_id or"
+        },
+        {
+          "line": 848,
+          "text": "                getattr(old, \"permId\", None) != req.perm_id):"
+        },
+        {
+          "line": 849,
+          "text": "            raise BrokerError(\"protection identity/client mismatch; refusing modify\")"
+        },
+        {
+          "line": 850,
+          "text": "        order = StopOrder(\"SELL\", req.quantity, protection_prices(req.trigger_price)[0],"
+        },
+        {
+          "line": 851,
+          "text": "                               tif=\"GTC\", outsideRth=False, orderRef=req.intent_id,"
+        },
+        {
+          "line": 852,
+          "text": "                               account=self.cfg.account, orderId=old.orderId,"
+        },
+        {
+          "line": 853,
+          "text": "                               clientId=self.client_id, permId=getattr(old, \"permId\", 0))"
+        },
+        {
+          "line": 854,
+          "text": "        return self._place_order(trade.contract, order, req.intent_id)"
+        },
+        {
+          "line": 855,
+          "text": ""
+        },
+        {
+          "line": 856,
+          "text": "    def cancel(self, intent_id: str, *, expected_order_id: int | None = None,"
+        },
+        {
+          "line": 857,
+          "text": "               expected_perm_id: int | None = None, expected_con_id: int | None = None,"
+        }
+      ]
+    },
+    {
+      "baseline_tag": "v6lite-batch22a",
+      "path": "v6lite/protection_engine.py",
+      "sha256": "8f2b9d4830a4fff93ab11f47b67e78bb991a955ccb02ce1d60d9db17b4fcbdb1",
+      "topic": "1.7 TP quote/pricing and timeout override",
+      "excerpt": [
+        {
+          "line": 1193,
+          "text": "    def _protection_tp_not_sent(self, now: datetime, row, reason: str) -> None:"
+        },
+        {
+          "line": 1194,
+          "text": "        \"\"\"Persist a definite unsent TP before any evidence-based restoration.\"\"\""
+        },
+        {
+          "line": 1195,
+          "text": "        self.store.update_protection(now, row[\"position_id\"], state=\"TP_NEEDS_RESTORE\")"
+        },
+        {
+          "line": 1196,
+          "text": "        self._protection_page(now, \"P1\", \"tp not sent\", self.store.protection(row[\"position_id\"]), reason)"
+        },
+        {
+          "line": 1197,
+          "text": "        self._protection_priority_due = True"
+        },
+        {
+          "line": 1198,
+          "text": ""
+        },
+        {
+          "line": 1199,
+          "text": "    def _protection_send_tp(self, now: datetime, row) -> None:"
+        },
+        {
+          "line": 1200,
+          "text": "        if not row[\"tp_stage\"] or row[\"tp_intent_id\"] or row[\"state\"] != \"WORKING\":"
+        },
+        {
+          "line": 1201,
+          "text": "            return"
+        },
+        {
+          "line": 1202,
+          "text": "        from v6lite.exits import sell_limit"
+        },
+        {
+          "line": 1203,
+          "text": "        quote = self.broker.quote(row[\"symbol\"])"
+        },
+        {
+          "line": 1204,
+          "text": "        if quote is None:"
+        },
+        {
+          "line": 1205,
+          "text": "            self._protection_tp_not_sent(now, row, \"no quote for immediately marketable TP\")"
+        },
+        {
+          "line": 1206,
+          "text": "            return"
+        },
+        {
+          "line": 1207,
+          "text": "        age = quote.age_seconds(now)"
+        },
+        {
+          "line": 1208,
+          "text": "        if not quote.valid_bid_ask() or age is None or age > self.cfg.max_quote_age_seconds * 2:"
+        },
+        {
+          "line": 1209,
+          "text": "            self._protection_tp_not_sent(now, row, \"stale bid for immediately marketable TP\")"
+        },
+        {
+          "line": 1210,
+          "text": "            return"
+        },
+        {
+          "line": 1211,
+          "text": "        test_nonmarketable = self._consume_test_tp_nonmarketable(now, row[\"symbol\"])"
+        },
+        {
+          "line": 1212,
+          "text": "        if test_nonmarketable:"
+        },
+        {
+          "line": 1213,
+          "text": "            if quote.ask is None or not math.isfinite(quote.ask):"
+        },
+        {
+          "line": 1214,
+          "text": "                self._protection_tp_not_sent(now, row, \"test TP lacks valid fresh ask\")"
+        },
+        {
+          "line": 1215,
+          "text": "                return"
+        },
+        {
+          "line": 1216,
+          "text": "            price = math.ceil((quote.ask * 1.03 + 0.01) * 100) / 100"
+        },
+        {
+          "line": 1217,
+          "text": "            log.warning(\"[TEST_TP_TIMEOUT] one-shot nonmarketable DAY TP symbol=%s limit=%.2f ask=%.2f\","
+        },
+        {
+          "line": 1218,
+          "text": "                        row[\"symbol\"], price, quote.ask)"
+        },
+        {
+          "line": 1219,
+          "text": "        else:"
+        },
+        {
+          "line": 1220,
+          "text": "            price = sell_limit(quote.bid, self.cfg.exit_limit_band_pct)"
+        },
+        {
+          "line": 1221,
+          "text": "            if price is None or price > quote.bid:"
+        },
+        {
+          "line": 1222,
+          "text": "                self._protection_tp_not_sent(now, row, \"TP limit is not immediately executable\")"
+        },
+        {
+          "line": 1223,
+          "text": "                return"
+        },
+        {
+          "line": 1224,
+          "text": "        req = OrderRequest(new_id(\"v6l\"), row[\"symbol\"], Side.SELL, int(row[\"tp_qty\"]),"
+        },
+        {
+          "line": 1225,
+          "text": "                           price, Purpose(row[\"tp_stage\"]), row[\"position_id\"])"
+        },
+        {
+          "line": 1226,
+          "text": "        # Persist the phase before sending so a crash cannot duplicate TP."
+        },
+        {
+          "line": 1227,
+          "text": "        self.store.update_protection(now, row[\"position_id\"], tp_intent_id=req.intent_id, state=\"TP_ACTIVE\")"
+        },
+        {
+          "line": 1228,
+          "text": "        result = self._send(now, req, atr=None, count_entry_day=None)"
+        },
+        {
+          "line": 1229,
+          "text": "        received = self._protection_b_status_mono.pop(row[\"position_id\"], None)"
+        },
+        {
+          "line": 1230,
+          "text": "        if received is not None:"
+        },
+        {
+          "line": 1231,
+          "text": "            log.info(\"[PROTECT_DISPATCH] kind=B callback_to_tp_ms=%.3f symbol=%s ref=%s\","
+        },
+        {
+          "line": 1232,
+          "text": "                     (time.monotonic() - received) * 1000, row[\"symbol\"], req.intent_id)"
+        },
+        {
+          "line": 1233,
+          "text": "        if result not in {\"sent\", \"unknown\"}:"
+        },
+        {
+          "line": 1234,
+          "text": "            self._protection_tp_not_sent(now, self.store.protection(row[\"position_id\"]),"
+        },
+        {
+          "line": 1235,
+          "text": "                                         f\"TP submit {result}; restore broker-side protection\")"
+        },
+        {
+          "line": 1236,
+          "text": "        else:"
+        },
+        {
+          "line": 1237,
+          "text": "            self.store.bump_stage_attempt(now, row[\"position_id\"], Purpose(row[\"tp_stage\"]))"
+        }
+      ]
+    },
+    {
+      "baseline_tag": "v6lite-batch22a",
+      "path": "v6lite/protection_engine.py",
+      "sha256": "8f2b9d4830a4fff93ab11f47b67e78bb991a955ccb02ce1d60d9db17b4fcbdb1",
+      "topic": "1.8 cancellation body contradicts fact",
+      "excerpt": [
+        {
+          "line": 193,
+          "text": "        tp_intent = self.store.intent(tp_id) if tp_id else None"
+        },
+        {
+          "line": 194,
+          "text": "        tp_broker_id = tp_intent[\"broker_order_id\"] if tp_intent is not None else None"
+        },
+        {
+          "line": 195,
+          "text": "        tp_remaining = (max(0, int(tp_intent[\"quantity\"]) - self.store.intent_filled_qty(tp_id))"
+        },
+        {
+          "line": 196,
+          "text": "                        if tp_intent is not None else None)"
+        },
+        {
+          "line": 197,
+          "text": "        external = \", \".join(f\"{iid} orderId={getattr(order, 'broker_order_id', '-') or '-'} {qty} 股\""
+        },
+        {
+          "line": 198,
+          "text": "                             for iid, (qty, ours, order) in by_ref.items() if not ours)"
+        },
+        {
+          "line": 199,
+          "text": "        evidence_at = working_at.isoformat() if fresh else \"过期或缺失\""
+        },
+        {
+          "line": 200,
+          "text": "        confirmed_at = field(\"confirmed_at\") or \"未获券商确认\""
+        },
+        {
+          "line": 201,
+          "text": "        current_text = \"当前快照已核实\" if broker_confirmed else \"当前保护状态待核实\""
+        },
+        {
+          "line": 202,
+          "text": "        if kind == \"rejected\" or (kind == \"broker cancelled\" and field(\"state\") == \"REJECTED\"):"
+        },
+        {
+          "line": 203,
+          "text": "            current_text = \"券商已明确拒绝该保护请求\""
+        },
+        {
+          "line": 204,
+          "text": "        elif kind == \"broker cancelled\":"
+        },
+        {
+          "line": 205,
+          "text": "            current_text = (\"券商已回报取消；完整终态身份已核验\" if notice.get(\"complete_identity\") else"
+        },
+        {
+          "line": 206,
+          "text": "                            \"券商已回报取消；终态身份尚未获完整授权核验或原人工 hold 未解除；保持人工核验，不授予释放权限\")"
+        },
+        {
+          "line": 207,
+          "text": "        confirmed_text = str(confirmed)"
+        },
+        {
+          "line": 208,
+          "text": "        if kind == \"broker cancelled\" and not cancel_proof and field(\"state\") != \"REJECTED\":"
+        },
+        {
+          "line": 209,
+          "text": "            confirmed_text = f\"待核实（上次确认 {confirmed}）\""
+        },
+        {
+          "line": 210,
+          "text": "        if notice:"
+        },
+        {
+          "line": 211,
+          "text": "            detail += (f\"；券商状态={notice['raw_status']} code={notice['error_code']}；\""
+        },
+        {
+          "line": 212,
+          "text": "                       \"取消诊断与执行权限独立核验\")"
+        }
+      ]
+    }
+  ],
+  "order_constructors": {
+    "paths": [
+      "broker/ibkr.py submit_limit",
+      "broker/ibkr.py submit_stop",
+      "broker/ibkr.py modify_protection"
+    ],
+    "count": 3,
+    "requirement": "explicit usePriceMgmtAlgo=False; no PMA/IBALGO/overridePercentageConstraints"
+  },
+  "constraints": "No writes from investigation Agent; no runtime/User-state/John-config reads, no tests or connections."
+}

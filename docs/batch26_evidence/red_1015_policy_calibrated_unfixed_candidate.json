@@ -1,0 +1,154 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_1015_policy_calibrated_unfixed_candidate",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-15T17:36:43.473174-07:00",
+  "end_pt": "2026-10-15T17:36:47.014580-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "b00ad13e27034a0b",
+  "source_unchanged": true,
+  "worktree_code_sha": "b00ad13e27034a0b",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "b00ad13e27034a0badb000e0bb83869f5e916ff0fd8fe883d19dff2f9ab73987",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch26_constraint_policy.py",
+      "sha256": "b9090294e8ccb86d4583a21596b57135b5fe5d74129dc04882d63a86dc062c8d"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 13,
+    "failures": 12,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_enum_default_and_all_five_examples_remain_freeze",
+      "outcome": "failure",
+      "message": "AssertionError: assert None == 'freeze'\n +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap...s=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60, overnight_tp_enabled=False), 'overnight_tp', None)\n +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap...s=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60, overnight_tp_enabled=False) = ProtectionConfig()"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[]",
+      "outcome": "failure",
+      "message": "Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE]",
+      "outcome": "failure",
+      "message": "Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint]",
+      "outcome": "failure",
+      "message": "Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled]",
+      "outcome": "failure",
+      "message": "Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof",
+      "outcome": "failure",
+      "message": "AssertionError: overnight TP restored pos-8de639cc94224b8b8d5f\n  AAPL：过夜持仓已通过历史账本 + 当日三项核验，自动止盈恢复；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00\n  #x1F7E2 INFO · 过夜持仓自动止盈恢复 · AAPL\n  证据：AAPL：过夜持仓已通过历史账本 + 当日三项核验，自动止盈恢复；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00\n  权限：仅止盈、保本及本次止盈自身恢复；不提供完整历史成交权限。\n  你要做什么：1）核对标的、股数与 GTC 编号；2）观察后续止盈/保本结果；3）出现差异时保持冻结并在同一 TWS 核查。\nassert None\n +  where None = <function search at 0x000001BD4B6C1C60>('依据运行约束\\\\s*A[、,，]\\\\s*B', 'overnight TP restored pos-8de639cc94224b8b8d5f\\nAAPL：过夜持仓已通过历史账本 + 当日三项核验，自动止盈恢复；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderI...6-10-14T14:01:00+00:00\\n权限：仅止盈、保本及本次止盈自身恢复；不提供完整历史成交权限。\\n你要做什么：1）核对标的、股数与 GTC 编号；2）观察后续止盈/保本结果；3）出现差异时保持冻结并在同一 TWS 核查。')\n +    where <function search at 0x000001BD4B6C1C60> = re.search"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze]",
+      "outcome": "failure",
+      "message": "AssertionError: overnight TP evidence pos-bf10d760190743939d68\n  AAPL：overnight_tp_enabled 默认关闭，过夜自动止盈/保本未启用；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:31+00:00\n  #x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n  核验结果：AAPL：overnight_tp_enabled 默认关闭，过夜自动止盈/保本未启用；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:31+00:00\n  影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。\nassert None\n +  where None = <function search at 0x000001BD4B6C1C60>('依据运行约束\\\\s*A[、,，]\\\\s*B', 'overnight TP evidence pos-bf10d760190743939d68\\nAAPL：overnight_tp_enabled 默认关闭，过夜自动止盈/保本未启用；券商 P=3 股，账本=3 股，STP S=3 股...+00:00\\n影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。')\n +    where <function search at 0x000001BD4B6C1C60> = re.search"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec]",
+      "outcome": "failure",
+      "message": "AssertionError: overnight TP evidence pos-f7595ed741f845abb131\n  AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-policy-unknown-first.01.01；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-policy-unknown-first.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00\n  #x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n  核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-policy-unknown-first.01.01；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-policy-unknown-first.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00\n  影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。\nassert None\n +  where None = <function search at 0x000001BD4B6C1C60>('依据运行约束\\\\s*A[、,，]\\\\s*B', 'overnight TP evidence pos-f7595ed741f845abb131\\nAAPL：当日可见成交无法归属或与账本经济身份不一致：b26-policy-unknown-first.01.01；券商 P=3 股，账本...+00:00\\n影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。')\n +    where <function search at 0x000001BD4B6C1C60> = re.search"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]",
+      "outcome": "failure",
+      "message": "assert 0 == 1\n +  where 0 = len([])\n +    where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000001BD701E5B10>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec]",
+      "outcome": "failure",
+      "message": "AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 1, tzinfo=datetime.timezone.utc)), ('positions_fresh', datetim...time.timezone.utc)), ('positions_fresh', datetime.datetime(2026, 10, 14, 14, 1, 2, tzinfo=datetime.timezone.utc)), ...]\nassert Counter({'ope...s_today': 31}) == Counter({'ope...ns_today': 2})\n  \n  Differing items:\n  {'executions_today': 31} != {'executions_today': 2}\n  {'open_orders': 31} != {'open_orders': 2}\n  {'account_executions_today': 31} != {'account_executions_today': 2}\n  {'positions_fresh': 31} != {'positions_fresh': 2}\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec]",
+      "outcome": "failure",
+      "message": "AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 1, tzinfo=datetime.timezone.utc)), ('positions_fresh', datetim...time.timezone.utc)), ('positions_fresh', datetime.datetime(2026, 10, 14, 14, 1, 2, tzinfo=datetime.timezone.utc)), ...]\nassert Counter({'ope...s_today': 31}) == Counter({'ope...ns_today': 2})\n  \n  Differing items:\n  {'executions_today': 31} != {'executions_today': 2}\n  {'open_orders': 31} != {'open_orders': 2}\n  {'account_executions_today': 31} != {'account_executions_today': 2}\n  {'positions_fresh': 31} != {'positions_fresh': 2}\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_actual_missing_protection_still_retains_original_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch26_constraint_policy",
+      "name": "test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence",
+      "outcome": "failure",
+      "message": "AssertionError: same-day BE is a broker modification and also requires fresh full evidence\nassert (2, 1, 2, 0) == (2, 1, 1, 0)\n  \n  At index 2 diff: 2 != 1\n  Use -v to get more diff"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_enum_default_and_all_five_examples_remain_freeze",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_actual_missing_protection_still_retains_original_P0",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_enum_default_and_all_five_examples_remain_freeze",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec]",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_actual_missing_protection_still_retains_original_P0",
+      "v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence"
+    ]
+  },
+  "stdout_sha256": "88595caf1b9a57bbe1ec72df1d0b653a12ca36a018c273ce6cd73dae2207d49b",
+  "junit_sha256": "49651942c85c283f5f4960b1eb9e3ea7494a3fec77b0ab1f941dfac06afc30fa",
+  "inventory_sha256": "eee93952476f7466ffd310e608ef5c4b2a5449bf19ff9b6f3e4e3e074ce57cfe"
+}

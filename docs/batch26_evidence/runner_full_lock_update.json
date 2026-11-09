@@ -1,0 +1,7 @@
+{
+  "reason": "Require an independently reviewed locked candidate and all input/source/tool hashes for every full collection/run; checkpoint hash remains identical across all three runs",
+  "previous_sha256": "a0d533cae8209ab675997232fb3ebcfc7001e9b37d38089ac94906ce872277b4",
+  "new_sha256": "b538d9d64928bc6c216351d81892f3c7263a93a4f9fe2996e1ab8fd83e793e9b",
+  "focused_red_green_pytest_program_and_assertions_unchanged": true,
+  "trading_time_and_Windows_JobObject_guards_preserved": true
+}

@@ -1,0 +1,15 @@
+{
+  "phase": "first candidate raw red retained before further production fix",
+  "source_code_sha": "b6320521dd5bbd1e",
+  "receipt": "green_first_overnight_candidate.json",
+  "totals": {
+    "tests": 86,
+    "failures": 8,
+    "errors": 0,
+    "skipped": 0
+  },
+  "tracked_diff_sha256": "b5c6a3035c8870e779125c73875403ba4c91ba3a5032c95712f1df568c41a6d2",
+  "new_module_original_sha256": "e5d0b75b594d5da596afae52884080905b72b57b075d115920e13dfc12a14757",
+  "root_initial_triage": "One BE-confirmation behavior failure; six economic-conflict tests stop earlier because healthy BE remains PRICE_PENDING; tail TP2 progression stops behind a verification-retry created during price confirmation. Economic-conflict and final TP3 branches not reached yet; do not claim their red independently. No setup errors; preserve all strong assertions.",
+  "next_action": "Sole implementer diagnose own BE/PRICE_PENDING scope versus b25 full_exec failure/retry; never clear pre-existing real retry/F4/hold to get green. Tests stay frozen."
+}

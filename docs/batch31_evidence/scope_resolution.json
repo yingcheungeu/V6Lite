@@ -1,0 +1,12 @@
+{
+  "authorized_by": "user",
+  "decision": "accept_conservative_legacy_freeze",
+  "quote": "§3.4 裁定：接受保守规则。 新冻结必须写明原因。只有原因为\"修改待确认\"的冻结，并且在保本修改已确认、新一轮完整三项核验 a–d 通过之后，才自动解除，同时写审计并发 INFO。b30 留下的、来源不明的旧冻结保持不变，报告里写明这一点。",
+  "source": "direct human follow-up in this conversation",
+  "recorded_at_utc": "2026-10-27T16:06:21.103532+00:00",
+  "additional_requirements": [
+    "read-only Claude evidence",
+    "correct real callback sequence and original-b30 red replay",
+    "three serial Windows full runs after 13:30 PT then local dev commit/tag and freeze"
+  ]
+}

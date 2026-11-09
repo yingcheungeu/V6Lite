@@ -1,0 +1,93 @@
+{
+  "label": "red_b30_initial",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T06:49:24.393206-07:00",
+  "end_pt": "2026-10-27T06:49:28.132915-07:00",
+  "seconds": 3.75,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch31_close_card.py"
+  ],
+  "code_sha": "bf8d99bc9df37e59",
+  "source_unchanged": true,
+  "inventory_sha256": "fbd31a3214fddf6ae79e41a6f407b118753c7a82b74f55fad256f1fb048e306a",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "d0e1485309426f3ebc704463a330a416572bc6cd099150556beb978612128623",
+  "XML_sha256_before_masking": "f22dd547a565f87e94d7d4adf5583d452c211eddf758f3862a849f4fb46820ed",
+  "delivered_log_sha256": "677dd0ef4cf714290bd80494b61d2fbe4f68715045b9628b1996c032b3e25e0d",
+  "delivered_XML_sha256": "f22dd547a565f87e94d7d4adf5583d452c211eddf758f3862a849f4fb46820ed",
+  "tests": 11,
+  "failures": 3,
+  "errors": 8,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]",
+      "kind": "error",
+      "message": "failed on setup with \"NameError: name 'entry_price' is not defined\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]",
+      "kind": "error",
+      "message": "failed on setup with \"NameError: name 'entry_price' is not defined\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_old_confirmed_price_waits_without_freeze_or_P0[20]",
+      "kind": "error",
+      "message": "failed on setup with \"NameError: name 'entry_price' is not defined\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_old_confirmed_price_waits_without_freeze_or_P0[40]",
+      "kind": "error",
+      "message": "failed on setup with \"NameError: name 'entry_price' is not defined\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_real_contradiction_retains_STP_and_freezes[aux]",
+      "kind": "error",
+      "message": "failed on setup with \"NameError: name 'entry_price' is not defined\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_real_contradiction_retains_STP_and_freezes[quantity]",
+      "kind": "error",
+      "message": "failed on setup with \"NameError: name 'entry_price' is not defined\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_real_contradiction_retains_STP_and_freezes[permId]",
+      "kind": "error",
+      "message": "failed on setup with \"NameError: name 'entry_price' is not defined\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_restart_pending_uses_owned_complete_round_then_TP2",
+      "kind": "error",
+      "message": "failed on setup with \"NameError: name 'entry_price' is not defined\""
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_close_card",
+      "name": "test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]",
+      "kind": "failure",
+      "message": "AssertionError: assert ['#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684...\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'] == []\n  \n  Left contains one more item: '#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684\u4e0e\u6301\u4ed3\uff1aAAPL\uff1bpositionId=pos-929a99a0e0034127abc6\uff1b\u5269\u4f59\u6301\u4ed3 0 \u80a1\\n\u76c8\u4e8f\uff1aAAPL \u6bdb\u76c8\u4e8f 3.84 USD\uff1b\u4f63\u91d1\u5df2\u56de\u62a5 3.01 + \u4f30\u7b97 1.00 USD\uff1b\u5df2\u56de\u62a5\u51c0\u503c 0.83 USD\uff1b\u4f30\u7b97\u51c0\u503c -0.17 USD\uff081 \u7b14\u4f63\u91d1\u672a\u56de\u62a5\uff09\\n\u8bf4\u660e\uff1a\u7f3a\u4f63\u91d1\u6309\u8fd1\u671f\u540c\u6807\u7684\u540c\u65b9\u5411\u540c\u6570\u91cf\u5b9e\u9645\u4f63\u91d1\u4f30\u7b97\uff0c\u914d\u7f6e\u6700\u4f4e\u503c\u515c\u5e95\uff1b\u5b9e\u9645\u56de\u62a5\u540e\u590d\u7b97\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_close_card",
+      "name": "test_B31_close_waits_for_final_fee_or_three_second_estimate[None]",
+      "kind": "failure",
+      "message": "AssertionError: assert ['#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684...\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'] == []\n  \n  Left contains one more item: '#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684\u4e0e\u6301\u4ed3\uff1aAAPL\uff1bpositionId=pos-4486546f88ee4ff98a45\uff1b\u5269\u4f59\u6301\u4ed3 0 \u80a1\\n\u76c8\u4e8f\uff1aAAPL \u6bdb\u76c8\u4e8f 3.84 USD\uff1b\u4f63\u91d1\u5df2\u56de\u62a5 3.01 + \u4f30\u7b97 1.00 USD\uff1b\u5df2\u56de\u62a5\u51c0\u503c 0.83 USD\uff1b\u4f30\u7b97\u51c0\u503c -0.17 USD\uff081 \u7b14\u4f63\u91d1\u672a\u56de\u62a5\uff09\\n\u8bf4\u660e\uff1a\u7f3a\u4f63\u91d1\u6309\u8fd1\u671f\u540c\u6807\u7684\u540c\u65b9\u5411\u540c\u6570\u91cf\u5b9e\u9645\u4f63\u91d1\u4f30\u7b97\uff0c\u914d\u7f6e\u6700\u4f4e\u503c\u515c\u5e95\uff1b\u5b9e\u9645\u56de\u62a5\u540e\u590d\u7b97\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_close_card",
+      "name": "test_B31_unrelated_commission_does_not_release_wait",
+      "kind": "failure",
+      "message": "AssertionError: assert not ['#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684\u4e0e\u6301\u4ed3\uff1aAAPL\uff1bpositionId=pos-1df49a5c25614a5ba9fd\uff1b\u5269\u4f59\u6301\u4ed3 0 \u80a1\\n\u76c8\u4e8f\uff1aAAPL \u6bdb\u76c8\u4e8f 3.84 USD\uff1b\u4f63\u91d1\u5df2\u56de\u62a5 3.01 + \u4f30\u7b97 1.00 USD\uff1b\u5df2\u56de\u62a5\u51c0\u503c 0.83 USD\uff1b\u4f30\u7b97\u51c0\u503c -0.17 USD\uff081 \u7b14\u4f63\u91d1\u672a\u56de\u62a5\uff09\\n\u8bf4\u660e\uff1a\u7f3a\u4f63\u91d1\u6309\u8fd1\u671f\u540c\u6807\u7684\u540c\u65b9\u5411\u540c\u6570\u91cf\u5b9e\u9645\u4f63\u91d1\u4f30\u7b97\uff0c\u914d\u7f6e\u6700\u4f4e\u503c\u515c\u5e95\uff1b\u5b9e\u9645\u56de\u62a5\u540e\u590d\u7b97\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002']\n +  where ['#x1F7E2 \u6301\u4ed3\u5df2\u5173\u95ed\\n\u6807\u7684\u4e0e\u6301\u4ed3\uff1aAAPL\uff1bpositionId=pos-1df49a5c25614a5ba9fd\uff1b\u5269\u4f59\u6301\u4ed3 0 \u80a1\\n\u76c8\u4e8f\uff1aAAPL \u6bdb\u76c8\u4e8f 3.84 USD\uff1b\u4f63\u91d1\u5df2\u56de\u62a5 3.01 + \u4f30\u7b97 1.00 USD\uff1b\u5df2\u56de\u62a5\u51c0\u503c 0.83 USD\uff1b\u4f30\u7b97\u51c0\u503c -0.17 USD\uff081 \u7b14\u4f63\u91d1\u672a\u56de\u62a5\uff09\\n\u8bf4\u660e\uff1a\u7f3a\u4f63\u91d1\u6309\u8fd1\u671f\u540c\u6807\u7684\u540c\u65b9\u5411\u540c\u6570\u91cf\u5b9e\u9645\u4f63\u91d1\u4f30\u7b97\uff0c\u914d\u7f6e\u6700\u4f4e\u503c\u515c\u5e95\uff1b\u5b9e\u9645\u56de\u62a5\u540e\u590d\u7b97\uff0c\u5df2\u89e6\u53d1\u51b7\u5374\u4e0d\u81ea\u52a8\u89e3\u9664\u3002'] = cards(<v6lite.tests.helpers.Rig object at 0x0000015B28E20990>)"
+    }
+  ]
+}

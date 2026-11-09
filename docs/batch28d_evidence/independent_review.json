@@ -1,0 +1,21 @@
+{
+  "classification": "independent read-only review; no source writes or pytest by reviewers",
+  "initial_review": "cancel authority uses native strong identity, 0/202 only, request/socket binding, role isolation, one-shot consumption and unchanged quote/capacity/wire gates",
+  "finding": "P1: confirmed cancellation contradiction detector was restricted to TP_ACTIVE/CANCELLED and bound TP-id; unsent/recovery stage could miss P0",
+  "resolution": "remove phase/TP-id preconditions; complete fresh own-query working original is held/P0 before restore decision; pre-confirm query and old socket/role boundaries retained",
+  "draft_review": "no further blocker; replacement STP has a different intent/binding and is not blocked by old receipt",
+  "red_receipt": "red_restore_contradiction_1: 2 failed",
+  "green_receipt": "green_restore_contradiction_1: 2 passed",
+  "actual_repair_files": [
+    {
+      "file": "v6lite/final_tp.py",
+      "before_sha256": "2c2b1c2abe07ddbc9bd97e0227b6b78688201798528dcc0a11ec87706b57e4e7",
+      "after_sha256": "5cf0bacea29f882c4354bb6e50d4596e8cefcc2140aad7fcf0b67e78a3f7abdd"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "before_sha256": "a4faf068ca237ac8a74e65fb14b48a57068945831f15738a124730192a6747f7",
+      "after_sha256": "e5162bd787c81e453ef68adf42aa9cdf2658120eaeb229eb1110a36e2f8f298d"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "sys_platform": "win32",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "pytest_version": "9.0.3",
+  "environment_policy": {
+    "PYTHONUTF8": "1 (task flag)",
+    "PYTHONDONTWRITEBYTECODE": "1 (task flag)",
+    "broker_secrets": "removed from test children; no values recorded"
+  },
+  "default_suite_paths": [
+    "v6lite/tests",
+    "scripts/tests"
+  ]
+}

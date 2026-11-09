@@ -1,0 +1,30 @@
+F.F                                                                      [100%]
+================================== FAILURES ===================================
+____ test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff ____
+v6lite\tests\test_batch24_evidence_deadline.py:91: in test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff
+    assert len(_pages(rig)) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = _pages(<v6lite.tests.helpers.Rig object at 0x000001FA23BF6E50>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-16de5147fb4c4434a5f8 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=1.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=13.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=59.0s cause=ProtectionEvidenceQueryError
+__ test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled __
+v6lite\tests\test_batch16_f6_steady_timeout.py:50: in test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled
+    assert len(pages) == 1, pages
+E   AssertionError: []
+E   assert 0 == 1
+E    +  where 0 = len([])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-2b37df9c4e1a483bb849 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=0.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=1.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=13.0s cause=ProtectionEvidenceQueryError
+WARNING  v6lite.protection:protection_engine.py:801 [PROTECT_EVIDENCE_RETRY] symbol=AAPL elapsed=59.0s cause=ProtectionEvidenceQueryError
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff
+FAILED v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled
+2 failed, 1 passed in 0.82s

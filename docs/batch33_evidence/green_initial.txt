@@ -1,0 +1,54 @@
+...F.FF...F..................F                                           [100%]
+================================== FAILURES ===================================
+__________________ test_B33_configured_boundary[0-0.8-False] __________________
+v6lite\tests\test_batch33_open_delay.py:162: in test_B33_configured_boundary
+    assert bool(_audits(rig, 'STAGE_BEGIN')) is not blocked
+E   AssertionError: assert False is not False
+E    +  where False = bool([])
+E    +    where [] = _audits(<v6lite.tests.helpers.Rig object at 0x000001A18807C2D0>, 'STAGE_BEGIN')
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+_________________ test_B33_configured_boundary[60-60.0-False] _________________
+v6lite\tests\test_batch33_open_delay.py:162: in test_B33_configured_boundary
+    assert bool(_audits(rig, 'STAGE_BEGIN')) is not blocked
+E   AssertionError: assert False is not False
+E    +  where False = bool([])
+E    +    where [] = _audits(<v6lite.tests.helpers.Rig object at 0x000001A1A88F3750>, 'STAGE_BEGIN')
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+__________________ test_B33_vanished_trigger_is_not_replayed __________________
+v6lite\tests\test_batch33_open_delay.py:173: in test_B33_vanished_trigger_is_not_replayed
+    assert len(_audits(rig, 'TP_START_DEFERRED_OPEN')) == 1
+E   AssertionError: assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = _audits(<v6lite.tests.helpers.Rig object at 0x000001A1A88A4D90>, 'TP_START_DEFERRED_OPEN')
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+______________ test_B33_existing_workflow_restoration_continues _______________
+v6lite\tests\test_batch33_open_delay.py:214: in test_B33_existing_workflow_restoration_continues
+    assert rig.store.protection(pid)['state'] == 'REDUCE_PENDING'
+E   AssertionError: assert 'WORKING' == 'REDUCE_PENDING'
+E     
+E     - REDUCE_PENDING
+E     + WORKING
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+__________ test_B33_report_joins_actual_start_and_never_invents_one ___________
+v6lite\tests\test_batch33_open_delay.py:275: in test_B33_report_joins_actual_start_and_never_invents_one
+    assert '开盘止盈延后：1 次' in report and '尚未开始' in report
+E   assert ('开盘止盈延后：1 次' in '# V6-Lite daily report 2026-10-29 (paper)\n\n- account: DU******001   state role: formal\n- code_sha: c0026767090c92d...pped": false, "broker_connected": true,\n\n## Operator notes\n\n- (market context, manual actions, things to review)\n')
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch33_open_delay.py::test_B33_oct29_real_overnight_replay
+  v6lite\tests\test_batch33_open_delay.py:72: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B33_oct29_real_overnight_replay(opening, record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_configured_boundary[0-0.8-False]
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_configured_boundary[60-60.0-False]
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_vanished_trigger_is_not_replayed
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_existing_workflow_restoration_continues
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_report_joins_actual_start_and_never_invents_one
+5 failed, 25 passed, 1 warning in 4.07s

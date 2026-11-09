@@ -1,0 +1,18 @@
+{
+  "resume_pt": "2026-10-17T14:41:38.753214-07:00",
+  "baseline": "44a85f1f7856f2761370943ef4e2daec42e870fe",
+  "starting_package_code_sha_verified": "631670c0bf734c0b",
+  "process_counts": {
+    "unknown": 0,
+    "runtime": 0
+  },
+  "staging_empty": true,
+  "manual_sha256_preserved": "7e0b91bf0db3f13d283d2aa669c7a5566b0a4eb48667a86aca5a620da3b52806",
+  "instruction_sha256": "95c851973e6e5a9563f8dd7fabed4be0cc95806b5a8f89e7aebf77f25e7c37e9",
+  "prior_validated": {
+    "green_initial_candidate": "35 passed, 0 failed/errors",
+    "focused_initial_candidate": "850 passed, 0 failed/errors"
+  },
+  "interruption": "Automatic approval could not complete due to usage limit; requested tool update was not executed. Resumed after limit cleared.",
+  "remaining": "Three explicit identity-conflict candidate red cases; single-implementer fix; independent review; serial full3; report, commit and annotated tag."
+}

@@ -1,0 +1,1474 @@
+{
+  "label": "focused_protection_run4",
+  "start_pt": "2026-10-09T08:57:06.487319-07:00",
+  "end_pt": "2026-10-09T08:57:27.262502-07:00",
+  "returncode": 0,
+  "source_code_sha": "f27e144de9eb406b",
+  "source_unchanged": true,
+  "spec_sha256": "b513c130a9045147fa3f77c3afb10d1140b17207995143866523fc9de83c532f",
+  "totals": {
+    "tests": 291,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[finite-limit-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[finite-limit-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[empty-limit-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_trusted_protection_ref_cannot_bypass_tuple_check_as_LMT_DAY[empty-limit-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_ordinary_DAY_ref_with_same_wire_payload_and_ids_remains_cancellable[finite-limit-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_ordinary_DAY_ref_with_same_wire_payload_and_ids_remains_cancellable[finite-limit-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_ordinary_DAY_ref_with_same_wire_payload_and_ids_remains_cancellable[empty-limit-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_ordinary_DAY_ref_with_same_wire_payload_and_ids_remains_cancellable[empty-limit-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_protection_defaults_to_STP_without_legacy_offset",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_explicit_STP_and_omitted_default_have_same_fingerprint",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"STP LMT\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"LMT\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"MKT\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"stp\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[\"\"]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[true]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_only_exact_STP_is_valid_protection_type[0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_removed_offset_is_diagnosed_even_when_protection_disabled[0.03]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_removed_offset_is_diagnosed_even_when_protection_disabled[0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_removed_offset_is_diagnosed_even_when_protection_disabled[nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_removed_offset_is_diagnosed_even_when_protection_disabled[true]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_protection_order_type_is_bound_into_fingerprint",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_trigger_unfilled_timer_remains_configurable_and_fingerprinted",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[paper.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[paper_delayed.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[paper_test.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[paper_g3n.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_shipped_example_explicitly_uses_STP_without_removed_key[live.toml]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_submits_sell_STP_GTC_RTH_with_no_limit_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_has_no_old_stop_limit_submission_entrypoint",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_refuses_any_non_None_protection_limit_without_writing[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_refuses_any_non_None_protection_limit_without_writing[325.69]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_refuses_any_non_None_protection_limit_without_writing[nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_refuses_old_request_type_without_writing",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_invalid_stop_price_remains_fail_closed[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_invalid_stop_price_remains_fail_closed[nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_invalid_stop_price_remains_fail_closed[inf]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[ENTRY-BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[TP1-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[TP2-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[TP3-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[STOP-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_every_nonprotection_order_is_still_LMT_with_zero_MKT_calls[SHUTDOWN-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_quantity_modification_keeps_STP_and_exact_persisted_identity[2-3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_quantity_modification_keeps_STP_and_exact_persisted_identity[5-5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_stop_modification_changes_auxPrice_without_adding_a_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes4]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes6]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes7]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes8]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes9]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes10]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes11]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes12]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_modification_cannot_upgrade_old_type_or_cross_broker_identity[changes13]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_native_status_preserves_full_STP_identity_without_a_limit[None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_native_status_preserves_full_STP_identity_without_a_limit[1.7976931348623157e+308]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_fresh_STP_open_order_snapshot_does_not_need_a_limit_price[None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_fresh_STP_open_order_snapshot_does_not_need_a_limit_price[1.7976931348623157e+308]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_snapshot_without_account_is_incomplete_not_assumed_ours",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_generic_cancel_still_refuses_STP_without_exact_identity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_exact_STP_cancel_uses_existing_order_without_replacement",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_read_only_boundary_blocks_submit_modify_and_cancel_with_zero_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_full_native_STP_can_adopt_perm_without_limit_but_not_claim_fresh_confirmation[None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_full_native_STP_can_adopt_perm_without_limit_but_not_claim_fresh_confirmation[1.7976931348623157e+308]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes4]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes6]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes7]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes8]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes9]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes10]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes11]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes12]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes13]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes14]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes15]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes16]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes17]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_empty_limit_does_not_weaken_any_native_identity_or_price_check[changes18]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_explicit_STP_refusal_freezes_entries_and_never_rehangs",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_dry_run_scans_and_exercises_protection_boundary_with_zero_broker_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_protection_request_default_contract_has_STP_and_no_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_maybe_sent_price_modify_unknown_fill_keeps_both_stop_candidates_without_rehang",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_native_status_identity_unknown_keeps_pending_stop_candidates_for_real_same_id_fill",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_unconfirmed_price_cancel_replacement_retired_fill_keeps_durable_candidates",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_first_partial_fill_submits_STP_in_urgent_callback_with_no_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_partial_entry_growth_updates_same_STP_quantity_and_aux_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_native_STP_without_limit_is_complete_identity_and_price_proof",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[client_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[broker_order_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[perm_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[intent_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[aux_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[tif]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[outside_rth]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[order_type]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_TP_waits_for_STP_decrease_confirmation_then_preserves_gross_capacity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_TP_timeout_keeps_cancel_pending_reserve_then_restores_same_STP",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_TP1_fill_changes_aux_to_breakeven_without_changing_STP_identity",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_last_share_TP_waits_for_exact_STP_cancel_then_LMT_fill_closes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_last_share_TP_cancel_retires_old_STP_and_restores_new_STP",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[working]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[decrease_pending]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_working]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_partial]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_cancel_pending]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[protection_partial]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[submit_pending]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_shutdown_preserves_strong_STP_GTC_and_restarts_without_rehang",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_retired_STP_identity_trigger_and_type_survive_restart_and_late_fill",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[broker_order_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[perm_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_release_accepts_STP_only_after_exact_cancel_and_two_stable_flat_snapshots",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[perm_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[client_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_existing_STP_LMT_record_is_P0_and_original_contract_is_never_migrated",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_schema4_old_row_gets_STP_LMT_annotation_only_then_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_RTH_stop_crossing_is_P1_then_remaining_timeout_P0_without_old_limit_shortcut",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_partial_stop_fill_does_not_restart_continuing_RTH_remaining_timeout",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_stop_timer_ignores_off_RTH_and_new_session_does_not_inherit_overnight_seconds",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_RTH_trigger_timer_survives_restart_without_duplicate_P1_or_reset",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A warning]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A overdue]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[unknown]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[shutdown incomplete]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger crossing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger unfilled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cards_display_market_stop_price_with_no_protection_limit_field[rejected]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_PROTECT_FILL_audits_each_execution_signed_slippage_and_report_exactly_once",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_protection_final_fill_keeps_audit_stop_and_actual_price_after_close",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_dry_run_all_protection_lifecycle_entry_points_have_zero_broker_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_old_schema4_empty_protection_database_remains_compatible",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_old_schema4_rows_gain_only_legacy_type_metadata_and_keep_indexes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_schema_upgrade_rolls_back_both_tables_when_protection_ddl_fails",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_legacy_protection_startup_pages_p0_and_makes_zero_broker_writes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_legacy_type_release_is_refused_even_with_complete_flat_proof",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[NULL-STOP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[zero-STOP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-ENTRY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-TP1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_nonprotect_sql_still_requires_a_positive_nonnull_limit[negative-STOP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_create_intent_explicitly_refuses_nonprotect_invalid_limit[-1.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_new_protection_plan_uses_stp_metadata_and_null_limit_before_entry_fill",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_new_stp_intent_has_null_limit_and_native_order_has_no_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[partial-adverse]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_each_native_protect_exec_has_exact_signed_slippage_and_replay_is_idempotent[full-favorable]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_protect_average_is_per_intent_weighted_actual_execution_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_retired_identity_persists_order_type_and_original_stop_across_reopen",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_retired_fill_uses_immutable_old_stop_not_replacement_price",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_price_pending_execution_audit_keeps_stop_and_slippage_unknown",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_delayed_reqexecutions_slippage_report_uses_execution_trading_day",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_after_closed_real_retired_exec_is_audited_without_second_pnl_or_close",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[unknown-None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[integer-zero-is-not-False]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_fresh_snapshot_preserves_explicit_False_as_strong_RTH_evidence",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP LMT]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wire-ref-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[legacy-type]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-side]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-tif]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[outside-RTH]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-RTH]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[numeric-zero-RTH]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-RTH]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-stock]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-secType]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-secType]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-USD]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-currency]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-currency]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unexpected-limit]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_correct_typed_STP_tuple_can_cancel_same_ids_without_replacement",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[BUY]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.779]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.775]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-100.129]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-1.009]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.77]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.779]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.775]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-100.129]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-1.009]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.77]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_trigger_rebound_does_not_erase_first_crossing_or_timeout",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_trigger_failed_P0_retries_actual_delivery_then_30_minute_P1",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_fresh_full_coverage_cannot_resolve_triggered_unfilled_remainder",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_actual_full_stop_execution_resolves_episode_once_without_rebooking",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[stale]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_confirmed_old_cancel_and_strong_new_working_proof_end_only_old_trigger",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_full_native_status_recovers_protection_identity_before_terminal_cancel",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch4]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch6]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch7]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch8]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch9]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch10]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch11]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch12]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch13]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_wrong_full_status_identity_cannot_repair_protection_or_authorize_release[mismatch14]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_bare_status_perm_is_not_strict_protection_identity_evidence",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_recovered_exact_identity_release_still_requires_manual_flat",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung[zh-rejection]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung[en-rejection]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_202_explicit_stop_refusal_is_rejected_unprotected_and_never_rehung[escaped-zh-rejection]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_202_normal_cancel_is_not_definite_stop_rejection[Order canceled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_202_normal_cancel_is_not_definite_stop_rejection[\\u59d4\\u6258\\u5355\\u88ab\\u53d6\\u6d88]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_202_normal_cancel_is_not_definite_stop_rejection[]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_202_normal_cancel_is_not_definite_stop_rejection[202: order canceled by user]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_refusal_text_with_unmatched_request_cannot_change_protection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_unchanged_incident_first_P0_then_only_30minute_P1",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_successful_incident_delivery_persists_across_store_and_engine_restart",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_failed_incident_delivery_does_not_suppress_retry_or_persist_false_success",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_changed_held_quantity_is_new_incident_but_duplicate_execution_is_not",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_strict_working_recovery_then_same_failure_is_new_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_terminal_cancel_while_tp_cancel_pending_is_not_immediate_rejection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_failed_first_delivery_retries_immediately_in_same_process",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_pending_delivery_is_not_queued_twice_before_result",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_tp_identity_change_is_material_and_not_hidden_by_previous_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_missing_perm_rejected_text_stays_conservative_for_release",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_operator_hold_is_not_cleared_by_matching_native_terminal_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_bare_inactive_without_refusal_evidence_is_unknown_not_rejected_card",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_explicit_202_with_wrong_native_account_is_not_trusted_rejection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_requested_normal_cancel_202_cannot_become_rejection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_native_contract_and_quantity_must_match_persisted_request[foreign-currency]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_native_contract_and_quantity_must_match_persisted_request[missing-currency]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_native_contract_and_quantity_must_match_persisted_request[non-stock]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_native_contract_and_quantity_must_match_persisted_request[oversized-total]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_native_contract_and_quantity_must_match_persisted_request[undersized-total]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_native_contract_and_quantity_must_match_persisted_request[fractional-status]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_pending_remote_delivery_after_restart_must_retry_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_failed_reminder_retries_as_P1_and_preserves_successful_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_REJECTED_absence_and_all_deadlines_preserve_one_incident_and_gap_history",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_lost_external_cache_after_restart_is_not_evidence_of_resolution",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_recovery_is_durable_and_same_failure_after_restart_is_new_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_UNKNOWN_already_paged_P0_cannot_emit_early_gap_warning_P1",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_known_IDs_do_not_turn_conflicting_native_tuple_into_release_proof[native-account-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_known_IDs_do_not_turn_conflicting_native_tuple_into_release_proof[native-currency-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_known_IDs_do_not_turn_conflicting_native_tuple_into_release_proof[native-quantity-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_known_IDs_do_not_turn_conflicting_native_tuple_into_release_proof[native-orderStatus-orderId-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_known_IDs_do_not_turn_conflicting_native_tuple_into_release_proof[native-orderStatus-clientId-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_known_IDs_do_not_turn_conflicting_native_tuple_into_release_proof[native-contract-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_bare_exact_cancel_hint_retains_existing_verified_release_contract",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_partial_invalid_price_evidence_still_pages_P0_and_blocks_new_entries",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B20_review_explicit_202_before_terminal_status_survives_blank_Cancelled_log_entry",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_retired_gtc_execution_is_never_presented_as_a_take_profit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_definite_rejection_body_states_known_refusal_not_unknown_status",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "stdout_sha256": "c9eae11a574387ff1118fc9bfa2741ad63e256896cc0c942de1aaebfcb3a44af",
+  "junit_sha256": "d5c8f16af3ff3c95e75912b55fb16638a8be59bdd4c7bb5cf445eca7c1e14e1b"
+}

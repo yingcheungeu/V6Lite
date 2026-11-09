@@ -1,0 +1,310 @@
+{
+  "code_sha": "73babb393a9f86f9",
+  "reports_checked": [
+    {
+      "nodeid": "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+      "bytes": 12776,
+      "events_lines": 199
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+      "bytes": 12801,
+      "events_lines": 199
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main",
+      "bytes": 66627,
+      "events_lines": 47
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history",
+      "bytes": 2546,
+      "events_lines": 16
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear",
+      "bytes": 2544,
+      "events_lines": 16
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear",
+      "bytes": 2546,
+      "events_lines": 16
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical",
+      "bytes": 13289,
+      "events_lines": 199
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_consecutive_identical_ordinary_rows_have_count_and_first_last",
+      "bytes": 1206,
+      "events_lines": 8
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_report_account_mask_does_not_change_internal_identity",
+      "bytes": 1058,
+      "events_lines": 7
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only",
+      "bytes": 2846,
+      "events_lines": 20
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day",
+      "bytes": 1798,
+      "events_lines": 10
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice",
+      "bytes": 66228,
+      "events_lines": 70
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]",
+      "bytes": 3110,
+      "events_lines": 23
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]",
+      "bytes": 14582,
+      "events_lines": 95
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]",
+      "bytes": 3110,
+      "events_lines": 23
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]",
+      "bytes": 14582,
+      "events_lines": 95
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "bytes": 7705,
+      "events_lines": 31
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "bytes": 7661,
+      "events_lines": 31
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "bytes": 7630,
+      "events_lines": 30
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice",
+      "bytes": 66392,
+      "events_lines": 74
+    }
+  ],
+  "saved_main_checked": [
+    {
+      "relative_test_source": "test_B27_critical_alone_over_c0/audit-0/reports/2026-10-15.md",
+      "source_sha256": "c566499c773667ec015e850dcf7623b1c14540af9c48acee77ce9073625014da",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 66843,
+      "events_lines": 47,
+      "sidecar_sha256": "1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2"
+    },
+    {
+      "relative_test_source": "test_B27_exact_1015_observatio0/audit-0/reports/2026-10-15.md",
+      "source_sha256": "5d51c5c19f56b35f271c8c15b2f273a4a99f7a89618f64aa5a171e70d80b6bcc",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 7903,
+      "events_lines": 31,
+      "sidecar_sha256": "26391187d0ed4fb49abb88b35f0e2ed2fd531861c4012fb8efa7bfb220592c80"
+    },
+    {
+      "relative_test_source": "test_B27_exact_1015_observatio0/audit-1/reports/2026-10-15.md",
+      "source_sha256": "538e4eb7d3f777eff51229863cd848f6360f77e7c61f0433eb5f6b95837befe1",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 7827,
+      "events_lines": 30,
+      "sidecar_sha256": "fa3dc231624ad221dad86b6215cfe97816516310ef189dfd92a65418a1a3f58d"
+    },
+    {
+      "relative_test_source": "test_B27_late_commission_corre0/audit-0/reports/2026-10-16.md",
+      "source_sha256": "0db93118b0c5c91359c91604186ec85ee535fd5f5fcbf87aabc1dabfc93aa071",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 1973,
+      "events_lines": 10,
+      "sidecar_sha256": "bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf"
+    },
+    {
+      "relative_test_source": "test_B27_real_PROTECT_diagnost0/audit-0/reports/2026-10-15.md",
+      "source_sha256": "29b912f03cbff7d94def6a0fc95cfc89c60391832e7915ff466580c52f1c591c",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 3033,
+      "events_lines": 20,
+      "sidecar_sha256": "a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48"
+    },
+    {
+      "relative_test_source": "test_B27_thirteen_hours_native0/audit-0/reports/2026-10-15.md",
+      "source_sha256": "ab3c0e6bf1d14c5504b870b29a6d114099c93df93c8f0c1252379e1547a53ed6",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 3299,
+      "events_lines": 23,
+      "sidecar_sha256": "7f28815526f9ee914cec26063fce460ede0aa4eb168766e8ab9f95e1fc7c4733"
+    },
+    {
+      "relative_test_source": "test_B27_thirteen_hours_native1/audit-0/reports/2026-10-15.md",
+      "source_sha256": "fe8e151ccf76bd42280ecc57b50e18d97b1cb8731bd7ba9dc8882ebca5159c0b",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 14855,
+      "events_lines": 95,
+      "sidecar_sha256": "6b5ad1ddd0e116e5497989370a06241aa59b386835b6f8ec336e6a2a9a28c78a"
+    },
+    {
+      "relative_test_source": "test_B27_thirteen_hours_native2/audit-0/reports/2026-10-15.md",
+      "source_sha256": "a5f0ae65ce7169511ee6b2789f924a74d215880623792bbe23f29145498f5d89",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 3299,
+      "events_lines": 23,
+      "sidecar_sha256": "301b94d6e9b88436a50a9353e4681efc89d332fcb062334eed426b9add219167"
+    },
+    {
+      "relative_test_source": "test_B27_thirteen_hours_native3/audit-0/reports/2026-10-15.md",
+      "source_sha256": "011375fb40913372839eb8e1b77d54853a2cea5cf0e64ddea7f7b8329fa0e5f3",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 14855,
+      "events_lines": 95,
+      "sidecar_sha256": "7b0e610a6afa9ae810f0c932d38ea78e7e6cd7dca0a286069e1acc87f2574ba4"
+    },
+    {
+      "relative_test_source": "test_B27_true_P0_unknown_prote0/audit-0/reports/2026-10-15.md",
+      "source_sha256": "16835c0d4119c73fbd749a3815553f7c208cb6c32593c4e0c1e46ec40a196661",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 13146,
+      "events_lines": 199,
+      "sidecar_sha256": "91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8"
+    },
+    {
+      "relative_test_source": "test_B27_true_P0_unknown_prote1/audit-0/reports/2026-10-15.md",
+      "source_sha256": "350417bf5e9a430861b5c35f2d5fe810d439f4f6a04464d22c4673f89210a4a2",
+      "source_line_endings": "CRLF",
+      "captured_markdown_line_endings": "LF",
+      "bytes": 13171,
+      "events_lines": 199,
+      "sidecar_sha256": "5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2"
+    }
+  ],
+  "attachments_checked": [
+    {
+      "nodeid": "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+      "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_e2c0cfcf02fe7fd4.jsonl",
+      "source_sha256": "91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8",
+      "published_sha256": "91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8",
+      "bytes": 142156,
+      "lines": 1013
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+      "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_165efe0226d89626.jsonl",
+      "source_sha256": "5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2",
+      "published_sha256": "5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2",
+      "bytes": 142302,
+      "lines": 1014
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main",
+      "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_2e92c02922d091a7.jsonl",
+      "source_sha256": "1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2",
+      "published_sha256": "1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2",
+      "bytes": 1635245,
+      "lines": 311
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only",
+      "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_80e9ad327c67739a.jsonl",
+      "source_sha256": "a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48",
+      "published_sha256": "a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48",
+      "bytes": 6083,
+      "lines": 15
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day",
+      "relative_source": "audit-0/reports/2026-10-16.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_fa65157193dd7a7f.jsonl",
+      "source_sha256": "bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf",
+      "published_sha256": "bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf",
+      "bytes": 2719,
+      "lines": 5
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]",
+      "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_d2e007573160f1f9.jsonl",
+      "source_sha256": "7f28815526f9ee914cec26063fce460ede0aa4eb168766e8ab9f95e1fc7c4733",
+      "published_sha256": "7f28815526f9ee914cec26063fce460ede0aa4eb168766e8ab9f95e1fc7c4733",
+      "bytes": 4081,
+      "lines": 12
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]",
+      "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_dfc73d79087a50d6.jsonl",
+      "source_sha256": "6b5ad1ddd0e116e5497989370a06241aa59b386835b6f8ec336e6a2a9a28c78a",
+      "published_sha256": "6b5ad1ddd0e116e5497989370a06241aa59b386835b6f8ec336e6a2a9a28c78a",
+      "bytes": 38689,
+      "lines": 111
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]",
+      "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_9b90e6ad1c51676c.jsonl",
+      "source_sha256": "301b94d6e9b88436a50a9353e4681efc89d332fcb062334eed426b9add219167",
+      "published_sha256": "301b94d6e9b88436a50a9353e4681efc89d332fcb062334eed426b9add219167",
+      "bytes": 4081,
+      "lines": 12
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]",
+      "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_97a45903f5511c67.jsonl",
+      "source_sha256": "7b0e610a6afa9ae810f0c932d38ea78e7e6cd7dca0a286069e1acc87f2574ba4",
+      "published_sha256": "7b0e610a6afa9ae810f0c932d38ea78e7e6cd7dca0a286069e1acc87f2574ba4",
+      "bytes": 38689,
+      "lines": 111
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_99f165a91231b47b.jsonl",
+      "source_sha256": "26391187d0ed4fb49abb88b35f0e2ed2fd531861c4012fb8efa7bfb220592c80",
+      "published_sha256": "26391187d0ed4fb49abb88b35f0e2ed2fd531861c4012fb8efa7bfb220592c80",
+      "bytes": 9486,
+      "lines": 18
+    },
+    {
+      "nodeid": "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "relative_source": "audit-1/reports/2026-10-15.critical.jsonl",
+      "captured_file": "samples_final_green_attachment_f797e626c69cff97.jsonl",
+      "source_sha256": "fa3dc231624ad221dad86b6215cfe97816516310ef189dfd92a65418a1a3f58d",
+      "published_sha256": "fa3dc231624ad221dad86b6215cfe97816516310ef189dfd92a65418a1a3f58d",
+      "bytes": 9505,
+      "lines": 18
+    }
+  ],
+  "account_masking": true,
+  "all_checks_passed": true,
+  "scope": "captured synthetic dev test outputs only; no database or runtime read"
+}

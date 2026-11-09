@@ -1,0 +1,55 @@
+{
+  "label": "focused_final_1",
+  "XML_sha256": "d5500c633b488d3d90a3ec772a32eb2d66d9c33d8525c35fe747947f6806bd7a",
+  "source": "actual native conn.sendMsg timestamps in XML; independent completed offline SQLite audit",
+  "ACK_to_TP_physical_wire": [
+    {
+      "test": "test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second",
+      "name": "b28c_status_first_ACK_to_TP_wire_seconds",
+      "seconds": 0.09299999999348074
+    },
+    {
+      "test": "test_B28c_overnight_reduction_ACK_to_actual_DAY_LMT_wire_under_one_second",
+      "name": "b28c_ACK_to_TP_wire_seconds",
+      "seconds": 0.015000000013969839
+    }
+  ],
+  "gap_B_samples": [
+    {
+      "test_database": "test_B28c_overnight_reduction_0/b28b-0/state/v6lite.sqlite3",
+      "database_sha256": "c3bc5c61084de926a24b05f39f5ab726ad3db4a8e9fb4c7faee55c3c2a1ed000",
+      "gap_B": [
+        {
+          "ended_at": "2026-10-21T15:03:12.547000+00:00",
+          "gap_kind": "B",
+          "intent_id": "v6l-protect-2b368fc7eb03410f889a",
+          "outcome": "TP fully filled",
+          "position_id": "pos-e6c9853ddca24d37b4fe",
+          "secs": 0.093,
+          "started_at": "2026-10-21T15:03:12.454000+00:00",
+          "symbol": "AAPL",
+          "tp_intent_id": "v6l-b74a755515324df798b7",
+          "workflow_id": "tp-flow-b3dc453db09d460fa699"
+        }
+      ]
+    },
+    {
+      "test_database": "test_B28c_status_then_openOrde0/b28b-0/state/v6lite.sqlite3",
+      "database_sha256": "8c8f7eedadbac769d897e99c12d4ba93ca12b488b0a7523bb4819a3a302bc1ad",
+      "gap_B": [
+        {
+          "ended_at": "2026-10-21T15:03:12.640000+00:00",
+          "gap_kind": "B",
+          "intent_id": "v6l-protect-1e9b2de24b73451a8aa0",
+          "outcome": "TP fully filled",
+          "position_id": "pos-4ca2e7e1d5564423b5bc",
+          "secs": 0.171,
+          "started_at": "2026-10-21T15:03:12.469000+00:00",
+          "symbol": "AAPL",
+          "tp_intent_id": "v6l-90a438c4085e43ecae34",
+          "workflow_id": "tp-flow-d9994d90700543ad91bb"
+        }
+      ]
+    }
+  ]
+}

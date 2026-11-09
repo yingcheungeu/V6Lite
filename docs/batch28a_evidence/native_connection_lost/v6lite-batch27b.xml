@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="1.913" timestamp="2026-10-20T14:41:12.317172-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch28_lifecycle" name="test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[WinError64]" time="0.748"><failure message="ConnectionError: Socket disconnect">C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:341: in run
+    result = loop.run_until_complete(task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py:654: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:637: in sleep
+    async def sleep(delay, result=None):
+E   asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+v6lite\tests\test_batch28_lifecycle.py:200: in test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover
+    run_engine(rig.engine, rig.broker, should_stop=should_stop)
+v6lite\__main__.py:282: in run_engine
+    broker.pump(1.0)
+v6lite\tests\test_batch28_lifecycle.py:133: in pump
+    IbkrBroker.pump(adapter, seconds)
+v6lite\broker\ibkr.py:599: in pump
+    self.ib.sleep(min(0.05, left))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:386: in sleep
+    run(asyncio.sleep(secs))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:343: in run
+    raise globalErrorEvent.value() or e
+E   ConnectionError: Socket disconnect</failure></testcase><testcase classname="v6lite.tests.test_batch28_lifecycle" name="test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[Peer-closed-connection]" time="0.090"><failure message="ConnectionError: Socket disconnect">C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:341: in run
+    result = loop.run_until_complete(task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py:654: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:637: in sleep
+    async def sleep(delay, result=None):
+E   asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+v6lite\tests\test_batch28_lifecycle.py:200: in test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover
+    run_engine(rig.engine, rig.broker, should_stop=should_stop)
+v6lite\__main__.py:282: in run_engine
+    broker.pump(1.0)
+v6lite\tests\test_batch28_lifecycle.py:133: in pump
+    IbkrBroker.pump(adapter, seconds)
+v6lite\broker\ibkr.py:599: in pump
+    self.ib.sleep(min(0.05, left))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:386: in sleep
+    run(asyncio.sleep(secs))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:343: in run
+    raise globalErrorEvent.value() or e
+E   ConnectionError: Socket disconnect</failure></testcase><testcase classname="v6lite.tests.test_batch28_lifecycle" name="test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover[ConnectionResetError]" time="0.089"><failure message="ConnectionError: Socket disconnect">C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:341: in run
+    result = loop.run_until_complete(task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py:654: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:637: in sleep
+    async def sleep(delay, result=None):
+E   asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+v6lite\tests\test_batch28_lifecycle.py:200: in test_B28_real_socket_disconnect_reenters_loop_then_fresh_takeover
+    run_engine(rig.engine, rig.broker, should_stop=should_stop)
+v6lite\__main__.py:282: in run_engine
+    broker.pump(1.0)
+v6lite\tests\test_batch28_lifecycle.py:133: in pump
+    IbkrBroker.pump(adapter, seconds)
+v6lite\broker\ibkr.py:599: in pump
+    self.ib.sleep(min(0.05, left))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:386: in sleep
+    run(asyncio.sleep(secs))
+C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py:343: in run
+    raise globalErrorEvent.value() or e
+E   ConnectionError: Socket disconnect</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,27 @@
+{
+  "label": "green_evidence_query_End_final",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T09:19:23.672860-07:00",
+  "end_pt": "2026-10-27T09:19:33.440224-07:00",
+  "seconds": 9.765,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch31_evidence_replay.py",
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch28c_price_edges.py"
+  ],
+  "code_sha": "bc8d5116e65bf9d8",
+  "source_unchanged": true,
+  "inventory_sha256": "d2e16b1aedaa3fd0bf87f008279be6768e6e491cd1e5d1b9175e69c61ca1af80",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "d0a9d90996656a5061512943abc0576f4a95ed8cef072b2d6ddeb917e197c457",
+  "XML_sha256_before_masking": "899b122d087e02e883f48a52a0129777fd98e1167ef9b302d2718ab7e98c297a",
+  "delivered_log_sha256": "f9dea590b5bc9ed15bb550e698b9479dbd631a88fc3809648100ae7d1eb7deca",
+  "delivered_XML_sha256": "899b122d087e02e883f48a52a0129777fd98e1167ef9b302d2718ab7e98c297a",
+  "tests": 24,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

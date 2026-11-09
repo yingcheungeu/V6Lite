@@ -1,0 +1,29 @@
+{
+  "label": "focused_final",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T19:39:29.960752-07:00",
+  "end_pt": "2026-10-20T19:39:45.883621-07:00",
+  "seconds": 15.922,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch17_heartbeat_account.py",
+    "v6lite/tests/test_batch19.py",
+    "v6lite/tests/test_batch19_funds.py",
+    "v6lite/tests/test_batch19_review_edges.py",
+    "v6lite/tests/test_batch27_observer_atomicity.py",
+    "v6lite/tests/test_batch27_daily_report_volume.py",
+    "v6lite/tests/test_batch27_masked_report_budget.py",
+    "v6lite/tests/test_batch27_short_account_budget.py",
+    "v6lite/tests/test_batch28_lifecycle.py",
+    "v6lite/tests/test_batch28_section2.py"
+  ],
+  "tests": 132,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_unchanged": true,
+  "inventory_sha256": "92df24f44626d667c36861aa219b2a7255594a0f715dae87ed8b7133f6499afb",
+  "incomplete": false,
+  "failed_cases": []
+}

@@ -1,0 +1,21 @@
+........................................................................ [ 80%]
+.................F                                                       [100%]
+================================== FAILURES ===================================
+_ test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day _
+v6lite\tests\test_batch27_diagnostic_attachment.py:104: in test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day
+    assert len(expected) == 2 and {row["kind"] for row in expected} == {
+E   assert (3 == 2)
+E    +  where 3 = len([{'id': 9, 'kind': 'COMMISSION_CORRECTED', 'payload': '{"exec_id": "0000fa4e.00000001.01.01", "new": 1.02, "old": 1.0}...TED', 'payload': '{"exec_id": "0000fa4e.00000001.01.01", "new": 1.0, "old": 1.02}', 'ts': '2026-10-16T11:16:41+00:00'}])
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only
+  v6lite\tests\test_batch27_diagnostic_attachment.py:26: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only(
+
+v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day
+  v6lite\tests\test_batch27_diagnostic_attachment.py:80: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day
+1 failed, 89 passed, 2 warnings in 10.22s

@@ -1,0 +1,6 @@
+{
+  "report_sha256": "c792a3d5db5a77f3678416029dc7684b3a79e5a8fe2f02f700dd41e82711e2da",
+  "post_render_edit": "qualify JSON issue using actual local SQLite observation; strict json_valid=0, json_extract accepts sample",
+  "production_source_changed": false,
+  "frozen_validation_tools_changed": false
+}

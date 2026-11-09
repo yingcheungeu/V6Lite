@@ -1,0 +1,41 @@
+{
+  "reviewer": "/root",
+  "at_pt": "2026-10-14T12:32:19.496742-07:00",
+  "valid_followup_candidate_red": "red_first_candidate_review_finalspec.json",
+  "valid_followup_B24_red": "red_review_b24_finalspec.json",
+  "third_final_spec_sha256": "6f85a548546f305e10b78b6c357afb71a60c07f3d6b5a253669c1961ff0ca88c",
+  "totals": {
+    "red_first_candidate_review_finalspec": {
+      "tests": 15,
+      "failures": 8,
+      "errors": 0,
+      "skipped": 0
+    },
+    "red_review_b24_finalspec": {
+      "tests": 15,
+      "failures": 10,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "raw_receipts_preserved": true,
+  "production_candidate_unchanged": true,
+  "actual_behavior_failures": [
+    "Six snapshot Status cases mutate intent.last_raw_status",
+    "Dynamic labeled metadata causes third physical reconnect instead of stop",
+    "Execution recovery is not retried at the 30-second due time despite connected socket"
+  ],
+  "fixture_disposition": {
+    "old_third_spec": "d930fa1806241eb41bc60587890d46b7fd653c98fd4ed64a7e00a43f932329bd",
+    "archive": "test_batch25_review_red_before_external_fixture.py",
+    "old_red_labels": [
+      "red_first_candidate_review",
+      "red_review_b24"
+    ],
+    "invalid_case": "external SELL setup S3+X1>P3 violates unchanged B23 before-write safety hook",
+    "correction": "Only synthetic initial own confirmed/requested/broker quantity2 + external1 = position3; original strong hooks and assertions retained",
+    "partial_anomaly_oracle": "30-second retry assertion retained; successful fresh recovery must not auto-clear recovery_failed; SyntheticTest explicitly clears via original manual audit API before healthy entries asserted"
+  },
+  "production_fix_authorized_for": "/root/batch25_implement only",
+  "production_scope": "six original candidate files only; no tests/docs edits"
+}

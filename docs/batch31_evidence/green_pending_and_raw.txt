@@ -1,0 +1,33 @@
+..........................F............................................  [100%]
+================================== FAILURES ===================================
+_ test_B28c_restart_complete_round_with_old_confirmed_price_freezes_without_STP_write _
+v6lite\tests\test_batch28c_price_edges.py:47: in test_B28c_restart_complete_round_with_old_confirmed_price_freezes_without_STP_write
+    _tick_until(rig, lambda: rig.store.control('frozen:AAPL') is not None and bool(_price_pages(rig)))
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 13, 33, 2, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = <function test_B28c_restart_complete_round_with_old_confirmed_price_freezes_without_STP_write.<locals>.<lambda> at 0x0000015C1B8B4860>()
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-21T15:03:18.001000+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protect_price_delayed:pos-d44308ec3cbc4cc785e3:2 | AAPL：保护修改未生效，已等待 80865.0 秒；券商仍以旧止损价 338.62 保护 2 股，待生效价 342.77；不撤改原 STP，继续查询。
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:62: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[0.009]
+v6lite/tests/test_batch31_close_card.py::test_B31_close_waits_for_final_fee_or_three_second_estimate[None]
+  v6lite\tests\test_batch31_close_card.py:9: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('arrival',[.009,None])
+
+v6lite/tests/test_batch28c_ack_ordering.py::test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second
+  v6lite\tests\test_batch28c_ack_ordering.py:31: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_status_then_openOrder_without_repeated_status_dispatches_within_one_second(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28c_price_edges.py::test_B28c_restart_complete_round_with_old_confirmed_price_freezes_without_STP_write
+1 failed, 70 passed, 5 warnings in 30.67s

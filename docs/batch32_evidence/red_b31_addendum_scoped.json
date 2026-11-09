@@ -1,0 +1,33 @@
+{
+  "label": "red_b31_addendum_scoped",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T09:58:22.772529-07:00",
+  "end_pt": "2026-10-29T09:58:25.028646-07:00",
+  "seconds": 2.25,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch32_offline_release.py"
+  ],
+  "code_sha": "732b263068e1dd73",
+  "source_unchanged": true,
+  "inventory_sha256": "ca64be447311e53e60ea531cae9b551cfeb2975886f8f46526861193100caeec",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "af9f60d1025f4370ffd0b4c8763a08685fc4b17c5466dd7a6a454da70dbd683a",
+  "XML_sha256_before_masking": "35e6ac20459a30b89383c5a3738684facad76aa824ac329e30d968f07f120af9",
+  "delivered_log_sha256": "50b14535acde63a08e38a824446db768ef144c28f6903f893d359afb95435749",
+  "delivered_XML_sha256": "35e6ac20459a30b89383c5a3738684facad76aa824ac329e30d968f07f120af9",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch32_offline_release",
+      "name": "test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding",
+      "kind": "failure",
+      "message": "AssertionError: [{'reason': 'protected GTC cancel/identity unverified; release refused', 'request': '{\"operator\": \"John\", \"reason\": \"flat and no GTC in TWS\"}', 'symbol': 'AAPL'}]\nassert 'OPEN' == 'RELEASED'\n  \n  - RELEASED\n  + OPEN"
+    }
+  ]
+}

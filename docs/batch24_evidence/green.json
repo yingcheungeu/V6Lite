@@ -1,0 +1,716 @@
+{
+  "label": "green",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-12T08:12:06.430819-07:00",
+  "end_pt": "2026-10-12T08:12:15.511776-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "source_code_sha": "beb13c6910bd2355",
+  "source_unchanged": true,
+  "worktree_code_sha": "beb13c6910bd2355",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "beb13c6910bd2355a50963a41262013feef585771be59ec2a2fe4d98b135d15b",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_pacing.py",
+      "sha256": "5c6e75d7ce6add7fdf8bcd77a8f4d5aa18ae7dbfa93ffd2bb997f56479b39e72"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_pacing_lifecycle.py",
+      "sha256": "39669ef32e9d01916c5e2e2a3a76bbabf30443455cef2a8d625c6b7ef9dff61c"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_presentation.py",
+      "sha256": "635597eb75ef8ec92b1e2d3bab29f7626d7cfe8d7dd51f045ccf1d4b49c2c1d7"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_stp_echo.py",
+      "sha256": "0822e17aa4c813575a46d0a4e47339885e8e28057796f8f43e7a939bf1539f67"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 82,
+    "failures": 4,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_all_native_outgoing_messages_are_limited_at_connection_wire",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_all_three_query_channels_use_actual_one_second_minimum",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_startup_native_queries_cannot_bypass_following_fresh_channel_limits",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_congested_read_queries_do_not_delay_stop_beyond_A5_or_reorder_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_default_to_one_second_and_change_fingerprint",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_load_from_ibkr_without_reading_operator_config",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator]",
+      "outcome": "failure",
+      "message": "AssertionError: ('coordinator', 'positions', 52)\nassert 52 <= 42\n +  where 52 = len([1791295231.0, 1791295232.0, 1791295234.0, 1791295238.0, 1791295246.0, 1791295246.0, ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop]",
+      "outcome": "failure",
+      "message": "AssertionError: ('main-loop', 'positions', 52)\nassert 52 <= 42\n +  where 52 = len([1791295231.0, 1791295232.3, 1791295234.5, 1791295238.9, 1791295246.6, 1791295246.6, ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_repeated_bad_native_callbacks_do_not_reset_position_retry_or_forge_confirmation",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]",
+      "outcome": "failure",
+      "message": "AssertionError: assert ([(1.000001, 1, namespace(cancelled=True, cancel=<function OfflineLoop.call_at.<locals>.<lambda> at 0x0000025719C7A7A0>...r.pacing.IbkrMessagePacer object at 0x0000025719D2F690>>, (<ib_insync.client.Client object at 0x0000025719D35810>, 1))] and 4 == 3)\n +  where 4 = len(deque(['3\\x00old-place-one\\x00', '4\\x00old-cancel-two\\x00', '3\\x00old-place-three\\x00', '49\\x00old-capacity-9\\x00']))\n +    where deque(['3\\x00old-place-one\\x00', '4\\x00old-cancel-two\\x00', '3\\x00old-place-three\\x00', '49\\x00old-capacity-9\\x00']) = <ib_insync.client.Client object at 0x0000025719D35810>._msgQ"
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]",
+      "outcome": "failure",
+      "message": "AssertionError: assert ([(1.000001, 1, namespace(cancelled=True, cancel=<function OfflineLoop.call_at.<locals>.<lambda> at 0x0000025719C5D1C0>...r.pacing.IbkrMessagePacer object at 0x0000025719CE2F50>>, (<ib_insync.client.Client object at 0x0000025719CE0690>, 1))] and 4 == 3)\n +  where 4 = len(deque(['3\\x00old-place-one\\x00', '4\\x00old-cancel-two\\x00', '3\\x00old-place-three\\x00', '49\\x00old-capacity-9\\x00']))\n +    where deque(['3\\x00old-place-one\\x00', '4\\x00old-cancel-two\\x00', '3\\x00old-place-three\\x00', '49\\x00old-capacity-9\\x00']) = <ib_insync.client.Client object at 0x0000025719CE0690>._msgQ"
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_cap_is_two_decimals_in_real_price_drift_card_and_raw_in_audit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_tp_rejection_p0_has_definite_p_s_unprotected_from_full_evidence",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_tws_7497_startup_and_heartbeat_cards_use_tws_or_ibkr",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_native_wrapper_2108_one_readable_log_and_original_audit[\\\\u5e02\\\\u573a\\\\u6570\\\\u636e\\\\u8fde\\\\u63a5\\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e farm: \\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e farm: \\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_protection_unknown_p0_suppresses_same_order_held_p1",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_ordinary_day_held_working_still_pages_p1_once",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderRef]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__action]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__tif]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__outsideRth]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__secType]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__currency]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__auxPrice]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__filled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_terminal_STP_with_finite_echo_retains_refusal_classification",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_every_native_price_observation_source_keeps_echo_audit_only[orderStatus]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrder]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrders]",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch24_pacing.py::test_B24_all_native_outgoing_messages_are_limited_at_connection_wire",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_all_three_query_channels_use_actual_one_second_minimum",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_startup_native_queries_cannot_bypass_following_fresh_channel_limits",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_congested_read_queries_do_not_delay_stop_beyond_A5_or_reorder_orders",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_default_to_one_second_and_change_fingerprint",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_load_from_ibkr_without_reading_operator_config",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_repeated_bad_native_callbacks_do_not_reset_position_retry_or_forge_confirmation",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence",
+      "v6lite/tests/test_batch24_presentation.py::test_cap_is_two_decimals_in_real_price_drift_card_and_raw_in_audit",
+      "v6lite/tests/test_batch24_presentation.py::test_tp_rejection_p0_has_definite_p_s_unprotected_from_full_evidence",
+      "v6lite/tests/test_batch24_presentation.py::test_tws_7497_startup_and_heartbeat_cards_use_tws_or_ibkr",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\\\u5e02\\\\u573a\\\\u6570\\\\u636e\\\\u8fde\\\\u63a5\\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e farm: \\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e farm: \\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_protection_unknown_p0_suppresses_same_order_held_p1",
+      "v6lite/tests/test_batch24_presentation.py::test_ordinary_day_held_working_still_pages_p1_once",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__clientId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__clientId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__conId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__symbol]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderRef]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__orderId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__action]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__tif]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__outsideRth]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__secType]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__currency]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__auxPrice]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__filled]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_terminal_STP_with_finite_echo_retains_refusal_classification",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[orderStatus]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrder]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrders]"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch24_pacing.py::test_B24_all_native_outgoing_messages_are_limited_at_connection_wire",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_all_three_query_channels_use_actual_one_second_minimum",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_startup_native_queries_cannot_bypass_following_fresh_channel_limits",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_congested_read_queries_do_not_delay_stop_beyond_A5_or_reorder_orders",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_default_to_one_second_and_change_fingerprint",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_load_from_ibkr_without_reading_operator_config",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_repeated_bad_native_callbacks_do_not_reset_position_retry_or_forge_confirmation",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence",
+      "v6lite/tests/test_batch24_presentation.py::test_cap_is_two_decimals_in_real_price_drift_card_and_raw_in_audit",
+      "v6lite/tests/test_batch24_presentation.py::test_tp_rejection_p0_has_definite_p_s_unprotected_from_full_evidence",
+      "v6lite/tests/test_batch24_presentation.py::test_tws_7497_startup_and_heartbeat_cards_use_tws_or_ibkr",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\\\u5e02\\\\u573a\\\\u6570\\\\u636e\\\\u8fde\\\\u63a5\\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e farm: \\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e farm: \\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_protection_unknown_p0_suppresses_same_order_held_p1",
+      "v6lite/tests/test_batch24_presentation.py::test_ordinary_day_held_working_still_pages_p1_once",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__clientId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__clientId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__conId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__symbol]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderRef]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__orderId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__action]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__tif]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__outsideRth]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__secType]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__currency]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__auxPrice]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__filled]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_terminal_STP_with_finite_echo_retains_refusal_classification",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[orderStatus]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrder]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrders]"
+    ]
+  },
+  "stdout_sha256": "f7734f957b08a0caf1aa99edc3da6c807dbbee43f9d26cbdde69d77b6eb48c40",
+  "junit_sha256": "4521799dfd7cb860afd599b44d16ce85ac744575b154f54d61db1b041fc73c7e",
+  "inventory_sha256": "4632eea238c356c6612a273189411ddeba3019c9055a7f654ca96e2adbf084da"
+}

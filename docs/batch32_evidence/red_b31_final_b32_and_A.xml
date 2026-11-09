@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="1.818" timestamp="2026-10-29T13:25:22.273086-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch32_open_orders" name="test_B32_three_native_identical_rows_confirm_gen4_and_TP2" time="0.329"><failure message="AssertionError: the adapter must return one order and ACK the complete duplicate snapshot&#10;assert [(3, 'PRICE_PENDING')] == [(1, 'WORKING')]&#10;  &#10;  At index 0 diff: (3, 'PRICE_PENDING') != (1, 'WORKING')&#10;  Use -v to get more diff">v6lite\tests\test_batch32_open_orders.py:128: in test_B32_three_native_identical_rows_confirm_gen4_and_TP2
+    assert seen==[(1,'WORKING')], 'the adapter must return one order and ACK the complete duplicate snapshot'
+E   AssertionError: the adapter must return one order and ACK the complete duplicate snapshot
+E   assert [(3, 'PRICE_PENDING')] == [(1, 'WORKING')]
+E     
+E     At index 0 diff: (3, 'PRICE_PENDING') != (1, 'WORKING')
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch32_offline_release" name="test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding" time="0.388"><failure message="AssertionError: [{'reason': 'protected GTC cancel/identity unverified; release refused', 'request': '{&quot;operator&quot;: &quot;John&quot;, &quot;reason&quot;: &quot;flat and no GTC in TWS&quot;}', 'symbol': 'AAPL'}]&#10;assert 'OPEN' == 'RELEASED'&#10;  &#10;  - RELEASED&#10;  + OPEN">v6lite\tests\test_batch32_offline_release.py:131: in test_B32A_real_offline_cancel_release_accepts_native_perm_and_persisted_order_binding
+    assert rig.store.position(pid)['status']=='RELEASED',refusals
+E   AssertionError: [{'reason': 'protected GTC cancel/identity unverified; release refused', 'request': '{"operator": "John", "reason": "flat and no GTC in TWS"}', 'symbol': 'AAPL'}]
+E   assert 'OPEN' == 'RELEASED'
+E     
+E     - RELEASED
+E     + OPEN</failure></testcase></testsuite></testsuites>

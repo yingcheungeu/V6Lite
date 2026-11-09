@@ -1,0 +1,17 @@
+{
+  "phase": "BE-fixed candidate before external-freeze regression repair",
+  "code_sha": "b1a099352f9adaad",
+  "production_sha256": {
+    "v6lite/config.py": "06dd18b7d12ad959a9ff433f15c482f113f4994a12bc80c658a1337c1f1dfaf5",
+    "v6lite/engine.py": "5c3d896700afb4a1e88ca0595e57b6ce66e7dc81d645c0215d6af3a52ba822f7",
+    "v6lite/overnight_evidence.py": "effd9e8f56643e348674ca30ca2dc6af6aa9047f15dd27f61b4f46616e2c3a2f",
+    "v6lite/protection_engine.py": "4c39fb716dc13e8573e1805a5b805db5d5a2e631b4550819c35519fda53d289f",
+    "v6lite/tp_evidence.py": "17572b9e72e11d894429ef9d32e4caa34c35e29f21a46de471e13eb7cb57f479"
+  },
+  "spec_sha256": {
+    "v6lite/tests/test_batch26_external_sell_regression.py": "9e759902a8b9f9844b894a5d3f08eff26738b4682f9b518508244481348332e1",
+    "v6lite/tests/test_batch26_overnight_evidence.py": "c0b66a415cae00bb0eaed24990300ee7b09b78baacb6631fe41d96bf12e9449c",
+    "v6lite/tests/test_batch26_review_edges.py": "1299a21aff567d5919c0cca6ab6e548810956abd61fa6538353c3da1c62e203b",
+    "v6lite/tests/test_batch26_shutdown_report.py": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93"
+  }
+}

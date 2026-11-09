@@ -1,0 +1,16 @@
+{
+  "accepted_as_gate_run": false,
+  "actual_tests": {
+    "tests": 1345,
+    "passed": 1344,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "reason": "original frozen runner hashes a directory after pytest exits; no metadata JSON written",
+  "original_runner_unchanged": true,
+  "source_code_sha": "f27e144de9eb406b",
+  "stdout_sha256": "3d06edba0cdb93adf7fa5d3b3b9008864004f2984d992f9d45c782c21d801972",
+  "junit_sha256": "7d1764212e0610fee1c132b87c4e0ae0d10d6b3242c7b144ec0b163350fd45dd",
+  "remediation": "new docs-only runner handles directory digest, followed by three new serial full suites"
+}

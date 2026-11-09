@@ -1,0 +1,33 @@
+F............................................                            [100%]
+================================== FAILURES ===================================
+____ test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End ____
+v6lite\tests\test_batch31_evidence_replay.py:120: in test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End
+    assert projection[:2]==[('openOrder',''),('openOrders','0.0')]
+E   AssertionError: assert [('openOrder', '')] == [('openOrder'...ders', '0.0')]
+E     
+E     Right contains one more item: ('openOrders', '0.0')
+E     Use -v to get more diff
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_evidence_replay.py::test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End
+  v6lite\tests\test_batch31_evidence_replay.py:79: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End(evidence_run,monkeypatch,record_property):
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:73: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60
+  v6lite\tests\test_batch31_overnight.py:213: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B31_oct27_native_nine_ms_commission_close_card_has_final_minus_1_60(oct27,record_property):
+
+v6lite/tests/test_batch28b_overnight_refresh.py::test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+  v6lite\tests\test_batch28b_overnight_refresh.py:206: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_evidence_replay.py::test_B31_evidence_query_bound_ACK_confirms_only_at_own_openOrders_End
+1 failed, 44 passed, 5 warnings in 33.61s

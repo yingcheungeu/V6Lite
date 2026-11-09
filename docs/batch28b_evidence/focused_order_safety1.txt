@@ -1,0 +1,2280 @@
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 24%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 49%]
+EEEEEEE.....EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 74%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE [ 99%]
+E                                                                        [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_B22_first_partial_fill_submits_STP_in_urgent_callback_with_no_limit _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_partial_entry_growth_updates_same_STP_quantity_and_aux_price _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_native_STP_without_limit_is_complete_identity_and_price_proof _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[account] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[client_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[con_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[broker_order_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[perm_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[intent_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[aux_price] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[tif] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[outside_rth] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[order_type] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_TP_waits_for_STP_decrease_confirmation_then_preserves_gross_capacity _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_TP_timeout_keeps_cancel_pending_reserve_then_restores_same_STP _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_TP1_fill_changes_aux_to_breakeven_without_changing_STP_identity _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_last_share_TP_waits_for_exact_STP_cancel_then_LMT_fill_closes _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_last_share_TP_cancel_retires_old_STP_and_restores_new_STP _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[working] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[decrease_pending] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_working] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_partial] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_cancel_pending] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[protection_partial] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[submit_pending] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_shutdown_preserves_strong_STP_GTC_and_restarts_without_rehang _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_retired_STP_identity_trigger_and_type_survive_restart_and_late_fill _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[broker_order_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[perm_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[con_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_release_accepts_STP_only_after_exact_cancel_and_two_stable_flat_snapshots _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[perm_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[account] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[client_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[con_id] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_existing_STP_LMT_record_is_P0_and_original_contract_is_never_migrated _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_schema4_old_row_gets_STP_LMT_annotation_only_then_P0 _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_RTH_stop_crossing_is_P1_then_remaining_timeout_P0_without_old_limit_shortcut _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_partial_stop_fill_does_not_restart_continuing_RTH_remaining_timeout _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_stop_timer_ignores_off_RTH_and_new_session_does_not_inherit_overnight_seconds _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_RTH_trigger_timer_survives_restart_without_duplicate_P1_or_reset _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A warning] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A overdue] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cards_display_market_stop_price_with_no_protection_limit_field[unknown] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cards_display_market_stop_price_with_no_protection_limit_field[shutdown incomplete] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger crossing] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger unfilled] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cards_display_market_stop_price_with_no_protection_limit_field[rejected] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_PROTECT_FILL_audits_each_execution_signed_slippage_and_report_exactly_once _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_protection_final_fill_keeps_audit_stop_and_actual_price_after_close _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_dry_run_all_protection_lifecycle_entry_points_have_zero_broker_writes _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_trigger_rebound_does_not_erase_first_crossing_or_timeout _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_trigger_failed_P0_retries_actual_delivery_then_30_minute_P1 _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_fresh_full_coverage_cannot_resolve_triggered_unfilled_remainder _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_actual_full_stop_execution_resolves_episode_once_without_rebooking _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[missing] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[stale] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_confirmed_old_cancel_and_strong_new_working_proof_end_only_old_trigger _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[unknown-None] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[integer-zero-is-not-False] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[missing] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_fresh_snapshot_preserves_explicit_False_as_strong_RTH_evidence _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP LMT] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP LMT] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP LMT] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP LMT] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP LMT] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP LMT] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP LMT] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP LMT] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wire-ref-conflict] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[legacy-type] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-side] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-tif] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[outside-RTH] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-RTH] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[numeric-zero-RTH] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-RTH] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-stock] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-secType] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-secType] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-USD] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-currency] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-currency] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_correct_typed_STP_tuple_can_cancel_same_ids_without_replacement[1.7976931348623157e+308] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_correct_typed_STP_tuple_can_cancel_same_ids_without_replacement[340.19000000000005] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[BUY] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[SELL] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.779] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.775] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-100.129] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-1.009] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.77] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.779] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.775] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-100.129] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-1.009] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.77] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[1] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[3] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[10] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_quote_age_config_rejects_out_of_range_and_bool[0] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_quote_age_config_rejects_out_of_range_and_bool[11] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_quote_age_config_rejects_out_of_range_and_bool[True] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[missing_bid] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[infinite_bid] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[infinite_ask] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[nan_bid] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[future_ts] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[naive_ts] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_first_stale_rounds_persist_counter_but_log_once_per_minute_without_trade_mutation _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_dry_stale_TP_gate_has_no_counter_audit_pause_or_broker_writes _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_existing_queued_timeout_control_cannot_override_fresh_bid_pricing _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_old_timeout_command_explicitly_refuses_to_manufacture_nonmarketable_TP _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_openOrder_only_working_price_change_is_hooked_once_and_reaches_real_P1 _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[0.0] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[nan] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[1.7976931348623157e+308] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_STP_positive_cap_is_independent_evidence_not_a_trigger_price_comparison _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_ENTRY_working_price_difference_real_P1_blocks_later_scan_without_ledger_reprice _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[account] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[orderId] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[permId] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[conId] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_other_broker_code_nonterminal_keeps_full_reason_but_grants_no_restore_or_pause _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_exact_episode_manual_request_clears_pause_only_after_full_coverage_without_same_tick_resend _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change0] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change1] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change2] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[open_orders] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[positions_fresh] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[executions_today] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_manual_resume_external_SELL_or_dry_cannot_clear_existing_pause _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_resume_TP_CLI_only_queues_exact_durable_request_and_has_zero_broker_writes _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_price_rejection_ACK_deduplicates_after_31_minutes_and_successful_restart_without_global_mute _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_price_rejection_unACKed_reason_replay_retries_only_remaining_remote_parts _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[native_hold] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[operator_freeze] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[corrupt_pause] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_query_failed] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_reply_partial] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.0-True] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.01-False] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[0.0-130.0] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[-1.0-130.0] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[130.0-129.0] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[ENTRY] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP1] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP2] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP3] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[False] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[True] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_unprotected_direct_price_rejection_persists_full_P0_pause_without_enabling_STP _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_unprotected_async_native_price_refusal_persists_full_P0_pause_without_enabling_STP _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_corrupt_persisted_pricing_book_cannot_authorize_original_TP_price_or_extra_attempt _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\u4ef7\u683c\u4e0d\u5728\u76d1\u7ba1\u53c2\u8003\u4ef7\u7684\u5141\u8bb8\u8303\u56f4\u5185] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\u9650\u4ef7\u504f\u79bb\u5f53\u524d\u53c2\u8003\u4ef7\u592a\u591a] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Cancelled-202-\u5df2\u53d6\u6d88] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Inactive-201-\u5df2\u62d2\u7edd] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0 _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_all_native_outgoing_messages_are_limited_at_connection_wire _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_all_three_query_channels_use_actual_one_second_minimum _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_startup_native_queries_cannot_bypass_following_fresh_channel_limits _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_congested_read_queries_do_not_delay_stop_beyond_A5_or_reorder_orders _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_default_to_one_second_and_change_fingerprint _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-open_orders_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-positions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-executions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-open_orders_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-positions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-executions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-open_orders_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-positions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-executions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-open_orders_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-positions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-executions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-open_orders_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-positions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-executions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-open_orders_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-positions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-executions_min_interval_seconds] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_intervals_load_from_ibkr_without_reading_operator_config _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_repeated_bad_native_callbacks_do_not_reset_position_retry_or_forge_confirmation _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_CANCEL_PENDING] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-PROTECT_CANCEL_PENDING] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_NEEDS_RESTORE] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-replace_after_cancel] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_CANCEL_PENDING] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-PROTECT_CANCEL_PENDING] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_NEEDS_RESTORE] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-replace_after_cancel] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_CANCEL_PENDING] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-PROTECT_CANCEL_PENDING] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_NEEDS_RESTORE] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-replace_after_cancel] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_failed] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_partial] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[query_notice] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[connection_write] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_old_generation_End_cannot_complete_new_generation_Future _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-connection-after-wire] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0 _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_normalization_preserves_truly_different_query_failure_causes _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+_ ERROR at setup of test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL] _
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\tmp\\v6lite-b28b-tests\\focused_order_safety1'
+=========================== short test summary info ===========================
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_first_partial_fill_submits_STP_in_urgent_callback_with_no_limit
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_partial_entry_growth_updates_same_STP_quantity_and_aux_price
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_native_STP_without_limit_is_complete_identity_and_price_proof
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[account]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[client_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[con_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[broker_order_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[perm_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[intent_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[aux_price]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[tif]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[outside_rth]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_native_identity_and_trigger_mismatch_stays_fail_closed[order_type]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_TP_waits_for_STP_decrease_confirmation_then_preserves_gross_capacity
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_TP_timeout_keeps_cancel_pending_reserve_then_restores_same_STP
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_TP1_fill_changes_aux_to_breakeven_without_changing_STP_identity
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_last_share_TP_waits_for_exact_STP_cancel_then_LMT_fill_closes
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_last_share_TP_cancel_retires_old_STP_and_restores_new_STP
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[working]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[decrease_pending]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_working]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_partial]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[TP_cancel_pending]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[protection_partial]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_restart_recognizes_STP_in_each_lifecycle_without_duplicate_sell[submit_pending]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_shutdown_preserves_strong_STP_GTC_and_restarts_without_rehang
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_retired_STP_identity_trigger_and_type_survive_restart_and_late_fill
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[broker_order_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[perm_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_retired_STP_wrong_native_fill_identity_is_quarantined_without_new_writes[con_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_release_accepts_STP_only_after_exact_cancel_and_two_stable_flat_snapshots
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[perm_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[account]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[client_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_STP_release_does_not_weaken_missing_or_wrong_identity_gate[con_id]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_existing_STP_LMT_record_is_P0_and_original_contract_is_never_migrated
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_schema4_old_row_gets_STP_LMT_annotation_only_then_P0
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_RTH_stop_crossing_is_P1_then_remaining_timeout_P0_without_old_limit_shortcut
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_partial_stop_fill_does_not_restart_continuing_RTH_remaining_timeout
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_stop_timer_ignores_off_RTH_and_new_session_does_not_inherit_overnight_seconds
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_RTH_trigger_timer_survives_restart_without_duplicate_P1_or_reset
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A warning]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_cards_display_market_stop_price_with_no_protection_limit_field[gap A overdue]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_cards_display_market_stop_price_with_no_protection_limit_field[unknown]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_cards_display_market_stop_price_with_no_protection_limit_field[shutdown incomplete]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger crossing]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_cards_display_market_stop_price_with_no_protection_limit_field[trigger unfilled]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_cards_display_market_stop_price_with_no_protection_limit_field[rejected]
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_PROTECT_FILL_audits_each_execution_signed_slippage_and_report_exactly_once
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_protection_final_fill_keeps_audit_stop_and_actual_price_after_close
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_explicit_STP_rejection_pages_freezes_and_never_rehangs
+ERROR v6lite/tests/test_batch22_protection_lifecycle.py::test_B22_dry_run_all_protection_lifecycle_entry_points_have_zero_broker_writes
+ERROR v6lite/tests/test_batch22_trigger_incidents.py::test_B22_trigger_rebound_does_not_erase_first_crossing_or_timeout
+ERROR v6lite/tests/test_batch22_trigger_incidents.py::test_B22_trigger_failed_P0_retries_actual_delivery_then_30_minute_P1
+ERROR v6lite/tests/test_batch22_trigger_incidents.py::test_B22_fresh_full_coverage_cannot_resolve_triggered_unfilled_remainder
+ERROR v6lite/tests/test_batch22_trigger_incidents.py::test_B22_actual_full_stop_execution_resolves_episode_once_without_rebooking
+ERROR v6lite/tests/test_batch22_trigger_incidents.py::test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[missing]
+ERROR v6lite/tests/test_batch22_trigger_incidents.py::test_B22_existing_trigger_deadline_advances_without_fresh_quote_but_cannot_invent_crossing[stale]
+ERROR v6lite/tests/test_batch22_trigger_replacement.py::test_B22_confirmed_old_cancel_and_strong_new_working_proof_end_only_old_trigger
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[unknown-None]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[integer-zero-is-not-False]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_fresh_snapshot_preserves_unknown_RTH_instead_of_fabricating_False[missing]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_fresh_snapshot_preserves_explicit_False_as_strong_RTH_evidence
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-None-STP LMT]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-empty-STP LMT]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-OPT-STP LMT]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[secType-missing-STP LMT]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-None-STP LMT]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-empty-STP LMT]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-EUR-STP LMT]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_own_protection_snapshot_requires_explicit_STK_USD_even_with_matching_ids[currency-missing-STP LMT]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wire-ref-conflict]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[legacy-type]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-side]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[wrong-tif]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[outside-RTH]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-RTH]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[numeric-zero-RTH]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-RTH]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-stock]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-secType]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-secType]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[non-USD]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[unknown-currency]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_cached_protection_cancel_rechecks_wire_tuple_even_when_three_ids_match[missing-currency]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_correct_typed_STP_tuple_can_cancel_same_ids_without_replacement[1.7976931348623157e+308]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_correct_typed_STP_tuple_can_cancel_same_ids_without_replacement[340.19000000000005]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[BUY]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_DAY_LMT_with_expected_ids_is_not_misclassified_as_protection[SELL]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.779]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.775]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-100.129]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-1.009]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[submit-335.77]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.779]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.775]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-100.129]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-1.009]
+ERROR v6lite/tests/test_batch22_snapshot_cancel.py::test_B22_adapter_auxPrice_is_decimal_cent_floor_on_submit_and_modify[modify-335.77]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[1]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[3]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_quote_age_config_accepts_documented_range_and_binds_fingerprint[10]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_quote_age_config_rejects_out_of_range_and_bool[0]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_quote_age_config_rejects_out_of_range_and_bool[11]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_quote_age_config_rejects_out_of_range_and_bool[True]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[missing_bid]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[infinite_bid]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[infinite_ask]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[nan_bid]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[future_ts]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_strict_TP_quote_gate_rejects_invalid_book_time_without_phase_retry_or_cards[naive_ts]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_first_stale_rounds_persist_counter_but_log_once_per_minute_without_trade_mutation
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_dry_stale_TP_gate_has_no_counter_audit_pause_or_broker_writes
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_existing_queued_timeout_control_cannot_override_fresh_bid_pricing
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_old_timeout_command_explicitly_refuses_to_manufacture_nonmarketable_TP
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_openOrder_only_working_price_change_is_hooked_once_and_reaches_real_P1
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[0.0]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[nan]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_unknown_LMT_cap_is_audited_as_unknown_without_false_mismatch_or_pause[1.7976931348623157e+308]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_STP_positive_cap_is_independent_evidence_not_a_trigger_price_comparison
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_ENTRY_working_price_difference_real_P1_blocks_later_scan_without_ledger_reprice
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[account]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[orderId]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[permId]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_foreign_TP_terminal_cannot_restore_or_pause_from_local_ref_alone[conId]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_other_broker_code_nonterminal_keeps_full_reason_but_grants_no_restore_or_pause
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_exact_episode_manual_request_clears_pause_only_after_full_coverage_without_same_tick_resend
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change0]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change1]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_wrong_episode_manual_resume_cannot_clear_pause_or_emit_TP[change2]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[open_orders]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[positions_fresh]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_manual_resume_requires_all_three_current_sources_even_when_STP_row_looks_working[executions_today]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_manual_resume_external_SELL_or_dry_cannot_clear_existing_pause
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_resume_TP_CLI_only_queues_exact_durable_request_and_has_zero_broker_writes
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_price_rejection_ACK_deduplicates_after_31_minutes_and_successful_restart_without_global_mute
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_price_rejection_unACKed_reason_replay_retries_only_remaining_remote_parts
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[native_hold]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[operator_freeze]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_manual_resume_preserves_real_hold_freeze_and_corrupt_pause_fail_closed[corrupt_pause]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_query_failed]
+ERROR v6lite/tests/test_batch23_contracts.py::test_B23_cancel_with_late_partial_fill_needs_complete_three_sources_before_restore_and_every_write_reserves_possible_T[execution_reply_partial]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_default_exit_band_is_0_2_percent_and_quote_age_three_seconds
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Cancelled-202-Order canceled by system: synthetic rule]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_async_TP_terminal_enters_restore_immediately_without_ten_second_wait[Inactive-201-Synthetic terminal rejection unrelated to price]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_price_rejection_pause_is_durable_and_quotes_cannot_resubmit_after_restore_or_restart
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.0-True]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_first_quote_gate_boundary_precedes_protection_reduction_and_retry_accounting[3.01-False]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[0.0-130.0]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[-1.0-130.0]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_first_quote_gate_invalid_book_never_reduces_or_uses_valid_last[130.0-129.0]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_second_quote_gate_restores_original_B_without_price_pause_or_TP_send
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_fresh_TP_uses_bid_times_band_ROUND_UP_cent_not_mark
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[ENTRY]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP1]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP2]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_native_LMT_constructor_explicitly_disables_PMA_without_override_or_algo[TP3]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[False]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_native_STP_submit_and_same_ID_modify_explicitly_disable_PMA[True]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[working]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_TP_working_or_cap_price_difference_pages_P1_blocks_repeat_and_never_rewrites_ledger[cap]
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_PROTECT_price_difference_stays_P0_and_audits_working_aux_and_cap
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_TP_send_status_fill_automatic_evidence_and_daily_bid_difference
+ERROR v6lite/tests/test_batch23_tp_evidence.py::test_B23_dry_run_every_protection_TP_entry_point_has_zero_physical_write
+ERROR v6lite/tests/test_batch23_terminal_fact.py::test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs
+ERROR v6lite/tests/test_batch23_unprotected.py::test_B23_unprotected_direct_price_rejection_persists_full_P0_pause_without_enabling_STP
+ERROR v6lite/tests/test_batch23_unprotected.py::test_B23_unprotected_async_native_price_refusal_persists_full_P0_pause_without_enabling_STP
+ERROR v6lite/tests/test_batch23_unprotected.py::test_B23_corrupt_persisted_pricing_book_cannot_authorize_original_TP_price_or_extra_attempt
+ERROR v6lite/tests/test_batch23_unprotected.py::test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\u4ef7\u683c\u4e0d\u5728\u76d1\u7ba1\u53c2\u8003\u4ef7\u7684\u5141\u8bb8\u8303\u56f4\u5185]
+ERROR v6lite/tests/test_batch23_unprotected.py::test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\u9650\u4ef7\u504f\u79bb\u5f53\u524d\u53c2\u8003\u4ef7\u592a\u591a]
+ERROR v6lite/tests/test_batch23_unprotected.py::test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes
+ERROR v6lite/tests/test_batch23_unprotected.py::test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Cancelled-202-\u5df2\u53d6\u6d88]
+ERROR v6lite/tests/test_batch23_unprotected.py::test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Inactive-201-\u5df2\u62d2\u7edd]
+ERROR v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff
+ERROR v6lite/tests/test_batch24_evidence_deadline.py::test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_all_native_outgoing_messages_are_limited_at_connection_wire
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_all_three_query_channels_use_actual_one_second_minimum
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_startup_native_queries_cannot_bypass_following_fresh_channel_limits
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_congested_read_queries_do_not_delay_stop_beyond_A5_or_reorder_orders
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_default_to_one_second_and_change_fingerprint
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-open_orders_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-positions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-executions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-open_orders_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-positions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-executions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-open_orders_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-positions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-executions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-open_orders_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-positions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-executions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-open_orders_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-positions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-executions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-open_orders_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-positions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-executions_min_interval_seconds]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_load_from_ibkr_without_reading_operator_config
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop]
+ERROR v6lite/tests/test_batch24_pacing.py::test_B24_repeated_bad_native_callbacks_do_not_reset_position_retry_or_forge_confirmation
+ERROR v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]
+ERROR v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]
+ERROR v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]
+ERROR v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]
+ERROR v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot
+ERROR v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_CANCEL_PENDING]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-PROTECT_CANCEL_PENDING]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_NEEDS_RESTORE]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-replace_after_cancel]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_CANCEL_PENDING]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-PROTECT_CANCEL_PENDING]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_NEEDS_RESTORE]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-replace_after_cancel]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_CANCEL_PENDING]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-PROTECT_CANCEL_PENDING]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_NEEDS_RESTORE]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-replace_after_cancel]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_failed]
+ERROR v6lite/tests/test_batch24_retry_second_round.py::test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_partial]
+ERROR v6lite/tests/test_batch24_wire_latency.py::test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[query_notice]
+ERROR v6lite/tests/test_batch24_wire_latency.py::test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[connection_write]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_old_generation_End_cannot_complete_new_generation_Future
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]
+ERROR v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-connection-after-wire]
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate
+ERROR v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_normalization_preserves_truly_different_query_failure_causes
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]
+ERROR v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]
+5 passed, 284 errors in 12.63s

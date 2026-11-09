@@ -1,0 +1,18 @@
+{
+  "saved_at_utc": "2026-10-29T20:19:51.100706+00:00",
+  "source": "direct human messages in this conversation; not an inferred approval",
+  "decision": "允许四项原生身份＋已持久化的 orderId 绑定；审计明确原生 orderId 缺失",
+  "additional_conditions": [
+    "原生 permId 不为0并与持久化perm_id完全一致；绑定来自此前orderId/permId强身份确认，不来自本次查询。",
+    "account/conId/orderRef匹配持久化记录；非零原生clientId必须匹配，0或缺失只审计。",
+    "SELL/STP/GTC；数量和auxPrice同时匹配最后一次确认值，或本次尚未确认的修改值。",
+    "Cancelled/ApiCancelled；filled等于本单账本成交量；completedTime晚于最后确认时间。",
+    "本轮同一permId唯一或多行完全一致；矛盾拒绝。",
+    "PROTECT_CANCEL_PROVEN_COMPLETED记录native_order_id_absent=true及绑定的持久化orderId/permId。",
+    "不得将本地orderId回填原生回报；release其余全部检查保留。"
+  ],
+  "opening_TP_decision": "tp_start_after_open_seconds=30，0关闭；仅新TP阶段前检查；第三十三批实施，本批不实施。",
+  "delivery": "Addendum A 与 batch32 同一tag交付；重新冻结后，13:30 PT之后从头三次串行全量；全部通过才在dev提交/tag，冻结等待复核。",
+  "old_1331_automation": "PAUSED; do not run old candidate",
+  "human_seven_conditions_verbatim": "裁定：选 2，并附加以下条件，缺一项就拒绝。\n1. 原生 permId 不为 0，并且与状态库中这张保护单持久化的 perm_id 完全一致。这个 perm_id 必须来自之前的强身份确认（orderId 2890 与 permId 的绑定），不能来自这次查询本身。\n2. account、conId、orderRef 与持久化记录一致。原生 clientId 如果有值，必须一致；为 0 或缺失时，只记审计，不作为通过条件。\n3. 合约与订单内容一致：SELL、STP、GTC，数量和 auxPrice 等于最后一次确认的值，或者等于本次尚未确认的修改值。\n4. 状态为 Cancelled 或 ApiCancelled；filled 等于账本里这张单的已成交量（本例为 0）；completedTime 晚于这张单最后一次确认的时间。\n5. 同一个 permId 在本轮 completed orders 中只能出现一次，或者多行完全一致（按 b32 的归并规则处理）。如果多行不一致，拒绝。\n6. 审计 PROTECT_CANCEL_PROVEN_COMPLETED 中明确记录 native_order_id_absent=true，以及用于绑定的持久化 orderId 和 permId。\n7. 不把本地的 orderId 2890 回填成券商回报的值；release 的其余检查全部保留。"
+}

@@ -1,0 +1,14 @@
+............F................                                            [100%]
+================================== FAILURES ===================================
+_ test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute _
+v6lite\tests\test_batch22_item9_broker_cancel.py:272: in test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute
+    assert any('different-event-body' in body for _, body in _pages(rig, 'P1'))
+E   assert False
+E    +  where False = any(<generator object test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute.<locals>.<genexpr> at 0x0000017DADFB9EE0>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-e0abab1005814d35a326 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled - reason: We cannot accept your stop order. Synthetic regulatory price check.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection still unresolved AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；券商已明确拒绝该保护请求；orderRef=v6l-protect-e0abab1005814d35a326 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=过期或缺失；broker explicitly refused the STP request; no automatic replacement；券商状态=Cancelled code=202；取消诊断与执行权限独立核验；券商原因原文=Order canceled - reason: We cannot accept your stop order. Synthetic regulatory price check.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: independent synthetic incident | different-event-body
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch22_item9_broker_cancel.py::test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute
+1 failed, 28 passed in 3.43s

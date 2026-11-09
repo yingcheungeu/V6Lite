@@ -1,0 +1,409 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFF.......F                                       [100%]
+================================== FAILURES ===================================
+_ test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:136: in test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger
+    tp1,ref,fill=_filled_tp1(rig,pid)
+                 ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-4cbe5dd7c2be46cc93bc orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-e16916c0ad1a45a4a2ef orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-e7d84b46fe9340e1a291 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-9d1581e0b89d43578573 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-57b7d5ee5f9c4be492e9 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:166: in test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-9868c1a0bf1340b7b9b7 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-87cd55805e8547519a68 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-6b98f0577f7a40dd9c73 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-d2395683059048dab6d7 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-4dfb2c7260f44a559624 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-f282c558147945b0ae72 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:190: in test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId
+    _,ref,_=_filled_tp1(rig,pid)
+            ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-1508b3421d4343789ea4 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-e45de13b88a04d27b673 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-729b3ffb3c33409c983a orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-83bd05defaa34fbb8f58 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-f4db394c4f7340a6b4ae orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-d3e9ab934b91463dbe2a orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin] _
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:209: in test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-842b81369f954c2fa54e orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+___________ test_B27b_failed_a_card_has_one_unverified_time_prefix ____________
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:238: in test_B27b_failed_a_card_has_one_unverified_time_prefix
+    assert len(pages)==1 and pages[0].count('账本成交时间尚未核实')==1,pages
+E   AssertionError: ['🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']
+E   assert (1 == 1 and 2 == 1)
+E    +  where 1 = len(['🟠 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'])
+E    +  and   2 = <built-in method count of str object at 0x000001CDBC48E2F0>('账本成交时间尚未核实')
+E    +    where <built-in method count of str object at 0x000001CDBC48E2F0> = '🟠 P1 · 过夜持仓止盈核验未通过 · AAPL\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP ...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'.count
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-b734dfd4a5ba45f38bd5 | AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=b27b-1019-entry.01.01@2026-10-19；当日可见成交=未执行（a 未通过），未知项=未执行（a 未通过）；范围=client + currently API-visible account execution queries；核验时间=2026-10-20T14:01:04+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+__________ test_B27b_failed_d_card_shows_actual_complete_query_count __________
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:244: in test_B27b_failed_d_card_shows_actual_complete_query_count
+    _,ref,fill=_filled_tp1(rig,pid)
+               ^^^^^^^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27b_current_day_evidence.py:124: in _filled_tp1
+    tp,ref=_activate(rig,pid)
+           ^^^^^^^^^^^^^^^^^^
+v6lite\tests\test_batch26_overnight_evidence.py:328: in _activate
+    [tp] = _tp_requests(rig)
+    ^^^^
+E   ValueError: not enough values to unpack (expected 1, got 0)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: protection tp not sent AAPL | AAPL 持仓数量=3 股 保护单已确认=2 股 保护单可能=2 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 1–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-18ac167b8e804a69b3f7 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-20T14:01:38+00:00 工作单证据时间=2026-10-20T14:01:38+00:00；保护减量确认后 bid/ask 无效或报价超过止盈新鲜度；未发出止盈，恢复保护
+_ test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[naive-20261020 10:01:00] _
+..\..\v6lite\tests\test_batch27b_raw_execution_time.py:172: in test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification
+    assert matches,'raw native field 15 must survive the actual decoder -> event -> audit chain'
+E   AssertionError: raw native field 15 must survive the actual decoder -> event -> audit chain
+E   assert []
+_ test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[unparseable-not-a-valid-execution-time] _
+..\..\v6lite\tests\test_batch27b_raw_execution_time.py:172: in test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification
+    assert matches,'raw native field 15 must survive the actual decoder -> event -> audit chain'
+E   AssertionError: raw native field 15 must survive the actual decoder -> event -> audit chain
+E   assert []
+------------------------------ Captured log call ------------------------------
+ERROR    ib_insync.Decoder:decoder.py:200 Error handling fields: ['11', '-1', '500', '265598', 'AAPL', 'STK', '', '0', '', '', 'SMART', 'USD', 'AAPL', 'NMS', 'b27b-raw.01.01', 'not-a-valid-execution-time', 'DU******001', 'NASDAQ', 'BOT', '3', '113.13', '50500', '131', '0', '3', '113.13', 'v6l-b27b-entry', '', '0', '', '1']
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\decoder.py", line 198, in interpret
+    handler(fields)
+  File "C:\Dev\V6Lite-dev\.pytest_cache\batch27b_baseline27a\v6lite\execution_time.py", line 42, in decode
+    return original_decode(fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\decoder.py", line 447, in execDetails
+    time = cast(datetime, parseIBDatetime(timeStr))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py", line 549, in parseIBDatetime
+    t = dt.datetime.strptime(ss, '%Y%m%d%H:%M:%S')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'notavalidexecuti' does not match format '%Y%m%d%H:%M:%S'
+_ test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[zoned-20261020 14:01:00 UTC] _
+..\..\v6lite\tests\test_batch27b_raw_execution_time.py:172: in test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification
+    assert matches,'raw native field 15 must survive the actual decoder -> event -> audit chain'
+E   AssertionError: raw native field 15 must survive the actual decoder -> event -> audit chain
+E   assert []
+_ test_B27b_complete_native_query_raw_classification_summary_and_audit_are_redacted _
+..\..\v6lite\tests\test_batch27b_raw_execution_time.py:203: in test_B27b_complete_native_query_raw_classification_summary_and_audit_are_redacted
+    assert len(summaries)==1,summaries
+E   AssertionError: []
+E   assert 0 == 1
+E    +  where 0 = len([])
+------------------------------ Captured log call ------------------------------
+INFO     ib_insync.wrapper:wrapper.py:459 execDetails Execution(execId='b27b-raw-summary-0.01.01', time=datetime.datetime(2026, 10, 20, 14, 1, tzinfo=datetime.timezone.utc), acctNumber='DU******001', exchange='NASDAQ', side='BOT', shares=3.0, price=113.13, permId=50500, clientId=131, orderId=500, liquidation=0, cumQty=3.0, avgPrice=113.13, orderRef='v6l-b27b-entry', evRule='', evMultiplier=0.0, modelCode='', lastLiquidity=1)
+INFO     ib_insync.wrapper:wrapper.py:459 execDetails Execution(execId='b27b-raw-summary-1.01.01', time=datetime.datetime(2026, 10, 20, 14, 1, tzinfo=datetime.timezone.utc), acctNumber='DU******001', exchange='NASDAQ', side='BOT', shares=3.0, price=113.13, permId=50500, clientId=131, orderId=500, liquidation=0, cumQty=3.0, avgPrice=113.13, orderRef='v6l-b27b-entry', evRule='', evMultiplier=0.0, modelCode='', lastLiquidity=1)
+ERROR    ib_insync.Decoder:decoder.py:200 Error handling fields: ['11', '0', '500', '265598', 'AAPL', 'STK', '', '0', '', '', 'SMART', 'USD', 'AAPL', 'NMS', 'b27b-raw-summary-2.01.01', 'invalid-time-DU******001', 'DU******001', 'NASDAQ', 'BOT', '3', '113.13', '50500', '131', '0', '3', '113.13', 'v6l-b27b-entry', '', '0', '', '1']
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\decoder.py", line 198, in interpret
+    handler(fields)
+  File "C:\Dev\V6Lite-dev\.pytest_cache\batch27b_baseline27a\v6lite\execution_time.py", line 42, in decode
+    return original_decode(fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\decoder.py", line 447, in execDetails
+    time = cast(datetime, parseIBDatetime(timeStr))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py", line 549, in parseIBDatetime
+    t = dt.datetime.strptime(ss, '%Y%m%d%H:%M:%S')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'invalidtimeDU000' does not match format '%Y%m%d%H:%M:%S'
+_ test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day0-20261020-04:00:00] _
+..\..\v6lite\tests\test_batch27b_raw_execution_time.py:226: in test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope
+    assert harness.filters[-1][1].time==expected_filter
+E   AssertionError: assert '' == '20261020-04:00:00'
+E     
+E     - 20261020-04:00:00
+_ test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day1-20261102-05:00:00] _
+..\..\v6lite\tests\test_batch27b_raw_execution_time.py:226: in test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope
+    assert harness.filters[-1][1].time==expected_filter
+E   AssertionError: assert '' == '20261102-05:00:00'
+E     
+E     - 20261102-05:00:00
+_ test_B27b_invalid_raw_is_scoped_to_its_actual_reqId_and_never_poisons_another_complete_query _
+..\..\v6lite\tests\test_batch27b_raw_execution_time.py:309: in test_B27b_invalid_raw_is_scoped_to_its_actual_reqId_and_never_poisons_another_complete_query
+    assert isinstance(inner_scope,dict) and inner_scope.get('complete') is True
+E   assert (False)
+E    +  where False = isinstance(None, dict)
+------------------------------ Captured log call ------------------------------
+ERROR    ib_insync.Decoder:decoder.py:200 Error handling fields: ['11', '0', '500', '265598', 'AAPL', 'STK', '', '0', '', '', 'SMART', 'USD', 'AAPL', 'NMS', 'b27b-invalid-A.01.01', 'bad-native-A', 'DU******001', 'NASDAQ', 'BOT', '3', '113.13', '50500', '131', '0', '3', '113.13', 'v6l-b27b-entry', '', '0', '', '1']
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\decoder.py", line 198, in interpret
+    handler(fields)
+  File "C:\Dev\V6Lite-dev\.pytest_cache\batch27b_baseline27a\v6lite\execution_time.py", line 42, in decode
+    return original_decode(fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\decoder.py", line 447, in execDetails
+    time = cast(datetime, parseIBDatetime(timeStr))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py", line 549, in parseIBDatetime
+    t = dt.datetime.strptime(ss, '%Y%m%d%H:%M:%S')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'badnativeA' does not match format '%Y%m%d%H:%M:%S'
+ERROR    ib_insync.Decoder:decoder.py:200 Error handling fields: ['11', '-1', '500', '265598', 'AAPL', 'STK', '', '0', '', '', 'SMART', 'USD', 'AAPL', 'NMS', 'b27b-invalid-callback.01.01', 'bad-unsolicited-callback', 'DU******001', 'NASDAQ', 'BOT', '3', '113.13', '50500', '131', '0', '3', '113.13', 'v6l-b27b-entry', '', '0', '', '1']
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\decoder.py", line 198, in interpret
+    handler(fields)
+  File "C:\Dev\V6Lite-dev\.pytest_cache\batch27b_baseline27a\v6lite\execution_time.py", line 42, in decode
+    return original_decode(fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\decoder.py", line 447, in execDetails
+    time = cast(datetime, parseIBDatetime(timeStr))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\util.py", line 549, in parseIBDatetime
+    t = dt.datetime.strptime(ss, '%Y%m%d%H:%M:%S')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'badunsolicitedca' does not match format '%Y%m%d%H:%M:%S'
+=========================== short test summary info ===========================
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin]
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_failed_a_card_has_one_unverified_time_prefix
+FAILED ..\..\v6lite\tests\test_batch27b_current_day_evidence.py::test_B27b_failed_d_card_shows_actual_complete_query_count
+FAILED ..\..\v6lite\tests\test_batch27b_raw_execution_time.py::test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[naive-20261020 10:01:00]
+FAILED ..\..\v6lite\tests\test_batch27b_raw_execution_time.py::test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[unparseable-not-a-valid-execution-time]
+FAILED ..\..\v6lite\tests\test_batch27b_raw_execution_time.py::test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[zoned-20261020 14:01:00 UTC]
+FAILED ..\..\v6lite\tests\test_batch27b_raw_execution_time.py::test_B27b_complete_native_query_raw_classification_summary_and_audit_are_redacted
+FAILED ..\..\v6lite\tests\test_batch27b_raw_execution_time.py::test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day0-20261020-04:00:00]
+FAILED ..\..\v6lite\tests\test_batch27b_raw_execution_time.py::test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day1-20261102-05:00:00]
+FAILED ..\..\v6lite\tests\test_batch27b_raw_execution_time.py::test_B27b_invalid_raw_is_scoped_to_its_actual_reqId_and_never_poisons_another_complete_query
+27 failed, 7 passed in 5.53s

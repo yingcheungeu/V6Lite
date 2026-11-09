@@ -1,0 +1,93 @@
+FFFFFFF.F......                                                          [100%]
+================================== FAILURES ===================================
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted] _
+v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled] _
+v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted] _
+v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled] _
+v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted] _
+v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'PreSubmitted'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff
+_ test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled] _
+v6lite\tests\test_batch25_review_regressions.py:63: in test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync
+    assert dict(rig.store.intent(ref)) == before_intent, (
+E   AssertionError: snapshot last_raw_status/IDs/hold/status are hints, never trading authority
+E   assert {'atr': None,...t': None, ...} == {'atr': None,...t': None, ...}
+E     
+E     Omitting 19 identical items, use -vv to show
+E     Differing items:
+E     {'last_raw_status': 'Cancelled'} != {'last_raw_status': 'Submitted'}
+E     Use -v to get more diff
+_ test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit _
+v6lite\tests\test_batch25_review_regressions.py:113: in test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit
+    assert len(attempts) == 2 and len(_p0_stop(rig)) == 1, 'incidental metadata is not a new cause'
+E   AssertionError: incidental metadata is not a new cause
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 1, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 14, 2, 30, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic native socket reset
+WARNING  v6lite.engine:engine.py:1170 reconnect failed: SDK synchronization incomplete; registered End missing: openOrders [generation=1 PID=9001 reqId=701 elapsed=1.125s attempt=1]
+WARNING  v6lite.engine:engine.py:1170 reconnect failed: SDK synchronization incomplete; registered End missing: openOrders [generation=2 PID=9002 reqId=702 elapsed=2.125s attempt=2]
+WARNING  v6lite.engine:engine.py:1170 reconnect failed: SDK synchronization incomplete; registered End missing: openOrders [generation=3 PID=9003 reqId=703 elapsed=3.125s attempt=3]
+_ test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget _
+v6lite\tests\test_batch25_review_regressions.py:170: in test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget
+    assert len(physical) == 1 and len(execution_queries) == 2, 'retry recovery on the existing healthy socket'
+E   AssertionError: retry recovery on the existing healthy socket
+E   assert (1 == 1 and 1 == 2)
+E    +  where 1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])
+E    +  and   1 = len([datetime.datetime(2026, 10, 6, 14, 1, tzinfo=datetime.timezone.utc)])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | synthetic repeated physical socket reset
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: recovery failed | synthetic executions temporarily unavailable after reconnect
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]
+FAILED v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]
+FAILED v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]
+FAILED v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]
+FAILED v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]
+FAILED v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]
+FAILED v6lite/tests/test_batch25_review_regressions.py::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit
+FAILED v6lite/tests/test_batch25_review_regressions.py::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget
+8 failed, 7 passed in 2.35s

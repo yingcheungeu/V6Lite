@@ -1,0 +1,16 @@
+{
+  "reason": "independent read-only review found confirmed-cancel contradiction swallowed before TP bind/in restore phases",
+  "repair": "bind detector to confirmed original cancellation receipt regardless of phase/TP-id; reject reappeared original in complete own query before restoration",
+  "files": [
+    {
+      "file": "v6lite/final_tp.py",
+      "before_sha256": "2c2b1c2abe07ddbc9bd97e0227b6b78688201798528dcc0a11ec87706b57e4e7",
+      "after_sha256": "5cf0bacea29f882c4354bb6e50d4596e8cefcc2140aad7fcf0b67e78a3f7abdd"
+    },
+    {
+      "file": "v6lite/protection_engine.py",
+      "before_sha256": "a4faf068ca237ac8a74e65fb14b48a57068945831f15738a124730192a6747f7",
+      "after_sha256": "e5162bd787c81e453ef68adf42aa9cdf2658120eaeb229eb1110a36e2f8f298d"
+    }
+  ]
+}

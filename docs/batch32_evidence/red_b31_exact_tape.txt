@@ -1,0 +1,21 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+__________ test_B32_three_native_identical_rows_confirm_gen4_and_TP2 __________
+v6lite\tests\test_batch32_open_orders.py:128: in test_B32_three_native_identical_rows_confirm_gen4_and_TP2
+    assert seen==[(1,'WORKING')], 'the adapter must return one order and ACK the complete duplicate snapshot'
+E   AssertionError: the adapter must return one order and ACK the complete duplicate snapshot
+E   assert [(3, 'PRICE_PENDING')] == [(1, 'WORKING')]
+E     
+E     At index 0 diff: (3, 'PRICE_PENDING') != (1, 'WORKING')
+E     Use -v to get more diff
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch32_open_orders.py::test_B32_three_native_identical_rows_confirm_gen4_and_TP2
+  v6lite\tests\test_batch32_open_orders.py:92: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B32_three_native_identical_rows_confirm_gen4_and_TP2(oct29,monkeypatch,record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch32_open_orders.py::test_B32_three_native_identical_rows_confirm_gen4_and_TP2
+1 failed, 1 warning in 1.38s

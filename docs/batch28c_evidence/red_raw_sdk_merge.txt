@@ -1,0 +1,139 @@
+FFFFFFFFFFFFFFFFFF..                                                     [100%]
+================================== FAILURES ===================================
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[Inactive-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:37: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert rig.store.protection(pid)['state'] != 'WORKING', 'SDK cached identity/status cannot authorize ACK'
+E   AssertionError: SDK cached identity/status cannot authorize ACK
+E   assert 'WORKING' != 'WORKING'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[Inactive-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:42: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert row['state'] != 'WORKING' and row['pending_qty'] == 2
+E   AssertionError: assert ('WORKING' != 'WORKING')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[PendingCancel-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:37: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert rig.store.protection(pid)['state'] != 'WORKING', 'SDK cached identity/status cannot authorize ACK'
+E   AssertionError: SDK cached identity/status cannot authorize ACK
+E   assert 'WORKING' != 'WORKING'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[PendingCancel-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:42: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert row['state'] != 'WORKING' and row['pending_qty'] == 2
+E   AssertionError: assert ('WORKING' != 'WORKING')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[account-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:37: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert rig.store.protection(pid)['state'] != 'WORKING', 'SDK cached identity/status cannot authorize ACK'
+E   AssertionError: SDK cached identity/status cannot authorize ACK
+E   assert 'WORKING' != 'WORKING'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[account-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:42: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert row['state'] != 'WORKING' and row['pending_qty'] == 2
+E   AssertionError: assert ('WORKING' != 'WORKING')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[conId-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:37: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert rig.store.protection(pid)['state'] != 'WORKING', 'SDK cached identity/status cannot authorize ACK'
+E   AssertionError: SDK cached identity/status cannot authorize ACK
+E   assert 'WORKING' != 'WORKING'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[conId-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:42: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert row['state'] != 'WORKING' and row['pending_qty'] == 2
+E   AssertionError: assert ('WORKING' != 'WORKING')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[side-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:37: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert rig.store.protection(pid)['state'] != 'WORKING', 'SDK cached identity/status cannot authorize ACK'
+E   AssertionError: SDK cached identity/status cannot authorize ACK
+E   assert 'WORKING' != 'WORKING'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[side-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:42: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert row['state'] != 'WORKING' and row['pending_qty'] == 2
+E   AssertionError: assert ('WORKING' != 'WORKING')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[tif-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:37: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert rig.store.protection(pid)['state'] != 'WORKING', 'SDK cached identity/status cannot authorize ACK'
+E   AssertionError: SDK cached identity/status cannot authorize ACK
+E   assert 'WORKING' != 'WORKING'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[tif-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:42: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert row['state'] != 'WORKING' and row['pending_qty'] == 2
+E   AssertionError: assert ('WORKING' != 'WORKING')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[outsideRth-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:37: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert rig.store.protection(pid)['state'] != 'WORKING', 'SDK cached identity/status cannot authorize ACK'
+E   AssertionError: SDK cached identity/status cannot authorize ACK
+E   assert 'WORKING' != 'WORKING'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[outsideRth-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:42: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert row['state'] != 'WORKING' and row['pending_qty'] == 2
+E   AssertionError: assert ('WORKING' != 'WORKING')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:37: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert rig.store.protection(pid)['state'] != 'WORKING', 'SDK cached identity/status cannot authorize ACK'
+E   AssertionError: SDK cached identity/status cannot authorize ACK
+E   assert 'WORKING' != 'WORKING'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:42: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert row['state'] != 'WORKING' and row['pending_qty'] == 2
+E   AssertionError: assert ('WORKING' != 'WORKING')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-live] _
+v6lite\tests\test_batch28c_raw_open_order.py:37: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert rig.store.protection(pid)['state'] != 'WORKING', 'SDK cached identity/status cannot authorize ACK'
+E   AssertionError: SDK cached identity/status cannot authorize ACK
+E   assert 'WORKING' != 'WORKING'
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-owned-round] _
+v6lite\tests\test_batch28c_raw_open_order.py:42: in test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade
+    assert row['state'] != 'WORKING' and row['pending_qty'] == 2
+E   AssertionError: assert ('WORKING' != 'WORKING')
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[Inactive-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[Inactive-owned-round]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[PendingCancel-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[PendingCancel-owned-round]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[account-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[account-owned-round]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[conId-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[conId-owned-round]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[side-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[side-owned-round]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[tif-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[tif-owned-round]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[outsideRth-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[outsideRth-owned-round]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[currency-owned-round]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-live]
+FAILED v6lite/tests/test_batch28c_raw_open_order.py::test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[secType-owned-round]
+18 failed, 2 passed in 5.68s

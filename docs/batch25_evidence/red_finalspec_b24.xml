@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="30" skipped="0" tests="31" time="3.387" timestamp="2026-10-14T06:55:02.647032-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="" name="test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0" time="0.265"><failure message="assert (3 == 2)&#10; +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:53: in test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0
+    assert len(calls) == 2 and _stop_pages(rig) == []
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])</failure></testcase><testcase classname="" name="test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff" time="0.061"><failure message="AssertionError: changed reasons cannot reopen the previous shorter delay&#10;assert 3 == (3 - 1)&#10; +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:77: in test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff
+    assert len(calls) == expected-1, 'changed reasons cannot reopen the previous shorter delay'
+E   AssertionError: changed reasons cannot reopen the previous shorter delay
+E   assert 3 == (3 - 1)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 29, 999000, tzinfo=datetime.timezone.utc)])</failure></testcase><testcase classname="" name="test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget" time="0.076"><failure message="assert (3 == 2)&#10; +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 31, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 2, tzinfo=datetime.timezone.utc)])">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:104: in test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget
+    assert len(calls) == 2 and len(_stop_pages(rig)) == 1
+E   assert (3 == 2)
+E    +  where 3 = len([datetime.datetime(2026, 10, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 50, 31, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 6, 13, 51, 2, tzinfo=datetime.timezone.utc)])</failure></testcase><testcase classname="" name="test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]" time="0.084"><failure message="AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []&#10;  &#10;  Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:120: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]" time="0.082"><failure message="AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []&#10;  &#10;  Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:120: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]" time="0.086"><failure message="AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []&#10;  &#10;  Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:120: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]" time="0.086"><failure message="AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []&#10;  &#10;  Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:120: in test_B25_initial_A_confirmation_wait_does_not_page_query_limit
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('TEST · #x1F7E0 P...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL', 'TEST · #x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage" time="0.093"><failure message="AssertionError: assert [('#x1F7E0 P1 · 券商查...不增加卖单或绕过核验。')] == []&#10;  &#10;  Left contains one more item: ('#x1F7E0 P1 · 券商查询已限速 · AAPL', '#x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:141: in test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage
+    assert _rate_pages(rig) == []
+E   AssertionError: assert [('#x1F7E0 P1 · 券商查...不增加卖单或绕过核验。')] == []
+E     
+E     Left contains one more item: ('#x1F7E0 P1 · 券商查询已限速 · AAPL', '#x1F7E0 P1 · 券商查询已限速 · AAPL\n发生了什么：同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。\n影响：本持仓继续等待核验；其他持仓和连接心跳继续运行。\n你要做什么：在 TWS 核对原保护单与持仓；保持冻结，不增加卖单或绕过核验。')
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate" time="0.104" /><testcase classname="" name="test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync" time="0.093"><failure message="AssertionError: assert [] == ['openOrder',...synchronized']&#10;  &#10;  Right contains 4 more items, first extra item: 'openOrder'&#10;  Use -v to get more diff">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:183: in test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync
+    assert stages == ['openOrder', 'orderStatus', 'openOrderEnd', 'synchronized']
+E   AssertionError: assert [] == ['openOrder',...synchronized']
+E     
+E     Right contains 4 more items, first extra item: 'openOrder'
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_B25_true_strong_identity_failure_keeps_hold_and_entry_block_while_rate_page_once" time="0.086"><failure message="AssertionError: assert None is not None&#10; +  where None = control('frozen:AAPL')&#10; +    where control = &lt;v6lite.store.Store object at 0x0000017DA8C7AC90&gt;.control&#10; +      where &lt;v6lite.store.Store object at 0x0000017DA8C7AC90&gt; = &lt;v6lite.tests.helpers.Rig object at 0x0000017DA8C78B50&gt;.store">..\..\v6lite\tests\test_batch25_reconnect_alerts.py:205: in test_B25_true_strong_identity_failure_keeps_hold_and_entry_block_while_rate_page_once
+    assert rig.store.control('frozen:AAPL') is not None
+E   AssertionError: assert None is not None
+E    +  where None = control('frozen:AAPL')
+E    +    where control = &lt;v6lite.store.Store object at 0x0000017DA8C7AC90&gt;.control
+E    +      where &lt;v6lite.store.Store object at 0x0000017DA8C7AC90&gt; = &lt;v6lite.tests.helpers.Rig object at 0x0000017DA8C78B50&gt;.store</failure></testcase><testcase classname="" name="test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]" time="0.007"><failure message="AssertionError: current-connection bootstrap End is expected&#10;assert 'openOrders' not in {'openOrders'}&#10; +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAF5B6D0&gt;._channel_poisoned">..\..\v6lite\tests\test_batch25_restart.py:155: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAF5B6D0&gt;._channel_poisoned</failure></testcase><testcase classname="" name="test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]" time="0.004"><failure message="AssertionError: current-connection bootstrap End is expected&#10;assert 'openOrders' not in {'openOrders'}&#10; +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCB0121D0&gt;._channel_poisoned">..\..\v6lite\tests\test_batch25_restart.py:155: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCB0121D0&gt;._channel_poisoned</failure></testcase><testcase classname="" name="test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]" time="0.004"><failure message="AssertionError: current-connection bootstrap End is expected&#10;assert 'openOrders' not in {'openOrders'}&#10; +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DA97261D0&gt;._channel_poisoned">..\..\v6lite\tests\test_batch25_restart.py:155: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DA97261D0&gt;._channel_poisoned</failure></testcase><testcase classname="" name="test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]" time="0.005"><failure message="AssertionError: current-connection bootstrap End is expected&#10;assert 'openOrders' not in {'openOrders'}&#10; +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAFB8D90&gt;._channel_poisoned">..\..\v6lite\tests\test_batch25_restart.py:155: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAFB8D90&gt;._channel_poisoned</failure></testcase><testcase classname="" name="test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]" time="0.004"><failure message="AssertionError: current-connection bootstrap End is expected&#10;assert 'openOrders' not in {'openOrders'}&#10; +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAF69E10&gt;._channel_poisoned">..\..\v6lite\tests\test_batch25_restart.py:155: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAF69E10&gt;._channel_poisoned</failure></testcase><testcase classname="" name="test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]" time="0.004"><failure message="AssertionError: current-connection bootstrap End is expected&#10;assert 'openOrders' not in {'openOrders'}&#10; +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DA9816E90&gt;._channel_poisoned">..\..\v6lite\tests\test_batch25_restart.py:155: in test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required
+    assert 'openOrders' not in adapter._channel_poisoned, 'current-connection bootstrap End is expected'
+E   AssertionError: current-connection bootstrap End is expected
+E   assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DA9816E90&gt;._channel_poisoned</failure></testcase><testcase classname="" name="test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot" time="0.004"><failure message="v6lite.broker.base.BrokerError: openOrders: unsolicited End seen; connection renewed">..\..\v6lite\tests\test_batch25_restart.py:180: in test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot
+    adapter.open_orders()
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:421: in _clean_request
+    raise BrokerError(f"{channel}: unsolicited End seen; connection renewed")
+E   v6lite.broker.base.BrokerError: openOrders: unsolicited End seen; connection renewed</failure></testcase><testcase classname="" name="test_B25_old_generation_End_cannot_complete_new_generation_Future" time="0.004"><failure message="v6lite.broker.base.BrokerError: openOrders: unsolicited End seen; connection renewed">..\..\v6lite\tests\test_batch25_restart.py:192: in test_B25_old_generation_End_cannot_complete_new_generation_Future
+    adapter.connect(); adapter.open_orders()
+                       ^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:421: in _clean_request
+    raise BrokerError(f"{channel}: unsolicited End seen; connection renewed")
+E   v6lite.broker.base.BrokerError: openOrders: unsolicited End seen; connection renewed</failure></testcase><testcase classname="" name="test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]" time="0.159"><failure message="assert ([datetime.dat...timezone.utc)] == []&#10;  &#10;  Left contains one more item: datetime.datetime(2026, 10, 14, 13, 19, 52, tzinfo=datetime.timezone.utc)&#10;  Use -v to get more diff)">..\..\v6lite\tests\test_batch25_restart.py:284: in test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once
+    assert disconnects == [] and 'openOrders' not in adapter._channel_poisoned
+E   assert ([datetime.dat...timezone.utc)] == []
+E     
+E     Left contains one more item: datetime.datetime(2026, 10, 14, 13, 19, 52, tzinfo=datetime.timezone.utc)
+E     Use -v to get more diff)</failure></testcase><testcase classname="" name="test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]" time="0.153"><failure message="assert ([datetime.dat...timezone.utc)] == []&#10;  &#10;  Left contains one more item: datetime.datetime(2026, 10, 14, 13, 19, 52, tzinfo=datetime.timezone.utc)&#10;  Use -v to get more diff)">..\..\v6lite\tests\test_batch25_restart.py:284: in test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once
+    assert disconnects == [] and 'openOrders' not in adapter._channel_poisoned
+E   assert ([datetime.dat...timezone.utc)] == []
+E     
+E     Left contains one more item: datetime.datetime(2026, 10, 14, 13, 19, 52, tzinfo=datetime.timezone.utc)
+E     Use -v to get more diff)</failure></testcase><testcase classname="" name="test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End" time="0.004"><failure message="AssertionError: assert 'openOrders' not in {'openOrders'}&#10; +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCB0128D0&gt;._channel_poisoned">..\..\v6lite\tests\test_batch25_restart.py:322: in test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End
+    assert 'openOrders' not in adapter._channel_poisoned
+E   AssertionError: assert 'openOrders' not in {'openOrders'}
+E    +  where {'openOrders'} = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCB0128D0&gt;._channel_poisoned</failure></testcase><testcase classname="" name="test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]" time="0.004"><failure message="AssertionError: a failed SDK connection must never be marked synchronized&#10;assert not True&#10; +  where True = is_connected()&#10; +    where is_connected = getattr(&lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAF7A050&gt;, 'is_synchronized', is_connected)&#10; +      where is_connected = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAF7A050&gt;.is_connected">..\..\v6lite\tests\test_batch25_restart.py:348: in test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh
+    assert not getattr(adapter, 'is_synchronized', adapter.is_connected)(), (
+E   AssertionError: a failed SDK connection must never be marked synchronized
+E   assert not True
+E    +  where True = is_connected()
+E    +    where is_connected = getattr(&lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAF7A050&gt;, 'is_synchronized', is_connected)
+E    +      where is_connected = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCAF7A050&gt;.is_connected</failure></testcase><testcase classname="" name="test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]" time="0.023"><failure message="AssertionError: a failed SDK connection must never be marked synchronized&#10;assert not True&#10; +  where True = is_connected()&#10; +    where is_connected = getattr(&lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCB01D690&gt;, 'is_synchronized', is_connected)&#10; +      where is_connected = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCB01D690&gt;.is_connected">..\..\v6lite\tests\test_batch25_restart.py:348: in test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh
+    assert not getattr(adapter, 'is_synchronized', adapter.is_connected)(), (
+E   AssertionError: a failed SDK connection must never be marked synchronized
+E   assert not True
+E    +  where True = is_connected()
+E    +    where is_connected = getattr(&lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCB01D690&gt;, 'is_synchronized', is_connected)
+E    +      where is_connected = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DCB01D690&gt;.is_connected</failure></testcase><testcase classname="" name="test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]" time="0.004"><failure message="v6lite.broker.base.BrokerError: openOrders: unsolicited End seen; connection renewed">..\..\v6lite\tests\test_batch25_restart.py:387: in test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit
+    assert adapter.open_orders() == []
+           ^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:421: in _clean_request
+    raise BrokerError(f"{channel}: unsolicited End seen; connection renewed")
+E   v6lite.broker.base.BrokerError: openOrders: unsolicited End seen; connection renewed</failure></testcase><testcase classname="" name="test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]" time="0.004"><failure message="AssertionError: Regex pattern did not match.&#10;  Expected regex: 'transport refused'&#10;  Actual message: 'openOrders: unsolicited End seen; connection renewed'">..\..\v6lite\tests\test_batch25_restart.py:393: in test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit
+    adapter.open_orders()
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:421: in _clean_request
+    raise BrokerError(f"{channel}: unsolicited End seen; connection renewed")
+E   v6lite.broker.base.BrokerError: openOrders: unsolicited End seen; connection renewed
+
+During handling of the above exception, another exception occurred:
+..\..\v6lite\tests\test_batch25_restart.py:392: in test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit
+    with pytest.raises(BrokerError, match='transport refused'):
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'transport refused'
+E     Actual message: 'openOrders: unsolicited End seen; connection renewed'</failure></testcase><testcase classname="" name="test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]" time="0.150"><failure message="AssertionError: complete bootstrap plus actual failed own source&#10;assert (('sync', 'complete') in [('handshake', 'connect'), ('handshake', 'openOrder'), ('handshake', 'orderStatus'), ('handshake', 'openOrderEnd'), ('handshake', 'API-ready'), ('sync', 'openOrders-request'), ...] and [])">..\..\v6lite\tests\test_batch25_restart.py:440: in test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source
+    assert ('sync', 'complete') in trace and failures, 'complete bootstrap plus actual failed own source'
+E   AssertionError: complete bootstrap plus actual failed own source
+E   assert (('sync', 'complete') in [('handshake', 'connect'), ('handshake', 'openOrder'), ('handshake', 'orderStatus'), ('handshake', 'openOrderEnd'), ('handshake', 'API-ready'), ('sync', 'openOrders-request'), ...] and [])</failure></testcase><testcase classname="" name="test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]" time="0.154"><failure message="AssertionError: complete bootstrap plus actual failed own source&#10;assert (('sync', 'complete') in [('handshake', 'connect'), ('handshake', 'openOrder'), ('handshake', 'orderStatus'), ('handshake', 'openOrderEnd'), ('handshake', 'API-ready'), ('sync', 'openOrders-request'), ...] and [])">..\..\v6lite\tests\test_batch25_restart.py:440: in test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source
+    assert ('sync', 'complete') in trace and failures, 'complete bootstrap plus actual failed own source'
+E   AssertionError: complete bootstrap plus actual failed own source
+E   assert (('sync', 'complete') in [('handshake', 'connect'), ('handshake', 'openOrder'), ('handshake', 'orderStatus'), ('handshake', 'openOrderEnd'), ('handshake', 'API-ready'), ('sync', 'openOrders-request'), ...] and [])</failure></testcase><testcase classname="" name="test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt" time="0.004"><failure message="v6lite.broker.base.BrokerError: openOrders: unsolicited End seen; connection renewed">..\..\v6lite\tests\test_batch25_restart.py:455: in test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt
+    adapter.connect(); adapter.open_orders()
+                       ^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:649: in open_orders
+    for trade in self._clean_request("openOrders", self.ib.reqAllOpenOrders):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+v6lite\broker\ibkr.py:421: in _clean_request
+    raise BrokerError(f"{channel}: unsolicited End seen; connection renewed")
+E   v6lite.broker.base.BrokerError: openOrders: unsolicited End seen; connection renewed</failure></testcase><testcase classname="" name="test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]" time="0.005"><failure message="AssertionError: SDK return is not synchronization authority when a registered End is still owed&#10;assert (False or not True)&#10; +  where True = is_connected()&#10; +    where is_connected = getattr(&lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DAA8ED6D0&gt;, 'is_synchronized', is_connected)&#10; +      where is_connected = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DAA8ED6D0&gt;.is_connected">..\..\v6lite\tests\test_batch25_restart.py:501: in test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready
+    assert rejected or not getattr(adapter, 'is_synchronized', adapter.is_connected)(), (
+E   AssertionError: SDK return is not synchronization authority when a registered End is still owed
+E   assert (False or not True)
+E    +  where True = is_connected()
+E    +    where is_connected = getattr(&lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DAA8ED6D0&gt;, 'is_synchronized', is_connected)
+E    +      where is_connected = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DAA8ED6D0&gt;.is_connected</failure></testcase><testcase classname="" name="test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]" time="0.005"><failure message="AssertionError: SDK return is not synchronization authority when a registered End is still owed&#10;assert (False or not True)&#10; +  where True = is_connected()&#10; +    where is_connected = getattr(&lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DAAC67510&gt;, 'is_synchronized', is_connected)&#10; +      where is_connected = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DAAC67510&gt;.is_connected">..\..\v6lite\tests\test_batch25_restart.py:501: in test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready
+    assert rejected or not getattr(adapter, 'is_synchronized', adapter.is_connected)(), (
+E   AssertionError: SDK return is not synchronization authority when a registered End is still owed
+E   assert (False or not True)
+E    +  where True = is_connected()
+E    +    where is_connected = getattr(&lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DAAC67510&gt;, 'is_synchronized', is_connected)
+E    +      where is_connected = &lt;v6lite.broker.ibkr.IbkrBroker object at 0x0000017DAAC67510&gt;.is_connected</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,9 @@
+{
+  "classification": "code fix + test + docs; no broker boundary execution",
+  "workflow_read_note": "Dev workspace contains no CODEX_DEVELOPMENT_WORKFLOW.md. Auto-review denied the attempted read of the legacy TradingV6 copy as outside this batch scope; the read did not execute. Continue using supplied AGENTS workflow rules and verified B23 instruction. No approval bypass.",
+  "decisions": {
+    "stale_quote_skip_counter": "Persist only an evidence counter every skipped round to satisfy automatic daily evidence; log at most once per position per minute; no order/stage/attempt/retry/gate mutation.",
+    "resume_tp": "Minimal explicit John command bound to position and pause episode; no weakening of release; evidence-gated engine consumption outside callbacks; no immediate TP send."
+  },
+  "immutable_evidence_policy": "22a raw pytest outputs are preserved byte-for-byte. Authored source/tool staged whitespace check passed; raw-evidence whitespace was not normalized."
+}

@@ -1,0 +1,10 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch26_be_token_regression.py::test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[empty_binding]",
+    "v6lite/tests/test_batch26_be_token_regression.py::test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[missing_modify_generation]"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch26_be_token_regression.py::test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[empty_binding]",
+    "v6lite/tests/test_batch26_be_token_regression.py::test_B26_regression_real_BE_ACK_cannot_confirm_or_enable_TP_with_partial_token_binding[missing_modify_generation]"
+  ]
+}

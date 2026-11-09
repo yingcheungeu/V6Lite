@@ -1,0 +1,16 @@
+{
+  "code_sha": "d6dd37c12701ce95",
+  "runs": [
+    "full_1",
+    "full_2",
+    "full_3"
+  ],
+  "collection_label": "full_collection",
+  "totals": {
+    "tests": 1848,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "checkpoint_sha256": "7be994447bdfd7ed386fe05935a72118e3e83838bea3aef0b68cbdacf3cae7d0"
+}

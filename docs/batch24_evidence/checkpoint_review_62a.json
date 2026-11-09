@@ -1,0 +1,31 @@
+{
+  "reviewer": "/root/batch24_tests",
+  "read_only_review": true,
+  "reviewed_at_pt": "2026-10-12T14:27:38.377802-07:00",
+  "checkpoint_sha256": "1340532b3aff60eeed944b30ea42a4ce99a1419ab8631f9c32133880128566ae",
+  "code_sha": "62a9b82bb52ec22c",
+  "locked_files_rehashed": 237,
+  "all_locks_match": true,
+  "new_tests_green": 101,
+  "expanded_focused_green": 896,
+  "valid_red": [
+    {
+      "tests": 101,
+      "failures": 74,
+      "passed": 27,
+      "errors": 0
+    },
+    {
+      "tests": 35,
+      "failures": 1,
+      "passed": 34,
+      "errors": 0
+    }
+  ],
+  "raw_receipts_hashes_totals_cases_inventory_verified": true,
+  "actual_card_scenarios": 7,
+  "card_source_and_exact_plain_markdown_binding": "PASS",
+  "no_unresolved_substantive_findings": true,
+  "decision": "PASS to start authorized serial full; every run must independently pass time/process/source guard",
+  "candidate_test_runs_by_reviewer": 0
+}

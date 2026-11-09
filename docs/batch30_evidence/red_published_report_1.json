@@ -1,0 +1,32 @@
+{
+  "label": "red_published_report_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-26T15:37:34.655922-07:00",
+  "end_pt": "2026-10-26T15:37:36.617228-07:00",
+  "seconds": 1.969,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch30_commission.py::test_B30_late_fee_after_daily_file_refreshes_local_report_without_extra_card"
+  ],
+  "code_sha": "a3faf1d71103a0be",
+  "source_unchanged": true,
+  "inventory_sha256": "77b24f418996cd04f0723dd5532f3a98e79a8b7219e9dcf814fd7162a2e648d5",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "ecc2c8d8cddce5b99e20800824ccaab9d1b971796fd475cc85bd73c052c149e9",
+  "XML_sha256_before_masking": "af9bdf8336056f80a7916f2fb77f1ea909ec323b4e731c021030b234a6be11c1",
+  "delivered_log_sha256": "4cffce2194a2513d3af1a3ac2c932233214c5fcd1baa78505e525f3ef3134345",
+  "delivered_XML_sha256": "af9bdf8336056f80a7916f2fb77f1ea909ec323b4e731c021030b234a6be11c1",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch30_commission",
+      "name": "test_B30_late_fee_after_daily_file_refreshes_local_report_without_extra_card",
+      "kind": "failure",
+      "message": "AssertionError: already-published local report must reflect newly booked final fee\nassert '# V6-Lite daily report 2026-10-26 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: a3faf1d71103a0b...026-10-26T16:52:06+00:00\", \"streak\": 0}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n' != '# V6-Lite daily report 2026-10-26 (paper)\\n\\n- account: DU******001   state role: formal\\n- code_sha: a3faf1d71103a0b...026-10-26T16:52:06+00:00\", \"streak\": 0}\\n\\n## Operator notes\\n\\n- (market context, manual actions, things to review)\\n'"
+    }
+  ]
+}

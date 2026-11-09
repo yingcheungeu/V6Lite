@@ -1,0 +1,32 @@
+{
+  "label": "green_faults_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-23T22:03:50.643960-07:00",
+  "end_pt": "2026-10-23T22:05:09.612298-07:00",
+  "seconds": 78.969,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch29_faults.py"
+  ],
+  "code_sha": "c0c806a932e390a2",
+  "source_unchanged": true,
+  "inventory_sha256": "7af7df5b2a4fafbf0a9f0bf65841fbddc440af26084bdec8f973b9c108d1fae8",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "7b3f5f66394162caed5e4017a326bd301944c32c246bbf9ac74ba09b6f9b0c9e",
+  "XML_sha256_before_masking": "969321cb9bb1739214b56624f77827a54152874bea413b575056d6039536822e",
+  "delivered_log_sha256": "ca8ddf316c6ece39accec4268e63e8d426063063d060a57b613815b32863dfa8",
+  "delivered_XML_sha256": "969321cb9bb1739214b56624f77827a54152874bea413b575056d6039536822e",
+  "tests": 18,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch29_faults",
+      "name": "test_B29_daily_report_has_separate_timeout_evidence_and_restored_S",
+      "kind": "failure",
+      "message": "AssertionError: ('AAPL', 'S+T+X', 4, 'P', 3, {'v6l-b121d9ba681c407c8905': ('AAPL', 1), 'v6l-protect-0bbdce190b464a1bba84': ('AAPL', 3)})\nassert 4 <= 3\n +  where 3 = <built-in method get of dict object at 0x000001F2DC932E80>('AAPL', 0)\n +    where <built-in method get of dict object at 0x000001F2DC932E80> = {'AAPL': 3}.get"
+    }
+  ]
+}

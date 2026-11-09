@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="6" time="1.371" timestamp="2026-10-09T15:30:02.308775-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch23_broker_diagnostics" name="test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[submit_stop]" time="0.257"><failure message="AssertionError: the actual catch must persist the full original broker exception: submit_stop&#10;assert []">v6lite\tests\test_batch23_broker_diagnostics.py:199: in test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority
+    events = _assert_full_diagnostic_and_report(rig, kind='PROTECT_BROKER_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: submit_stop
+E   assert []</failure></testcase><testcase classname="v6lite.tests.test_batch23_broker_diagnostics" name="test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[modify_protection]" time="0.086"><failure message="AssertionError: the actual catch must persist the full original broker exception: modify_protection&#10;assert []">v6lite\tests\test_batch23_broker_diagnostics.py:199: in test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority
+    events = _assert_full_diagnostic_and_report(rig, kind='PROTECT_BROKER_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: modify_protection
+E   assert []</failure></testcase><testcase classname="v6lite.tests.test_batch23_broker_diagnostics" name="test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority[cancel_protection]" time="0.130"><failure message="AssertionError: the actual catch must persist the full original broker exception: cancel_protection&#10;assert []">v6lite\tests\test_batch23_broker_diagnostics.py:199: in test_B23_protect_write_failure_keeps_original_exception_audit_without_expanding_sell_authority
+    events = _assert_full_diagnostic_and_report(rig, kind='PROTECT_BROKER_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: cancel_protection
+E   assert []</failure></testcase><testcase classname="v6lite.tests.test_batch23_broker_diagnostics" name="test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL" time="0.084"><failure message="AssertionError: the actual catch must persist the full original broker exception: executions_today&#10;assert []">v6lite\tests\test_batch23_broker_diagnostics.py:217: in test_B23_TP_three_source_execution_query_failure_keeps_original_cause_and_zero_new_SELL
+    _assert_full_diagnostic_and_report(rig, kind='BROKER_QUERY_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: executions_today
+E   assert []</failure></testcase><testcase classname="v6lite.tests.test_batch23_broker_diagnostics" name="test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[1]" time="0.112"><failure message="AssertionError: the actual catch must persist the full original broker exception: release_account_executions_today&#10;assert []">v6lite\tests\test_batch23_broker_diagnostics.py:258: in test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission
+    _assert_full_diagnostic_and_report(rig, kind='BROKER_QUERY_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: release_account_executions_today
+E   assert []</failure></testcase><testcase classname="v6lite.tests.test_batch23_broker_diagnostics" name="test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission[2]" time="0.095"><failure message="AssertionError: the actual catch must persist the full original broker exception: release_account_executions_today&#10;assert []">v6lite\tests\test_batch23_broker_diagnostics.py:258: in test_B23_release_account_execution_failure_in_either_round_keeps_full_cause_without_release_permission
+    _assert_full_diagnostic_and_report(rig, kind='BROKER_QUERY_ERROR',
+v6lite\tests\test_batch23_broker_diagnostics.py:136: in _assert_full_diagnostic_and_report
+    assert matching, 'the actual catch must persist the full original broker exception: ' + source
+E   AssertionError: the actual catch must persist the full original broker exception: release_account_executions_today
+E   assert []</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,38 @@
+{
+  "label": "fact_red_candidate",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "start_pt": "2026-10-09T15:32:28.054614-07:00",
+  "end_pt": "2026-10-09T15:32:29.386660-07:00",
+  "returncode": 1,
+  "source_code_sha": "b5526e309e7cd35d",
+  "source_unchanged": true,
+  "worktree_code_sha": "b5526e309e7cd35d",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch23_terminal_fact.py",
+      "sha256": "9629999e9099ec51860f412340411bb3aba2848c218c3dbea0240c7a73bd8b0a"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch23_terminal_fact",
+      "name": "test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 券商已拒绝保护单', '#x1F534 P0 · 券商已拒绝保护单\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=待核实（上次确认 0） 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 ... 的重新提交/IBALGO 建议；不要自动改价重挂保护单。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')]\nassert False\n +  where False = any(<generator object test_B23_native_Inactive_202_explicit_cancelled_reason_uses_cancel_fact_and_never_rehangs.<locals>.<genexpr> at 0x000002B3576E2A40>)"
+    }
+  ],
+  "stdout_sha256": "0232d8d41f1e18dd96d0b8b303207aa4d42ccccdb7001b0ad2c2786c6bae5a88",
+  "junit_sha256": "85f2c71f05feb6b85af478d15399adde310200a84a5ffe8d735ee951dea808a4"
+}

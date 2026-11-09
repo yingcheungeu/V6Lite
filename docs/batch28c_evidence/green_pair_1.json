@@ -1,0 +1,25 @@
+{
+  "label": "green_pair_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:21:52.410057-07:00",
+  "end_pt": "2026-10-21T20:22:44.637046-07:00",
+  "seconds": 52.234,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch28c_price_confirmation.py",
+    "v6lite/tests/test_batch28c_price_edges.py",
+    "v6lite/tests/test_batch28c_native_latency.py",
+    "v6lite/tests/test_batch28c_ack_ordering.py",
+    "v6lite/tests/test_batch28c_raw_open_order.py"
+  ],
+  "code_sha": "7113b97dddca2c47",
+  "source_unchanged": true,
+  "inventory_sha256": "e60de5501eec27a44772213130b37bdd4c84629a34b2fa5d4d5c251c6fdce24b",
+  "incomplete": false,
+  "tests": 46,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

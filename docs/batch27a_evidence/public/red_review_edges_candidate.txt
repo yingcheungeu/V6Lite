@@ -1,0 +1,118 @@
+.....FFFFF..FFFFFF                                                       [100%]
+================================== FAILURES ===================================
+_ test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill] _
+v6lite\tests\test_batch27a_review_edges.py:142: in test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity
+    assert (rig.engine._protection_priority_due or current['state'] == 'UNKNOWN' or intent['hold_reason']), (
+E   AssertionError: ('contradictory quantities are not a consistent repeated-WORKING observation', 1, 2)
+E   assert (False or 'WORKING' == 'UNKNOWN'
+E    +  where False = <v6lite.engine.Engine object at 0x000001C949C07550>._protection_priority_due
+E    +    where <v6lite.engine.Engine object at 0x000001C949C07550> = <v6lite.tests.helpers.Rig object at 0x000001C949C07110>.engine
+E     
+E     - UNKNOWN
+E     + WORKING or None)
+_ test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining] _
+v6lite\tests\test_batch27a_review_edges.py:142: in test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity
+    assert (rig.engine._protection_priority_due or current['state'] == 'UNKNOWN' or intent['hold_reason']), (
+E   AssertionError: ('contradictory quantities are not a consistent repeated-WORKING observation', 0, 0)
+E   assert (False or 'WORKING' == 'UNKNOWN'
+E    +  where False = <v6lite.engine.Engine object at 0x000001C96B18C590>._protection_priority_due
+E    +    where <v6lite.engine.Engine object at 0x000001C96B18C590> = <v6lite.tests.helpers.Rig object at 0x000001C96B18FA10>.engine
+E     
+E     - UNKNOWN
+E     + WORKING or None)
+_ test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional] _
+v6lite\tests\test_batch27a_review_edges.py:142: in test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity
+    assert (rig.engine._protection_priority_due or current['state'] == 'UNKNOWN' or intent['hold_reason']), (
+E   AssertionError: ('contradictory quantities are not a consistent repeated-WORKING observation', 0.5, 2.5)
+E   assert (False or 'WORKING' == 'UNKNOWN'
+E    +  where False = <v6lite.engine.Engine object at 0x000001C949B57C50>._protection_priority_due
+E    +    where <v6lite.engine.Engine object at 0x000001C949B57C50> = <v6lite.tests.helpers.Rig object at 0x000001C96B18FD50>.engine
+E     
+E     - UNKNOWN
+E     + WORKING or None)
+_ test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN] _
+v6lite\tests\test_batch27a_review_edges.py:142: in test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity
+    assert (rig.engine._protection_priority_due or current['state'] == 'UNKNOWN' or intent['hold_reason']), (
+E   AssertionError: ('contradictory quantities are not a consistent repeated-WORKING observation', nan, 3)
+E   assert (False or 'WORKING' == 'UNKNOWN'
+E    +  where False = <v6lite.engine.Engine object at 0x000001C96B244590>._protection_priority_due
+E    +    where <v6lite.engine.Engine object at 0x000001C96B244590> = <v6lite.tests.helpers.Rig object at 0x000001C96B247290>.engine
+E     
+E     - UNKNOWN
+E     + WORKING or None)
+_ test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries _
+v6lite\tests\test_batch27a_review_edges.py:169: in test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries
+    assert [(at-start).total_seconds() for at in calls] == [15, 30], calls
+E   AssertionError: [datetime.datetime(2026, 10, 16, 14, 0, 45, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 16, 14, 1, tzinfo=datetime.timezone.utc)]
+E   assert [14.0, 29.0] == [15, 30]
+E     
+E     At index 0 diff: 14.0 != 15
+E     Use -v to get more diff
+_ test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume _
+v6lite\tests\test_batch27a_review_edges.py:244: in test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume
+    assert rig.store.control(key) is None, 'resume bookkeeping cannot keep an already-flat evidence incident alive'
+E   AssertionError: resume bookkeeping cannot keep an already-flat evidence incident alive
+E   assert '{"signature": "[\\"evidence incomplete\\",[\\"OPEN\\",3],[\\"WORKING\\",\\"v6l-protect-23a4c1bb7bd14737949e\\",1002,5...ue, "intent_id": "v6l-protect-23a4c1bb7bd14737949e", "p0_attempted": true, "last_notice": "2026-10-14T13:20:54+00:00"}' is None
+E    +  where '{"signature": "[\\"evidence incomplete\\",[\\"OPEN\\",3],[\\"WORKING\\",\\"v6l-protect-23a4c1bb7bd14737949e\\",1002,5...ue, "intent_id": "v6l-protect-23a4c1bb7bd14737949e", "p0_attempted": true, "last_notice": "2026-10-14T13:20:54+00:00"}' = control('protect_incident:pos-7c03806017984013a3ab:evidence incomplete')
+E    +    where control = <v6lite.store.Store object at 0x000001C94AEE06D0>.control
+E    +      where <v6lite.store.Store object at 0x000001C94AEE06D0> = <v6lite.tests.helpers.Rig object at 0x000001C949C053D0>.store
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-23a4c1bb7bd14737949e orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-16T14:00:30+00:00 工作单证据时间=过期或缺失；synthetic old evidence incident, reproducing disclosed first_at
+_ test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof __
+v6lite\tests\test_batch27a_review_edges.py:256: in test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof
+    assert rig.store.control(key) is not None and rig.store.control(f4) is not None
+E   AssertionError: assert (None is not None)
+E    +  where None = control('protect_incident:pos-f2788be919424a84b13f:evidence incomplete')
+E    +    where control = <v6lite.store.Store object at 0x000001C96B7D3F90>.control
+E    +      where <v6lite.store.Store object at 0x000001C96B7D3F90> = <v6lite.tests.helpers.Rig object at 0x000001C96B7D1090>.store
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-41497b8fc00d4f0aac98 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-16T14:00:30+00:00 工作单证据时间=过期或缺失；synthetic old evidence incident, reproducing disclosed first_at
+_ test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float] _
+v6lite\tests\test_batch27a_review_edges.py:276: in test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields
+    assert rig.store.control(_time_key(callback.exec_id)) == value
+E   assert None == '{"provisional_time": "2026-10-16T14:00:30+00:00", "identity": ["b27a-callback-entry.01.01", "v6l-22008ece5f7742f9bfae", "AAPL", "BUY", 3.0, 113.13, 1001, 51001, 10000]}'
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x000001C96B448550>.control
+E    +      where <v6lite.store.Store object at 0x000001C96B448550> = <v6lite.tests.helpers.Rig object at 0x000001C96B44A8D0>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = <function _time_key at 0x000001C949ADF380>('b27a-callback-entry.01.01')
+E    +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-22008ece5f7742f9bfae', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id
+_ test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float] _
+v6lite\tests\test_batch27a_review_edges.py:276: in test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields
+    assert rig.store.control(_time_key(callback.exec_id)) == value
+E   assert None == '{"provisional_time": "2026-10-16T14:00:30+00:00", "identity": ["b27a-callback-entry.01.01", "v6l-2854ce87357c46ba9401", "AAPL", "BUY", 3, 113.13, 1001.0, 51001, 10000]}'
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x000001C96B426D90>.control
+E    +      where <v6lite.store.Store object at 0x000001C96B426D90> = <v6lite.tests.helpers.Rig object at 0x000001C96B427B50>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = <function _time_key at 0x000001C949ADF380>('b27a-callback-entry.01.01')
+E    +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-2854ce87357c46ba9401', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id
+_ test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float] _
+v6lite\tests\test_batch27a_review_edges.py:276: in test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields
+    assert rig.store.control(_time_key(callback.exec_id)) == value
+E   assert None == '{"provisional_time": "2026-10-16T14:00:30+00:00", "identity": ["b27a-callback-entry.01.01", "v6l-3a42852a11d1497cba6e", "AAPL", "BUY", 3, 113.13, 1001, 51001.0, 10000]}'
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x000001C949BF6690>.control
+E    +      where <v6lite.store.Store object at 0x000001C949BF6690> = <v6lite.tests.helpers.Rig object at 0x000001C949BF5150>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = <function _time_key at 0x000001C949ADF380>('b27a-callback-entry.01.01')
+E    +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-3a42852a11d1497cba6e', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id
+_ test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float] _
+v6lite\tests\test_batch27a_review_edges.py:276: in test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields
+    assert rig.store.control(_time_key(callback.exec_id)) == value
+E   assert None == '{"provisional_time": "2026-10-16T14:00:30+00:00", "identity": ["b27a-callback-entry.01.01", "v6l-729dd969ca3b44caab5c", "AAPL", "BUY", 3, 113.13, 1001, 51001, 10000.0]}'
+E    +  where None = control('execution_time_unverified:b27a-callback-entry.01.01')
+E    +    where control = <v6lite.store.Store object at 0x000001C949BF7050>.control
+E    +      where <v6lite.store.Store object at 0x000001C949BF7050> = <v6lite.tests.helpers.Rig object at 0x000001C949BF5FD0>.store
+E    +    and   'execution_time_unverified:b27a-callback-entry.01.01' = <function _time_key at 0x000001C949ADF380>('b27a-callback-entry.01.01')
+E    +      where 'b27a-callback-entry.01.01' = FillEvent(exec_id='b27a-callback-entry.01.01', intent_id='v6l-729dd969ca3b44caab5c', symbol='AAPL', side=<Side.BUY: 'B...e.utc), broker_order_id=1001, perm_id=51001, commission=1.0, time_source='callback', time_uncertain=True, con_id=10000).exec_id
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]
+FAILED v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]
+11 failed, 7 passed in 3.62s

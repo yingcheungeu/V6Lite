@@ -1,0 +1,33 @@
+F.F                                                                      [100%]
+================================== FAILURES ===================================
+____________________ test_B33_oct29_real_overnight_replay _____________________
+v6lite\tests\test_batch33_open_delay.py:81: in test_B33_oct29_real_overnight_replay
+    hold(rig, pid, before)
+v6lite\tests\test_batch33_open_delay.py:38: in hold
+    assert _writes(rig) == before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+____________ test_B33_last_overnight_share_waits_before_TP3_cancel ____________
+v6lite\tests\test_batch33_open_delay.py:141: in test_B33_last_overnight_share_waits_before_TP3_cancel
+    assert _writes(rig) == before
+E   assert (3, 1, 3, 1) == (3, 1, 3, 0)
+E     
+E     At index 3 diff: 1 != 0
+E     Use -v to get more diff
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-27T14:00:31+00:00
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T15:03:29.003000+00:00
+============================== warnings summary ===============================
+v6lite/tests/test_batch33_open_delay.py::test_B33_oct29_real_overnight_replay
+  v6lite\tests\test_batch33_open_delay.py:72: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B33_oct29_real_overnight_replay(opening, record_property):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_oct29_real_overnight_replay
+FAILED v6lite/tests/test_batch33_open_delay.py::test_B33_last_overnight_share_waits_before_TP3_cancel
+2 failed, 1 passed, 1 warning in 2.14s

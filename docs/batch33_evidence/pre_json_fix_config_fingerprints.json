@@ -1,0 +1,16 @@
+{
+  "g3t": {
+    "source": "v6lite/examples/paper_test.toml",
+    "source_sha256": "f0bfaf13a9496162ac8da247b9f09bfc4e0a8b59c2fdf9f5dfbe04ae6380c3d4",
+    "config_fingerprint": "9d005b93488bf2a880732352227d859b7103f8aa2a79ea58cc2acb96696a7df7",
+    "tp_start_after_open_seconds": 30,
+    "scope": "checked-in synthetic template; operator configuration not read or modified"
+  },
+  "g3n": {
+    "source": "v6lite/examples/paper_g3n.toml",
+    "source_sha256": "7c6b4848c7efb5b1afcdb20f05d9033d6ad2876faa89513e666acb187e39bfd0",
+    "config_fingerprint": "449e14cac8be3ca425e30b18f20530d2e5ca79e7819694bd3b428294ebdd5b91",
+    "tp_start_after_open_seconds": 30,
+    "scope": "checked-in synthetic template; operator configuration not read or modified"
+  }
+}

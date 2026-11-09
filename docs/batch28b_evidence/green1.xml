@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="8" time="19.510" timestamp="2026-10-21T09:09:31.204939-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch28b_overnight_refresh" name="test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen" time="16.096"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 13, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _complete_tp1.&lt;locals&gt;.&lt;lambda&gt; at 0x0000021D45483B00&gt;()">v6lite\tests\test_batch28b_overnight_refresh.py:233: in test_B28b_real_preopen_startup_two_hours_steady_then_inflight_TP1_is_not_frozen
+    _complete_tp1(rig, pid)
+v6lite\tests\test_batch28b_overnight_refresh.py:168: in _complete_tp1
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 13, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _complete_tp1.&lt;locals&gt;.&lt;lambda&gt; at 0x0000021D45483B00&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28b_overnight_refresh" name="test_B28b_expired_cache_at_price_requests_real_new_sources_without_manual_progress" time="0.429"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 10, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _complete_tp1.&lt;locals&gt;.&lt;lambda&gt; at 0x0000021D455123E0&gt;()">v6lite\tests\test_batch28b_overnight_refresh.py:257: in test_B28b_expired_cache_at_price_requests_real_new_sources_without_manual_progress
+    _complete_tp1(rig, pid)
+v6lite\tests\test_batch28b_overnight_refresh.py:168: in _complete_tp1
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 10, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _complete_tp1.&lt;locals&gt;.&lt;lambda&gt; at 0x0000021D455123E0&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28b_overnight_refresh" name="test_B28b_fresh_contradiction_at_price_freezes_without_repairing_original_STP[P-mismatch]" time="0.188" /><testcase classname="v6lite.tests.test_batch28b_overnight_refresh" name="test_B28b_fresh_contradiction_at_price_freezes_without_repairing_original_STP[unknown-execution]" time="0.182" /><testcase classname="v6lite.tests.test_batch28b_overnight_refresh" name="test_B28b_fresh_contradiction_at_price_freezes_without_repairing_original_STP[nonworking-STP]" time="0.192" /><testcase classname="v6lite.tests.test_batch28b_overnight_refresh" name="test_B28b_timeout_waits_and_retries_without_false_overnight_failure_card[temporary]" time="0.471"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 17, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function _complete_tp1.&lt;locals&gt;.&lt;lambda&gt; at 0x0000021D45497F60&gt;()">v6lite\tests\test_batch28b_overnight_refresh.py:390: in test_B28b_timeout_waits_and_retries_without_false_overnight_failure_card
+    _complete_tp1(rig, pid)
+v6lite\tests\test_batch28b_overnight_refresh.py:168: in _complete_tp1
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 21, 15, 5, 17, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function _complete_tp1.&lt;locals&gt;.&lt;lambda&gt; at 0x0000021D45497F60&gt;()</failure></testcase><testcase classname="v6lite.tests.test_batch28b_overnight_refresh" name="test_B28b_timeout_waits_and_retries_without_false_overnight_failure_card[F4-escalation]" time="0.361" /><testcase classname="v6lite.tests.test_batch28b_overnight_refresh" name="test_B28b_previous_day_dedupe_controls_survive_reopen_without_blocking_next_day_TP" time="0.493"><failure message="AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 15, 5, 10, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])&#10;assert False&#10; +  where False = &lt;function test_B28b_previous_day_dedupe_controls_survive_reopen_without_blocking_next_day_TP.&lt;locals&gt;.&lt;lambda&gt; at 0x0000021D454AB1A0&gt;()">v6lite\tests\test_batch28b_overnight_refresh.py:417: in test_B28b_previous_day_dedupe_controls_survive_reopen_without_blocking_next_day_TP
+    _tick_until(rig, lambda: rig.store.protection(pid)['state'] == 'REDUCE_PENDING')
+v6lite\tests\test_batch28b_overnight_refresh.py:46: in _tick_until
+    assert predicate(), ('deadline', rig.clock.now(),
+E   AssertionError: ('deadline', datetime.datetime(2026, 10, 22, 15, 5, 10, tzinfo=datetime.timezone.utc), [{'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}])
+E   assert False
+E    +  where False = &lt;function test_B28b_previous_day_dedupe_controls_survive_reopen_without_blocking_next_day_TP.&lt;locals&gt;.&lt;lambda&gt; at 0x0000021D454AB1A0&gt;()</failure></testcase></testsuite></testsuites>

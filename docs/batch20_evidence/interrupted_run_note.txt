@@ -1,0 +1,1 @@
+Serial full attempt at 2026-10-08T15:18:49-07:00 deliberately stopped after independent review found duplicate pending-reduction submission. Only task-owned synthetic pytest processes terminated; no failure masked. No complete run counted. Production code_sha at stop: 943a359d0f86109e. Final three full runs start afresh after guard fix.

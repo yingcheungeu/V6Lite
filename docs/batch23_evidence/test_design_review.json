@@ -1,0 +1,31 @@
+{
+  "reviewed_by": "batch20_time_logs",
+  "review_phase": "independent test-design review; no execution",
+  "findings": [
+    {
+      "id": "T1",
+      "description": "Initial fixture queued TP but only drained callback events; corrected to run actual queued exit work."
+    },
+    {
+      "id": "T2",
+      "description": "Copied example fixture path and missing execution-section key accesses must resolve actual baseline config values, not fail via missing files/keys."
+    },
+    {
+      "id": "T3",
+      "description": "B slow-query test must maintain fresh quotes while advancing clock so it isolates first T0 and includes query elapsed without conflicting with the new 3-second quote gate."
+    },
+    {
+      "id": "T4",
+      "description": "Restart regression must require healthy startup, not catch every StartupError and pass merely because no TP is sent."
+    },
+    {
+      "id": "T5",
+      "description": "Safety tests must include possible local UNKNOWN/CANCEL_SEEN capacity and checks before/after actual broker writes, beyond Fake exchange terminal truth."
+    },
+    {
+      "id": "T6",
+      "description": "Price rejection tests require exact labels and known IDs, durable ACK deduplication/failed-part retries, and independent events remain visible."
+    }
+  ],
+  "status": "test owner correcting/additional contracts before production authorization"
+}

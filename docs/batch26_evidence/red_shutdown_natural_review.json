@@ -1,0 +1,93 @@
+{
+  "reviewer": "/root",
+  "receipt": "red_shutdown_b25_calibrated.json",
+  "valid_natural_red": true,
+  "source_code_sha": "ea71abe782e4cf68",
+  "spec_sha256": "99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93",
+  "totals": {
+    "tests": 35,
+    "failures": 15,
+    "errors": 0,
+    "skipped": 0
+  },
+  "original_fixture_setup_error_not_counted": true,
+  "test_AST_unchanged_except_network_guard_initialization": true,
+  "new_failures": [
+    {
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-Paper]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_after_close_0/rig-0/reports/2026-10-14."
+    },
+    {
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+1s-dry-run]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_after_close_1/rig-0/reports/2026-10-14."
+    },
+    {
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-Paper]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_after_close_2/rig-0/reports/2026-10-14."
+    },
+    {
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+2m-dry-run]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_after_close_3/rig-0/reports/2026-10-14."
+    },
+    {
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-Paper]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_after_close_4/rig-0/reports/2026-10-14."
+    },
+    {
+      "name": "test_B26_shutdown_after_close_before_scheduled_report_writes_and_delivers_once[close+4m59s-dry-run]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_after_close_5/rig-0/reports/2026-10-14."
+    },
+    {
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-Paper]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_supplement_u0/rig-0/reports/2026-11-27."
+    },
+    {
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+1s-dry-run]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_supplement_u1/rig-0/reports/2026-11-27."
+    },
+    {
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-Paper]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_supplement_u2/rig-0/reports/2026-11-27."
+    },
+    {
+      "name": "test_B26_shutdown_supplement_uses_the_actual_early_close[close+4m59s-dry-run]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_shutdown_supplement_u3/rig-0/reports/2026-11-27."
+    },
+    {
+      "name": "test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[Paper]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_supplement_delivery_i0/rig-0/reports/2026-10-14."
+    },
+    {
+      "name": "test_B26_supplement_delivery_is_durable_across_real_sqlite_close_and_engine_reopen[dry-run]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_supplement_delivery_i1/rig-0/reports/2026-10-14."
+    },
+    {
+      "name": "test_B26_supplement_preserves_DAY_cancel_GTC_retention_SHUTDOWN_disconnect_order",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown after market close must write the real local daily report\nassert False\n +  where False = is_file()\n +    where is_file = WindowsPath('C:/Dev/V6Lite-dev/docs/batch26_evidence/test_tmp/red_shutdown_b25_calibrated/pytest/test_B26_supplement_preserves_0/rig-0/reports/2026-10-06."
+    },
+    {
+      "name": "test_B26_report_failure_does_not_interrupt_safe_order_shutdown[render]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown must attempt the real after-close report despite the injected failure\nassert 0 == 1\n +  where 0 = len([])"
+    },
+    {
+      "name": "test_B26_report_failure_does_not_interrupt_safe_order_shutdown[local_write]",
+      "outcome": "failure",
+      "message": "AssertionError: shutdown must attempt the real after-close report despite the injected failure\nassert 0 == 1\n +  where 0 = len([])"
+    }
+  ],
+  "sole_implementer_scope": "Only shutdown/reporting code in v6lite/engine.py; no overnight evidence/order changes pending Claude/John ruling"
+}

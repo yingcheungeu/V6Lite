@@ -1,0 +1,22 @@
+{
+  "reason": "new validator copied with old OUT directory; pytest plugin not importable; zero cases executed; not product red",
+  "moved_task_artifacts_only": [
+    {
+      "old_path": "docs/batch29_evidence/red_report_audit_1.json",
+      "preserved_path": "docs/batch30_evidence/red_report_audit_1.json",
+      "sha256": "9e1b44dea198ae0f36ff4fec0235ca7771cc88827d29af944670b323dc674136"
+    },
+    {
+      "old_path": "docs/batch29_evidence/red_report_audit_1.txt",
+      "preserved_path": "docs/batch30_evidence/red_report_audit_1.txt",
+      "sha256": "4e43044511351b93a5b4ef2107be5fce0ea1765549d023c0dea13b51721bfeed"
+    },
+    {
+      "old_path": "docs/batch29_evidence/red_report_audit_1_inventory.json",
+      "preserved_path": "docs/batch30_evidence/red_report_audit_1_inventory.json",
+      "sha256": "48ce75d93e04f90fb99d0577abb3ae64b06f68467ab474ed4be7be8811a95e52"
+    }
+  ],
+  "old_tool_sha256": "879b839b05ff63b345c9e82d84cb63ec074f15b31982236b355208dc45d401d5",
+  "new_tool_sha256": "7d92f64034ae2399bc6c7aa4d36386c4ce71d9fa3e505d29208d610d6fcc67eb"
+}

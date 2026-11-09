@@ -1,0 +1,180 @@
+FFFFFFFFFFFFFFF                                                          [100%]
+================================== FAILURES ===================================
+_ test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report] _
+..\..\v6lite\tests\test_batch27_critical_attachments.py:97: in test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans
+    section, size, lines = _bounded(text)
+                           ^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27_critical_attachments.py:37: in _bounded
+    assert size <= 100 * 1024 and lines <= 200, ("critical main report cap", size, lines)
+E   AssertionError: ('critical main report cap', 56645, 1006)
+E   assert (56645 <= (100 * 1024) and 1006 <= 200)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-163f331d4c894f33a1a8 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.52；上次确认=2026-10-15T11:16:41+00:00 工作单证据时间=过期或缺失；工作中的保护合同价格与已确认或本代待确认价格不一致；不跟随券商价格改写账本
+_ test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement] _
+..\..\v6lite\tests\test_batch27_critical_attachments.py:97: in test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans
+    section, size, lines = _bounded(text)
+                           ^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27_critical_attachments.py:37: in _bounded
+    assert size <= 100 * 1024 and lines <= 200, ("critical main report cap", size, lines)
+E   AssertionError: ('critical main report cap', 56645, 1006)
+E   assert (56645 <= (100 * 1024) and 1006 <= 200)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection unknown AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=待核实 外部卖单在途=待核实 未保护=待核实 股 可能超卖=待核实 股；当前保护状态待核实；orderRef=v6l-protect-163f331d4c894f33a1a8 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=340.52；上次确认=2026-10-15T11:16:41+00:00 工作单证据时间=过期或缺失；工作中的保护合同价格与已确认或本代待确认价格不一致；不跟随券商价格改写账本
+_ test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main _
+..\..\v6lite\tests\test_batch27_critical_attachments.py:136: in test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main
+    _, size, lines = _bounded(text)
+                     ^^^^^^^^^^^^^^
+..\..\v6lite\tests\test_batch27_critical_attachments.py:37: in _bounded
+    assert size <= 100 * 1024 and lines <= 200, ("critical main report cap", size, lines)
+E   AssertionError: ('critical main report cap', 735516, 304)
+E   assert (735516 <= (100 * 1024))
+_ test_B27_full_native_evidence_log_budget_includes_complete_executions[15s-one] _
+..\..\v6lite\tests\test_batch27_execution_log_aggregation.py:110: in test_B27_full_native_evidence_log_budget_includes_complete_executions
+    assert len(normal) <= budget, ("full native normal lines", len(normal), budget, index)
+E   AssertionError: ('full native normal lines', 3205, 2000, 800)
+E   assert 3205 <= 2000
+E    +  where 3205 = len(["2026-10-18 08:37:16,421 INFO ib_insync.wrapper openOrder: Trade(contract=Stock(conId=900000, symbol='AAPL', exchange...0261015 11:16:41', '2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False', ...])
+---------------------------- Captured stdout call -----------------------------
+2026-10-18 08:37:16,421 INFO ib_insync.wrapper openOrder: Trade(contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), order=Order(orderId=1000, clientId=131, permId=100000, action='SELL', totalQuantity=3, orderType='STP', lmtPrice=0.0, auxPrice=340.52, tif='GTC', orderRef='v6l-log-protect-0', account='DU******001'), orderStatus=OrderStatus(orderId=1000, status='PreSubmitted', filled=0.0, remaining=0.0, avgFillPrice=0.0, permId=0, parentId=0, lastFillPrice=0.0, clientId=0, whyHeld='', mktCapPrice=0.0), fills=[], log=[], advancedError='')
+2026-10-18 08:37:16,426 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,427 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,442 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,442 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,442 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,443 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,443 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,443 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,443 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,443 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,443 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,444 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,444 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,444 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,444 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,444 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,444 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,445 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,445 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,445 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,445 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,445 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,446 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,446 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,446 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,446 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,447 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,447 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,447 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,447 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,447 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,448 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,448 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,448 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,448 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,448 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,449 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,449 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,449 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,449 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,449 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,450 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,450 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,450 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,450 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,450 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,451 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,451 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,451 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,451 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,451 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,452 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,452 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,452 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,452 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,452 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,452 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,453 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,453 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,453 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,453 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,454 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,454 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,454 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,454 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,454 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,454 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,455 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,455 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,455 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,455 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,455 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,456 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,456 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,456 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,456 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,456 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,457 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,457 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,457 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,457 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,457 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,458 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,458 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,458 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,458 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,459 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,459 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,459 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,459 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [EXECUTION_TIME_SUMMARY] returned=1 zoned=0 naive=1 unparseable=0 sample=20261015 11:16:41
+2026-10-18 08:37:16,460 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False
+2026-10-18 08:37:16,460 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=900000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)

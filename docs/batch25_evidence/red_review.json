@@ -1,0 +1,38 @@
+{
+  "recorded_by": "/root",
+  "independent_reviewer": "/root/batch25_investigate",
+  "recorded_at_pt": "2026-10-14T07:11:29.657820-07:00",
+  "result": "PASS",
+  "valid_receipt": "red_finalspec_b24_attempt3.json",
+  "receipt_sha256": "456ccb39c1103afb196344110ae2c46e5c82cf6ce414709fa1e1dac01b899bff",
+  "actual_raw_counts": {
+    "tests": 33,
+    "natural_behavior_failures": 24,
+    "natural_passes": 9,
+    "errors": 0,
+    "skips": 0
+  },
+  "raw_xml_sha256": "82853832913485986573e46d5a5b7017865c81bbaaaef05f2c2a70673bd803cd",
+  "raw_stdout_sha256": "51fdc9274d964ff8d20c3c5e956eb72b0466038be3747d4bc0a0a70c40983dca",
+  "raw_inventory_sha256": "a9ccbeca779c3585523837e83f34d6c62aa636cd0b6b322ee0aa1b06a3e429b3",
+  "production_source_code_sha": "2db6af8f04f145f6",
+  "imported_immutable_B24": true,
+  "spec_sha256": {
+    "v6lite/tests/test_batch25_reconnect_alerts.py": "60ab5265d112a27e7cf6ada6fcac1fe9b39be272a1146b454df170dfab61bc45",
+    "v6lite/tests/test_batch25_restart.py": "25b86bf9f3a068e04bfa84dccffb86fa356a3b5696d904c731318cbd882b544a"
+  },
+  "invalid_fixture_failures_in_accepted_red": 0,
+  "missing_interface_failures": 0,
+  "old_tracked_tests_modified": false,
+  "natural_safe_control_passes_do_not_count_as_red_failures": true,
+  "synthetic_history_reference_and_fill_price": 342.53,
+  "synthetic_entry_price_not_supplied_historical_John_cost": true,
+  "formal_production_write_authorized_after_this_red": true,
+  "production_writer": "/root/batch25_implement",
+  "superseded_attempts_retained": [
+    "red_batch24",
+    "red_finalspec_b24",
+    "red_finalspec_b24_attempt2"
+  ],
+  "superseded_attempts_usage": "History/fixture correction only; final-spec acceptance uses attempt3"
+}

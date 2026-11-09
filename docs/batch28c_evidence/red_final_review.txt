@@ -1,0 +1,48 @@
+.FFFF                                                                    [100%]
+================================== FAILURES ===================================
+_ test_B28c_old_raw_openOrder_closure_is_rejected_after_native_reset[owned-round] _
+v6lite\tests\test_batch28c_old_raw_callback.py:31: in test_B28c_old_raw_openOrder_closure_is_rejected_after_native_reset
+    assert result == [], 'old raw rows must never enter a new generation own round'
+E   AssertionError: old raw rows must never enter a new generation own round
+E   assert [OpenOrder(in...8623157e+308)] == []
+E     
+E     Left contains one more item: OpenOrder(intent_id='v6l-protect-45fdfb74951041f885b2', broker_order_id=706, symbol='AAPL', status='PreSubmitted', fil...7, limit_price=None, outside_rth=False, account='DU******001', total_quantity=2, broker_echo_lmt=1.7976931348623157e+308)
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+____ test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick ____
+v6lite\tests\test_batch28c_pair_window.py:31: in test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick
+    assert not [(at, code) for at, code, _ in server.requests if server.ack_at <= at < server.ack_at+.40]
+E   AssertionError: assert not [(171688.437, '16')]
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0[SELL] _
+v6lite\tests\test_batch28c_stop_query_contradiction.py:33: in test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0
+    assert any(level=='P0' for level, _ in rig._b26_alerts), 'independent contradiction must survive a binding change'
+E   AssertionError: independent contradiction must survive a binding change
+E   assert False
+E    +  where False = any(<generator object test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0.<locals>.<genexpr> at 0x000002546247F3E0>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b28c-stop-unknown.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+_ test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0[BUY] _
+v6lite\tests\test_batch28c_stop_query_contradiction.py:33: in test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0
+    assert any(level=='P0' for level, _ in rig._b26_alerts), 'independent contradiction must survive a binding change'
+E   AssertionError: independent contradiction must survive a binding change
+E   assert False
+E    +  where False = any(<generator object test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0.<locals>.<genexpr> at 0x00000254624E92A0>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b28c-stop-unknown.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+============================== warnings summary ===============================
+v6lite/tests/test_batch28c_pair_window.py::test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick
+  v6lite\tests\test_batch28c_pair_window.py:21: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28c_old_raw_callback.py::test_B28c_old_raw_openOrder_closure_is_rejected_after_native_reset[owned-round]
+FAILED v6lite/tests/test_batch28c_pair_window.py::test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick
+FAILED v6lite/tests/test_batch28c_stop_query_contradiction.py::test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0[SELL]
+FAILED v6lite/tests/test_batch28c_stop_query_contradiction.py::test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0[BUY]
+4 failed, 1 passed, 1 warning in 10.34s

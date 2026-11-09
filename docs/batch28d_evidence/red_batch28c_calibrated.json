@@ -1,0 +1,70 @@
+{
+  "label": "red_batch28c_calibrated",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-22T08:01:00.894912-07:00",
+  "end_pt": "2026-10-22T08:08:36.643538-07:00",
+  "seconds": 455.75,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28d_native_final_tp.py",
+    "v6lite/tests/test_batch28d_closed_tp_race.py",
+    "v6lite/tests/test_batch28d_tp_cards.py"
+  ],
+  "code_sha": "6147c925cdf854d7",
+  "source_unchanged": true,
+  "inventory_sha256": "7509c9c7ce790a60fb7037a726a6748bb19fce079a312be3459d9faa8881ae3f",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "139fb8e9a60a1b69bd4705649303c013c5b93de14d26e75ca352cabcb18cf0b7",
+  "XML_sha256_before_masking": "8aae1e482f4244c2bf34ba73d6dc466715cd7435e07a1fc7c4c1dbbb8230f0dd",
+  "delivered_log_sha256": "2033ac63a38ecc12bc70bdfd69ba0edc8c4c593ba4ef1829522c2a119f68a6ac",
+  "delivered_XML_sha256": "b40d97a21e5f8a7a006440b7a61b5cd260b8baeca6d4064634a4ff7e9d793dba",
+  "tests": 17,
+  "failures": 7,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28d_native_final_tp",
+      "name": "test_B28d_real_final_cancel_ACK_to_actual_TP3_wire_within_one_second",
+      "kind": "failure",
+      "message": "AssertionError: ('Cancelled -> actual DAY LMT conn.sendMsg', 8.48499999998603, [(211851.171, '16', ('16', '1', '')), (211851.218, '61'...DU******001', '20261021-04:00:00', ...)), (211852.406, '16', ('16', '1', '')), (211852.453, '61', ('61', '1', '')), ...])\nassert 8.48499999998603 <= 1.0"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_native_final_tp",
+      "name": "test_B28d_final_TP_fill_between_native_position_row_and_End_closes_safely[no-P0]",
+      "kind": "failure",
+      "message": "AssertionError: ['protection evidence incomplete AAPL\n  AAPL \u6301\u4ed3\u6570\u91cf=0 \u80a1 \u4fdd\u62a4\u5355\u5df2\u786e\u8ba4=0 \u80a1 \u4fdd\u62a4\u5355\u53ef\u80fd=0 \u80a1 \u6b62\u76c8\u5728\u9014=0 \u80a1 \u5916\u90e8\u5356\u5355\u5728\u9014=0 \u80a1 \u672a\u4fdd\u62a4=\u5f85\u6838\u5b9e\uff08\u53ef\u80fd\u8303\u56f4 0\u20130\uff09 \u80a1 \u53ef\u80fd\u8d85\u5356...videnceContradiction\n  \u5f71\u54cd\uff1a\u6301\u4ed3\u3001\u5de5\u4f5c\u5355\u548c\u6210\u4ea4\u4e09\u9879\u8bc1\u636e\u4e0d\u5b8c\u6574\uff0c\u4e0d\u80fd\u5b89\u5168\u589e\u52a0\u4fdd\u62a4\u6570\u91cf\u3002\n  \u4f60\u8981\u505a\u4ec0\u4e48\uff1a1\uff09\u5728 TWS \u5206\u522b\u6838\u5bf9\u6301\u4ed3\u3001\u6240\u6709\u5de5\u4f5c\u5355\u3001\u6210\u4ea4\uff1b2\uff09\u4e0d\u8981\u53e6\u4e0b\u5356\u5355\u6216\u589e\u52a0\u4fdd\u62a4\u6570\u91cf\uff1b3\uff09\u8bc1\u636e\u9f50\u5168\u4e14\u4e00\u81f4\u540e\u518d\u89e3\u9664\u51bb\u7ed3\u3002']\nassert ['protection ...\u9f50\u5168\u4e14\u4e00\u81f4\u540e\u518d\u89e3\u9664\u51bb\u7ed3\u3002'] == []\n  \n  Left contains one more item: 'protection evidence incomplete AAPL\\nAAPL \u6301\u4ed3\u6570\u91cf=0 \u80a1 \u4fdd\u62a4\u5355\u5df2\u786e\u8ba4=0 \u80a1 \u4fdd\u62a4\u5355\u53ef\u80fd=0 \u80a1 \u6b62\u76c8\u5728\u9014=0 \u80a1 \u5916\u90e8\u5356\u5355\u5728\u9014=0 \u80a1 \u672a\u4fdd\u62a4=\u5f85\u6838\u5b9e\uff08\u53ef\u80fd\u8303\u56f4 0\u20130\uff09 \u80a1 \u53ef\u80fd\u8d85\u5356=...EvidenceContradiction\\n\u5f71\u54cd\uff1a\u6301\u4ed3\u3001\u5de5\u4f5c\u5355\u548c\u6210\u4ea4\u4e09\u9879\u8bc1\u636e\u4e0d\u5b8c\u6574\uff0c\u4e0d\u80fd\u5b89\u5168\u589e\u52a0\u4fdd\u62a4\u6570\u91cf\u3002\\n\u4f60\u8981\u505a\u4ec0\u4e48\uff1a1\uff09\u5728 TWS \u5206\u522b\u6838\u5bf9\u6301\u4ed3\u3001\u6240\u6709\u5de5\u4f5c\u5355\u3001\u6210\u4ea4\uff1b2\uff09\u4e0d\u8981\u53e6\u4e0b\u5356\u5355\u6216\u589e\u52a0\u4fdd\u62a4\u6570\u91cf\uff1b3\uff09\u8bc1\u636e\u9f50\u5168\u4e14\u4e00\u81f4\u540e\u518d\u89e3\u9664\u51bb\u7ed3\u3002'\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_native_final_tp",
+      "name": "test_B28d_final_TP_fill_between_native_position_row_and_End_closes_safely[terminal-protection]",
+      "kind": "failure",
+      "message": "AssertionError: {'account': 'DU******001', 'broker_order_id': 706, 'client_id': 131, 'con_id': 10000, ...}\nassert 'WORKING' in {'CANCELLED', 'CLOSED', 'FILLED', 'RETIRED'}"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP3_native_fill_invalidates_old_P1_without_P0_and_enters_terminal[complete-native-round]",
+      "kind": "failure",
+      "message": "AssertionError: assert not ['protection evidence incomplete AAPL\\nAAPL \u6301\u4ed3\u6570\u91cf=0 \u80a1 \u4fdd\u62a4\u5355\u5df2\u786e\u8ba4=0 \u80a1 \u4fdd\u62a4\u5355\u53ef\u80fd=0 \u80a1 \u6b62\u76c8\u5728\u9014=0 \u80a1 \u5916\u90e8\u5356\u5355\u5728\u9014=0 \u80a1 \u672a\u4fdd\u62a4=\u5f85\u6838\u5b9e\uff08\u53ef\u80fd\u8303\u56f4 0\u20130\uff09 \u80a1 \u53ef\u80fd\u8d85\u5356...videnceContradiction\\n\u5f71\u54cd\uff1a\u6301\u4ed3\u3001\u5de5\u4f5c\u5355\u548c\u6210\u4ea4\u4e09\u9879\u8bc1\u636e\u4e0d\u5b8c\u6574\uff0c\u4e0d\u80fd\u5b89\u5168\u589e\u52a0\u4fdd\u62a4\u6570\u91cf\u3002\\n\u4f60\u8981\u505a\u4ec0\u4e48\uff1a1\uff09\u5728 TWS \u5206\u522b\u6838\u5bf9\u6301\u4ed3\u3001\u6240\u6709\u5de5\u4f5c\u5355\u3001\u6210\u4ea4\uff1b2\uff09\u4e0d\u8981\u53e6\u4e0b\u5356\u5355\u6216\u589e\u52a0\u4fdd\u62a4\u6570\u91cf\uff1b3\uff09\u8bc1\u636e\u9f50\u5168\u4e14\u4e00\u81f4\u540e\u518d\u89e3\u9664\u51bb\u7ed3\u3002']"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP3_native_fill_invalidates_old_P1_without_P0_and_enters_terminal[failed-query-after-close]",
+      "kind": "failure",
+      "message": "AssertionError: assert not ['protection evidence incomplete AAPL\\nAAPL \u6301\u4ed3\u6570\u91cf=0 \u80a1 \u4fdd\u62a4\u5355\u5df2\u786e\u8ba4=0 \u80a1 \u4fdd\u62a4\u5355\u53ef\u80fd=0 \u80a1 \u6b62\u76c8\u5728\u9014=0 \u80a1 \u5916\u90e8\u5356\u5355\u5728\u9014=0 \u80a1 \u672a\u4fdd\u62a4=\u5f85\u6838\u5b9e\uff08\u53ef\u80fd\u8303\u56f4 0\u20130\uff09 \u80a1 \u53ef\u80fd\u8d85\u5356...onEvidenceQueryError\\n\u5f71\u54cd\uff1a\u6301\u4ed3\u3001\u5de5\u4f5c\u5355\u548c\u6210\u4ea4\u4e09\u9879\u8bc1\u636e\u4e0d\u5b8c\u6574\uff0c\u4e0d\u80fd\u5b89\u5168\u589e\u52a0\u4fdd\u62a4\u6570\u91cf\u3002\\n\u4f60\u8981\u505a\u4ec0\u4e48\uff1a1\uff09\u5728 TWS \u5206\u522b\u6838\u5bf9\u6301\u4ed3\u3001\u6240\u6709\u5de5\u4f5c\u5355\u3001\u6210\u4ea4\uff1b2\uff09\u4e0d\u8981\u53e6\u4e0b\u5356\u5355\u6216\u589e\u52a0\u4fdd\u62a4\u6570\u91cf\uff1b3\uff09\u8bc1\u636e\u9f50\u5168\u4e14\u4e00\u81f4\u540e\u518d\u89e3\u9664\u51bb\u7ed3\u3002']"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_closed_tp_race",
+      "name": "test_B28d_final_TP3_normal_callback_also_finishes_cancelled_protection",
+      "kind": "failure",
+      "message": "AssertionError: the cancelled original STP must not remain WORKING or pretend to have FILLED\nassert 'WORKING' == 'CANCELLED'\n  \n  - CANCELLED\n  + WORKING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28d_tp_cards",
+      "name": "test_B28d_actual_TP1_TP2_TP3_cards_name_stage_and_booked_fill",
+      "kind": "failure",
+      "message": "AssertionError: (['\u2705 TP1 \u5df2\u6210\u4ea4 \u00b7 AAPL \u00b7 1 \u80a1 @344.02', '\u2705 TP2 \u5df2\u6210\u4ea4 \u00b7 AAPL \u00b7 1 \u80a1 @344.77', '\u2705 TP3 \u5df2\u6210\u4ea4 \u00b7 AAPL \u00b7 1 \u80a1 @345.77'], ['#x1F7E2 \u544a\u8b66\u901a\u9053\u81ea\u68c0', ...\uff08Paper\uff09 \u00b7 \u5b9e\u65f6\u884c\u60c5\uff09', '#x1F7E2 \u4e70\u5355\u5df2\u63d0\u4ea4', '#x1F7E2 INFO \u00b7 \u8fc7\u591c\u6301\u4ed3\u81ea\u52a8\u6b62\u76c8\u6062\u590d \u00b7 AAPL', '#x1F7E2 \u544a\u8b66\u901a\u9053\u81ea\u68c0', '#x1F7E2 V6-Lite \u5df2\u542f\u52a8\uff08Paper \u771f\u5b9e\u4e0b\u5355\uff08Paper\uff09 \u00b7 \u5b9e\u65f6\u884c\u60c5\uff09', ...])\nassert False\n +  where False = all(<generator object test_B28d_actual_TP1_TP2_TP3_cards_name_stage_and_booked_fill.<locals>.<genexpr> at 0x000001F7EC8E3680>)"
+    }
+  ]
+}

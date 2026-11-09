@@ -1,0 +1,38 @@
+{
+  "reviewer": "/root/batch20_time_logs",
+  "verdict": "PASS_RED_EVIDENCE_ONLY",
+  "production_approval": false,
+  "spec_sha256": "fcf063c69658242b034f401e0a0a65382c53e542edbda716679962086f54345b",
+  "candidate": {
+    "code_sha": "ad3a09d225bba249",
+    "tests": 21,
+    "failures": 21,
+    "errors": 0,
+    "source_unchanged": true,
+    "record_sha256": "5659728c6bef3094df91b066bd3998e79d5ca1f991d031ccf54013aa151f6e63"
+  },
+  "baseline": {
+    "code_sha": "f27e144de9eb406b",
+    "tests": 21,
+    "failures": 19,
+    "passed": 2,
+    "errors": 0,
+    "source_unchanged": true,
+    "record_sha256": "56a6375a5d36aaa24068c8ca67e292ae104f3aacfb0d3875a1929b1b8b738838"
+  },
+  "verification": [
+    "all cases are behavior AssertionErrors, not imports or collection errors",
+    "frozen and archived specifications byte-identical",
+    "TXT/XML hashes match JSON, every case name/outcome/message matches XML",
+    "two immediate terminal display-only guards pass22a andfailcandidate",
+    "funds/history request collision was already present22a",
+    "aux audit corruption protects economic booking/dedup andunknown difference",
+    "real3.6sec capacity/write delay asserts0TP,0attempt,noNEW,nopause,originalB/fullSTPrestore",
+    "unprotected ordinary retry honors durableblock"
+  ],
+  "boundaries": [
+    "no test execution by reviewer",
+    "no writes or runtime/config reads by reviewer",
+    "final production re-review still required"
+  ]
+}

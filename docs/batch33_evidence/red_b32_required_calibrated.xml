@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="3" time="2.117" timestamp="2026-10-31T15:28:49.025240-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_oct29_real_overnight_replay" time="0.225"><failure message="assert (1, 1, 1, 0) == (1, 1, 0, 0)&#10;  &#10;  At index 2 diff: 1 != 0&#10;  Use -v to get more diff">v6lite\tests\test_batch33_open_delay.py:81: in test_B33_oct29_real_overnight_replay
+    hold(rig, pid, before)
+v6lite\tests\test_batch33_open_delay.py:38: in hold
+    assert _writes(rig) == before
+E   assert (1, 1, 1, 0) == (1, 1, 0, 0)
+E     
+E     At index 2 diff: 1 != 0
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_stop_crossing_at_open_plus_5_is_unchanged" time="0.231" /><testcase classname="v6lite.tests.test_batch33_open_delay" name="test_B33_last_overnight_share_waits_before_TP3_cancel" time="0.448"><failure message="assert (3, 1, 3, 1) == (3, 1, 3, 0)&#10;  &#10;  At index 3 diff: 1 != 0&#10;  Use -v to get more diff">v6lite\tests\test_batch33_open_delay.py:141: in test_B33_last_overnight_share_waits_before_TP3_cancel
+    assert _writes(rig) == before
+E   assert (3, 1, 3, 1) == (3, 1, 3, 0)
+E     
+E     At index 3 diff: 1 != 0
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

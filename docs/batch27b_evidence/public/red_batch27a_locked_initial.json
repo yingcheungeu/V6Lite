@@ -1,0 +1,344 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_batch27a_locked_initial",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-16T21:38:03.658902-07:00",
+  "end_pt": "2026-10-16T21:38:09.357786-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "b736734f8e73edfb",
+  "source_unchanged": true,
+  "worktree_code_sha": "9c836c955f67b737",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "9c836c955f67b7371284cc6c0394ec680877b39e89fac66fa548923ece71dd0b",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27b_current_day_evidence.py",
+      "sha256": "4244c1603412272ad84639e61584e5a34add7438597c8db437d6dc8691f8cf20"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27b_raw_execution_time.py",
+      "sha256": "158d94bbc0729fb77afb3427ae9dc3fe865b64b45f4ed556cbb07d388e984d95"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 35,
+    "failures": 11,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger[default-midnight]",
+      "outcome": "failure",
+      "message": "AssertionError: complete current-day membership must permit the real BE modification\nassert None is not None"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger[trade-log-7day]",
+      "outcome": "failure",
+      "message": "AssertionError: valid opt-in overnight evidence must allow the real TP reduction\nassert 'WORKING' == 'REDUCE_PENDING'\n  \n  - REDUCE_PENDING\n  + WORKING"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_failed_a_card_has_one_unverified_time_prefix",
+      "outcome": "failure",
+      "message": "AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n  核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert (1 == 1 and 2 == 1)\n +  where 1 = len(['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'])\n +  and   2 = <built-in method count of str object at 0x000001815B99BEA0>('账本成交时间尚未核实')\n +    where <built-in method count of str object at 0x000001815B99BEA0> = '#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP ...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'.count"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_failed_d_card_shows_actual_complete_query_count",
+      "outcome": "failure",
+      "message": "AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n  核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b27b-unknown-0.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert False\n +  where False = any(<generator object test_B27b_failed_d_card_shows_actual_complete_query_count.<locals>.<genexpr> at 0x000001815E56A0A0>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[naive-20261020 10:01:00]",
+      "outcome": "failure",
+      "message": "AssertionError: raw native field 15 must survive the actual decoder -> event -> audit chain\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[unparseable-not-a-valid-execution-time]",
+      "outcome": "failure",
+      "message": "AssertionError: raw native field 15 must survive the actual decoder -> event -> audit chain\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[zoned-20261020 14:01:00 UTC]",
+      "outcome": "failure",
+      "message": "AssertionError: raw native field 15 must survive the actual decoder -> event -> audit chain\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_complete_native_query_raw_classification_summary_and_audit_are_redacted",
+      "outcome": "failure",
+      "message": "AssertionError: []\nassert 0 == 1\n +  where 0 = len([])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day0-20261020-04:00:00]",
+      "outcome": "failure",
+      "message": "AssertionError: assert '' == '20261020-04:00:00'\n  \n  - 20261020-04:00:00"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day1-20261102-05:00:00]",
+      "outcome": "failure",
+      "message": "AssertionError: assert '' == '20261102-05:00:00'\n  \n  - 20261102-05:00:00"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[missing-End]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[generation-reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[cross-midnight]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[unscoped-filter]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[historical-filter]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_legacy_non_overnight_client_and_release_account_queries_keep_unbounded_wire_filter",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_repeating_identical_native_raw_observations_does_not_flood_new_observation_audit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_raw_execution_time",
+      "name": "test_B27b_invalid_raw_is_scoped_to_its_actual_reqId_and_never_poisons_another_complete_query",
+      "outcome": "failure",
+      "message": "assert (False)\n +  where False = isinstance(None, dict)"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger[default-midnight]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger[trade-log-7day]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_failed_a_card_has_one_unverified_time_prefix",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_failed_d_card_shows_actual_complete_query_count",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[naive-20261020 10:01:00]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[unparseable-not-a-valid-execution-time]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[zoned-20261020 14:01:00 UTC]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_complete_native_query_raw_classification_summary_and_audit_are_redacted",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day0-20261020-04:00:00]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day1-20261102-05:00:00]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[missing-End]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[generation-reset]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[cross-midnight]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[unscoped-filter]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[historical-filter]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_legacy_non_overnight_client_and_release_account_queries_keep_unbounded_wire_filter",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_repeating_identical_native_raw_observations_does_not_flood_new_observation_audit",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_invalid_raw_is_scoped_to_its_actual_reqId_and_never_poisons_another_complete_query"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger[default-midnight]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger[trade-log-7day]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_failed_a_card_has_one_unverified_time_prefix",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_failed_d_card_shows_actual_complete_query_count",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[naive-20261020 10:01:00]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[unparseable-not-a-valid-execution-time]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_raw_native_decoder_time_is_audited_without_inventing_exact_verification[zoned-20261020 14:01:00 UTC]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_complete_native_query_raw_classification_summary_and_audit_are_redacted",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day0-20261020-04:00:00]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_native_execution_filter_and_matching_End_prove_current_ET_day_scope[day1-20261102-05:00:00]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[missing-End]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[generation-reset]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[cross-midnight]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[unscoped-filter]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_incomplete_old_or_unknown_native_query_cannot_claim_today_scope[historical-filter]",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_legacy_non_overnight_client_and_release_account_queries_keep_unbounded_wire_filter",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_repeating_identical_native_raw_observations_does_not_flood_new_observation_audit",
+      "v6lite/tests/test_batch27b_raw_execution_time.py::test_B27b_invalid_raw_is_scoped_to_its_actual_reqId_and_never_poisons_another_complete_query"
+    ]
+  },
+  "stdout_sha256": "3e81e22ccd87e7d0c2120bb67b93c2cb7e3f2e748aa922a668c565f48d3f93d1",
+  "junit_sha256": "414bc6b3fba20e29c4a0c2b810862df613388070c95f9ee65cbaa0f07a3e7b26",
+  "inventory_sha256": "c798cf5c9b31501123127f848e7b99b72aff9fb144c0f13ec1560465fe2c4fd9",
+  "publication_redaction": {
+    "rule": "All synthetic account-shaped values masked. Original receipts preserved locally and excluded from staging.",
+    "original_artifact_sha256": {
+      "red_batch27a_locked_initial.json": "740b1ec693298fa6f4e59932afc72c53e6e4ee5810477947095c78be0ad4936c",
+      "red_batch27a_locked_initial.txt": "55ae5f5926bd44c96b77ceae1ce95b56b8034b867890a113e1b153089de83355",
+      "red_batch27a_locked_initial.xml": "adaaeed6c14591f0d5cd1f37335c2493bc10400145e4063403f9d843a04897c5",
+      "red_batch27a_locked_initial_inventory.json": "9e6f428682f9e8c2536e57dc42af5cde2e1b8fb713670636f5a325a86f7618a6",
+      "red_batch27a_locked_initial_progress.json": "462177a198d554bcb42d70e4b098794e64254d955a771e335f3ccd0b637bd3dc"
+    }
+  }
+}

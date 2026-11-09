@@ -1,0 +1,132 @@
+FFFFFFFFFFF.F                                                            [100%]
+================================== FAILURES ===================================
+______ test_B26_policy_enum_default_and_all_five_examples_remain_freeze _______
+v6lite\tests\test_batch26_constraint_policy.py:57: in test_B26_policy_enum_default_and_all_five_examples_remain_freeze
+    assert getattr(ProtectionConfig(), 'overnight_tp', None) == 'freeze'
+E   AssertionError: assert None == 'freeze'
+E    +  where None = getattr(ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap...s=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60, overnight_tp_enabled=False), 'overnight_tp', None)
+E    +    where ProtectionConfig(enabled=True, order_type='STP', gap_a_p1_seconds=5, gap_a_p0_seconds=15, gap_b_cancel_seconds=10, gap...s=30, trigger_unfilled_p0_seconds=60, steady_check_seconds=15, evidence_fail_p0_seconds=60, overnight_tp_enabled=False) = ProtectionConfig()
+__ test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[] __
+v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE] _
+v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint] _
+v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled] _
+v6lite\tests\test_batch26_constraint_policy.py:71: in test_B26_policy_invalid_enum_strings_are_rejected_without_normalization
+    with pytest.raises(ConfigError, match='overnight_tp'):
+E   Failed: DID NOT RAISE <class 'v6lite.config.ConfigError'>
+_ test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof _
+v6lite\tests\test_batch26_constraint_policy.py:83: in test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof
+    _accepted_constraints(infos[0])
+v6lite\tests\test_batch26_constraint_policy.py:42: in _accepted_constraints
+    assert re.search(r'依据运行约束\s*A[、,，]\s*B', text), text
+E   AssertionError: overnight TP restored pos-8de639cc94224b8b8d5f
+E     AAPL：过夜持仓已通过历史账本 + 当日三项核验，自动止盈恢复；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00
+E     🟢 INFO · 过夜持仓自动止盈恢复 · AAPL
+E     证据：AAPL：过夜持仓已通过历史账本 + 当日三项核验，自动止盈恢复；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00
+E     权限：仅止盈、保本及本次止盈自身恢复；不提供完整历史成交权限。
+E     你要做什么：1）核对标的、股数与 GTC 编号；2）观察后续止盈/保本结果；3）出现差异时保持冻结并在同一 TWS 核查。
+E   assert None
+E    +  where None = <function search at 0x000001BD4B6C1C60>('依据运行约束\\s*A[、,，]\\s*B', 'overnight TP restored pos-8de639cc94224b8b8d5f\nAAPL：过夜持仓已通过历史账本 + 当日三项核验，自动止盈恢复；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderI...6-10-14T14:01:00+00:00\n权限：仅止盈、保本及本次止盈自身恢复；不提供完整历史成交权限。\n你要做什么：1）核对标的、股数与 GTC 编号；2）观察后续止盈/保本结果；3）出现差异时保持冻结并在同一 TWS 核查。')
+E    +    where <function search at 0x000001BD4B6C1C60> = re.search
+_ test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze] _
+v6lite\tests\test_batch26_constraint_policy.py:99: in test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart
+    _accepted_constraints(pages[0])
+v6lite\tests\test_batch26_constraint_policy.py:42: in _accepted_constraints
+    assert re.search(r'依据运行约束\s*A[、,，]\s*B', text), text
+E   AssertionError: overnight TP evidence pos-bf10d760190743939d68
+E     AAPL：overnight_tp_enabled 默认关闭，过夜自动止盈/保本未启用；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:31+00:00
+E     🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     核验结果：AAPL：overnight_tp_enabled 默认关闭，过夜自动止盈/保本未启用；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:31+00:00
+E     影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+E   assert None
+E    +  where None = <function search at 0x000001BD4B6C1C60>('依据运行约束\\s*A[、,，]\\s*B', 'overnight TP evidence pos-bf10d760190743939d68\nAAPL：overnight_tp_enabled 默认关闭，过夜自动止盈/保本未启用；券商 P=3 股，账本=3 股，STP S=3 股...+00:00\n影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。')
+E    +    where <function search at 0x000001BD4B6C1C60> = re.search
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-bf10d760190743939d68 | AAPL：overnight_tp_enabled 默认关闭，过夜自动止盈/保本未启用；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-7838d3a0b02649579c11 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-14T14:01:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec] _
+v6lite\tests\test_batch26_constraint_policy.py:99: in test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart
+    _accepted_constraints(pages[0])
+v6lite\tests\test_batch26_constraint_policy.py:42: in _accepted_constraints
+    assert re.search(r'依据运行约束\s*A[、,，]\s*B', text), text
+E   AssertionError: overnight TP evidence pos-f7595ed741f845abb131
+E     AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-policy-unknown-first.01.01；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-policy-unknown-first.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00
+E     🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-policy-unknown-first.01.01；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-policy-unknown-first.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00
+E     影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+E   assert None
+E    +  where None = <function search at 0x000001BD4B6C1C60>('依据运行约束\\s*A[、,，]\\s*B', 'overnight TP evidence pos-f7595ed741f845abb131\nAAPL：当日可见成交无法归属或与账本经济身份不一致：b26-policy-unknown-first.01.01；券商 P=3 股，账本...+00:00\n影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。')
+E    +    where <function search at 0x000001BD4B6C1C60> = re.search
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b26-policy-unknown-first.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-f7595ed741f845abb131 | AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-policy-unknown-first.01.01；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-policy-unknown-first.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=3 股 保护单已确认=3 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-04b4d9f4f7ee40afbe03 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.13；上次确认=2026-10-13T14:00:31+00:00 工作单证据时间=2026-10-14T14:01:31+00:00；止盈需要无冲突的完整三项证据
+_ test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze] _
+v6lite\tests\test_batch26_constraint_policy.py:172: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert len(_overnight_p1(rig)) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = _overnight_p1(<v6lite.tests.helpers.Rig object at 0x000001BD701E5B10>)
+_ test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec] _
+v6lite\tests\test_batch26_constraint_policy.py:163: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert Counter(name for name, _ in calls) == Counter({name: 2 for name in expected_channels}), calls
+E   AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 1, tzinfo=datetime.timezone.utc)), ('positions_fresh', datetim...time.timezone.utc)), ('positions_fresh', datetime.datetime(2026, 10, 14, 14, 1, 2, tzinfo=datetime.timezone.utc)), ...]
+E   assert Counter({'ope...s_today': 31}) == Counter({'ope...ns_today': 2})
+E     
+E     Differing items:
+E     {'executions_today': 31} != {'executions_today': 2}
+E     {'open_orders': 31} != {'open_orders': 2}
+E     {'account_executions_today': 31} != {'account_executions_today': 2}
+E     {'positions_fresh': 31} != {'positions_fresh': 2}
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-cc5e32b3afac477d9f76 | AAPL：账本缺少已持久化的入场成交 execId；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=缺少入场 execId；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00
+_ test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec] _
+v6lite\tests\test_batch26_constraint_policy.py:163: in test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds
+    assert Counter(name for name, _ in calls) == Counter({name: 2 for name in expected_channels}), calls
+E   AssertionError: [('open_orders', datetime.datetime(2026, 10, 14, 14, 1, 1, tzinfo=datetime.timezone.utc)), ('positions_fresh', datetim...time.timezone.utc)), ('positions_fresh', datetime.datetime(2026, 10, 14, 14, 1, 2, tzinfo=datetime.timezone.utc)), ...]
+E   assert Counter({'ope...s_today': 31}) == Counter({'ope...ns_today': 2})
+E     
+E     Differing items:
+E     {'executions_today': 31} != {'executions_today': 2}
+E     {'open_orders': 31} != {'open_orders': 2}
+E     {'account_executions_today': 31} != {'account_executions_today': 2}
+E     {'positions_fresh': 31} != {'positions_fresh': 2}
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: fill anomaly foreign_fill:b26-policy-unknown-cadence.01.01 | New entries are blocked until the operator reviews broker truth and runs `clear-anomaly`.
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-484c5ad24f334eebb1dc | AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-policy-unknown-cadence.01.01；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-policy-unknown-cadence.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00
+_ test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence _
+v6lite\tests\test_batch26_constraint_policy.py:224: in test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence
+    assert _writes(rig) == before, 'same-day BE is a broker modification and also requires fresh full evidence'
+E   AssertionError: same-day BE is a broker modification and also requires fresh full evidence
+E   assert (2, 1, 2, 0) == (2, 1, 1, 0)
+E     
+E     At index 2 diff: 2 != 1
+E     Use -v to get more diff
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: broker queries limited pos-7ce4474a86374b7da041 | 同一持仓核验未通过，查询按 1、2、4、8、16、30 秒退避；等待期间不提供新的完整证据，原 UNKNOWN、人工核验 hold 和冻结继续保留。
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_enum_default_and_all_five_examples_remain_freeze
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[]
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[FREEZE]
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[Constraint]
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_invalid_enum_strings_are_rejected_without_normalization[enabled]
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_first_real_overnight_TP_INFO_states_accepted_constraints_not_technical_proof
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[freeze]
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_only_one_durable_explanation_per_position_despite_reason_change_30m_and_restart[unknown_today_exec]
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[freeze]
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[missing_entry_exec]
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_failed_TP_scope_with_stable_GTC_uses_one_complete_query_set_every_15_seconds[unknown_today_exec]
+FAILED v6lite/tests/test_batch26_constraint_policy.py::test_B26_policy_same_day_BE_modification_requires_current_entry_execution_evidence
+12 failed, 1 passed in 2.70s

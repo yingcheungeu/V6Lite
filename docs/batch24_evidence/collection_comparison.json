@@ -1,0 +1,25 @@
+{
+  "reviewer": "/root/batch24_investigate",
+  "method": "Read-only XML/inventory/AST comparison, no pytest or baseline collection run",
+  "baseline_evidence": "docs/batch23_evidence/full_3.xml",
+  "baseline_evidence_sha256": "1c99a1337ab28b50b5749a682423f845ee7172e31cc725b5a445555b0cc943ce",
+  "baseline_totals": {
+    "tests": 1455,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "baseline_passed": 1454,
+  "current_total_collected": 1558,
+  "new_B24_spec_cases": 101,
+  "existing_B15_new_finite_echo_card_cases": 2,
+  "existing_B20_positive_add_invalid_negative_remove_net": 0,
+  "existing_B22_positive_add_invalid_negative_remove_net": 0,
+  "net_added_cases": 103,
+  "all_baseline_files_mapped": true,
+  "baseline_skipped_test": "test_strategy_parity::test_scoring_matches_legacy_scanner_on_identical_bars (legacy market_scanner.py not present)",
+  "final_candidate_code_sha": "2db6af8f04f145f6",
+  "final_expected_collection": 1560,
+  "additional_deadline_cases": 2,
+  "final_collection_requires_actual_inventory_validation": true
+}

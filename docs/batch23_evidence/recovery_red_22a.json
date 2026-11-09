@@ -1,0 +1,38 @@
+{
+  "label": "recovery_red_22a",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "start_pt": "2026-10-09T15:38:20.237933-07:00",
+  "end_pt": "2026-10-09T15:38:21.440859-07:00",
+  "returncode": 1,
+  "source_code_sha": "f27e144de9eb406b",
+  "source_unchanged": true,
+  "worktree_code_sha": "d02e48577baf5193",
+  "worktree_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\docs\\batch23_evidence\\recovery_specs\\cf55cae52353\\test_batch23_recovery_diagnostic.py",
+      "sha256": "cf55cae52353ef0603d4d2a2205fa5c2643b59036c213059e7cd91e4606e53c0"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "",
+      "name": "test_B23_real_recovery_query_failure_keeps_full_ANOMALY_in_daily_and_retains_UNKNOWN_hold",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'Synthetic re...ginal diagnos' == 'Synthetic re...-NOT-TRUNCATE'\n  \n  Skipping 189 identical leading characters in diff, use -v to show\n  - nal diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original diagnostic detail; original d...\n  \n  ...Full output truncated (2 lines hidden), use '-vv' to show"
+    }
+  ],
+  "stdout_sha256": "7f7bfd54b97f0e1910bbd03719053d7ca64ce48fa7662613eddb166b19ef4bf7",
+  "junit_sha256": "a222c2d86b2f0d55912b320e816dc3d3d64468eb4df0007e05ffa190e07cc8b6"
+}

@@ -1,0 +1,40 @@
+FF..FF                                                                   [100%]
+================================== FAILURES ===================================
+_ test_B28c_expired_pair_cannot_be_revived_inside_late_native_callback[False] _
+v6lite\tests\test_batch28c_pair_deadline.py:52: in test_B28c_expired_pair_cannot_be_revived_inside_late_native_callback
+    assert server.tp_wire is None, 'late pair cannot authorize without a new complete proof'
+E   AssertionError: late pair cannot authorize without a new complete proof
+E   assert 171950.078 is None
+E    +  where 171950.078 = <v6lite.tests.test_batch28c_pair_deadline.LatePairServer object at 0x000002277F6C7350>.tp_wire
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_expired_pair_cannot_be_revived_inside_late_native_callback[True] __
+v6lite\tests\test_batch28c_pair_deadline.py:52: in test_B28c_expired_pair_cannot_be_revived_inside_late_native_callback
+    assert server.tp_wire is None, 'late pair cannot authorize without a new complete proof'
+E   AssertionError: late pair cannot authorize without a new complete proof
+E   assert 171955.296 is None
+E    +  where 171955.296 = <v6lite.tests.test_batch28c_pair_deadline.LatePairServer object at 0x000002277F8CB8D0>.tp_wire
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP[missing] __
+v6lite\tests\test_batch28c_stop_query_contradiction.py:52: in test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP
+    assert any(level=='P0' for level, _ in rig._b26_alerts), 'independent STP contradiction must not be discarded'
+E   AssertionError: independent STP contradiction must not be discarded
+E   assert False
+E    +  where False = any(<generator object test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP.<locals>.<genexpr> at 0x000002277F86F840>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+_ test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP[duplicate] _
+v6lite\tests\test_batch28c_stop_query_contradiction.py:52: in test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP
+    assert any(level=='P0' for level, _ in rig._b26_alerts), 'independent STP contradiction must not be discarded'
+E   AssertionError: independent STP contradiction must not be discarded
+E   assert False
+E    +  where False = any(<generator object test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP.<locals>.<genexpr> at 0x000002277F7C6B20>)
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-20T14:00:31+00:00
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch28c_pair_deadline.py::test_B28c_expired_pair_cannot_be_revived_inside_late_native_callback[False]
+FAILED v6lite/tests/test_batch28c_pair_deadline.py::test_B28c_expired_pair_cannot_be_revived_inside_late_native_callback[True]
+FAILED v6lite/tests/test_batch28c_stop_query_contradiction.py::test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP[missing]
+FAILED v6lite/tests/test_batch28c_stop_query_contradiction.py::test_B28c_stop_fill_cannot_hide_missing_or_duplicate_original_STP[duplicate]
+4 failed, 2 passed in 13.45s

@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/b26_review",
+  "mode": "independent read-only; no pytest or file modification",
+  "reviewed_on": "2026-10-15",
+  "decision": "PASS",
+  "findings": [
+    "Five pre_1015 specs and migration after_sha256 match raw bytes; permitted enum migration only; shutdown and BE-token specs unchanged.",
+    "All 85 original B25 test files and seven script files byte identical to baseline.",
+    "Policy calibration only removes gratuitous account query in freeze; three requests at 15/30s, account=0; constraint retains four.",
+    "All 11 historical receipt JSON/stdout/JUnit/inventory hashes and totals match; nodeid inventories complete and unique.",
+    "Natural-red truth notes correctly separate setup errors, precondition failures, old external-freeze green controls, candidate BE-token red and excessive freeze-query assertion.",
+    "Report builder final checkpoint binding and actual render-tool scope checked; final actual output review deferred until code freeze."
+  ],
+  "evidence_files": {
+    "pre_1015_test_migration_review.json": "96a07d83314b84fc33cd8f5fe62e9f43ee96a21cb98121436acb61d4ae6af8fa",
+    "policy_query_scope_calibration_review.json": "0f7ae3175d3b045d0ddd0e886abbe8c240373319b87df47eeb7ec2a285611977",
+    "red_evidence_review_2026-10-15.json": "b4f00293692938d9f908d4a202861d797ddf3e06a49c607357faacee45e0f929"
+  }
+}

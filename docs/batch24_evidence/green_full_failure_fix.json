@@ -1,0 +1,473 @@
+{
+  "label": "green_full_failure_fix",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-12T14:45:30.452325-07:00",
+  "end_pt": "2026-10-12T14:45:37.475196-07:00",
+  "returncode": 0,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "2db6af8f04f145f6",
+  "source_unchanged": true,
+  "worktree_code_sha": "2db6af8f04f145f6",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "2db6af8f04f145f6dedea232deefeefb8bafd9aada8b41e9dac6c0e48175c283",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_evidence_deadline.py",
+      "sha256": "1dccecef16d493e3f37c61d4266ac5ca21a73ebba7b04dfdd5e67901dc0bc3e7"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch16_f6_steady_timeout.py",
+      "sha256": "733347eda5814cbd2a14f71a717c88274bdd51376cada2c9bceeab3fd2908c48"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch20_execution_time.py",
+      "sha256": "8a671005db02f0071dd1767a742608b61757b0882dc39cc174952d9d6d405f2a"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_review_round5.py",
+      "sha256": "82c3cff1a3f5d8dba4b0735bf960666502d1d7ef6343c869b592a768fd81f109"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_review_round5_selfreview.py",
+      "sha256": "86222acd134a13f3ab8937d1d7e8526b71bec2b98f6f70bbfc738df249d10ff5"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch24_evidence_deadline",
+      "name": "test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_evidence_deadline",
+      "name": "test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16_f6_steady_timeout",
+      "name": "test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_explicit_execution_timezone_keeps_the_actual_instant[20261008 14:58:09 UTC]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_explicit_execution_timezone_keeps_the_actual_instant[20261008 07:58:09 America/Los_Angeles]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_explicit_execution_timezone_keeps_the_actual_instant[20261008 10:58:09 America/New_York]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_unknown_naive_callback_books_receipt_not_implicit_host_timezone[20261008  14:58:09]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_unknown_naive_callback_books_receipt_not_implicit_host_timezone[20261008  07:58:09]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_naive_execution_uses_explicit_tws_timezone[UTC-20261008  14:58:09]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_naive_execution_uses_explicit_tws_timezone[America/Los_Angeles-20261008  07:58:09]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_naive_execution_uses_explicit_tws_timezone[America/New_York-20261008  10:58:09]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_explicit_utc_query_is_not_polluted_by_bad_callback_clock",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_new_unverified_fill_confirms_exact_time_once_without_economic_rebooking",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_authoritative_query_first_then_bad_callback_never_regresses_clock",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_time_marker_survives_restart_and_allows_only_new_fill_confirmation",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_legacy_fill_without_marker_is_reviewed_once_and_never_auto_retimed",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes2]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes4]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes5]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes6]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes7]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_incomplete_execution_query_cannot_confirm_new_fill_clock",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_time_confirmation_never_moves_protection_gap_deadline",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_wrapper_fill_spam_only_moves_to_debug_and_preserves_diagnostics[20]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_wrapper_fill_spam_only_moves_to_debug_and_preserves_diagnostics[10]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_verified_sell_time_recomputes_closed_at_without_reapplying_pnl",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch20_execution_time",
+      "name": "test_execution_request_error_after_partial_row_is_not_complete_time_evidence",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_late_end_of_a_timed_out_request_never_completes_the_next_one",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_open_orders_channel_is_guarded_too",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_a_channel_stuck_too_long_renews_the_connection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_streamed_update_inside_a_request_does_not_double_count",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_release_needs_the_position_stream_to_agree",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F2_difference_seen_during_the_reconcile_is_not_cleared_by_it",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F3_late_buy_after_release_never_recreates_a_position",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F5_freeze_lists_held_and_orphan_orders_that_were_not_cancelled",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F6_combo_leg_with_an_unknown_conid_fails_closed",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F7_frozen_symbol_with_a_held_intent_is_not_reconciled_every_tick",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_late_buy_after_release_of_a_recovery_position_is_evidence_only",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_late_buy_after_a_resolved_freeze_is_evidence_only",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_cancel_lookup_uses_the_guarded_channel",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_unsolicited_end_poisons_the_channel_and_renews_the_connection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_G7_unsolicited_end_regression_does_not_need_wall_clock_sleep",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_a_request_that_never_left_owes_no_end",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_auto_open_orders_owes_no_end",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled",
+      "v6lite/tests/test_batch20_execution_time.py::test_explicit_execution_timezone_keeps_the_actual_instant[20261008 14:58:09 UTC]",
+      "v6lite/tests/test_batch20_execution_time.py::test_explicit_execution_timezone_keeps_the_actual_instant[20261008 07:58:09 America/Los_Angeles]",
+      "v6lite/tests/test_batch20_execution_time.py::test_explicit_execution_timezone_keeps_the_actual_instant[20261008 10:58:09 America/New_York]",
+      "v6lite/tests/test_batch20_execution_time.py::test_unknown_naive_callback_books_receipt_not_implicit_host_timezone[20261008  14:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_unknown_naive_callback_books_receipt_not_implicit_host_timezone[20261008  07:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_naive_execution_uses_explicit_tws_timezone[UTC-20261008  14:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_naive_execution_uses_explicit_tws_timezone[America/Los_Angeles-20261008  07:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_naive_execution_uses_explicit_tws_timezone[America/New_York-20261008  10:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_explicit_utc_query_is_not_polluted_by_bad_callback_clock",
+      "v6lite/tests/test_batch20_execution_time.py::test_new_unverified_fill_confirms_exact_time_once_without_economic_rebooking",
+      "v6lite/tests/test_batch20_execution_time.py::test_authoritative_query_first_then_bad_callback_never_regresses_clock",
+      "v6lite/tests/test_batch20_execution_time.py::test_time_marker_survives_restart_and_allows_only_new_fill_confirmation",
+      "v6lite/tests/test_batch20_execution_time.py::test_legacy_fill_without_marker_is_reviewed_once_and_never_auto_retimed",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes0]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes1]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes2]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes3]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes4]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes5]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes6]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes7]",
+      "v6lite/tests/test_batch20_execution_time.py::test_incomplete_execution_query_cannot_confirm_new_fill_clock",
+      "v6lite/tests/test_batch20_execution_time.py::test_time_confirmation_never_moves_protection_gap_deadline",
+      "v6lite/tests/test_batch20_execution_time.py::test_wrapper_fill_spam_only_moves_to_debug_and_preserves_diagnostics[20]",
+      "v6lite/tests/test_batch20_execution_time.py::test_wrapper_fill_spam_only_moves_to_debug_and_preserves_diagnostics[10]",
+      "v6lite/tests/test_batch20_execution_time.py::test_verified_sell_time_recomputes_closed_at_without_reapplying_pnl",
+      "v6lite/tests/test_batch20_execution_time.py::test_execution_request_error_after_partial_row_is_not_complete_time_evidence",
+      "v6lite/tests/test_review_round5.py::test_R4F1_late_end_of_a_timed_out_request_never_completes_the_next_one",
+      "v6lite/tests/test_review_round5.py::test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty",
+      "v6lite/tests/test_review_round5.py::test_R4F1_open_orders_channel_is_guarded_too",
+      "v6lite/tests/test_review_round5.py::test_R4F1_a_channel_stuck_too_long_renews_the_connection",
+      "v6lite/tests/test_review_round5.py::test_R4F1_streamed_update_inside_a_request_does_not_double_count",
+      "v6lite/tests/test_review_round5.py::test_R4F1_release_needs_the_position_stream_to_agree",
+      "v6lite/tests/test_review_round5.py::test_R4F2_difference_seen_during_the_reconcile_is_not_cleared_by_it",
+      "v6lite/tests/test_review_round5.py::test_R4F3_late_buy_after_release_never_recreates_a_position",
+      "v6lite/tests/test_review_round5.py::test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released",
+      "v6lite/tests/test_review_round5.py::test_R4F5_freeze_lists_held_and_orphan_orders_that_were_not_cancelled",
+      "v6lite/tests/test_review_round5.py::test_R4F6_combo_leg_with_an_unknown_conid_fails_closed",
+      "v6lite/tests/test_review_round5.py::test_R4F7_frozen_symbol_with_a_held_intent_is_not_reconciled_every_tick",
+      "v6lite/tests/test_review_round5.py::test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0",
+      "v6lite/tests/test_review_round5_selfreview.py::test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger",
+      "v6lite/tests/test_review_round5_selfreview.py::test_late_buy_after_release_of_a_recovery_position_is_evidence_only",
+      "v6lite/tests/test_review_round5_selfreview.py::test_late_buy_after_a_resolved_freeze_is_evidence_only",
+      "v6lite/tests/test_review_round5_selfreview.py::test_cancel_lookup_uses_the_guarded_channel",
+      "v6lite/tests/test_review_round5_selfreview.py::test_unsolicited_end_poisons_the_channel_and_renews_the_connection",
+      "v6lite/tests/test_review_round5_selfreview.py::test_G7_unsolicited_end_regression_does_not_need_wall_clock_sleep",
+      "v6lite/tests/test_review_round5_selfreview.py::test_a_request_that_never_left_owes_no_end",
+      "v6lite/tests/test_review_round5_selfreview.py::test_auto_open_orders_owes_no_end"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled",
+      "v6lite/tests/test_batch20_execution_time.py::test_explicit_execution_timezone_keeps_the_actual_instant[20261008 14:58:09 UTC]",
+      "v6lite/tests/test_batch20_execution_time.py::test_explicit_execution_timezone_keeps_the_actual_instant[20261008 07:58:09 America/Los_Angeles]",
+      "v6lite/tests/test_batch20_execution_time.py::test_explicit_execution_timezone_keeps_the_actual_instant[20261008 10:58:09 America/New_York]",
+      "v6lite/tests/test_batch20_execution_time.py::test_unknown_naive_callback_books_receipt_not_implicit_host_timezone[20261008  14:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_unknown_naive_callback_books_receipt_not_implicit_host_timezone[20261008  07:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_naive_execution_uses_explicit_tws_timezone[UTC-20261008  14:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_naive_execution_uses_explicit_tws_timezone[America/Los_Angeles-20261008  07:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_naive_execution_uses_explicit_tws_timezone[America/New_York-20261008  10:58:09]",
+      "v6lite/tests/test_batch20_execution_time.py::test_explicit_utc_query_is_not_polluted_by_bad_callback_clock",
+      "v6lite/tests/test_batch20_execution_time.py::test_new_unverified_fill_confirms_exact_time_once_without_economic_rebooking",
+      "v6lite/tests/test_batch20_execution_time.py::test_authoritative_query_first_then_bad_callback_never_regresses_clock",
+      "v6lite/tests/test_batch20_execution_time.py::test_time_marker_survives_restart_and_allows_only_new_fill_confirmation",
+      "v6lite/tests/test_batch20_execution_time.py::test_legacy_fill_without_marker_is_reviewed_once_and_never_auto_retimed",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes0]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes1]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes2]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes3]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes4]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes5]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes6]",
+      "v6lite/tests/test_batch20_execution_time.py::test_same_exec_with_conflicting_identity_economics_or_day_is_not_retimed[changes7]",
+      "v6lite/tests/test_batch20_execution_time.py::test_incomplete_execution_query_cannot_confirm_new_fill_clock",
+      "v6lite/tests/test_batch20_execution_time.py::test_time_confirmation_never_moves_protection_gap_deadline",
+      "v6lite/tests/test_batch20_execution_time.py::test_wrapper_fill_spam_only_moves_to_debug_and_preserves_diagnostics[20]",
+      "v6lite/tests/test_batch20_execution_time.py::test_wrapper_fill_spam_only_moves_to_debug_and_preserves_diagnostics[10]",
+      "v6lite/tests/test_batch20_execution_time.py::test_verified_sell_time_recomputes_closed_at_without_reapplying_pnl",
+      "v6lite/tests/test_batch20_execution_time.py::test_execution_request_error_after_partial_row_is_not_complete_time_evidence",
+      "v6lite/tests/test_review_round5.py::test_R4F1_late_end_of_a_timed_out_request_never_completes_the_next_one",
+      "v6lite/tests/test_review_round5.py::test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty",
+      "v6lite/tests/test_review_round5.py::test_R4F1_open_orders_channel_is_guarded_too",
+      "v6lite/tests/test_review_round5.py::test_R4F1_a_channel_stuck_too_long_renews_the_connection",
+      "v6lite/tests/test_review_round5.py::test_R4F1_streamed_update_inside_a_request_does_not_double_count",
+      "v6lite/tests/test_review_round5.py::test_R4F1_release_needs_the_position_stream_to_agree",
+      "v6lite/tests/test_review_round5.py::test_R4F2_difference_seen_during_the_reconcile_is_not_cleared_by_it",
+      "v6lite/tests/test_review_round5.py::test_R4F3_late_buy_after_release_never_recreates_a_position",
+      "v6lite/tests/test_review_round5.py::test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released",
+      "v6lite/tests/test_review_round5.py::test_R4F5_freeze_lists_held_and_orphan_orders_that_were_not_cancelled",
+      "v6lite/tests/test_review_round5.py::test_R4F6_combo_leg_with_an_unknown_conid_fails_closed",
+      "v6lite/tests/test_review_round5.py::test_R4F7_frozen_symbol_with_a_held_intent_is_not_reconciled_every_tick",
+      "v6lite/tests/test_review_round5.py::test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0",
+      "v6lite/tests/test_review_round5_selfreview.py::test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger",
+      "v6lite/tests/test_review_round5_selfreview.py::test_late_buy_after_release_of_a_recovery_position_is_evidence_only",
+      "v6lite/tests/test_review_round5_selfreview.py::test_late_buy_after_a_resolved_freeze_is_evidence_only",
+      "v6lite/tests/test_review_round5_selfreview.py::test_cancel_lookup_uses_the_guarded_channel",
+      "v6lite/tests/test_review_round5_selfreview.py::test_unsolicited_end_poisons_the_channel_and_renews_the_connection",
+      "v6lite/tests/test_review_round5_selfreview.py::test_G7_unsolicited_end_regression_does_not_need_wall_clock_sleep",
+      "v6lite/tests/test_review_round5_selfreview.py::test_a_request_that_never_left_owes_no_end",
+      "v6lite/tests/test_review_round5_selfreview.py::test_auto_open_orders_owes_no_end"
+    ]
+  },
+  "stdout_sha256": "3c1333e1f3c7581374a74f09dc225c62ca1f0c2cd0d8e773958947b479b318f7",
+  "junit_sha256": "f8cfe66ff281591946c377c00ddf84289ea644bc83a2a539ccecf92fe3961169",
+  "inventory_sha256": "251fb9212f29118ac23b762c761e0cc96e270a9e5d94b825783bf5c78e43b2b6"
+}

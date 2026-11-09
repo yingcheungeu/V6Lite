@@ -1,0 +1,12 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-intent-0]",
+    "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-conId-0]",
+    "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[today-conId-1]"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-intent-0]",
+    "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[historical-conId-0]",
+    "v6lite/tests/test_batch27b_review_followups.py::test_B27b_complete_scoped_count_is_shown_even_when_explicit_identity_conflict_rejects_d[today-conId-1]"
+  ]
+}

@@ -1,0 +1,26 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_ test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request[in-flight] _
+v6lite\tests\test_batch31_snapshot_guards.py:38: in test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request
+    assert rig.store.protection(pid)['state']=='PRICE_PENDING','an older own round cannot confirm after a new request'
+E   AssertionError: an older own round cannot confirm after a new request
+E   assert 'WORKING' == 'PRICE_PENDING'
+E     
+E     - PRICE_PENDING
+E     + WORKING
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+_ test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request[complete] _
+v6lite\tests\test_batch31_snapshot_guards.py:38: in test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request
+    assert rig.store.protection(pid)['state']=='PRICE_PENDING','an older own round cannot confirm after a new request'
+E   AssertionError: an older own round cannot confirm after a new request
+E   assert 'WORKING' == 'PRICE_PENDING'
+E     
+E     - PRICE_PENDING
+E     + WORKING
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_snapshot_guards.py::test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request[in-flight]
+FAILED v6lite/tests/test_batch31_snapshot_guards.py::test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request[complete]
+2 failed in 1.59s

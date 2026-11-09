@@ -1,0 +1,8 @@
+{
+  "red": "red_phone_card_1",
+  "reason": "generic INFO template discarded the specific test title and broker details; add explicit green INFO AlertCard only for exact durable test claim",
+  "file": "v6lite/test_tp_timeout.py",
+  "before_sha256": "e86651f274074b47212fb55a5e3eec03aaea500e965fe3c6110efcbc9c64b0e7",
+  "after_sha256": "08c46ebd5d7a2b6424d9168ef7cdd631d338b8f8b731ccb0a2ee260b8c8b4fda",
+  "order_authority_unchanged": true
+}

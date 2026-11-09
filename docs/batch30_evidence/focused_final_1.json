@@ -1,0 +1,46 @@
+{
+  "label": "focused_final_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-26T15:39:17.132354-07:00",
+  "end_pt": "2026-10-26T15:43:38.748697-07:00",
+  "seconds": 261.61,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch30_commission.py",
+    "v6lite/tests/test_batch30_native_commission.py",
+    "v6lite/tests/test_batch30_report_audit.py",
+    "v6lite/tests/test_batch30_edges.py",
+    "v6lite/tests/test_review_fixes.py",
+    "v6lite/tests/test_review_round2.py",
+    "v6lite/tests/test_batch20_protection_equivalents.py",
+    "v6lite/tests/test_batch15.py",
+    "v6lite/tests/test_batch16_gap_evidence.py",
+    "v6lite/tests/test_batch29_controls.py",
+    "v6lite/tests/test_batch29_faults.py",
+    "v6lite/tests/test_batch29_native_timeout.py",
+    "v6lite/tests/test_batch27_daily_report_volume.py",
+    "v6lite/tests/test_batch27_masked_report_budget.py",
+    "v6lite/tests/test_batch27_short_account_budget.py"
+  ],
+  "code_sha": "4b7b841f0f492c05",
+  "source_unchanged": true,
+  "inventory_sha256": "9bc7f847429890f9be2f58cd9ba0c38a71a194a9ecbe0c9cf589a9d10b3ac563",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "79a2fe9172fb87714a06058dfc1f8ecbe0d0895e2734d990c07feabe270e1ce2",
+  "XML_sha256_before_masking": "dc583ff6303a2ba91d7907d46dc966353cc84c9a6463a94b600193d921804b41",
+  "delivered_log_sha256": "cd72f3437f68a761b486197fba143b00b01d2eb4b0232c6e9f73a423df733dbe",
+  "delivered_XML_sha256": "dc583ff6303a2ba91d7907d46dc966353cc84c9a6463a94b600193d921804b41",
+  "tests": 335,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch29_native_timeout",
+      "name": "test_B29_native_late_fill_after_timeout_cancel_keeps_two_share_GTC_and_books_once",
+      "kind": "failure",
+      "message": "assert 585197.89 < 585197.89\n +  where 585197.89 = <v6lite.tests.test_batch29_native_timeout.NativeTimeoutServer object at 0x00000183B028DE10>.late_fill_at\n +  and   585197.89 = <v6lite.tests.test_batch29_native_timeout.NativeTimeoutServer object at 0x00000183B028DE10>.cancel_at"
+    }
+  ]
+}

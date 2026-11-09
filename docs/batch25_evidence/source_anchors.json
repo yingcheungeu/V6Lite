@@ -1,0 +1,96 @@
+{
+  "code_sha": "ea71abe782e4cf68",
+  "sha256": {
+    "v6lite/broker/base.py": "21b95859f214f9d969f0aa1ac3cc2eb6dad865efd2b2ad76638136e5023ce593",
+    "v6lite/models.py": "be454da959efd1aad8e2cc81ebdcb2d94ae2b0df79a22b8722ff93bb60fab473",
+    "v6lite/broker/ibkr.py": "ccd7babe8badd4b7d8dec15942509f4aa5af0748ed20feaa9493476af449faab",
+    "v6lite/broker/fake.py": "297d4aa54eec186f2b6843dadbaf3358876c65e3d186bcae5294f4d7d5db9def",
+    "v6lite/engine.py": "a197edf4c781eba435e7506a7ef2502724a95f15ac49db3db889fe650a1f6532",
+    "v6lite/protection_engine.py": "3164fb157dedc662059397e61558a4dc35a11f7ddd7fb8a641c8eb0913e75439"
+  },
+  "anchors": {
+    "v6lite/broker/ibkr.py": [
+      {
+        "line": 349,
+        "name": "_install_fixed_channel_hooks",
+        "excerpt": "def _install_fixed_channel_hooks(self, client, wrapper):"
+      },
+      {
+        "line": 501,
+        "name": "connect",
+        "excerpt": "def connect(self) -> None:"
+      },
+      {
+        "line": 1445,
+        "name": "_on_status",
+        "excerpt": "def _on_status(self, trade, *, error_code=0, message=None) -> None:"
+      }
+    ],
+    "v6lite/broker/fake.py": [
+      {
+        "line": 90,
+        "name": "connect",
+        "excerpt": "def connect(self) -> None:"
+      }
+    ],
+    "v6lite/engine.py": [
+      {
+        "line": 741,
+        "name": "_handle_event",
+        "excerpt": "def _handle_event(self, now: datetime, event) -> None:"
+      },
+      {
+        "line": 923,
+        "name": "_on_status",
+        "excerpt": "def _on_status(self, now: datetime, ev: StatusEvent) -> None:"
+      },
+      {
+        "line": 1050,
+        "name": "_reconnect_reason_key",
+        "excerpt": "def _reconnect_reason_key(reason: str) -> str:"
+      },
+      {
+        "line": 1096,
+        "name": "_stop_automatic_reconnect",
+        "excerpt": "def _stop_automatic_reconnect(self, now: datetime) -> None:"
+      },
+      {
+        "line": 1115,
+        "name": "_maintain_connection",
+        "excerpt": "def _maintain_connection(self, now: datetime) -> None:"
+      },
+      {
+        "line": 1350,
+        "name": "_recover",
+        "excerpt": "def _recover(self, now: datetime) -> bool:"
+      },
+      {
+        "line": 2852,
+        "name": "_protection_entry_blocks",
+        "excerpt": "def _protection_entry_blocks(self) -> list[str]:"
+      }
+    ],
+    "v6lite/protection_engine.py": [
+      {
+        "line": 554,
+        "name": "_protection_evidence_fresh",
+        "excerpt": "def _protection_evidence_fresh(self, row):"
+      },
+      {
+        "line": 687,
+        "name": "_protection_rate_notice",
+        "excerpt": "def _protection_rate_notice(self, now, row):"
+      },
+      {
+        "line": 796,
+        "name": "_protection_evidence_deadline",
+        "excerpt": "def _protection_evidence_deadline(self, now: datetime, row) -> None:"
+      },
+      {
+        "line": 943,
+        "name": "_protection_progress_one",
+        "excerpt": "def _protection_progress_one(self, now: datetime, row, pos) -> None:"
+      }
+    ]
+  }
+}

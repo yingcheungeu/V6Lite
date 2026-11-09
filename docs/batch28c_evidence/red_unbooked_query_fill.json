@@ -1,0 +1,28 @@
+{
+  "label": "red_unbooked_query_fill",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:27:55.930544-07:00",
+  "end_pt": "2026-10-21T20:27:57.833178-07:00",
+  "seconds": 1.906,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28c_fill_query_edges.py"
+  ],
+  "code_sha": "ae3a8a0883f61c15",
+  "source_unchanged": true,
+  "inventory_sha256": "c8dfa16d34077ea75a8e5eab23064b7e9206ea67200d2848a5a36a630c4e0ed6",
+  "incomplete": false,
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28c_fill_query_edges",
+      "name": "test_B28c_own_TP_race_does_not_hide_extra_unbooked_SELL_in_native_query",
+      "kind": "failure",
+      "message": "AssertionError: known query-row contradiction must not be silently superseded\nassert False\n +  where False = any(<generator object test_B28c_own_TP_race_does_not_hide_extra_unbooked_SELL_in_native_query.<locals>.<genexpr> at 0x0000020B6FBB3840>)"
+    }
+  ]
+}

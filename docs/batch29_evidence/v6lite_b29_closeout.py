@@ -1,0 +1,182 @@
+"""Freeze and close out offline 29 evidence; no broker, commit or tag actions."""
+from pathlib import Path
+from datetime import datetime
+from zoneinfo import ZoneInfo
+from collections import Counter
+import ast,hashlib,json,subprocess,sys,xml.etree.ElementTree as ET
+
+ROOT=Path('C:/Dev/V6Lite-dev');OUT=ROOT/'docs/batch29_evidence'
+REPORT=ROOT/'docs/V6_LITE_FIX_REPORT_ROUND29_2026-10-23.md'
+BASE='eb7027aa93ae0a0daa7159a0918383d307575d08'
+INSTRUCTION='3ec28ab524576cac31bfd1902e34e2fe8c6f372b39c5bd5cddd67cf95d10f9a3'
+ACCEPTED={'docs/V6_LITE_FIX_REPORT_ROUND28D_2026-10-22.md':
+ '88ce04967cc9fa29cb47be16f70bada744776b2339320cba2748ac792660ac87'}
+PT=ZoneInfo('America/Los_Angeles')
+sys.path.insert(0,str(ROOT))
+from v6lite.telemetry import redact_accounts
+from v6lite.version import code_sha
+OWNED=['v6lite/engine.py','v6lite/__main__.py','v6lite/protection_engine.py',
+ 'v6lite/tp_evidence.py','v6lite/test_tp_timeout.py','v6lite/report.py','scripts/v6.ps1',
+ 'v6lite/tests/test_batch16.py','v6lite/tests/test_batch23_contracts.py',
+ 'scripts/tests/test_v6_launchers.py','docs/V6_LITE_BATCH29_INSTRUCTIONS.md',
+ 'docs/V6_LITE_G3_RUNBOOK_DRAFT.md']
+OWNED += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'v6lite/tests').glob('test_batch29_*.py'))]
+TOOLS=['v6lite_b29_validate.py','v6lite_b29_progress.py','v6lite_b29_closeout.py','v6lite_b29_git_deliver.py']
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def write(p,obj):p.write_text(json.dumps(obj,ensure_ascii=False,indent=2),encoding='utf-8')
+def inventory():
+ return {p.relative_to(ROOT).as_posix():sha(p) for base in ('v6lite','scripts')
+  for p in sorted((ROOT/base).rglob('*')) if p.is_file() and '__pycache__' not in p.parts}
+def package_sha():
+ h=hashlib.sha256()
+ for p in sorted((ROOT/'v6lite').rglob('*'),key=lambda p:p.relative_to(ROOT/'v6lite').as_posix()):
+  if p.is_file() and '__pycache__' not in p.parts:
+   h.update(p.relative_to(ROOT/'v6lite').as_posix().encode());h.update(b'\0');h.update(p.read_bytes());h.update(b'\0')
+ return h.hexdigest()
+def check_base():
+ assert subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()==BASE
+ assert subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip()=='dev'
+ assert sha(ROOT/'docs/V6_LITE_BATCH29_INSTRUCTIONS.md')==INSTRUCTION
+ for name,digest in ACCEPTED.items():assert sha(ROOT/name)==digest,name
+def receipt(label,full=False):
+ r=json.loads((OUT/f'{label}.json').read_text())
+ assert r['returncode']==r['failures']==r['errors']==0 and r['source_unchanged'] and not r['incomplete'],label
+ assert r['tests']>0 and r['tests']>r['skipped']
+ xml=ET.parse(OUT/f'{label}.xml').getroot()
+ cases=list(xml.iter('testcase'))
+ assert len(cases)==r['tests'] and not list(xml.iter('failure')) and not list(xml.iter('error'))
+ assert sum(c.find('skipped') is not None for c in cases)==r['skipped']
+ assert sha(OUT/f'{label}.xml')==r['delivered_XML_sha256']
+ assert sha(OUT/f'{label}.txt')==r['delivered_log_sha256']
+ if full:
+  assert r['args']==['v6lite/tests','scripts/tests']
+  at=datetime.fromisoformat(r['start_pt']).astimezone(PT)
+  assert at>=datetime(2026,10,23,13,30,tzinfo=PT)
+  assert not(at.weekday()<5 and (6,0)<=(at.hour,at.minute)<(13,30))
+ return r
+def report(freeze,runs):
+ focused=receipt(freeze['focused_label'])
+ props={p.get('name'):p.get('value') for p in ET.parse(OUT/(freeze['focused_label']+'.xml')).iter('property')}
+ write(OUT/'cards_sample.json',{'source_receipt':freeze['focused_label'],'XML_sha256':focused['delivered_XML_sha256'],'title':props.get('b29_INFO_phone_title'),'body':props.get('b29_INFO_phone_body')})
+ full='\n'.join(f"| {r['label']} | {r['tests']-r['skipped']} passed / {r['skipped']} skipped | {r['seconds']} s | {r['start_pt']} → {r['end_pt']} |" for r in runs)
+ status='三次 Windows 全量通过，准备本地 dev 提交及 annotated tag；交付后冻结待 Claude 复核。' if runs else '候选冻结；三次全量待执行，尚未提交/tag。'
+ text=f'''# V6-Lite 第二十九批修复报告
+
+日期：2026-10-23（PT 指令日期）。{status}
+基线：v6lite-batch28d / {BASE} / code_sha fb68fbc9c751d214。
+指令 SHA-256：{INSTRUCTION}。
+候选 code_sha：{freeze['code_sha']}；完整 package SHA-256：{freeze['package_sha256']}。
+
+## 改动及权限边界
+
+恢复受限 test-tp-timeout SYMBOL --operator John --config <G3-T>。
+只允许 paper/test.enabled/client132/非dry-run，配置内标的、非空operator、同引擎就绪epoch、Lite持仓及已确认覆盖持仓的STP、无进行中TP；同标的一条待用请求、五分钟有效期，过期/重启/断线/跨日作废。
+CLI只写控制请求，不连接券商。受理与重复检查同一BEGIN IMMEDIATE事务；新请求version=29、request/position/原STP身份绑定，旧残留键无权改价。
+正常全部门控及原bid报价校验通过、STP减量已确认之后，最终_send在事务内原子删除请求，持久化精确intent/workflow/保护强身份/修改代/原始报价和数量的claim，再给本次调用设置RAM许可；finally移除许可，崩溃或重放不能复用。
+仅这一张DAY LMT按原始新鲜ask×1.01向上取到分；实际发送前继续核验同一原始报价、workflow/保护代/身份、epoch、数量与暂停门，保留broker wire_deadline、费用与S+T+X≤P门。
+正常TP继续三秒内bid×(1−0.2%)，未扩大任何普通TP定价权限，不产生MKT或额外SELL。
+最后一档以实际target<=0判定，在撤STP前作废请求并审计，覆盖最后一股仍是TP1的情况。
+B10撤单、两轮稳定完整证据、同GTC恢复实际余量、迟到成交入账及B30 P0沿用原路径；测试超时单独一次INFO，真正失败P0保持。
+恢复零成交档仍PENDING，后续真实条件到达后按正常bid价执行；真实满档成交按账本完成，不重复卖出。
+TEST_TP_TIMEOUT_RESULT记录请求/领取、ask/限价/orderId、撤单请求/确认、恢复请求/确认、S和完整B，日报有独立“测试止盈超时”节。
+PowerShell ~\\v6 tptimeout AAPL固定g3t，复用entry的完整大写YES、main/annotated运行tag、配置前后重核、标的及交互/机密门控。
+按用户本次明确授权只更新G3运行手册第8节。Claude的独立操作手册既有修改未改动/未暂存。
+
+## 红绿与真实时序
+
+red_native_baseline_1：28d生产源码字节经Git核对相同；两个所需原生场景均先失败于命令仍禁用，2 failed，完整JSON/XML/log保留。
+green_native_1：2 failed；合成服务器把主动TP openOrder与同轮查询重复返回，保守容量门正确阻断；只校准主动echo到实际openOrderEnd之后，不改生产门控或oracle。
+green_native_2：2 failed；零成交已真实恢复同GTC=3、B=19.047秒，但手工循环每步强制active查询使重试无机会；迟到fill已唯一入账P=S=2，但保本主动echo又重复进查询。校准为真实Engine.tick稳态顺序并在原生End后发送主动修改回报，保留全部断言。
+green_native_3：两个真实SDK回放通过，覆盖实际wire/End、原STP减量确认、ask测试价未成交、B10撤单/Cancelled、同GTC恢复、正常TP1重试，及撤单之后迟到成交只入账一次；独立观察S+T+X≤P、没有MKT/额外SELL、INFO一次且无P1/P0。
+独立复核发现迟到满档TP已为FILLED时，Cancelled在engine终态分支提前返回，缺cancel_confirm审计；加强原生断言后red_late_cancel_audit_1先红，再仅补诊断挂点，不改变终态或恢复权限。
+后续故障测试、最终聚焦和全量以本目录实际回执为准；拒绝/无ACK仍P0、claim后崩溃不重放、伪标记和workflow/修改代/身份/epoch变化不授权。
+旧测试里“命令永久禁用”的预期按John 10/23新裁定更新；旧无version控制键不能改变正常bid价的回归保持。
+green_faults_1为17通过/1失败；日报小夹具先缺既有查询观察器，补齐后green_report_observer_1暴露没有交付关闭auto status后的恢复ACK；真实发送ACK后green_report_ack_1通过，两次失败保留。
+日报专节按请求聚合、最多12个最近请求并说明遗漏，完整细节仍在audit，避免重复拒绝造成日报内存或体积回归。
+全部红测/后续失败及校准前后SHA保留，不覆盖标签，不将夹具问题伪称产品修复，不重试掩盖时序flake。
+第一轮综合聚焦 focused_final_1：893 passed、0 skipped，1321.875秒；之后只补明确手机卡片，不改订单授权。red_phone_card_1先红（真实通道仅通用运行通知），补显式绿色INFO卡后再次最终聚焦；实际卡片文本见cards_sample.json及XML property。
+旧候选adfe89897bb2bbe0的final_full_1和final_full_2均2165通过/1跳过；第三次尚未开始时，补充两个真实请求在五分钟内的回放发现统一INFO标题使第二张卡被去重。red_notice_scope_1先红；仅将INFO去重key绑定request_id，手机标题和订单权限不变。旧freeze及受影响源码/工具字节另存prior_notice_scope文件，见refreeze_notice_scope.json。之后重新冻结，最终三次全量从新候选重新连续计数，不挪用旧候选结果。
+最终聚焦 {focused['label']}：{focused['tests']-focused['skipped']} passed / {focused['skipped']} skipped，{focused['seconds']}秒，源码不变。
+
+## Windows串行全量
+
+| 回执 | 结果 | 耗时 | 起止PT |
+|---|---|---|---|
+{full or '| 尚未执行 | pending | - | - |'}
+
+冻结inventory {len(freeze['inventory'])}文件；{freeze['compile_count']} Python源码compile/UTF8 AST/无BOM通过。
+全量检查完整XML testcase计数、returncode/failures/errors、同一inventory、source_unchanged与日志/XML脱敏前后SHA；三次严格串行，交易日06:00–13:30不跑全量。
+既有legacy market_scanner.py缺失的parity跳过和record_property/xunit2报告格式警告不代表回归。
+同一测试第三次时序flake必须修复或用户明确重定义门槛，不能以重跑隐藏。
+
+## 新卡片样例与交付
+
+INFO：测试：止盈超时注入已触发，正在撤单并恢复保护。
+例如AAPL TP1 orderId=711；测试限价347.41；保留原保护身份，核验撤单与实际剩余持仓。实际价格与身份以每次TEST_TP_TIMEOUT_RESULT和TWS为准。
+撤单失败或超过30秒未恢复仍使用原P0卡片，不因测试请求降低级别。
+SHA256SUMS.json列出源码、报告和脱敏证据SHA；freeze.json固定全部源码和验证工具。
+仅精确任务清单暂存，本地dev commit及annotated v6lite-batch29，校验tag归档inventory/package/code_sha/报告/manifest。
+John本机合并；未merge、push或部署，未连接TWS/Gateway、发真实订单、触碰用户.v6lite/运行仓库/John配置。
+'''
+ REPORT.write_bytes(text.encode('utf-8'))
+
+def redact():
+ path=OUT/'redaction_receipt.json';records=json.loads(path.read_text()) if path.exists() else {}
+ for p in sorted(OUT.iterdir()):
+  if p.suffix not in ('.txt','.xml','.json') or p.name in ('SHA256SUMS.json','redaction_receipt.json'):continue
+  raw=p.read_bytes();masked=redact_accounts(raw.decode('utf-8'))
+  if masked!=raw.decode('utf-8'):
+   p.write_bytes(masked.encode('utf-8'))
+   records.setdefault(p.name,[]).append({'input_sha256':hashlib.sha256(raw).hexdigest(),'output_sha256':sha(p),'rule':'redact_accounts','synthetic_fixture_only':True})
+ write(path,records)
+
+mode=sys.argv[1];check_base()
+if mode=='prepare':
+ assert not (OUT/'freeze.json').exists(),'preserve old freeze, use explicit re-freeze provenance if source changes'
+ focused=receipt(sys.argv[2]);before=inventory();count=0
+ for name in before:
+  if name.endswith('.py'):
+   raw=(ROOT/name).read_bytes();assert not raw.startswith(b'\xef\xbb\xbf'),name
+   compile(raw,name,'exec');ast.parse(raw.decode('utf-8'),filename=name);count+=1
+ assert before==inventory()
+ assert focused['inventory_sha256']==hashlib.sha256(json.dumps(before,sort_keys=True).encode()).hexdigest()
+ freeze={'status':'candidate frozen; three serial full runs pending','frozen_at_pt':datetime.now(PT).isoformat(),
+  'base_commit':BASE,'base_tag':'v6lite-batch28d','instructions_sha256':INSTRUCTION,'accepted_reports':ACCEPTED,
+  'focused_label':focused['label'],'code_sha':code_sha(),'package_sha256':package_sha(),
+  'owned_files':{p:sha(ROOT/p) for p in OWNED},'inventory':before,
+  'inventory_sha256':hashlib.sha256(json.dumps(before,sort_keys=True).encode()).hexdigest(),
+  'compile_count':count,'compile_method':'compile(source_bytes,path,exec) + UTF8 ast.parse + no BOM; no writes/imports',
+  'validation_tools':{n:sha(OUT/n) for n in TOOLS},'operator_manual_excluded':True,'full_tests_not_run_before_1330':True}
+ write(OUT/'freeze.json',freeze);report(freeze,[])
+ print(json.dumps({k:freeze[k] for k in ('code_sha','package_sha256','compile_count','inventory_sha256')}))
+elif mode=='final':
+ freeze=json.loads((OUT/'freeze.json').read_text())
+ assert inventory()==freeze['inventory'] and code_sha()==freeze['code_sha'] and package_sha()==freeze['package_sha256']
+ assert all(sha(OUT/n)==h for n,h in freeze['validation_tools'].items())
+ labels=sys.argv[2:] or ['final_full_1','final_full_2','final_full_3'];assert len(labels)==3
+ runs=[receipt(label,True) for label in labels]
+ assert all(r['inventory_sha256']==freeze['inventory_sha256'] for r in runs)
+ assert len({(r['tests'],r['skipped']) for r in runs})==1
+ assert all(runs[i]['end_pt']<runs[i+1]['start_pt'] for i in (0,1))
+ candidate_failures=Counter()
+ for p in OUT.glob('*.json'):
+  r=json.loads(p.read_text())
+  if isinstance(r,dict) and r.get('args')==['v6lite/tests','scripts/tests'] and runs[0]['start_pt']<=r.get('start_pt','')<=runs[-1]['start_pt']:
+   assert r.get('returncode')==0,'intervening full failure cannot be hidden'
+  if isinstance(r,dict) and r.get('args')==['v6lite/tests','scripts/tests'] and r.get('inventory_sha256')==freeze['inventory_sha256']:
+   candidate_failures.update((c['classname'],c['name']) for c in r.get('failed_cases',[]) if c['kind'] in ('failure','error'))
+ assert not any(n>=3 for n in candidate_failures.values()),'same test failed three full runs on this unchanged candidate: repair and refreeze, or obtain an explicit operator gate redefinition'
+ report(freeze,runs);redact()
+ selected=[p for p in sorted(OUT.iterdir()) if p.is_file() and p.name not in ('SHA256SUMS.json','closeout.json')]
+ files=[ROOT/p for p in OWNED]+[REPORT]+selected
+ write(OUT/'SHA256SUMS.json',{'code_sha':freeze['code_sha'],'package_sha256':freeze['package_sha256'],
+  'files':{p.relative_to(ROOT).as_posix():sha(p) for p in files}})
+ write(OUT/'closeout.json',{'base_commit':BASE,'intended_tag':'v6lite-batch29','code_sha':freeze['code_sha'],
+  'package_sha256':freeze['package_sha256'],'report_sha256':sha(REPORT),'full_labels':labels,
+  'same_inventory':True,'serial_full_runs':3,'source_unchanged':True,'all_full_after_1330_pt':True,
+  'operator_manual_staged':False,'merge_push_deploy':False,'manifest_sha256':sha(OUT/'SHA256SUMS.json')})
+ files += [OUT/'SHA256SUMS.json',OUT/'closeout.json']
+ write(Path('C:/tmp/v6lite_b29_stage_paths.json'),[p.relative_to(ROOT).as_posix() for p in files])
+ print(json.dumps({'files':len(files),'report_sha256':sha(REPORT),'code_sha':freeze['code_sha']}))
+elif mode=='redact':redact()
+else:raise SystemExit('prepare <focused-label>, final [three-full-labels], or redact only')

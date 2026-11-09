@@ -1,0 +1,164 @@
+{
+  "label": "green_item9",
+  "start_pt": "2026-10-09T08:00:40.281833-07:00",
+  "end_pt": "2026-10-09T08:00:44.288658-07:00",
+  "returncode": 1,
+  "source_code_sha": "a2ce5a1e5ba3195e",
+  "source_unchanged": true,
+  "spec_sha256": "37e52ee1d4bea346b216ec43bbbb524d60afadc915432e6e604dd89b6b6b2352",
+  "totals": {
+    "tests": 29,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[metadata_cleared]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[prices_reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[201]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[202]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute.<locals>.<genexpr> at 0x0000017DADFB9EE0>)"
+    },
+    {
+      "name": "test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[auxPrice]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_planned_final_share_cancel_202_normal_reason_keeps_real_L7_TP_flow",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[executions]",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "stdout_sha256": "89e0f9c18acfe29e483ee95f6e46669d0df41d4f80d9fbf140c02d6a212be55c",
+  "junit_sha256": "c17d68aa755d2a44d9afbc80e987a8052c4f9fa8c28c1e89d6a8346b35b29db2"
+}

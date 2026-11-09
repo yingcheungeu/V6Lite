@@ -1,0 +1,201 @@
+{
+  "status": "passed",
+  "phase": "independent pre-full review",
+  "reviewer": "b27a_review",
+  "reviewed_at_utc": "2026-10-17T22:01:55.462558+00:00",
+  "scope": "Read-only review in C:/Dev/V6Lite-dev. No tests were run by this reviewer. This JSON is the sole authorized review write; no production/test/runtime/user-state/config/manual content was edited or read beyond the authorized dev evidence.",
+  "baseline": "v6lite-batch27a / 44a85f1f7856f2761370943ef4e2daec42e870fe",
+  "instruction_sha256": "95c851973e6e5a9563f8dd7fabed4be0cc95806b5a8f89e7aebf77f25e7c37e9",
+  "code_sha": "d6dd37c12701ce95",
+  "full_code_sha256": "d6dd37c12701ce9583eafeaccb7d97caa14c7c8edb699d926ee64f3637fd3e55",
+  "scripts_sha256": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675",
+  "production_sha256": {
+    "v6lite/broker/base.py": "7381bcbd44c9bccbd2aa3e8b2b0af423387afef8f4f308702e91100b42b10f6e",
+    "v6lite/broker/ibkr.py": "8bccd8be27cc6a4766e2333193e7e669ca19f6a855953ee7cd9ece94665b1f30",
+    "v6lite/engine.py": "1c4f6dad326894b48ac588fe7e3c3ebbf9d09f1607f3489c05e2f776c0ce2f61",
+    "v6lite/execution_time.py": "a65478686044131e3218126a49a25c179ec588a138eb814fe1140935594c4af3",
+    "v6lite/models.py": "5ab78239cf065bb4a8c146e4446021675c9af2e9fb9833a6d665c94119b2672d",
+    "v6lite/overnight_evidence.py": "e51fc4146417b234cde85547ee3057a104577d7d3e3941258a18c7b5dc5eb016",
+    "v6lite/report.py": "8eeae2132584a7fcddeacebcd83db0ca539e064cbb6977a61244b471f1ad3751",
+    "v6lite/store.py": "8d20f59c73e542ba88c3b3370e96c89a0b1532401b2f1b56a7a2b80ff574abfe"
+  },
+  "new_test_sha256": {
+    "v6lite/tests/test_batch27b_current_day_evidence.py": "4244c1603412272ad84639e61584e5a34add7438597c8db437d6dc8691f8cf20",
+    "v6lite/tests/test_batch27b_raw_execution_time.py": "158d94bbc0729fb77afb3427ae9dc3fe865b64b45f4ed556cbb07d388e984d95",
+    "v6lite/tests/test_batch27b_review_edges.py": "6f87a5a6b384b887324f0bbf76a044da4bdefcf36d93aeb07d759811ea80dc22",
+    "v6lite/tests/test_batch27b_review_followups.py": "1660054f87b2c30f7110f96963d115853ce46e1f613efbd63ae67a1b0367d46e",
+    "v6lite/tests/test_batch27b_scope_completeness.py": "be5f81d56679f2a99d37cad217bf014dcf658cab8dbbf07e70266fc7b0e77faa"
+  },
+  "preservation": {
+    "original_test_and_script_files": 102,
+    "config_risk_sizing_example_files": 8,
+    "all_original_bytes_unchanged": true,
+    "first_two_specs_match_qualified_baseline_red": true
+  },
+  "receipts": {
+    "red_batch27a_locked_initial": {
+      "receipt_sha256": "740b1ec693298fa6f4e59932afc72c53e6e4ee5810477947095c78be0ad4936c",
+      "junit_sha256": "adaaeed6c14591f0d5cd1f37335c2493bc10400145e4063403f9d843a04897c5",
+      "stdout_sha256": "55ae5f5926bd44c96b77ceae1ce95b56b8034b867890a113e1b153089de83355",
+      "inventory_sha256": "9e6f428682f9e8c2536e57dc42af5cde2e1b8fb713670636f5a325a86f7618a6",
+      "totals": {
+        "tests": 35,
+        "failures": 11,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "b736734f8e73edfb"
+    },
+    "review_edges_red_candidate": {
+      "receipt_sha256": "ce1ef6925492716d8e5e7b32fe7725fe41fd01ef74d38da9db6afe45b42d554e",
+      "junit_sha256": "5cdb61bb464f465c86e20f708eaa09504af8b654cf5a670b28cc484a577bb03a",
+      "stdout_sha256": "c8a3ecbdee7e931a21707640cb4fd8b7f915676043065799809fdf4b94e4ec8d",
+      "inventory_sha256": "7e000bf8023e347362121cc44b06dc7aebf9c39e3cb07c4dc2653838e7c77f70",
+      "totals": {
+        "tests": 3,
+        "failures": 3,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "b74b033237942d1c"
+    },
+    "review_count_red_candidate": {
+      "receipt_sha256": "fdcd67c0e585553637e4fbff22bde0d8a30bf79874202343cabeb02a4e1cccf4",
+      "junit_sha256": "487d55c986d7fc8d0fb27c8df9a72193ed9951f851d238c8ec4a56000b18c53a",
+      "stdout_sha256": "4e1fe8eecbb734ae7abed13281a1d9f9597d2f6bd4d218c0e7dbfbbe1c2cf478",
+      "inventory_sha256": "f15509e8d90a0174474b85c11f5182ea56f4629f401892a23f94e7367a8bf00d",
+      "totals": {
+        "tests": 3,
+        "failures": 3,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "8151e372c5d62585"
+    },
+    "review_scope_red_candidate": {
+      "receipt_sha256": "020865f51661c537a209f94166e5f9f8cb967f0f60d6c881aee1c77a6cfe2a0e",
+      "junit_sha256": "496b63733909f1507ae3e30ff35fb6a577c62d49c6f04e3a4ba7043f1a8f08a2",
+      "stdout_sha256": "eebb1690dfe8e875b9f695616b64e8217e1125d08135932d5c5ef2235ede71da",
+      "inventory_sha256": "cdebaa3e2545410fb81b0f6fd3c213eff34736dfe5053ae6e5a8c911c8e754d6",
+      "totals": {
+        "tests": 4,
+        "failures": 3,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "a9d29a683de12149"
+    },
+    "samples_final_scoped_candidate": {
+      "receipt_sha256": "058e082eddc1efe0d3d7fd240b007c614fc1ab286e6a38833cfa1510d4337ac9",
+      "junit_sha256": "602d0a076966cbda0db0d09650491ffe59b604e7c2d1e2cee658c985026a0033",
+      "stdout_sha256": "a6ef40ea4fe3f3cb57ef4d6c228e4e7bc7ca3bcaec9710b7e6db35a4fa38bb06",
+      "inventory_sha256": "e6ef077c33be1e4a6ae61c6b3f688c95241871e4d08db36fda874c7d2145416f",
+      "totals": {
+        "tests": 45,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "d6dd37c12701ce95"
+    },
+    "focused_final_scoped_candidate": {
+      "receipt_sha256": "6212244469b34edc00726336828459f07916580fa41858f9fb8290428cf2d817",
+      "junit_sha256": "144564341a289a26899984c92b6a44bcfa560d63dc50eb09e4060af8a34c96b3",
+      "stdout_sha256": "461ee48f12096459a57af0382c99c71c45cf8dddea6e0ba3334c2fecde58a057",
+      "inventory_sha256": "c75e84ec033629ac211846fc1c82db06c33a3814d3b918f0def51b1e9449ce67",
+      "totals": {
+        "tests": 860,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "d6dd37c12701ce95"
+    }
+  },
+  "qualified_red_sha256": "4152c9092c522b1c431c02b102ab05ca22eb13e1400df9369516a4a12c7357fc",
+  "actual_sample_artifacts": {
+    "cards": {
+      "path": "docs/batch27b_evidence/samples_final_scoped_candidate_cards.json",
+      "sha256": "4a5f8f2b262c0879640aa4f1b71ec1467b0620e23564a31d0a448a81d631a23c",
+      "records": 238,
+      "visible_day_disclosure_embeds": 2,
+      "complete_d_failure_count_examples": [
+        0,
+        0,
+        1
+      ]
+    },
+    "reports": {
+      "path": "docs/batch27b_evidence/samples_final_scoped_candidate_reports.json",
+      "sha256": "76c54a52ce20f17026cffc75fc19aa9448c3fdbd510e78cc272f7dd0aa6525a0",
+      "records": 6,
+      "actual_successful_day_disclosure_reports": 2
+    },
+    "query_summaries": {
+      "path": "docs/batch27b_evidence/samples_final_scoped_candidate_query_summaries.json",
+      "sha256": "04155f43ce1ff06e78fb71a61b7fd51805d4b24268b1a7052e116bedb1d63e28",
+      "records": 1,
+      "raw_category_counts": {
+        "returned": 3,
+        "zoned": 1,
+        "naive": 1,
+        "unparseable": 1
+      }
+    }
+  },
+  "verified_invariants": [
+    "Current-day exception is overnight-only: shared strict nine-field typed marker identity, persisted conId pin, exact provisional_time string, today ET date and no future provisional timestamp.",
+    "Dedicated account execution request uses ET midnight converted to the official UTC time-filter format; native matching reqId/End, actual filter, socket generation, row counts, parse failures, day boundaries and proof freshness are checked.",
+    "Selected dedicated capability cannot downgrade missing/incomplete/invalid scope to legacy d authority, including before first TP when no today fill exists. A broker genuinely lacking the optional capability retains historical compatibility.",
+    "Only day membership is relaxed for this current exec; economic identity, explicit nonempty native intent and positive conId contradictions, unknown executions and all other a-d gates remain fail-closed. Missing optional query conId was not made a new human-unapproved hard requirement.",
+    "Wide historic naive client rows are skipped only with matching persisted economics/ownership/receipt bounds and without explicit identity conflicts; current client/account copies cannot hide a contradictory positive conId.",
+    "No marker/time/trading_day or economic fill replay is changed by day-only proof; no full_exec/release authority is created. Each BE/TP2 write retains fresh evidence and token/ACK binding.",
+    "Native invalid decoder rows remain diagnostic-only, not fabricated fills; their actual request loses complete scope. Raw observations are reqId isolated, bounded/redacted and do not change parser or IB.TimezoneTWS.",
+    "The actual TP1 callback -> BE modification ACK -> TP2 reduction ACK -> TP2 submission sequence and S+T+X<=P assertions pass; failures retain P1 freeze and stable stop protection.",
+    "Complete dedicated d count is recorded before identity failure using actual same-symbol unique execIds; incomplete evidence cannot invent a definite zero.",
+    "Actual as_embed/plain card and actual daily_report return values disclose precision remains unverified; native INFO summary category counts and account masking were independently checked.",
+    "Validation tooling preserves isolated baseline/candidate imports, complete nodeids, original failures and redaction provenance, serial Windows full3 with PT/JobObject cutoff and exact legacy skip identity/reason. Builder report/manifest self-exclusion allows a non-circular final review closure."
+  ],
+  "review_findings_resolved": [
+    {
+      "finding": "Wide-history/day-only identity contradictions could be ignored",
+      "natural_red": "review_edges_red_candidate",
+      "result": "three actual-native behavior failures; fixed without rejecting absent optional conId"
+    },
+    {
+      "finding": "New d identity failures again showed unfinished count",
+      "natural_red": "review_count_red_candidate",
+      "result": "three actual P1 rendering failures; now actual complete scoped 0/0/1 counts"
+    },
+    {
+      "finding": "Explicitly incomplete dedicated d could authorize first TP before today marker existed",
+      "natural_red": "review_scope_red_candidate",
+      "result": "three actual-native safety failures; selected scope must now validate; legacy compatibility control remains passing"
+    }
+  ],
+  "remaining_unknowns": [
+    "No John TWS/Gateway or runtime/user-state access occurred. Official UTC filter documentation is not a Paper compatibility measurement of John current TWS/SDK; actual rejection or incomplete scope freezes authorization.",
+    "Field raw callback/query samples from the operator remain unknown. The exact execution second is not verified by day-only proof; no local timezone or parsing assumption is promoted to fact.",
+    "A/B are operator-accepted operating constraints and residual risks, not technical proof against same-net manual round trips or consistent whole-database rollback.",
+    "RESTORE_PENDING old-total status arriving during a query was raised only as an unproven static interaction; no actual scheduling reproduction was established, no extra code change or claimed verification was made."
+  ],
+  "blockers": [],
+  "full_validation": "Pending ROOT serial Windows default full suite three times; this pre-full approval does not claim those runs already passed.",
+  "final_tools_and_static_evidence": {
+    "sha256": {
+      "docs/batch27b_evidence/source_compile.json": "b429e93ab6daf5e302004c69ae2982b2c2560c23dc3207ea8cd43730b05ae0cd",
+      "docs/batch27b_evidence/visible_card_checks.json": "087a593bf575fd08df2757179b3a39ffa7f000191e7093543a69b0c45a8ba40e",
+      "docs/batch27b_evidence/review_edge_notes.md": "bc95dc9df371739a6a090004e0c3a50ca1cf303e245c60beb8e8cac0ec2c7f0a",
+      "docs/batch27b_evidence/build_batch27b_report.py": "4bf9f2eab7eaf85dd77418f4ef1da44d4e8b417c8190d5d34b3b86911b159efb",
+      "docs/batch27b_evidence/run_batch27b_checks.py": "bcdbd9ad704bb4b9c6ebe048c81c772214b629a83be9d390d99c041ae7ed1c05",
+      "docs/batch27b_evidence/acceptance_process.py": "f96c9e873541f6d61575f9f09b25491ede1335fd24785627d06d6b3cdbdbc08d",
+      "docs/batch27b_evidence/sample_capture.py": "ff07b3f24f90c21ad069696240d27d8c2344f36000da1fe3acb50f232534951d"
+    },
+    "compiled_inputs_matched": 139,
+    "unchanged_baseline_nonproduction_inputs": 131,
+    "actual_captures_match_independent_counts": true,
+    "review_notes_cover_all_three_natural_red_families": true,
+    "builder_discloses_scope_fix_and_unproven_static_restore_boundary": true,
+    "supplement_before_checkpoint_lock": true
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "changes": [
+    {
+      "item": "1.1 末股B起点",
+      "finding": "三源查询后覆盖原始T0，查询耗时不计入窗口。",
+      "change": "保留首次持久化T0，缺少原始回报才兜底；查询完成不改写，阶段证据关联workflow。",
+      "tests": "final_share_B_original_callback_clock_survives_slow_confirmation_and_drives_deadline；既有非末股、10/30秒回归。"
+    },
+    {
+      "item": "1.2 异步TP终态恢复",
+      "finding": "TP终态可能停留TP_ACTIVE直到超时。",
+      "change": "只接纳自有硬合同回报，立即进入TP_NEEDS_RESTORE，按最新持仓与完整稳定三源核验恢复；未知和迟到成交继续保留卖出容量。",
+      "tests": "async_TP_terminal_enters_restore_immediately；foreign_TP_terminal；cancel_with_late_partial_fill；每次实际写前后容量oracle。"
+    },
+    {
+      "item": "1.3 完整拒价P0",
+      "finding": "普通未发出P1与原因截断不足以说明价格拒绝。",
+      "change": "专用价格拒绝P0包含发送快照、订单编号、code和完整券商原文；UTF16安全分段与ACK留证，独立事件不全局静音。",
+      "tests": "price_rejection_real_P0_keeps_complete_original_reason_and_send_snapshot；ACK去重/未ACK补发；非终态其他code不授予恢复权限。"
+    },
+    {
+      "item": "1.4 持久化暂停与明确解除",
+      "finding": "价格拒绝后后续行情可能再次自动提交TP。",
+      "change": "按position与pause episode持久化阻断自动止盈；resume-tp仅排队审计，准确John请求且无hold/freeze/UNKNOWN，完整稳定三源确认S=P/T=X=0后消费，不在同tick立即重发。",
+      "tests": "price_rejection_pause_is_durable；exact_episode_manual_request；wrong_episode；manual_resume_three_sources/foreignSELL/dry/hold/freeze/corrupt；CLI零券商写。"
+    },
+    {
+      "item": "1.5 显式关闭PMA与价格一致性",
+      "finding": "SDK默认值与工作价/cap证据缺失。",
+      "change": "LMT提交、STP提交与修改三条构造路径usePriceMgmtAlgo=False；一次openOrder hook与status诊断，先核硬合同再分流P0/P1并持久标的阻重发；未知cap不当零，STP cap不与触发价混比。",
+      "tests": "native_LMT_constructor各purpose；native_STP_submit_and_same_ID_modify；openOrder_only；working/cap/ENTRY/PROTECT不一致；unknown_LMT_cap；STP_positive_cap。"
+    },
+    {
+      "item": "1.6 按场景生成卡片",
+      "finding": "共用样例数量造成持仓与未保护数字冲突。",
+      "change": "五个独立FakeBroker/native/Alerter场景捕获实际渲染；暂停样例分别列P0时与全仓恢复后的数量，避免同事件P0后再发低级别卡。",
+      "tests": "render_samples.py与card_samples.json/md；实际通道ACK、各阶段容量oracle。"
+    },
+    {
+      "item": "1.7 0.2%与三秒两次报价门",
+      "finding": "保护TP使用旧年龄阈值和fallback mark/last，不符合裁定。",
+      "change": "默认exit_limit_band_pct=0.002、tp_max_quote_age_seconds=3（整数1–10、指纹）；减量前及发送前两次核有效新鲜bid/ask，仅新鲜bid向上取整到分；首次跳过仅纯证据counter/log，第二次走原B恢复，不价格暂停。",
+      "tests": "3.0/3.01边界、缺失/负数/NaN/Inf/未来/naive时间、计数与分钟日志、bid取整、第二门恢复、dry全部入口零写；五示例与配置指纹。"
+    },
+    {
+      "item": "1.8 取消措辞",
+      "finding": "取消标题正文混用拒绝且系统诊断英文。",
+      "change": "按取消/拒绝事实写中文系统诊断；券商原文保持，完整与弱终态身份分别说明授权边界。",
+      "tests": "actual_cancel_card_has_consistent_cancel_fact_chinese_diagnosis_and_exact_quantity；旧卡片溯源回归。"
+    },
+    {
+      "item": "第5节 自动审计与日报",
+      "finding": "缺少TP全过程时间线、工作价、完整原因与按bid衡量成交差。",
+      "change": "workflow关联减量、发送、回报、成交、撤单、恢复及gap关闭；exec去重与成交经济事务内审计，差值未知不填零，日报逐TP空窗/差值和报价跳过轮数。",
+      "tests": "TP_send_status_fill_automatic_evidence_and_daily_bid_difference；迟到/重复exec；独立腐损辅助证据不回滚经济fill复现。"
+    },
+    {
+      "item": "独立复核R1–R10纠正",
+      "finding": "初版独立复核未通过：错误来源归因、辅助审计回滚、物理报价年龄、未保护TP重发阻断、损坏解除记录、日报截断、混合报价、过宽价格分类与系统英文。",
+      "change": "保留终态诊断但不赋予订单权限；跟踪查询ID命名空间；附属证据损坏仅差值未知；实际发送门重核原报价且明确未发出；所有TP遵守标的价格阻断；严格episode/持仓绑定；全部券商原因保全文；报价维度来自同一定价快照；明确价格规则分类；只翻译系统自造诊断。",
+      "tests": "test_batch23_error_provenance.py 21项：候选自然21失败/0errors；22a对照19失败/2既有终态守卫通过；最终专项/全量及只读独立重审作为验收门槛。"
+    },
+    {
+      "item": "追加独立边界复核",
+      "finding": "无保护TP拒价遗漏P0/持久暂停，损坏定价快照仍被授权，release诊断截断，中文价域拒绝与Inactive事实卡不完整。",
+      "change": "对未开启保护的TP只增加持仓/订单绑定诊断和暂停，不创建保护row或赋予自动STP权限；最终物理发送核定价公式和raw快照一致；明确未发出不虚报send；release仅保留查询错误全文，原强放行条件不变；按真实取消/拒绝状态区分系统事实，券商原文保持。",
+      "tests": "test_batch23_unprotected.py 8项，固定spec在候选和22a均7失败1通过0errors；最终110项专项、553项聚焦及全量连续三次通过，另由独立Agent审签封存证据。"
+    },
+    {
+      "item": "Broker异常全文诊断",
+      "finding": "保护提交/修改/撤单、三源查询及release账户执行查询catch仅记录异常类型，原始原因丢失。",
+      "change": "仅补完整durable PROTECT_BROKER_ERROR/BROKER_QUERY_ERROR诊断并纳入日报，保留原raise、状态、重试和强release条件；普通通用卡摘要可通过审计追溯全文，价格拒绝及券商终态P0仍按专用全文卡路径。",
+      "tests": "test_batch23_broker_diagnostics.py 6个真实catch场景在候选与22a全部行为失败/0errors；另三个未动态覆盖catch由独立静态逐行复核，不声称全9动态覆盖。"
+    },
+    {
+      "item": "Inactive+202事实分流回归守卫",
+      "finding": "初版措辞仅凭Inactive写拒绝，而Inactive+202明确取消证据属于取消。",
+      "change": "展示分类按实际取消/拒绝证据，未知或矛盾保留待核实；不改变终态安全状态、身份权限、hold或冻结；原文原样。",
+      "tests": "test_batch23_terminal_fact.py 1项：候选自然失败/0errors、22a对照通过；三证据3/0/3及31分钟零自动重挂守卫。"
+    },
+    {
+      "item": "恢复错误detail在日报的全文保留",
+      "finding": "真实恢复工作单查询异常完整保存于ANOMALY.detail，但日报的关键词检测漏掉detail而再截断160字。",
+      "change": "仅把诊断detail纳入完整报告渲染；恢复逻辑、UNKNOWN、operator hold、数量/身份、经济账本均保持。",
+      "tests": "test_batch23_recovery_diagnostic.py有效run2在候选与22a各1行为失败/0errors；候选失败在日报全文尾标，22a失败在catch保留全文的control断言（旧截断200字）。最终110项专项完整经过UNKNOWN、hold、账本和零新增写入守卫；首轮预建计划夹具错误保留且不计门槛。"
+    },
+    {
+      "item": "既有回归的裁定等价更新",
+      "finding": "新增PriceObservation、禁用造价超时和真实取消/拒绝/矛盾事实与旧测试预期冲突；code0泛拒因抹除明确取消另为实际展示回归。",
+      "change": "仅五个旧测试文件精准更新裁定相关oracle，原身份/数量/capacity/release/零MKT/原GTC恢复断言保留；code0原取消断言不放宽，由solewriter修复展示模式。",
+      "tests": "修前focused553=542passed/11failed/0errors；修后focused_run2同源553passed；新110spec SHA全未变。L4/F8已通过，未改它们。"
+    },
+    {
+      "item": "首全量后的合法TP容量测试修正",
+      "finding": "旧最终卖出容量测试手工TP直_send，没有新的不可变freshbid定价证据而正确被拒绝。",
+      "change": "仅测试改用实际TP评价/队列，合法6股TP在途后严格验证可卖14而STOP20必须被capacity拦截；不注入定价control、不绕发送门。",
+      "tests": "首full_1唯一失败原始记录保留，不计验收；legacy_capacity目标1passed；同源110专项与553聚焦重验后重新连续full3。"
+    }
+  ],
+  "state": "Final serial gates passed at a17d647ba28c51e4; independent sealed-bundle receipt still pending.",
+  "final_gates": {
+    "code_sha": "a17d647ba28c51e4",
+    "green_passed": 110,
+    "focused_passed": 553,
+    "capacity_target_passed": 1,
+    "full_labels": [
+      "full_1_run2",
+      "full_2",
+      "full_3"
+    ],
+    "full_passed_each": 1454,
+    "full_skipped_each": 1,
+    "card_scenarios": 5,
+    "actual_local_acknowledged_cards": 8
+  }
+}

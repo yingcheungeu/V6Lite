@@ -1,0 +1,23 @@
+{
+  "function": "test_F5_query_elapsed_includes_old_end_drain",
+  "original_sha256": "5b875c8df97861e22427223e7065a74bddf04a5da1c7115b431871369d177c47",
+  "modified_sha256": "e5004f67d963f2717d774ab8bd5204f9a87a381f274b9d66f4766daa42bec8c9",
+  "baseline_27b_git_bytes_sha256": "5b875c8df97861e22427223e7065a74bddf04a5da1c7115b431871369d177c47",
+  "baseline_checkout_newlines_only_equal": true,
+  "source_before_and_after_function_unchanged": true,
+  "other_ast_nodes_unchanged": true,
+  "changes": [
+    "caplog.set_level(logging.INFO) -> caplog.set_level(logging.DEBUG)",
+    "rows[0].levelno == logging.INFO -> rows[0].levelno == logging.DEBUG"
+  ],
+  "assertions_unchanged": [
+    "native sent/End debt and completion",
+    "one matching QUERY row",
+    "channel or API name",
+    "drained field",
+    "single-line output",
+    "secs >= 1.65"
+  ],
+  "reason": "Batch27 instruction section2.3 explicitly moves successful QUERY details to DEBUG; HISTORY and SLOW_TICK INFO stay unchanged.",
+  "tests_run_by_author": false
+}

@@ -1,0 +1,153 @@
+{
+  "reviewer": "independent Agent /root/b27a_review",
+  "scope": "Section5 including5.6 only; static source and existing recorded-evidence review; reviewer ran no tests",
+  "reviewed_at_pt": "2026-10-16T15:48:53.754238-07:00",
+  "passed": true,
+  "blocking_findings": [],
+  "code_sha": "b736734f8e73edfb",
+  "full_code_sha256": "b736734f8e73edfbf42d50deb49cc3e4ed852922fcc0f68aba7d5d0ec5549425",
+  "scripts_sha256": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675",
+  "source_sha256": {
+    "v6lite/engine.py": "45fb3be577f68abcff8bb09ca0e710e7f0684504d5c849baff14d0f6c26a0913",
+    "v6lite/execution_time.py": "e4358a2bd32928b62ef1610a52a8cc64f7820b496bea88aeea681fa80ad5d85b",
+    "v6lite/store.py": "fcd1b18f1d9baad1271a8eb23ebaf7037c4bb4d4e56a125b8ded2cf6de62bd4d",
+    "v6lite/overnight_evidence.py": "a5769485fe9c48268eec2bc2b0e21d161c692eef754db6f41c347a18506630ae",
+    "v6lite/protection_engine.py": "5bc5c52659d4277cd4af7cffb6aa00c479666fa87669c7fe9b3df68041743ce2",
+    "v6lite/protection_incidents.py": "0b497225215b7a1be4b54b0b8a07695b9db3d9feebae1fa905342b5572878a05",
+    "v6lite/report.py": "8089ecef516b96070bdaeb6a76cb50218f593ca7bec580766d42674f6f14055f",
+    "v6lite/tests/test_batch27a_execution_time.py": "f2d9a1748696bd6aa3d45468f474ac36537d21b12f7a74fdd43e0eb9e2a3c993",
+    "v6lite/tests/test_batch27a_lifecycle.py": "d8610c8689f30041fea721af27cf5e84f2c7b39ae27c9248186b124d2a303cd2",
+    "v6lite/tests/test_batch27a_review_edges.py": "8dfd97e347b1aee846832b724a6f8b43343ecc584c92b92299f9df81f6d88130"
+  },
+  "code_references": {
+    "v6lite/engine.py:351": "_startup_card",
+    "v6lite/engine.py:892": "_on_position_closed",
+    "v6lite/engine.py:1537": "_verify_queried_execution_times",
+    "v6lite/engine.py:1566": "_refresh_execution_times",
+    "v6lite/execution_time.py:74": "historical_receipt_before",
+    "v6lite/store.py:718": "_verify_execution_time",
+    "v6lite/overnight_evidence.py:203": "_overnight_before_tp_stage",
+    "v6lite/protection_engine.py:506": "_protection_on_status",
+    "v6lite/protection_engine.py:837": "_protection_finish_evidence_episode",
+    "v6lite/protection_engine.py:846": "_protection_closed_by_own_fill",
+    "v6lite/protection_incidents.py:212": "_protection_resolve_if_covered",
+    "v6lite/report.py:221": "daily_report"
+  },
+  "receipt_checks": {
+    "red_locked_specs_b26": {
+      "receipt_sha256": "8118015d64fb7dd38231e0bd4656cf0d8e1773566bdac5dba365a05fad517dd1",
+      "totals": {
+        "tests": 86,
+        "failures": 43,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "579d13832e3f4237",
+      "source_unchanged": true,
+      "artifacts": {
+        "red_locked_specs_b26.txt": "e22c04fbd1f9ce727fe92629b62f284e6e4f291d8deed7dc4e79e44a18e537bf",
+        "red_locked_specs_b26.xml": "29bbe473a7450d9ce51fafc8627de5b577cd1cf6cbca90defda6ff327c9f0649",
+        "red_locked_specs_b26_inventory.json": "fb530591b53f83ac47009617b1d4a11d8bd98ee1f3fdb362f75a1cc534ec3af3"
+      }
+    },
+    "green_locked_candidate": {
+      "receipt_sha256": "8def4f60ee97c4f32fcd4800c3f03de9440db8e038501f715076cd2c8ba35c53",
+      "totals": {
+        "tests": 86,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "b736734f8e73edfb",
+      "source_unchanged": true,
+      "artifacts": {
+        "green_locked_candidate.txt": "a65583f922af28e7fa6d6edfcf5042db2f51ab88ca74d35617b563817981a834",
+        "green_locked_candidate.xml": "3952761cee32ea16af9285567370998303aed8dbb7752f2e1df8611cae6124d8",
+        "green_locked_candidate_inventory.json": "7a948dadb7ed71c585daa502eafe7c17034441bb86837a38d77b12502d2a6aae"
+      }
+    },
+    "focused_candidate": {
+      "receipt_sha256": "e98e82f517edb68dc24f07c6fb242bea0d67a99a2f24962fd26ac65ab30023b0",
+      "totals": {
+        "tests": 283,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "b736734f8e73edfb",
+      "source_unchanged": true,
+      "artifacts": {
+        "focused_candidate.txt": "4f5713f390039a896291c7033bad6a9dd5dd66b0abd90b84c461bcace219783f",
+        "focused_candidate.xml": "fc01109b5e8d497e38147b37caa0c8e1bf6f71af8d801a12ff2b85eecb81bee9",
+        "focused_candidate_inventory.json": "25484ae09dc866f3896148b5627f3f64a615e16eb4799734ace63cd9f35f58e3"
+      }
+    },
+    "samples_final": {
+      "receipt_sha256": "8e447e38db7e58070e9d5206808c684b3904cee648fbe6b1d7735cb6edb9a73e",
+      "totals": {
+        "tests": 86,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_code_sha": "b736734f8e73edfb",
+      "source_unchanged": true,
+      "artifacts": {
+        "samples_final.txt": "17c27d40dda63779cfe4f9dc635307a23a3e900d344c0ab8884c4137bad5f633",
+        "samples_final.xml": "10f7eaed478516c18dd00f376f7784d46a8b5e8438da14b17d0e0b2c28bd761d",
+        "samples_final_inventory.json": "7a948dadb7ed71c585daa502eafe7c17034441bb86837a38d77b12502d2a6aae"
+      }
+    }
+  },
+  "raw_junit_inventory_stdout_hashes_verified": true,
+  "baseline_raw_nodeids_equal_green": false,
+  "baseline_canonical_mapping": {
+    "path": "docs/batch27a_evidence/baseline_case_mapping.json",
+    "sha256": "7085902d21abeb66b10fd821cfa419df55cf6c06740741d4abfdc99e41fa99f6",
+    "count": 86,
+    "independent_AST_source_hash_and_parameter_suffix_validation": true,
+    "canonical_order_equals_green": true,
+    "note": "Pytest red rootdir is isolated B26 with specs outside that root; raw nodeids have empty file prefix. Original receipts remain unchanged. AST-derived mapping supplements rather than rewrites raw identifiers."
+  },
+  "reviewed_safety_boundaries": [
+    "Historical receipt exception is read-only: object/list9, strict finite positive numeric types, nine identity fields with independent persistent conId pin/protection binding, exact provisional string equality, and aware instant strictly earlier than ET midnight minus1h. It never clears historical marker or rewrites time/trading_day or claims exact broker verification.",
+    "Complete-query consumer forwards only already-booked pending execs through idempotent record_fill. Unknown executions stay recovery-owned. Callback never starts blocking query; dedicated30s retries continue after CLOSED; incidental inconclusive query cannot consume first dedicated opportunity.",
+    "Same-day verifier rejects equal-valued but differently typed marker identity fields; uncertain/absent/mismatched evidence leaves marker and records review. Known duplicates do not apply economic quantity/price/position changes again.",
+    "Evidence episode completion clears only evidence-incomplete/F4/progress retry on healthy stop proof. OPEN independent resume/write pending-workflow evidence survives dedicated and generic covered-resolution paths. closed=True appears only behind confirmed own-fill helper in two call sites.",
+    "Own-fill exception requires CLOSED qty0/current FILLED protection with both remainders0/exact intent fill quantity/no hold/no emergency/no other visible working SELL/ledger net0. Tests exercise in-query closure plus real short and extra SELL; actual contradictory danger remains P0.",
+    "Repeated WORKING suppression requires same raw status, steady phase, complete strong identity, same generation and ledger-filled/S, and both StatusEvent quantities equal native identity. Initial A ACK and reduce ACK remain urgent; A/B/modify workflows and S+T+X<=P remain guarded.",
+    "Frozen overnight TP is refused before STAGE_BEGIN and gets one persistent perposition+ETday observation. Cached precheck cannot itself authorize writes; actual TP/BE mutation still requires new a-d evidence and keeps scoped/full_exec distinction.",
+    "Close card displays gross minus known commissions and explicitly labels missing fees uncounted/nonfinal; original risk/sizing conservative fee estimate remains unchanged. Prior-close card describes5min retry and independent stop verification without an unsupported protection guarantee."
+  ],
+  "sample_card_count": 493,
+  "samples_final_cards_sha256": "b206dfb33baff94622112eacda0f656d5dd2a836aa6bfc2f6003bf6c7f95be06",
+  "sample_card_checks": {
+    "historical_receipt": {
+      "nodeid": "v6lite/tests/test_batch27a_execution_time.py::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "title": "🟢 INFO · 过夜持仓自动止盈恢复 · AAPL",
+      "required_phrase_visible": true
+    },
+    "a_not_evaluated": {
+      "nodeid": "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "title": "🟠 P1 · 过夜持仓止盈核验未通过 · AAPL",
+      "required_phrase_visible": true
+    },
+    "commission_not_included": {
+      "nodeid": "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_1016_Submitted_then_STP_fill_inside_query_closes_ledger_without_false_P0",
+      "title": "🟢 持仓已关闭",
+      "required_phrase_visible": true
+    },
+    "protection_independent": {
+      "nodeid": "v6lite/tests/test_batch27a_execution_time.py::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "title": "🟢 V6-Lite 已启动（Paper 真实下单（Paper） · 实时行情）",
+      "required_phrase_visible": true
+    }
+  },
+  "limitations": [
+    "Exact10/13 and10/16 original broker query/error records are not available within approved evidence. Onsite BrokerError cause and request-path proportions remain unknown; the in-query fill/stale-P contradiction is an offline reproduction, not proven historical attribution.",
+    "Prior-close failure source needs historical-request response; no claim that premarket absence is normal or that opening bell guarantees recovery.",
+    "Instruction-disclosed execIds/orderIds/times/sequence retained; undisclosed prices/permIds/conIds/orderRefs are synthetic and disclosed. No forbidden runtime/user-state/config access or broker/network connection.",
+    "Windows full-suite3 acceptance remains pending at pre-full review. This document does not certify full-suite results or authorize runtime merge."
+  ],
+  "next_gate": "ROOT locks checkpoint and serially runs3 unchanged-candidate full suites, then independent final report/manifest review before commit/tag"
+}

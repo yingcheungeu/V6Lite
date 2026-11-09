@@ -1,0 +1,124 @@
+{
+  "code_sha": "af35c49fbe84e7c3",
+  "anchors": {
+    "v6lite/config.py:ProtectionConfig": {
+      "file": "v6lite/config.py",
+      "line": 88,
+      "end_line": 98,
+      "excerpt": "class ProtectionConfig:",
+      "file_sha256": "bb413074ee7d5fecc8e8af2f211b14367a05774235da089b307841fdfb485ce7"
+    },
+    "v6lite/config.py:validate": {
+      "file": "v6lite/config.py",
+      "line": 257,
+      "end_line": 348,
+      "excerpt": "def validate(cfg: LiteConfig) -> LiteConfig:",
+      "file_sha256": "bb413074ee7d5fecc8e8af2f211b14367a05774235da089b307841fdfb485ce7"
+    },
+    "v6lite/config.py:fingerprint": {
+      "file": "v6lite/config.py",
+      "line": 180,
+      "end_line": 185,
+      "excerpt": "def fingerprint(self) -> str:",
+      "file_sha256": "bb413074ee7d5fecc8e8af2f211b14367a05774235da089b307841fdfb485ce7"
+    },
+    "v6lite/overnight_evidence.py:_overnight_history": {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 76,
+      "end_line": 129,
+      "excerpt": "def _overnight_history(self, row, now):",
+      "file_sha256": "fcc01c7220642f4a3e61cebad7f4ce92d599a2c3f8953078a58a32c479ef69c7"
+    },
+    "v6lite/overnight_evidence.py:_overnight_authority": {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 184,
+      "end_line": 276,
+      "excerpt": "def _overnight_authority(self, now, row, held, own, others, *, workflow=False, announce=False,",
+      "file_sha256": "fcc01c7220642f4a3e61cebad7f4ce92d599a2c3f8953078a58a32c479ef69c7"
+    },
+    "v6lite/protection_engine.py:_protection_begin_tp": {
+      "file": "v6lite/protection_engine.py",
+      "line": 1463,
+      "end_line": 1608,
+      "excerpt": "def _protection_begin_tp(self, now: datetime, position_id: str, stage: Purpose) -> None:",
+      "file_sha256": "10c2eb145a2aff186a603e2d9c99612aeeb55a354d2d4bfc6ae48e52a8192cf4"
+    },
+    "v6lite/protection_engine.py:_protection_send_tp": {
+      "file": "v6lite/protection_engine.py",
+      "line": 1618,
+      "end_line": 1667,
+      "excerpt": "def _protection_send_tp(self, now: datetime, row) -> None:",
+      "file_sha256": "10c2eb145a2aff186a603e2d9c99612aeeb55a354d2d4bfc6ae48e52a8192cf4"
+    },
+    "v6lite/overnight_evidence.py:_overnight_check_flow": {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 299,
+      "end_line": 333,
+      "excerpt": "def _overnight_check_flow(self, now, row, held, own, others, history):",
+      "file_sha256": "fcc01c7220642f4a3e61cebad7f4ce92d599a2c3f8953078a58a32c479ef69c7"
+    },
+    "v6lite/protection_engine.py:_protection_progress_one": {
+      "file": "v6lite/protection_engine.py",
+      "line": 950,
+      "end_line": 1379,
+      "excerpt": "def _protection_progress_one(self, now: datetime, row, pos) -> None:",
+      "file_sha256": "10c2eb145a2aff186a603e2d9c99612aeeb55a354d2d4bfc6ae48e52a8192cf4"
+    },
+    "v6lite/overnight_evidence.py:_overnight_price_confirmation": {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 400,
+      "end_line": 415,
+      "excerpt": "def _overnight_price_confirmation(self, row, pos, held, history):",
+      "file_sha256": "fcc01c7220642f4a3e61cebad7f4ce92d599a2c3f8953078a58a32c479ef69c7"
+    },
+    "v6lite/overnight_evidence.py:_overnight_failure": {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 131,
+      "end_line": 144,
+      "excerpt": "def _overnight_failure(self, now, row, reason):",
+      "file_sha256": "fcc01c7220642f4a3e61cebad7f4ce92d599a2c3f8953078a58a32c479ef69c7"
+    },
+    "v6lite/overnight_evidence.py:_overnight_display": {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 146,
+      "end_line": 166,
+      "excerpt": "def _overnight_display(self, now, row, reason, history=None):",
+      "file_sha256": "fcc01c7220642f4a3e61cebad7f4ce92d599a2c3f8953078a58a32c479ef69c7"
+    },
+    "v6lite/overnight_evidence.py:_overnight_stop_stable": {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 168,
+      "end_line": 182,
+      "excerpt": "def _overnight_stop_stable(self, now, row, held, own, others):",
+      "file_sha256": "fcc01c7220642f4a3e61cebad7f4ce92d599a2c3f8953078a58a32c479ef69c7"
+    },
+    "v6lite/overnight_evidence.py:_overnight_restore_previous_total": {
+      "file": "v6lite/overnight_evidence.py",
+      "line": 335,
+      "end_line": 376,
+      "excerpt": "def _overnight_restore_previous_total(self, row, intent):",
+      "file_sha256": "fcc01c7220642f4a3e61cebad7f4ce92d599a2c3f8953078a58a32c479ef69c7"
+    },
+    "v6lite/protection_engine.py:_protection_native_quantity_valid": {
+      "file": "v6lite/protection_engine.py",
+      "line": 450,
+      "end_line": 463,
+      "excerpt": "def _protection_native_quantity_valid(self, row, intent, identity):",
+      "file_sha256": "10c2eb145a2aff186a603e2d9c99612aeeb55a354d2d4bfc6ae48e52a8192cf4"
+    },
+    "v6lite/engine.py:_shutdown_report_after_close": {
+      "file": "v6lite/engine.py",
+      "line": 3000,
+      "end_line": 3009,
+      "excerpt": "def _shutdown_report_after_close(self) -> None:",
+      "file_sha256": "5c3d896700afb4a1e88ca0595e57b6ce66e7dc81d645c0215d6af3a52ba822f7"
+    },
+    "v6lite/engine.py:_end_of_day": {
+      "file": "v6lite/engine.py",
+      "line": 3011,
+      "end_line": 3059,
+      "excerpt": "def _end_of_day(self, now: datetime, *, at_shutdown: bool = False) -> None:",
+      "file_sha256": "5c3d896700afb4a1e88ca0595e57b6ce66e7dc81d645c0215d6af3a52ba822f7"
+    }
+  }
+}

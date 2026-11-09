@@ -1,0 +1,12 @@
+{
+  "static_reviewer": "batch20_protection_incident",
+  "result": "PASS; no code edits or tests in this static review",
+  "checks": [
+    "202 reason lookup only same Trade log, code zero and terminal; strong native identity still required",
+    "generic 202 and locally requested cancellation are not REJECTED",
+    "manual limit flatten, zero/no in-flight/quiet evidence then release; no SQL, new entry or blind replacement",
+    "three old test files preserve urgent wake and no nested query/TP assertions, card numeric/unique/numbered assertions",
+    "release method AST unchanged"
+  ],
+  "full_regression_evidence": "regression_windows_full_1.xml:7 failed,1046 passed; all failures repaired and subsequent product suite943 passed"
+}

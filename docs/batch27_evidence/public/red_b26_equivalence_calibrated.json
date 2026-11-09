@@ -1,0 +1,115 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_b26_equivalence_calibrated",
+  "baseline": "b26",
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T08:56:20.497312-07:00",
+  "end_pt": "2026-10-18T08:56:23.855158-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "579d13832e3f4237",
+  "source_unchanged": true,
+  "worktree_code_sha": "e8af99daae36778e",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "e8af99daae36778e4ad1d0df9574c061b456c5e62bf7ecfa9ac2f43d8e9b6cdb",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observer_equivalence.py",
+      "sha256": "26caed002a19e6fd7f089fdd3abad11f75c346517ffd29ef9913462aa28ecbe5"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 7,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "outcome": "failure",
+      "message": "AssertionError: ('scale target rows', 'PROTECT_STATE', 6, 4)\nassert 6 <= 5"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observer_equivalence",
+      "name": "test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change",
+      "outcome": "failure",
+      "message": "AssertionError: normal owed-End recovery must retain final query statistics\nassert []"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[allow]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[a]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[b]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[c]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_actual_overnight_permission_and_refusal_are_unchanged_by_audit_sink[d]",
+      "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_real_owned_End_debt_drains_once_and_is_counted_without_query_semantic_change"
+    ]
+  },
+  "stdout_sha256": "96ee21318e6a12d423269026ef96a844aa8742e27b208c08dc9bd6321ac66deb",
+  "junit_sha256": "bd5d05a19278753ee1fc30dad4d9418364d9307db74867f214f8305109a84ccb",
+  "inventory_sha256": "b24fd39efbc754cce1ad7d37deece938648bea48b6b9b6db9137dbc06f69fecb",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "red_b26_equivalence_calibrated.json": "5010ce4e3812d103dd4cca3c666da9d3ee771f03595eb6888327a7b842dd6023",
+      "red_b26_equivalence_calibrated.xml": "33f1d8e8783d4debc657e97c5de11c89b975ccad1de1529707f92fb845f250f2",
+      "red_b26_equivalence_calibrated_inventory.json": "3a936104320f0ed4c215b07825a0c6030f33c3f8abfa4d0f6d6a7a48a4f616c4",
+      "red_b26_equivalence_calibrated.txt": "96ee21318e6a12d423269026ef96a844aa8742e27b208c08dc9bd6321ac66deb"
+    }
+  }
+}

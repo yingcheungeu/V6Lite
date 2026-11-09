@@ -1,0 +1,13 @@
+{
+  "synthetic_only": true,
+  "cards": [
+    {
+      "title": "🟠 P1 · IBKR 连接断开",
+      "body": "🟠 P1 · IBKR 连接断开\n发生了什么：IBKR API 连接已断开。\n影响：券商状态无法验证；新入场暂停，退出需待恢复及对账。\n你要做什么：1）检查 IBKR 登录和 API 连接；2）在本机运行 status；3）确认重连和对账结果。"
+    },
+    {
+      "title": "🔴 P0 · V6-Lite 引擎已退出，持仓仅由券商端止损保护",
+      "body": "🔴 P0 · V6-Lite 引擎已退出，持仓仅由券商端止损保护\n退出原因：fatal_error / RuntimeError：synthetic invariant failure\n持仓与保护（最后本地记录，未重新核实）：AAPL 3 股；STP orderId=706；止损价=338.62\n影响：止盈监控和心跳已停止；券商端止损状态须在 TWS 核实。\n你要做什么：1）在 TWS 核对真实持仓、STP 和全部工作单；2）排除退出原因后运行 ~\\v6 g3t，由 John 确认启动并核验接管。"
+    }
+  ]
+}

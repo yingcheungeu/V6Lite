@@ -1,0 +1,14 @@
+{
+  "candidate_code_sha": "1feb152cac25f43a",
+  "production_sha256": {
+    "v6lite/broker/base.py": "21b95859f214f9d969f0aa1ac3cc2eb6dad865efd2b2ad76638136e5023ce593",
+    "v6lite/models.py": "be454da959efd1aad8e2cc81ebdcb2d94ae2b0df79a22b8722ff93bb60fab473",
+    "v6lite/broker/ibkr.py": "d25bdbe5dfcd17eeeea949bcd27a9f9b9752deaa8d3fc9d58d47ae94061fb645",
+    "v6lite/broker/fake.py": "297d4aa54eec186f2b6843dadbaf3358876c65e3d186bcae5294f4d7d5db9def",
+    "v6lite/engine.py": "136d110cc380e516a8ef131d4303b00b07369de4932dde9213193eecf5874cc1",
+    "v6lite/protection_engine.py": "34d9b221ee229b6bd5ce40e02a00e360b46294933bc09b5cc12ad9ed28fff92f"
+  },
+  "new_specs_prior_seed_correction_preserved": true,
+  "seed_correction_pending": "Independent review found synthetic Storeperm replaced before oldFake normal shutdown; fixtureonly correction required, product behaviors unchanged",
+  "tests_old_tracked_modified": false
+}

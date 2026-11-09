@@ -1,0 +1,20 @@
+{
+  "recorded_at_pt": "2026-10-14T06:47:54.939943-07:00",
+  "source_code_sha": "2db6af8f04f145f6",
+  "receipt_sha256": "5790090bc01b49a835dec23196cef94d76637cce9c507ccb317f45c564decc01",
+  "raw_junit_sha256": "9f59562075d549089fae76a2fac80f0c5b5cc3b93ac3a9075539e6605cb41fd4",
+  "spec_sha256_at_attempt": {
+    "v6lite/tests/test_batch25_reconnect_alerts.py": "008ae042a61082cba9e1e21df5f0bb200779f79d3a812ad763613accd199683a",
+    "v6lite/tests/test_batch25_restart.py": "73c41d449fdfdb2bf2b065f2e4148bed4cd88a640cd8bdebf9a963be4e12b8e1"
+  },
+  "result": "Initial attempt retained; not accepted as complete final-spec behavior red",
+  "classification": {
+    "natural_behavior_assertions": 9,
+    "invalid_fixture_config_failures": 10,
+    "new_unrelated_gate_assumption": 1
+  },
+  "fixture_correction": "Client132 requires enabled G3T test config and separate test state dir; account/client guard will not be weakened",
+  "gate_correction": "New standalone steady timeout case expected entries blocked without running full tick gates; that assertion is not the P1 contract or an inherited old strong assertion. Retain actual failure/backoff/oneP1/zero writes/S3/F4 durable deadline and add true identity mismatch blocked contrast. No production or old test change for this fixture assumption.",
+  "followup": "New full frozen specs must rerun against immutableB24 before production write",
+  "production_changes_during_red": false
+}

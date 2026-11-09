@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.314" timestamp="2026-10-27T06:59:14.816559-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch31_overnight" name="test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof" time="0.260"><failure message="AssertionError: live ACK must not depend on an unfinished unrelated receipt-proof round&#10;assert ['PRICE_PENDING'] == ['WORKING']&#10;  &#10;  At index 0 diff: 'PRICE_PENDING' != 'WORKING'&#10;  Use -v to get more diff">v6lite\tests\test_batch31_overnight.py:153: in test_B31_live_ACK_during_normal_owned_round_does_not_depend_on_receipt_proof
+    assert seen==['WORKING'], 'live ACK must not depend on an unfinished unrelated receipt-proof round'
+E   AssertionError: live ACK must not depend on an unfinished unrelated receipt-proof round
+E   assert ['PRICE_PENDING'] == ['WORKING']
+E     
+E     At index 0 diff: 'PRICE_PENDING' != 'WORKING'
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

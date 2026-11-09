@@ -1,0 +1,86 @@
+{
+  "baseline": "v6lite-batch23",
+  "baseline_code_sha": "a17d647ba28c51e4",
+  "classification": "code fix / offline broker-boundary validation",
+  "root_cause_stp": "Native STP finite lmtPrice was copied into contractual limit_price, then rejected by status, snapshots, modification, cancellation and independent price-observation validators.",
+  "baseline_paths": [
+    {
+      "path": "v6lite/broker/ibkr.py",
+      "lines": [
+        582,
+        855,
+        905,
+        1189,
+        1224,
+        1249
+      ]
+    },
+    {
+      "path": "v6lite/protection_engine.py",
+      "lines": [
+        440,
+        647,
+        654,
+        743,
+        806,
+        828,
+        855,
+        863
+      ]
+    },
+    {
+      "path": "v6lite/protection_cancellations.py",
+      "lines": [
+        22,
+        57
+      ]
+    },
+    {
+      "path": "v6lite/tp_evidence.py",
+      "lines": [
+        390,
+        401
+      ]
+    },
+    {
+      "path": "v6lite/engine.py",
+      "lines": [
+        550,
+        1147
+      ]
+    }
+  ],
+  "query_feedback": "UNKNOWN skips steady cadence; each active tick obtains 3 fresh queries. Snapshot PriceObservation itself sets urgent_pending, causing pump to skip sleep and immediately query again. Native library defaults to 45 requests/second.",
+  "query_evidence_limit": "The provided callback excerpt establishes status and echo mismatch. Per-minute query rates/message totals/TWS UI and manual close are user-provided instruction facts, not independently recalculated from a complete session log.",
+  "unknowns": [
+    "Meaning of STP echoed lmtPrice=340.19000000000005 and exact -0.03 difference: unknown; not defined in consulted official documentation.",
+    "Origin of literal Unicode escapes upstream of decoder: unknown; provided excerpt contains no raw 2108 frame."
+  ],
+  "official_sources": [
+    {
+      "url": "https://www.interactivebrokers.com/docs/general/order-types/stop",
+      "supports": "STP becomes a market order upon trigger; stop is auxPrice."
+    },
+    {
+      "url": "https://www.interactivebrokers.com/docs/tws-api/doc/orders/the-order-and-contract-objects",
+      "supports": "auxPrice applies to STP; lmtPrice field applies to limit variants."
+    },
+    {
+      "url": "https://www.interactivebrokers.com/docs/tws-api/doc/order-management/order-status/understanding-order-status-message",
+      "supports": "PreSubmitted is accepted and waiting for a trigger."
+    },
+    {
+      "url": "https://www.interactivebrokers.com/docs/tws-api/doc/error-handling/error-codes",
+      "supports": "2108 is dormant market-data farm notification."
+    }
+  ],
+  "prior_coverage_gap": "FakeBroker returned limit_price=None from the request; old native fixtures copied request.limit_price; batch15 card verification explicitly treated finite STP echo as bad identity.",
+  "production_owner": "batch24_implement",
+  "preserved_scope": [
+    "runtime repository",
+    "operator manual",
+    "John runtime configurations",
+    "user .v6lite state"
+  ],
+  "production_writes_allowed_after": "all corresponding natural baseline red receipts accepted"
+}

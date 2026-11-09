@@ -1,0 +1,139 @@
+{
+  "label": "focused_final_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T07:27:03.248660-07:00",
+  "end_pt": "2026-10-27T07:29:15.710504-07:00",
+  "seconds": 132.453,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch31_close_card.py",
+    "v6lite/tests/test_batch31_commission_interleave.py",
+    "v6lite/tests/test_batch26_be_token_regression.py",
+    "v6lite/tests/test_batch26_overnight_evidence.py",
+    "v6lite/tests/test_batch26_constraint_policy.py",
+    "v6lite/tests/test_batch27a_lifecycle.py",
+    "v6lite/tests/test_batch27b_current_day_evidence.py",
+    "v6lite/tests/test_batch28b_overnight_refresh.py",
+    "v6lite/tests/test_batch28b_callback_edges.py",
+    "v6lite/tests/test_batch28c_price_confirmation.py",
+    "v6lite/tests/test_batch28c_price_edges.py",
+    "v6lite/tests/test_batch28c_raw_open_order.py",
+    "v6lite/tests/test_batch28c_old_raw_callback.py",
+    "v6lite/tests/test_batch28c_ack_ordering.py",
+    "v6lite/tests/test_batch30_commission.py",
+    "v6lite/tests/test_batch30_native_commission.py",
+    "v6lite/tests/test_batch30_refresh_edges.py"
+  ],
+  "code_sha": "0181200fc5070edb",
+  "source_unchanged": true,
+  "inventory_sha256": "b1c4142df590ea3fc094780a9c6c6589953f425962cc79e4d42d0350f3d99ac7",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "2e0aa227982ec852922c80d2a34234e1161e4cde4eb7de656227306a95df78a8",
+  "XML_sha256_before_masking": "75d57a3f3c7589439d8a542d0e7f3184c8b7001ceb98064de64ac53bf20c0498",
+  "delivered_log_sha256": "9498b1cceb031b1698e2162276d58e62dd018cdfdac6c6868dfade03f1494e7d",
+  "delivered_XML_sha256": "75d57a3f3c7589439d8a542d0e7f3184c8b7001ceb98064de64ac53bf20c0498",
+  "tests": 170,
+  "failures": 16,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_real_contradiction_retains_STP_and_freezes[quantity]",
+      "kind": "failure",
+      "message": "AssertionError: assert (None is not None or [])\n +  where None = control('frozen:AAPL')\n +    where control = <v6lite.store.Store object at 0x0000020FB9A23950>.control\n +      where <v6lite.store.Store object at 0x0000020FB9A23950> = <v6lite.tests.helpers.Rig object at 0x0000020FDB5C7710>.store\n +  and   [] = _audits(<v6lite.tests.helpers.Rig object at 0x0000020FDB5C7710>, 'OVERNIGHT_TP_FROZEN')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_real_contradiction_retains_STP_and_freezes[permId]",
+      "kind": "failure",
+      "message": "AssertionError: assert (None is not None or [])\n +  where None = control('frozen:AAPL')\n +    where control = <v6lite.store.Store object at 0x0000020FDB62CC90>.control\n +      where <v6lite.store.Store object at 0x0000020FDB62CC90> = <v6lite.tests.helpers.Rig object at 0x0000020FDB471510>.store\n +  and   [] = _audits(<v6lite.tests.helpers.Rig object at 0x0000020FDB471510>, 'OVERNIGHT_TP_FROZEN')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[quantity-live-openOrder]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_pending_BE_mismatch_never_confirms_or_repairs_original_STP[permId-live-openOrder]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_confirmation",
+      "name": "test_B28c_queued_pre_request_openOrder_cannot_ack_the_later_BE_generation",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_edges",
+      "name": "test_B28c_native_pre_send_openOrder_at_exact_request_time_cannot_confirm_BE",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_edges",
+      "name": "test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[missing-token]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_edges",
+      "name": "test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[malformed-json]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_edges",
+      "name": "test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[empty-binding]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_edges",
+      "name": "test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[missing-modify-generation]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_price_edges",
+      "name": "test_B28c_missing_or_corrupt_BE_token_cannot_be_promoted_by_live_or_complete_query[wrong-history-digest]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[Inactive-live]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[PendingCancel-live]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[account-live]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[conId-live]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_raw_open_order",
+      "name": "test_B28c_raw_openOrder_conflict_cannot_be_hidden_by_existing_SDK_Trade[clientId-live]",
+      "kind": "failure",
+      "message": "ValueError: not an observation-compressible audit kind"
+    }
+  ]
+}

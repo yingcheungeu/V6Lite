@@ -1,0 +1,11 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_B31_observed_timestamp_does_not_turn_identical_native_price_into_audit_spam _
+v6lite\tests\test_batch31_snapshot_guards.py:94: in test_B31_observed_timestamp_does_not_turn_identical_native_price_into_audit_spam
+    assert _count(rig.store,'ORDER_PRICE_OBSERVATION')==before
+E   AssertionError: assert 8 == 1
+E    +  where 8 = _count(<v6lite.store.Store object at 0x000002204ADC9D10>, 'ORDER_PRICE_OBSERVATION')
+E    +    where <v6lite.store.Store object at 0x000002204ADC9D10> = <v6lite.tests.helpers.Rig object at 0x0000022026F91450>.store
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_snapshot_guards.py::test_B31_observed_timestamp_does_not_turn_identical_native_price_into_audit_spam
+1 failed in 1.13s

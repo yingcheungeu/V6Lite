@@ -1,0 +1,52 @@
+{
+  "label": "release_full_1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-20T19:42:55.678278-07:00",
+  "end_pt": "2026-10-20T19:56:39.264865-07:00",
+  "seconds": 823.578,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests",
+    "scripts/tests"
+  ],
+  "tests": 2003,
+  "failures": 4,
+  "errors": 0,
+  "skipped": 1,
+  "source_unchanged": true,
+  "inventory_sha256": "fbb5764b6e44315694a98379f9633031c8dd5b24315016cbcadc5f97cd89e69a",
+  "incomplete": false,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch10",
+      "name": "test_F1_dry_stream_resubscribes_after_210_seconds_without_faking_freshness",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == 1\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000290FA5ADCD0>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x00000290FA5ADCD0> = <v6lite.tests.helpers.Rig object at 0x00000290D9D5E8D0>.broker"
+    },
+    {
+      "classname": "v6lite.tests.test_g2_day1",
+      "name": "test_D1_1_a_silent_stream_is_resubscribed_at_most_once_per_window",
+      "kind": "failure",
+      "message": "AttributeError: 'FakeBroker' object has no attribute 'account_refreshes'"
+    },
+    {
+      "classname": "v6lite.tests.test_g2_day1_selfreview",
+      "name": "test_R7_7_funds_unavailable_then_refresh_logs_no_unbound_error",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 == 1\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000290FCC217D0>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x00000290FCC217D0> = <v6lite.tests.helpers.Rig object at 0x00000290FCC22850>.broker"
+    },
+    {
+      "classname": "v6lite.tests.test_review_round2",
+      "name": "test_S3_quiet_account_stream_is_re_requested",
+      "kind": "failure",
+      "message": "AssertionError: assert 0 >= 1\n +  where 0 = getattr(<v6lite.broker.fake.FakeBroker object at 0x00000290FC33D810>, 'account_refreshes', 0)\n +    where <v6lite.broker.fake.FakeBroker object at 0x00000290FC33D810> = <v6lite.tests.helpers.Rig object at 0x00000290FC06A990>.broker"
+    },
+    {
+      "classname": "v6lite.tests.test_strategy_parity",
+      "name": "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "kind": "skipped",
+      "message": "legacy market_scanner.py not present"
+    }
+  ]
+}

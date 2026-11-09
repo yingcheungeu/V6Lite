@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.346" timestamp="2026-10-29T08:20:04.606306-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch32_normalization_guards" name="test_B32_identical_invalid_native_filled_cannot_be_promoted_to_ACK" time="0.336"><failure message="AssertionError: three equally malformed native fill counts must reject the entire query&#10;assert []">v6lite\tests\test_batch32_normalization_guards.py:36: in test_B32_identical_invalid_native_filled_cannot_be_promoted_to_ACK
+    assert errors, 'three equally malformed native fill counts must reject the entire query'
+E   AssertionError: three equally malformed native fill counts must reject the entire query
+E   assert []</failure></testcase></testsuite></testsuites>

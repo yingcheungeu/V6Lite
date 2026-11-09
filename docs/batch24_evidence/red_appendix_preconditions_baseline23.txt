@@ -1,0 +1,1478 @@
+{"baseline_tag": "v6lite-batch23", "baseline_head": "bd6b8fb9ecf8a08cf9685c8eaf6a46f00be794f0", "source_file": "C:\\Dev\\V6Lite-dev\\.pytest_cache\\batch24_baseline23\\v6lite\\__init__.py", "code_sha": "a17d647ba28c51e4", "test_files": ["v6lite/tests/test_batch24_retry_second_round.py", "v6lite/tests/test_batch24_daily_labels.py", "v6lite/tests/test_batch24_wire_latency.py", "v6lite/tests/test_batch24_connectivity.py"], "test_sha256": {"v6lite/tests/test_batch24_retry_second_round.py": "e70628b804f945b8fb3a019128aaec1ed66ee557122c27247d49aa1937b1d18e", "v6lite/tests/test_batch24_daily_labels.py": "55f7f5112a393deee55e8b9865338a1205eb5240418280a0fb1e1c336b4909cf", "v6lite/tests/test_batch24_wire_latency.py": "5dbbb0b66c0fb45d6460dd646b7cb7076d8107bc9f9e66f785c309a0b969c12f", "v6lite/tests/test_batch24_connectivity.py": "59c5663969da4197bf123c22490fac441b8f85d502a40d5eeb5f5cd7467b678e"}}
+FFFFFFFFFFFFFFFFFFF                                                      [100%]
+================================== FAILURES ===================================
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_CANCEL_PENDING] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205A8EBCF50>
+phase = 'TP_CANCEL_PENDING', fault = 'executions_failed'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+        rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+        initial = dict(rig.store.protection(pid))
+        held = rig.store.position(pid)['qty_open']
+        frozen = 'synthetic operator freeze retained during incomplete second-round proof'
+        rig.store.set_control(rig.clock.now(), 'frozen:AAPL', frozen)
+        refs = [ref for ref in (initial['intent_id'], initial['tp_intent_id']) if ref]
+        holds = {ref: rig.store.intent(ref)['hold_reason'] for ref in refs}
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        assert required, 'partial evidence must omit a real booked execution'
+        scope = {'pid': None, 'round': 0}
+        attempts, good_proofs, first_complete, second_faults = [], [], [], []
+        queries = {'positions': rig.broker.positions_fresh, 'executions': rig.broker.executions_today}
+        evidence = rig.engine._protection_evidence
+        calls = [0]
+        def observed(row):
+            target = row['position_id'] == pid
+            if target:
+                calls[0] += 1
+                round_number = 1 + ((calls[0] - 1) % 2)
+                if round_number == 1:
+                    attempts.append(rig.clock.now().timestamp())
+            else:
+                round_number = 0
+                if row['position_id'] == good_pid:
+                    good_proofs.append(rig.clock.now().timestamp())
+            previous = dict(scope)
+            scope.update(pid=row['position_id'], round=round_number)
+            try:
+                result = evidence(row)  # real three-source query/conversion and completeness checks
+                if target and round_number == 1:
+                    assert result[0] == held and result[3] is True
+                    first_complete.append(rig.clock.now().timestamp())
+                return result
+            finally:
+                scope.update(previous)
+        def positions():
+            rows = queries['positions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault == 'positions_unstable':
+                second_faults.append(rig.clock.now().timestamp())
+                return [replace(row, quantity=row.quantity + 1) if row.symbol == 'AAPL' else row for row in rows]
+            return rows
+        def executions():
+            rows = queries['executions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault.startswith('executions_'):
+                second_faults.append(rig.clock.now().timestamp())
+                if fault == 'executions_failed':
+                    raise BrokerError('synthetic actual second-round reqExecutions failure')
+                return [fill for fill in rows if fill.exec_id not in required]
+            return rows
+        monkeypatch.setattr(rig.engine, '_protection_evidence', observed)
+        monkeypatch.setattr(rig.broker, 'positions_fresh', positions)
+        monkeypatch.setattr(rig.broker, 'executions_today', executions)
+        heartbeats = []
+        heartbeat = rig.broker.gateway_heartbeat_request
+        def healthy_heartbeat():
+            heartbeats.append(rig.clock.now().timestamp())
+            return heartbeat()
+        monkeypatch.setattr(rig.broker, 'gateway_heartbeat_request', healthy_heartbeat)
+        writes = _writes(rig); boundary_checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp() - start < 300:
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='active')
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='steady')
+            rig.engine._gateway_heartbeat(rig.clock.now())
+            row = rig.store.protection(pid)
+            assert row['state'] == expected_state and row['intent_id'] == initial['intent_id']
+            assert tuple(row[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty')) == tuple(
+                initial[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty'))
+            assert rig.store.position(pid)['qty_open'] == held
+            assert rig.store.control('frozen:AAPL') == frozen
+            assert {ref: rig.store.intent(ref)['hold_reason'] for ref in refs} == holds
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == boundary_checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+        assert len(first_complete) == len(second_faults) == len(attempts), 'each attempt must reach its real second proof'
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295272.0, 1791295272.1, 1791295272.2, 1791295272.3, 1791295272.4, 1791295272.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295272.0, 1791295272.1, 1791295272.2, 1791295272.3, 1791295272.4, 1791295272.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=6 股 保护单已确认=4 股 保护单可能=4 股 止盈在途=2 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–4） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-12db91e394ae46908fef orderId=1003 permId=51003 TP=v6l-3dbfe2c45c874983b5ad TP orderId=1005 TP剩余=2 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:01:12+00:00 工作单证据时间=2026-10-06T14:01:12+00:00；止盈撤单或成交数量未在两轮新鲜快照中稳定确认
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-PROTECT_CANCEL_PENDING] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205A8EBC590>
+phase = 'PROTECT_CANCEL_PENDING', fault = 'executions_failed'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+        rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+        initial = dict(rig.store.protection(pid))
+        held = rig.store.position(pid)['qty_open']
+        frozen = 'synthetic operator freeze retained during incomplete second-round proof'
+        rig.store.set_control(rig.clock.now(), 'frozen:AAPL', frozen)
+        refs = [ref for ref in (initial['intent_id'], initial['tp_intent_id']) if ref]
+        holds = {ref: rig.store.intent(ref)['hold_reason'] for ref in refs}
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        assert required, 'partial evidence must omit a real booked execution'
+        scope = {'pid': None, 'round': 0}
+        attempts, good_proofs, first_complete, second_faults = [], [], [], []
+        queries = {'positions': rig.broker.positions_fresh, 'executions': rig.broker.executions_today}
+        evidence = rig.engine._protection_evidence
+        calls = [0]
+        def observed(row):
+            target = row['position_id'] == pid
+            if target:
+                calls[0] += 1
+                round_number = 1 + ((calls[0] - 1) % 2)
+                if round_number == 1:
+                    attempts.append(rig.clock.now().timestamp())
+            else:
+                round_number = 0
+                if row['position_id'] == good_pid:
+                    good_proofs.append(rig.clock.now().timestamp())
+            previous = dict(scope)
+            scope.update(pid=row['position_id'], round=round_number)
+            try:
+                result = evidence(row)  # real three-source query/conversion and completeness checks
+                if target and round_number == 1:
+                    assert result[0] == held and result[3] is True
+                    first_complete.append(rig.clock.now().timestamp())
+                return result
+            finally:
+                scope.update(previous)
+        def positions():
+            rows = queries['positions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault == 'positions_unstable':
+                second_faults.append(rig.clock.now().timestamp())
+                return [replace(row, quantity=row.quantity + 1) if row.symbol == 'AAPL' else row for row in rows]
+            return rows
+        def executions():
+            rows = queries['executions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault.startswith('executions_'):
+                second_faults.append(rig.clock.now().timestamp())
+                if fault == 'executions_failed':
+                    raise BrokerError('synthetic actual second-round reqExecutions failure')
+                return [fill for fill in rows if fill.exec_id not in required]
+            return rows
+        monkeypatch.setattr(rig.engine, '_protection_evidence', observed)
+        monkeypatch.setattr(rig.broker, 'positions_fresh', positions)
+        monkeypatch.setattr(rig.broker, 'executions_today', executions)
+        heartbeats = []
+        heartbeat = rig.broker.gateway_heartbeat_request
+        def healthy_heartbeat():
+            heartbeats.append(rig.clock.now().timestamp())
+            return heartbeat()
+        monkeypatch.setattr(rig.broker, 'gateway_heartbeat_request', healthy_heartbeat)
+        writes = _writes(rig); boundary_checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp() - start < 300:
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='active')
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='steady')
+            rig.engine._gateway_heartbeat(rig.clock.now())
+            row = rig.store.protection(pid)
+            assert row['state'] == expected_state and row['intent_id'] == initial['intent_id']
+            assert tuple(row[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty')) == tuple(
+                initial[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty'))
+            assert rig.store.position(pid)['qty_open'] == held
+            assert rig.store.control('frozen:AAPL') == frozen
+            assert {ref: rig.store.intent(ref)['hold_reason'] for ref in refs} == holds
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == boundary_checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+        assert len(first_complete) == len(second_faults) == len(attempts), 'each attempt must reach its real second proof'
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=1 股 保护单已确认=1 股 保护单可能=1 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–1） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-19b779fbad4e48aa93e2 orderId=1003 permId=51003 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；末股 GTC 撤单需要两轮稳定完整三项证据
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_NEEDS_RESTORE] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205AA052DD0>
+phase = 'TP_NEEDS_RESTORE', fault = 'executions_failed'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+        rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+        initial = dict(rig.store.protection(pid))
+        held = rig.store.position(pid)['qty_open']
+        frozen = 'synthetic operator freeze retained during incomplete second-round proof'
+        rig.store.set_control(rig.clock.now(), 'frozen:AAPL', frozen)
+        refs = [ref for ref in (initial['intent_id'], initial['tp_intent_id']) if ref]
+        holds = {ref: rig.store.intent(ref)['hold_reason'] for ref in refs}
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        assert required, 'partial evidence must omit a real booked execution'
+        scope = {'pid': None, 'round': 0}
+        attempts, good_proofs, first_complete, second_faults = [], [], [], []
+        queries = {'positions': rig.broker.positions_fresh, 'executions': rig.broker.executions_today}
+        evidence = rig.engine._protection_evidence
+        calls = [0]
+        def observed(row):
+            target = row['position_id'] == pid
+            if target:
+                calls[0] += 1
+                round_number = 1 + ((calls[0] - 1) % 2)
+                if round_number == 1:
+                    attempts.append(rig.clock.now().timestamp())
+            else:
+                round_number = 0
+                if row['position_id'] == good_pid:
+                    good_proofs.append(rig.clock.now().timestamp())
+            previous = dict(scope)
+            scope.update(pid=row['position_id'], round=round_number)
+            try:
+                result = evidence(row)  # real three-source query/conversion and completeness checks
+                if target and round_number == 1:
+                    assert result[0] == held and result[3] is True
+                    first_complete.append(rig.clock.now().timestamp())
+                return result
+            finally:
+                scope.update(previous)
+        def positions():
+            rows = queries['positions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault == 'positions_unstable':
+                second_faults.append(rig.clock.now().timestamp())
+                return [replace(row, quantity=row.quantity + 1) if row.symbol == 'AAPL' else row for row in rows]
+            return rows
+        def executions():
+            rows = queries['executions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault.startswith('executions_'):
+                second_faults.append(rig.clock.now().timestamp())
+                if fault == 'executions_failed':
+                    raise BrokerError('synthetic actual second-round reqExecutions failure')
+                return [fill for fill in rows if fill.exec_id not in required]
+            return rows
+        monkeypatch.setattr(rig.engine, '_protection_evidence', observed)
+        monkeypatch.setattr(rig.broker, 'positions_fresh', positions)
+        monkeypatch.setattr(rig.broker, 'executions_today', executions)
+        heartbeats = []
+        heartbeat = rig.broker.gateway_heartbeat_request
+        def healthy_heartbeat():
+            heartbeats.append(rig.clock.now().timestamp())
+            return heartbeat()
+        monkeypatch.setattr(rig.broker, 'gateway_heartbeat_request', healthy_heartbeat)
+        writes = _writes(rig); boundary_checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp() - start < 300:
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='active')
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='steady')
+            rig.engine._gateway_heartbeat(rig.clock.now())
+            row = rig.store.protection(pid)
+            assert row['state'] == expected_state and row['intent_id'] == initial['intent_id']
+            assert tuple(row[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty')) == tuple(
+                initial[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty'))
+            assert rig.store.position(pid)['qty_open'] == held
+            assert rig.store.control('frozen:AAPL') == frozen
+            assert {ref: rig.store.intent(ref)['hold_reason'] for ref in refs} == holds
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == boundary_checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+        assert len(first_complete) == len(second_faults) == len(attempts), 'each attempt must reach its real second proof'
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=6 股 保护单已确认=4 股 保护单可能=4 股 止盈在途=2 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–4） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-306798c3809449008227 orderId=1003 permId=51003 TP=v6l-f7e5e37b10444443ab40 TP orderId=1005 TP剩余=2 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:01:02+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；executions_today query unavailable
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-replace_after_cancel] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205AA050290>
+phase = 'replace_after_cancel', fault = 'executions_failed'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+>       rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+v6lite\tests\test_batch24_retry_second_round.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_3')
+phase = 'replace_after_cancel'
+
+    def _phase_rig(tmp_path, phase):
+        quantity = 1 if phase in {'PROTECT_CANCEL_PENDING', 'replace_after_cancel'} else 6
+        rig = Rig(tmp_path, protection=ProtectionConfig(enabled=True), risk_per_trade_pct=quantity * .0005)
+        rig.market_calls = []
+        def no_market(*args, **kwargs):
+            rig.market_calls.append((args, kwargs))
+            raise AssertionError('market write is forbidden')
+        rig.broker.submit_market = no_market
+        _watch_boundaries(rig)
+        _two_open_positions(rig)
+        positions = {row['symbol']: row for row in rig.store.open_positions()}
+        pid = positions['AAPL']['position_id']
+        good_pid = positions['SPY']['position_id']
+        assert positions['AAPL']['qty_open'] == quantity
+        rig.broker.protection_auto_status = False
+        if quantity == 1:
+            _begin_tp(rig, pid)
+            row = rig.store.protection(pid)
+            assert row['state'] == 'PROTECT_CANCEL_PENDING'
+            ref = row['intent_id']
+            rig.broker.orders[ref].status = 'Cancelled'
+            adapter, trade = _native_status(rig, ref, raw='Cancelled', code=202,
+                                           reason='Order Canceled - synthetic requested last-share cancellation')
+            _deliver_status(rig, adapter, trade)
+            if phase == 'replace_after_cancel':
+                _settle(rig)
+                row = rig.store.protection(pid)
+                assert row['state'] == 'TP_ACTIVE'
+                req = rig.broker.orders[row['tp_intent_id']].req
+                _terminal_tp(rig, req, raw='Inactive', code=201,
+                             reason='Order rejected - synthetic non-price rejection')
+>               assert rig.store.intent(req.intent_id)['status'] == IntentStatus.REJECTED
+E               AssertionError: assert 'CANCEL_SEEN' == <IntentStatus...D: 'REJECTED'>
+E                 
+E                 - REJECTED
+E                 + CANCEL_SEEN
+
+v6lite\tests\test_batch24_retry_second_round.py:54: AssertionError
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_CANCEL_PENDING] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_4')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205AA2207D0>
+phase = 'TP_CANCEL_PENDING', fault = 'executions_partial'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+        rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+        initial = dict(rig.store.protection(pid))
+        held = rig.store.position(pid)['qty_open']
+        frozen = 'synthetic operator freeze retained during incomplete second-round proof'
+        rig.store.set_control(rig.clock.now(), 'frozen:AAPL', frozen)
+        refs = [ref for ref in (initial['intent_id'], initial['tp_intent_id']) if ref]
+        holds = {ref: rig.store.intent(ref)['hold_reason'] for ref in refs}
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        assert required, 'partial evidence must omit a real booked execution'
+        scope = {'pid': None, 'round': 0}
+        attempts, good_proofs, first_complete, second_faults = [], [], [], []
+        queries = {'positions': rig.broker.positions_fresh, 'executions': rig.broker.executions_today}
+        evidence = rig.engine._protection_evidence
+        calls = [0]
+        def observed(row):
+            target = row['position_id'] == pid
+            if target:
+                calls[0] += 1
+                round_number = 1 + ((calls[0] - 1) % 2)
+                if round_number == 1:
+                    attempts.append(rig.clock.now().timestamp())
+            else:
+                round_number = 0
+                if row['position_id'] == good_pid:
+                    good_proofs.append(rig.clock.now().timestamp())
+            previous = dict(scope)
+            scope.update(pid=row['position_id'], round=round_number)
+            try:
+                result = evidence(row)  # real three-source query/conversion and completeness checks
+                if target and round_number == 1:
+                    assert result[0] == held and result[3] is True
+                    first_complete.append(rig.clock.now().timestamp())
+                return result
+            finally:
+                scope.update(previous)
+        def positions():
+            rows = queries['positions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault == 'positions_unstable':
+                second_faults.append(rig.clock.now().timestamp())
+                return [replace(row, quantity=row.quantity + 1) if row.symbol == 'AAPL' else row for row in rows]
+            return rows
+        def executions():
+            rows = queries['executions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault.startswith('executions_'):
+                second_faults.append(rig.clock.now().timestamp())
+                if fault == 'executions_failed':
+                    raise BrokerError('synthetic actual second-round reqExecutions failure')
+                return [fill for fill in rows if fill.exec_id not in required]
+            return rows
+        monkeypatch.setattr(rig.engine, '_protection_evidence', observed)
+        monkeypatch.setattr(rig.broker, 'positions_fresh', positions)
+        monkeypatch.setattr(rig.broker, 'executions_today', executions)
+        heartbeats = []
+        heartbeat = rig.broker.gateway_heartbeat_request
+        def healthy_heartbeat():
+            heartbeats.append(rig.clock.now().timestamp())
+            return heartbeat()
+        monkeypatch.setattr(rig.broker, 'gateway_heartbeat_request', healthy_heartbeat)
+        writes = _writes(rig); boundary_checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp() - start < 300:
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='active')
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='steady')
+            rig.engine._gateway_heartbeat(rig.clock.now())
+            row = rig.store.protection(pid)
+            assert row['state'] == expected_state and row['intent_id'] == initial['intent_id']
+            assert tuple(row[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty')) == tuple(
+                initial[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty'))
+            assert rig.store.position(pid)['qty_open'] == held
+            assert rig.store.control('frozen:AAPL') == frozen
+            assert {ref: rig.store.intent(ref)['hold_reason'] for ref in refs} == holds
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == boundary_checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+        assert len(first_complete) == len(second_faults) == len(attempts), 'each attempt must reach its real second proof'
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295272.0, 1791295272.1, 1791295272.2, 1791295272.3, 1791295272.4, 1791295272.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295272.0, 1791295272.1, 1791295272.2, 1791295272.3, 1791295272.4, 1791295272.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=6 股 保护单已确认=4 股 保护单可能=4 股 止盈在途=2 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–4） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-60953e390d4141e99512 orderId=1003 permId=51003 TP=v6l-9b92db6a153c4787a4e9 TP orderId=1005 TP剩余=2 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:01:12+00:00 工作单证据时间=2026-10-06T14:01:12+00:00；止盈撤单或成交数量未在两轮新鲜快照中稳定确认
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-PROTECT_CANCEL_PENDING] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_5')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205A8EE0CD0>
+phase = 'PROTECT_CANCEL_PENDING', fault = 'executions_partial'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+        rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+        initial = dict(rig.store.protection(pid))
+        held = rig.store.position(pid)['qty_open']
+        frozen = 'synthetic operator freeze retained during incomplete second-round proof'
+        rig.store.set_control(rig.clock.now(), 'frozen:AAPL', frozen)
+        refs = [ref for ref in (initial['intent_id'], initial['tp_intent_id']) if ref]
+        holds = {ref: rig.store.intent(ref)['hold_reason'] for ref in refs}
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        assert required, 'partial evidence must omit a real booked execution'
+        scope = {'pid': None, 'round': 0}
+        attempts, good_proofs, first_complete, second_faults = [], [], [], []
+        queries = {'positions': rig.broker.positions_fresh, 'executions': rig.broker.executions_today}
+        evidence = rig.engine._protection_evidence
+        calls = [0]
+        def observed(row):
+            target = row['position_id'] == pid
+            if target:
+                calls[0] += 1
+                round_number = 1 + ((calls[0] - 1) % 2)
+                if round_number == 1:
+                    attempts.append(rig.clock.now().timestamp())
+            else:
+                round_number = 0
+                if row['position_id'] == good_pid:
+                    good_proofs.append(rig.clock.now().timestamp())
+            previous = dict(scope)
+            scope.update(pid=row['position_id'], round=round_number)
+            try:
+                result = evidence(row)  # real three-source query/conversion and completeness checks
+                if target and round_number == 1:
+                    assert result[0] == held and result[3] is True
+                    first_complete.append(rig.clock.now().timestamp())
+                return result
+            finally:
+                scope.update(previous)
+        def positions():
+            rows = queries['positions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault == 'positions_unstable':
+                second_faults.append(rig.clock.now().timestamp())
+                return [replace(row, quantity=row.quantity + 1) if row.symbol == 'AAPL' else row for row in rows]
+            return rows
+        def executions():
+            rows = queries['executions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault.startswith('executions_'):
+                second_faults.append(rig.clock.now().timestamp())
+                if fault == 'executions_failed':
+                    raise BrokerError('synthetic actual second-round reqExecutions failure')
+                return [fill for fill in rows if fill.exec_id not in required]
+            return rows
+        monkeypatch.setattr(rig.engine, '_protection_evidence', observed)
+        monkeypatch.setattr(rig.broker, 'positions_fresh', positions)
+        monkeypatch.setattr(rig.broker, 'executions_today', executions)
+        heartbeats = []
+        heartbeat = rig.broker.gateway_heartbeat_request
+        def healthy_heartbeat():
+            heartbeats.append(rig.clock.now().timestamp())
+            return heartbeat()
+        monkeypatch.setattr(rig.broker, 'gateway_heartbeat_request', healthy_heartbeat)
+        writes = _writes(rig); boundary_checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp() - start < 300:
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='active')
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='steady')
+            rig.engine._gateway_heartbeat(rig.clock.now())
+            row = rig.store.protection(pid)
+            assert row['state'] == expected_state and row['intent_id'] == initial['intent_id']
+            assert tuple(row[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty')) == tuple(
+                initial[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty'))
+            assert rig.store.position(pid)['qty_open'] == held
+            assert rig.store.control('frozen:AAPL') == frozen
+            assert {ref: rig.store.intent(ref)['hold_reason'] for ref in refs} == holds
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == boundary_checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+        assert len(first_complete) == len(second_faults) == len(attempts), 'each attempt must reach its real second proof'
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=1 股 保护单已确认=1 股 保护单可能=1 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–1） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-5e56aab9fd00495a8323 orderId=1003 permId=51003 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；末股 GTC 撤单需要两轮稳定完整三项证据
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_NEEDS_RESTORE] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_6')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205AA576310>
+phase = 'TP_NEEDS_RESTORE', fault = 'executions_partial'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+        rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+        initial = dict(rig.store.protection(pid))
+        held = rig.store.position(pid)['qty_open']
+        frozen = 'synthetic operator freeze retained during incomplete second-round proof'
+        rig.store.set_control(rig.clock.now(), 'frozen:AAPL', frozen)
+        refs = [ref for ref in (initial['intent_id'], initial['tp_intent_id']) if ref]
+        holds = {ref: rig.store.intent(ref)['hold_reason'] for ref in refs}
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        assert required, 'partial evidence must omit a real booked execution'
+        scope = {'pid': None, 'round': 0}
+        attempts, good_proofs, first_complete, second_faults = [], [], [], []
+        queries = {'positions': rig.broker.positions_fresh, 'executions': rig.broker.executions_today}
+        evidence = rig.engine._protection_evidence
+        calls = [0]
+        def observed(row):
+            target = row['position_id'] == pid
+            if target:
+                calls[0] += 1
+                round_number = 1 + ((calls[0] - 1) % 2)
+                if round_number == 1:
+                    attempts.append(rig.clock.now().timestamp())
+            else:
+                round_number = 0
+                if row['position_id'] == good_pid:
+                    good_proofs.append(rig.clock.now().timestamp())
+            previous = dict(scope)
+            scope.update(pid=row['position_id'], round=round_number)
+            try:
+                result = evidence(row)  # real three-source query/conversion and completeness checks
+                if target and round_number == 1:
+                    assert result[0] == held and result[3] is True
+                    first_complete.append(rig.clock.now().timestamp())
+                return result
+            finally:
+                scope.update(previous)
+        def positions():
+            rows = queries['positions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault == 'positions_unstable':
+                second_faults.append(rig.clock.now().timestamp())
+                return [replace(row, quantity=row.quantity + 1) if row.symbol == 'AAPL' else row for row in rows]
+            return rows
+        def executions():
+            rows = queries['executions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault.startswith('executions_'):
+                second_faults.append(rig.clock.now().timestamp())
+                if fault == 'executions_failed':
+                    raise BrokerError('synthetic actual second-round reqExecutions failure')
+                return [fill for fill in rows if fill.exec_id not in required]
+            return rows
+        monkeypatch.setattr(rig.engine, '_protection_evidence', observed)
+        monkeypatch.setattr(rig.broker, 'positions_fresh', positions)
+        monkeypatch.setattr(rig.broker, 'executions_today', executions)
+        heartbeats = []
+        heartbeat = rig.broker.gateway_heartbeat_request
+        def healthy_heartbeat():
+            heartbeats.append(rig.clock.now().timestamp())
+            return heartbeat()
+        monkeypatch.setattr(rig.broker, 'gateway_heartbeat_request', healthy_heartbeat)
+        writes = _writes(rig); boundary_checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp() - start < 300:
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='active')
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='steady')
+            rig.engine._gateway_heartbeat(rig.clock.now())
+            row = rig.store.protection(pid)
+            assert row['state'] == expected_state and row['intent_id'] == initial['intent_id']
+            assert tuple(row[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty')) == tuple(
+                initial[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty'))
+            assert rig.store.position(pid)['qty_open'] == held
+            assert rig.store.control('frozen:AAPL') == frozen
+            assert {ref: rig.store.intent(ref)['hold_reason'] for ref in refs} == holds
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == boundary_checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+        assert len(first_complete) == len(second_faults) == len(attempts), 'each attempt must reach its real second proof'
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-replace_after_cancel] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_7')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205AA54EB10>
+phase = 'replace_after_cancel', fault = 'executions_partial'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+>       rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+v6lite\tests\test_batch24_retry_second_round.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_7')
+phase = 'replace_after_cancel'
+
+    def _phase_rig(tmp_path, phase):
+        quantity = 1 if phase in {'PROTECT_CANCEL_PENDING', 'replace_after_cancel'} else 6
+        rig = Rig(tmp_path, protection=ProtectionConfig(enabled=True), risk_per_trade_pct=quantity * .0005)
+        rig.market_calls = []
+        def no_market(*args, **kwargs):
+            rig.market_calls.append((args, kwargs))
+            raise AssertionError('market write is forbidden')
+        rig.broker.submit_market = no_market
+        _watch_boundaries(rig)
+        _two_open_positions(rig)
+        positions = {row['symbol']: row for row in rig.store.open_positions()}
+        pid = positions['AAPL']['position_id']
+        good_pid = positions['SPY']['position_id']
+        assert positions['AAPL']['qty_open'] == quantity
+        rig.broker.protection_auto_status = False
+        if quantity == 1:
+            _begin_tp(rig, pid)
+            row = rig.store.protection(pid)
+            assert row['state'] == 'PROTECT_CANCEL_PENDING'
+            ref = row['intent_id']
+            rig.broker.orders[ref].status = 'Cancelled'
+            adapter, trade = _native_status(rig, ref, raw='Cancelled', code=202,
+                                           reason='Order Canceled - synthetic requested last-share cancellation')
+            _deliver_status(rig, adapter, trade)
+            if phase == 'replace_after_cancel':
+                _settle(rig)
+                row = rig.store.protection(pid)
+                assert row['state'] == 'TP_ACTIVE'
+                req = rig.broker.orders[row['tp_intent_id']].req
+                _terminal_tp(rig, req, raw='Inactive', code=201,
+                             reason='Order rejected - synthetic non-price rejection')
+>               assert rig.store.intent(req.intent_id)['status'] == IntentStatus.REJECTED
+E               AssertionError: assert 'CANCEL_SEEN' == <IntentStatus...D: 'REJECTED'>
+E                 
+E                 - REJECTED
+E                 + CANCEL_SEEN
+
+v6lite\tests\test_batch24_retry_second_round.py:54: AssertionError
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_CANCEL_PENDING] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_8')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205A8C13B50>
+phase = 'TP_CANCEL_PENDING', fault = 'positions_unstable'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+        rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+        initial = dict(rig.store.protection(pid))
+        held = rig.store.position(pid)['qty_open']
+        frozen = 'synthetic operator freeze retained during incomplete second-round proof'
+        rig.store.set_control(rig.clock.now(), 'frozen:AAPL', frozen)
+        refs = [ref for ref in (initial['intent_id'], initial['tp_intent_id']) if ref]
+        holds = {ref: rig.store.intent(ref)['hold_reason'] for ref in refs}
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        assert required, 'partial evidence must omit a real booked execution'
+        scope = {'pid': None, 'round': 0}
+        attempts, good_proofs, first_complete, second_faults = [], [], [], []
+        queries = {'positions': rig.broker.positions_fresh, 'executions': rig.broker.executions_today}
+        evidence = rig.engine._protection_evidence
+        calls = [0]
+        def observed(row):
+            target = row['position_id'] == pid
+            if target:
+                calls[0] += 1
+                round_number = 1 + ((calls[0] - 1) % 2)
+                if round_number == 1:
+                    attempts.append(rig.clock.now().timestamp())
+            else:
+                round_number = 0
+                if row['position_id'] == good_pid:
+                    good_proofs.append(rig.clock.now().timestamp())
+            previous = dict(scope)
+            scope.update(pid=row['position_id'], round=round_number)
+            try:
+                result = evidence(row)  # real three-source query/conversion and completeness checks
+                if target and round_number == 1:
+                    assert result[0] == held and result[3] is True
+                    first_complete.append(rig.clock.now().timestamp())
+                return result
+            finally:
+                scope.update(previous)
+        def positions():
+            rows = queries['positions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault == 'positions_unstable':
+                second_faults.append(rig.clock.now().timestamp())
+                return [replace(row, quantity=row.quantity + 1) if row.symbol == 'AAPL' else row for row in rows]
+            return rows
+        def executions():
+            rows = queries['executions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault.startswith('executions_'):
+                second_faults.append(rig.clock.now().timestamp())
+                if fault == 'executions_failed':
+                    raise BrokerError('synthetic actual second-round reqExecutions failure')
+                return [fill for fill in rows if fill.exec_id not in required]
+            return rows
+        monkeypatch.setattr(rig.engine, '_protection_evidence', observed)
+        monkeypatch.setattr(rig.broker, 'positions_fresh', positions)
+        monkeypatch.setattr(rig.broker, 'executions_today', executions)
+        heartbeats = []
+        heartbeat = rig.broker.gateway_heartbeat_request
+        def healthy_heartbeat():
+            heartbeats.append(rig.clock.now().timestamp())
+            return heartbeat()
+        monkeypatch.setattr(rig.broker, 'gateway_heartbeat_request', healthy_heartbeat)
+        writes = _writes(rig); boundary_checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp() - start < 300:
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='active')
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='steady')
+            rig.engine._gateway_heartbeat(rig.clock.now())
+            row = rig.store.protection(pid)
+            assert row['state'] == expected_state and row['intent_id'] == initial['intent_id']
+            assert tuple(row[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty')) == tuple(
+                initial[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty'))
+            assert rig.store.position(pid)['qty_open'] == held
+            assert rig.store.control('frozen:AAPL') == frozen
+            assert {ref: rig.store.intent(ref)['hold_reason'] for ref in refs} == holds
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == boundary_checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+        assert len(first_complete) == len(second_faults) == len(attempts), 'each attempt must reach its real second proof'
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295272.0, 1791295272.1, 1791295272.2, 1791295272.3, 1791295272.4, 1791295272.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295272.0, 1791295272.1, 1791295272.2, 1791295272.3, 1791295272.4, 1791295272.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=6 股 保护单已确认=4 股 保护单可能=4 股 止盈在途=2 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–4） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-ff9230bf03544f27a93a orderId=1003 permId=51003 TP=v6l-1c775f36c3554b5384bd TP orderId=1005 TP剩余=2 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:01:12+00:00 工作单证据时间=2026-10-06T14:01:12+00:00；止盈撤单或成交数量未在两轮新鲜快照中稳定确认
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-PROTECT_CANCEL_PENDING] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_9')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205A8EE3090>
+phase = 'PROTECT_CANCEL_PENDING', fault = 'positions_unstable'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+        rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+        initial = dict(rig.store.protection(pid))
+        held = rig.store.position(pid)['qty_open']
+        frozen = 'synthetic operator freeze retained during incomplete second-round proof'
+        rig.store.set_control(rig.clock.now(), 'frozen:AAPL', frozen)
+        refs = [ref for ref in (initial['intent_id'], initial['tp_intent_id']) if ref]
+        holds = {ref: rig.store.intent(ref)['hold_reason'] for ref in refs}
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        assert required, 'partial evidence must omit a real booked execution'
+        scope = {'pid': None, 'round': 0}
+        attempts, good_proofs, first_complete, second_faults = [], [], [], []
+        queries = {'positions': rig.broker.positions_fresh, 'executions': rig.broker.executions_today}
+        evidence = rig.engine._protection_evidence
+        calls = [0]
+        def observed(row):
+            target = row['position_id'] == pid
+            if target:
+                calls[0] += 1
+                round_number = 1 + ((calls[0] - 1) % 2)
+                if round_number == 1:
+                    attempts.append(rig.clock.now().timestamp())
+            else:
+                round_number = 0
+                if row['position_id'] == good_pid:
+                    good_proofs.append(rig.clock.now().timestamp())
+            previous = dict(scope)
+            scope.update(pid=row['position_id'], round=round_number)
+            try:
+                result = evidence(row)  # real three-source query/conversion and completeness checks
+                if target and round_number == 1:
+                    assert result[0] == held and result[3] is True
+                    first_complete.append(rig.clock.now().timestamp())
+                return result
+            finally:
+                scope.update(previous)
+        def positions():
+            rows = queries['positions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault == 'positions_unstable':
+                second_faults.append(rig.clock.now().timestamp())
+                return [replace(row, quantity=row.quantity + 1) if row.symbol == 'AAPL' else row for row in rows]
+            return rows
+        def executions():
+            rows = queries['executions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault.startswith('executions_'):
+                second_faults.append(rig.clock.now().timestamp())
+                if fault == 'executions_failed':
+                    raise BrokerError('synthetic actual second-round reqExecutions failure')
+                return [fill for fill in rows if fill.exec_id not in required]
+            return rows
+        monkeypatch.setattr(rig.engine, '_protection_evidence', observed)
+        monkeypatch.setattr(rig.broker, 'positions_fresh', positions)
+        monkeypatch.setattr(rig.broker, 'executions_today', executions)
+        heartbeats = []
+        heartbeat = rig.broker.gateway_heartbeat_request
+        def healthy_heartbeat():
+            heartbeats.append(rig.clock.now().timestamp())
+            return heartbeat()
+        monkeypatch.setattr(rig.broker, 'gateway_heartbeat_request', healthy_heartbeat)
+        writes = _writes(rig); boundary_checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp() - start < 300:
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='active')
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='steady')
+            rig.engine._gateway_heartbeat(rig.clock.now())
+            row = rig.store.protection(pid)
+            assert row['state'] == expected_state and row['intent_id'] == initial['intent_id']
+            assert tuple(row[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty')) == tuple(
+                initial[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty'))
+            assert rig.store.position(pid)['qty_open'] == held
+            assert rig.store.control('frozen:AAPL') == frozen
+            assert {ref: rig.store.intent(ref)['hold_reason'] for ref in refs} == holds
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == boundary_checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+        assert len(first_complete) == len(second_faults) == len(attempts), 'each attempt must reach its real second proof'
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=1 股 保护单已确认=1 股 保护单可能=1 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–1） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-ee45df2f07944bf5bf52 orderId=1003 permId=51003 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:00:31+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；末股 GTC 撤单需要两轮稳定完整三项证据
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_NEEDS_RESTORE] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_10')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205AA501C90>
+phase = 'TP_NEEDS_RESTORE', fault = 'positions_unstable'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+        rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+        initial = dict(rig.store.protection(pid))
+        held = rig.store.position(pid)['qty_open']
+        frozen = 'synthetic operator freeze retained during incomplete second-round proof'
+        rig.store.set_control(rig.clock.now(), 'frozen:AAPL', frozen)
+        refs = [ref for ref in (initial['intent_id'], initial['tp_intent_id']) if ref]
+        holds = {ref: rig.store.intent(ref)['hold_reason'] for ref in refs}
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        assert required, 'partial evidence must omit a real booked execution'
+        scope = {'pid': None, 'round': 0}
+        attempts, good_proofs, first_complete, second_faults = [], [], [], []
+        queries = {'positions': rig.broker.positions_fresh, 'executions': rig.broker.executions_today}
+        evidence = rig.engine._protection_evidence
+        calls = [0]
+        def observed(row):
+            target = row['position_id'] == pid
+            if target:
+                calls[0] += 1
+                round_number = 1 + ((calls[0] - 1) % 2)
+                if round_number == 1:
+                    attempts.append(rig.clock.now().timestamp())
+            else:
+                round_number = 0
+                if row['position_id'] == good_pid:
+                    good_proofs.append(rig.clock.now().timestamp())
+            previous = dict(scope)
+            scope.update(pid=row['position_id'], round=round_number)
+            try:
+                result = evidence(row)  # real three-source query/conversion and completeness checks
+                if target and round_number == 1:
+                    assert result[0] == held and result[3] is True
+                    first_complete.append(rig.clock.now().timestamp())
+                return result
+            finally:
+                scope.update(previous)
+        def positions():
+            rows = queries['positions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault == 'positions_unstable':
+                second_faults.append(rig.clock.now().timestamp())
+                return [replace(row, quantity=row.quantity + 1) if row.symbol == 'AAPL' else row for row in rows]
+            return rows
+        def executions():
+            rows = queries['executions']()
+            if scope['pid'] == pid and scope['round'] == 2 and fault.startswith('executions_'):
+                second_faults.append(rig.clock.now().timestamp())
+                if fault == 'executions_failed':
+                    raise BrokerError('synthetic actual second-round reqExecutions failure')
+                return [fill for fill in rows if fill.exec_id not in required]
+            return rows
+        monkeypatch.setattr(rig.engine, '_protection_evidence', observed)
+        monkeypatch.setattr(rig.broker, 'positions_fresh', positions)
+        monkeypatch.setattr(rig.broker, 'executions_today', executions)
+        heartbeats = []
+        heartbeat = rig.broker.gateway_heartbeat_request
+        def healthy_heartbeat():
+            heartbeats.append(rig.clock.now().timestamp())
+            return heartbeat()
+        monkeypatch.setattr(rig.broker, 'gateway_heartbeat_request', healthy_heartbeat)
+        writes = _writes(rig); boundary_checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp() - start < 300:
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='active')
+            rig.engine._protection_progress(rig.clock.now(), steady_budget=True, phase='steady')
+            rig.engine._gateway_heartbeat(rig.clock.now())
+            row = rig.store.protection(pid)
+            assert row['state'] == expected_state and row['intent_id'] == initial['intent_id']
+            assert tuple(row[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty')) == tuple(
+                initial[key] for key in ('confirmed_remaining', 'pending_max_remaining', 'pending_qty'))
+            assert rig.store.position(pid)['qty_open'] == held
+            assert rig.store.control('frozen:AAPL') == frozen
+            assert {ref: rig.store.intent(ref)['hold_reason'] for ref in refs} == holds
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == boundary_checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+        assert len(first_complete) == len(second_faults) == len(attempts), 'each attempt must reach its real second proof'
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection evidence incomplete AAPL | AAPL 持仓数量=6 股 保护单已确认=4 股 保护单可能=4 股 止盈在途=2 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–4） 股 可能超卖=待核实（可能上界0） 股；当前保护状态待核实；orderRef=v6l-protect-e60c65e195104d30bde3 orderId=1003 permId=51003 TP=v6l-953d3db735f146ddb34c TP orderId=1005 TP剩余=2 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=2026-10-06T14:01:02+00:00 工作单证据时间=2026-10-06T14:01:02+00:00；broker position does not match ledger
+_ test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-replace_after_cancel] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_11')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205AA281F10>
+phase = 'replace_after_cancel', fault = 'positions_unstable'
+
+    @pytest.mark.parametrize('phase', PHASES)
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial', 'positions_unstable'])
+    def test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health(
+            tmp_path, monkeypatch, phase, fault):
+>       rig, pid, good_pid, expected_state = _phase_rig(tmp_path, phase)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+v6lite\tests\test_batch24_retry_second_round.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_second_round_failure_11')
+phase = 'replace_after_cancel'
+
+    def _phase_rig(tmp_path, phase):
+        quantity = 1 if phase in {'PROTECT_CANCEL_PENDING', 'replace_after_cancel'} else 6
+        rig = Rig(tmp_path, protection=ProtectionConfig(enabled=True), risk_per_trade_pct=quantity * .0005)
+        rig.market_calls = []
+        def no_market(*args, **kwargs):
+            rig.market_calls.append((args, kwargs))
+            raise AssertionError('market write is forbidden')
+        rig.broker.submit_market = no_market
+        _watch_boundaries(rig)
+        _two_open_positions(rig)
+        positions = {row['symbol']: row for row in rig.store.open_positions()}
+        pid = positions['AAPL']['position_id']
+        good_pid = positions['SPY']['position_id']
+        assert positions['AAPL']['qty_open'] == quantity
+        rig.broker.protection_auto_status = False
+        if quantity == 1:
+            _begin_tp(rig, pid)
+            row = rig.store.protection(pid)
+            assert row['state'] == 'PROTECT_CANCEL_PENDING'
+            ref = row['intent_id']
+            rig.broker.orders[ref].status = 'Cancelled'
+            adapter, trade = _native_status(rig, ref, raw='Cancelled', code=202,
+                                           reason='Order Canceled - synthetic requested last-share cancellation')
+            _deliver_status(rig, adapter, trade)
+            if phase == 'replace_after_cancel':
+                _settle(rig)
+                row = rig.store.protection(pid)
+                assert row['state'] == 'TP_ACTIVE'
+                req = rig.broker.orders[row['tp_intent_id']].req
+                _terminal_tp(rig, req, raw='Inactive', code=201,
+                             reason='Order rejected - synthetic non-price rejection')
+>               assert rig.store.intent(req.intent_id)['status'] == IntentStatus.REJECTED
+E               AssertionError: assert 'CANCEL_SEEN' == <IntentStatus...D: 'REJECTED'>
+E                 
+E                 - REJECTED
+E                 + CANCEL_SEEN
+
+v6lite\tests\test_batch24_retry_second_round.py:54: AssertionError
+_ test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_failed] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_pending_operator_resu0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205AA4465D0>
+fault = 'executions_failed'
+
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial'])
+    def test_B24_pending_operator_resume_cannot_bypass_failed_position_retry(tmp_path, monkeypatch, fault):
+        rig, pid, req, pause = _paused(tmp_path)
+        _request_resume(rig, pid, pause)
+        raw_pause = rig.store.control(f'tp_pause:{pid}')
+        raw_request = rig.store.control(f'resume_tp:{pid}')
+        initial = dict(rig.store.protection(pid))
+        assert initial['state'] == 'WORKING' and not rig.store.control('frozen:AAPL')
+        assert not rig.store.intent(initial['intent_id'])['hold_reason']
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        attempts = []; query_trace = []
+        for method in ('open_orders', 'positions_fresh', 'executions_today'):
+            original = getattr(rig.broker, method)
+            def query(*args, _method=method, _original=original, **kwargs):
+                query_trace.append((_method, rig.clock.now().timestamp()))
+                if _method == 'open_orders':
+                    attempts.append(rig.clock.now().timestamp())
+                result = _original(*args, **kwargs)
+                if _method == 'executions_today':
+                    if fault == 'executions_failed':
+                        raise BrokerError('synthetic resume reqExecutions failed')
+                    return [fill for fill in result if fill.exec_id not in required]
+                return result
+            monkeypatch.setattr(rig.broker, method, query)
+        writes = _writes(rig); checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp()-start < 300:
+            rig.engine._tp_consume_resume(rig.clock.now())  # real authorized request consumer, no failure-helper calls
+            assert rig.store.control(f'tp_pause:{pid}') == raw_pause
+            assert rig.store.control(f'resume_tp:{pid}') == raw_request
+            row = rig.store.protection(pid)
+            assert row['state'] == 'WORKING' and row['intent_id'] == initial['intent_id']
+            assert row['confirmed_remaining'] == initial['confirmed_remaining'] == 3
+            assert not rig.store.control('frozen:AAPL') and not rig.store.intent(row['intent_id'])['hold_reason']
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:205: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-0e5f25e506ac4c28ac7c orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-7bf47bb6a88c478e8453 stage=TP1 pause_id=tp-pause-c5e232ba94794df58190；保护恢复仍需完整三项证据。；Order rejected - reason: Your order price is outside the allowed price range. Synthetic IBKR price-band diagnostic; not an account or a live order. 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; END-B23-ORIGINAL-PRICE-REASON
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL reason 2/3 | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-0e5f25e506ac4c28ac7c orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-7bf47bb6a88c478e8453 stage=TP1 pause_id=tp-pause-c5e232ba94794df58190；保护恢复仍需完整三项证据。；Order rejected - reason: Your order price is outside the allowed price range. Synthetic IBKR price-band diagnostic; not an account or a live order. 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; END-B23-ORIGINAL-PRICE-REASON
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL reason 3/3 | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-0e5f25e506ac4c28ac7c orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-7bf47bb6a88c478e8453 stage=TP1 pause_id=tp-pause-c5e232ba94794df58190；保护恢复仍需完整三项证据。；Order rejected - reason: Your order price is outside the allowed price range. Synthetic IBKR price-band diagnostic; not an account or a live order. 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; END-B23-ORIGINAL-PRICE-REASON
+_ test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_partial] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_pending_operator_resu1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205AA447DD0>
+fault = 'executions_partial'
+
+    @pytest.mark.parametrize('fault', ['executions_failed', 'executions_partial'])
+    def test_B24_pending_operator_resume_cannot_bypass_failed_position_retry(tmp_path, monkeypatch, fault):
+        rig, pid, req, pause = _paused(tmp_path)
+        _request_resume(rig, pid, pause)
+        raw_pause = rig.store.control(f'tp_pause:{pid}')
+        raw_request = rig.store.control(f'resume_tp:{pid}')
+        initial = dict(rig.store.protection(pid))
+        assert initial['state'] == 'WORKING' and not rig.store.control('frozen:AAPL')
+        assert not rig.store.intent(initial['intent_id'])['hold_reason']
+        required = {row['exec_id'] for row in rig.store.conn.execute(
+            'SELECT exec_id FROM fills WHERE position_id=?', (pid,))}
+        attempts = []; query_trace = []
+        for method in ('open_orders', 'positions_fresh', 'executions_today'):
+            original = getattr(rig.broker, method)
+            def query(*args, _method=method, _original=original, **kwargs):
+                query_trace.append((_method, rig.clock.now().timestamp()))
+                if _method == 'open_orders':
+                    attempts.append(rig.clock.now().timestamp())
+                result = _original(*args, **kwargs)
+                if _method == 'executions_today':
+                    if fault == 'executions_failed':
+                        raise BrokerError('synthetic resume reqExecutions failed')
+                    return [fill for fill in result if fill.exec_id not in required]
+                return result
+            monkeypatch.setattr(rig.broker, method, query)
+        writes = _writes(rig); checks = len(rig._b23_write_checks)
+        start = rig.clock.now().timestamp()
+        while rig.clock.now().timestamp()-start < 300:
+            rig.engine._tp_consume_resume(rig.clock.now())  # real authorized request consumer, no failure-helper calls
+            assert rig.store.control(f'tp_pause:{pid}') == raw_pause
+            assert rig.store.control(f'resume_tp:{pid}') == raw_request
+            row = rig.store.protection(pid)
+            assert row['state'] == 'WORKING' and row['intent_id'] == initial['intent_id']
+            assert row['confirmed_remaining'] == initial['confirmed_remaining'] == 3
+            assert not rig.store.control('frozen:AAPL') and not rig.store.intent(row['intent_id'])['hold_reason']
+            assert _writes(rig) == writes and len(rig._b23_write_checks) == checks
+            _safety(rig)
+            rig.advance(seconds=.1)
+>       _assert_retry_schedule(attempts)
+
+v6lite\tests\test_batch24_retry_second_round.py:205: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+times = [1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...]
+
+    def _assert_retry_schedule(times):
+>       assert 10 <= len(times) <= 15, ('actual failed-workflow attempts in five minutes', len(times))
+E       AssertionError: ('actual failed-workflow attempts in five minutes', 3000)
+E       assert 3000 <= 15
+E        +  where 3000 = len([1791295262.0, 1791295262.1, 1791295262.2, 1791295262.3, 1791295262.4, 1791295262.5, ...])
+
+v6lite\tests\test_batch24_retry_second_round.py:73: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-de8c6e92e12d4c6584f7 orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-b9452ffa1811472eb707 stage=TP1 pause_id=tp-pause-818b34566b83489d824e；保护恢复仍需完整三项证据。；Order rejected - reason: Your order price is outside the allowed price range. Synthetic IBKR price-band diagnostic; not an account or a live order. 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; END-B23-ORIGINAL-PRICE-REASON
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL reason 2/3 | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-de8c6e92e12d4c6584f7 orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-b9452ffa1811472eb707 stage=TP1 pause_id=tp-pause-818b34566b83489d824e；保护恢复仍需完整三项证据。；Order rejected - reason: Your order price is outside the allowed price range. Synthetic IBKR price-band diagnostic; not an account or a live order. 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; END-B23-ORIGINAL-PRICE-REASON
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection tp price rejected AAPL reason 3/3 | AAPL TP数量=1 股；发送限价=119.41；bid=119.64 ask=119.7 行情年龄=0.0s；orderRef=v6l-de8c6e92e12d4c6584f7 orderId=1003 permId=51003 broker code=201；自动止盈暂停 position=pos-b9452ffa1811472eb707 stage=TP1 pause_id=tp-pause-818b34566b83489d824e；保护恢复仍需完整三项证据。；Order rejected - reason: Your order price is outside the allowed price range. Synthetic IBKR price-band diagnostic; not an account or a live order. 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; 保留完整原文🍎 price constraint detail; END-B23-ORIGINAL-PRICE-REASON
+_ test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway disconnected-IBKR \u65ad\u7ebf] _
+
+machine = 'Gateway disconnected', visible = 'IBKR 断线'
+
+    @pytest.mark.parametrize('machine,visible', [
+        ('Gateway disconnected', 'IBKR 断线'),
+        ('Gateway clock skew', 'IBKR 时钟偏差'),
+    ])
+    def test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR(machine, visible):
+        raw = '\n'.join([
+            'ATTENTION: ' + machine,
+            'Scans    10:00 ET started signals=2 entered=AAPL',
+            'Signals  AAPL BUY 78',
+            'Decisions no WOULD_BUY; gate n/a',
+            'Orders   3 placed · 4 canceled',
+            'Positions AAPL 3 · drift none · broker protection WORKING S=3',
+            'Gateway  this process today, through report time: replies 7 · max verified 0.75s · misses 2',
+            'Alerts   this process today, through report time: sent 9 · failed 0',
+            'Quotes   RTH availability 5/6; LIVE subscribed symbol-samples',
+            'code_sha synthetic-b24',
+        ])
+        card = daily_health_card(raw, date(2026, 10, 12))
+        embed = card.as_embed()
+        assert embed['title'].startswith('⚠️ 需关注') and embed['color'] == P1_ORANGE
+>       assert visible in embed['title']
+E       AssertionError: assert 'IBKR 断线' in '⚠️ 需关注 · 真实下单（Paper）：Gateway 断线'
+
+v6lite\tests\test_batch24_daily_labels.py:31: AssertionError
+_ test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway clock skew-IBKR \u65f6\u949f\u504f\u5dee] _
+
+machine = 'Gateway clock skew', visible = 'IBKR 时钟偏差'
+
+    @pytest.mark.parametrize('machine,visible', [
+        ('Gateway disconnected', 'IBKR 断线'),
+        ('Gateway clock skew', 'IBKR 时钟偏差'),
+    ])
+    def test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR(machine, visible):
+        raw = '\n'.join([
+            'ATTENTION: ' + machine,
+            'Scans    10:00 ET started signals=2 entered=AAPL',
+            'Signals  AAPL BUY 78',
+            'Decisions no WOULD_BUY; gate n/a',
+            'Orders   3 placed · 4 canceled',
+            'Positions AAPL 3 · drift none · broker protection WORKING S=3',
+            'Gateway  this process today, through report time: replies 7 · max verified 0.75s · misses 2',
+            'Alerts   this process today, through report time: sent 9 · failed 0',
+            'Quotes   RTH availability 5/6; LIVE subscribed symbol-samples',
+            'code_sha synthetic-b24',
+        ])
+        card = daily_health_card(raw, date(2026, 10, 12))
+        embed = card.as_embed()
+        assert embed['title'].startswith('⚠️ 需关注') and embed['color'] == P1_ORANGE
+>       assert visible in embed['title']
+E       AssertionError: assert 'IBKR 时钟偏差' in '⚠️ 需关注 · 真实下单（Paper）：Gateway 时钟偏差'
+
+v6lite\tests\test_batch24_daily_labels.py:31: AssertionError
+_ test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[query_notice] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_real_elapsed_callback0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205CAA4BBD0>
+request = <FixtureRequest for <Function test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[query_notice]>>
+cost_source = 'query_notice'
+
+    @pytest.mark.parametrize('cost_source', ['query_notice', 'connection_write'])
+    def test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals(
+            tmp_path, monkeypatch, request, cost_source):
+        adapter, loop, messages = _native_wire(tmp_path, monkeypatch, request)
+        client = adapter.ib.client
+        elapsed = []
+        recorder = client.conn.sendMsg
+        def send(packet):
+            recorder(packet)  # actual native connection boundary, never invented timestamps
+            if cost_source == 'connection_write' and b'late-wire' in packet:
+                elapsed.append(loop.time())
+                loop.now += .4  # synchronous real socket operation consumes clock time
+        monkeypatch.setattr(client.conn, 'sendMsg', send)
+        def slow_notice(*args):
+            elapsed.append(loop.time())
+            loop.now += .4  # synchronous audit/alert callback, without helper-output mocks
+        if cost_source == 'query_notice':
+            setter = getattr(adapter, 'set_query_throttle_handler', None)
+            if setter is not None:
+                setter(slow_notice)
+            else:
+                # B23 has the real native event but no adapter notice API. Its red
+                # still must fail the actual wire contract, never missing API.
+                client.throttleStart += slow_notice
+        for n in range(10):
+            client.sendMsg('49\0warm-' + str(n) + '\0')
+        if cost_source == 'query_notice':
+            loop.now += 1.000001
+            client.sendMsg('61\0position-first\0')
+            client.sendMsg('61\0position-second\0')
+            client.sendMsg('7\0execution-first\0')
+            client.sendMsg('7\0execution-second\0')
+            client.sendMsg('16\0orders-first\0')
+            client.sendMsg('5\0orders-second\0')
+        else:
+            for n in range(21):
+                client.sendMsg('49\0' + ('late-wire' if n == 0 else 'queued-' + str(n)) + '\0')
+            client.sendMsg('61\0position-first\0')
+            client.sendMsg('61\0position-second\0')
+        client.sendMsg('3\0entry-order\0')
+        client.sendMsg('4\0cancel-order\0')
+        client.sendMsg('3\0stop-order\0')
+        _drain_elapsed_callbacks(loop)
+        writes = [msg.split('\0')[1] for _,msg in messages if _opcode(msg) in {'3','4'}]
+        assert writes == ['entry-order','cancel-order','stop-order']
+>       _assert_wire_limits(messages)
+
+v6lite\tests\test_batch24_wire_latency.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+messages = [(1.000001, '49\x00warm-0\x00'), (1.000001, '49\x00warm-1\x00'), (1.000001, '49\x00warm-2\x00'), (1.000001, '49\x00warm-3\x00'), (1.000001, '49\x00warm-4\x00'), (1.000001, '49\x00warm-5\x00'), ...]
+
+    def _assert_wire_limits(messages):
+        assert messages, 'the test must observe actual conn.sendMsg calls'
+        times = [at for at, _ in messages]
+        for at in times:
+            count = sum(at - 1 + 1e-7 < value <= at + 1e-7 for value in times)
+            assert count <= 10, ('actual IBKR messages per sliding second', at, count)
+        for name, codes in [('openOrders', {'5', '16'}), ('positions', {'61'}), ('executions', {'7'})]:
+            actual = [at for at, msg in messages if _opcode(msg) in codes]
+>           assert all(b - a >= 1 - 1e-6 for a, b in zip(actual, actual[1:])), (name, actual)
+E           AssertionError: ('openOrders', [2.000002, 2.000002])
+E           assert False
+E            +  where False = all(<generator object _assert_wire_limits.<locals>.<genexpr> at 0x00000205AA17C660>)
+
+v6lite\tests\test_batch24_pacing.py:114: AssertionError
+_ test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[connection_write] _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_real_elapsed_callback1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000205A8CA8950>
+request = <FixtureRequest for <Function test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[connection_write]>>
+cost_source = 'connection_write'
+
+    @pytest.mark.parametrize('cost_source', ['query_notice', 'connection_write'])
+    def test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals(
+            tmp_path, monkeypatch, request, cost_source):
+        adapter, loop, messages = _native_wire(tmp_path, monkeypatch, request)
+        client = adapter.ib.client
+        elapsed = []
+        recorder = client.conn.sendMsg
+        def send(packet):
+            recorder(packet)  # actual native connection boundary, never invented timestamps
+            if cost_source == 'connection_write' and b'late-wire' in packet:
+                elapsed.append(loop.time())
+                loop.now += .4  # synchronous real socket operation consumes clock time
+        monkeypatch.setattr(client.conn, 'sendMsg', send)
+        def slow_notice(*args):
+            elapsed.append(loop.time())
+            loop.now += .4  # synchronous audit/alert callback, without helper-output mocks
+        if cost_source == 'query_notice':
+            setter = getattr(adapter, 'set_query_throttle_handler', None)
+            if setter is not None:
+                setter(slow_notice)
+            else:
+                # B23 has the real native event but no adapter notice API. Its red
+                # still must fail the actual wire contract, never missing API.
+                client.throttleStart += slow_notice
+        for n in range(10):
+            client.sendMsg('49\0warm-' + str(n) + '\0')
+        if cost_source == 'query_notice':
+            loop.now += 1.000001
+            client.sendMsg('61\0position-first\0')
+            client.sendMsg('61\0position-second\0')
+            client.sendMsg('7\0execution-first\0')
+            client.sendMsg('7\0execution-second\0')
+            client.sendMsg('16\0orders-first\0')
+            client.sendMsg('5\0orders-second\0')
+        else:
+            for n in range(21):
+                client.sendMsg('49\0' + ('late-wire' if n == 0 else 'queued-' + str(n)) + '\0')
+            client.sendMsg('61\0position-first\0')
+            client.sendMsg('61\0position-second\0')
+        client.sendMsg('3\0entry-order\0')
+        client.sendMsg('4\0cancel-order\0')
+        client.sendMsg('3\0stop-order\0')
+        _drain_elapsed_callbacks(loop)
+        writes = [msg.split('\0')[1] for _,msg in messages if _opcode(msg) in {'3','4'}]
+        assert writes == ['entry-order','cancel-order','stop-order']
+>       _assert_wire_limits(messages)
+
+v6lite\tests\test_batch24_wire_latency.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+messages = [(1.000001, '49\x00warm-0\x00'), (1.000001, '49\x00warm-1\x00'), (1.000001, '49\x00warm-2\x00'), (1.000001, '49\x00warm-3\x00'), (1.000001, '49\x00warm-4\x00'), (1.000001, '49\x00warm-5\x00'), ...]
+
+    def _assert_wire_limits(messages):
+        assert messages, 'the test must observe actual conn.sendMsg calls'
+        times = [at for at, _ in messages]
+        for at in times:
+            count = sum(at - 1 + 1e-7 < value <= at + 1e-7 for value in times)
+>           assert count <= 10, ('actual IBKR messages per sliding second', at, count)
+E           AssertionError: ('actual IBKR messages per sliding second', 1.000001, 11)
+E           assert 11 <= 10
+
+v6lite\tests\test_batch24_pacing.py:111: AssertionError
+_ test_B24_native_2110_has_one_readable_log_raw_audit_and_unchanged_loss_gate _
+
+tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_appendix_preconditions_baseline23/test_B24_native_2110_has_one_r0')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x00000205CA9E44D0>
+
+    def test_B24_native_2110_has_one_readable_log_raw_audit_and_unchanged_loss_gate(tmp_path, caplog):
+        rig, pid = _working(tmp_path)
+        row = dict(rig.store.protection(pid))
+        intent = dict(rig.store.intent(row['intent_id']))
+        assert rig.engine.flags.broker_connected
+        before = _writes(rig)
+        adapter = IbkrBroker(rig.cfg)
+        adapter._ensure_channel_hooks()
+        adapter.ib.errorEvent += adapter._on_error
+        adapter.set_urgent_handler(rig.engine._on_urgent_broker_event)
+        raw = r'IBKR server: \u8fde\u63a5\u4e2d\u65ad；等待恢复'
+        caplog.set_level(logging.INFO)
+        caplog.clear()
+        adapter.ib.wrapper.error(-1, 2110, raw, '')
+        events = adapter.drain_events()
+        losses = [event for event in events if isinstance(event, ConnectionEvent)]
+        assert len(losses) == 1 and losses[0].connected is False
+        assert losses[0].reason == '2110:' + raw
+        for event in events:
+            rig.engine._handle_event(rig.clock.now(), event)
+        assert not rig.engine.flags.broker_connected and not rig.engine.flags.reconcile_ok
+        assert rig.engine._link_down
+        snapshot = rig.engine.status_snapshot(rig.clock.now())
+        assert snapshot['entries_allowed'] is False and snapshot['entry_blocks']
+        assert _writes(rig) == before
+        assert rig.store.protection(pid)['state'] == row['state']
+        assert rig.store.intent(row['intent_id'])['hold_reason'] == intent['hold_reason']
+        records = [record for record in caplog.records
+                   if record.name in {'ib_insync.wrapper','v6lite.ibkr'} and '2110' in record.getMessage()]
+        assert len(records) == 1, [record.getMessage() for record in records]
+>       assert '连接中断；等待恢复' in records[0].getMessage()
+E       assert '连接中断；等待恢复' in 'Warning 2110, reqId -1: IBKR server: \\u8fde\\u63a5\\u4e2d\\u65ad；等待恢复'
+E        +  where 'Warning 2110, reqId -1: IBKR server: \\u8fde\\u63a5\\u4e2d\\u65ad；等待恢复' = getMessage()
+E        +    where getMessage = <LogRecord: ib_insync.wrapper, 20, C:\Dev\V6Lite-dev\.venv\Lib\site-packages\ib_insync\wrapper.py, 1111, "Warning 2110, reqId -1: IBKR server: \u8fde\u63a5\u4e2d\u65ad；等待恢复">.getMessage
+
+v6lite\tests\test_batch24_connectivity.py:41: AssertionError
+------------------------------ Captured log call ------------------------------
+INFO     ib_insync.wrapper:wrapper.py:1111 Warning 2110, reqId -1: IBKR server: \u8fde\u63a5\u4e2d\u65ad；等待恢复
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: IBKR disconnected | 2110:IBKR server: \u8fde\u63a5\u4e2d\u65ad；等待恢复
+INFO     v6lite.alerts:alerts.py:901 [ALERT_DELIVERY] channel=memory ok ms=0.0
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_CANCEL_PENDING]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-PROTECT_CANCEL_PENDING]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_NEEDS_RESTORE]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-replace_after_cancel]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_CANCEL_PENDING]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-PROTECT_CANCEL_PENDING]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_NEEDS_RESTORE]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-replace_after_cancel]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_CANCEL_PENDING]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-PROTECT_CANCEL_PENDING]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_NEEDS_RESTORE]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-replace_after_cancel]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_failed]
+FAILED v6lite/tests/test_batch24_retry_second_round.py::test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_partial]
+FAILED v6lite/tests/test_batch24_daily_labels.py::test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway disconnected-IBKR \u65ad\u7ebf]
+FAILED v6lite/tests/test_batch24_daily_labels.py::test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway clock skew-IBKR \u65f6\u949f\u504f\u5dee]
+FAILED v6lite/tests/test_batch24_wire_latency.py::test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[query_notice]
+FAILED v6lite/tests/test_batch24_wire_latency.py::test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[connection_write]
+FAILED v6lite/tests/test_batch24_connectivity.py::test_B24_native_2110_has_one_readable_log_raw_audit_and_unchanged_loss_gate
+19 failed in 51.46s

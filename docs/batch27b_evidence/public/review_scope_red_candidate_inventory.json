@@ -1,0 +1,14 @@
+{
+  "collected": [
+    "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[missing-End]",
+    "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[list-only]",
+    "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time",
+    "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_legacy_broker_without_scoped_capability_keeps_historical_stop_TP_compatibility"
+  ],
+  "executed": [
+    "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[missing-End]",
+    "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_an_explicitly_selected_but_incomplete_or_unscoped_d_result[list-only]",
+    "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_first_TP_refuses_completed_End_when_other_client_row_has_undecodable_native_time",
+    "v6lite/tests/test_batch27b_scope_completeness.py::test_B27b_legacy_broker_without_scoped_capability_keeps_historical_stop_TP_compatibility"
+  ]
+}

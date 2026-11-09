@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="65.066" timestamp="2026-10-27T07:25:18.629457-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="docs.batch31_evidence.commission_interleave_spec" name="test_B31_native_fee_between_reduction_ACK_components_keeps_fast_TP" time="9.940"><failure message="assert [(True, False, True)] == [(True, True, True)]&#10;  &#10;  At index 0 diff: (True, False, True) != (True, True, True)&#10;  Use -v to get more diff">docs\batch31_evidence\commission_interleave_spec.py:35: in test_B31_native_fee_between_reduction_ACK_components_keeps_fast_TP
+    assert server.fee_checks==[(True,True,True)]
+E   assert [(True, False, True)] == [(True, True, True)]
+E     
+E     At index 0 diff: (True, False, True) != (True, True, True)
+E     Use -v to get more diff</failure></testcase><testcase classname="docs.batch31_evidence.commission_interleave_spec" name="test_B31_native_fee_during_final_cancel_keeps_fast_TP3" time="54.101"><failure message="assert [(True, False, True)] == [(True, True, True)]&#10;  &#10;  At index 0 diff: (True, False, True) != (True, True, True)&#10;  Use -v to get more diff">docs\batch31_evidence\commission_interleave_spec.py:60: in test_B31_native_fee_during_final_cancel_keeps_fast_TP3
+    assert server.fee_checks==[(True,True,True)]
+E   assert [(True, False, True)] == [(True, True, True)]
+E     
+E     At index 0 diff: (True, False, True) != (True, True, True)
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "READY",
+    "at": 1791517376.309809,
+    "pid": 23664
+  },
+  {
+    "name": "SIGNAL",
+    "at": 1791517376.481408,
+    "count": 1
+  },
+  {
+    "name": "SHUTDOWN_BEGIN",
+    "at": 1791517376.5067234
+  },
+  {
+    "name": "SHUTDOWN_AUDIT_WRITTEN",
+    "at": 1791517378.4857838,
+    "payload": {
+      "broker_working": [
+        "v6l-console-day"
+      ],
+      "unresolved": [
+        "v6l-console-day"
+      ]
+    }
+  },
+  {
+    "name": "DISCONNECT_DONE",
+    "at": 1791517378.487811
+  },
+  {
+    "name": "SHUTDOWN_AUDIT_CHECKED",
+    "at": 1791517378.489808,
+    "payload": {
+      "broker_working": [
+        "v6l-console-day"
+      ],
+      "unresolved": [
+        "v6l-console-day"
+      ]
+    }
+  },
+  {
+    "name": "ALERTER_CLOSED",
+    "at": 1791517378.491324
+  },
+  {
+    "name": "STORE_CLOSED",
+    "at": 1791517378.4983845
+  },
+  {
+    "name": "LOCK_RELEASED",
+    "at": 1791517378.4993684
+  }
+]

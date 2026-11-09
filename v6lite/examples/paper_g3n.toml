@@ -1,0 +1,60 @@
+# G3-N: synthetic template only; load does not create the state directory.
+# Port 7497 is TWS Paper. Copy/adapt only after operator review.
+mode = "paper"
+
+[ibkr]
+host = "127.0.0.1"
+port = 7497
+client_id = 131
+account = "DU0000000"
+market_data_type = 1
+
+[universe]
+# The ten symbols already selected for Controlled Paper in the RR-CP plan.
+tradable = ["GOOGL", "AAPL", "IWM", "ABT", "IBB", "PANW", "META", "TSLA", "SPY", "AMZN"]
+scan = ["GOOGL", "AAPL", "IWM", "ABT", "IBB", "PANW", "META", "TSLA", "SPY", "AMZN"]
+etf = ["IWM", "IBB", "SPY"]
+protected = ["MSTR"]        # never traded, never managed
+
+[sectors]
+GOOGL = "tech"
+AAPL = "tech"
+PANW = "tech"
+META = "tech"
+AMZN = "tech"
+TSLA = "consumer"
+ABT = "healthcare"
+IBB = "healthcare"
+IWM = "index"
+SPY = "index"
+
+[strategy]
+scan_times_et = ["10:00", "13:30"]
+
+[protection]
+# constraint relies on John's accepted operating constraints A and B.
+# Every TP/BE still requires fresh ledger/position/GTC/visible-fill checks.
+overnight_tp = "freeze"
+enabled = true
+order_type = "STP"
+gap_a_p1_seconds = 5
+gap_a_p0_seconds = 15
+gap_b_cancel_seconds = 10
+gap_b_p0_seconds = 30
+trigger_unfilled_p0_seconds = 60
+steady_check_seconds = 15
+evidence_fail_p0_seconds = 60
+
+[paths]
+state_dir = "~/.v6lite/paper-g3n"
+foreign_lock_paths = ["C:/Dev/TradingV6/state/trading_bot_v6.lock", "C:/Dev/TradingV6/trading_bot.lock"]
+
+[test]
+enabled = false
+
+[alerts]
+discord_webhook_env = "V6LITE_DISCORD_WEBHOOK"
+
+[execution]
+exit_limit_band_pct = 0.002
+tp_max_quote_age_seconds = 3

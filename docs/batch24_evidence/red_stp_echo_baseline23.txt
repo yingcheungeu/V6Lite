@@ -1,0 +1,1183 @@
+{"baseline_tag": "v6lite-batch23", "baseline_head": "bd6b8fb9ecf8a08cf9685c8eaf6a46f00be794f0", "source_file": "C:\\Dev\\V6Lite-dev\\.pytest_cache\\batch24_baseline23\\v6lite\\__init__.py", "code_sha": "a17d647ba28c51e4"}
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE                                   [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account0] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account0]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account1] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account1]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__clientId] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__clientId]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[status__clientId] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[status__clientId]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__conId] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__conId]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__symbol] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__symbol]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderRef] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderRef]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderId] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderId]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[status__orderId] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[status__orderId]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId0] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId0]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId0] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId0]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId1] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId1]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId1] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId1]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__action] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__action]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType0] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType0]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType1] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType1]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__tif] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__tif]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__outsideRth] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__outsideRth]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__secType] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__secType]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__currency] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__currency]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__auxPrice] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__auxPrice]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity0] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity0]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity1] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity1]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_finite_echo_never_relaxes_any_other_native_authority[status__filled] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_finite_echo_never_relaxes_any_other_native_authority[status__filled]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot] _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot]>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_B24_terminal_STP_with_finite_echo_retains_refusal_classification _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_B24_terminal_STP_with_finite_echo_retains_refusal_classification>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+>               return (yield)
+                        ^^^^^
+
+.venv\Lib\site-packages\pytest_asyncio\plugin.py:728: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_stp')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Dev\\V6Lite-dev\\docs\\batch24_evidence\\test_tmp\\red_stp'
+
+C:\Users\yu-ch\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1116: FileNotFoundError
+=========================== short test summary info ===========================
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account0]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account1]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__clientId]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__clientId]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__conId]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__symbol]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderRef]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderId]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__orderId]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId0]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId0]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId1]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId1]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__action]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType0]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType1]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__tif]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__outsideRth]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__secType]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__currency]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__auxPrice]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity0]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity1]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__filled]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot]
+ERROR v6lite/tests/test_batch24_stp_echo.py::test_B24_terminal_STP_with_finite_echo_retains_refusal_classification
+38 errors in 2.40s

@@ -1,0 +1,12 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____________ test_B32_bad_native_filled_single_stays_unverifiable _____________
+v6lite\tests\test_batch32_normalization_guards.py:158: in test_B32_bad_native_filled_single_stays_unverifiable
+    assert errors and states!=['WORKING'], 'a new single bad row cannot bypass original native quantity completeness'
+E   AssertionError: a new single bad row cannot bypass original native quantity completeness
+E   assert ([])
+----------------------------- Captured log setup ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-28T14:00:31+00:00
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch32_normalization_guards.py::test_B32_bad_native_filled_single_stays_unverifiable
+1 failed in 1.38s

@@ -1,0 +1,11 @@
+{
+  "path": "v6lite/tests/test_batch10.py",
+  "function": "test_F5_query_elapsed_includes_old_end_drain",
+  "original_sha256": "5b875c8df97861e22427223e7065a74bddf04a5da1c7115b431871369d177c47",
+  "current_sha256": "e5004f67d963f2717d774ab8bd5204f9a87a381f274b9d66f4766daa42bec8c9",
+  "token_substitution": "logging.INFO -> logging.DEBUG",
+  "substitution_count": 2,
+  "outside_function_bytes_unchanged": true,
+  "all_other_function_bytes_unchanged": true,
+  "reason": "Batch27 section2.3 replaces INFO success QUERY logs with DEBUG; elapsed/drain/native End and unique record assertions unchanged"
+}

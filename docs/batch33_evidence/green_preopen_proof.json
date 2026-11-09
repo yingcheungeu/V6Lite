@@ -1,0 +1,51 @@
+{
+  "dependencies": {
+    "version": "0.9.86",
+    "sources": {
+      "wrapper.py": "4ed7299106979c0b2518658d4d3ef371fe5a39b254586254650edc35217cb0c1",
+      "decoder.py": "b06cbe24eca37e3386d0ab213deb43e493171e8cbb7c26060ea4936f97f79b4c",
+      "client.py": "1d86989d6815881ea88576e8e3bdcf34fe40d1da778dfee68619ee80e53a2822",
+      "ib.py": "b5f60220c941a335c47cbb0257a342e3122b1f07cc9f809a36a0e7c9b4ba84fc",
+      "order.py": "f014b063b899fd9ec1cd4bd4cf9cc834de0efb89c089bdeb673c09b392131ca7",
+      "util.py": "86c7250f24545721a4fd230e747b0d01e66cb1f8a4ad12e152c7a70d4b37d964"
+    }
+  },
+  "dependencies_unchanged": true,
+  "label": "green_preopen_proof",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-31T15:30:36.549612-07:00",
+  "end_pt": "2026-10-31T15:30:41.491812-07:00",
+  "seconds": 4.953,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch33_open_delay.py"
+  ],
+  "code_sha": "852d2b548dc7d46d",
+  "source_unchanged": true,
+  "inventory_sha256": "43417baf8b45af301bcb8553675f52b1f1413f47a24822e88658cc03adee57f6",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "0cc108f12d4fe9608893feea41e1282044be07681f347f48a25e408d2f1cc328",
+  "XML_sha256_before_masking": "1fa460e4938ebb2e360b55ec24d70421e605802fb534a068a08cceaa41bbed79",
+  "delivered_log_sha256": "6c54dd91637ea6dacd990aba1e5553d1923d45ab45c437ce6659c3ddb2734259",
+  "delivered_XML_sha256": "1fa460e4938ebb2e360b55ec24d70421e605802fb534a068a08cceaa41bbed79",
+  "tests": 30,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_new_quote_must_be_fresh_at_actual_start",
+      "kind": "failure",
+      "message": "AssertionError: assert not [{'position_id': 'pos-727aa451d7634ca69d5d', 'stage': 'TP1', 'target': 1}]\n +  where [{'position_id': 'pos-727aa451d7634ca69d5d', 'stage': 'TP1', 'target': 1}] = _audits(<v6lite.tests.helpers.Rig object at 0x0000023D726E3A90>, 'STAGE_BEGIN')"
+    },
+    {
+      "classname": "v6lite.tests.test_batch33_open_delay",
+      "name": "test_B33_existing_workflow_restoration_continues",
+      "kind": "failure",
+      "message": "AssertionError: assert 'RESTORE_PENDING' == 'WORKING'\n  \n  - WORKING\n  + RESTORE_PENDING"
+    }
+  ]
+}

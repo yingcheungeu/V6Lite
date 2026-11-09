@@ -1,0 +1,30 @@
+{
+  "label": "green_addendum_offline_scoped",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T09:58:31.521951-07:00",
+  "end_pt": "2026-10-29T09:58:35.461121-07:00",
+  "seconds": 3.937,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests/test_batch32_offline_release.py",
+    "v6lite/tests/test_batch32_completed_query.py",
+    "v6lite/tests/test_batch32_release.py",
+    "v6lite/tests/test_batch16_f6_release.py",
+    "v6lite/tests/test_batch16_f6_account_evidence.py"
+  ],
+  "code_sha": "7c7d7dc691da5616",
+  "source_unchanged": true,
+  "inventory_sha256": "100c44cf6006798e5386ede09584cb4049800b97dae19685c45e4759eb3be8c1",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "deac4ae10df2334304c2a0cec9bd7f8384ff52cbeb7fc04cbd0c6dbbcad92088",
+  "XML_sha256_before_masking": "47a3c224d702544cb82d092a633e8c154382bdab920b4b43f25ec82dd55fd76c",
+  "delivered_log_sha256": "fa1478bf8817f4b7d393d2bbd22c0e8dd1dd3b6a02eacd177b020667779a4d60",
+  "delivered_XML_sha256": "47a3c224d702544cb82d092a633e8c154382bdab920b4b43f25ec82dd55fd76c",
+  "tests": 29,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": []
+}

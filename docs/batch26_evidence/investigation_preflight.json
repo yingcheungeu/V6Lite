@@ -1,0 +1,21 @@
+{
+  "phase": "section 1 investigation delivered before production edits",
+  "created_at_pt": "2026-10-14T20:57:35.799484-07:00",
+  "baseline_commit": "97fa8c6d68cfd7b700c1474dc6f8a94e158fd2d2",
+  "baseline_code_sha": "ea71abe782e4cf68",
+  "instruction_sha256": "dff7d8eff2edf4e2bfb18e3a63f6a018292cf2662fdcbae7c50268b8cdbee78b",
+  "manual_preserved_sha256": "3df0e4a4f090f059d2579d96011346ceaadaa2c39837f3ab5abb2c6f24cf2576",
+  "investigation_sha256": "41f834b1b843bcbe73599ef92437b211225e5dbae5f632eb3959ca052f142805",
+  "production_unmodified": true,
+  "staging_empty": true,
+  "broker_connections": 0,
+  "agent_roles": {
+    "investigation": "batch26_investigate",
+    "independent_tests": "batch26_tests",
+    "sole_production_implementer": "batch26_implement"
+  },
+  "critical_unresolved_preconditions": [
+    "Account-wide API/TWS/FIX execution visibility cannot be inferred from a successful empty result",
+    "Historical downtime coverage and coherent whole-database rollback require an external trust premise/evidence"
+  ]
+}

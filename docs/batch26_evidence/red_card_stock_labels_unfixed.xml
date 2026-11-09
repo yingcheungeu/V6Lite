@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="1.380" timestamp="2026-10-15T17:59:46.007774-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch26_card_evidence" name="test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[cancelled_gtc-0]" time="0.422"><failure message="AssertionError: #x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL&#10;  &#10;  核验结果：AAPL：GTC STP 工作状态/保护数量与持仓不一致，或存在其他工作中卖单；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。&#10;  影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。&#10;  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。&#10;assert [] == ['0']&#10;  &#10;  Right contains one more item: '0'&#10;  Use -v to get more diff">v6lite\tests\test_batch26_card_evidence.py:80: in test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation
+    assert _labelled_values(text, historical=False) == [current], text
+E   AssertionError: #x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     
+E     核验结果：AAPL：GTC STP 工作状态/保护数量与持仓不一致，或存在其他工作中卖单；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+E     影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+E   assert [] == ['0']
+E     
+E     Right contains one more item: '0'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch26_card_evidence" name="test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[stable_missing_entry-3]" time="0.156"><failure message="AssertionError: #x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL&#10;  &#10;  核验结果：AAPL：账本缺少已持久化的入场成交 execId；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=缺少入场 execId；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。&#10;  影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。&#10;  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。&#10;assert [] == ['3']&#10;  &#10;  Right contains one more item: '3'&#10;  Use -v to get more diff">v6lite\tests\test_batch26_card_evidence.py:80: in test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation
+    assert _labelled_values(text, historical=False) == [current], text
+E   AssertionError: #x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     
+E     核验结果：AAPL：账本缺少已持久化的入场成交 execId；券商 P=3 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=缺少入场 execId；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+E     影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+E   assert [] == ['3']
+E     
+E     Right contains one more item: '3'
+E     Use -v to get more diff</failure></testcase><testcase classname="v6lite.tests.test_batch26_card_evidence" name="test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation[working_query_failed-\u672a\u77e5]" time="0.159"><failure message="AssertionError: #x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL&#10;  &#10;  核验结果：AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=3.0 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:31+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。&#10;  影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。&#10;  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。&#10;assert [] == ['未知']&#10;  &#10;  Right contains one more item: '未知'&#10;  Use -v to get more diff">v6lite\tests\test_batch26_card_evidence.py:80: in test_B26_card_current_working_protection_uses_fresh_broker_truth_and_labels_old_confirmation
+    assert _labelled_values(text, historical=False) == [current], text
+E   AssertionError: #x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL
+E     
+E     核验结果：AAPL：当日新鲜持仓/工作单/成交核验失败：open_orders query unavailable；券商 P=3.0 股，账本=3 股，STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:31+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+E     影响：冻结本持仓新的自动止盈/保本；保留现有券商止损，不自动加量或重建。
+E     你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+E   assert [] == ['未知']
+E     
+E     Right contains one more item: '未知'
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

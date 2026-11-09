@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.752" timestamp="2026-10-12T14:48:54.532244-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch15" name="test_B24_L7_card_current_verification_accepts_finite_STP_echo[340.19000000000005]" time="0.082"><failure message="AssertionError: assert ('当前快照已核实' in '#x1F534 P0 · 疑似触发或保护状态不明\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上...etic complete GTC with finite echo\n影响：疑似触发止损，但现有证据不足以认定券商已执行。\n你要做什么：1）在 TWS 核对价格、保护单和成交；2）不要另下卖单；3）确认券商状态后由 John 处置。')">tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_b15_finite_echo_b23/test_B24_L7_card_current_verif0')
+echo = 340.19000000000005
+
+    @pytest.mark.parametrize("echo", [340.19000000000005, 1.0])
+    def test_B24_L7_card_current_verification_accepts_finite_STP_echo(tmp_path, echo):
+        rig = _protected_rig(tmp_path)
+        _entry_and_fill(rig)
+        row = rig.store.protection(rig.store.open_positions()[0]["position_id"])
+        order = next(o for o in rig.broker.open_orders() if o.intent_id == row["intent_id"])
+        # An external older OpenOrder payload can still carry the echo in the old
+        # limit field. The exact STP validator ignores it and preserves authority.
+        rig.engine._working = {order.intent_id: replace(order, limit_price=echo)}
+        rig.engine._working_at = rig.clock.now()
+        rig.engine._protection_page(rig.clock.now(), "P0", "trigger suspected", row,
+                                    "synthetic complete GTC with finite echo")
+        card = next(body for title, body in reversed(rig.channel.messages)
+                    if "疑似触发或保护状态不明" in title)
+&gt;       assert "当前快照已核实" in card and "未保护=0" in card
+E       AssertionError: assert ('当前快照已核实' in '#x1F534 P0 · 疑似触发或保护状态不明\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上...etic complete GTC with finite echo\n影响：疑似触发止损，但现有证据不足以认定券商已执行。\n你要做什么：1）在 TWS 核对价格、保护单和成交；2）不要另下卖单；3）确认券商状态后由 John 处置。')
+
+v6lite\tests\test_batch15.py:1599: AssertionError</failure></testcase><testcase classname="v6lite.tests.test_batch15" name="test_B24_L7_card_current_verification_accepts_finite_STP_echo[1.0]" time="0.083"><failure message="AssertionError: assert ('当前快照已核实' in '#x1F534 P0 · 疑似触发或保护状态不明\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上...etic complete GTC with finite echo\n影响：疑似触发止损，但现有证据不足以认定券商已执行。\n你要做什么：1）在 TWS 核对价格、保护单和成交；2）不要另下卖单；3）确认券商状态后由 John 处置。')">tmp_path = WindowsPath('C:/Dev/V6Lite-dev/docs/batch24_evidence/test_tmp/red_b15_finite_echo_b23/test_B24_L7_card_current_verif1')
+echo = 1.0
+
+    @pytest.mark.parametrize("echo", [340.19000000000005, 1.0])
+    def test_B24_L7_card_current_verification_accepts_finite_STP_echo(tmp_path, echo):
+        rig = _protected_rig(tmp_path)
+        _entry_and_fill(rig)
+        row = rig.store.protection(rig.store.open_positions()[0]["position_id"])
+        order = next(o for o in rig.broker.open_orders() if o.intent_id == row["intent_id"])
+        # An external older OpenOrder payload can still carry the echo in the old
+        # limit field. The exact STP validator ignores it and preserves authority.
+        rig.engine._working = {order.intent_id: replace(order, limit_price=echo)}
+        rig.engine._working_at = rig.clock.now()
+        rig.engine._protection_page(rig.clock.now(), "P0", "trigger suspected", row,
+                                    "synthetic complete GTC with finite echo")
+        card = next(body for title, body in reversed(rig.channel.messages)
+                    if "疑似触发或保护状态不明" in title)
+&gt;       assert "当前快照已核实" in card and "未保护=0" in card
+E       AssertionError: assert ('当前快照已核实' in '#x1F534 P0 · 疑似触发或保护状态不明\n发生了什么：AAPL 持仓数量=20 股 保护单已确认=20 股 保护单可能=20 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–20） 股 可能超卖=待核实（可能上...etic complete GTC with finite echo\n影响：疑似触发止损，但现有证据不足以认定券商已执行。\n你要做什么：1）在 TWS 核对价格、保护单和成交；2）不要另下卖单；3）确认券商状态后由 John 处置。')
+
+v6lite\tests\test_batch15.py:1599: AssertionError</failure></testcase></testsuite></testsuites>

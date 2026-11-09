@@ -1,0 +1,441 @@
+{
+  "label": "green_final_locked",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-14T12:36:28.606984-07:00",
+  "end_pt": "2026-10-14T12:36:32.933859-07:00",
+  "returncode": 0,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "579746f4f29c99eb",
+  "source_unchanged": true,
+  "worktree_code_sha": "579746f4f29c99eb",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "579746f4f29c99ebd9a497d543b12135d2c0a3b10f58972dd0ea77293a01c097",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_reconnect_alerts.py",
+      "sha256": "60ab5265d112a27e7cf6ada6fcac1fe9b39be272a1146b454df170dfab61bc45"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_restart.py",
+      "sha256": "700733a5c19b48e905f5dc3577a77d65e59225492b4125afd765ba4c8f89c5e9"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_review_regressions.py",
+      "sha256": "b882061f3259977c74b693565957e83274bed40b961c53d167661e3de840ce4c"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 48,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "v6lite/tests/test_batch25_restart.py::test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "v6lite/tests/test_batch25_restart.py::test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]"
+    ]
+  },
+  "stdout_sha256": "d8bbdf480f3198bd5a5268ddd097b15829a3cbaded374bc048136e8530dad835",
+  "junit_sha256": "5321ad0d8e1fd6799e5c82faf48c220bea4a744d1a2a3b422a7453cd2cc2fa0a",
+  "inventory_sha256": "5928c0005b89ce1b118d2924d4ae609a4d429d5d87e70dfecbdf47549b3f1e38"
+}

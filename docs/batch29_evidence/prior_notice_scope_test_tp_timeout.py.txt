@@ -1,0 +1,221 @@
+"""One-shot Paper-only timeout test authority; no broker writes of its own."""
+from __future__ import annotations
+
+import json
+from dataclasses import replace
+from datetime import datetime, timedelta
+from decimal import Decimal, ROUND_UP
+
+from v6lite.market_calendar import ET
+from v6lite.models import Purpose
+
+PREFIX = "test_tp_nonmarketable_once:"
+CLAIM = "test_tp_timeout_claim:"
+TTL = timedelta(minutes=5)
+
+
+def mode_refusal(cfg, *, dry_run=False):
+    if cfg.mode != "paper" or not cfg.test.enabled or cfg.client_id != 132 or dry_run:
+        return "requires paper/test.enabled/client 132 and non dry-run"
+    if not cfg.protection.enabled:
+        return "requires broker STP protection enabled"
+    return None
+
+
+def request_refusal(req, now, epoch):
+    try:
+        if not isinstance(req, dict) or req.get("version") != 29:
+            return "legacy_or_invalid_request"
+        if not epoch or req.get("epoch") != epoch:
+            return "epoch_invalid"
+        if not all(isinstance(req.get(k), str) and req[k].strip() for k in
+                   ("request_id", "operator", "symbol", "position_id", "protection_intent_id")):
+            return "invalid_binding"
+        at = datetime.fromisoformat(req["at"])
+        if at.tzinfo is None or at.astimezone(ET).date() != now.astimezone(ET).date():
+            return "wrong_day_or_timezone"
+        if not timedelta(0) <= now-at <= TTL:
+            return "expired_or_future"
+    except (ValueError, KeyError, TypeError, OverflowError):
+        return "invalid_request"
+    return None
+
+
+def admission_refusal(store, symbol):
+    positions = [p for p in store.open_positions() if p["symbol"] == symbol]
+    if len(positions) != 1 or positions[0]["source"] not in {"strategy", "late_fill"}:
+        return "requires an open Lite position", None, None
+    pos = positions[0]; row = store.protection(pos["position_id"])
+    if (row is None or row["order_type"] != "STP" or row["state"] != "WORKING" or
+            not row["confirmed_at"] or not row["broker_order_id"] or not row["perm_id"] or
+            not row["con_id"] or row["pending_qty"] is not None or
+            row["confirmed_remaining"] != pos["qty_open"] or
+            row["status_seen_generation"] != row["modify_generation"]):
+        return "requires confirmed working STP", pos, row
+    if row["tp_stage"] or row["tp_intent_id"] or row["gap_b_started_at"] or store.pending_stages(pos["position_id"]):
+        return "TP stage already in progress", pos, row
+    if int(pos["qty_open"]) <= 1:
+        return "final stage cannot use timeout injection", pos, row
+    intent = store.intent(row["intent_id"])
+    if intent is None or intent["hold_reason"] or store.control(f"tp_pause:{pos['position_id']}") is not None:
+        return "STP identity held or TP paused", pos, row
+    return None, pos, row
+
+
+def timeout_price(ask):
+    return float((Decimal(str(ask))*Decimal("1.01")).quantize(Decimal(".01"), rounding=ROUND_UP))
+
+
+class TestTpTimeoutMixin:
+    def _test_timeout_expire(self, now):
+        with self.store.tx():
+            for key, raw in self.store.controls_with_prefix(PREFIX).items():
+                try:
+                    req = json.loads(raw)
+                except (ValueError, TypeError):
+                    req = None
+                reason = mode_refusal(self.cfg, dry_run=self.dry_run) or request_refusal(
+                    req, now, self._test_entry_epoch if self.store.control("test_entry_ready") == self._test_entry_epoch else None)
+                if reason:
+                    self.store.delete_control(key)
+                    self.store.audit(now, "TEST_TP_TIMEOUT_RESULT", symbol=key.partition(":")[2],
+                                     request_id=req.get("request_id") if isinstance(req, dict) else None,
+                                     phase="refused", outcome="refused:"+reason)
+
+    def _test_timeout_drop_final(self, now, row):
+        key = PREFIX+row["symbol"]
+        with self.store.tx():
+            raw = self.store.control(key)
+            if raw is not None:
+                self.store.delete_control(key)
+                try:
+                    request = json.loads(raw)
+                except (ValueError, TypeError):
+                    request = None
+                self.store.audit(now, "TEST_TP_TIMEOUT_RESULT", symbol=row["symbol"],
+                    request_id=request.get("request_id") if isinstance(request, dict) else None,
+                    position_id=row["position_id"], phase="refused", outcome="refused:final_stage")
+
+    def _test_timeout_claim(self, now, req, pricing):
+        """After all ordinary gates; commit deletion and exact intent binding before wire."""
+        key = PREFIX+req.symbol
+        with self.store.tx():
+            raw = self.store.control(key)
+            if raw is None:
+                return req, pricing
+            try:
+                request = json.loads(raw)
+            except (ValueError, TypeError):
+                request = None
+            reason = mode_refusal(self.cfg, dry_run=self.dry_run) or request_refusal(
+                request, now, self._test_entry_epoch if self.store.control("test_entry_ready") == self._test_entry_epoch else None)
+            row = self.store.protection(req.position_id)
+            pos = self.store.position(req.position_id)
+            if reason is None:
+                if (row is None or pos is None or pos["status"] != "OPEN" or
+                        request["symbol"] != req.symbol or request["position_id"] != req.position_id or
+                        request["protection_intent_id"] != row["intent_id"]):
+                    reason = "position_binding_changed"
+                elif int(pos["qty_open"]) <= req.quantity or int(row["confirmed_remaining"]) <= 0:
+                    reason = "final_stage"
+                elif (row["state"] != "TP_ACTIVE" or row["tp_intent_id"] != req.intent_id or
+                        row["tp_stage"] != str(req.purpose) or row["pending_qty"] is not None or
+                        not row["gap_b_started_at"] or not row["confirmed_at"] or
+                        row["status_seen_generation"] != row["modify_generation"] or
+                        int(row["confirmed_remaining"]) != int(pos["qty_open"])-req.quantity or
+                        self.store.intent(req.intent_id) is not None or self.store.control(CLAIM+req.intent_id)):
+                    reason = "reduction_not_confirmed_or_replay"
+            self.store.delete_control(key)
+            if reason:
+                self.store.audit(now, "TEST_TP_TIMEOUT_RESULT", symbol=req.symbol, position_id=req.position_id,
+                    request_id=request.get("request_id") if isinstance(request, dict) else None, phase="refused", outcome="refused:"+reason)
+                return req, pricing
+            price = timeout_price(pricing["ask"])
+            snapshot = dict(pricing, calculated_price=price, sent_price=price,
+                            test_timeout_request_id=request["request_id"])
+            fact = dict(request, intent_id=req.intent_id, workflow_id=pricing.get("workflow_id"),
+                        quantity=req.quantity, stage=str(req.purpose), claimed_at=now.isoformat(),
+                        generation=row["modify_generation"], S=row["confirmed_remaining"],
+                        protection_orderId=row["broker_order_id"], permId=row["perm_id"], conId=row["con_id"],
+                        limit_price=price, pricing=snapshot)
+            self.store.set_control(now, CLAIM+req.intent_id, json.dumps(fact, sort_keys=True))
+            self.store.set_control(now, "tp_send:"+req.intent_id, json.dumps(snapshot))
+            self.store.set_control(now, "tp_workflow:"+req.position_id, json.dumps(snapshot))
+            self.store.audit(now, "TEST_TP_TIMEOUT_RESULT", phase="claimed", outcome="claimed",
+                request_id=request["request_id"], symbol=req.symbol, position_id=req.position_id,
+                intent_id=req.intent_id, workflow_id=fact["workflow_id"], ask=pricing["ask"],
+                limit_price=price, quantity=req.quantity)
+        # Only this single _send invocation may use the durable pricing fact.
+        # It is not recreated on restart and the _send finally removes it.
+        if not hasattr(self, "_test_timeout_sending"):
+            self._test_timeout_sending = set()
+        self._test_timeout_sending.add(req.intent_id)
+        return replace(req, limit_price=price), snapshot
+
+    def _test_timeout_expected(self, snapshot, req):
+        if mode_refusal(self.cfg, dry_run=self.dry_run) or req.intent_id not in getattr(self, "_test_timeout_sending", set()):
+            return None
+        fact = self._tp_json(CLAIM+req.intent_id)
+        row = self.store.protection(req.position_id)
+        pos = self.store.position(req.position_id)
+        if (not fact or fact.get("version") != 29 or fact.get("pricing") != snapshot or
+                not self._test_entry_epoch or fact.get("epoch") != self._test_entry_epoch or
+                self.store.control("test_entry_ready") != self._test_entry_epoch or
+                fact.get("intent_id") != req.intent_id or fact.get("position_id") != req.position_id or
+                fact.get("symbol") != req.symbol or fact.get("quantity") != req.quantity or
+                fact.get("stage") != str(req.purpose) or row is None or
+                row["intent_id"] != fact.get("protection_intent_id") or
+                row["tp_intent_id"] != req.intent_id or int(row["confirmed_remaining"]) <= 0 or
+                pos is None or pos["status"] != "OPEN" or
+                int(pos["qty_open"]) < int(row["confirmed_remaining"])+req.quantity or
+                row["state"] != "TP_ACTIVE" or row["tp_stage"] != str(req.purpose) or
+                row["pending_qty"] is not None or row["status_seen_generation"] != row["modify_generation"] or
+                row["modify_generation"] != fact.get("generation") or
+                row["confirmed_remaining"] != fact.get("S") or row["broker_order_id"] != fact.get("protection_orderId") or
+                row["perm_id"] != fact.get("permId") or row["con_id"] != fact.get("conId") or
+                not fact.get("workflow_id") or snapshot.get("workflow_id") != fact["workflow_id"] or
+                self._tp_workflow(row).get("workflow_id") != fact["workflow_id"]):
+            return None
+        return timeout_price(snapshot["ask"])
+
+    def _test_timeout_fact(self, iid):
+        try:
+            fact = self._tp_json(CLAIM+str(iid))
+            intent = self.store.intent(iid) if iid else None
+            if (fact and fact.get("version") == 29 and intent is not None and
+                    fact.get("intent_id") == iid and fact.get("position_id") == intent["position_id"] and
+                    fact.get("symbol") == intent["symbol"] and fact.get("quantity") == intent["quantity"] and
+                    fact.get("limit_price") == intent["limit_price"] and fact.get("stage") == intent["purpose"]):
+                return fact
+        except (ValueError, TypeError, KeyError):
+            pass
+        return None
+
+    def _test_timeout_event(self, now, row, phase, iid=None):
+        iid = iid or row["tp_intent_id"]
+        fact = self._test_timeout_fact(iid)
+        if fact is None:
+            return
+        intent = self.store.intent(iid)
+        gap = row["gap_b_started_at"]
+        self.store.audit(now, "TEST_TP_TIMEOUT_RESULT", phase=phase, outcome=phase,
+            request_id=fact["request_id"], symbol=fact["symbol"], position_id=fact["position_id"],
+            workflow_id=fact["workflow_id"], intent_id=iid, ask=fact["pricing"]["ask"],
+            limit_price=fact["limit_price"], orderId=intent["broker_order_id"],
+            protection_orderId=row["broker_order_id"], S=row["confirmed_remaining"],
+            restored_S=row["confirmed_remaining"] if phase in {"restore_confirm", "gap_close"} else None,
+            gap_b_seconds=(now-datetime.fromisoformat(gap)).total_seconds() if gap else None)
+
+    def _test_timeout_notice(self, now, row):
+        fact = self._test_timeout_fact(row["tp_intent_id"])
+        if fact is None:
+            return
+        from v6lite.alerts import AlertCard, INFO_GREEN
+        title = "测试：止盈超时注入已触发，正在撤单并恢复保护"
+        body = (f"{row['symbol']} {fact['stage']} orderId={self.store.intent(fact['intent_id'])['broker_order_id']}；"
+                f"ask={fact['pricing']['ask']:.2f}；测试限价={fact['limit_price']:.2f}；"
+                f"原STP orderId={row['broker_order_id']}，当前S={row['confirmed_remaining']}。")
+        card = AlertCard(title, INFO_GREEN, (("发生了什么", body),
+            ("影响", "受限Paper测试的止盈单已到B撤单门槛；正在核验撤单及同一GTC恢复实际剩余持仓。"),
+            ("你要做什么", "核对TWS撤单、迟到成交和保护数量；本次测试无需重复命令，超过30秒未恢复仍按P0处置。")))
+        self.alerter.send(now, "INFO", title, body, card=card)

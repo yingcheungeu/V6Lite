@@ -1,0 +1,35 @@
+{
+  "label": "green_precise_107ms",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T07:09:43.618874-07:00",
+  "end_pt": "2026-10-27T07:09:55.494883-07:00",
+  "seconds": 11.875,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_overnight.py",
+    "v6lite/tests/test_batch31_close_card.py",
+    "v6lite/tests/test_batch26_be_token_regression.py",
+    "v6lite/tests/test_batch28c_price_edges.py"
+  ],
+  "code_sha": "0f1588fa9b4f70f8",
+  "source_unchanged": true,
+  "inventory_sha256": "22c05cf1b9e62b1a0f4359f06cd575c01b762c03b49d8531298c5b293fc136a0",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "45daa7bb7c3bb3fd9fa898497c7b74dd306b05dac34d6d6d0e2a2fba7a96e46d",
+  "XML_sha256_before_masking": "09d3c2a43124f38c758a68f5475fc6e8522dc0e86441c863d9ea6b82305fb31c",
+  "delivered_log_sha256": "704f35499cad2ade3d47eb5fa899674e2b91ab5ac5378d3baada6f5b2982365f",
+  "delivered_XML_sha256": "09d3c2a43124f38c758a68f5475fc6e8522dc0e86441c863d9ea6b82305fb31c",
+  "tests": 32,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_overnight",
+      "name": "test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]",
+      "kind": "failure",
+      "message": "KeyError: 'v6l-protect-7631f94d20bc4c729b6d'"
+    }
+  ]
+}

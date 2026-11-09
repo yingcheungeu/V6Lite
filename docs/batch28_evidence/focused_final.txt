@@ -1,0 +1,33 @@
+........................................................................ [ 54%]
+............................................................             [100%]
+============================== warnings summary ===============================
+v6lite/tests/test_batch27_observer_atomicity.py::test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts
+  v6lite\tests\test_batch27_observer_atomicity.py:19: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_new_multi_position_flush_abort_then_retry_has_no_lost_or_duplicate_counts(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history
+  v6lite\tests\test_batch27_daily_report_volume.py:81: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history(
+
+v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear
+  v6lite\tests\test_batch27_daily_report_volume.py:126: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear(
+
+v6lite/tests/test_batch27_masked_report_budget.py::test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice
+  v6lite\tests\test_batch27_masked_report_budget.py:17: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_mask_expansion_keeps_exact_final_display_count_and_omission_notice(
+
+v6lite/tests/test_batch27_short_account_budget.py::test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice
+  v6lite\tests\test_batch27_short_account_budget.py:22: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B27_short_diagnostic_account_mask_keeps_final_event_count_and_omission_notice(
+
+v6lite/tests/test_batch28_section2.py::test_B28_candidate_due_flush_is_atomic_across_positions_and_retry_exactly_once
+  v6lite\tests\test_batch28_section2.py:386: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28_candidate_due_flush_is_atomic_across_positions_and_retry_exactly_once(
+
+v6lite/tests/test_batch28_section2.py::test_B28_candidate_due_flush_respects_outer_rollback_and_unfinished_window
+  v6lite\tests\test_batch28_section2.py:415: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    def test_B28_candidate_due_flush_respects_outer_rollback_and_unfinished_window(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+132 passed, 7 warnings in 15.14s

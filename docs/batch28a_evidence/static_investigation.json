@@ -1,0 +1,82 @@
+[
+  {
+    "tag": "v6lite-batch25",
+    "commit": "97fa8c6d68cfd7b700c1474dc6f8a94e158fd2d2",
+    "functions": {
+      "run_engine": {
+        "path": "v6lite/__main__.py",
+        "line": 265,
+        "end_line": 286,
+        "sha256": "dc726a851ed1bc1723233d1da212f9815bad001b00ca2aaddec2642c71981259",
+        "source": "def run_engine(engine, broker, *, should_stop) -> None:\n    \"\"\"Startup, loop, shutdown. A start that fails before the engine took\n    over order recovery only disconnects: the order-cancelling shutdown\n    path is reserved for an engine that actually took over.\"\"\"\n    try:\n        engine.startup()\n    except BaseException:\n        if getattr(engine, \"took_over\", False):\n            engine.shutdown()\n        else:\n            try:\n                broker.disconnect()\n            except Exception:  # pragma: no cover - best effort\n                log.exception(\"disconnect after failed startup\")\n        raise\n    try:\n        while not should_stop():\n            broker.pump(1.0)\n            engine.process_protection_priority()\n            engine.tick()\n    finally:\n        engine.shutdown()\n"
+      },
+      "pump": {
+        "path": "v6lite/broker/ibkr.py",
+        "line": 581,
+        "end_line": 593,
+        "sha256": "e11cb1783eed46cdd4c91b835a607c0c728f4d5892bdcf1205991bec6ec52278",
+        "source": "    def pump(self, seconds: float) -> None:\n        # Wake the outer engine loop as soon as execDetails/orderStatus arrives\n        # so a fresh confirmation query runs before scanning or historical\n        # data.  No nested blocking request is made inside the callback.\n        self._expire_funds_refresh()\n        deadline = time.monotonic() + max(0.0, seconds)\n        while not self._urgent_pending:\n            left = deadline - time.monotonic()\n            if left <= 0:\n                break\n            self.ib.sleep(min(0.05, left))\n            self._expire_funds_refresh()\n        self._urgent_pending = False\n"
+      }
+    }
+  },
+  {
+    "tag": "v6lite-batch26",
+    "commit": "78a0905e0c45482cf6db7427016231b69144422d",
+    "functions": {
+      "run_engine": {
+        "path": "v6lite/__main__.py",
+        "line": 265,
+        "end_line": 286,
+        "sha256": "dc726a851ed1bc1723233d1da212f9815bad001b00ca2aaddec2642c71981259",
+        "source": "def run_engine(engine, broker, *, should_stop) -> None:\n    \"\"\"Startup, loop, shutdown. A start that fails before the engine took\n    over order recovery only disconnects: the order-cancelling shutdown\n    path is reserved for an engine that actually took over.\"\"\"\n    try:\n        engine.startup()\n    except BaseException:\n        if getattr(engine, \"took_over\", False):\n            engine.shutdown()\n        else:\n            try:\n                broker.disconnect()\n            except Exception:  # pragma: no cover - best effort\n                log.exception(\"disconnect after failed startup\")\n        raise\n    try:\n        while not should_stop():\n            broker.pump(1.0)\n            engine.process_protection_priority()\n            engine.tick()\n    finally:\n        engine.shutdown()\n"
+      },
+      "pump": {
+        "path": "v6lite/broker/ibkr.py",
+        "line": 581,
+        "end_line": 593,
+        "sha256": "e11cb1783eed46cdd4c91b835a607c0c728f4d5892bdcf1205991bec6ec52278",
+        "source": "    def pump(self, seconds: float) -> None:\n        # Wake the outer engine loop as soon as execDetails/orderStatus arrives\n        # so a fresh confirmation query runs before scanning or historical\n        # data.  No nested blocking request is made inside the callback.\n        self._expire_funds_refresh()\n        deadline = time.monotonic() + max(0.0, seconds)\n        while not self._urgent_pending:\n            left = deadline - time.monotonic()\n            if left <= 0:\n                break\n            self.ib.sleep(min(0.05, left))\n            self._expire_funds_refresh()\n        self._urgent_pending = False\n"
+      }
+    }
+  },
+  {
+    "tag": "v6lite-batch27b",
+    "commit": "54a893ba655c8e04ef64cfcbb6d49a2ebcdcddaa",
+    "functions": {
+      "run_engine": {
+        "path": "v6lite/__main__.py",
+        "line": 265,
+        "end_line": 286,
+        "sha256": "dc726a851ed1bc1723233d1da212f9815bad001b00ca2aaddec2642c71981259",
+        "source": "def run_engine(engine, broker, *, should_stop) -> None:\n    \"\"\"Startup, loop, shutdown. A start that fails before the engine took\n    over order recovery only disconnects: the order-cancelling shutdown\n    path is reserved for an engine that actually took over.\"\"\"\n    try:\n        engine.startup()\n    except BaseException:\n        if getattr(engine, \"took_over\", False):\n            engine.shutdown()\n        else:\n            try:\n                broker.disconnect()\n            except Exception:  # pragma: no cover - best effort\n                log.exception(\"disconnect after failed startup\")\n        raise\n    try:\n        while not should_stop():\n            broker.pump(1.0)\n            engine.process_protection_priority()\n            engine.tick()\n    finally:\n        engine.shutdown()\n"
+      },
+      "pump": {
+        "path": "v6lite/broker/ibkr.py",
+        "line": 589,
+        "end_line": 601,
+        "sha256": "e11cb1783eed46cdd4c91b835a607c0c728f4d5892bdcf1205991bec6ec52278",
+        "source": "    def pump(self, seconds: float) -> None:\n        # Wake the outer engine loop as soon as execDetails/orderStatus arrives\n        # so a fresh confirmation query runs before scanning or historical\n        # data.  No nested blocking request is made inside the callback.\n        self._expire_funds_refresh()\n        deadline = time.monotonic() + max(0.0, seconds)\n        while not self._urgent_pending:\n            left = deadline - time.monotonic()\n            if left <= 0:\n                break\n            self.ib.sleep(min(0.05, left))\n            self._expire_funds_refresh()\n        self._urgent_pending = False\n"
+      }
+    }
+  },
+  {
+    "tag": "v6lite-batch27",
+    "commit": "a5ae5945fbe8861b20616af51af10788c69f177f",
+    "functions": {
+      "run_engine": {
+        "path": "v6lite/__main__.py",
+        "line": 267,
+        "end_line": 288,
+        "sha256": "dc726a851ed1bc1723233d1da212f9815bad001b00ca2aaddec2642c71981259",
+        "source": "def run_engine(engine, broker, *, should_stop) -> None:\n    \"\"\"Startup, loop, shutdown. A start that fails before the engine took\n    over order recovery only disconnects: the order-cancelling shutdown\n    path is reserved for an engine that actually took over.\"\"\"\n    try:\n        engine.startup()\n    except BaseException:\n        if getattr(engine, \"took_over\", False):\n            engine.shutdown()\n        else:\n            try:\n                broker.disconnect()\n            except Exception:  # pragma: no cover - best effort\n                log.exception(\"disconnect after failed startup\")\n        raise\n    try:\n        while not should_stop():\n            broker.pump(1.0)\n            engine.process_protection_priority()\n            engine.tick()\n    finally:\n        engine.shutdown()\n"
+      },
+      "pump": {
+        "path": "v6lite/broker/ibkr.py",
+        "line": 612,
+        "end_line": 624,
+        "sha256": "e11cb1783eed46cdd4c91b835a607c0c728f4d5892bdcf1205991bec6ec52278",
+        "source": "    def pump(self, seconds: float) -> None:\n        # Wake the outer engine loop as soon as execDetails/orderStatus arrives\n        # so a fresh confirmation query runs before scanning or historical\n        # data.  No nested blocking request is made inside the callback.\n        self._expire_funds_refresh()\n        deadline = time.monotonic() + max(0.0, seconds)\n        while not self._urgent_pending:\n            left = deadline - time.monotonic()\n            if left <= 0:\n                break\n            self.ib.sleep(min(0.05, left))\n            self._expire_funds_refresh()\n        self._urgent_pending = False\n"
+      }
+    }
+  }
+]

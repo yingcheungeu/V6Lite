@@ -1,0 +1,2049 @@
+{
+  "label": "focused_final_acceptance",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-14T12:45:07.014571-07:00",
+  "end_pt": "2026-10-14T12:45:50.072153-07:00",
+  "returncode": 0,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "ea71abe782e4cf68",
+  "source_unchanged": true,
+  "worktree_code_sha": "ea71abe782e4cf68",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "ea71abe782e4cf689e51b0e07a98455c37ab18d26620d51c703b45736e702c6d",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_reconnect_alerts.py",
+      "sha256": "60ab5265d112a27e7cf6ada6fcac1fe9b39be272a1146b454df170dfab61bc45"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_restart.py",
+      "sha256": "dd75b6fe9f3b8a416ca3f6fbf7479975264ed1c2dddd6c0fd6c899da7e134f2d"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch25_review_regressions.py",
+      "sha256": "b882061f3259977c74b693565957e83274bed40b961c53d167661e3de840ce4c"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_connectivity.py",
+      "sha256": "8ed05fdc02598bf9433734a2785be7951840ab505160f5fc9e568e51cb6dc5d0"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_daily_labels.py",
+      "sha256": "55f7f5112a393deee55e8b9865338a1205eb5240418280a0fb1e1c336b4909cf"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_evidence_deadline.py",
+      "sha256": "1dccecef16d493e3f37c61d4266ac5ca21a73ebba7b04dfdd5e67901dc0bc3e7"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_pacing.py",
+      "sha256": "8b425b9e3ce7488e4c163b3433f639f54c52b6839c6f676c82678c96885d40fe"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_pacing_lifecycle.py",
+      "sha256": "de8db2b495562c51033f5c6b736eb3f7e1a34966bc960fc1cfadbb4da8154280"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_presentation.py",
+      "sha256": "635597eb75ef8ec92b1e2d3bab29f7626d7cfe8d7dd51f045ccf1d4b49c2c1d7"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_retry_second_round.py",
+      "sha256": "dcbdd83f3db5a1e0189d50c0648e63aed1148c2cb4fab70e371dd93897f11574"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_stp_echo.py",
+      "sha256": "2fc7a6b36ef4b088a5dbf7b16fa018b4f05bc3c50baf13a2e59a194c25393541"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch24_wire_latency.py",
+      "sha256": "5dbbb0b66c0fb45d6460dd646b7cb7076d8107bc9f9e66f785c309a0b969c12f"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_engine.py",
+      "sha256": "bb8967a536a8d187fc9f1d742be17c0b4b90e193ab52731ac06d6bff8a08f461"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_ibkr_adapter.py",
+      "sha256": "6b8c8a6c6529f7118df6735e4c976a50735197cd4610650fe181e4873a0c8f3a"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch16_f6_steady_timeout.py",
+      "sha256": "733347eda5814cbd2a14f71a717c88274bdd51376cada2c9bceeab3fd2908c48"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch16_f8_backoff.py",
+      "sha256": "af5c1b6c62872c84536b222255c9a3b4229e2d7bf4ce1c4b55b1d4a780aa3539"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch17_heartbeat_account.py",
+      "sha256": "b825c206464649efa334daa40c7004f2f45657d6501c1330895a69c97fdf932e"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_review_round5.py",
+      "sha256": "82c3cff1a3f5d8dba4b0735bf960666502d1d7ef6343c869b592a768fd81f109"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_review_round5_selfreview.py",
+      "sha256": "2036e85729559e65c226bae7e8be2c8b9eeb9d561366711a5a4a3ee8f88c3882"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 241,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_reconnect_alerts",
+      "name": "test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_restart",
+      "name": "test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-connection-after-wire]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch25_review_regressions",
+      "name": "test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_connectivity",
+      "name": "test_B24_native_2110_has_one_readable_log_raw_audit_and_unchanged_loss_gate",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_daily_labels",
+      "name": "test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway disconnected-IBKR \\u65ad\\u7ebf]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_daily_labels",
+      "name": "test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway clock skew-IBKR \\u65f6\\u949f\\u504f\\u5dee]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_evidence_deadline",
+      "name": "test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_evidence_deadline",
+      "name": "test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_all_native_outgoing_messages_are_limited_at_connection_wire",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_all_three_query_channels_use_actual_one_second_minimum",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_startup_native_queries_cannot_bypass_following_fresh_channel_limits",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_congested_read_queries_do_not_delay_stop_beyond_A5_or_reorder_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_default_to_one_second_and_change_fingerprint",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-open_orders_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-positions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-executions_min_interval_seconds]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_query_intervals_load_from_ibkr_without_reading_operator_config",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing",
+      "name": "test_B24_repeated_bad_native_callbacks_do_not_reset_position_retry_or_forge_confirmation",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_pacing_lifecycle",
+      "name": "test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_cap_is_two_decimals_in_real_price_drift_card_and_raw_in_audit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_tp_rejection_p0_has_definite_p_s_unprotected_from_full_evidence",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_tws_7497_startup_and_heartbeat_cards_use_tws_or_ibkr",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_native_wrapper_2108_one_readable_log_and_original_audit[\\\\u5e02\\\\u573a\\\\u6570\\\\u636e\\\\u8fde\\\\u63a5\\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e farm: \\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e farm: \\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_protection_unknown_p0_suppresses_same_order_held_p1",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_presentation",
+      "name": "test_ordinary_day_held_working_still_pages_p1_once",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_CANCEL_PENDING]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-PROTECT_CANCEL_PENDING]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_NEEDS_RESTORE]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-replace_after_cancel]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_CANCEL_PENDING]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-PROTECT_CANCEL_PENDING]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_NEEDS_RESTORE]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-replace_after_cancel]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_CANCEL_PENDING]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-PROTECT_CANCEL_PENDING]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_NEEDS_RESTORE]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-replace_after_cancel]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_retry_second_round",
+      "name": "test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_partial]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderRef]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__action]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__tif]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__outsideRth]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__secType]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__currency]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__auxPrice]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_finite_echo_never_relaxes_any_other_native_authority[status__filled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_terminal_STP_with_finite_echo_retains_refusal_classification",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_every_native_price_observation_source_keeps_echo_audit_only[orderStatus]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrder]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_stp_echo",
+      "name": "test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrders]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_wire_latency",
+      "name": "test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[query_notice]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch24_wire_latency",
+      "name": "test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[connection_write]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_account_mismatch_aborts_startup_without_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_state_file_is_bound_to_one_account",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_scan_enters_with_risk_based_size_and_protected_limit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_scan_slot_runs_once_per_day",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_duplicate_execution_callbacks_are_applied_once",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_submitted_with_zero_fill_is_not_a_failure",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_cancelled_then_filled_race_counts_the_fill",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_cancelled_without_fill_settles_cancelled",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_tp1_is_one_shot_across_ticks_and_restart",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_breakeven_stop_after_tp1_sells_remaining",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_stop_cancels_a_working_take_profit",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_exit_retries_then_escalates",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_exits_never_sell_more_than_broker_holds",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_kill_blocks_entries_but_exits_still_run",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_kill_blocks_new_entries_at_scan_time",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_daily_loss_latch_cannot_be_resumed_same_day",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_consecutive_losses_start_cooldown",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_max_daily_entries_counts_rejected_submissions",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_unmanaged_holding_blocks_entries_until_ignored",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_v1_has_no_adopt_unmanaged_holdings_stay_unmanaged",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_protected_symbol_is_never_managed_or_blocking",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_foreign_fill_latches_anomaly",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_unknown_submit_outcome_blocks_then_recovers",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_disconnect_blocks_and_reconnect_recovers_missed_fills",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_restart_recovers_intent_persisted_before_crash",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_dry_run_never_sends_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_live_mode_blocks_entries_when_alerts_are_down",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_shutdown_cancels_working_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_end_of_day_report_is_written_once",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_unpriced_position_escalates_and_blocks_entries",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_entry_skipped_when_live_price_drifted_from_signal",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_overnight_gateway_restart_is_logged_not_paged",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_engine",
+      "name": "test_gateway_server_link_loss_waits_for_restore",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_connect_binds_account_and_client",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_submit_is_limit_day_rth_with_order_ref",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_final_boundary_rejects_bad_requests",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_read_only_session_cannot_place_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_place_exception_is_reported_as_maybe_sent",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_callbacks_translate_to_events",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_connectivity_error_codes",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_single_physical_order_call_and_no_market_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_ibkr_adapter",
+      "name": "test_no_dependency_on_legacy_v6_package",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16_f6_steady_timeout",
+      "name": "test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch16_f8_backoff",
+      "name": "test_protected_TP_evidence_timeout_honors_30_second_retry_backoff",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_every_reply_logs_signed_actual_server_host_seconds[-120]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_every_reply_logs_signed_actual_server_host_seconds[120]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_reply_without_outstanding_request_still_logs_actual_clock_difference",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_one_old_time_after_reconnect_is_log_only_then_normal_reply_is_healthy",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_three_consecutive_bad_samples_page_once_for_long_lived_same_episode[-120]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_three_consecutive_bad_samples_page_once_for_long_lived_same_episode[120]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_three_consecutive_normal_samples_resolve_clock_episode_and_notify_once",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_normal_sample_breaks_bad_streak_and_bad_sample_breaks_recovery_streak",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_clock_skew_replies_do_not_create_127_permanent_no_reply_misses",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_genuinely_missing_callbacks_keep_original_no_response_alert",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_confirmed_flat_silent_account_stream_is_debug_without_faking_freshness",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_held_account_silent_stream_keeps_warning_and_original_refresh[managed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_held_account_silent_stream_keeps_warning_and_original_refresh[broker_only]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_unverified_flat_account_stream_keeps_warning",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[stale_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[clock_backwards]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[reconcile_not_ok]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[new_fill_after_snapshot]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[same_timestamp_fill]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[active_intent]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[query_failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_real_ibkr_wrapper_samples_exact_local_callback_time_without_connection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_clock_confirmation_N_defaults_three_and_is_adjustable_without_config_change",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch17_heartbeat_account",
+      "name": "test_excluded_external_stock_fill_invalidates_cached_flat_telemetry_without_booking_or_orders",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_late_end_of_a_timed_out_request_never_completes_the_next_one",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_open_orders_channel_is_guarded_too",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_a_channel_stuck_too_long_renews_the_connection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_streamed_update_inside_a_request_does_not_double_count",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F1_release_needs_the_position_stream_to_agree",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F2_difference_seen_during_the_reconcile_is_not_cleared_by_it",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F3_late_buy_after_release_never_recreates_a_position",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F5_freeze_lists_held_and_orphan_orders_that_were_not_cancelled",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F6_combo_leg_with_an_unknown_conid_fails_closed",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F7_frozen_symbol_with_a_held_intent_is_not_reconciled_every_tick",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5",
+      "name": "test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_late_buy_after_release_of_a_recovery_position_is_evidence_only",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_late_buy_after_a_resolved_freeze_is_evidence_only",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_cancel_lookup_uses_the_guarded_channel",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_unsolicited_end_poisons_the_channel_and_renews_the_connection",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_G7_unsolicited_end_regression_does_not_need_wall_clock_sleep",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_a_request_that_never_left_owes_no_end",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_review_round5_selfreview",
+      "name": "test_auto_open_orders_owes_no_end",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "v6lite/tests/test_batch25_restart.py::test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-connection-after-wire]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]",
+      "v6lite/tests/test_batch24_connectivity.py::test_B24_native_2110_has_one_readable_log_raw_audit_and_unchanged_loss_gate",
+      "v6lite/tests/test_batch24_daily_labels.py::test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway disconnected-IBKR \\u65ad\\u7ebf]",
+      "v6lite/tests/test_batch24_daily_labels.py::test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway clock skew-IBKR \\u65f6\\u949f\\u504f\\u5dee]",
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_all_native_outgoing_messages_are_limited_at_connection_wire",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_all_three_query_channels_use_actual_one_second_minimum",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_startup_native_queries_cannot_bypass_following_fresh_channel_limits",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_congested_read_queries_do_not_delay_stop_beyond_A5_or_reorder_orders",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_default_to_one_second_and_change_fingerprint",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_load_from_ibkr_without_reading_operator_config",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_repeated_bad_native_callbacks_do_not_reset_position_retry_or_forge_confirmation",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence",
+      "v6lite/tests/test_batch24_presentation.py::test_cap_is_two_decimals_in_real_price_drift_card_and_raw_in_audit",
+      "v6lite/tests/test_batch24_presentation.py::test_tp_rejection_p0_has_definite_p_s_unprotected_from_full_evidence",
+      "v6lite/tests/test_batch24_presentation.py::test_tws_7497_startup_and_heartbeat_cards_use_tws_or_ibkr",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\\\u5e02\\\\u573a\\\\u6570\\\\u636e\\\\u8fde\\\\u63a5\\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e farm: \\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e farm: \\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_protection_unknown_p0_suppresses_same_order_held_p1",
+      "v6lite/tests/test_batch24_presentation.py::test_ordinary_day_held_working_still_pages_p1_once",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-PROTECT_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_NEEDS_RESTORE]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-replace_after_cancel]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-PROTECT_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_NEEDS_RESTORE]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-replace_after_cancel]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-PROTECT_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_NEEDS_RESTORE]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-replace_after_cancel]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_failed]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_partial]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__clientId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__clientId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__conId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__symbol]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderRef]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__orderId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__action]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__tif]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__outsideRth]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__secType]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__currency]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__auxPrice]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__filled]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_terminal_STP_with_finite_echo_retains_refusal_classification",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[orderStatus]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrder]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrders]",
+      "v6lite/tests/test_batch24_wire_latency.py::test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[query_notice]",
+      "v6lite/tests/test_batch24_wire_latency.py::test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[connection_write]",
+      "v6lite/tests/test_engine.py::test_account_mismatch_aborts_startup_without_orders",
+      "v6lite/tests/test_engine.py::test_state_file_is_bound_to_one_account",
+      "v6lite/tests/test_engine.py::test_scan_enters_with_risk_based_size_and_protected_limit",
+      "v6lite/tests/test_engine.py::test_scan_slot_runs_once_per_day",
+      "v6lite/tests/test_engine.py::test_duplicate_execution_callbacks_are_applied_once",
+      "v6lite/tests/test_engine.py::test_submitted_with_zero_fill_is_not_a_failure",
+      "v6lite/tests/test_engine.py::test_cancelled_then_filled_race_counts_the_fill",
+      "v6lite/tests/test_engine.py::test_cancelled_without_fill_settles_cancelled",
+      "v6lite/tests/test_engine.py::test_tp1_is_one_shot_across_ticks_and_restart",
+      "v6lite/tests/test_engine.py::test_breakeven_stop_after_tp1_sells_remaining",
+      "v6lite/tests/test_engine.py::test_stop_cancels_a_working_take_profit",
+      "v6lite/tests/test_engine.py::test_exit_retries_then_escalates",
+      "v6lite/tests/test_engine.py::test_exits_never_sell_more_than_broker_holds",
+      "v6lite/tests/test_engine.py::test_kill_blocks_entries_but_exits_still_run",
+      "v6lite/tests/test_engine.py::test_kill_blocks_new_entries_at_scan_time",
+      "v6lite/tests/test_engine.py::test_daily_loss_latch_cannot_be_resumed_same_day",
+      "v6lite/tests/test_engine.py::test_consecutive_losses_start_cooldown",
+      "v6lite/tests/test_engine.py::test_max_daily_entries_counts_rejected_submissions",
+      "v6lite/tests/test_engine.py::test_unmanaged_holding_blocks_entries_until_ignored",
+      "v6lite/tests/test_engine.py::test_v1_has_no_adopt_unmanaged_holdings_stay_unmanaged",
+      "v6lite/tests/test_engine.py::test_protected_symbol_is_never_managed_or_blocking",
+      "v6lite/tests/test_engine.py::test_foreign_fill_latches_anomaly",
+      "v6lite/tests/test_engine.py::test_unknown_submit_outcome_blocks_then_recovers",
+      "v6lite/tests/test_engine.py::test_disconnect_blocks_and_reconnect_recovers_missed_fills",
+      "v6lite/tests/test_engine.py::test_restart_recovers_intent_persisted_before_crash",
+      "v6lite/tests/test_engine.py::test_dry_run_never_sends_orders",
+      "v6lite/tests/test_engine.py::test_live_mode_blocks_entries_when_alerts_are_down",
+      "v6lite/tests/test_engine.py::test_shutdown_cancels_working_orders",
+      "v6lite/tests/test_engine.py::test_end_of_day_report_is_written_once",
+      "v6lite/tests/test_engine.py::test_unpriced_position_escalates_and_blocks_entries",
+      "v6lite/tests/test_engine.py::test_entry_skipped_when_live_price_drifted_from_signal",
+      "v6lite/tests/test_engine.py::test_overnight_gateway_restart_is_logged_not_paged",
+      "v6lite/tests/test_engine.py::test_gateway_server_link_loss_waits_for_restore",
+      "v6lite/tests/test_ibkr_adapter.py::test_connect_binds_account_and_client",
+      "v6lite/tests/test_ibkr_adapter.py::test_submit_is_limit_day_rth_with_order_ref",
+      "v6lite/tests/test_ibkr_adapter.py::test_final_boundary_rejects_bad_requests",
+      "v6lite/tests/test_ibkr_adapter.py::test_read_only_session_cannot_place_orders",
+      "v6lite/tests/test_ibkr_adapter.py::test_place_exception_is_reported_as_maybe_sent",
+      "v6lite/tests/test_ibkr_adapter.py::test_callbacks_translate_to_events",
+      "v6lite/tests/test_ibkr_adapter.py::test_connectivity_error_codes",
+      "v6lite/tests/test_ibkr_adapter.py::test_single_physical_order_call_and_no_market_orders",
+      "v6lite/tests/test_ibkr_adapter.py::test_no_dependency_on_legacy_v6_package",
+      "v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled",
+      "v6lite/tests/test_batch16_f8_backoff.py::test_protected_TP_evidence_timeout_honors_30_second_retry_backoff",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_every_reply_logs_signed_actual_server_host_seconds[-120]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_every_reply_logs_signed_actual_server_host_seconds[120]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_reply_without_outstanding_request_still_logs_actual_clock_difference",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_one_old_time_after_reconnect_is_log_only_then_normal_reply_is_healthy",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_three_consecutive_bad_samples_page_once_for_long_lived_same_episode[-120]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_three_consecutive_bad_samples_page_once_for_long_lived_same_episode[120]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_three_consecutive_normal_samples_resolve_clock_episode_and_notify_once",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_normal_sample_breaks_bad_streak_and_bad_sample_breaks_recovery_streak",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_clock_skew_replies_do_not_create_127_permanent_no_reply_misses",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_genuinely_missing_callbacks_keep_original_no_response_alert",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_confirmed_flat_silent_account_stream_is_debug_without_faking_freshness",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_held_account_silent_stream_keeps_warning_and_original_refresh[managed]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_held_account_silent_stream_keeps_warning_and_original_refresh[broker_only]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_unverified_flat_account_stream_keeps_warning",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[stale_snapshot]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[clock_backwards]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[reconcile_not_ok]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[new_fill_after_snapshot]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[same_timestamp_fill]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[active_intent]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[query_failed]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_real_ibkr_wrapper_samples_exact_local_callback_time_without_connection",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_clock_confirmation_N_defaults_three_and_is_adjustable_without_config_change",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_excluded_external_stock_fill_invalidates_cached_flat_telemetry_without_booking_or_orders",
+      "v6lite/tests/test_review_round5.py::test_R4F1_late_end_of_a_timed_out_request_never_completes_the_next_one",
+      "v6lite/tests/test_review_round5.py::test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty",
+      "v6lite/tests/test_review_round5.py::test_R4F1_open_orders_channel_is_guarded_too",
+      "v6lite/tests/test_review_round5.py::test_R4F1_a_channel_stuck_too_long_renews_the_connection",
+      "v6lite/tests/test_review_round5.py::test_R4F1_streamed_update_inside_a_request_does_not_double_count",
+      "v6lite/tests/test_review_round5.py::test_R4F1_release_needs_the_position_stream_to_agree",
+      "v6lite/tests/test_review_round5.py::test_R4F2_difference_seen_during_the_reconcile_is_not_cleared_by_it",
+      "v6lite/tests/test_review_round5.py::test_R4F3_late_buy_after_release_never_recreates_a_position",
+      "v6lite/tests/test_review_round5.py::test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released",
+      "v6lite/tests/test_review_round5.py::test_R4F5_freeze_lists_held_and_orphan_orders_that_were_not_cancelled",
+      "v6lite/tests/test_review_round5.py::test_R4F6_combo_leg_with_an_unknown_conid_fails_closed",
+      "v6lite/tests/test_review_round5.py::test_R4F7_frozen_symbol_with_a_held_intent_is_not_reconciled_every_tick",
+      "v6lite/tests/test_review_round5.py::test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0",
+      "v6lite/tests/test_review_round5_selfreview.py::test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger",
+      "v6lite/tests/test_review_round5_selfreview.py::test_late_buy_after_release_of_a_recovery_position_is_evidence_only",
+      "v6lite/tests/test_review_round5_selfreview.py::test_late_buy_after_a_resolved_freeze_is_evidence_only",
+      "v6lite/tests/test_review_round5_selfreview.py::test_cancel_lookup_uses_the_guarded_channel",
+      "v6lite/tests/test_review_round5_selfreview.py::test_unsolicited_end_poisons_the_channel_and_renews_the_connection",
+      "v6lite/tests/test_review_round5_selfreview.py::test_G7_unsolicited_end_regression_does_not_need_wall_clock_sleep",
+      "v6lite/tests/test_review_round5_selfreview.py::test_a_request_that_never_left_owes_no_end",
+      "v6lite/tests/test_review_round5_selfreview.py::test_auto_open_orders_owes_no_end"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_same_reason_at_most_two_reconnects_in_five_minutes_then_latched_single_P0",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_reason_drift_never_resets_continuous_30_60_120_retry_backoff",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_successful_reconcile_does_not_erase_same_reason_rolling_budget",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[0]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[1]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[4.999]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_initial_A_confirmation_wait_does_not_page_query_limit[5.0]",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_sync_pending_cannot_emit_query_limit_or_manufacture_fresh_coverage",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_real_post_sync_failed_verification_still_pages_once_then_keeps_retry_gate",
+      "v6lite/tests/test_batch25_reconnect_alerts.py::test_B25_generic_FakeBroker_connect_pushes_own_working_order_and_End_before_sync",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-zero]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-finite]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-UNSET]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-zero]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-finite]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_restart_order501_pre_ready_End_is_not_poison_and_fresh_query_required[handshake-and-sync-UNSET]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_post_sync_unowned_End_still_poisoned_and_never_proves_empty_snapshot",
+      "v6lite/tests/test_batch25_restart.py::test_B25_old_generation_End_cannot_complete_new_generation_Future",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[WORKING-GTC]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sqlite_reopen_native_connect_takeover_or_book_overnight_STOP_once[filled-while-stopped]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_sync_finished_without_fresh_own_query_does_not_allow_later_unowned_End",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[openOrders]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_sync_timeout_with_missing_registered_End_cannot_become_ready_or_fresh[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[End-during-send]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_native_openOrders_send_boundary_cannot_poison_normal_End_or_create_phantom_credit[send-failed]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_complete_bootstrap_cannot_substitute_for_failed_fresh_takeover_source[executions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_stale_previous_generation_End_during_new_handshake_is_not_exempt",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[openOrders]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_SDK_swallowed_sync_timeout_return_cannot_clear_owed_End_or_grant_ready[positions]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[uncertain-before-End]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[End-then-throw]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-runtime-error]",
+      "v6lite/tests/test_batch25_restart.py::test_B25_uncertain_send_or_End_then_exception_cannot_grant_reusable_fresh_authority[generic-connection-after-wire]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[zero-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[finite-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-PreSubmitted]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_creation_bound_snapshot_Status_and_Price_cannot_mutate_authority_after_sync[UNSET-Cancelled]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_incidental_generation_PID_reqId_elapsed_attempt_never_bypass_same_cause_limit",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_normalization_preserves_truly_different_query_failure_causes",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_connected_socket_with_once_failed_execution_recovery_retries_after_30_and_keeps_budget",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_P0_stop_survives_connected_event_and_normal_tick_without_reconnect_or_entry",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_S_less_than_P_and_missing_required_today_exec_cannot_increase_STP[historical-and-today-gap]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[absent-GTC]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[manual-hold]",
+      "v6lite/tests/test_batch25_review_regressions.py::test_B25_review_crossday_carry_never_authorizes_recreation_release_or_ignores_hold_and_other_sells[other-SELL]",
+      "v6lite/tests/test_batch24_connectivity.py::test_B24_native_2110_has_one_readable_log_raw_audit_and_unchanged_loss_gate",
+      "v6lite/tests/test_batch24_daily_labels.py::test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway disconnected-IBKR \\u65ad\\u7ebf]",
+      "v6lite/tests/test_batch24_daily_labels.py::test_B24_daily_ATTENTION_translates_legacy_machine_key_to_visible_IBKR[Gateway clock skew-IBKR \\u65f6\\u949f\\u504f\\u5dee]",
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_steady_evidence_P0_is_due_at_60_seconds_during_query_backoff",
+      "v6lite/tests/test_batch24_evidence_deadline.py::test_B24_complete_fresh_proof_before_deadline_prevents_an_old_evidence_P0",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_all_native_outgoing_messages_are_limited_at_connection_wire",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_all_three_query_channels_use_actual_one_second_minimum",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_startup_native_queries_cannot_bypass_following_fresh_channel_limits",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_congested_read_queries_do_not_delay_stop_beyond_A5_or_reorder_orders",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_default_to_one_second_and_change_fingerprint",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0.5-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[0-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[-1-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[nan-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[inf-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-open_orders_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-positions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_cannot_be_configured_below_safety_floor[True-executions_min_interval_seconds]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_query_intervals_load_from_ibkr_without_reading_operator_config",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[coordinator]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_five_minutes_bad_identity_backoff_keeps_hold_and_allows_health_and_other_position[main-loop]",
+      "v6lite/tests/test_batch24_pacing.py::test_B24_repeated_bad_native_callbacks_do_not_reset_position_retry_or_forge_confirmation",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[reset]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_discards_queued_writes_and_old_timer_cannot_replay_on_reconnect[disconnect]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[reset]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_reset_or_disconnect_inside_conn_send_aborts_old_drain_before_remaining_writes[disconnect]",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_old_End_after_reconnect_without_new_request_poisoned_not_fresh_empty_snapshot",
+      "v6lite/tests/test_batch24_pacing_lifecycle.py::test_B24_query_interrupted_by_reset_cannot_return_old_result_as_new_fresh_evidence",
+      "v6lite/tests/test_batch24_presentation.py::test_cap_is_two_decimals_in_real_price_drift_card_and_raw_in_audit",
+      "v6lite/tests/test_batch24_presentation.py::test_tp_rejection_p0_has_definite_p_s_unprotected_from_full_evidence",
+      "v6lite/tests/test_batch24_presentation.py::test_tws_7497_startup_and_heartbeat_cards_use_tws_or_ibkr",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\\\u5e02\\\\u573a\\\\u6570\\\\u636e\\\\u8fde\\\\u63a5\\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3-\\u5e02\\u573a\\u6570\\u636e\\u8fde\\u63a5\\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_native_wrapper_2108_one_readable_log_and_original_audit[\\u5e02\\u573a\\u6570\\u636e farm: \\\\u6682\\\\u65f6\\\\u4e0d\\\\u6d3b\\\\u8dc3-\\u5e02\\u573a\\u6570\\u636e farm: \\u6682\\u65f6\\u4e0d\\u6d3b\\u8dc3]",
+      "v6lite/tests/test_batch24_presentation.py::test_protection_unknown_p0_suppresses_same_order_held_p1",
+      "v6lite/tests/test_batch24_presentation.py::test_ordinary_day_held_working_still_pages_p1_once",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-PROTECT_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-TP_NEEDS_RESTORE]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_failed-replace_after_cancel]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-PROTECT_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-TP_NEEDS_RESTORE]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[executions_partial-replace_after_cancel]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-PROTECT_CANCEL_PENDING]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-TP_NEEDS_RESTORE]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_second_round_failure_retains_exponential_schedule_and_other_holding_health[positions_unstable-replace_after_cancel]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_failed]",
+      "v6lite/tests/test_batch24_retry_second_round.py::test_B24_pending_operator_resume_cannot_bypass_failed_position_retry[executions_partial]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_original_G3T_native_callback_replay_confirms_STP_within_A5_no_pages",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[None]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[1.7976931348623157e+308]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[340.19000000000005]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[0.0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-1.0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[nan]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[inf]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_STP_echo_is_diagnostic_for_all_native_status_values[-inf]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__account1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__clientId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__clientId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__conId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__symbol]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderRef]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__orderId]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__permId1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__permId1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__action]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__orderType1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__tif]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__outsideRth]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__secType]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[contract__currency]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__auxPrice]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity0]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[order__totalQuantity1]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_finite_echo_never_relaxes_any_other_native_authority[status__filled]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_auxPrice_compares_cents_and_does_not_copy_float_tail_into_ledger",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[modify]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[cancel]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_native_finite_echo_accepts_exact_STP_modify_cancel_and_snapshot[snapshot]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_terminal_STP_with_finite_echo_retains_refusal_classification",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[orderStatus]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrder]",
+      "v6lite/tests/test_batch24_stp_echo.py::test_B24_every_native_price_observation_source_keeps_echo_audit_only[openOrders]",
+      "v6lite/tests/test_batch24_wire_latency.py::test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[query_notice]",
+      "v6lite/tests/test_batch24_wire_latency.py::test_B24_real_elapsed_callback_and_connection_cost_preserve_wire_intervals[connection_write]",
+      "v6lite/tests/test_engine.py::test_account_mismatch_aborts_startup_without_orders",
+      "v6lite/tests/test_engine.py::test_state_file_is_bound_to_one_account",
+      "v6lite/tests/test_engine.py::test_scan_enters_with_risk_based_size_and_protected_limit",
+      "v6lite/tests/test_engine.py::test_scan_slot_runs_once_per_day",
+      "v6lite/tests/test_engine.py::test_duplicate_execution_callbacks_are_applied_once",
+      "v6lite/tests/test_engine.py::test_submitted_with_zero_fill_is_not_a_failure",
+      "v6lite/tests/test_engine.py::test_cancelled_then_filled_race_counts_the_fill",
+      "v6lite/tests/test_engine.py::test_cancelled_without_fill_settles_cancelled",
+      "v6lite/tests/test_engine.py::test_tp1_is_one_shot_across_ticks_and_restart",
+      "v6lite/tests/test_engine.py::test_breakeven_stop_after_tp1_sells_remaining",
+      "v6lite/tests/test_engine.py::test_stop_cancels_a_working_take_profit",
+      "v6lite/tests/test_engine.py::test_exit_retries_then_escalates",
+      "v6lite/tests/test_engine.py::test_exits_never_sell_more_than_broker_holds",
+      "v6lite/tests/test_engine.py::test_kill_blocks_entries_but_exits_still_run",
+      "v6lite/tests/test_engine.py::test_kill_blocks_new_entries_at_scan_time",
+      "v6lite/tests/test_engine.py::test_daily_loss_latch_cannot_be_resumed_same_day",
+      "v6lite/tests/test_engine.py::test_consecutive_losses_start_cooldown",
+      "v6lite/tests/test_engine.py::test_max_daily_entries_counts_rejected_submissions",
+      "v6lite/tests/test_engine.py::test_unmanaged_holding_blocks_entries_until_ignored",
+      "v6lite/tests/test_engine.py::test_v1_has_no_adopt_unmanaged_holdings_stay_unmanaged",
+      "v6lite/tests/test_engine.py::test_protected_symbol_is_never_managed_or_blocking",
+      "v6lite/tests/test_engine.py::test_foreign_fill_latches_anomaly",
+      "v6lite/tests/test_engine.py::test_unknown_submit_outcome_blocks_then_recovers",
+      "v6lite/tests/test_engine.py::test_disconnect_blocks_and_reconnect_recovers_missed_fills",
+      "v6lite/tests/test_engine.py::test_restart_recovers_intent_persisted_before_crash",
+      "v6lite/tests/test_engine.py::test_dry_run_never_sends_orders",
+      "v6lite/tests/test_engine.py::test_live_mode_blocks_entries_when_alerts_are_down",
+      "v6lite/tests/test_engine.py::test_shutdown_cancels_working_orders",
+      "v6lite/tests/test_engine.py::test_end_of_day_report_is_written_once",
+      "v6lite/tests/test_engine.py::test_unpriced_position_escalates_and_blocks_entries",
+      "v6lite/tests/test_engine.py::test_entry_skipped_when_live_price_drifted_from_signal",
+      "v6lite/tests/test_engine.py::test_overnight_gateway_restart_is_logged_not_paged",
+      "v6lite/tests/test_engine.py::test_gateway_server_link_loss_waits_for_restore",
+      "v6lite/tests/test_ibkr_adapter.py::test_connect_binds_account_and_client",
+      "v6lite/tests/test_ibkr_adapter.py::test_submit_is_limit_day_rth_with_order_ref",
+      "v6lite/tests/test_ibkr_adapter.py::test_final_boundary_rejects_bad_requests",
+      "v6lite/tests/test_ibkr_adapter.py::test_read_only_session_cannot_place_orders",
+      "v6lite/tests/test_ibkr_adapter.py::test_place_exception_is_reported_as_maybe_sent",
+      "v6lite/tests/test_ibkr_adapter.py::test_callbacks_translate_to_events",
+      "v6lite/tests/test_ibkr_adapter.py::test_connectivity_error_codes",
+      "v6lite/tests/test_ibkr_adapter.py::test_single_physical_order_call_and_no_market_orders",
+      "v6lite/tests/test_ibkr_adapter.py::test_no_dependency_on_legacy_v6_package",
+      "v6lite/tests/test_batch16_f6_steady_timeout.py::test_B16_F6_repeated_steady_query_timeout_keeps_exits_and_scans_scheduled",
+      "v6lite/tests/test_batch16_f8_backoff.py::test_protected_TP_evidence_timeout_honors_30_second_retry_backoff",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_every_reply_logs_signed_actual_server_host_seconds[-120]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_every_reply_logs_signed_actual_server_host_seconds[120]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_reply_without_outstanding_request_still_logs_actual_clock_difference",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_one_old_time_after_reconnect_is_log_only_then_normal_reply_is_healthy",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_three_consecutive_bad_samples_page_once_for_long_lived_same_episode[-120]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_three_consecutive_bad_samples_page_once_for_long_lived_same_episode[120]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_three_consecutive_normal_samples_resolve_clock_episode_and_notify_once",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_normal_sample_breaks_bad_streak_and_bad_sample_breaks_recovery_streak",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_clock_skew_replies_do_not_create_127_permanent_no_reply_misses",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_genuinely_missing_callbacks_keep_original_no_response_alert",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_confirmed_flat_silent_account_stream_is_debug_without_faking_freshness",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_held_account_silent_stream_keeps_warning_and_original_refresh[managed]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_held_account_silent_stream_keeps_warning_and_original_refresh[broker_only]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_unverified_flat_account_stream_keeps_warning",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[stale_snapshot]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[clock_backwards]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[reconcile_not_ok]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[new_fill_after_snapshot]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[same_timestamp_fill]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[active_intent]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_flat_account_warning_is_preserved_when_cached_flat_evidence_is_not_trustworthy[query_failed]",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_real_ibkr_wrapper_samples_exact_local_callback_time_without_connection",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_clock_confirmation_N_defaults_three_and_is_adjustable_without_config_change",
+      "v6lite/tests/test_batch17_heartbeat_account.py::test_excluded_external_stock_fill_invalidates_cached_flat_telemetry_without_booking_or_orders",
+      "v6lite/tests/test_review_round5.py::test_R4F1_late_end_of_a_timed_out_request_never_completes_the_next_one",
+      "v6lite/tests/test_review_round5.py::test_R4F1_owed_end_that_never_comes_is_evidence_unavailable_not_empty",
+      "v6lite/tests/test_review_round5.py::test_R4F1_open_orders_channel_is_guarded_too",
+      "v6lite/tests/test_review_round5.py::test_R4F1_a_channel_stuck_too_long_renews_the_connection",
+      "v6lite/tests/test_review_round5.py::test_R4F1_streamed_update_inside_a_request_does_not_double_count",
+      "v6lite/tests/test_review_round5.py::test_R4F1_release_needs_the_position_stream_to_agree",
+      "v6lite/tests/test_review_round5.py::test_R4F2_difference_seen_during_the_reconcile_is_not_cleared_by_it",
+      "v6lite/tests/test_review_round5.py::test_R4F3_late_buy_after_release_never_recreates_a_position",
+      "v6lite/tests/test_review_round5.py::test_R4F4_frozen_position_closed_by_its_own_fills_can_be_released",
+      "v6lite/tests/test_review_round5.py::test_R4F5_freeze_lists_held_and_orphan_orders_that_were_not_cancelled",
+      "v6lite/tests/test_review_round5.py::test_R4F6_combo_leg_with_an_unknown_conid_fails_closed",
+      "v6lite/tests/test_review_round5.py::test_R4F7_frozen_symbol_with_a_held_intent_is_not_reconciled_every_tick",
+      "v6lite/tests/test_review_round5.py::test_R4F8_refused_take_profit_that_crossed_the_stop_pages_p0",
+      "v6lite/tests/test_review_round5_selfreview.py::test_refused_sell_does_not_size_a_stop_from_a_wrong_ledger",
+      "v6lite/tests/test_review_round5_selfreview.py::test_late_buy_after_release_of_a_recovery_position_is_evidence_only",
+      "v6lite/tests/test_review_round5_selfreview.py::test_late_buy_after_a_resolved_freeze_is_evidence_only",
+      "v6lite/tests/test_review_round5_selfreview.py::test_cancel_lookup_uses_the_guarded_channel",
+      "v6lite/tests/test_review_round5_selfreview.py::test_unsolicited_end_poisons_the_channel_and_renews_the_connection",
+      "v6lite/tests/test_review_round5_selfreview.py::test_G7_unsolicited_end_regression_does_not_need_wall_clock_sleep",
+      "v6lite/tests/test_review_round5_selfreview.py::test_a_request_that_never_left_owes_no_end",
+      "v6lite/tests/test_review_round5_selfreview.py::test_auto_open_orders_owes_no_end"
+    ]
+  },
+  "stdout_sha256": "182d474aed6b148f03c0cae6703dab678e1975591c29828ed9df43aa632ad23d",
+  "junit_sha256": "adf452cd3e02d5a222c21bbc8cb07aca881e241c2c5962c1e4617c21e20e4e70",
+  "inventory_sha256": "4b88956e807ccc49590f574631bc2f754c7ac9a174715c4c288f4d5107af5d80"
+}

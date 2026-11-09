@@ -1,0 +1,89 @@
+FFFFFF.F                                                                 [100%]
+================================== FAILURES ===================================
+_ test_B23_unprotected_direct_price_rejection_persists_full_P0_pause_without_enabling_STP _
+v6lite\tests\test_batch23_unprotected.py:180: in test_B23_unprotected_direct_price_rejection_persists_full_P0_pause_without_enabling_STP
+    _assert_pause_remote_and_restart(rig, pid, ref, tmp_path, 0)
+v6lite\tests\test_batch23_unprotected.py:133: in _assert_pause_remote_and_restart
+    assert parts and ''.join(text for _, _, text in sorted(parts)) == reason, \
+E   AssertionError: unprotected TP refusal also needs the complete original reason in real P0 remote cards
+E   assert ([])
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.engine:engine.py:703 queued exit work failed
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 2620, in _send
+    ack = self.broker.submit_limit(req)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\broker\fake.py", line 216, in submit_limit
+    raise err
+v6lite.broker.base.BrokerError: Order rejected - reason: Your order price is outside the allowed price range. Synthetic non-protected TP diagnostic; no live account/order. 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; 原始原因完整保留🍎 price constraint details; END-UNPROTECTED-ORIGINAL-REASON
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 701, in _run_queue
+    fn()
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 1966, in <lambda>
+    fn = lambda: self._submit_exit(position_id, stage)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 2073, in _submit_exit
+    result = self._send(now, req, atr=None, count_entry_day=None)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\V6Lite-dev\v6lite\engine.py", line 2630, in _send
+    self._tp_record(now, self.store.protection(req.position_id), "status", intent_id=req.intent_id,
+  File "C:\Dev\V6Lite-dev\v6lite\tp_evidence.py", line 105, in _tp_record
+    pos = self.store.position(row["position_id"])
+                              ~~~^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+_ test_B23_unprotected_async_native_price_refusal_persists_full_P0_pause_without_enabling_STP _
+v6lite\tests\test_batch23_unprotected.py:199: in test_B23_unprotected_async_native_price_refusal_persists_full_P0_pause_without_enabling_STP
+    _assert_pause_remote_and_restart(rig, pid, ref, tmp_path, 201)
+v6lite\tests\test_batch23_unprotected.py:133: in _assert_pause_remote_and_restart
+    assert parts and ''.join(text for _, _, text in sorted(parts)) == reason, \
+E   AssertionError: unprotected TP refusal also needs the complete original reason in real P0 remote cards
+E   assert ([])
+_ test_B23_corrupt_persisted_pricing_book_cannot_authorize_original_TP_price_or_extra_attempt _
+v6lite\tests\test_batch23_unprotected.py:236: in test_B23_corrupt_persisted_pricing_book_cannot_authorize_original_TP_price_or_extra_attempt
+    assert not [r for r in rig.broker.sent if r.purpose in TP_PURPOSES], \
+E   AssertionError: equal req/sent/calculated prices do not validate a contradicting bid/raw-book snapshot
+E   assert not [OrderRequest(intent_id='v6l-97d2c486d82346a6b30d', symbol='AAPL', side=<Side.SELL: 'SELL'>, quantity=1, limit_price=119.41, purpose=<Purpose.TP1: 'TP1'>, position_id='pos-5651d42ee1f345b19f05')]
+_ test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\u4ef7\u683c\u4e0d\u5728\u76d1\u7ba1\u53c2\u8003\u4ef7\u7684\u5141\u8bb8\u8303\u56f4\u5185] _
+v6lite\tests\test_batch23_unprotected.py:265: in test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause
+    _assert_pause_remote_and_restart(rig, pid, ref, tmp_path, 201, reason=reason)
+v6lite\tests\test_batch23_unprotected.py:133: in _assert_pause_remote_and_restart
+    assert parts and ''.join(text for _, _, text in sorted(parts)) == reason, \
+E   AssertionError: unprotected TP refusal also needs the complete original reason in real P0 remote cards
+E   assert ([])
+_ test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\u9650\u4ef7\u504f\u79bb\u5f53\u524d\u53c2\u8003\u4ef7\u592a\u591a] _
+v6lite\tests\test_batch23_unprotected.py:265: in test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause
+    _assert_pause_remote_and_restart(rig, pid, ref, tmp_path, 201, reason=reason)
+v6lite\tests\test_batch23_unprotected.py:133: in _assert_pause_remote_and_restart
+    assert parts and ''.join(text for _, _, text in sorted(parts)) == reason, \
+E   AssertionError: unprotected TP refusal also needs the complete original reason in real P0 remote cards
+E   assert ([])
+_ test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes _
+v6lite\tests\test_batch23_unprotected.py:285: in test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes
+    assert refused and any(reason in event.get('reason', '') for event in refused), \
+E   AssertionError: durable release refusal must retain the full broker cause, not an 80-character preview
+E   assert ([{'reason': 'broker evidence unavailable (Synthetic openOrders proof failed: 保留完整查询失败原因🍎 保留完整查询失败原因🍎 保留完整查询失败原因🍎 保留完整查...retry later', 'request': '{"operator": "John", "reason": "synthetic local release evidence check"}', 'symbol': 'AAPL'}] and False)
+E    +  where False = any(<generator object test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes.<locals>.<genexpr> at 0x00000207543C4220>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: release refused AAPL | broker evidence unavailable (Synthetic openOrders proof failed: 保留完整查询失败原因🍎 保留完整查询失败原因🍎 保留完整查询失败原因🍎 保留完整查询失败原); retry later
+_ test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Inactive-201-\u5df2\u62d2\u7edd] _
+v6lite\tests\test_batch23_unprotected.py:309: in test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact
+    assert cards and any('券商' + fact + '保护单' in title for title, _ in cards), cards
+E   AssertionError: [('🔴 P0 · 券商已取消保护单', '🔴 P0 · 券商已取消保护单
+E     发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实... 的重新提交/IBALGO 建议；不要自动改价重挂保护单。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')]
+E   assert ([('🔴 P0 · 券商已取消保护单', '🔴 P0 · 券商已取消保护单\n发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实... 的重新提交/IBALGO 建议；不要自动改价重挂保护单。只有确认 0 股、无在途卖单、成交静默期和原 release 强门槛均满足后才执行 release AAPL；身份或证据不足保持拒绝，不要手改状态库、新开仓或自动重挂保护单。')] and False)
+E    +  where False = any(<generator object test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact.<locals>.<genexpr> at 0x00000207743E8120>)
+------------------------------ Captured log call ------------------------------
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实 股 可能超卖=待核实 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-508e81eab175471f81a3 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；券商已明确拒绝 STP 请求；禁止自动重挂；券商状态=Inactive code=201；取消诊断与执行权限独立核验；券商原因原文=Synthetic native diagnostic marker. END-B23-FACT-ORIGINAL
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P0: protection broker cancelled AAPL | AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=0 股 止盈在途=0 股 外部卖单在途=0 股 未保护=3 股 可能超卖=0 股；券商已回报取消；完整终态身份已核验；orderRef=v6l-protect-508e81eab175471f81a3 orderId=1002 permId=51002 TP=- TP orderId=- TP剩余=待核实 股；外部订单=无券商新快照；止损价（触发后市价成交）=108.47；上次确认=未获券商确认 工作单证据时间=2026-10-06T14:00:30+00:00；完整工作单快照未发现原 GTC；禁止重复提交；券商状态=Inactive code=201；取消诊断与执行权限独立核验；券商原因原文=Synthetic native diagnostic marker. END-B23-FACT-ORIGINAL
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch23_unprotected.py::test_B23_unprotected_direct_price_rejection_persists_full_P0_pause_without_enabling_STP
+FAILED v6lite/tests/test_batch23_unprotected.py::test_B23_unprotected_async_native_price_refusal_persists_full_P0_pause_without_enabling_STP
+FAILED v6lite/tests/test_batch23_unprotected.py::test_B23_corrupt_persisted_pricing_book_cannot_authorize_original_TP_price_or_extra_attempt
+FAILED v6lite/tests/test_batch23_unprotected.py::test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\u4ef7\u683c\u4e0d\u5728\u76d1\u7ba1\u53c2\u8003\u4ef7\u7684\u5141\u8bb8\u8303\u56f4\u5185]
+FAILED v6lite/tests/test_batch23_unprotected.py::test_B23_unprotected_affirmative_Chinese_native_price_refusal_keeps_original_reason_and_pause[\u9650\u4ef7\u504f\u79bb\u5f53\u524d\u53c2\u8003\u4ef7\u592a\u591a]
+FAILED v6lite/tests/test_batch23_unprotected.py::test_B23_release_query_failure_preserves_complete_cause_and_refuses_all_position_writes
+FAILED v6lite/tests/test_batch23_unprotected.py::test_B23_native_PROTECT_cancel_or_rejection_card_uses_one_consistent_known_system_fact[Inactive-201-\u5df2\u62d2\u7edd]
+7 failed, 1 passed in 1.52s

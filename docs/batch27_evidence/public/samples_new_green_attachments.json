@@ -1,0 +1,101 @@
+[
+  {
+    "nodeid": "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[normal-report]",
+    "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_e2c0cfcf02fe7fd4.jsonl",
+    "source_sha256": "91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8",
+    "published_sha256": "91009d7be2c8512e8a54414566e336f5d37a23f36558f6372b78a2a0545b24f8",
+    "bytes": 142156,
+    "lines": 1013
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_critical_attachments.py::test_B27_true_P0_unknown_protection_survives_one_thousand_ordinary_scans[shutdown-supplement]",
+    "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_165efe0226d89626.jsonl",
+    "source_sha256": "5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2",
+    "published_sha256": "5d9a8f8b2a9da16266235507676b5a651d4d286d6ec71bf52186736a14da44c2",
+    "bytes": 142302,
+    "lines": 1014
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_critical_attachments.py::test_B27_critical_alone_over_caps_has_complete_payload_attachment_and_bounded_main",
+    "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_2e92c02922d091a7.jsonl",
+    "source_sha256": "1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2",
+    "published_sha256": "1f308c24eaa4cab2822d3d2ea31c7f8a4c5d572d6e0e8d33341c75c7d5f122b2",
+    "bytes": 1635245,
+    "lines": 311
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_real_PROTECT_diagnostics_export_every_audit_identity_while_main_stays_summary_only",
+    "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_80e9ad327c67739a.jsonl",
+    "source_sha256": "a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48",
+    "published_sha256": "a7f6789b50d7f22178f7547c7184d4b036fb2edef548f34fdbde3c85d0041f48",
+    "bytes": 6083,
+    "lines": 15
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_diagnostic_attachment.py::test_B27_late_commission_correction_and_time_review_keep_today_receive_day_not_old_fill_day",
+    "relative_source": "audit-0/reports/2026-10-16.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_fa65157193dd7a7f.jsonl",
+    "source_sha256": "bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf",
+    "published_sha256": "bd1a31413f88e81adaed860ca43a7c4a6af7dcc6a4f0d8d486662f4465db2dbf",
+    "bytes": 2719,
+    "lines": 5
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]",
+    "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_d2e007573160f1f9.jsonl",
+    "source_sha256": "7f28815526f9ee914cec26063fce460ede0aa4eb168766e8ab9f95e1fc7c4733",
+    "published_sha256": "7f28815526f9ee914cec26063fce460ede0aa4eb168766e8ab9f95e1fc7c4733",
+    "bytes": 4081,
+    "lines": 12
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]",
+    "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_dfc73d79087a50d6.jsonl",
+    "source_sha256": "6b5ad1ddd0e116e5497989370a06241aa59b386835b6f8ec336e6a2a9a28c78a",
+    "published_sha256": "6b5ad1ddd0e116e5497989370a06241aa59b386835b6f8ec336e6a2a9a28c78a",
+    "bytes": 38689,
+    "lines": 111
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]",
+    "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_9b90e6ad1c51676c.jsonl",
+    "source_sha256": "301b94d6e9b88436a50a9353e4681efc89d332fcb062334eed426b9add219167",
+    "published_sha256": "301b94d6e9b88436a50a9353e4681efc89d332fcb062334eed426b9add219167",
+    "bytes": 4081,
+    "lines": 12
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]",
+    "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_97a45903f5511c67.jsonl",
+    "source_sha256": "7b0e610a6afa9ae810f0c932d38ea78e7e6cd7dca0a286069e1acc87f2574ba4",
+    "published_sha256": "7b0e610a6afa9ae810f0c932d38ea78e7e6cd7dca0a286069e1acc87f2574ba4",
+    "bytes": 38689,
+    "lines": 111
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+    "relative_source": "audit-0/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_99f165a91231b47b.jsonl",
+    "source_sha256": "26391187d0ed4fb49abb88b35f0e2ed2fd531861c4012fb8efa7bfb220592c80",
+    "published_sha256": "26391187d0ed4fb49abb88b35f0e2ed2fd531861c4012fb8efa7bfb220592c80",
+    "bytes": 9486,
+    "lines": 18
+  },
+  {
+    "nodeid": "v6lite/tests/test_batch27_observer_equivalence.py::test_B27_exact_1015_observation_scale_preserves_state_evidence_cards_and_calls",
+    "relative_source": "audit-1/reports/2026-10-15.critical.jsonl",
+    "captured_file": "samples_new_green_attachment_f797e626c69cff97.jsonl",
+    "source_sha256": "fa3dc231624ad221dad86b6215cfe97816516310ef189dfd92a65418a1a3f58d",
+    "published_sha256": "fa3dc231624ad221dad86b6215cfe97816516310ef189dfd92a65418a1a3f58d",
+    "bytes": 9505,
+    "lines": 18
+  }
+]

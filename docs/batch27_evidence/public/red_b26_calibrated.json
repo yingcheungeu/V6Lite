@@ -1,0 +1,619 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "red_b26_calibrated",
+  "baseline": "b26",
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-18T08:30:33.818106-07:00",
+  "end_pt": "2026-10-18T08:30:49.313011-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "579d13832e3f4237",
+  "source_unchanged": true,
+  "worktree_code_sha": "478391afe4e32052",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "478391afe4e32052d57aeb47ffe3f5e09e7bcb28ee850d57e89a4d234df35ad8",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_observation_audit.py",
+      "sha256": "a844a1c42a98dc5f017d99cfbe8877aaa59a713d74c20be5010e5509a805e53f"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_daily_report_volume.py",
+      "sha256": "d063e2e5f289da20e61ea54d9cee8472caf9467789b8bce85b33501ca01d2c62"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py",
+      "sha256": "93ebcc48d1b60f815cf621d55a7815831fe6f0a137d56e3faf24e00558381b0c"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 69,
+    "failures": 53,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]",
+      "outcome": "failure",
+      "message": "AssertionError: ('ORDER_PRICE_OBSERVATION', 6, 1, 5)\nassert 6 <= (5 * 1)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]",
+      "outcome": "failure",
+      "message": "AssertionError: ('ORDER_PRICE_OBSERVATION', 60, 10, 5)\nassert 60 <= (5 * 10)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]",
+      "outcome": "failure",
+      "message": "AssertionError: ('ORDER_PRICE_OBSERVATION', 6, 1, 5)\nassert 6 <= (5 * 1)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]",
+      "outcome": "failure",
+      "message": "AssertionError: ('ORDER_PRICE_OBSERVATION', 60, 10, 5)\nassert 60 <= (5 * 10)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[intent_id]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'intent_id')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB9CFD590>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB9CFD590> = <v6lite.tests.helpers.Rig object at 0x0000023AB9F37550>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[account]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'account')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA276AD0>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA276AD0> = <v6lite.tests.helpers.Rig object at 0x0000023AB9CFD810>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[client_id]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'client_id')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA1F54D0>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA1F54D0> = <v6lite.tests.helpers.Rig object at 0x0000023ADA276F90>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[con_id]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'con_id')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA25BF90>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA25BF90> = <v6lite.tests.helpers.Rig object at 0x0000023ADA285590>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[trigger_price]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'trigger_price')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB9FB50D0>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB9FB50D0> = <v6lite.tests.helpers.Rig object at 0x0000023ADA25BC50>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[limit_price]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'limit_price')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA17F850>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA17F850> = <v6lite.tests.helpers.Rig object at 0x0000023AB9FB4090>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[requested_qty]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'requested_qty')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB9BDBAD0>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB9BDBAD0> = <v6lite.tests.helpers.Rig object at 0x0000023AB9FB4E50>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[confirmed_remaining]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'confirmed_remaining')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB9D16390>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB9D16390> = <v6lite.tests.helpers.Rig object at 0x0000023AB9C5C710>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_max_remaining]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'pending_max_remaining')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB7DB64D0>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB7DB64D0> = <v6lite.tests.helpers.Rig object at 0x0000023AB9D15C50>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_qty]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'pending_qty')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA1D7F90>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA1D7F90> = <v6lite.tests.helpers.Rig object at 0x0000023AB7DDFB90>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[state]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'state')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB9FABAD0>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB9FABAD0> = <v6lite.tests.helpers.Rig object at 0x0000023AB7DD4050>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_trigger]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'pending_trigger')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA260690>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA260690> = <v6lite.tests.helpers.Rig object at 0x0000023AB9ED8390>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_limit]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'pending_limit')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA26EA10>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA26EA10> = <v6lite.tests.helpers.Rig object at 0x0000023ADA261810>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[modify_generation]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'modify_generation')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB7DD00D0>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB7DD00D0> = <v6lite.tests.helpers.Rig object at 0x0000023ADA183510>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[status_seen_generation]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'status_seen_generation')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA314310>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA314310> = <v6lite.tests.helpers.Rig object at 0x0000023ADA20A490>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[broker_order_id]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'broker_order_id')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA26C850>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA26C850> = <v6lite.tests.helpers.Rig object at 0x0000023AB9B43190>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[perm_id]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'perm_id')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA24A910>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA24A910> = <v6lite.tests.helpers.Rig object at 0x0000023ADA26D810>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_a_started_at]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'gap_a_started_at')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA2C56D0>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA2C56D0> = <v6lite.tests.helpers.Rig object at 0x0000023ADA26C310>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_b_started_at]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'gap_b_started_at')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB99BF090>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB99BF090> = <v6lite.tests.helpers.Rig object at 0x0000023AB7D23190>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_stage]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'tp_stage')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB9B99A10>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB9B99A10> = <v6lite.tests.helpers.Rig object at 0x0000023AB99BDB10>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_qty]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'tp_qty')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA17E550>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA17E550> = <v6lite.tests.helpers.Rig object at 0x0000023AB9B98790>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_intent_id]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unchanged field', 'tp_intent_id')\nassert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023AB9BDAF90>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023AB9BDAF90> = <v6lite.tests.helpers.Rig object at 0x0000023AB9FD3850>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_confirmed_at_refresh_persists_without_audit",
+      "outcome": "failure",
+      "message": "AssertionError: assert 2 == 1\n +  where 2 = _count(<v6lite.store.Store object at 0x0000023ADA29CA50>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA29CA50> = <v6lite.tests.helpers.Rig object at 0x0000023ADA1D5250>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[source]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[aux_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[broker_echo_lmt]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[mkt_cap_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[mkt_cap_price_raw]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[cap_valid]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[error_code]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[reason]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[intent_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_payload_changes_are_never_lost[position_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_repeated_price_error_or_reason_is_always_written[kwargs0]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_repeated_price_error_or_reason_is_always_written[kwargs1]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_audit_insert_failure_does_not_publish_dedup_cache",
+      "outcome": "failure",
+      "message": "AssertionError: assert 2 == 1\n +  where 2 = _count(<v6lite.store.Store object at 0x0000023ADA305750>, 'ORDER_PRICE_OBSERVATION')\n +    where <v6lite.store.Store object at 0x0000023ADA305750> = <v6lite.tests.helpers.Rig object at 0x0000023AB9C360D0>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_protection_tx_rollback_never_publishes_uncommitted_state",
+      "outcome": "failure",
+      "message": "AssertionError: assert 3 == (1 + 1)\n +  where 3 = _count(<v6lite.store.Store object at 0x0000023ADA2E4450>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA2E4450> = <v6lite.tests.helpers.Rig object at 0x0000023ADA2A3810>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_actual_socket_generation_flushes_old_counts_and_reobserves",
+      "outcome": "failure",
+      "message": "assert 0 == 4\n +  where 0 = sum(<generator object test_B27_actual_socket_generation_flushes_old_counts_and_reobserves.<locals>.<genexpr> at 0x0000023ADA1EB780>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_restart_first_observation_is_not_suppressed_by_durable_history",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_price_observation_outer_transaction_rollback_preserves_first_sighting",
+      "outcome": "failure",
+      "message": "AssertionError: assert 2 == 1\n +  where 2 = _count(<v6lite.store.Store object at 0x0000023AB9FB7090>, 'ORDER_PRICE_OBSERVATION')\n +    where <v6lite.store.Store object at 0x0000023AB9FB7090> = <v6lite.tests.helpers.Rig object at 0x0000023ADA300850>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_actual_fresh_protection_progress_refreshes_row_without_state_audit",
+      "outcome": "failure",
+      "message": "AssertionError: assert 2 == 1\n +  where 2 = _count(<v6lite.store.Store object at 0x0000023ADA2D0B50>, 'PROTECT_STATE')\n +    where <v6lite.store.Store object at 0x0000023ADA2D0B50> = <v6lite.tests.helpers.Rig object at 0x0000023AB9FB7F50>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[sent_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[working_price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_observation_audit",
+      "name": "test_B27_duplicate_tp_observations_still_execute_following_evidence_path",
+      "outcome": "failure",
+      "message": "AssertionError: assert 7 == 1\n +  where 7 = _count(<v6lite.store.Store object at 0x0000023ADA1E7010>, 'ORDER_PRICE_OBSERVATION')\n +    where <v6lite.store.Store object at 0x0000023ADA1E7010> = <v6lite.tests.helpers.Rig object at 0x0000023ADA3032D0>.store"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history",
+      "outcome": "failure",
+      "message": "AssertionError: ('Events lines', 45007)\nassert 45007 <= 200\n +  where 45007 = len(['', '- 11:16:41Z ORDER_PRICE_OBSERVATION {\"aux_price\": 340.52, \"broker_echo_lmt\": 0.0, \"cap_valid\": false, \"error_cod...ap_valid\": false, \"error_code\": 0, \"intent_id\": \"v6l-protect-163f331d4c894f33a1a8\", \"mkt_cap_price\": null, \"mkt_', ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear",
+      "outcome": "failure",
+      "message": "AssertionError: ('materialized rows', 45018)\nassert 45018 <= 2048"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical",
+      "outcome": "failure",
+      "message": "AssertionError: ('ordinary Events lines', 1004)\nassert 1004 <= 200\n +  where 1004 = len(['', '- 11:16:41Z SCAN {\"counter\": 0, \"marker\": \"B27-ordinary-0\"}', '- 11:16:42Z SCAN {\"counter\": 1, \"marker\": \"B27-or...Z SCAN {\"counter\": 3, \"marker\": \"B27-ordinary-3\"}', '- 11:16:45Z SCAN {\"counter\": 4, \"marker\": \"B27-ordinary-4\"}', ...])\n +    where ['', '- 11:16:41Z SCAN {\"counter\": 0, \"marker\": \"B27-ordinary-0\"}', '- 11:16:42Z SCAN {\"counter\": 1, \"marker\": \"B27-or...Z SCAN {\"counter\": 3, \"marker\": \"B27-ordinary-3\"}', '- 11:16:45Z SCAN {\"counter\": 4, \"marker\": \"B27-ordinary-4\"}', ...] = <built-in method splitlines of str object at 0x0000023AB85D82D0>()\n +      where <built-in method splitlines of str object at 0x0000023AB85D82D0> = '\\n- 11:16:41Z SCAN {\"counter\": 0, \"marker\": \"B27-ordinary-0\"}\\n- 11:16:42Z SCAN {\"counter\": 1, \"marker\": \"B27-ordinar... ordinary truncation\"}\\n- 23:16:43Z ANOMALY {\"code\": \"B27-critical-2\", \"detail\": \"must survive ordinary truncation\"}\\n'.splitlines"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_consecutive_identical_ordinary_rows_have_count_and_first_last",
+      "outcome": "failure",
+      "message": "AssertionError: ('duplicate displayed rows', 7)\nassert 7 == 1\n +  where 7 = <built-in method count of str object at 0x0000023AB8607830>('B27-repeated')\n +    where <built-in method count of str object at 0x0000023AB8607830> = '\\n- 11:16:41Z SCAN {\"detail\": \"same payload\", \"marker\": \"B27-repeated\"}\\n- 11:16:42Z SCAN {\"detail\": \"same payload\", ...l\": \"same payload\", \"marker\": \"B27-repeated\"}\\n- 11:16:47Z SCAN {\"detail\": \"same payload\", \"marker\": \"B27-repeated\"}\\n'.count"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_daily_report_volume",
+      "name": "test_B27_report_account_mask_does_not_change_internal_identity",
+      "outcome": "failure",
+      "message": "AssertionError: report must mask the account and retain its last three digits\nassert (not True)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_successful_query_details_are_debug_and_not_info_file",
+      "outcome": "failure",
+      "message": "AssertionError: ('normal QUERY lines at configured INFO', 2)\nassert not ['2026-10-18 08:30:44,125 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False', '2026-10-18 08:30:44,125 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False']"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+      "outcome": "failure",
+      "message": "AssertionError: ('normal log lines', 2408, 2000, 800)\nassert 2408 <= 2000\n +  where 2408 = len([\"2026-10-18 08:30:44,149 INFO ib_insync.wrapper openOrder: Trade(contract=Stock(conId=265598, symbol='AAPL', exchange...dvancedError='')\", '2026-10-18 08:30:44,151 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False', ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+      "outcome": "failure",
+      "message": "AssertionError: ('normal log lines', 12026, 10000, 1000)\nassert 12026 <= 10000\n +  where 12026 = len([\"2026-10-18 08:30:44,562 INFO ib_insync.wrapper openOrder: Trade(contract=Stock(conId=265598, symbol='AAPL', exchange...=0, parentId=0, lastFillPrice=0.0, clientId=0, whyHeld='', mktCapPrice=0.0), fills=[], log=[], advancedError='')\", ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+      "outcome": "failure",
+      "message": "AssertionError: ('normal log lines', 2408, 2000, 800)\nassert 2408 <= 2000\n +  where 2408 = len([\"2026-10-18 08:30:46,403 INFO ib_insync.wrapper openOrder: Trade(contract=Stock(conId=265598, symbol='AAPL', exchange...dvancedError='')\", '2026-10-18 08:30:46,403 INFO v6lite.ibkr [QUERY] channel=openOrders secs=0.000 drained=False', ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+      "outcome": "failure",
+      "message": "AssertionError: ('normal log lines', 12026, 10000, 1000)\nassert 12026 <= 10000\n +  where 12026 = len([\"2026-10-18 08:30:46,836 INFO ib_insync.wrapper openOrder: Trade(contract=Stock(conId=265598, symbol='AAPL', exchange...=0, parentId=0, lastFillPrice=0.0, clientId=0, whyHeld='', mktCapPrice=0.0), fills=[], log=[], advancedError='')\", ...])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_query_summary_counts_channels_and_flushes_pending_on_disconnect",
+      "outcome": "failure",
+      "message": "AssertionError: 30-minute and final query totals must be flushed\nassert []"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_each_failed_query_remains_warning_with_no_success_claim",
+      "outcome": "failure",
+      "message": "AssertionError: ('failed calls / warning lines', 2, 0)\nassert 2 == 0\n +  where 2 = len([datetime.datetime(2026, 10, 14, 13, 19, 54, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 10, 14, 13, 19, 56, tzinfo=datetime.timezone.utc)])\n +  and   0 = len([])"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DU******567]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unmasked account family', 'DU1')\nassert ('DU******567' not in '2026-10-18 ... DU******001\\n'\n  \n  'DU******567' is contained here:\n    K account=DU******567 configured=DU******001\n  ?           +++++++++\n    Traceback (most recent call last):\n      File \"C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py\", line 237, in test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record\n        raise ValueError(\"synthetic SDK traceback \" + account + \" configured \" + cfg.account)\n    ValueError: synthetic SDK traceback DU******567 configured DU******001)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[U******567]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unmasked account family', 'U12')\nassert ('U******567' not in '2026-10-18 ... DU******001\\n'\n  \n  'U******567' is contained here:\n    K account=U******567 configured=DU******001\n  ?           ++++++++\n    Traceback (most recent call last):\n      File \"C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py\", line 237, in test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record\n        raise ValueError(\"synthetic SDK traceback \" + account + \" configured \" + cfg.account)\n    ValueError: synthetic SDK traceback U******567 configured DU******001)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DF******567]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unmasked account family', 'DF1')\nassert ('DF******567' not in '2026-10-18 ... DU******001\\n'\n  \n  'DF******567' is contained here:\n    K account=DF******567 configured=DU******001\n  ?           +++++++++\n    Traceback (most recent call last):\n      File \"C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py\", line 237, in test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record\n        raise ValueError(\"synthetic SDK traceback \" + account + \" configured \" + cfg.account)\n    ValueError: synthetic SDK traceback DF******567 configured DU******001)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DFA******567]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unmasked account family', 'DFA')\nassert ('DFA******567' not in '2026-10-18 ... DU******001\\n'\n  \n  'DFA******567' is contained here:\n    K account=DFA******567 configured=DU******001\n  ?           ++++++++++\n    Traceback (most recent call last):\n      File \"C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py\", line 237, in test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record\n        raise ValueError(\"synthetic SDK traceback \" + account + \" configured \" + cfg.account)\n    ValueError: synthetic SDK traceback DFA******567 configured DU******001)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[F******567]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unmasked account family', 'F12')\nassert ('F******567' not in '2026-10-18 ... DU******001\\n'\n  \n  'F******567' is contained here:\n    K account=F******567 configured=DU******001\n  ?           ++++++++\n    Traceback (most recent call last):\n      File \"C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py\", line 237, in test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record\n        raise ValueError(\"synthetic SDK traceback \" + account + \" configured \" + cfg.account)\n    ValueError: synthetic SDK traceback F******567 configured DU******001)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[I******567]",
+      "outcome": "failure",
+      "message": "AssertionError: ('unmasked account family', 'I12')\nassert ('I******567' not in '2026-10-18 ... DU******001\\n'\n  \n  'I******567' is contained here:\n    K account=I******567 configured=DU******001\n  ?           ++++++++\n    Traceback (most recent call last):\n      File \"C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27_logging_volume.py\", line 237, in test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record\n        raise ValueError(\"synthetic SDK traceback \" + account + \" configured \" + cfg.account)\n    ValueError: synthetic SDK traceback I******567 configured DU******001)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_startup_and_heartbeat_log_masks_leave_state_and_cards_unchanged",
+      "outcome": "failure",
+      "message": "assert ('DU******001' not in '2026-10-18 ...otes\": 3}}\\n'\n  \n  'DU******001' is contained here:\n  ?           ^^\n    ccount\": \"DU******001\", \"config_fingerprint\": \"17d5b87b528ca9f0\", \"code_sha\": \"579d13832e3f4237\", \"broker_connected\": true, \"automatic_reconnect_stopped\": false, \"recovery_pending\": false, \"reconnect_reason\": \"\", \"reconnect_next_at\": null, \"reconcile_ok\": true, \"alerts_healthy\": true, \"equity_for_sizing\": 10000.0, \"loss_streak\": null, \"cooldown_until\": null, \"open_positions\": [], \"active_orders\": [], \"entries_allowed\": false, \"entry_blocks\": [\"outside_entry_window\"], \"market_data\": {\"requested\": \"live\", \"delayed_symbols\": [], \"no_subscription\"...\n  \n  ...Full output truncated (8 lines hidden), use '-vv' to show)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27_logging_volume",
+      "name": "test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression",
+      "outcome": "failure",
+      "message": "AssertionError: assert 'position: Position(' not in '2026-10-18 ...ined=False\\n'\n  \n  'position: Position(' is contained here:\n    c.wrapper position: Position(account='DU******001', contract=Stock(conId=265598, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)\n  ?           +++++++++++++++++++\n    2026-10-18 08:30:48,941 INFO ib_insync.wrapper position: Position(account='DU******001', contract=Stock(conId=800000, symbol='AAPL', exchange='SMART', currency='USD', localSymbol='AAPL', tradingClass='NMS'), position=3.0, avgCost=342.53)\n    2026-10-18 08:30:48,941 INFO v6lite.ibkr [QUERY] channel=positions secs=0.000 drained=False"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[account]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[client_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[con_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[trigger_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[limit_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[requested_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[confirmed_remaining]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_max_remaining]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[state]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_trigger]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_limit]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[modify_generation]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[status_seen_generation]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[broker_order_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[perm_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_a_started_at]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_b_started_at]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_stage]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_confirmed_at_refresh_persists_without_audit",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[source]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[aux_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[broker_echo_lmt]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[mkt_cap_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[mkt_cap_price_raw]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[cap_valid]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[error_code]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[reason]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[symbol]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[position_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_repeated_price_error_or_reason_is_always_written[kwargs0]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_repeated_price_error_or_reason_is_always_written[kwargs1]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_audit_insert_failure_does_not_publish_dedup_cache",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_protection_tx_rollback_never_publishes_uncommitted_state",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_actual_socket_generation_flushes_old_counts_and_reobserves",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_restart_first_observation_is_not_suppressed_by_durable_history",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_observation_outer_transaction_rollback_preserves_first_sighting",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_actual_fresh_protection_progress_refreshes_row_without_state_audit",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[sent_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[working_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_duplicate_tp_observations_still_execute_following_evidence_path",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_consecutive_identical_ordinary_rows_have_count_and_first_last",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_report_account_mask_does_not_change_internal_identity",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_successful_query_details_are_debug_and_not_info_file",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_summary_counts_channels_and_flushes_pending_on_disconnect",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_each_failed_query_remains_warning_with_no_success_claim",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DU******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[U******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DF******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DFA******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[F******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[I******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_startup_and_heartbeat_log_masks_leave_state_and_cards_unchanged",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-one]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[15s-ten]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-one]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_thirteen_hours_native_observations_are_bounded_and_counted[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[account]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[client_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[con_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[trigger_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[limit_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[requested_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[confirmed_remaining]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_max_remaining]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[state]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_trigger]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[pending_limit]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[modify_generation]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[status_seen_generation]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[broker_order_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[perm_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_a_started_at]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[gap_b_started_at]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_stage]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_qty]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_each_protection_field_change_keeps_legacy_payload_then_suppresses_only_unchanged[tp_intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_confirmed_at_refresh_persists_without_audit",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[source]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[aux_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[broker_echo_lmt]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[mkt_cap_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[mkt_cap_price_raw]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[cap_valid]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[error_code]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[reason]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[intent_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[symbol]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_payload_changes_are_never_lost[position_id]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_repeated_price_error_or_reason_is_always_written[kwargs0]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_repeated_price_error_or_reason_is_always_written[kwargs1]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_audit_insert_failure_does_not_publish_dedup_cache",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_protection_tx_rollback_never_publishes_uncommitted_state",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_actual_socket_generation_flushes_old_counts_and_reobserves",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_restart_first_observation_is_not_suppressed_by_durable_history",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_price_observation_outer_transaction_rollback_preserves_first_sighting",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_actual_fresh_protection_progress_refreshes_row_without_state_audit",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[sent_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_tp_limit_payload_fields_are_written_before_any_price_hold[working_price]",
+      "v6lite/tests/test_batch27_observation_audit.py::test_B27_duplicate_tp_observations_still_execute_following_evidence_path",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_90k_legacy_report_is_bounded_preserves_important_events_and_history",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_old_report_90k_under_five_seconds_and_python_memory_not_linear",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_ordinary_event_budget_reports_exact_omitted_count_without_hiding_critical",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_consecutive_identical_ordinary_rows_have_count_and_first_last",
+      "v6lite/tests/test_batch27_daily_report_volume.py::test_B27_report_account_mask_does_not_change_internal_identity",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_successful_query_details_are_debug_and_not_info_file",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-one]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[15s-ten]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-one]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_and_position_sources_thirteen_hour_info_budget[1s-pressure-ten]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_query_summary_counts_channels_and_flushes_pending_on_disconnect",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_each_failed_query_remains_warning_with_no_success_claim",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DU******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[U******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DF******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[DFA******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[F******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_final_formatter_masks_child_logger_args_and_traceback_without_mutating_record[I******567]",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_startup_and_heartbeat_log_masks_leave_state_and_cards_unchanged",
+      "v6lite/tests/test_batch27_logging_volume.py::test_B27_actual_sdk_warning_and_error_survive_wrapper_info_suppression"
+    ]
+  },
+  "stdout_sha256": "d9973f808335e056662e4d7604b15d54ec8376dc72bff71f513847158f6dafff",
+  "junit_sha256": "fcc55fc34dd82c1864db73abbfad7ef7cb5e6036d48424e1eff6badec92cd513",
+  "inventory_sha256": "c5a672116dd10d8c6e81f082530a23d688797c33a3524827a27d920a2e9f6d72",
+  "publication_redaction": {
+    "rule": "Synthetic account identifiers masked; complete JUnit/nodeids published. Raw stdout retained locally, capped excerpt published.",
+    "original_artifact_sha256": {
+      "red_b26_calibrated.json": "d455c59614f826db2eb513f0c1d9540f2dbb4e1c6cc67e509967d5551f6e56c5",
+      "red_b26_calibrated.xml": "d55df3f9b9a5927f18742557be206e24702d9476faefa553404335fab5fd79eb",
+      "red_b26_calibrated_inventory.json": "d0780e519ff8ef6ec5b7f09b5f20e8782e176d1ce2d5b66bf5d4591911cf22a4",
+      "red_b26_calibrated.txt": "d9973f808335e056662e4d7604b15d54ec8376dc72bff71f513847158f6dafff"
+    }
+  }
+}

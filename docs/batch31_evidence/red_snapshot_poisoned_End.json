@@ -1,0 +1,32 @@
+{
+  "label": "red_snapshot_poisoned_End",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-27T09:25:08.885059-07:00",
+  "end_pt": "2026-10-27T09:25:10.962035-07:00",
+  "seconds": 2.078,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch31_snapshot_guards.py::test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request[unexpected-End]"
+  ],
+  "code_sha": "ce8ec2122ed58e1f",
+  "source_unchanged": true,
+  "inventory_sha256": "9b0dca544f57fd2179f68d72611d71adfcfc55b006ecb218f3713f7c03667a15",
+  "incomplete": false,
+  "raw_stdout_normalized_utf8_sha256": "1a1d5de97be9620772bec87131600c918d2572a1152c84b2c27336074b4d6d4c",
+  "XML_sha256_before_masking": "cb9649780959e87a41bf8f5e35e7f77d73d25f6c0e9f7dc3e74c06f32f043a1e",
+  "delivered_log_sha256": "c5dbe489cad980186851f181356f886bfc7fa3d434563d18ac51885b4621a3ec",
+  "delivered_XML_sha256": "cb9649780959e87a41bf8f5e35e7f77d73d25f6c0e9f7dc3e74c06f32f043a1e",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch31_snapshot_guards",
+      "name": "test_B31_completed_snapshot_cannot_confirm_after_newer_same_socket_request[unexpected-End]",
+      "kind": "failure",
+      "message": "AssertionError: an older own round cannot confirm after a new request\nassert 'WORKING' == 'PRICE_PENDING'\n  \n  - PRICE_PENDING\n  + WORKING"
+    }
+  ]
+}

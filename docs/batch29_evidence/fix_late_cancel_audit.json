@@ -1,0 +1,7 @@
+{
+  "red": "red_late_cancel_audit_1",
+  "reason": "already terminal TP returns before protection handler; after unchanged exact TP identity validation, record only diagnostic cancel confirmation for a real claimed request; no state or restore permission changed",
+  "file": "v6lite/engine.py",
+  "before_sha256": "b31f79537eaf3030f85501c0e62cd9a4ed74d5ea33afd352ce5d6cde52418a93",
+  "after_sha256": "ee1f6ff30f7ab945186bc7c3bca190dec094d074a440efa75a2fefe2b4c86464"
+}

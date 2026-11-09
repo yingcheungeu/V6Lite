@@ -1,0 +1,13 @@
+{
+  "receipt": "red_shutdown_b25.json",
+  "valid_product_red": false,
+  "totals": {
+    "tests": 35,
+    "failures": 0,
+    "errors": 35
+  },
+  "cause": "The new no-network fixture patched socket.connect before first import of ib_insync; eventkit initializes a Windows asyncio loop whose local socketpair requires connect. This is fixture setup, not a product failure.",
+  "original_spec_sha256": "e4910fd293a75859a7b3b55c655af5149fd89e5dfc229661808e70586971d298",
+  "preserved_original_spec": "docs/batch26_evidence/test_batch26_shutdown_report_before_fixture_calibration.py",
+  "next_action": "Independent test author may import SDK before socket guards; keep all test behaviors/assertions unchanged and retain raw failed receipts. No production edit until valid natural red."
+}

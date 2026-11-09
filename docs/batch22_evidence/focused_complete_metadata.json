@@ -1,0 +1,43 @@
+{
+  "command": [
+    "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+    "-u",
+    "-B",
+    "-m",
+    "pytest",
+    "v6lite\\tests\\test_batch22_cancel_namespace.py",
+    "v6lite\\tests\\test_batch22_config_broker.py",
+    "v6lite\\tests\\test_batch22_pending_stop_audit.py",
+    "v6lite\\tests\\test_batch22_protection_lifecycle.py",
+    "v6lite\\tests\\test_batch22_schema_audit.py",
+    "v6lite\\tests\\test_batch22_snapshot_cancel.py",
+    "v6lite\\tests\\test_batch22_trigger_incidents.py",
+    "v6lite\\tests\\test_batch22_trigger_replacement.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--tb=short",
+    "--junitxml=C:\\Dev\\V6Lite-dev\\docs\\batch22_evidence\\focused_complete.xml"
+  ],
+  "exit_code": 0,
+  "suite": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "228",
+    "time": "10.575",
+    "timestamp": "2026-10-08T23:00:01.957478-07:00",
+    "hostname": "DESKTOP-BF9GHJ8"
+  },
+  "tests_sha256": {
+    "v6lite\\tests\\test_batch22_cancel_namespace.py": "b513c130a9045147fa3f77c3afb10d1140b17207995143866523fc9de83c532f",
+    "v6lite\\tests\\test_batch22_config_broker.py": "f1023d247ae9e11ae979d9341597f4779c76740d17b7602285b3cd3e8690ad93",
+    "v6lite\\tests\\test_batch22_pending_stop_audit.py": "f0bf9fe05cee399ca62892222ef09cd069bf8dc27a7179978e7434b7235e0696",
+    "v6lite\\tests\\test_batch22_protection_lifecycle.py": "bee3803db93e5e6bd235ff43f3c0cafb9729da87d6deb986fc41acd6b7594b5b",
+    "v6lite\\tests\\test_batch22_schema_audit.py": "374ae51b92eee5ea1e48ff4ca145422f1d106b0d33cf8f94b57d6261b24c7927",
+    "v6lite\\tests\\test_batch22_snapshot_cancel.py": "6531f1b9c3398e1cdbd0c7148e610b360846ff78a11dd3e6406e2cb92aa3286b",
+    "v6lite\\tests\\test_batch22_trigger_incidents.py": "a3c1ad8c925c53ce95577de7ee707093b98ff74468ed13cda66da7e30cc8db17",
+    "v6lite\\tests\\test_batch22_trigger_replacement.py": "80c284c3bd1b41ec47c841f344ca03726c8da9569433d0dfafec805bf861a90c"
+  }
+}

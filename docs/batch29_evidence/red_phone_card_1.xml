@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.739" timestamp="2026-10-23T22:35:36.374551-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch29_faults" name="test_B29_timeout_phone_card_names_test_and_identifies_actual_order" time="0.459"><failure message="AssertionError: [('TEST · #x1F7E2 V6-Lite 运行通知', 'TEST · #x1F7E2 V6-Lite 运行通知&#10;  发生了什么：运行状态有新变化；详情见本机日志。&#10;  下一步：在本机运行 status，按需查看完整日志。')]&#10;assert 0 == 1&#10; +  where 0 = len([])">v6lite\tests\test_batch29_faults.py:299: in test_B29_timeout_phone_card_names_test_and_identifies_actual_order
+    assert len(cards) == 1, rig.channel.messages
+E   AssertionError: [('TEST · #x1F7E2 V6-Lite 运行通知', 'TEST · #x1F7E2 V6-Lite 运行通知
+E     发生了什么：运行状态有新变化；详情见本机日志。
+E     下一步：在本机运行 status，按需查看完整日志。')]
+E   assert 0 == 1
+E    +  where 0 = len([])</failure></testcase></testsuite></testsuites>

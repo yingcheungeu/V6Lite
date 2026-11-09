@@ -1,0 +1,214 @@
+{
+  "label": "candidate_red_item9",
+  "start_pt": "2026-10-09T08:12:07.828837-07:00",
+  "end_pt": "2026-10-09T08:12:13.128947-07:00",
+  "returncode": 1,
+  "source_code_sha": "12c0a917c16cbe9a",
+  "source_unchanged": true,
+  "spec_sha256": "8ada9de8d6274a82f2aecdb5ad461dbac9795cd2df6e1646558685362056ab12",
+  "totals": {
+    "tests": 39,
+    "failures": 7,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[201-metadata_cleared-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[202-prices_reset-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_same_native_ids_with_cleared_metadata_is_cancelled_P0_not_identity_error[0-metadata_cleared-Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Cancelled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_complete_no_working_evidence_reports_exact_three_zero_three[Inactive]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[metadata_cleared]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cancel_P0_prevents_A_five_second_and_trigger_lower_level_pages[prices_reset]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[201]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_original_reason_over_two_hundred_characters_reaches_remote_card[202]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_same_cancel_after_thirty_one_minutes_stays_P0_without_global_P1_INFO_mute",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cancel_replay_and_restart_never_rehang_or_change_booked_position",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_terminal_foreign_hard_identity_cannot_end_protection_or_authorize_release[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[account]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[clientId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_active_native_identity_mismatch_still_P0_blocks_release_and_writes[auxPrice]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_planned_final_share_cancel_202_normal_reason_keeps_real_L7_TP_flow",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[positions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_fresh_working_only_is_not_complete_three_source_quantity_evidence[executions]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_cleared_terminal_then_complete_same_tuple_keeps_manual_hold_and_cancel_provenance",
+      "outcome": "failure",
+      "message": "assert 2 == 0"
+    },
+    {
+      "name": "test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps",
+      "outcome": "failure",
+      "message": "assert False\n +  where False = any(<generator object test_B22_item9_real_cancel_action_includes_exact_operator_warning_and_numbered_steps.<locals>.<genexpr> at 0x000002A5465BD540>)"
+    },
+    {
+      "name": "test_B22_item9_reason_above_nine_hundred_UTF16_units_is_exact_in_remote_embed_segments",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[first-card-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_partial_remote_ACK_does_not_mute_unacknowledged_reason_and_retry_is_exact[primary-ACK-reason-part-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-202-Order canceled by system: synthetic rule]",
+      "outcome": "failure",
+      "message": "AssertionError: assert None\n +  where None = control('frozen:AAPL')\n +    where control = <v6lite.store.Store object at 0x000002A5687CE0D0>.control\n +      where <v6lite.store.Store object at 0x000002A5687CE0D0> = <v6lite.tests.helpers.Rig object at 0x000002A5687CF390>.store"
+    },
+    {
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Inactive-0-Broker has cancelled the protective order]",
+      "outcome": "failure",
+      "message": "AssertionError: assert None\n +  where None = control('frozen:AAPL')\n +    where control = <v6lite.store.Store object at 0x000002A568808590>.control\n +      where <v6lite.store.Store object at 0x000002A568808590> = <v6lite.tests.helpers.Rig object at 0x000002A568808210>.store"
+    },
+    {
+      "name": "test_B22_item9_broad_terminal_reasons_freeze_with_exact_evidence_and_remain_non_rehang_on_restart[Cancelled-10147-Synthetic broker terminal reason outside 201 and 202]",
+      "outcome": "failure",
+      "message": "AssertionError: assert None\n +  where None = control('frozen:AAPL')\n +    where control = <v6lite.store.Store object at 0x000002A5688AEB10>.control\n +      where <v6lite.store.Store object at 0x000002A5688AEB10> = <v6lite.tests.helpers.Rig object at 0x000002A5688AD8D0>.store"
+    },
+    {
+      "name": "test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-cleared-fields]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    },
+    {
+      "name": "test_B22_item9_immediate_terminal_without_prior_binding_displays_fact_but_grants_no_authority[first-terminal-zero-permId]",
+      "outcome": "failure",
+      "message": "AssertionError: [('#x1F534 P0 · 保护单状态无法核实', '#x1F534 P0 · 保护单状态无法核实\n  发生了什么：AAPL 持仓数量=3 股 保护单已确认=0 股 保护单可能=3 股 止盈在途=0 股 外部卖单在途=0 股 未保护=待核实（可能范围 0–3...份或状态未知，未保护 待核实（可能范围 0–3） 股仍须券商核实。\n  你要做什么：1）在 TWS 用 orderRef、orderId、permId 核对真实订单；2）不要另下卖单或加量；3）取得持仓、工作单、成交三项证据后再决定。')]\nassert []"
+    }
+  ],
+  "stdout_sha256": "df872656b7301bdfcaa7317c91a6a7cacb54bd7025d0aae69d90c9698b8447e1",
+  "junit_sha256": "c054211de5c2046a6bcb82e0ae08c71eab45c44662ee5191933cf7c18479b3e2"
+}

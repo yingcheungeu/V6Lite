@@ -1,0 +1,756 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "green_locked_candidate",
+  "baseline": false,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-16T15:44:03.931313-07:00",
+  "end_pt": "2026-10-16T15:44:20.554791-07:00",
+  "returncode": 0,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "b736734f8e73edfb",
+  "source_unchanged": true,
+  "worktree_code_sha": "b736734f8e73edfb",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "b736734f8e73edfbf42d50deb49cc3e4ed852922fcc0f68aba7d5d0ec5549425",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27a_execution_time.py",
+      "sha256": "f2d9a1748696bd6aa3d45468f474ac36537d21b12f7a74fdd43e0eb9e2a3c993"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27a_lifecycle.py",
+      "sha256": "d8610c8689f30041fea721af27cf5e84f2c7b39ae27c9248186b124d2a303cd2"
+    },
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27a_review_edges.py",
+      "sha256": "8dfd97e347b1aee846832b724a6f8b43343ecc584c92b92299f9df81f6d88130"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 86,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[execId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[intent]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[symbol]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[side]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[quantity]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[orderId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[permId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[conId]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-verified]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_completed_protection_query_also_verifies_existing_callback_exec",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[exact-cutoff-freeze]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-before-allow]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-after-freeze]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[null]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[array]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[string]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[number]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-null]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-short]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-long]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[bool-quantity]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[nan-price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[infinite-price]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[naive-time]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[missing-pin]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[pin-conflict]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[row-conid-missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[UTC]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[+09:00]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[America/New_York]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-failed]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-empty]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-still-uncertain]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_history_receive_time_basis_is_explicit_in_daily_report",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_execution_time",
+      "name": "test_B27a_callback_can_be_verified_by_first_natural_protection_query_without_extra_tick",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[verified-history]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[callback-history]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_1016_Submitted_then_STP_fill_inside_query_closes_ledger_without_false_P0",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[short-position]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[external-sell-working]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[freeze-policy]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[callback-too-recent]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[unknown-today-execution]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_zero_duration_query_still_sends_actual_native_requests",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_close_notice_never_presents_sizing_reserve_as_observed_commission",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_lifecycle",
+      "name": "test_B27a_prior_close_unavailable_retries_each_five_minutes_and_only_actual_close_clears_entry_block",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+      "outcome": "passed",
+      "message": ""
+    },
+    {
+      "classname": "v6lite.tests.test_batch27a_review_edges",
+      "name": "test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]",
+      "outcome": "passed",
+      "message": ""
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[execId]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[intent]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[symbol]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[side]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[quantity]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[price]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[orderId]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[permId]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[conId]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-verified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-verified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-verified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_completed_protection_query_also_verifies_existing_callback_exec",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[exact-cutoff-freeze]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-before-allow]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-after-freeze]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[null]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[array]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[string]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[number]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-null]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-short]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-long]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[bool-quantity]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[nan-price]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[infinite-price]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[naive-time]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[missing-pin]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[pin-conflict]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[row-conid-missing]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[UTC]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[+09:00]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[America/New_York]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-failed]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-empty]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-still-uncertain]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_receive_time_basis_is_explicit_in_daily_report",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_callback_can_be_verified_by_first_natural_protection_query_without_extra_tick",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[verified-history]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[callback-history]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_1016_Submitted_then_STP_fill_inside_query_closes_ledger_without_false_P0",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[short-position]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[external-sell-working]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[freeze-policy]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[callback-too-recent]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[unknown-today-execution]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_zero_duration_query_still_sends_actual_native_requests",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_close_notice_never_presents_sizing_reserve_as_observed_commission",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_prior_close_unavailable_retries_each_five_minutes_and_only_actual_close_clears_entry_block",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[broker-time-verified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_1013_history_reboot1019_authorizes_TP_without_rewriting_history[callback-unverified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[under-one-hour]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[today]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[identity]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[time-not-equal]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_callback_five_invalid_receipts_freeze_TP_keep_three_share_STP[json]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[execId]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[intent]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[symbol]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[side]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[quantity]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[price]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[orderId]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[permId]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_every_marker_identity_field_is_bound_to_persisted_evidence[conId]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-verified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[unknown-today-fill-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-verified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-qty-mismatch-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-verified]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_time_exception_never_waives_fresh_b_c_d[native-stop-missing-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[ENTRY-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_callback_schedules_complete_today_query_and_verifies_known_exec_once[1016-STP-callback]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_completed_protection_query_also_verifies_existing_callback_exec",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[price]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[con_id]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_complete_query_identity_mismatch_preserves_economics_and_requires_review[broker_order_id]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_daily_report_lists_still_unverified_fills_without_rewriting_them",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[exact-cutoff-freeze]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-before-allow]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_cutoff_is_strict_not_inclusive[one-microsecond-after-freeze]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[null]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[array]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[string]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[number]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-null]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-short]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[identity-long]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[bool-quantity]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[nan-price]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[infinite-price]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_malformed_but_JSON_controls_fail_closed_without_crashing[naive-time]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[missing-pin]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[pin-conflict]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_conId_must_have_persisted_independent_pin_and_protection_binding[row-conid-missing]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[UTC]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[+09:00]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_historical_receipt_aware_offsets_use_instants_and_preserve_original_strings[America/New_York]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-failed]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-empty]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[open-still-uncertain]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-failed]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-empty]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_unverified_callback_requires_an_actual_matching_complete_query_before_clearing[closed-still-uncertain]",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_history_receive_time_basis_is_explicit_in_daily_report",
+      "v6lite/tests/test_batch27a_execution_time.py::test_B27a_callback_can_be_verified_by_first_natural_protection_query_without_extra_tick",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[verified-history]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_fresh_healthy_overnight_stop_ends_old_evidence_incident_without_granting_full_history[callback-history]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_1016_Submitted_then_STP_fill_inside_query_closes_ledger_without_false_P0",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[short-position]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_real_short_or_external_sell_is_never_excused_as_a_closed_fill_query_race[external-sell-working]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[freeze-policy]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[callback-too-recent]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_quoted_TP_while_frozen_never_starts_stage_and_keeps_15_second_query_cadence[unknown-today-execution]",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_zero_duration_query_still_sends_actual_native_requests",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_close_notice_never_presents_sizing_reserve_as_observed_commission",
+      "v6lite/tests/test_batch27a_lifecycle.py::test_B27a_prior_close_unavailable_retries_each_five_minutes_and_only_actual_close_clears_entry_block",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[disabled]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[UNKNOWN]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_prior_close_card_never_promises_a_stop_that_was_not_independently_verified[native-GTC-missing]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[short-position]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_closed_own_fill_exception_cannot_hide_already_visible_short_or_other_SELL[extra-working-SELL]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[unbooked-fill]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[different-remaining]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[fractional]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_repeated_WORKING_does_not_skip_urgent_when_payload_disagrees_with_identity[NaN]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_true_repeated_WORKING_preserves_fifteen_second_steady_queries",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_first_A_ack_is_urgent_not_a_suppressed_repeated_status",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_reduce_ack_is_urgent_and_TP_waits_for_native_ack",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_confirmed_own_STOP_close_ends_evidence_episode_even_with_pending_resume",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_healthy_OPEN_stop_cannot_clear_an_unfinished_resume_proof",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[quantity-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[orderId-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[permId-float]",
+      "v6lite/tests/test_batch27a_review_edges.py::test_B27a_review_same_day_time_verifier_rejects_equal_valued_float_identity_fields[conId-float]"
+    ]
+  },
+  "stdout_sha256": "a65583f922af28e7fa6d6edfcf5042db2f51ab88ca74d35617b563817981a834",
+  "junit_sha256": "3952761cee32ea16af9285567370998303aed8dbb7752f2e1df8611cae6124d8",
+  "inventory_sha256": "90a899a7792d010de027102cc94f80e4c9aa7977e8b3e297a5c56d6bfa80bb01",
+  "publication_redaction": {
+    "rule": "All account-shaped values including synthetic fixtures masked; original receipts retained locally and not staged.",
+    "original_artifact_sha256": {
+      "green_locked_candidate.json": "8def4f60ee97c4f32fcd4800c3f03de9440db8e038501f715076cd2c8ba35c53",
+      "green_locked_candidate.txt": "a65583f922af28e7fa6d6edfcf5042db2f51ab88ca74d35617b563817981a834",
+      "green_locked_candidate.xml": "3952761cee32ea16af9285567370998303aed8dbb7752f2e1df8611cae6124d8",
+      "green_locked_candidate_inventory.json": "7a948dadb7ed71c585daa502eafe7c17034441bb86837a38d77b12502d2a6aae",
+      "green_locked_candidate_progress.json": "e2e0b639e33be84663510f1ea2a8a1111fc02df0eb60f7a43ad401f6c576563e"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.........F..                                                             [100%]
+================================== FAILURES ===================================
+_ test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d[\u4fdd\u672c\u4fee\u6539\u5f85\u786e\u8ba4] _
+v6lite\tests\test_batch31_overnight.py:173: in test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d
+    _tick_until(rig,lambda: rig.store.control('frozen:AAPL') is None)
+v6lite\tests\test_batch28b_overnight_refresh.py:44: in _tick_until
+    rig.tick()
+v6lite\tests\helpers.py:99: in tick
+    self.engine.tick()
+v6lite\engine.py:555: in tick
+    self._tick(now)
+v6lite\engine.py:606: in _tick
+    self._tick_step("protection", lambda: self._protection_progress(
+v6lite\engine.py:589: in _tick_step
+    return action()
+           ^^^^^^^^
+v6lite\engine.py:606: in <lambda>
+    self._tick_step("protection", lambda: self._protection_progress(
+v6lite\protection_engine.py:1079: in _protection_progress
+    self._protection_progress_one(self.clock.now(), row, pos)
+v6lite\protection_engine.py:1162: in _protection_progress_one
+    self._overnight_clear_price_freeze(now, row, held, own, others)
+v6lite\overnight_evidence.py:350: in _overnight_clear_price_freeze
+    ack = self.store.conn.execute(
+E   sqlite3.OperationalError: no such column: time
+------------------------------ Captured log call ------------------------------
+WARNING  v6lite.lifecycle:lifecycle.py:65 [SHUTDOWN_REQUESTED] source=operator exception_type=None reason=operator requested stop at=2026-10-26T14:00:31+00:00
+ERROR    v6lite.alerts:alerts.py:785 [V6-Lite] P1: overnight TP evidence pos-f2f07de94e564387b413 | AAPL：保本修改待确认；券商 P=2 股，账本=2 股，当前工作 STP S=未知 股；本地上次确认 STP S=2 股；GTC orderId=2801 permId=52801；历史账本入场=b28b-1020-entry.01.01@2026-10-26；当日可见成交=1 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-27T13:33:28.001000+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+============================== warnings summary ===============================
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[openOrder]
+v6lite/tests/test_batch31_overnight.py::test_B31_oct27_actual_restoration_pending_ack_and_TP2_close[own-round]
+  v6lite\tests\test_batch31_overnight.py:62: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('source',['openOrder','own-round'])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED v6lite/tests/test_batch31_overnight.py::test_B31_only_explicit_confirmation_freeze_clears_after_new_a_d[\u4fdd\u672c\u4fee\u6539\u5f85\u786e\u8ba4]
+1 failed, 11 passed, 2 warnings in 5.47s

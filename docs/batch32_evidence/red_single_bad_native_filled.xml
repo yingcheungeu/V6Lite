@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.355" timestamp="2026-10-29T08:26:50.821421-07:00" hostname="DESKTOP-BF9GHJ8"><testcase classname="v6lite.tests.test_batch32_normalization_guards" name="test_B32_bad_native_filled_single_stays_unverifiable" time="0.332"><failure message="AssertionError: a new single bad row cannot bypass original native quantity completeness&#10;assert ([])">v6lite\tests\test_batch32_normalization_guards.py:158: in test_B32_bad_native_filled_single_stays_unverifiable
+    assert errors and states!=['WORKING'], 'a new single bad row cannot bypass original native quantity completeness'
+E   AssertionError: a new single bad row cannot bypass original native quantity completeness
+E   assert ([])</failure></testcase></testsuite></testsuites>

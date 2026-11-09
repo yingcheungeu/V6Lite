@@ -1,0 +1,40 @@
+{
+  "base_commit": "8200445318afb3a56c76e2569c1cef851963e557",
+  "changed_existing_functions": {
+    "v6lite/engine.py": [
+      "Engine._handle_event",
+      "Engine._on_position_closed",
+      "Engine._tick",
+      "Engine._ingest_fill",
+      "Engine._update_loss_state",
+      "Engine._end_of_day"
+    ],
+    "v6lite/protection_engine.py": [
+      "ProtectionMixin._protection_page"
+    ],
+    "v6lite/test_tp_timeout.py": [
+      "TestTpTimeoutMixin._test_timeout_event"
+    ],
+    "v6lite/risk.py": [
+      "loss_state",
+      "trade_net"
+    ],
+    "v6lite/config.py": [
+      "validate"
+    ],
+    "v6lite/report.py": [
+      "_tp_health",
+      "daily_report",
+      "_protection_health",
+      "daily_health_report"
+    ]
+  },
+  "new_commission_broker_methods": [
+    "executions_today",
+    "is_connected",
+    "is_synchronized"
+  ],
+  "sizing_exits_broker_time_parser_byte_identical": true,
+  "unchanged_order_submit_cancel_and_protection_state_functions": true,
+  "source_sha256": "66cde0e9251125df00b86724c27cfea6944e4d30a583952ed1d0b1c05de31ddd"
+}

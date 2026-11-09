@@ -1,0 +1,46 @@
+{
+  "dependencies": {
+    "version": "0.9.86",
+    "sources": {
+      "wrapper.py": "4ed7299106979c0b2518658d4d3ef371fe5a39b254586254650edc35217cb0c1",
+      "decoder.py": "b06cbe24eca37e3386d0ab213deb43e493171e8cbb7c26060ea4936f97f79b4c",
+      "client.py": "1d86989d6815881ea88576e8e3bdcf34fe40d1da778dfee68619ee80e53a2822",
+      "ib.py": "b5f60220c941a335c47cbb0257a342e3122b1f07cc9f809a36a0e7c9b4ba84fc",
+      "order.py": "f014b063b899fd9ec1cd4bd4cf9cc834de0efb89c089bdeb673c09b392131ca7",
+      "util.py": "86c7250f24545721a4fd230e747b0d01e66cb1f8a4ad12e152c7a70d4b37d964"
+    }
+  },
+  "dependencies_unchanged": true,
+  "label": "final_full_3",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-31T17:50:35.676149-07:00",
+  "end_pt": "2026-10-31T18:29:02.017926-07:00",
+  "seconds": 2306.343,
+  "returncode": 0,
+  "args": [
+    "v6lite/tests",
+    "scripts/tests"
+  ],
+  "code_sha": "a864ccd2f7680fba",
+  "source_unchanged": true,
+  "inventory_sha256": "e03679a2b4b812735fabcc02508a03314dc125b70318ee12982681533c4ec67e",
+  "incomplete": false,
+  "read_only_inputs_unchanged": true,
+  "raw_stdout_normalized_utf8_sha256": "19a2fe5555d53d3c2c5b2e7abf109b6d0b0f386c32da46978bb2f3fce3f0fcfa",
+  "XML_sha256_before_masking": "162d2a157a874e46cfa4c0f6d2c216f804215fd0799f4af8ab3c2dafea5438f7",
+  "delivered_log_sha256": "a29a8b07a0940ce2e0755bf7e7eb372fd00f8424e01d426437b8b55cdf85511e",
+  "delivered_XML_sha256": "860847ffeb24bb9eb353a06f028f75c6d676c3176fa05f0062843f48ccbe6441",
+  "tests": 2411,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_strategy_parity",
+      "name": "test_scoring_matches_legacy_scanner_on_identical_bars",
+      "kind": "skipped",
+      "message": "legacy market_scanner.py not present"
+    }
+  ]
+}

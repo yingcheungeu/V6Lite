@@ -1,0 +1,35 @@
+{
+  "recorded_by": "/root",
+  "reviewer": "/root/batch24_investigate",
+  "read_only_review": true,
+  "recorded_at_pt": "2026-10-12T20:15:46.325515-07:00",
+  "checkpoint_sha256": "79e076544c19606e0a923ee9f48977ba10e1c9bdca437bc5f1b27dce65f304b9",
+  "code_sha": "2db6af8f04f145f6",
+  "locked_files_checked": 298,
+  "result": "PASS",
+  "missing_files": 0,
+  "hash_mismatches": 0,
+  "unresolved_substantive_findings": [],
+  "full_runs_completed_at_checkpoint": 3,
+  "commit_completed_at_checkpoint": false,
+  "actual_each_full": {
+    "tests": 1560,
+    "passed": 1559,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0
+  },
+  "production_bindings_checked": 13,
+  "actual_samples_checked": 7,
+  "full_start_preserved_files_checked": 4,
+  "only_declared_full_start_documentary_deltas": [
+    "build_batch24_report.py (2110 template sentence only)",
+    "evidence_tool_review.json (actual documentary followup review)"
+  ],
+  "production_tests_scripts_changed_after_full3": false,
+  "new_checkpoint_evidence_files": 22,
+  "full_acceptance_review_sha256": "d44a3f7de6219e9721238d8f6051a8c3cd3254c8f28e769a3cf3161af94d4cb0",
+  "tool_review_sha256": "2395fff3c94d956d448d6ae440d5a2716e792a404fbed42dcf63a2b282bce0be",
+  "manual_checked_by_hash_only": true,
+  "authorization": "Generate --final, independently verify published report/manifest; exact task-only stage and dev commit/tag after final scope/secret/large-file check"
+}

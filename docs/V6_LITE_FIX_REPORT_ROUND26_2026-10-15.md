@@ -1,0 +1,490 @@
+# V6-Lite 第二十六批修复报告（2026-10-15）
+
+状态：Windows默认全量连续3次通过；dev交付后冻结，等待Claude复核。未授权合并main。
+
+最终code_sha=`579d13832e3f4237`。算法：按v6lite相对POSIX字符串大小写敏感排序，依次路径UTF-8、NUL、原始字节、NUL，SHA-256前16位；排除__pycache__，包含测试/样例。
+
+## 范围、裁定与剩余风险
+
+基线 `v6lite-batch25` / `97fa8c6d68cfd7b700c1474dc6f8a94e158fd2d2`（code_sha `ea71abe782e4cf68`）。只在 `C:\Dev\V6Lite-dev` 的 `dev` 修改。第1节调查于10/14先交付，之后才修改生产；原指令SHA-256=`dff7d8eff2edf4e2bfb18e3a63f6a018292cf2662fdcbae7c50268b8cdbee78b`。调查原件SHA-256=`41f834b1b843bcbe73599ef92437b211225e5dbae5f632eb3959ca052f142805`。最新裁定原文见 `docs/V6_LITE_BATCH26_RULING_ADDENDUM_2026-10-15.md`，取代临时bool开关及前序待定表述；历史报告和失败收据原样保留。
+
+John 确认原文：
+
+> 运行约束 A（账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release）与 B（账本不回滚：不手动替换/恢复/编辑 .v6lite 状态库）为 John 明确接受的剩余风险，须写入报告和卡片说明，不得称为技术证明。
+
+两项已接受风险仍为：**停机期间等量手动卖出又买回（净数量不变，只影响盈亏）；状态库被整体回滚为与券商一致的旧版本。** 程序不能技术排除它们。历史digest及流程token只绑定本次流程，不是账本未回滚或人工从未交易的技术证明。实际INFO/P1卡片均注明“依据运行约束 A、B”。不修改 Master API client ID，不将空的可见成交列表解释为全账户历史没有交易。
+
+## 第1节调查及官方依据
+
+[当前IBKR reqExecutions](https://www.interactivebrokers.com/docs/tws-api/doc/order-management/execution-details/request-execution-details)保证当日午夜以来；[新ExecutionFilter协议](https://www.interactivebrokers.com/docs/tws-api/protobuf/execution-filter)虽有最多7天字段，本机ib_insync 0.9.86只有旧七字段，不发送新字段也不补齐历史。[旧官方页面](https://interactivebrokers.github.io/tws-api/executions_commissions.html)提到TWS Trade Log设置与Gateway的区别；不能合并为本机一定可查7天。实际服务端设置及历史范围未知，本轮未连接券商。
+
+[IBKR Master/clientId文档](https://www.interactivebrokers.com/docs/tws-api/doc/order-management/client-id-0-and-the-master-client-id)区分客户端可见范围，账户过滤成功不能证明可见所有client。按John裁定，历史由已持久化账本承担，当日核验当前API可见成交，以A、B约束为前提；不额外要求Master设置或不可取得的历史连续性。调查第4节的逐行核验仍保留。
+
+## 发现 → 改动 → 测试
+
+|发现|改动与源码引用|独立测试|
+|---|---|---|
+|临时bool不能表达最终裁定|`v6lite/config.py:88` 默认 `overnight_tp="freeze"`，`v6lite/config.py:257` 仅接受freeze/constraint，`v6lite/config.py:180` 纳入指纹；五份示例显式freeze，移除临时bool|policy默认/五示例/严格拒绝非法值；edge真实TOML省略=freeze、constraint指纹不同。|
+|昨日入场不在当日下载|`v6lite/overnight_evidence.py:76` 逐行核execId、订单/恢复持仓关联、orderId/permId、方向用途、正且有限数量价格、时区/日期、BUY总数、净持仓及成本；`v6lite/overnight_evidence.py:202` 每动作消费当日同代新鲜a–d，逐字段比对每条可见成交|真实昨日ENTRY→GTC→正常停机→SQLite重开，今日查询显式不含昨日；五类指定负向、九种GTC身份、四种历史损坏、同execId经济冲突、查询失败/过期/换代/跨日。|
+|成功证明不能沿用为后续写权限|`v6lite/protection_engine.py:1463`、`v6lite/protection_engine.py:1618` 重新主动查证；`v6lite/overnight_evidence.py:317` 绑定原GTC/起始P/本次TP/历史；撤单恢复保留两轮查询/原ACK门槛。通用full_exec仍False，不扩大加量、重建或release|减量ACK前不发TP；10秒撤TP确认后同GTC恢复；TP1/TP2真实成交及末股TP3恢复；正常流程每个写边界保留原独立S+T+X≤P oracle。|
+|保本价缺证、BE token空集通过|`v6lite/protection_engine.py:950` 过夜BE重新查a–d/历史，同日BE须full_exec；`v6lite/overnight_evidence.py:418` 精确十键绑定和行值，仍须本代native ACK|真实TP1后同GTC保本；同日缺ENTRY下载禁止BE；真实PRICE_PENDING清空binding或删modify_generation不能确认WORKING/不能开TP2，原GTC保留。|
+|过夜限制被误升P0且重复提醒|`v6lite/overnight_evidence.py:131` position_id持久键，仅一次说明；`v6lite/overnight_evidence.py:146` 写明失败项、标的/数字/订单号与A、B非证明。纯TP限制不进通用P0|改原因、超过30分钟两次、SQLite重开仍一次；无假P0。真实缺保护/身份错/欠保护/外部SELL/F4/A/B告警保持。|
+|失败提前返回导致每秒查询|`v6lite/overnight_evidence.py:186` 仅当代新鲜P=账本、唯一强身份WORKING GTC S=P、无pending/A/B/其他SELL才认健康；`v6lite/protection_engine.py:950` 更新时间，复用原15秒节流，不清旧retry/F4/hold|真实每秒tick共31秒：constraint缺ENTRY/未知成交四项下载仅t=15/30各一次；freeze原三项同节奏，额外account query=0；保护不变、无写。|
+|默认freeze破坏b25静默接管|freeze是正常策略，健康接管且没有TP/BE需求时不报异常；实际TP或应改BE被限制时才说明，constraint失败仍即时说明；只调整呈现，不改权限|B25重启回归整文件24项绿色控制（含两项native接管/过夜STOP参数）；原85测试不改。新policy增强低于TP时0说明→真实尝试后恰1卡，15秒/身份/容量不变。|
+|新范围分支绕过外部SELL旧冻结，或挡住安全减量确认|`v6lite/protection_engine.py:950` scope前保留persistent external_sell/P0；gross应急先于拒绝return；仅MODIFY_PENDING同价严格减量可按原本代native ACK结算下降的保守上界，随后仍拒新权限|外部撤单/重启不解除冻结；外部先造成4>P3时只准原GTC减至≤2或撤单，确认前上界不增，真实ACK后再用原oracle验证≤P；无新TP/新GTC/加量/改价。|
+|自身恢复期间旧数量快照被误判|`v6lite/overnight_evidence.py:353` 仅同日本次TP token/原GTC/历史digest/同价RESTORE_PENDING识别旧total；`v6lite/protection_engine.py:450` 仅将该旧观察加入身份候选，不确认新量|两项RESTORE_PENDING自然红后修复；同GTC2→3真实ACK、开关中途freeze仍安全收尾。通用恢复/坏token不获权限。|
+|收盘后在13:05日报前停机缺日报|`v6lite/engine.py:3000` 保留已完成实现；`v6lite/engine.py:3011` 使用实际日历收盘时间及sent/local/pending持久去重。撤DAY/留GTC→SHUTDOWN→disconnect→补报顺序不变|35项：正常/半日市/休市/收盘前/dry-run、重复停机/重开、原正常重试、渲染/文件失败不阻断安全停机。|
+|卡片误把历史S当作当前券商保护|`v6lite/overnight_evidence.py:146` 分别标明本地上次确认和当日同代完整快照中的当前工作保护；缺完整proof或身份不足显示未知，不能宣称仍有保护|3项真实Engine/实际embed：已取消当前0/本地3，稳定缺ENTRY当前3/本地3，查询失败当前未知/本地3；权限和去重未变。|
+
+## 红绿真值、配置影响与分工
+
+本批7份spec共108节点：shutdown35、overnight33、edge20、external2、BE token2、policy13、卡片证据3。最终同规格B25为80失败/28通过/0错误；最终相关聚焦246项全通过，其中完整包含108新增项及B25接管、停机止损回放。85份旧测试和7份scripts原字节保留，无删测试、改skip或弱化原容量断言。
+
+历史红收据不相加为新增覆盖。初版shutdown 35个setup error属于Windows本地asyncio socketpair夹具错误，原件保留、不算产品红；校准后15自然失败有效。B25及早期候选部分深支case在健康BE前置失败，不夸称已到经济冲突/末股恢复；最终绿色执行了后续强断言。所有中途实质回归均保留原始stdout/JUnit/完整nodeid、源码patch/module，后修再验，无flaky豁免或隐藏重试。
+
+独立测试校准保留原件与AST证明：默认freeze不被强迫额外账户查询；外部自行超限不能禁止旧应急减量，只有该参数分支改成严格紧急写监测；默认freeze未实际尝试前应静默。`_safety`本体及其他原安全节点未改，最后真实ACK后的容量断言继续驱动发现应急ACK生产回归。原B25接管静默断言未修改。`phase1_checkpoint`和旧matrix是前序快照，最终以acceptance_checkpoint及全量收据为准。
+
+新增键纳入配置指纹；省略与显式freeze相同，constraint不同，指纹模型与B25也有变化。是否开启由John决定。本批没有读取或修改John配置、状态库或审批，不声称真实配置已完成启动验证。五例只增加默认freeze及说明，保留原换行格式。
+
+生产只由唯一实施Agent修改，测试由另一Agent独立设计；ROOT串行最终验证，独立Agent只读复核。原调查/裁定/中途红证据与最终收据均入清单。实际卡片通过真实Engine/Alerter/AlertCard及MemoryChannel生成；没有手机送达或真实券商测试。
+
+## 交付边界
+
+仅dev提交、附注tag `v6lite-batch26` 并冻结等Claude复核；不合并main、不push。合并时机由Claude/John在10/15接管测试后决定。不访问运行工作树、John运行配置、用户目录或状态库；操作手册只保留原哈希，不读内容不修改。原有手册修改、item8研究和其他批次临时目录保留且排除提交。行号与摘录见 `docs/batch26_evidence/source_anchors.json`。
+
+首轮实际卡片 `render_samples.json/md` 和原renderer保留，供核对历史数量误标；最终报告仅按 `final_render_selection.json` 指向的新收据 `render_actual_2.json` / `render_actual_2_samples.json/md` 取样，完整源码及原始输出SHA均核验，不覆盖历史样例。
+
+
+## 串行红绿与Windows全量收据
+
+|收据|源码code_sha|通过/失败/错误/跳过|PT开始 → 结束|
+|---|---|---|---|
+|red_shutdown_b25_calibrated.json|ea71abe782e4cf68|20/15/0/0|2026-10-14T21:04:16.694431-07:00 → 2026-10-14T21:04:21.148812-07:00|
+|red_overnight_b25.json|ea71abe782e4cf68|2/31/0/0|2026-10-14T22:07:41.463092-07:00 → 2026-10-14T22:07:47.842126-07:00|
+|red_review_edges_b25.json|ea71abe782e4cf68|3/15/0/0|2026-10-14T22:18:06.534044-07:00 → 2026-10-14T22:18:09.338580-07:00|
+|red_final_108_specs_b25.json|ea71abe782e4cf68|28/80/0/0|2026-10-15T18:01:17.527856-07:00 → 2026-10-15T18:01:34.454418-07:00|
+|green_first_overnight_candidate.json|b6320521dd5bbd1e|78/8/0/0|2026-10-14T22:18:28.635818-07:00 → 2026-10-14T22:18:39.450254-07:00|
+|candidate_BE_fixed_all_new.json|b1a099352f9adaad|86/2/0/0|2026-10-14T22:24:30.197885-07:00 → 2026-10-14T22:24:41.722176-07:00|
+|candidate_BE_token_schema_unfixed.json|f00859c1a2eb5fd9|0/2/0/0|2026-10-14T22:28:33.891771-07:00 → 2026-10-14T22:28:35.548018-07:00|
+|green_final_candidate_new_specs.json|281391e94e5a3b54|104/1/0/0|2026-10-15T17:44:37.390645-07:00 → 2026-10-15T17:44:53.934465-07:00|
+|focused_final_candidate_regressions.json|61a190db8bf2e7cc|242/1/0/0|2026-10-15T17:47:18.822820-07:00 → 2026-10-15T17:47:53.631754-07:00|
+|red_freeze_quiet_unfixed_candidate.json|dd4c0138dc564f53|12/1/0/0|2026-10-15T17:52:12.063331-07:00 → 2026-10-15T17:52:15.411217-07:00|
+|red_card_stock_labels_unfixed.json|353cb0583c81229a|0/3/0/0|2026-10-15T17:59:45.457259-07:00 → 2026-10-15T17:59:47.633439-07:00|
+|focused_final_108_candidate.json|579d13832e3f4237|246/0/0/0|2026-10-15T18:01:37.009560-07:00 → 2026-10-15T18:02:12.078352-07:00|
+|full_1.json|579d13832e3f4237|1716/0/0/1|2026-10-15T18:05:37.888809-07:00 → 2026-10-15T18:12:04.847675-07:00|
+|full_2.json|579d13832e3f4237|1716/0/0/1|2026-10-15T18:12:07.629844-07:00 → 2026-10-15T18:18:23.243561-07:00|
+|full_3.json|579d13832e3f4237|1716/0/0/1|2026-10-15T18:18:25.977116-07:00 → 2026-10-15T18:24:42.033742-07:00|
+
+B25完整集合1609项全部保留；新增108项，最终1717项。三次collection/executed nodeid、JUnit数量/结果、源码/测试哈希及唯一旧skip一致；所有全量运行均在交易时段外。Windows JobObject只保护本次验收子进程树，下一交易时段前5秒截止。
+
+## 实际FakeBroker卡片样例
+
+# 实际FakeBroker卡片样例（合成账户/持仓；仅MemoryChannel）
+
+这些文本来自真实引擎触发及渲染，不是手工拼出的预期，也未发到手机。
+
+## restore_INFO
+
+```text
+🟢 INFO · 过夜持仓自动止盈恢复 · AAPL
+证据：AAPL：依据运行约束 A、B，历史账本 + 当日可见三项核验符合，自动止盈恢复；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+权限：仅止盈、保本及本次止盈自身恢复；不提供完整历史成交权限。
+你要做什么：1）核对标的、股数与 GTC 编号；2）观察后续止盈/保本结果；3）出现差异时保持冻结并在同一 TWS 核查。
+```
+
+## freeze_policy
+
+```text
+🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+核验结果：AAPL：overnight_tp=freeze：默认只保留止损，过夜自动止盈/保本受限制；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=client-scoped executions_today；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+```
+
+## manual_sell_one
+
+```text
+🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+核验结果：AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=2.0 股，账本=3 股，当前工作 STP S=未知 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+```
+
+## cancelled_gtc
+
+```text
+🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+核验结果：AAPL：GTC STP 工作状态/保护数量与持仓不一致，或存在其他工作中卖单；券商 P=3 股，账本=3 股，当前工作 STP S=0 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=0 条，未知项=0；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+```
+
+## missing_entry_exec
+
+```text
+🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+核验结果：AAPL：账本缺少已持久化的入场成交 execId；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=缺少入场 execId；当日可见成交=未完成 条，未知项=未完成核验；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+```
+
+## unknown_today_exec
+
+```text
+🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+核验结果：AAPL：当日可见成交无法归属或与账本经济身份不一致：b26-unknown-today.01.01；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=b26-unknown-today.01.01；范围=client + currently API-visible account execution queries；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+```
+
+## position_mismatch
+
+```text
+🟠 P1 · 过夜持仓止盈核验未通过 · AAPL
+核验结果：AAPL：当日新鲜持仓/工作单/成交核验失败：broker position does not match ledger；券商 P=4.0 股，账本=3 股，当前工作 STP S=未知 股；本地上次确认 STP S=3 股；GTC orderId=1002 permId=51002；历史账本入场=0000fa4e.00000001.01.01@2026-10-13；当日可见成交=未完成 条，未知项=未完成核验；范围=当日可见，未宣称全账户；核验时间=2026-10-14T14:01:00+00:00；依据运行约束 A、B（John 明确接受的剩余风险，不是技术证明）：A 账户独占：Lite 管理的标的只由 Lite 交易，人工处置一律按停机→撤单→平仓→release；B 账本不回滚：不手动替换、恢复、编辑 .v6lite 状态库。仍不能技术排除停机期间等量手动卖出又买回，以及状态库整体回滚后恰与券商一致。
+影响：冻结本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。
+你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。
+```
+
+
+
+## SHA-256 清单
+
+334项；机器清单docs/batch26_evidence/sha256_manifest.json SHA-256：`dea2de13ba3a278bfde76bf0641d788e59aaa9ac3a32213ef1152f8d3c76f4cf`。报告与manifest自身不进清单，避免循环；报告SHA另行交付。
+
+|文件|SHA-256|
+|---|---|
+|docs/V6_LITE_BATCH26_EVIDENCE_RULING_2026-10-14.md|`1b8a03ca6bd93272a10ddd4545ff8fd6b3764b3015a6f1b26edf9fcae90f15f5`|
+|docs/V6_LITE_BATCH26_INSTRUCTIONS.md|`dff7d8eff2edf4e2bfb18e3a63f6a018292cf2662fdcbae7c50268b8cdbee78b`|
+|docs/V6_LITE_BATCH26_INVESTIGATION_2026-10-14.md|`41f834b1b843bcbe73599ef92437b211225e5dbae5f632eb3959ca052f142805`|
+|docs/V6_LITE_BATCH26_RULING_ADDENDUM_2026-10-15.md|`d5a42c6a41c90dd289e4fe04471b6c4d4e1fa6dd408f0d66c49c4ec18a1fe94b`|
+|docs/batch26_evidence/acceptance_checkpoint.json|`30385d324c3d88966ac2b1de246e45dd8363270a11d4c1ddec303279177060fe`|
+|docs/batch26_evidence/acceptance_process.py|`f96c9e873541f6d61575f9f09b25491ede1335fd24785627d06d6b3cdbdbc08d`|
+|docs/batch26_evidence/baseline_external_sell_regression.json|`f95b371f00600cf616586ec41972c1d8af3354b72921b4948a251f42ea7a1d0e`|
+|docs/batch26_evidence/baseline_external_sell_regression.txt|`3035c6d15cf72f816329db0a4de97aae01ed865a5f403abbb3b51459170fd6e0`|
+|docs/batch26_evidence/baseline_external_sell_regression.xml|`7c312a8a73009e7a0ce70300941efd76dcd427aa6fbffcb53f2dfc22b9a0cbc5`|
+|docs/batch26_evidence/baseline_external_sell_regression_inventory.json|`dc61ac9f6ba8a60ed77e4b6044c227ff5bb3a3a48a5ed57a2b8256b14f5b49af`|
+|docs/batch26_evidence/baseline_native_takeover_control.json|`9a8fbeb75b136064435b9b5cbab4fba8d82a72de9be640b8a4db3409b2bedc8a`|
+|docs/batch26_evidence/baseline_native_takeover_control.txt|`f43ecb1e9f4af25e57e94be0408eae8f44ebd4d00aa9c01bff840ae940d23dbc`|
+|docs/batch26_evidence/baseline_native_takeover_control.xml|`79eae1795687f828f1bf64a972272d5aa89c5572fd921d42555f4cbf9e11c8a6`|
+|docs/batch26_evidence/baseline_native_takeover_control_inventory.json|`a99210da57d0160e7ca65ddf72fd1a554c12ffda3afd5b01914906ecdde2af3d`|
+|docs/batch26_evidence/baseline_receipt.json|`d2f9b29ef6a7a70ab56eb15c1bca298d05502233fff6a31d6aa75bc5aaa60797`|
+|docs/batch26_evidence/be_fixed_tracked.patch|`bcec8e88e0aa51c221fd690d4e47363f7141e6bc0f9515d5466244f491312326`|
+|docs/batch26_evidence/build_batch26_report.py|`8a9a72553854e247ee9e783168d535d6a17a7d769cbafbdff847c69d601f55b9`|
+|docs/batch26_evidence/candidate_BE_fixed_all_new.json|`6097102e62112a507e02b5c8ea5151c3ebc49a73d49e8d8ee1e1896c3cd12c9f`|
+|docs/batch26_evidence/candidate_BE_fixed_all_new.txt|`e0f1bdc563fb6fff49f581e81b78eba8ff046df76b0c741f42d87f7e6dc94b4a`|
+|docs/batch26_evidence/candidate_BE_fixed_all_new.xml|`3949be5372820dea985580e942ff6fe35aed562260dd46fd8ee8078aa368637b`|
+|docs/batch26_evidence/candidate_BE_fixed_all_new_inventory.json|`eb8732a7b6b27e38f2a97a2922fceaf82a7eb31aa7e58277c62e826c305c723f`|
+|docs/batch26_evidence/candidate_BE_token_schema_unfixed.json|`8ccac309fcdbd4a6b0ea31a12861877bbf67b2cb8fd6370a1782c5cd9abe574e`|
+|docs/batch26_evidence/candidate_BE_token_schema_unfixed.txt|`bf8bc1ab57887a3dda935368aec0e00c66e0279b8092ca5b67c7868160e25509`|
+|docs/batch26_evidence/candidate_BE_token_schema_unfixed.xml|`b30248bf2cf178924b0d3cdb1109e1e1386cc408f8b557a718f9e6185d27015e`|
+|docs/batch26_evidence/candidate_BE_token_schema_unfixed_inventory.json|`80067f1e1579b3c215337f5f07cd00f819c0a0e30d269762e519c1b431ba9caa`|
+|docs/batch26_evidence/candidate_be_fixed_source.json|`7f59e04b03adcd1ef0b8ce352bf3f92d59287514a467e743e9366a0d572e7ce2`|
+|docs/batch26_evidence/candidate_first_source.json|`58d30649fbddd2505bad48025bf46be40b5c64d85b837718e17c52f672296ca2`|
+|docs/batch26_evidence/card_stock_label_review.json|`45ec0f825eb3ed8c2dca84ad95d7a28ba31c1a11fce8c1ccd8a884232d6bc211`|
+|docs/batch26_evidence/edge_exec_test_strengthening_review.json|`34e29eb0a49f60d67ba37596e8cd3201edfb394a3e473eaa231d4602f358e4ce`|
+|docs/batch26_evidence/emergency_ACK_regression_review.json|`842299666f9763c54688e19e6dd51a46b4a0479b45aa0395fd127651de5a995c`|
+|docs/batch26_evidence/enum_first_candidate_source.json|`560b09069172390a472173bd7f1983ede5d3db2a0770a8a2f5d7d1585f9f6bc0`|
+|docs/batch26_evidence/enum_first_candidate_tracked.patch|`2990843019862e1a8d84fd5e7feb337302eca690fea1d3539e5f11305db2b799`|
+|docs/batch26_evidence/evidence_ruling.json|`fe71e04846794caac05578281aced4828f965a793ffbd3f8d19ac51ce71a3410`|
+|docs/batch26_evidence/external_gross_fixture_calibration_review.json|`7dfa54c21f4464eb248ef5b38d8a0c0e0a81712dfdb3fc4d913a125d9c6061aa`|
+|docs/batch26_evidence/final_candidate_source.json|`09ee2ce0f216f40b6256fa2eeebba0cfe7446e04f0ae149f437889d6e92438ca`|
+|docs/batch26_evidence/final_render_selection.json|`4121e4a1ce408d8aea03d22d24d1f19e8640ce6cefbb78d1d63b2fd41c2b97c2`|
+|docs/batch26_evidence/final_source_compile.json|`301b6005e00747c641c3fafb2d7732189d1e1d5df4e4c0af4e5cafb60c678b02`|
+|docs/batch26_evidence/final_source_compile_before_stock_label.json|`ba40127bb9d7572f9a7b58f7e1ba0b4dc9bed13fc19c77104ce2f76dbb0f6201`|
+|docs/batch26_evidence/first_candidate_failure_review.json|`101b8da61ed4e260ef7b6defaa2639278d4426986941ee708df246c498d51fcc`|
+|docs/batch26_evidence/first_candidate_tracked.patch|`b5c6a3035c8870e779125c73875403ba4c91ba3a5032c95712f1df568c41a6d2`|
+|docs/batch26_evidence/focused_final_108_candidate.json|`e0bff7a29d923f7e53dd95009908794b097ba75ac1082b494de68d4f1ccb6143`|
+|docs/batch26_evidence/focused_final_108_candidate.txt|`14060bd0003b75134870b6c491ddea80a2b6b4657e68ee30a6d1165dbec01c9e`|
+|docs/batch26_evidence/focused_final_108_candidate.xml|`654ebb84f653af5e35822693d7264207916685a47bcd3351e8a2f17c3a391da2`|
+|docs/batch26_evidence/focused_final_108_candidate_inventory.json|`75464dee4ff501e3db602a7bd2602c3e6ee80fb063d4717168814c68e8cb86c6`|
+|docs/batch26_evidence/focused_final_candidate_regressions.json|`05a4f67a43034e24ff777e783e813ed97c205c03772438f14d06fbbfd1fbeb92`|
+|docs/batch26_evidence/focused_final_candidate_regressions.txt|`57a8db02fe3ff43844cf1ad83176cb70c1907f06e326b08f8022dad1b33daaf5`|
+|docs/batch26_evidence/focused_final_candidate_regressions.xml|`4be57781cf16b8c91d7ebb399e9c47ac9b40613748028c38d2f5d264d122ae6b`|
+|docs/batch26_evidence/focused_final_candidate_regressions_inventory.json|`40c52c102ad92138cf4ad3461bee20a41b59d8c65332a755e2d5791cb8e44714`|
+|docs/batch26_evidence/focused_final_quiet_candidate.json|`341a34fa9684b0713b164495ec54224f593243a380e344472d5170529f9366e6`|
+|docs/batch26_evidence/focused_final_quiet_candidate.txt|`e2b259c67702316b3709089ed455ec9e7ed2e7f13eaa61477f2de7e890a9dd35`|
+|docs/batch26_evidence/focused_final_quiet_candidate.xml|`4cbfe2a6d8c38c571f16628d9c31014a21dd5fd7a83f853d24a3a122db457eca`|
+|docs/batch26_evidence/focused_final_quiet_candidate_inventory.json|`40c52c102ad92138cf4ad3461bee20a41b59d8c65332a755e2d5791cb8e44714`|
+|docs/batch26_evidence/focused_shutdown_b25_regressions.json|`eb82bf276be2153b1d542db4444fa861093e0c0226040ab589f20c807297b131`|
+|docs/batch26_evidence/focused_shutdown_b25_regressions.txt|`6d87d990e78a6103b6b5565d78dd3185bb399a867f79611a274913f089b952b4`|
+|docs/batch26_evidence/focused_shutdown_b25_regressions.xml|`2ce2efabe2426b4c740536b8c6cc0fdb82656cdbbb7179a6af18ab209f467b83`|
+|docs/batch26_evidence/focused_shutdown_b25_regressions_inventory.json|`7d566c38a3a20d75229fd3eeb91597b455d5ae66bbbf264e6a5f3d7ea9b098db`|
+|docs/batch26_evidence/freeze_silent_takeover_test_calibration_review.json|`460fe2dfcb490cb4c1aea44319c8cd9d36d59fcb12570a8230188c062d49e5e9`|
+|docs/batch26_evidence/full_1.json|`59041099db4ffb5983b4c3a1ecec2952322812d8214773573abb93c8f6c15785`|
+|docs/batch26_evidence/full_1.txt|`a06ca50b228d97719f07cdef363d8d45c15d8bc28638b93d13d7885a32fa7df3`|
+|docs/batch26_evidence/full_1.xml|`c212336df36d8339a764d7111c763bd4faebc5b4b7fd03d0da93ba7084fabd3c`|
+|docs/batch26_evidence/full_1_inventory.json|`c524098ec357631e06613e80abd3b4c90a0e800ab96684c5dbc2d82776ad0e9d`|
+|docs/batch26_evidence/full_2.json|`829f7472d3e21ea25bd6c928b76e881f8b2cb9e33e1b6fc05617d045b1fba575`|
+|docs/batch26_evidence/full_2.txt|`888eac552a865fadacf5d439aa7d7b3052eab74e711a0f92cc34dd78c2376a55`|
+|docs/batch26_evidence/full_2.xml|`0f35745251969c0c6025634ff7239179c6492a9beebfaaf92166f0499c7e72a5`|
+|docs/batch26_evidence/full_2_inventory.json|`c524098ec357631e06613e80abd3b4c90a0e800ab96684c5dbc2d82776ad0e9d`|
+|docs/batch26_evidence/full_3.json|`ec61067dc3204fff924c76c01a3d738130a0d3d5cdf7d5485c29c80a974cfcb4`|
+|docs/batch26_evidence/full_3.txt|`6a1cd388f824a773946b40663d628d059006299f68e56d5f8a2a86fcab7912df`|
+|docs/batch26_evidence/full_3.xml|`5c177a4a22dfd51a1fbec107a6b0432a99b21bbe9e1fad13eed9a1e97012f588`|
+|docs/batch26_evidence/full_3_inventory.json|`c524098ec357631e06613e80abd3b4c90a0e800ab96684c5dbc2d82776ad0e9d`|
+|docs/batch26_evidence/full_collection.json|`e89f6584326405a922eb86eaeede45451a370faed1043779da81868d2a783268`|
+|docs/batch26_evidence/full_collection.txt|`e60c395711f4e1ccc4750bae4ba1a2cc8b9af9d272460d4c2326e3e90b914d79`|
+|docs/batch26_evidence/full_collection_inventory.json|`044311dd0102ee33027283e72996c6118b02492700ee71f10252c1809479e82f`|
+|docs/batch26_evidence/green_1015_policy_candidate.json|`d8b3fe5e778d05a52226fcfbca6bf3dcf0667af2fab0a2f0aab2d7fe817cd904`|
+|docs/batch26_evidence/green_1015_policy_candidate.txt|`f9506f50d235a9df44ba69840d374a25d3b8bea9b4e80c7915b884f010a3e834`|
+|docs/batch26_evidence/green_1015_policy_candidate.xml|`3745fc610d79616862ee58a46ad7f69b1f1b67f4b377cbf2060e19fcf9b7c7b6`|
+|docs/batch26_evidence/green_1015_policy_candidate_inventory.json|`a18dc3fad7115705e820377e3c8d8939b161eded4cd814b9887c39d85ed842c8`|
+|docs/batch26_evidence/green_final_candidate_new_specs.json|`915a9b2fa4bb7609540217753b126db6edd33b0098ca2a6b80013e978119def9`|
+|docs/batch26_evidence/green_final_candidate_new_specs.txt|`62e32be638e4802fbd42e5863647970160b3200aa532c40d5821386d8f07ab10`|
+|docs/batch26_evidence/green_final_candidate_new_specs.xml|`b655c13505d91a8aa8f9f7be7929669869aa902845eaa966910d92d6caf36308`|
+|docs/batch26_evidence/green_final_candidate_new_specs_inventory.json|`a18dc3fad7115705e820377e3c8d8939b161eded4cd814b9887c39d85ed842c8`|
+|docs/batch26_evidence/green_final_emergency_ACK_candidate.json|`5103ff0324a293755b6d0362f35f544e72617bc0f65ceab8cea2f2047b92a5ef`|
+|docs/batch26_evidence/green_final_emergency_ACK_candidate.txt|`f2b6acf9250094fb3f6beda7877b0b70873c4aa76f42800908e57b0d02df1c25`|
+|docs/batch26_evidence/green_final_emergency_ACK_candidate.xml|`bd41834c8e0093129aad5e4d98e5db869ccea1f75af565a670d34651bd759174`|
+|docs/batch26_evidence/green_final_emergency_ACK_candidate_inventory.json|`a18dc3fad7115705e820377e3c8d8939b161eded4cd814b9887c39d85ed842c8`|
+|docs/batch26_evidence/green_first_overnight_candidate.json|`b1398f550006de45870ca5c3e6c36c42f680afe65cbdd315be1eeeed87715aec`|
+|docs/batch26_evidence/green_first_overnight_candidate.txt|`dd3302ad1ac2064f6c0f1def778e19121f653a34eaafa4a27adb41407ad93133`|
+|docs/batch26_evidence/green_first_overnight_candidate.xml|`84c8e27fc4e615c6e25499d630741221107aa4305edefbbd11713e8044a2d5d7`|
+|docs/batch26_evidence/green_first_overnight_candidate_inventory.json|`8b38cc9db157f65d7dcd0803741f6d46c67bf418200a209bd5b45925f1a2824f`|
+|docs/batch26_evidence/green_shutdown_candidate.json|`e39009e6b7c23e86d43ee142bcdda3c26bac3695177443f50fb3e36f7e162a98`|
+|docs/batch26_evidence/green_shutdown_candidate.txt|`ab092366cb6cfd44a309e7da02d39fd2c0d00407e84476378b438c4a4c65c241`|
+|docs/batch26_evidence/green_shutdown_candidate.xml|`59b50cf6f245172f2d86edda589f2fcabbad4df341c8c075ef0c7a04c5124201`|
+|docs/batch26_evidence/green_shutdown_candidate_inventory.json|`1afa6c7ea3b9e88cb72ed887c4ad5ce302ff45e75d63758690bc831dbffceb3c`|
+|docs/batch26_evidence/independent_candidate_review.json|`56cb76f0339139307369e954299c1e41d555c88ab4cdc4b3065e32c5a06bc07e`|
+|docs/batch26_evidence/independent_final_report_review.json|`4c6ade9eda43fca38e0aa358d599ff338d339d420c42e54dafd6a9e82925833a`|
+|docs/batch26_evidence/independent_red_migration_review.json|`dc65c563e8e3eea63f895ac0452d70b5d855b1cf8c17600ec4777a22f1955a4d`|
+|docs/batch26_evidence/independent_shutdown_review.json|`670ee78e21c165c40c28c9d9cab62d3ef6effb90e074a8b65d2994eb37f0281d`|
+|docs/batch26_evidence/independent_test_matrix.json|`7459542bf0502a820f24ff1be33c8ff6474c8e1c4a5bee161c07a5d53be2887f`|
+|docs/batch26_evidence/investigation_preflight.json|`6e016c67d64ae33fc794ffef82c9456783836a809dc2993666b5a0673c4bda7a`|
+|docs/batch26_evidence/overnight_evidence_be_fixed.py|`effd9e8f56643e348674ca30ca2dc6af6aa9047f15dd27f61b4f46616e2c3a2f`|
+|docs/batch26_evidence/overnight_evidence_before_emergency_ACK.py|`a5d2b5a77ad17b8183ce8e53fd8b111573ba33032fa1c8eb72469388e2380c25`|
+|docs/batch26_evidence/overnight_evidence_before_quiet_freeze.py|`a5d2b5a77ad17b8183ce8e53fd8b111573ba33032fa1c8eb72469388e2380c25`|
+|docs/batch26_evidence/overnight_evidence_before_stock_label.py|`fcc01c7220642f4a3e61cebad7f4ce92d599a2c3f8953078a58a32c479ef69c7`|
+|docs/batch26_evidence/overnight_evidence_enum_first_candidate.py|`21b64a899637307ed3c30ed023edfc824daecce8ca417f516ed8a004e486299e`|
+|docs/batch26_evidence/overnight_evidence_first_candidate.py|`e5d0b75b594d5da596afae52884080905b72b57b075d115920e13dfc12a14757`|
+|docs/batch26_evidence/phase1_checkpoint.json|`8129dc79fffd0f5b0346dc84d87d753d51e3d2bff195fb4b24f563de6a068865`|
+|docs/batch26_evidence/policy_query_scope_calibration_review.json|`0f7ae3175d3b045d0ddd0e886abbe8c240373319b87df47eeb7ec2a285611977`|
+|docs/batch26_evidence/pre_1015_policy_query_scope.py|`b7b6d740e9d3907a10a52bf902528a530ded9f044e880e2fda60223b5ae4da60`|
+|docs/batch26_evidence/pre_1015_policy_source.json|`cb998942a2837507f7c829efafaadbbcd7eecb633fe735c5db880f3c7fd30161`|
+|docs/batch26_evidence/pre_1015_test_batch26_be_token_regression.py|`ef58bda287bf49d751c697628044c6d9ff66e9e00a180fc9ad11e1a87fe03530`|
+|docs/batch26_evidence/pre_1015_test_batch26_external_sell_regression.py|`9e759902a8b9f9844b894a5d3f08eff26738b4682f9b518508244481348332e1`|
+|docs/batch26_evidence/pre_1015_test_batch26_overnight_evidence.py|`c0b66a415cae00bb0eaed24990300ee7b09b78baacb6631fe41d96bf12e9449c`|
+|docs/batch26_evidence/pre_1015_test_batch26_review_edges.py|`1299a21aff567d5919c0cca6ab6e548810956abd61fa6538353c3da1c62e203b`|
+|docs/batch26_evidence/pre_1015_test_batch26_shutdown_report.py|`99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93`|
+|docs/batch26_evidence/pre_1015_test_migration_review.json|`96a07d83314b84fc33cd8f5fe62e9f43ee96a21cb98121436acb61d4ae6af8fa`|
+|docs/batch26_evidence/pre_external_gross_fixture_calibration_test_batch26_overnight_evidence.py|`d9ae28dc225beff43cef43cb3bb2cb766395027aaef1967fb51b49f42bdc05e8`|
+|docs/batch26_evidence/pre_freeze_silent_takeover_policy.py|`b9090294e8ccb86d4583a21596b57135b5fe5d74129dc04882d63a86dc062c8d`|
+|docs/batch26_evidence/pre_full_environment.json|`5a36fb40e4448ceae27483a462bcc34e17b86c73bedfb1677008cd3100deba0b`|
+|docs/batch26_evidence/pre_quiet_freeze_tracked.patch|`b5aec97c3d74518e055814d0c8acc2fc1d0894b077f3a9921bb342de971597b1`|
+|docs/batch26_evidence/pre_stock_label_final_candidate_source.json|`cf303755338fbe80318a0f81354af5a0e7c1b3144695ec684eb33014603c67fc`|
+|docs/batch26_evidence/pre_stock_label_tracked.patch|`ae8dc381490a5a8fef83059191599a3455b2af1b96068fe1d32b9539fc8ea9ec`|
+|docs/batch26_evidence/precommit_scope_review.json|`cc2ab1a632dbba7f0fc99a5c47484cec9efd1fb0e742bd3413402a32fc433598`|
+|docs/batch26_evidence/quiet_freeze_regression_review.json|`5c40725162c4aa66a5d2850acae60fd2eb21b9900130ec22c135cd9d1f03d4fb`|
+|docs/batch26_evidence/red_1015_final_specs_b25.json|`1b3fc2d4a397142934e4eb8991b912273fa94c6f50ab213543a485e6fb83c68d`|
+|docs/batch26_evidence/red_1015_final_specs_b25.txt|`40435625c32cafd633bbc8e5847e699bbd6a982ad8f097ec6ceb8c6a16ec16dd`|
+|docs/batch26_evidence/red_1015_final_specs_b25.xml|`53632b252239cc6c311a474cd8630d7b2ab682a1ebe6a36f18ca5838b9b3b70d`|
+|docs/batch26_evidence/red_1015_final_specs_b25_inventory.json|`359f28821bda259b84f2c3ba26857a6b15a4699246395ce5b7004b38e94f7fa1`|
+|docs/batch26_evidence/red_1015_policy_calibrated_unfixed_candidate.json|`1cc4d20d50e79c3cff36a6808097330dda3c831269ad3b8e0aa0e633dd22138f`|
+|docs/batch26_evidence/red_1015_policy_calibrated_unfixed_candidate.txt|`88595caf1b9a57bbe1ec72df1d0b653a12ca36a018c273ce6cd73dae2207d49b`|
+|docs/batch26_evidence/red_1015_policy_calibrated_unfixed_candidate.xml|`49651942c85c283f5f4960b1eb9e3ea7494a3fec77b0ab1f941dfac06afc30fa`|
+|docs/batch26_evidence/red_1015_policy_calibrated_unfixed_candidate_inventory.json|`eee93952476f7466ffd310e608ef5c4b2a5449bf19ff9b6f3e4e3e074ce57cfe`|
+|docs/batch26_evidence/red_1015_policy_unfixed_candidate.json|`318dc1592684979a95c897d4c50702e56a212d630205ae21bc33da15a6d8f168`|
+|docs/batch26_evidence/red_1015_policy_unfixed_candidate.txt|`6ed1790c34d77acae0005f75ee42c158ce6a1d8636264e13c152c93851e4a3cc`|
+|docs/batch26_evidence/red_1015_policy_unfixed_candidate.xml|`3ad6ae66ae5c4e25e57b994b9ce12e441319151388fdfc13d3ec98505b91c654`|
+|docs/batch26_evidence/red_1015_policy_unfixed_candidate_inventory.json|`eee93952476f7466ffd310e608ef5c4b2a5449bf19ff9b6f3e4e3e074ce57cfe`|
+|docs/batch26_evidence/red_card_stock_labels_unfixed.json|`d913a32d7560c9acbcaee6c172f81b31a3b085cf06a0038de3ef801d85dabd23`|
+|docs/batch26_evidence/red_card_stock_labels_unfixed.txt|`d532a1abdc347d74ba20a22cee44f76e799ddeeeaabe478d61b32fd6f6b2b12f`|
+|docs/batch26_evidence/red_card_stock_labels_unfixed.xml|`b420990edb76f824ab4d8c2486aad9cab7f9e6cc68d399e4f20361166fb65f2f`|
+|docs/batch26_evidence/red_card_stock_labels_unfixed_inventory.json|`863394f97e81c8b7903c06db95e80f1557030806b70c286d34e747df1ec3320a`|
+|docs/batch26_evidence/red_evidence_review_2026-10-15.json|`b4f00293692938d9f908d4a202861d797ddf3e06a49c607357faacee45e0f929`|
+|docs/batch26_evidence/red_final_108_specs_b25.json|`6df4745d99356757dec9af1029e4f4d1065f47a99c762a4232e56348ee83fb0c`|
+|docs/batch26_evidence/red_final_108_specs_b25.txt|`10636a5a163234b950557797874590545a7fe081da17acab3f74d51f4c136bb0`|
+|docs/batch26_evidence/red_final_108_specs_b25.xml|`817144ffffb6a185e7b07dc23c93e084228ef0f65676a6c036ae70e5b3fd828e`|
+|docs/batch26_evidence/red_final_108_specs_b25_inventory.json|`6e72ff3e41aeaea7097dd6b29115e52135019d1cde0b56055a4d32507cf66fe7`|
+|docs/batch26_evidence/red_final_calibrated_specs_b25.json|`80a14fd20bcd37c1268539441ec88aefc6eb26152870c56e7af7232c99e44294`|
+|docs/batch26_evidence/red_final_calibrated_specs_b25.txt|`b9d9abb7a1b838c8b0be65d6c1d12c28488646f85fb39c2dd70e566441bcdcaa`|
+|docs/batch26_evidence/red_final_calibrated_specs_b25.xml|`64cdc8b58a5c5aba390a3bad4753ced7d1908279d9717dcbb137eeafc9af2b69`|
+|docs/batch26_evidence/red_final_calibrated_specs_b25_inventory.json|`359f28821bda259b84f2c3ba26857a6b15a4699246395ce5b7004b38e94f7fa1`|
+|docs/batch26_evidence/red_final_policy_specs_b25.json|`403e9923dc67226fbde67825761ae1ef8c749f0769bc186c6d60eb9a665b7285`|
+|docs/batch26_evidence/red_final_policy_specs_b25.txt|`9f525850a5439f6618003b19e02495f768ed35572880ddd2ec3788a534395476`|
+|docs/batch26_evidence/red_final_policy_specs_b25.xml|`995e3ffcaf54d6a82526aa054dbd77b381d59bd1d47f2c8b8923d14916636092`|
+|docs/batch26_evidence/red_final_policy_specs_b25_inventory.json|`359f28821bda259b84f2c3ba26857a6b15a4699246395ce5b7004b38e94f7fa1`|
+|docs/batch26_evidence/red_freeze_quiet_unfixed_candidate.json|`d129c150044a3d2418f8f9792df2f34f8381bf14542d05132e7d88b04469cafb`|
+|docs/batch26_evidence/red_freeze_quiet_unfixed_candidate.txt|`d0e2d99ec3183e7f7391e5bb5fbd0cef555405a378aa33baf70329312e96f4e6`|
+|docs/batch26_evidence/red_freeze_quiet_unfixed_candidate.xml|`a7e6183f7230669bf5b8e1bd537d54b4d93c939eaeb1ae8796c043a206de66c1`|
+|docs/batch26_evidence/red_freeze_quiet_unfixed_candidate_inventory.json|`eee93952476f7466ffd310e608ef5c4b2a5449bf19ff9b6f3e4e3e074ce57cfe`|
+|docs/batch26_evidence/red_overnight_b25.json|`24cbaf51d10fa4ee1733e6b2949375a3aa5aa34d9882f7126900eed3a385f4a7`|
+|docs/batch26_evidence/red_overnight_b25.txt|`f3360a97ef605fae234056a28f28c607e7651cc3f8521433bdc96f1402a824bf`|
+|docs/batch26_evidence/red_overnight_b25.xml|`7f1e46a29505bc866d0010387df88f518f9c16eb4b426d7c9ea8cee1720c39ad`|
+|docs/batch26_evidence/red_overnight_b25_inventory.json|`e3f002bf2e30003c75dafb0e8304de8546fc37e241d99c3742e17d3b47043603`|
+|docs/batch26_evidence/red_overnight_natural_review.json|`1e71f14d751c727e672bd4e24c1b3d7d96814775a4057dc463d3a5a103db7fcf`|
+|docs/batch26_evidence/red_review_edges_b25.json|`d1f6b4e2e46003710862b30dd2b43cb54b84ea706c89de48bec11c95459bcb4b`|
+|docs/batch26_evidence/red_review_edges_b25.txt|`c23a96c48de53054d4ef9bec094bedcf8c6f5f9216d0278a03abb67039c7280f`|
+|docs/batch26_evidence/red_review_edges_b25.xml|`87f069d4c754a7baafd8b2b7ce22cbfe9a533477d2ab94507259cd904e79bf84`|
+|docs/batch26_evidence/red_review_edges_b25_inventory.json|`853960bf578e38fbd401178e3457f47fa5653af5a554bbef99f157939a758caa`|
+|docs/batch26_evidence/red_review_edges_natural_review.json|`43d0ed4dc44b425b04a938812d3cfe0feda1491ca673fcacf55dfc9d88d4c5bf`|
+|docs/batch26_evidence/red_shutdown_b25.json|`78c28440eae573d58a4d987efd6502444e9535697e3b077cf5da882dd043ce57`|
+|docs/batch26_evidence/red_shutdown_b25.txt|`5bf8d54353f0a2ddb1dd33be555f6c6eb2791fdd0c6acfab63d438db41a73e43`|
+|docs/batch26_evidence/red_shutdown_b25.xml|`dd981c91fc6a5cf3eb402718c543b077e422be818e7c985aec6add579f77df3d`|
+|docs/batch26_evidence/red_shutdown_b25_calibrated.json|`0eb2605ebba2017228f5effaee92a0ef50ec2101a6cff48d1795bad695e33a63`|
+|docs/batch26_evidence/red_shutdown_b25_calibrated.txt|`a80b50db5680315013275e49ca2eccbebdbadbb9718f0af842945fcf779fd060`|
+|docs/batch26_evidence/red_shutdown_b25_calibrated.xml|`29c89090e91fcd8e4d32d88d10cbe617fff1317191b9c6fffa18614b89e8ac59`|
+|docs/batch26_evidence/red_shutdown_b25_calibrated_inventory.json|`4543643ae7a04b05c2e3df523be5c623149d1a8127672d0d5a62d367ed8be916`|
+|docs/batch26_evidence/red_shutdown_b25_inventory.json|`4543643ae7a04b05c2e3df523be5c623149d1a8127672d0d5a62d367ed8be916`|
+|docs/batch26_evidence/red_shutdown_fixture_review.json|`9c1d9bab8c39228e632ea5dcda0f110847f5f862af6836004a6ac92f4afc6d6b`|
+|docs/batch26_evidence/red_shutdown_natural_review.json|`b656f45856f39b9f17e3cd3de4fbcc65f6bf945bb2dd43ecf4953999d991fb73`|
+|docs/batch26_evidence/render_actual.json|`a260001c36b0497c3133b2e37f53f134ef9f9124150e35ac9bf825807256600f`|
+|docs/batch26_evidence/render_actual.txt|`a71356a5d0eb3995ec935d2edaed6e5bfb5df3570d013cdc3bd5ba900271e7a5`|
+|docs/batch26_evidence/render_actual_2.json|`e545508a47222bb45113cb282ad8e2a5a12088bbc3b360cb8e64990f8c20ee43`|
+|docs/batch26_evidence/render_actual_2.txt|`d59356129deefddc780eb9a9e9b34e828940155e6738d0cbbfe175f21a8896c5`|
+|docs/batch26_evidence/render_actual_2_samples.json|`738d6df31e47aab7b3f7b00bf5d48fb4e0dfea0677243faab45e6763ea23da6c`|
+|docs/batch26_evidence/render_actual_2_samples.md|`c61a26551a5e6ba5bca74ae09ad7e9355036283c55a21d618381b0a98fea4b0b`|
+|docs/batch26_evidence/render_samples.json|`aeccab599141cf522c359dc5394e8bc88510d34721d42975666cf87d9aaa0438`|
+|docs/batch26_evidence/render_samples.md|`ef55c2bc6782e23abf9d0dd42aa1f740a8b16f7a0aaa02df0984fdaea7e58a16`|
+|docs/batch26_evidence/render_samples.py|`2e317b66880b28e7d3f463a22899306b7681afe5f209c519db3b6e2f05dedf56`|
+|docs/batch26_evidence/render_samples_before_stock_label_review.py|`1b1f96b69af2abf4a5e209ea569cddc3a68af2ab9a43148c361b08b2060d6d10`|
+|docs/batch26_evidence/report_body.md|`9b68a497407a3f7649b2cee8ab4c40105723d9edb36b40cb6c041aeb652b3439`|
+|docs/batch26_evidence/report_body_before_stock_label.md|`e6f0d3964af6b82890dfd7fb5b9de62d684962b12f610a36e76c0064a16d24d3`|
+|docs/batch26_evidence/restore_fixed_before_emergency_ACK_tracked.patch|`809cf564d93abf2825ee24addd0e83a91f1078cbca2163b09244d13778f0dbcd`|
+|docs/batch26_evidence/run_batch26_checks.py|`857f2f7b16505c2956dae19bb76f86caa73d74ff5c84929507983ef9964e946f`|
+|docs/batch26_evidence/run_render_samples.py|`ef3f2e9fcc90784cf3eec08abb77e8227e2bd277c688d50ff7d06bad417e5115`|
+|docs/batch26_evidence/run_render_samples_before_stock_label_review.py|`b3c9bde5cfa14e05deceac8e355eb7df65e0ff156f832b7d480eea6d2d6ae13b`|
+|docs/batch26_evidence/runner_full_lock_update.json|`58fc00d7f06b518cddd7a6ecf28f7a8c271c134622d1243ea1475a53b588e3bf`|
+|docs/batch26_evidence/runner_ruling_guard_update.json|`145ef21f8464f0422ae55faf4dddf31f371f1594ad831f57401800fe9c41e849`|
+|docs/batch26_evidence/source_anchors.json|`4456a25f58ad0b46671e772745e15caa13293db8fbbb7bd9741eedd3de7b59f4`|
+|docs/batch26_evidence/source_anchors_before_stock_label.json|`f5688390f3339a1347fe803b1d5c5e43406355ec7c0ed21ec2470bc1981fdf41`|
+|docs/batch26_evidence/switch_ruling.json|`3dd8134c3130de68296da3da99fbde5719a5bd3a23464befe952f5ad81bfb532`|
+|docs/batch26_evidence/test_batch26_review_edges_before_same_day_exec_strengthening.py|`624f4c6602c3f915963f826b52857d7b7868fcb6005dba0edbe72c8f206310e5`|
+|docs/batch26_evidence/test_batch26_shutdown_report_before_fixture_calibration.py|`e4910fd293a75859a7b3b55c655af5149fd89e5dfc229661808e70586971d298`|
+|scripts/tests/console_shutdown_child.py|`3732ac606a911fc34f4c64a631f7672d55b5e8b96eaf50c8346e9daa6518be6a`|
+|scripts/tests/console_shutdown_probe.py|`77bbeba33b1f4d94027cf30dddac46e845edd9e7a9d3672f20af63e918e99114`|
+|scripts/tests/test_batch21_entry.py|`b367e6cab0ad80d8901e103ba1459b08a0ea4555d8506959a7630963ac18e470`|
+|scripts/tests/test_v6_launchers.py|`fff766c38064b7ad5421eadd9639f363e06cfa5a6e6ecb1448a4c22c002b270c`|
+|scripts/v6-user.ps1|`55978f6fdb9f50c2dc66cf5731436d675fa7b95021d8e7ac3911d2fe2825f9e8`|
+|scripts/v6.cmd|`e6303971e31af8b57e050506ddae1c71516efc3f7c523850438fba3028fcc6a8`|
+|scripts/v6.ps1|`7a8a0794cee4efd5b4d151d07ff51a8ba3a0c7a7c4e814ba0073c316d8b3fb15`|
+|v6lite/README.md|`4ad81212d1863b4fc11dc87d8bc8c32ea272e95563095243292ed615ced31fd9`|
+|v6lite/__init__.py|`26b92254539398e1389a76fc1ab6dc45b4ce00f2ce0226de3299c957211dad39`|
+|v6lite/__main__.py|`1284cf8153eda67e74c6acf250796304c6a2390e7a91dabc6fce3f6f40c93a00`|
+|v6lite/alerts.py|`682d46286bf45b041c41624544ebd97807530f5f5f1868c2b6359b5db58f6940`|
+|v6lite/approval.py|`70a3c24325b95216bb307dd261b60ccff88f0f13da3e2f94d6344e92f07b41e1`|
+|v6lite/broker/__init__.py|`2a048895705e5b40481afb525cc33f3abc42fea7fa6c05c357d620c17a7f9d24`|
+|v6lite/broker/base.py|`21b95859f214f9d969f0aa1ac3cc2eb6dad865efd2b2ad76638136e5023ce593`|
+|v6lite/broker/fake.py|`297d4aa54eec186f2b6843dadbaf3358876c65e3d186bcae5294f4d7d5db9def`|
+|v6lite/broker/ibkr.py|`ccd7babe8badd4b7d8dec15942509f4aa5af0748ed20feaa9493476af449faab`|
+|v6lite/broker/pacing.py|`08a81aff78939b7b1d6068e13650707173441cad51784ffbf870be5646672b17`|
+|v6lite/clock.py|`0051d302e8e88871411677fbab6d6969a07b45fed279aa4b7e135cab332f57e1`|
+|v6lite/config.py|`bb413074ee7d5fecc8e8af2f211b14367a05774235da089b307841fdfb485ce7`|
+|v6lite/engine.py|`5c3d896700afb4a1e88ca0595e57b6ce66e7dc81d645c0215d6af3a52ba822f7`|
+|v6lite/examples/live.toml|`54ec036cea769b6afb6d678895aa1c4d26e5a0cac260b5d635e9460bd8493b91`|
+|v6lite/examples/paper.toml|`ef8a4028febe5663591db8681c0b9332b3819a4b820626fd8a4fa9babc2888e6`|
+|v6lite/examples/paper_delayed.toml|`c2fb23bae1ac34f0337fde38023c16a20b0c06bdcbf993dc185cb72cd3af93dd`|
+|v6lite/examples/paper_g3n.toml|`7c6b4848c7efb5b1afcdb20f05d9033d6ad2876faa89513e666acb187e39bfd0`|
+|v6lite/examples/paper_test.toml|`f0bfaf13a9496162ac8da247b9f09bfc4e0a8b59c2fdf9f5dfbe04ae6380c3d4`|
+|v6lite/execution_time.py|`6767aee2d823eccc2387106f803b38521bce94e71ec082fe6dd021918ee9f300`|
+|v6lite/exits.py|`1de7eb5637ee3c6abd1784570846d0edf8f91739ee97e2bb6e0b6651e34de093`|
+|v6lite/market_calendar.py|`1499dabc11bf828dc6f94b82f5bcba21de2c4e6977829c26bad25737b3b425c2`|
+|v6lite/models.py|`be454da959efd1aad8e2cc81ebdcb2d94ae2b0df79a22b8722ff93bb60fab473`|
+|v6lite/overnight_evidence.py|`f46c89d3203d7bbb37690fdb67fb2be9df2fbe070d082580d42431439902bb1a`|
+|v6lite/protection.py|`fa4be7ec8e88bb2ee2c5cc77be2a6249725ff1bcd80e2865d056bba345d3f40d`|
+|v6lite/protection_cancellations.py|`201be298237fb25a3af0f374d047964eeeb6f07024763c03af99ee4c6b43da8e`|
+|v6lite/protection_engine.py|`10c2eb145a2aff186a603e2d9c99612aeeb55a354d2d4bfc6ae48e52a8192cf4`|
+|v6lite/protection_incidents.py|`d2bfad41ee00515fa4e9e961e30ae9d965d6b849b4541183e87451fb134cfdc4`|
+|v6lite/reconcile.py|`4c1d4fd02dda0e1fe9a1c6087471dd6cb75df314dba6004a8d977de958fc26e1`|
+|v6lite/report.py|`96b07cede3ba71749d9ee366b98b726ddbbaa8dd842ff0de0b2653c9af132f48`|
+|v6lite/risk.py|`abc521f671e878a0ab5690e1fa178dc872d29b5396b86eaeb5f016be1594c687`|
+|v6lite/sizing.py|`c9b9cc4a116a7f61d9e660dd885d280ec2a9262671f2c3c8ab5c1515724e171e`|
+|v6lite/store.py|`56cc4454b612aa96a798aa0e95a3ead3646bf0a9b5fe921733b1de3989d4c411`|
+|v6lite/strategy.py|`9817647ff31f7d3e2f1f11f6657086b552fe4ca09346da3338421894ce1c979e`|
+|v6lite/tests/__init__.py|`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`|
+|v6lite/tests/conftest.py|`aec9d5da8f1b9211fbde6a29ac59fe898732bda3c2f99ae11aa72c49ffd9b6fb`|
+|v6lite/tests/helpers.py|`0c28d019b52b61f5d0b477bd7b202c409ff6761a4b4830b70c77667a3d9787d6`|
+|v6lite/tests/test_batch10.py|`5b875c8df97861e22427223e7065a74bddf04a5da1c7115b431871369d177c47`|
+|v6lite/tests/test_batch11.py|`fb7f26a0bd1969400f2d769a0d65f4c7d3a18f0162332fd46ca9f1ed99c260f8`|
+|v6lite/tests/test_batch12.py|`3ee799aeb490ddacf9cf6960c1a58d2a5f7865f58182be205f98feb55fbc4bbb`|
+|v6lite/tests/test_batch12_v2.py|`8b736302d3c595ca1c803923a2fe203ae614b2004a6b1f4e2f048b00a95cf37b`|
+|v6lite/tests/test_batch13.py|`791052e685d4a4b8e798dea59b6bfcc81d3e6d606236af2ea9716452fe75d046`|
+|v6lite/tests/test_batch14.py|`5087c53709f4208d5dc4fbe9f74b100d50ebfb2060ccf9c9834358d2c3c7b257`|
+|v6lite/tests/test_batch15.py|`79cbe2fb90a58a477ca8da0e264fabfca0fcec01320e3cf4196f7e3e983eeaf5`|
+|v6lite/tests/test_batch16.py|`dcd5e3932511c625596dee9dad5708d19a4c6566d860e11006458e3384b766f1`|
+|v6lite/tests/test_batch16_card_deadline_copy.py|`d9c3c8f080748838a81392b1a12ca03347685a1be4692ae9159471ff2cc56a51`|
+|v6lite/tests/test_batch16_f5_copy.py|`eca4e85d176cdb5a726bc4e5bec2f2b6bd6869ff726a6b647c16548b4ab94bb0`|
+|v6lite/tests/test_batch16_f6_account_evidence.py|`731efaff8b825ee227652fd7708d581d1ce42eb638086dc007980d9df9e05710`|
+|v6lite/tests/test_batch16_f6_global_mismatch.py|`86c542de449c2adab7cae4d2bc476e5108ef7ef14d9c2f45686a2404a3b9d478`|
+|v6lite/tests/test_batch16_f6_release.py|`15c23d799539945057095f56bad2e8ba8a32974383eb8d778fba0f57ede2cb96`|
+|v6lite/tests/test_batch16_f6_safety.py|`9e2464cc21430b8b4e27dd8982b1a5aee0b554a5e0698691df3156715ad65b9c`|
+|v6lite/tests/test_batch16_f6_steady_fairness.py|`e7ae2a84c08b2adadb1aa9994e835b5504db581401eecbf2bfd14678e984915d`|
+|v6lite/tests/test_batch16_f6_steady_timeout.py|`733347eda5814cbd2a14f71a717c88274bdd51376cada2c9bceeab3fd2908c48`|
+|v6lite/tests/test_batch16_f7_price_flip.py|`b2f9cf68a543999d08ab0567e6e6a5663f257d2525c48430f953de8bacfbc5dd`|
+|v6lite/tests/test_batch16_f8_backoff.py|`af5c1b6c62872c84536b222255c9a3b4229e2d7bf4ce1c4b55b1d4a780aa3539`|
+|v6lite/tests/test_batch16_gap_evidence.py|`328269e2c8fa8a0547d1d16a5904a4d6cc5462f13b093b9e6c09eb87bd4be8ba`|
+|v6lite/tests/test_batch17_alerts.py|`dfc6a85711add46c7a6e8b966c3f75f38f2bbbc7bee1b3f827882d3d9ddba5ff`|
+|v6lite/tests/test_batch17_equivalence.py|`ecb49e23e9cbcd6ea2803aacb4b649d8b8794b1c79e65f266141c655efdfca8a`|
+|v6lite/tests/test_batch17_g8.py|`4e21318f45dc6293fc4fbdc0f1c5be7c9d845782bf405fff8c6a51504bae5875`|
+|v6lite/tests/test_batch17_heartbeat_account.py|`b825c206464649efa334daa40c7004f2f45657d6501c1330895a69c97fdf932e`|
+|v6lite/tests/test_batch17_l3_recovery.py|`736891fd02d99b2337fffca283fbddf53de7d8fce8294d6a089175cbd317cd3c`|
+|v6lite/tests/test_batch19.py|`cefff371b7c9101fff87583517d11a8f81675f0a549cb2007c19099b3d9e239c`|
+|v6lite/tests/test_batch19_funds.py|`f9c1ae564a76752edcb60b3293eec5a4b2ac15657b4e34258ba814cf4a78dde4`|
+|v6lite/tests/test_batch19_protection_equivalents.py|`12def834c0ef3a32bf71331473a47daae9e7d2b4309347e177784421cdeec303`|
+|v6lite/tests/test_batch19_review_edges.py|`262a24defa92162552f14d80dfc1eb45d673e7a538a7c0ead745b7649515f7d6`|
+|v6lite/tests/test_batch20_card_provenance.py|`7187685c885a24587a40ce7745d3abd0601255c97414554493482cc3592cf03e`|
+|v6lite/tests/test_batch20_execution_time.py|`8a671005db02f0071dd1767a742608b61757b0882dc39cc174952d9d6d405f2a`|
+|v6lite/tests/test_batch20_protection_equivalents.py|`163913342d65b7785ed15df3377d7ee90c65dfd7553b6714b9255173b11cca7a`|
+|v6lite/tests/test_batch20_protection_incident.py|`50754a15d9b88b9c71d6c6a1b139cb352448ab885109c6587b4b8ab9c81570b6`|
+|v6lite/tests/test_batch20_template.py|`8c6ed584a5f435fe81542df99ce8c7a1d040f342583b733fe65356af352b5230`|
+|v6lite/tests/test_batch22_cancel_namespace.py|`b513c130a9045147fa3f77c3afb10d1140b17207995143866523fc9de83c532f`|
+|v6lite/tests/test_batch22_config_broker.py|`7f29f6e653f648c6d90d3cecfa954d372cf3e4eaff257ff7e8737902cd752ab8`|
+|v6lite/tests/test_batch22_item9_broker_cancel.py|`04e8b03d1a58770679d8594fee67d3a8ba2f4479ce322fe673dc62fed2099dc5`|
+|v6lite/tests/test_batch22_pending_stop_audit.py|`f0bf9fe05cee399ca62892222ef09cd069bf8dc27a7179978e7434b7235e0696`|
+|v6lite/tests/test_batch22_protection_lifecycle.py|`6917101441adb4b8981424290db03eb164d8ad15dd3d19b34e1b51e294c7eb68`|
+|v6lite/tests/test_batch22_schema_audit.py|`374ae51b92eee5ea1e48ff4ca145422f1d106b0d33cf8f94b57d6261b24c7927`|
+|v6lite/tests/test_batch22_snapshot_cancel.py|`69e08ccb4de46090a2315c2c0bc828e8ceee93f5d17fac689f11c067840a1d43`|
+|v6lite/tests/test_batch22_trigger_incidents.py|`a3c1ad8c925c53ce95577de7ee707093b98ff74468ed13cda66da7e30cc8db17`|
+|v6lite/tests/test_batch22_trigger_replacement.py|`80c284c3bd1b41ec47c841f344ca03726c8da9569433d0dfafec805bf861a90c`|
+|v6lite/tests/test_batch23_broker_diagnostics.py|`f5bcb0a7ab3d199123dbbbfcdc2d562c137d0626f85f5196375a1e047ff9d37e`|
+|v6lite/tests/test_batch23_contracts.py|`628182e1be0d8081eadf7dd818d39b19f9dbc7a3e5837db7e2120a22d37ebcb4`|
+|v6lite/tests/test_batch23_error_provenance.py|`fcf063c69658242b034f401e0a0a65382c53e542edbda716679962086f54345b`|
+|v6lite/tests/test_batch23_recovery_diagnostic.py|`ad3ea825f387334a0add08f8d6085f6fd9d36eb64f2e48ebafd51f4e2c30b5be`|
+|v6lite/tests/test_batch23_terminal_fact.py|`9629999e9099ec51860f412340411bb3aba2848c218c3dbea0240c7a73bd8b0a`|
+|v6lite/tests/test_batch23_tp_evidence.py|`3b4977815ab586db706f5ed708d79e7c5e0f2304ee3059f7f2f55b22b992d9c3`|
+|v6lite/tests/test_batch23_unprotected.py|`35040f97659ed5adb5ffc30875b67ee63b847c9f7065a07e33f0c37292bbddb6`|
+|v6lite/tests/test_batch24_connectivity.py|`8ed05fdc02598bf9433734a2785be7951840ab505160f5fc9e568e51cb6dc5d0`|
+|v6lite/tests/test_batch24_daily_labels.py|`55f7f5112a393deee55e8b9865338a1205eb5240418280a0fb1e1c336b4909cf`|
+|v6lite/tests/test_batch24_evidence_deadline.py|`1dccecef16d493e3f37c61d4266ac5ca21a73ebba7b04dfdd5e67901dc0bc3e7`|
+|v6lite/tests/test_batch24_pacing.py|`8b425b9e3ce7488e4c163b3433f639f54c52b6839c6f676c82678c96885d40fe`|
+|v6lite/tests/test_batch24_pacing_lifecycle.py|`de8db2b495562c51033f5c6b736eb3f7e1a34966bc960fc1cfadbb4da8154280`|
+|v6lite/tests/test_batch24_presentation.py|`635597eb75ef8ec92b1e2d3bab29f7626d7cfe8d7dd51f045ccf1d4b49c2c1d7`|
+|v6lite/tests/test_batch24_retry_second_round.py|`dcbdd83f3db5a1e0189d50c0648e63aed1148c2cb4fab70e371dd93897f11574`|
+|v6lite/tests/test_batch24_stp_echo.py|`2fc7a6b36ef4b088a5dbf7b16fa018b4f05bc3c50baf13a2e59a194c25393541`|
+|v6lite/tests/test_batch24_wire_latency.py|`5dbbb0b66c0fb45d6460dd646b7cb7076d8107bc9f9e66f785c309a0b969c12f`|
+|v6lite/tests/test_batch25_reconnect_alerts.py|`60ab5265d112a27e7cf6ada6fcac1fe9b39be272a1146b454df170dfab61bc45`|
+|v6lite/tests/test_batch25_restart.py|`dd75b6fe9f3b8a416ca3f6fbf7479975264ed1c2dddd6c0fd6c899da7e134f2d`|
+|v6lite/tests/test_batch25_review_regressions.py|`b882061f3259977c74b693565957e83274bed40b961c53d167661e3de840ce4c`|
+|v6lite/tests/test_batch26_be_token_regression.py|`ef58bda287bf49d751c697628044c6d9ff66e9e00a180fc9ad11e1a87fe03530`|
+|v6lite/tests/test_batch26_card_evidence.py|`7e3afbb0d02a200e6467fa1610f194efc876c483111e7185dc90ae449a1ee440`|
+|v6lite/tests/test_batch26_constraint_policy.py|`d6123be09a81eb27287dd8fae4187121ccd129da8ce38113469f0d7b489c1a8b`|
+|v6lite/tests/test_batch26_external_sell_regression.py|`077aba16690943197f8d627f7903f5f0a084b281999557f493b9a479cc9aa9a0`|
+|v6lite/tests/test_batch26_overnight_evidence.py|`ed2ea61ef50e75b265e9a30c8d6793745d2bb1a5b4311548e34ff9995004339f`|
+|v6lite/tests/test_batch26_review_edges.py|`091cf7140d666327f513a4d76359059fcfb72b08ccecd37fbe5fc0c538fd04fe`|
+|v6lite/tests/test_batch26_shutdown_report.py|`99a0495fcb526dbbe8c56b79cd54e14f0576aae96e939e2a2635f1c2d47e0c93`|
+|v6lite/tests/test_engine.py|`bb8967a536a8d187fc9f1d742be17c0b4b90e193ab52731ac06d6bff8a08f461`|
+|v6lite/tests/test_g2_day1.py|`cacaf5b3115d4a298fe8b3fe065d66fe70277b8ee4cd5d9643f0e2fff0ff5f9d`|
+|v6lite/tests/test_g2_day1_selfreview.py|`fe84ef645d99f421c64f670aa7f883d16b5a24c8c15b4dd30a4aa8f035b5ea06`|
+|v6lite/tests/test_g2_day2_prep.py|`a0db6b981992a3cf20d9f959a679c608842f4619007331bae9b26908cee3ccb7`|
+|v6lite/tests/test_g2_probe.py|`ba38215d7a6946d60884d0e3dac99b641e7bcde058c4893b94cb9d62b6a6fe18`|
+|v6lite/tests/test_ibkr_adapter.py|`6b8c8a6c6529f7118df6735e4c976a50735197cd4610650fe181e4873a0c8f3a`|
+|v6lite/tests/test_review_fixes.py|`eb91ef957bfd13864c2c92a5da2cf3a29ffdc10c9f5c74fe751daa8f4caecdd3`|
+|v6lite/tests/test_review_round2.py|`a8fa9a8f5daca49aed8b0de1a87097f257b02048a8807e769d951f06472d6b35`|
+|v6lite/tests/test_review_round3.py|`b5bf4e5c513e9d2310dc6404f147b633790cff0e894546e9176d6c26390a7427`|
+|v6lite/tests/test_review_round4.py|`04cf584aa3b7e13842c1e7608d03e5f888b7a714ea073001ce85281fe1eb43cb`|
+|v6lite/tests/test_review_round4_selfreview.py|`8cf2bba5d54e2e644bc016e68abfe87f0ecbe26b6e54d5a44a329c61e6dc7da8`|
+|v6lite/tests/test_review_round5.py|`82c3cff1a3f5d8dba4b0735bf960666502d1d7ef6343c869b592a768fd81f109`|
+|v6lite/tests/test_review_round5_selfreview.py|`2036e85729559e65c226bae7e8be2c8b9eeb9d561366711a5a4a3ee8f88c3882`|
+|v6lite/tests/test_review_round6.py|`c6eabe6e953cc75ccfa7e4fa87625a86d677ef5dd2fca9975cd101b3403d6be5`|
+|v6lite/tests/test_review_round7.py|`bcb2baea638b6ba6c063aba7776aaf1137c3cd1df98297a08311cdaf899994a5`|
+|v6lite/tests/test_review_round7_selfreview.py|`a3589fae5996245f7246f1860875a847b6761ed9f8bab5a317ab5c7d9e5e86bf`|
+|v6lite/tests/test_review_round8.py|`c65ac1c396468aae3124ffcdc0f61b2ed483547ec1b0f47119f00950008b3736`|
+|v6lite/tests/test_review_round8_selfreview.py|`e927860575cb55769a910a0dfbced96b725922da6629010c894ec2d3c86b36c3`|
+|v6lite/tests/test_soak.py|`d84df42bcdc3ce0e505a8f930b2752ec2721cc307fb364388be210131c4fad47`|
+|v6lite/tests/test_strategy_parity.py|`732d74f85d6af63461dd78678b225886b5fb89875f08f1a492efed575b4cad2f`|
+|v6lite/tests/test_units.py|`75560304da5605efeedaf3f069f7e5749c51f406adf69b8c9c74dfe6e76c9e42`|
+|v6lite/tools/__init__.py|`91701b7f5f90ca88fde3fcb4f91f1891bc99c6359d8b52c23e2decaabcc5a6b1`|
+|v6lite/tools/g2_probe.py|`bb1be0098415bc624b0f6d1a31b20f832d1e481e8155b4565c7f6841aa2f2d16`|
+|v6lite/tp_evidence.py|`17572b9e72e11d894429ef9d32e4caa34c35e29f21a46de471e13eb7cb57f479`|
+|v6lite/version.py|`9aa52b23a3c8c08801f9d86c46ae1090a28c78dbde5d5b4b2923347bc74ece45`|

@@ -1,0 +1,36 @@
+{
+  "status": "approved for full3",
+  "recorded_by": "ROOT from independent read-only agent messages",
+  "review_agent": "/root/b27a_review",
+  "time_pt": "2026-10-18T16:57:43.716102-07:00",
+  "code_sha": "2378a520193e46e5",
+  "full_code_sha256": "2378a520193e46e52fa13227dbe4ffafd3f4e432e7c92f95dde94d561d09661e",
+  "receipt_checks": {
+    "legacy_report_repair_calibrated": {
+      "sha256": "3fed1ea95bfe7ee7349cfe31c18861a087f400f13c69d185992cd0f8ffe8fb59",
+      "junit_sha256": "0f5813594bfdc5fac901b7fe58380a34d6c844f4f0a674e0b88f2cd0ad14a0c8",
+      "inventory_sha256": "1deac590d3f2ea7b3733a36becfde39b6dc2faec536db9dc328ac15a0b8fe08a"
+    },
+    "samples_new_green": {
+      "sha256": "1206542f09c0e898adb3b0af4809a2ba13b609e1502279426c2bd0d6f6048abd",
+      "junit_sha256": "8df786c79d50969d1b76c0d92d6dde4da1d4343209b210bddfc304326d74fa3e",
+      "inventory_sha256": "9eaae784cb5698f38b9ff1588f7e2a8cb942b08fc19794625407ee951f673bb5"
+    }
+  },
+  "checks": [
+    "150 Python AST/compile; original scoped execution-complete expression unchanged",
+    "138 other original files unchanged; all old tests/scripts/config/risk intact",
+    "90 legacy report and98 new cases; all collected=executed; immutable source/specs",
+    "11 actual complete attachments: raw SHA/count/id/source/payload retained",
+    "20 pure renders distinguished from11 actual saved files; saved max66843bytes/199 Events",
+    "No broker/runtime/user state read; only isolated synthetic artifacts",
+    "New two static-edge guards are controls; invalid fixture preconditions never claimed product reds"
+  ],
+  "line_endings_note": "saved_main markdown is LF text; source_sha256 and bytes refer to original Windows CRLF file bytes, independently reconstructed and checked",
+  "remaining_required": [
+    "full3:1946 expected nodes=1848 old+98 new",
+    "unique legacy skip unchanged",
+    "no edits during full3; each run PT/deadline and candidate guards",
+    "final report/manifest independent review then scoped commit/tag"
+  ]
+}

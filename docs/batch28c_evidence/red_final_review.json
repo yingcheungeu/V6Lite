@@ -1,0 +1,48 @@
+{
+  "label": "red_final_review",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-21T20:51:33.087039-07:00",
+  "end_pt": "2026-10-21T20:51:44.244773-07:00",
+  "seconds": 11.157,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch28c_old_raw_callback.py",
+    "v6lite/tests/test_batch28c_pair_window.py",
+    "v6lite/tests/test_batch28c_stop_query_contradiction.py"
+  ],
+  "code_sha": "44637983f0083b46",
+  "source_unchanged": true,
+  "inventory_sha256": "90cf18bbb0493c6ccb9f188567d49007451da1ec2751f4a0ce68e011d7efd98f",
+  "incomplete": false,
+  "tests": 5,
+  "failures": 4,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch28c_old_raw_callback",
+      "name": "test_B28c_old_raw_openOrder_closure_is_rejected_after_native_reset[owned-round]",
+      "kind": "failure",
+      "message": "AssertionError: old raw rows must never enter a new generation own round\nassert [OpenOrder(in...8623157e+308)] == []\n  \n  Left contains one more item: OpenOrder(intent_id='v6l-protect-45fdfb74951041f885b2', broker_order_id=706, symbol='AAPL', status='PreSubmitted', fil...7, limit_price=None, outside_rth=False, account='DU******001', total_quantity=2, broker_echo_lmt=1.7976931348623157e+308)\n  Use -v to get more diff"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_pair_window",
+      "name": "test_B28c_status_then_400ms_openOrder_survives_ordinary_priority_tick",
+      "kind": "failure",
+      "message": "AssertionError: assert not [(171688.437, '16')]"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_stop_query_contradiction",
+      "name": "test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0[SELL]",
+      "kind": "failure",
+      "message": "AssertionError: independent contradiction must survive a binding change\nassert False\n +  where False = any(<generator object test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0.<locals>.<genexpr> at 0x000002546247F3E0>)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch28c_stop_query_contradiction",
+      "name": "test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0[BUY]",
+      "kind": "failure",
+      "message": "AssertionError: independent contradiction must survive a binding change\nassert False\n +  where False = any(<generator object test_B28c_stop_fill_and_unknown_execution_cannot_suppress_same_round_P0.<locals>.<genexpr> at 0x00000254624E92A0>)"
+    }
+  ]
+}

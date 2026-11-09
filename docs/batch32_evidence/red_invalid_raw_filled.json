@@ -1,0 +1,33 @@
+{
+  "label": "red_invalid_raw_filled",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "start_pt": "2026-10-29T08:20:04.104174-07:00",
+  "end_pt": "2026-10-29T08:20:06.128381-07:00",
+  "seconds": 2.016,
+  "returncode": 1,
+  "args": [
+    "v6lite/tests/test_batch32_normalization_guards.py"
+  ],
+  "code_sha": "b24d89f9acd3efcd",
+  "source_unchanged": true,
+  "inventory_sha256": "e9eafc51c946961909564e90ee3387ee03cea6d11d9b631c22606d8178c21907",
+  "incomplete": false,
+  "read_only_inputs_unchanged": null,
+  "raw_stdout_normalized_utf8_sha256": "2e727ba225fbd686d99e8f8cb2c090c311318eb9ac25df3722912e163740494f",
+  "XML_sha256_before_masking": "5f2ec7bcf46e7117911d8763940d0f06316d607f05462798b8f6cd1612f44362",
+  "delivered_log_sha256": "281de17c874a69d3bf06e060e801af1428e14e294a616f6ffb28ea1f07d1af0f",
+  "delivered_XML_sha256": "5f2ec7bcf46e7117911d8763940d0f06316d607f05462798b8f6cd1612f44362",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [
+    {
+      "classname": "v6lite.tests.test_batch32_normalization_guards",
+      "name": "test_B32_identical_invalid_native_filled_cannot_be_promoted_to_ACK",
+      "kind": "failure",
+      "message": "AssertionError: three equally malformed native fill counts must reject the entire query\nassert []"
+    }
+  ]
+}

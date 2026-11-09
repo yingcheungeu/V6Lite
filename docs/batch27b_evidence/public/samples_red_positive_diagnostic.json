@@ -1,0 +1,221 @@
+{
+  "candidate_checkpoint_sha256": null,
+  "label": "samples_red_positive_diagnostic",
+  "baseline": true,
+  "full": false,
+  "collect_only": false,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python_executable": "C:\\Dev\\V6Lite-dev\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "v6lite_runtime_processes": 0,
+  "uninspectable_python_processes": 0,
+  "start_pt": "2026-10-16T21:32:27.561113-07:00",
+  "end_pt": "2026-10-16T21:32:33.020828-07:00",
+  "returncode": 1,
+  "timed_out": false,
+  "process_tree_guard": "Windows Job Object kill-on-close; pre-pytest stdin gate",
+  "source_code_sha": "b736734f8e73edfb",
+  "source_unchanged": true,
+  "worktree_code_sha": "4ce21aab2e7fc86d",
+  "worktree_unchanged": true,
+  "source_trees": {
+    "v6lite": "4ce21aab2e7fc86d20cdfe27c7fd24923889170202d02785ec2ebe7ebabf0c3c",
+    "scripts": "cbf307f7b3291c3398caa8dbb533d17e95f3ef3096744de9d2b31b89cced5675"
+  },
+  "source_trees_unchanged": true,
+  "specs": [
+    {
+      "path": "C:\\Dev\\V6Lite-dev\\v6lite\\tests\\test_batch27b_current_day_evidence.py",
+      "sha256": "aab2c2cac01ebff9a1a7162f81931ce4e8fa019906a645e8d6cbfabacccc089c"
+    }
+  ],
+  "specs_unchanged": true,
+  "totals": {
+    "tests": 20,
+    "failures": 20,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin]",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_failed_a_card_has_one_unverified_time_prefix",
+      "outcome": "failure",
+      "message": "AssertionError: ['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\n  核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\n  你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。']\nassert (1 == 1 and 2 == 1)\n +  where 1 = len(['#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP...持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'])\n +  and   2 = <built-in method count of str object at 0x000002905A39A8D0>('账本成交时间尚未核实')\n +    where <built-in method count of str object at 0x000002905A39A8D0> = '#x1F7E0 P1 · 过夜持仓止盈核验未通过 · AAPL\\n核验结果：AAPL：账本成交时间尚未核实：账本成交时间尚未核实：收到时间未早于今日零点前一小时；券商 P=3 股，账本=3 股，当前工作 STP S=3 股；本地上次确认 STP ...本持仓新的自动止盈/保本；不自动撤改或补建保护单，当前保护按新鲜证据及独立 P0 处理。\\n你要做什么：1）在 TWS 核对持仓及 GTC STP；2）核对本机账本与当日可见成交；3）保留冻结，由 John 处理差异，不要盲目新增卖单。'.count"
+    },
+    {
+      "classname": "v6lite.tests.test_batch27b_current_day_evidence",
+      "name": "test_B27b_failed_d_card_shows_actual_complete_query_count",
+      "outcome": "failure",
+      "message": "ValueError: not enough values to unpack (expected 1, got 0)"
+    }
+  ],
+  "inventory": {
+    "collected": [
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_failed_a_card_has_one_unverified_time_prefix",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_failed_d_card_shows_actual_complete_query_count"
+    ],
+    "executed": [
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_naive_1020_TP1_time_allows_BE_ACK_then_TP2_with_unchanged_unverified_ledger",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[missing-exec]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[price-mismatch]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[permId-mismatch]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[provisional-other-day]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_each_current_day_time_proof_failure_freezes_BE_TP2_and_preserves_two_share_stop[incomplete-query]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[list-only]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[missing-End]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[historical-filter]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[unscoped-filter]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[generation-reset]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_current_day_exception_requires_real_complete_current_scope_not_just_visible_execId[cross-midnight]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[bool-quantity]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[float-orderId]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[wrong-conId]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[future-provisional]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[raw-time-not-equal]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_new_today_exception_retains_strict_marker_identity_contract_and_time_boundaries[missing-pin]",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_failed_a_card_has_one_unverified_time_prefix",
+      "v6lite/tests/test_batch27b_current_day_evidence.py::test_B27b_failed_d_card_shows_actual_complete_query_count"
+    ]
+  },
+  "stdout_sha256": "2de97a09171fb564de56508735798e50f124c268528ead7664340e059b43b972",
+  "junit_sha256": "04c3c1bcbe4fee5ec75ad34eb0b7d7bc2dedebf230ad657927df903ebb3bd7f3",
+  "inventory_sha256": "10aadd5241ec7d1be9a0f3a366a5cc04d2075f771287f7516ebf9bac5b61d323",
+  "publication_redaction": {
+    "rule": "All synthetic account-shaped values masked. Original receipts preserved locally and excluded from staging.",
+    "original_artifact_sha256": {
+      "samples_red_positive_diagnostic.json": "be4898f5a432e8b094d2106d53287e41116e11c775acba2fb76a6d3222744ea5",
+      "samples_red_positive_diagnostic.txt": "2de97a09171fb564de56508735798e50f124c268528ead7664340e059b43b972",
+      "samples_red_positive_diagnostic.xml": "51937113fdd290e02b608c5db30f320259b4decc359979538f275bb162e2ef2d",
+      "samples_red_positive_diagnostic_inventory.json": "5ac53bf755a877fb410a68ad8630454913ea8935d44bf01a9204242e906f5d67",
+      "samples_red_positive_diagnostic_progress.json": "3f540ac2a17706e9abc8bf8065e936ea688cb5bdb8076893ebe6a0bbab93d811",
+      "samples_red_positive_diagnostic_cards.json": "3d6ac48ae808e83679f5816f10c63426f5503cf1f874f52636ebc2e44d82e252"
+    }
+  }
+}

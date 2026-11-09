@@ -1,0 +1,10 @@
+{
+  "phase": "stopped_on_failure",
+  "updated_pt": "2026-10-31T16:29:10.137070-07:00",
+  "script": "v6lite_b33_validate.py",
+  "args": [
+    "final_full_1",
+    "full"
+  ],
+  "returncode": 4294967295
+}
